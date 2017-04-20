@@ -56,3 +56,6 @@
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.provider.sqlite3.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.batteries_green.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.batteries_v2.dll
+/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.Config.json.config.dev.json
+/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.Config.json.config.prod.json
+/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.Config.json.config.qa.json

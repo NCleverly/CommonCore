@@ -35,7 +35,6 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
     <Folder Include="$(MSBuildThisFileDirectory)Styles\" />
     <Folder Include="$(MSBuildThisFileDirectory)Config\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\BehaviorPages\" />
@@ -46,25 +45,13 @@
     </Folder>
     <Folder Include="$(MSBuildThisFileDirectory)Views\ServicesPages\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Common\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Azure\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Sync\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Documentation\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Documentation\Backgrounding\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Documentation\Backgrounding\Droid\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Documentation\Backgrounding\IOS\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Documentation\AzureDocucumentDb\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Config\json\" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\config.dev.json" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\config.qa.json" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\config.prod.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Documentation\Backgrounding\Droid\BackgroundingServices.Droid.txt" />
-    <None Include="$(MSBuildThisFileDirectory)Documentation\Backgrounding\IOS\BackgroundingServices.IOS.txt" />
-    <None Include="$(MSBuildThisFileDirectory)Documentation\AzureDocucumentDb\AppointmentManger.txt" />
-    <None Include="$(MSBuildThisFileDirectory)Documentation\AzureDocucumentDb\SyncMgr.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.dev.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.prod.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.qa.json" />
   </ItemGroup>
 </Project>

@@ -210,10 +210,17 @@
     </Folder>
     <Folder Include="$(MSBuildThisFileDirectory)Services\AltSqliteCode\">
     </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)AdditionalReferences\" />
+    <Folder Include="$(MSBuildThisFileDirectory)AdditionalReferences\AzureDocucumentDb\" />
+    <Folder Include="$(MSBuildThisFileDirectory)AdditionalReferences\Backgrounding\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />
     <None Include="$(MSBuildThisFileDirectory)AzureNotifications\readme.txt" />
     <None Include="$(MSBuildThisFileDirectory)Controls\MaterialDesgin\readme.txt" />
+    <None Include="$(MSBuildThisFileDirectory)AdditionalReferences\AzureDocucumentDb\AppointmentManger.txt" />
+    <None Include="$(MSBuildThisFileDirectory)AdditionalReferences\AzureDocucumentDb\SyncMgr.txt" />
+    <None Include="$(MSBuildThisFileDirectory)AdditionalReferences\Backgrounding\Droid\BackgroundingServices.Droid.txt" />
+    <None Include="$(MSBuildThisFileDirectory)AdditionalReferences\Backgrounding\IOS\BackgroundingServices.IOS.txt" />
   </ItemGroup>
 </Project>

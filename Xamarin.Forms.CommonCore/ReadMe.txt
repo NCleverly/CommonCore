@@ -88,5 +88,7 @@ Step 2: create config.dev.json, qa & prod //(means comment options):
 
 Additional References: 
 
+The folder named AdditionalReferences contains code samples not yet implemented generally in the CommonCore framework
+
 TLS explanation : https://blog.xamarin.com/securing-web-requests-with-tls-1-2/
 Icon tool: http://apetools.webprofusion.com/tools/imagegorilla
