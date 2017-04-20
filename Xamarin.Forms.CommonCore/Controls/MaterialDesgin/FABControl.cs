@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Windows.Input;
 using Xamarin.Forms;
 
 namespace Xamarin.Forms.CommonCore
@@ -12,8 +13,19 @@ namespace Xamarin.Forms.CommonCore
 		Mini
 	}
 
-	public class FABControl: View
+	public class FABControl : View
 	{
+		public static readonly BindableProperty CommandProperty =
+			BindableProperty.Create("Command",
+							typeof(ICommand),
+							typeof(FABControl),
+							null);
+		public ICommand Command
+		{
+			get { return (ICommand)GetValue(CommandProperty); }
+			set { SetValue(CommandProperty, value); }
+		}
+
 		public static readonly BindableProperty ImageNameProperty =
 			BindableProperty.Create("ImageName",
 									typeof(string),
@@ -66,12 +78,12 @@ namespace Xamarin.Forms.CommonCore
 		public FABControlSize Size
 		{
 			get { return (FABControlSize)GetValue(SizeProperty); }
-			set 
+			set
 			{
 				var sFactor = value == FABControlSize.Mini ? 40 : 56;
 				this.HeightRequest = sFactor;
 				this.WidthRequest = sFactor;
-				SetValue(SizeProperty, value); 
+				SetValue(SizeProperty, value);
 			}
 		}
 

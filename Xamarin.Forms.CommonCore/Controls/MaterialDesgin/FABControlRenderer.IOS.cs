@@ -138,6 +138,7 @@ namespace Xamarin.Forms.CommonCore
 
 		private void Fab_TouchUpInside(object sender, EventArgs e)
 		{
+			this.Element?.Command?.Execute(null);
 			this.Element?.Clicked?.Invoke(sender, e);
 		}
 

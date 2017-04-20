@@ -231,6 +231,7 @@
     <BundleResource Include="Resources\index24.png" />
     <BundleResource Include="Resources\iconwhite.png" />
     <BundleResource Include="Resources\calendar.png" />
+    <BundleResource Include="Resources\plus.png" />
   </ItemGroup>
   <Import Project="..\..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
   <Import Project="..\referenceguide\referenceguide.projitems" Label="Shared" Condition="Exists('..\referenceguide\referenceguide.projitems')" />

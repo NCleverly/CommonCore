@@ -11,10 +11,11 @@
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/index24.png
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/iconwhite.png
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/calendar.png
+/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/plus.png
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/
-/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.Config.config.dev.json
-/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.Config.config.qa.json
-/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.Config.config.prod.json
+/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.Config.json.config.dev.json
+/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.Config.json.config.prod.json
+/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.Config.json.config.qa.json
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/bin/iPhoneSimulator/Debug/referenceguide.iOS.exe.mdb
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/bin/iPhoneSimulator/Debug/referenceguide.iOS.exe
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.exe
@@ -56,6 +57,3 @@
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.provider.sqlite3.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.batteries_green.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/bin/iPhoneSimulator/Debug/SQLitePCLRaw.batteries_v2.dll
-/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.Config.json.config.dev.json
-/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.Config.json.config.prod.json
-/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.Config.json.config.qa.json

@@ -16,9 +16,9 @@ namespace referenceguide
 			{
 				Text = "Material Design",
 				Style = AppStyles.LightOrange,
-				Command = new Command((obj) =>
+				Command = new Command(async (obj) =>
 				{
-					//await AppData.AppNav.PushAsync(new MaterialDesignPage());
+					await AppData.AppNav.PushAsync(new MaterialDesignPage());
 				})
 			};
 

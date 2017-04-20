@@ -264,6 +264,7 @@
     <AndroidResource Include="Resources\drawable\index24.png" />
     <AndroidResource Include="Resources\drawable\iconwhite.png" />
     <AndroidResource Include="Resources\drawable\calendar.png" />
+    <AndroidResource Include="Resources\drawable\plus.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
