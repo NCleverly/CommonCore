@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
+  <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/ViewModels/CalendarViewModel.cs">
+    <Files>
+      <File FileName="referenceguide/referenceguide.cs" Line="13" Column="22" />
+      <File FileName="Droid/MainActivity.cs" Line="28" Column="1" />
+      <File FileName="referenceguide/Documentation/Backgrounding/Droid/BackgroundingServices.Droid.txt" Line="13" Column="1" />
+      <File FileName="referenceguide/ViewModels/DataExampleViewModel.cs" Line="151" Column="42" />
+      <File FileName="iOS/AppDelegate.cs" Line="28" Column="4" />
+      <File FileName="../Xamarin.Forms.CommonCore/ReadMe.txt" Line="15" Column="20" />
+      <File FileName="referenceguide/Config/config.dev.json" Line="30" Column="31" />
+      <File FileName="referenceguide/Config/config.prod.json" Line="30" Column="31" />
+      <File FileName="referenceguide/Config/config.qa.json" Line="26" Column="32" />
+      <File FileName="referenceguide/Views/ServicesPages/ServicesMain.cs" Line="47" Column="30" />
+      <File FileName="referenceguide/ViewModels/CalendarViewModel.cs" Line="14" Column="3" />
+      <File FileName="referenceguide/Config/AppSettings.cs" Line="9" Column="59" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/Les/Desktop/MSMU/MSMU/AzureDb/AppointmentManger.cs" line="50" column="1" />
+      <Breakpoint file="/Users/Les/Desktop/MSMU/MSMU/AzureDb/AppointmentManger.cs" line="30" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide HideGettingStarted="True" />
+  <MultiItemStartupConfigurations />
+</Properties>
