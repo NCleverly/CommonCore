@@ -1,2 +1,0 @@
-# CommonCore
-Xamarin.Forms.Common
