@@ -1,0 +1,111 @@
+﻿using System;
+using System.Threading.Tasks;
+using Xamarin.Forms.CommonCore;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace referenceguide
+{
+	public class SyncMgr
+	{
+		private static IAppointmentManager azure;
+		private static ISqliteDb embeddedDb;
+
+		public static IAppointmentManager AzureDb
+		{
+			get { return azure ?? (azure = InjectionManager.GetService<IAppointmentManager, AppointmentManager>(true)); }
+		}
+
+
+		public static ISqliteDb EmbeddedDb
+		{
+			get { return embeddedDb ?? (embeddedDb = InjectionManager.GetService<ISqliteDb, SqliteDb>(true)); }
+		}
+
+		public static async Task<bool> SyncData()
+		{
+			try
+			{
+				var updatedAppts = new List<Appointment>();
+				var newAppts = new List<Appointment>();
+
+				//get changes from azure
+				var azureDbUpdates = await AzureDb.GetAllAppointments(AppSettings.LastSync);
+
+				//update our changes
+				var updateResults = await EmbeddedDb.GetByQuery<Appointment>(x => x.UTCTickStamp > AppSettings.LastSync);
+				if (updateResults.Success)
+				{
+					if (updateResults.Response != null)
+					{
+						updateResults.Response.ForEach((x) =>
+						{
+							if (string.IsNullOrEmpty(x.ID))
+							{
+								newAppts.Add(x);
+							}
+						});
+					}
+				}
+
+
+				//Check to see in the incoming values are older than updates made locally
+				var props = typeof(Appointment).GetProperties();
+				if (updateResults.Success)
+				{
+					foreach (var incoming in azureDbUpdates.Where(x => x.ID != null))
+					{
+						var moreRecent = updateResults.Response.FirstOrDefault(x => x.ID == incoming.ID && x.UTCTickStamp > incoming.UTCTickStamp);
+						if (moreRecent != null)
+						{
+							foreach (var prop in props)
+							{
+								var vObj = prop.GetValue(moreRecent);
+								if (vObj != null)
+									prop.SetValue(incoming, prop.GetValue(moreRecent));
+							}
+
+							updatedAppts.Add(moreRecent);
+						}
+					}
+				}
+
+				//Sync incoming values to the local database
+				if (azureDbUpdates != null && azureDbUpdates.Count > 0)
+				{
+					await EmbeddedDb.SyncExternalCollection<Appointment, string>(azureDbUpdates, x => x.ID);
+				}
+
+
+				//Sync local updated to azure document db
+				foreach (var appt in updatedAppts)
+				{
+					var updatedAppt = await AzureDb.UpateAppointmentAsync(appt);
+				}
+
+				foreach (var appt in newAppts)
+				{
+					var updatedAppt = await AzureDb.InsertAppointmentAsync(appt);
+					appt.ID = updatedAppt.ID;
+				}
+				await EmbeddedDb.AddOrUpdate<Appointment>(newAppts);
+
+				AppSettings.LastSync = DateTime.UtcNow.Ticks;
+
+				return true;
+			}
+			catch (Exception ex)
+			{
+#if DEBUG
+				Console.WriteLine("****************************** AZURE DOCUMENTDB ERROR **************************************");
+				Console.WriteLine($" Error type is {ex.GetType().Name}");
+				Console.WriteLine(ex.Message);
+				Console.WriteLine(ex.StackTrace);
+				Console.WriteLine("****************************** ERROR MESSAGE END **************************************");
+#endif
+				return false;
+			}
+
+		}
+	}
+}

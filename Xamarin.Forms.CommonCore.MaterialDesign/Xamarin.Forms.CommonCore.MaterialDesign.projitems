@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{82EC8F9E-EF09-4F94-A4F0-85AC1F5DE0AF}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Xamarin.Forms.CommonCore.MaterialDesign</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)FABControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FABControlRenderer.Droid.cs">
+      <DependentUpon>FABControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)FABControlRenderer.IOS.cs">
+      <DependentUpon>FABControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)FTEControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FTEControlRenderer.Droid.cs">
+      <DependentUpon>FTEControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)FTEControlRenderer.IOS.cs">
+      <DependentUpon>FTEControl.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />
+  </ItemGroup>
+</Project>

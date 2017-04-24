@@ -1,0 +1,35 @@
+﻿#if __IOS__
+using System;
+using System.Threading.Tasks;
+using UIKit;
+
+namespace referenceguide
+{
+	public class AzureDbBackground
+	{
+		private nint taskID = 0;
+		public static AzureDbBackground Instance = new AzureDbBackground();
+
+		public void RegisterAlarmManager()
+		{
+			taskID = UIApplication.SharedApplication.BeginBackgroundTask(() =>
+			{
+				UIApplication.SharedApplication.EndBackgroundTask(taskID);
+			});
+
+			Task.Run(() =>
+			{
+
+			});
+		}
+
+		public void SyncAzureDatabase()
+		{
+
+		}
+
+	}
+
+}
+
+#endif
