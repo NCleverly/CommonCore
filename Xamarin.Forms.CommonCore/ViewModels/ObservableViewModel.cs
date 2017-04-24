@@ -180,7 +180,7 @@ namespace Xamarin.Forms.CommonCore
 
 		protected void ShowNotification(LocalNotification notification)
 		{
-			DependencyService.Get<ILocalNotificationPermission>().RequestPermission((permit) =>
+			DependencyService.Get<ILocalNotify>().RequestPermission((permit) =>
 			{
 				if (permit)
 				{

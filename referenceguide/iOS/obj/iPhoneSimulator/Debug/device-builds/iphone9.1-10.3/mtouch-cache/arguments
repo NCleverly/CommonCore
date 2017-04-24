@@ -113,6 +113,8 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore/referenceguide/packages/SQLitePCLRaw.bundle_green.1.1.3/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll" \
 	-r \
+	"/Volumes/Personal 240/CommonCore/referenceguide/packages/MaterialControls.1.2.2/lib/Xamarin.iOS10/MaterialControls.dll" \
+	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/Microsoft.Win32.Primitives.dll \
@@ -450,6 +452,8 @@
 	"/Volumes/Personal 240/CommonCore/referenceguide/packages/SQLitePCLRaw.bundle_green.1.1.3/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_green.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore/referenceguide/packages/SQLitePCLRaw.bundle_green.1.1.3/lib/Xamarin.iOS10/SQLitePCLRaw.batteries_v2.dll" \
+	-r \
+	"/Volumes/Personal 240/CommonCore/referenceguide/packages/MaterialControls.1.2.2/lib/Xamarin.iOS10/MaterialControls.dll" \
 	--target-framework \
 	"Xamarin.iOS,v1.0" \
 	"/Volumes/Personal 240/CommonCore/referenceguide/iOS/bin/iPhoneSimulator/Debug/referenceguide.iOS.exe" \

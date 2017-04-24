@@ -94,19 +94,12 @@
       <DependentUpon>IPhoneCall.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\ResponseTypes.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ILocalNotificationPermission.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\LocalNotificationPermission.IOS.cs">
-      <DependentUpon>ILocalNotificationPermission.cs</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IOverlayDependency.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\OverlayDependency.Droid.cs">
       <DependentUpon>IOverlayDependency.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\OverlayDependency.IOS.cs">
       <DependentUpon>IOverlayDependency.cs</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\LocalNotificationPermission.Droid.cs">
-      <DependentUpon>ILocalNotificationPermission.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Controls\FormsPopup\Popup.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\FormsPopup\PopupHidingEventArgs.cs" />
@@ -210,17 +203,9 @@
     </Folder>
     <Folder Include="$(MSBuildThisFileDirectory)Services\AltSqliteCode\">
     </Folder>
-    <Folder Include="$(MSBuildThisFileDirectory)AdditionalReferences\" />
-    <Folder Include="$(MSBuildThisFileDirectory)AdditionalReferences\AzureDocucumentDb\" />
-    <Folder Include="$(MSBuildThisFileDirectory)AdditionalReferences\Backgrounding\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />
     <None Include="$(MSBuildThisFileDirectory)AzureNotifications\readme.txt" />
-    <None Include="$(MSBuildThisFileDirectory)Controls\MaterialDesgin\readme.txt" />
-    <None Include="$(MSBuildThisFileDirectory)AdditionalReferences\AzureDocucumentDb\AppointmentManger.txt" />
-    <None Include="$(MSBuildThisFileDirectory)AdditionalReferences\AzureDocucumentDb\SyncMgr.txt" />
-    <None Include="$(MSBuildThisFileDirectory)AdditionalReferences\Backgrounding\Droid\BackgroundingServices.Droid.txt" />
-    <None Include="$(MSBuildThisFileDirectory)AdditionalReferences\Backgrounding\IOS\BackgroundingServices.IOS.txt" />
   </ItemGroup>
 </Project>

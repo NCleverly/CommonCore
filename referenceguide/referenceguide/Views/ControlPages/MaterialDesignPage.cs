@@ -41,13 +41,13 @@ namespace referenceguide
 				Validator = FTEControl.RequiredValidator
 			};
 
+
 			Content = new StackLayout()
 			{
 				Padding = 10,
-				Spacing = 10,
+				Spacing = 25,
 				Children = { fteUserName, ftePassword }
 			};
-
 
 			AbsoluteLayer.Children.Add(fab);
 		}

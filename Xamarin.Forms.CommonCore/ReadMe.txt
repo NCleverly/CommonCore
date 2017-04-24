@@ -22,6 +22,7 @@ Required Nuget Installs
  - Xamarin.Auth
  - Platform Specific Installs:
     - iOS   -> BTProgressHud
+    		-> MaterialControls
          	-> Xamarin.Azure.NotificationHubs.iOS
     - Droid -> AndHud
             -> Refractored.FloatingActionButton

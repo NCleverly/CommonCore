@@ -55,6 +55,11 @@ namespace Xamarin.Forms.CommonCore
             notificationManager.Notify(notification.Id, builder.Build());
         }
 
+		public void RequestPermission(Action<bool> callBack)
+		{
+			callBack?.Invoke(true);
+		}
+
         protected void dialogNotify(String title, String message)
         {
             Xamarin.Forms.Device.BeginInvokeOnMainThread(() =>

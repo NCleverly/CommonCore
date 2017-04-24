@@ -23,6 +23,8 @@ void xamarin_register_assemblies_impl ()
 	xamarin_process_managed_exception_gchandle (exception_gchandle);
 	xamarin_open_and_register ("Xamarin.Auth.dll", &exception_gchandle);
 	xamarin_process_managed_exception_gchandle (exception_gchandle);
+	xamarin_open_and_register ("MaterialControls.dll", &exception_gchandle);
+	xamarin_process_managed_exception_gchandle (exception_gchandle);
 
 }
 

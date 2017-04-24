@@ -1,55 +1,61 @@
-﻿//#if __IOS__
-//using System;
-//using Xamarin.Forms.CommonCore;
-//using CoreAnimation;
-//using CoreGraphics;
-//using Foundation;
-//using UIKit;
-//using Xamarin.Forms;
-//using Xamarin.Forms.Platform.iOS;
+﻿#if __IOS__
+using Xamarin.Forms.CommonCore;
+using CoreGraphics;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
+using MaterialControls;
 
-//[assembly: ExportRenderer(typeof(FTEControl), typeof(FTEControlRenderer))]
-//namespace Xamarin.Forms.CommonCore
-//{
+[assembly: ExportRenderer(typeof(FTEControl), typeof(FTEControlRenderer))]
+namespace Xamarin.Forms.CommonCore
+{
+	public class FTETextField : MDTextField
+	{
+		public override CGSize SizeThatFits(CGSize size)
+		{
+			return new CGSize(size.Width, 50);
+		}
+	}
+	public class FTEControlRenderer : ViewRenderer<FTEControl, FTETextField>
+	{
+		private FTETextField fte;
 
-//	public partial class FTEControlRenderer : ViewRenderer<FTEControl, FloatingTextEntry>
-//	{
-//		private FloatingTextEntry fte;
+		protected override void OnElementChanged(ElementChangedEventArgs<FTEControl> e)
+		{
+			base.OnElementChanged(e);
 
-//		protected override void OnElementChanged(ElementChangedEventArgs<FTEControl> e)
-//		{
-//			base.OnElementChanged(e);
+			if (this.Control == null)
+			{
+				fte = new FTETextField()
+				{
+					ErrorMessage = Element.ErrorText,
+					ErrorColor = Element.ErrorColor.ToUIColor(),
+					SingleLine = false,
+					Label = Element.Placeholder,
+					FloatingLabel = true,
+					MaxVisibleLines = 1,
+				};
+				this.SetNativeControl(fte);
+			}
 
-//			if (this.Control == null)
-//			{
-//				fte = new FloatingTextEntry();
-//				fab.Frame = new CoreGraphics.CGRect(0, 0, 24, 24);
+		}
 
-//				this.SetNativeControl(fte);
+		protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+		{
+			base.OnElementPropertyChanged(sender, e);
 
-		
-//			}
+			if (e.PropertyName == "IsValid")
+			{
+				if (Element != null && fte != null)
+				{
+					if (Element.IsValid)
+						fte.HasError = false;
+					else
+						fte.HasError = true;
+				}
+			}
+		}
 
-//			if (e.NewElement != null)
-//			{
-				
-//			}
-
-//			if (e.OldElement != null)
-//			{
-				
-//			}
-//		}
-
-//		protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-//		{
-
-//		}
-
-
-//	}
-
-
-//}
-//#endif
+	}
+}
+#endif
 
