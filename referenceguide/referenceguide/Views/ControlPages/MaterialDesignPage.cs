@@ -45,8 +45,8 @@ namespace referenceguide
 
 			Content = new StackLayout()
 			{
-				Padding = 10,
-				Spacing = 25,
+				Padding = new Thickness(20, 30, 20, 20),
+				Spacing = 40,
 				Children = { fteUserName, ftePassword }
 			};
 

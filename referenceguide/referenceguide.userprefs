@@ -1,13 +1,12 @@
 ﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Xamarin.Forms.CommonCore/Dependencies/ILocalNotify.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Xamarin.Forms.CommonCore.MaterialDesign/ReadMe.txt">
     <Files>
-      <File FileName="../Xamarin.Forms.CommonCore/Dependencies/ILocalNotify.cs" Line="18" Column="3" />
-      <File FileName="../Xamarin.Forms.CommonCore/Dependencies/LocalNotify.IOS.cs" Line="73" Column="4" />
-      <File FileName="../Xamarin.Forms.CommonCore/Dependencies/LocalNotify.Droid.cs" Line="96" Column="1" />
-      <File FileName="../Xamarin.Forms.CommonCore/ViewModels/ObservableViewModel.cs" Line="175" Column="4" />
-      <File FileName="referenceguide/Views/ControlPages/MaterialDesignPage.cs" Line="8" Column="44" />
-      <File FileName="InProgress/AppointmentManger.txt" Line="1" Column="1" />
+      <File FileName="../Xamarin.Forms.CommonCore.MaterialDesign/FTEControlRenderer.IOS.cs" Line="243" Column="27" />
+      <File FileName="referenceguide/Views/ControlPages/MaterialDesignPage.cs" Line="44" Column="4" />
+      <File FileName="../Xamarin.Forms.CommonCore.MaterialDesign/FTEControl.cs" Line="18" Column="31" />
+      <File FileName="../Xamarin.Forms.CommonCore.MaterialDesign/FTEControlRenderer.Droid.cs" Line="53" Column="4" />
+      <File FileName="../Xamarin.Forms.CommonCore.MaterialDesign/ReadMe.txt" Line="8" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -15,6 +14,7 @@
     <BreakpointStore>
       <Breakpoint file="/Users/Les/Desktop/MSMU/MSMU/AzureDb/AppointmentManger.cs" line="50" column="1" />
       <Breakpoint file="/Users/Les/Desktop/MSMU/MSMU/AzureDb/AppointmentManger.cs" line="30" column="1" />
+      <Breakpoint file="/Volumes/Personal 240/CommonCore/Xamarin.Forms.CommonCore.MaterialDesign/FTEControl.cs" line="148" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
