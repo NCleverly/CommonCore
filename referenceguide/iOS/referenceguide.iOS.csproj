@@ -227,11 +227,11 @@
     <BundleResource Include="Resources\angrymonkey300.png" />
     <BundleResource Include="Resources\placeholder.png" />
     <BundleResource Include="Resources\icon.png" />
-    <BundleResource Include="Resources\sharedcode.png" />
     <BundleResource Include="Resources\index24.png" />
     <BundleResource Include="Resources\iconwhite.png" />
     <BundleResource Include="Resources\calendar.png" />
     <BundleResource Include="Resources\plus.png" />
+    <BundleResource Include="Resources\sharedcode.png" />
   </ItemGroup>
   <Import Project="..\..\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems" Label="Shared" Condition="Exists('..\..\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems')" />
   <Import Project="..\..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />

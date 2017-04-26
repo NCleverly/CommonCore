@@ -265,6 +265,7 @@
     <AndroidResource Include="Resources\drawable\iconwhite.png" />
     <AndroidResource Include="Resources\drawable\calendar.png" />
     <AndroidResource Include="Resources\drawable\plus.png" />
+    <AndroidResource Include="Resources\drawable\sharedcode.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />
@@ -273,6 +274,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidEnvironment Include="monoconfig.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="sharedcode.png" />
   </ItemGroup>
   <Import Project="..\..\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems" Label="Shared" Condition="Exists('..\..\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems')" />
   <Import Project="..\..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
