@@ -16,13 +16,6 @@
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
   <application android:icon="@drawable/icon" android:label="CommonCore" android:name="md54e9e5f9dcdfab3ec8aac2278e42c7822.MainApplication" android:allowBackup="true" android:debuggable="true">
-    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="referenceguide.Droid" android:theme="@style/MyTheme" android:name="md54e9e5f9dcdfab3ec8aac2278e42c7822.MainActivity" />
-    <activity android:configChanges="orientation|screenSize" android:label="CommonCore" android:noHistory="true" android:theme="@style/Theme.Splash" android:name="md54e9e5f9dcdfab3ec8aac2278e42c7822.SplashScreenActivity">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-    </activity>
     <receiver android:permission="com.google.android.c2dm.permission.SEND" android:name="md52cbbb386ce1d336d1e7fd8910a8d96d8.PushHandlerBroadcastReceiver">
       <intent-filter>
         <action android:name="com.google.android.c2dm.intent.RECEIVE" />
@@ -38,6 +31,13 @@
       </intent-filter>
     </receiver>
     <service android:name="md52cbbb386ce1d336d1e7fd8910a8d96d8.GcmService" />
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="referenceguide.Droid" android:theme="@style/MyTheme" android:name="md54e9e5f9dcdfab3ec8aac2278e42c7822.MainActivity" />
+    <activity android:configChanges="orientation|screenSize" android:label="CommonCore" android:noHistory="true" android:theme="@style/Theme.Splash" android:name="md54e9e5f9dcdfab3ec8aac2278e42c7822.SplashScreenActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
     <receiver android:enabled="true" android:label="Connectivity Plugin Broadcast Receiver" android:name="md531e46b185997765898cde66852db2a40.ConnectivityChangeBroadcastReceiver" />
     <service android:name="md59f70a99687498e7ba187118950981d26.KeepAliveService" />
     <activity android:label="Web Authenticator" android:name="md5a104545e4d19c4ffe9ec3d5074a3b979.FormAuthenticatorActivity" />

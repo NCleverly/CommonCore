@@ -96,3 +96,5 @@
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/bin/Debug/SQLitePCLRaw.provider.e_sqlite3.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/bin/Debug/SQLitePCLRaw.batteries_green.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/bin/Debug/SQLitePCLRaw.batteries_v2.dll
+/Volumes/Personal 240/CommonCore/referenceguide/Droid/bin/Debug/referenceguide.Droid.pdb
+/Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/referenceguide.Droid.pdb

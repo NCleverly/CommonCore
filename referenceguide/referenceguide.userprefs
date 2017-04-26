@@ -1,12 +1,13 @@
-﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
+﻿<Properties StartupConfiguration="{3676A936-1B3D-4D32-ADD9-7E9862FDB694}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="../Xamarin.Forms.CommonCore.MaterialDesign/ReadMe.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide Status">
     <Files>
       <File FileName="../Xamarin.Forms.CommonCore.MaterialDesign/FTEControlRenderer.IOS.cs" Line="243" Column="27" />
-      <File FileName="referenceguide/Views/ControlPages/MaterialDesignPage.cs" Line="44" Column="4" />
+      <File FileName="referenceguide/Views/ControlPages/MaterialDesignPage.cs" Line="44" Column="1" />
       <File FileName="../Xamarin.Forms.CommonCore.MaterialDesign/FTEControl.cs" Line="18" Column="31" />
       <File FileName="../Xamarin.Forms.CommonCore.MaterialDesign/FTEControlRenderer.Droid.cs" Line="53" Column="4" />
       <File FileName="../Xamarin.Forms.CommonCore.MaterialDesign/ReadMe.txt" Line="8" Column="1" />
+      <File FileName="referenceguide Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

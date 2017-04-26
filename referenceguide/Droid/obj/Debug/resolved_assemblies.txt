@@ -68,14 +68,15 @@
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/SQLitePCLRaw.batteries_green.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/SQLitePCLRaw.batteries_v2.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/mscorlib.dll
+/Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/Mono.Security.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/System.Runtime.Serialization.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/System.ServiceModel.Internals.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/Mono.CSharp.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/System.Threading.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/System.Collections.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/System.Collections.Concurrent.dll
-/Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/System.Diagnostics.Debug.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/System.Reflection.dll
+/Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/System.Diagnostics.Debug.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/System.Linq.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/System.Runtime.InteropServices.dll
 /Volumes/Personal 240/CommonCore/referenceguide/Droid/obj/Debug/android/assets/System.Runtime.Extensions.dll
