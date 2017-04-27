@@ -1,13 +1,19 @@
-﻿<Properties StartupConfiguration="{3676A936-1B3D-4D32-ADD9-7E9862FDB694}|Default">
+﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D" />
   <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide Status">
     <Files>
       <File FileName="../Xamarin.Forms.CommonCore.MaterialDesign/FTEControlRenderer.IOS.cs" Line="243" Column="27" />
-      <File FileName="referenceguide/Views/ControlPages/MaterialDesignPage.cs" Line="54" Column="4" />
+      <File FileName="referenceguide/Views/ControlPages/MaterialDesignPage.cs" Line="44" Column="13" />
       <File FileName="../Xamarin.Forms.CommonCore.MaterialDesign/FTEControl.cs" Line="18" Column="31" />
       <File FileName="../Xamarin.Forms.CommonCore.MaterialDesign/FTEControlRenderer.Droid.cs" Line="53" Column="4" />
-      <File FileName="../Xamarin.Forms.CommonCore.MaterialDesign/ReadMe.txt" Line="8" Column="1" />
-      <File FileName="referenceguide/referenceguide.cs" Line="11" Column="15" />
+      <File FileName="referenceguide/Views/SlidingPage.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/ServicesPages/EncryptionPage.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/ServicesPages/HttpServicesPage.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/ServicesPages/ServicesMain.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/ServicesPages/SqlitePage.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/DependencyPages/DependeciesMain.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/BehaviorPages/BehaviorsMain.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/Common/CalendarEventPage.cs" Line="1" Column="1" />
       <File FileName="referenceguide Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
@@ -20,7 +26,7 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.N725" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.ItemProperties.referenceguide HideGettingStarted="True" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore HideGettingStarted="True" />
