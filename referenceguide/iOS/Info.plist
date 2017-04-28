@@ -40,10 +40,7 @@
 	<string>Assets.xcassets/AppIcon.appiconset</string>
 	<key>CFBundleName</key>
 	<string>CommonCore</string>
-	<key>UIBackgroundModes</key>
-	<array>
-		<string>fetch</string>
-		<string>remote-notification</string>
-	</array>
+	<key>NSCalendarsUsageDescription</key>
+	<string>New Entry</string>
 </dict>
 </plist>

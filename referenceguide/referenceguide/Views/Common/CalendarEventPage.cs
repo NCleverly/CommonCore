@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq.Expressions;
+using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 
@@ -6,6 +8,8 @@ namespace referenceguide
 {
     public class CalendarEventPage : BoundPage<CalendarViewModel>
     {
+        private Entry evtNameEntry;
+
         public bool DevicePersistOnly
         {
             get { return VM.DevicePersistOnly; }
@@ -28,10 +32,10 @@ namespace referenceguide
                 Margin = new Thickness(5, 5, 5, 1)
             };
 
-            var evtNameEntry = new Entry()
+            evtNameEntry = new Entry()
             {
                 Margin = new Thickness(5, 1, 5, 1),
-                AutomationId = "evtNameEntry"
+                //AutomationId = "evtNameEntry"
             };
             evtNameEntry.SetBinding(Entry.TextProperty, new Binding("Appt.Title", BindingMode.TwoWay));
 
@@ -83,6 +87,14 @@ namespace referenceguide
                 Children = { lblExplain, evtName, evtNameEntry, evtDescription, evtDescriptionEntry, startTime, endTime, evtHasReminder, swReminder, btnCreate }
             };
 
+            this.SetAutomationIds();
+        }
+
+        string GetVariableName<T>(Expression<Func<T>> expr)
+        {
+            var body = (MemberExpression)expr.Body;
+
+            return body.Member.Name;
         }
 
         private StackLayout CreateStartDateTimePanel()
