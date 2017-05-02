@@ -85,6 +85,8 @@ Step 2: create config.dev.json, qa & prod //(means comment options):
 	}
 
 
+*** REMEMBER ***
+Grant Access In Android & IOS to Access Resource Like Calendar, Contacts (Internet)
 
 Additional References: 
 
