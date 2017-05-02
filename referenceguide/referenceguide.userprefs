@@ -2,11 +2,11 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D" />
   <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide Status">
     <Files>
-      <File FileName="referenceguide/Views/Common/CalendarEventPage.cs" Line="38" Column="19" />
-      <File FileName="../Xamarin.Forms.CommonCore/Pages/BoundPage.cs" Line="49" Column="1" />
+      <File FileName="referenceguide/Views/Common/CalendarEventPage.cs" Line="90" Column="34" />
+      <File FileName="../Xamarin.Forms.CommonCore/Pages/BoundPage.cs" Line="24" Column="9" />
       <File FileName="../Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs" Line="56" Column="1" />
       <File FileName="iOS/Info.plist" />
-      <File FileName="../Xamarin.Forms.CommonCore/ReadMe.txt" Line="88" Column="101" />
+      <File FileName="../Xamarin.Forms.CommonCore/ReadMe.txt" Line="88" Column="1" />
       <File FileName="referenceguide Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
