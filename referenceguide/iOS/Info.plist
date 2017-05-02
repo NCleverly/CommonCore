@@ -41,6 +41,6 @@
 	<key>CFBundleName</key>
 	<string>CommonCore</string>
 	<key>NSCalendarsUsageDescription</key>
-	<string>New Entry</string>
+	<string>Calendar access is required by this application</string>
 </dict>
 </plist>
