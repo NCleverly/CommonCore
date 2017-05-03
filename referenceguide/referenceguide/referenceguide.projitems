@@ -35,6 +35,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\ControlPages\PaginagedListControl.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PaginatedViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\Common\RandomUserCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EffectsPages\ListViewEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EffectsPages\WebViewEffect.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
