@@ -40,9 +40,11 @@ namespace referenceguide
                 ItemTemplate = new DataTemplate(typeof(SimpleCell)),
                 ItemsSource = lst
             };
+
             lstView.Effects.Add(new RemoveEmptyRowsEffect());
+
             if(hideSeparators)
-                lstView.Effects.Add(new HideTableSeparator());
+                lstView.Effects.Add(new HideListSeparatorEffect());
 
             Content = new StackLayout()
             {
