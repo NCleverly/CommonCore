@@ -42,5 +42,7 @@
 	<string>CommonCore</string>
 	<key>NSCalendarsUsageDescription</key>
 	<string>Calendar access is required by this application</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Cached images are used in this application</string>
 </dict>
 </plist>
