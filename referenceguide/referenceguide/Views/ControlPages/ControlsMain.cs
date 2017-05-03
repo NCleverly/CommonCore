@@ -26,9 +26,9 @@ namespace referenceguide
 			{
 				Text = "List Control",
 				Style = AppStyles.LightOrange,
-				Command = new Command((obj) =>
+				Command = new Command(async(obj) =>
 				{
-					//await AppData.AppNav.PushAsync(new PeopleListPage());
+					await AppData.AppNav.PushAsync(new PaginagedListControl());
 				})
 			};
 

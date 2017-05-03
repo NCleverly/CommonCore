@@ -32,6 +32,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CalendarViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Config\AppSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ControlPages\MaterialDesignPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ControlPages\PaginagedListControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PaginatedViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Common\RandomUserCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />

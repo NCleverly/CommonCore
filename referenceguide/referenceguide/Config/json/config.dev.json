@@ -27,6 +27,15 @@
         "AndroidAppId": "IOSAppId",
 		"UWPAppId": "IOSAppId"
     },
-	"WebApi":[{"name":"randomuser", "url":"https://randomuser.me/api/?results=200"}],
+  "WebApi": [
+    {
+      "name": "randomuser",
+      "url": "https://randomuser.me/api/?results=200"
+    },
+    {
+      "name": "randomuserpaginated",
+      "url": "https://randomuser.me/api/?page={0}&results=30"
+    }
+  ],
 	"CustomSettings":[{"name":"", "value":""}]
 }
