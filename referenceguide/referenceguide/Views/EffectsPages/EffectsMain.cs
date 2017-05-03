@@ -21,17 +21,6 @@ namespace referenceguide
                 })
             };
 
-			var disableWebViewScrollEffect = new GradientButton()
-			{
-				Text = "WebView Scroll Disable",
-				Style = AppStyles.LightOrange,
-				AutomationId = "disableWebViewScrollEffect",
-				Command = new Command(async (obj) =>
-				{
-					await Navigation.PushAsync(new WebViewEffect());
-				})
-			};
-
 			var hideListSeparatorEffect = new GradientButton()
 			{
 				Text = "Hide List Separator",
@@ -43,11 +32,22 @@ namespace referenceguide
 				})
 			};
 
+			var disableWebViewScrollEffect = new GradientButton()
+			{
+				Text = "WebView Scroll Disable",
+				Style = AppStyles.LightOrange,
+				AutomationId = "disableWebViewScrollEffect",
+				Command = new Command(async (obj) =>
+				{
+					await Navigation.PushAsync(new WebViewEffect());
+				})
+			};
+
 			var stack = new StackLayout()
 			{
 				Padding = 20,
 				Spacing = 10,
-				Children = { removeEmptyRowsEffect, disableWebViewScrollEffect, hideListSeparatorEffect }
+				Children = { removeEmptyRowsEffect, hideListSeparatorEffect, disableWebViewScrollEffect }
 			};
 
 			Content = new ScrollView()
