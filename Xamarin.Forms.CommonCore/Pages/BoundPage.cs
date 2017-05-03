@@ -31,24 +31,35 @@ namespace Xamarin.Forms.CommonCore
 			var fields = this.GetType().GetFields(bindingFlags);
 			foreach (var field in fields)
 			{
-				var fObj = field.GetValue(this);
-				if (fObj is View)
-				{
-					var ctrl = (View)fObj;
-					if (string.IsNullOrEmpty(ctrl.AutomationId))
-						ctrl.AutomationId = field.Name;
-				}
+                try
+                {
+					var fObj = field.GetValue(this);
+					if (fObj!=null && fObj is View)
+					{
+						var ctrl = (View)fObj;
+						if (string.IsNullOrEmpty(ctrl.AutomationId))
+							ctrl.AutomationId = field.Name;
+					}
+                }
+                catch {}//suppress error
+
 			}
 			var props = this.GetType().GetProperties(bindingFlags);
 			foreach (var prop in props)
 			{
-				var pObj = prop.GetValue(this);
-				if (pObj is View)
-				{
-					var ctrl = (View)pObj;
-					if (string.IsNullOrEmpty(ctrl.AutomationId))
-						ctrl.AutomationId = prop.Name;
-				}
+                try
+                {
+					var pObj = prop.GetValue(this);
+					if (pObj != null && pObj is View)
+					{
+						var ctrl = (View)pObj;
+						if (string.IsNullOrEmpty(ctrl.AutomationId))
+							ctrl.AutomationId = prop.Name;
+
+					}
+                }
+                catch {}//suppress error
+
 			}
 		}
 
