@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
+using Humanizer;
 
 namespace referenceguide
 {
@@ -88,7 +89,7 @@ namespace referenceguide
 
 		public string FullName
 		{
-			get { return $"{FirstName} {LastName}"; }
+            get { return $"{FirstName} {LastName}".Transform(To.TitleCase); }//using Humanizer library for title casing
 		}
 
 		public FormattedString FullAddress
