@@ -127,7 +127,7 @@ namespace referenceguide
                 else
                 {
                     var timerService = InjectionManager.GetService<IIntervalCallback, TimerCallbackService>(true);
-                    this.BackgroundTimer.Start(1000, timerService);
+                    this.BackgroundTimer.Start(1, timerService);
                     BackgroundButtonTitle = $"Stop {BackgroundButtonTitle}";
                 }
 			});
@@ -155,8 +155,6 @@ namespace referenceguide
 			this.IsLoadingHUD = true;
 
 			var url = AppData.WebApis["randomuser"];
-
-			//var url = "https://randomuser.me/api/?results=200";
 
 			//var isAvailable = await this.HttpService.PingDomain(url);
 

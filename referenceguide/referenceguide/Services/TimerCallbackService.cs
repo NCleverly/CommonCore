@@ -15,7 +15,7 @@ namespace referenceguide
                 Id = 1,
                 Title = "Timer Event",
                 Icon = "icon.png",
-                Message = "The timer event fired and here is your message"
+                Message = $"The timer event fired {DateTime.Now.ToShortTimeString()}"
             });
 
 #if DEBUG

@@ -1,9 +1,12 @@
-﻿<Properties StartupConfiguration="{3676A936-1B3D-4D32-ADD9-7E9862FDB694}|Default">
+﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D" />
   <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide Status">
     <Files>
-      <File FileName="referenceguide/ViewModels/ControlsViewModel.cs" Line="9" Column="43" />
-      <File FileName="referenceguide/Views/DependencyPages/DependeciesMain.cs" Line="7" Column="51" />
+      <File FileName="../Xamarin.Forms.CommonCore/Services/BackgroundTimerService.IOS.cs" Line="44" Column="10" />
+      <File FileName="../Xamarin.Forms.CommonCore/Services/BackgroundTimerService.Droid.cs" Line="18" Column="35" />
+      <File FileName="../Xamarin.Forms.CommonCore/Services/IBackgroundTimerService.cs" Line="6" Column="14" />
+      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="76" Column="16" />
+      <File FileName="referenceguide/ViewModels/DataExampleViewModel.cs" Line="158" Column="13" />
       <File FileName="referenceguide Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
