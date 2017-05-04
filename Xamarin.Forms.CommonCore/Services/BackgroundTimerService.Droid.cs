@@ -4,17 +4,20 @@ using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Xamarin.Forms.CommonCore;
 
 namespace Xamarin.Forms.CommonCore
 {
-	public class TimerBackground : IBackgroundTimer
+
+    public class TimerBackground
 	{
 		private TimerBackgroundingServiceConnection timerServiceConnection;
 		private TimerBackgroundingReceiver timerReceiver;
+        private AlarmManager alarm;
+        private PendingIntent pendingServiceIntent;
 		public bool IsBound { get; set; } = false;
-        public int intervalMilliseconds { get; set; } = 1000;
+        public int IntervalMinutes { get; set; } = 1;
 		public TimerBackgroundingServiceBinder Binder { get; set; }
+        public IIntervalCallback CallBack { get; set; }
 		public Intent timerServiceIntent;
 
 		public Context Ctx { get { return Xamarin.Forms.Forms.Context; } }
@@ -26,24 +29,21 @@ namespace Xamarin.Forms.CommonCore
 			timerServiceIntent = new Intent(Ctx, typeof(TimerBackgroundService));
 			timerReceiver = new TimerBackgroundingReceiver();
 		}
-		public void Start(int timeSpan, IIntervalCallback formsCallBack)
+		public void Start()
 		{
-            intervalMilliseconds = timeSpan;
 			var intentFilter = new IntentFilter(TimerBackgroundService.TimerUpdatedAction) { Priority = (int)IntentFilterPriority.HighPriority };
 			Ctx.RegisterReceiver(timerReceiver, intentFilter);
 
 			timerServiceConnection = new TimerBackgroundingServiceConnection();
 			Ctx.BindService(timerServiceIntent, timerServiceConnection, Bind.AutoCreate);
-
-			//RegisterAlarmManager();
 		}
 
 		public void Stop()
 		{
 			if (IsBound)
 			{
+                alarm.Cancel(pendingServiceIntent);
 				Ctx.UnbindService(timerServiceConnection);
-
 				IsBound = false;
 			}
 
@@ -54,22 +54,45 @@ namespace Xamarin.Forms.CommonCore
 		{
 			if (!IsAlarmSet())
 			{
-				var alarm = (AlarmManager)Ctx.GetSystemService(Context.AlarmService);
+                var timeOffSet = GetMilliOffset();
 
-				var pendingServiceIntent = PendingIntent.GetService(Ctx, 0, timerServiceIntent, PendingIntentFlags.CancelCurrent);
-				alarm.SetRepeating(AlarmType.Rtc, 0, 1000, pendingServiceIntent);
-
-				//alarm.SetRepeating (AlarmType.Rtc, 0, AlarmManager.IntervalHalfHour, pendingServiceIntent);
-			}
-			else
-			{
-				Console.WriteLine("alarm already set");
+				alarm = (AlarmManager)Ctx.GetSystemService(Context.AlarmService);
+				pendingServiceIntent = PendingIntent.GetService(Ctx, 0, timerServiceIntent, PendingIntentFlags.CancelCurrent);
+				alarm.SetRepeating(AlarmType.Rtc, 0, timeOffSet, pendingServiceIntent);
 			}
 		}
 		bool IsAlarmSet()
 		{
 			return PendingIntent.GetBroadcast(Ctx, 0, timerServiceIntent, PendingIntentFlags.NoCreate) != null;
 		}
+
+        private long GetMilliOffset(){
+            // Create the alarm time in the local timezone
+
+            var currentTime = DateTime.Now;
+            currentTime = currentTime.AddMinutes(IntervalMinutes);
+
+			var localAlarmTime = new DateTime(currentTime.Year, 
+                                              currentTime.Month, 
+                                              currentTime.Day, 
+                                              currentTime.Hour, 
+                                              currentTime.Minute, 
+                                              currentTime.Second, 
+                                              currentTime.Millisecond, 
+                                              DateTimeKind.Local);
+
+			// Convert the alarm time to UTC
+			var utcAlarmTime = TimeZoneInfo.ConvertTimeToUtc(localAlarmTime);
+
+			// Work out the difference between epoch (Java) and ticks (.NET)
+			var t = new DateTime(1970, 1, 1) - DateTime.MinValue;
+			var epochDifferenceInSeconds = t.TotalSeconds;
+
+			// Convert from ticks to milliseconds
+			var utcAlarmTimeInMillis = utcAlarmTime.AddSeconds(-epochDifferenceInSeconds).Ticks / 10000;
+
+            return utcAlarmTimeInMillis;
+        }
 
 
 		public void TimerElapsedEvent()
@@ -79,42 +102,36 @@ namespace Xamarin.Forms.CommonCore
 				Task.Run(() =>
 			   {
 				   Binder.GetTimerService();
-
 			   });
 
 			}
 		}
 	}
 
-	[BroadcastReceiver]
-	[IntentFilter(new string[] { TimerBackgroundService.TimerUpdatedAction }, Priority = (int)IntentFilterPriority.LowPriority)]
-	public class TimerBackgroudNotificationReceiver : BroadcastReceiver
-	{
+	//[BroadcastReceiver]
+	//[IntentFilter(new string[] { TimerBackgroundService.TimerUpdatedAction }, Priority = (int)IntentFilterPriority.LowPriority)]
+	//public class TimerBackgroudNotificationReceiver : BroadcastReceiver
+	//{
 
-		public override void OnReceive(Context context, Intent intent)
-		{
-			var nMgr = (NotificationManager)context.GetSystemService(Context.NotificationService);
-			var notification = new Notification(AppData.AppIcon, "Timer has fired");
-			var pendingIntent = PendingIntent.GetActivity(context, 0, new Intent(context, LocalNotify.MainType), 0);
-			notification.SetLatestEventInfo(context, "Timer fired", "AlarmManager event has been triggered", pendingIntent);
-			nMgr.Notify(0, notification);
-		}
-	}
+	//	public override void OnReceive(Context context, Intent intent)
+	//	{
+	//		var nMgr = (NotificationManager)context.GetSystemService(Context.NotificationService);
+	//		var notification = new Notification(AppData.AppIcon, "Timer has fired");
+	//		var pendingIntent = PendingIntent.GetActivity(context, 0, new Intent(context, LocalNotify.MainType), 0);
+	//		notification.SetLatestEventInfo(context, "Timer fired", "AlarmManager event has been triggered", pendingIntent);
+	//		nMgr.Notify(0, notification);
+	//	}
+	//}
+
 
 	[Service]
-	[IntentFilter(new String[] { "Xamarin.Forms.CommonCore.AzureDbBackgroundService" })]
+	[IntentFilter(new String[] { "Xamarin.Forms.CommonCore.TimerBackgroundService" })]
 	public class TimerBackgroundService : IntentService
 	{
-		public static bool IsProcessing { get; set; }
 		private IBinder binder;
-		private IIntervalCallback intervalManager;
 		public const string TimerUpdatedAction = "TimerUpdatedAction";
 
-
-		protected IIntervalCallback IntervalManager
-		{
-			get { return intervalManager ?? (intervalManager = InjectionManager.Get<IIntervalCallback>()); }
-		}
+        public static bool IsProcessing { get; set; }
 
 		protected override void OnHandleIntent(Intent intent)
 		{
@@ -137,7 +154,7 @@ namespace Xamarin.Forms.CommonCore
 
 		public void TimerElapsedEvent()
 		{
-            IntervalManager?.TimeElapsedEvent();
+            TimerBackground.Instance.CallBack?.TimeElapsedEvent();
 		}
 
 	}
@@ -161,11 +178,9 @@ namespace Xamarin.Forms.CommonCore
 	{
         public override void OnReceive(Context context, Intent intent)
         {
-			  TimerBackground.Instance.TimerElapsedEvent();
-
-			  InvokeAbortBroadcast();
-		}
-
+            TimerBackground.Instance.TimerElapsedEvent();
+            InvokeAbortBroadcast();
+        }
 	}
 
 	public class TimerBackgroundingServiceConnection : Java.Lang.Object, IServiceConnection
@@ -173,8 +188,8 @@ namespace Xamarin.Forms.CommonCore
 
 		public void OnServiceConnected(ComponentName name, IBinder service)
 		{
-			var stockServiceBinder = service as TimerBackgroundingServiceBinder;
-			if (stockServiceBinder != null)
+			var timerServiceBinder = service as TimerBackgroundingServiceBinder;
+			if (timerServiceBinder != null)
 			{
 				var binder = (TimerBackgroundingServiceBinder)service;
 				TimerBackground.Instance.Binder = binder;
