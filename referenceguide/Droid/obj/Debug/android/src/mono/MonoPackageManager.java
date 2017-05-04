@@ -107,6 +107,7 @@ class MonoPackageManager_Resources {
 		"FFImageLoading.Platform.dll",
 		"FFImageLoading.Transformations.dll",
 		"FormsViewGroup.dll",
+		"Humanizer.dll",
 		"Microsoft.Practices.ServiceLocation.dll",
 		"Microsoft.Practices.Unity.dll",
 		"ModernHttpClient.dll",

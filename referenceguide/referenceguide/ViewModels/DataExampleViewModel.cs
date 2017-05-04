@@ -13,6 +13,7 @@ namespace referenceguide
 		private string clearHash1;
 		private string clearHash2;
 		private string hashMatchMessage;
+        private string backgroundButtonTitle;
 		private ObservableCollection<RandomUser> randomUsers;
 		private ObservableCollection<Appointment> appointments;
 
@@ -55,15 +56,23 @@ namespace referenceguide
 			set { SetProperty(ref encryptedText, value); }
 		}
 
+		public string BackgroundButtonTitle 
+        { 
+            get => backgroundButtonTitle; set => SetProperty(ref backgroundButtonTitle, value);
+        }
+
 
 		public ICommand EncryptText { get; set; }
 		public ICommand HashText { get; set; }
 		public ICommand HttpDownloadStart { get; set; }
 		public ICommand SqliteLoadStart { get; set; }
 		public ICommand LoadMoreCommand { get; set; }
+        public ICommand StartBackgrounding { get; set; }
+       
 
-		public DataExampleViewModel()
+        public DataExampleViewModel()
 		{
+            BackgroundButtonTitle = "Background Timer";
 			Appointments = new ObservableCollection<Appointment>();
 			RandomUsers = new ObservableCollection<RandomUser>();
 
@@ -108,6 +117,20 @@ namespace referenceguide
 				await GetDbAppointments();
 			});
 
+            StartBackgrounding = new RelayCommand((obj) =>
+			{
+                if (BackgroundButtonTitle.StartsWith("Stop", System.StringComparison.OrdinalIgnoreCase))
+                {
+                    this.BackgroundTimer.Stop();
+                    BackgroundButtonTitle = "Background Timer";
+                }
+                else
+                {
+                    var timerService = InjectionManager.GetService<IIntervalCallback, TimerCallbackService>(true);
+                    this.BackgroundTimer.Start(1000, timerService);
+                    BackgroundButtonTitle = $"Stop {BackgroundButtonTitle}";
+                }
+			});
 
 		}
 

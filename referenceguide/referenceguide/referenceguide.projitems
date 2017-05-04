@@ -37,6 +37,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\Common\RandomUserCell.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\EffectsPages\ListViewEffect.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\EffectsPages\WebViewEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\TimerCallbackService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
@@ -52,6 +53,9 @@
     <Folder Include="$(MSBuildThisFileDirectory)Views\ServicesPages\" />
     <Folder Include="$(MSBuildThisFileDirectory)Views\Common\" />
     <Folder Include="$(MSBuildThisFileDirectory)Config\json\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\">
+      <DependentUpon>Services</DependentUpon>
+    </Folder>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

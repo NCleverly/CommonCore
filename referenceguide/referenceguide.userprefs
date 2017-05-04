@@ -1,36 +1,18 @@
-﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
+﻿<Properties StartupConfiguration="{3676A936-1B3D-4D32-ADD9-7E9862FDB694}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D" />
   <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide Status">
     <Files>
-      <File FileName="referenceguide/Views/ControlPages/PaginagedListControl.cs" Line="11" Column="13" />
-      <File FileName="referenceguide/ViewModels/PaginatedViewModel.cs" Line="31" Column="18" />
-      <File FileName="referenceguide/ViewModels/DataExampleViewModel.cs" Line="135" Column="13" />
-      <File FileName="referenceguide/Views/ServicesPages/HttpServicesPage.cs" Line="3" Column="1" />
-      <File FileName="../Xamarin.Forms.CommonCore/Pages/BoundPage.cs" Line="18" Column="1" />
-      <File FileName="../Xamarin.Forms.CommonCore/ViewModels/ObservableViewModel.cs" Line="52" Column="24" />
-      <File FileName="../Xamarin.Forms.CommonCore/ReadMe.txt" Line="31" Column="69" />
-      <File FileName="referenceguide/Views/Common/RandomUserCell.cs" Line="6" Column="32" />
-      <File FileName="referenceguide/Views/EffectsPages/EffectsMain.cs" Line="24" Column="34" />
-      <File FileName="referenceguide/Views/EffectsPages/ListViewEffect.cs" Line="41" Column="34" />
-      <File FileName="referenceguide/Views/EffectsPages/WebViewEffect.cs" Line="19" Column="14" />
+      <File FileName="referenceguide/ViewModels/ControlsViewModel.cs" Line="9" Column="43" />
+      <File FileName="referenceguide/Views/DependencyPages/DependeciesMain.cs" Line="7" Column="51" />
       <File FileName="referenceguide Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/Les/Desktop/MSMU/MSMU/AzureDb/AppointmentManger.cs" line="50" column="1" />
-      <Breakpoint file="/Users/Les/Desktop/MSMU/MSMU/AzureDb/AppointmentManger.cs" line="30" column="1" />
-      <Breakpoint file="/Volumes/Personal 240/CommonCore/Xamarin.Forms.CommonCore.MaterialDesign/FTEControl.cs" line="148" column="1" />
-      <Breakpoint file="/Users/Les/Desktop/CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs" line="56" column="1" />
-      <Breakpoint file="/Users/Les/Desktop/CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs" line="53" column="1" />
-      <Breakpoint file="/Users/Les/Desktop/CommonCore/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs" line="21" column="1" />
-      <Breakpoint file="/Users/Les/Desktop/CommonCore/Xamarin.Forms.CommonCore/Pages/BoundPage.cs" line="38" column="1" />
-      <Breakpoint file="/Users/Les/Desktop/CommonCore/Xamarin.Forms.CommonCore/Pages/BoundPage.cs" line="49" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.0815f8c294381304" />
   <MonoDevelop.Ide.ItemProperties.referenceguide HideGettingStarted="True" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore HideGettingStarted="True" />

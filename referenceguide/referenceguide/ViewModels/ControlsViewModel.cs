@@ -11,7 +11,10 @@ namespace referenceguide
 		{
 			FABClicked = new RelayCommand((obj) =>
 			{
-
+                this.ShowMessage(new Prompt(){
+                    Title="FAB Button",
+                    Message="The button was clicked"
+                });
 			});
 		}
 	}

@@ -31,6 +31,11 @@
       </intent-filter>
     </receiver>
     <service android:name="md52cbbb386ce1d336d1e7fd8910a8d96d8.GcmService" />
+    <service android:name="md52cbbb386ce1d336d1e7fd8910a8d96d8.TimerBackgroundService">
+      <intent-filter>
+        <action android:name="Xamarin.Forms.CommonCore.TimerBackgroundService" />
+      </intent-filter>
+    </service>
     <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="referenceguide.Droid" android:theme="@style/MyTheme" android:name="md54e9e5f9dcdfab3ec8aac2278e42c7822.MainActivity" />
     <activity android:configChanges="orientation|screenSize" android:label="CommonCore" android:noHistory="true" android:theme="@style/Theme.Splash" android:name="md54e9e5f9dcdfab3ec8aac2278e42c7822.SplashScreenActivity">
       <intent-filter>
