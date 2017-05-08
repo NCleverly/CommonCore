@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using FFImageLoading.Forms.Touch;
 using Foundation;
+using PushNotification.Plugin;
 using UIKit;
 using Xamarin.Forms.CommonCore;
 
@@ -22,6 +23,9 @@ namespace referenceguide.iOS
 			global::Xamarin.Forms.Forms.Init();
 
 			CachedImageRenderer.Init();
+
+			CrossPushNotification.Initialize<CrossPushNotificationListener>();
+
 			LoadApplication(new App());
 
 			return base.FinishedLaunching(app, options);

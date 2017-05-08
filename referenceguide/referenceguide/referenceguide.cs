@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Plugin.Connectivity;
 using Plugin.Connectivity.Abstractions;
 using Microsoft.Practices.Unity;
+using PushNotification.Plugin;
 
 namespace referenceguide
 {
@@ -10,8 +11,8 @@ namespace referenceguide
 	{
 		public App()
 		{
+			AppData.NotificationTags.Add("referenceguide");
 			AppSettings.AESEncryptionKey = "8675309";
-
 			MainPage = new MainPage();
 		}
 

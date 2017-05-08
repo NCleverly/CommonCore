@@ -4,6 +4,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.Linq;
 using Xamarin.Forms.CommonCore;
+using PushNotification.Plugin;
 
 namespace referenceguide
 {
@@ -29,7 +30,7 @@ namespace referenceguide
         public ICommand OverlayClick { get; set; }
         public ICommand Blur { get; set; }
         public ICommand CreateCalendar { get; set; }
-
+		public ICommand PushRegister { get; set; }
 
         public SimpleViewModel()
         {
@@ -99,6 +100,10 @@ namespace referenceguide
             {
                 await Navigation.PushAsync(new CalendarEventPage() { DevicePersistOnly = true });
             });
+
+			PushRegister = new RelayCommand((obj) => {
+				CrossPushNotification.Current.Register();
+			});
         }
 
         public void DisplayNotification(LocalNotification note)

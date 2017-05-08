@@ -58,7 +58,8 @@ namespace referenceguide
 
 		public string BackgroundButtonTitle 
         { 
-            get => backgroundButtonTitle; set => SetProperty(ref backgroundButtonTitle, value);
+			get { return backgroundButtonTitle; }
+			set { SetProperty(ref backgroundButtonTitle, value); }
         }
 
 

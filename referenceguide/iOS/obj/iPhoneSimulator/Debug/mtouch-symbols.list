@@ -327,8 +327,8 @@ _WriteZStream
 _xamarin_timezone_get_names
 _xamarin_timezone_get_data
 _xamarin_GetFolderPath
-_xamarin_log
 _xamarin_get_locale_country_code
+_xamarin_log
 _mono_pmip
 _xamarin_dyn_objc_msgSend
 _xamarin_dyn_objc_msgSendSuper
@@ -663,8 +663,8 @@ _WriteZStream
 _xamarin_timezone_get_names
 _xamarin_timezone_get_data
 _xamarin_GetFolderPath
-_xamarin_log
 _xamarin_get_locale_country_code
+_xamarin_log
 _mono_pmip
 _xamarin_dyn_objc_msgSend
 _xamarin_dyn_objc_msgSendSuper

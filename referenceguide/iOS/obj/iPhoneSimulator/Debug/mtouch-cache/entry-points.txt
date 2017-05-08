@@ -327,8 +327,8 @@ WriteZStream
 xamarin_timezone_get_names
 xamarin_timezone_get_data
 xamarin_GetFolderPath
-xamarin_log
 xamarin_get_locale_country_code
+xamarin_log
 mono_pmip
 xamarin_dyn_objc_msgSend
 xamarin_dyn_objc_msgSendSuper

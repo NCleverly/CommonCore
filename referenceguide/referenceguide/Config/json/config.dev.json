@@ -3,8 +3,8 @@
     "AzureServiceBusName": "AzureServiceBusName",
     "AzureServiceBusUrl": "AzureServiceBusUrl",
     "AzureKey": "AzureKey",
-    "AzureHubName": "AzureHubName",
-    "AzureListenConnection": "AzureListenConnection"
+    "AzureHubName": "referenceguide",
+    "AzureListenConnection": "Endpoint=sb://msmudemoapp.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=c6SHrkpOEJMkUnUxrF3h6nvZWF//pCqV00jskPwO+2k="
   },
   "HttpSettings": {
     "HttpTimeOut": 0,
@@ -13,7 +13,7 @@
     "AndroidHttpHandler": "ModernHttpClient"
   },
   "GoogleSettings": {
-    "GoogleSenderId": "GoogleSenderId"
+    "GoogleSenderId": "638673396107"
   },
   "SqliteSettings": {
     "SQLiteDatabase": "db.db3",

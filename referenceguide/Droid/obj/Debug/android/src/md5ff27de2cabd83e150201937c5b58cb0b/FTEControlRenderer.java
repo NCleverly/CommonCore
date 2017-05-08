@@ -6,8 +6,8 @@ public class FTEControlRenderer
 	implements
 		mono.android.IGCUserPeer,
 		android.text.TextWatcher,
-		android.text.NoCopySpan,
-		android.widget.TextView.OnEditorActionListener
+		android.widget.TextView.OnEditorActionListener,
+		android.text.NoCopySpan
 {
 /** @hide */
 	public static final String __md_methods;

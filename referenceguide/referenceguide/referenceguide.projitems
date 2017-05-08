@@ -38,6 +38,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\EffectsPages\ListViewEffect.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\EffectsPages\WebViewEffect.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\TimerCallbackService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\CrossPushNotificationListener.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
@@ -54,8 +55,8 @@
     <Folder Include="$(MSBuildThisFileDirectory)Views\Common\" />
     <Folder Include="$(MSBuildThisFileDirectory)Config\json\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\">
-      <DependentUpon>Services</DependentUpon>
     </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

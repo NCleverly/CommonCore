@@ -17,12 +17,6 @@ namespace referenceguide.Droid
 		{
 			base.OnCreate(bundle);
 
-
-			Task.Run(async () =>
-			{
-				await ConfigurationLoader.Load();
-			});
-
 			CachedImageRenderer.Init();
 			LocalNotify.MainType = typeof(MainActivity);
 			AppData.AppIcon = Resource.Drawable.icon;

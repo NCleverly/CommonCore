@@ -53,6 +53,14 @@ namespace referenceguide
             };
             cal.SetBinding(Button.CommandProperty, "CreateCalendar");
 
+			var pnRegister = new GradientButton()
+			{
+				Style = AppStyles.LightOrange,
+				Text = "Register Push Notification",
+				AutomationId = "pnRegister"
+			};
+			pnRegister.SetBinding(Button.CommandProperty, "PushRegister");
+
             var stack = new StackLayout()
             {
                 Padding = 20,

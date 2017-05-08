@@ -1,21 +1,29 @@
-﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
+﻿<Properties StartupConfiguration="{3676A936-1B3D-4D32-ADD9-7E9862FDB694}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D" />
   <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide Status">
     <Files>
-      <File FileName="../Xamarin.Forms.CommonCore/Services/BackgroundTimerService.IOS.cs" Line="44" Column="10" />
-      <File FileName="../Xamarin.Forms.CommonCore/Services/BackgroundTimerService.Droid.cs" Line="18" Column="35" />
-      <File FileName="../Xamarin.Forms.CommonCore/Services/IBackgroundTimerService.cs" Line="6" Column="14" />
-      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="76" Column="16" />
-      <File FileName="referenceguide/ViewModels/DataExampleViewModel.cs" Line="158" Column="13" />
+      <File FileName="referenceguide/Config/json/config.dev.json" Line="14" Column="5" />
+      <File FileName="iOS/Info.plist" />
+      <File FileName="referenceguide/referenceguide.cs" Line="14" Column="51" />
+      <File FileName="referenceguide/PushNotifications/CrossPushNotificationListener.cs" Line="44" Column="43" />
+      <File FileName="../Xamarin.Forms.CommonCore/Dependencies/AzureNotificationHub.Droid.cs" Line="16" Column="34" />
+      <File FileName="referenceguide/Views/DependencyPages/DependeciesMain.cs" Line="7" Column="49" />
+      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="105" Column="46" />
+      <File FileName="Droid/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="Droid/MainApplication.cs" Line="35" Column="93" />
+      <File FileName="iOS/AppDelegate.cs" Line="27" Column="70" />
       <File FileName="referenceguide Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Personal 240/CommonCore/referenceguide/referenceguide/PushNotifications/CrossPushNotificationListener.cs" relfile="referenceguide/PushNotifications/CrossPushNotificationListener.cs" line="42" column="1" />
+      <Breakpoint file="/Volumes/Personal 240/CommonCore/Xamarin.Forms.CommonCore/Dependencies/AzureNotificationHub.Droid.cs" line="15" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.0815f8c294381304" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.N724" />
   <MonoDevelop.Ide.ItemProperties.referenceguide HideGettingStarted="True" />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore HideGettingStarted="True" />
