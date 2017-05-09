@@ -242,8 +242,8 @@
     <BundleResource Include="Resources\plus.png" />
     <BundleResource Include="Resources\sharedcode.png" />
   </ItemGroup>
-  <Import Project="..\..\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems" Label="Shared" Condition="Exists('..\..\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems')" />
-  <Import Project="..\..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
+  <Import Project="..\..\Core Projects\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems" Label="Shared" Condition="Exists('..\..\Core Projects\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems')" />
+  <Import Project="..\..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
   <Import Project="..\referenceguide\referenceguide.projitems" Label="Shared" Condition="Exists('..\referenceguide\referenceguide.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.5.235-pre2\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.5.235-pre2\build\netstandard1.0\Xamarin.Forms.targets')" />

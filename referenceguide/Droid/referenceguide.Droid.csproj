@@ -305,11 +305,8 @@
   <ItemGroup>
     <AndroidEnvironment Include="monoconfig.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="sharedcode.png" />
-  </ItemGroup>
-  <Import Project="..\..\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems" Label="Shared" Condition="Exists('..\..\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems')" />
-  <Import Project="..\..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
+  <Import Project="..\..\Core Projects\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems" Label="Shared" Condition="Exists('..\..\Core Projects\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems')" />
+  <Import Project="..\..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
   <Import Project="..\referenceguide\referenceguide.projitems" Label="Shared" Condition="Exists('..\referenceguide\referenceguide.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Build.Download.0.4.4\build\Xamarin.Build.Download.targets" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.4\build\Xamarin.Build.Download.targets')" />

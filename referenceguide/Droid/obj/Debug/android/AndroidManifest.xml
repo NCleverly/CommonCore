@@ -58,15 +58,15 @@
     </activity>
     <activity android:label="@string/title_activity_webview" android:theme="@android:style/Theme.DeviceDefault" android:name="md5a104545e4d19c4ffe9ec3d5074a3b979.WebViewActivity" />
     <service android:name="md59f70a99687498e7ba187118950981d26.KeepAliveService" />
-    <receiver android:name="md563bb5d7cd114ceda82ec85fb57ce3637.AppUpdateReceiver">
-      <intent-filter>
-        <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-      </intent-filter>
-    </receiver>
     <service android:exported="false" android:name="pushnotification.plugin.PushNotificationGcmListener">
       <intent-filter>
         <action android:name="com.google.android.c2dm.intent.RECEIVE" />
         <category android:name="com.referenceguide" />
+      </intent-filter>
+    </service>
+    <service android:exported="false" android:name="md563bb5d7cd114ceda82ec85fb57ce3637.PushNotificationInstanceIDListenerService">
+      <intent-filter>
+        <action android:name="com.google.android.gms.iid.InstanceID" />
       </intent-filter>
     </service>
     <service android:exported="false" android:name="md563bb5d7cd114ceda82ec85fb57ce3637.PushNotificationRegistrationIntentService" />

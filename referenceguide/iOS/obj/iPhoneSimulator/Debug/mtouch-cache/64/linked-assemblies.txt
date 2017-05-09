@@ -1,6 +1,7 @@
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/referenceguide.iOS.exe
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/System.Runtime.Serialization.Primitives.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/System.Reflection.Primitives.dll
+/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/PushNotification.Plugin.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/System.Threading.Tasks.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/System.Diagnostics.Debug.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/System.Xml.dll
@@ -31,6 +32,7 @@
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/Plugin.Connectivity.Abstractions.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/System.Globalization.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/Xamarin.Forms.Core.dll
+/Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/PushNotification.Plugin.Abstractions.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/System.Xml.XmlDocument.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/System.Runtime.dll
 /Volumes/Personal 240/CommonCore/referenceguide/iOS/obj/iPhoneSimulator/Debug/mtouch-cache/64/Link/PCLCrypto.dll

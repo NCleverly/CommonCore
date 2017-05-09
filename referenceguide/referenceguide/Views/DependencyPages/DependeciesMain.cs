@@ -65,7 +65,7 @@ namespace referenceguide
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { dlg, not, overlay, blur, cal }
+                Children = { dlg, not, overlay, blur, cal, pnRegister }
             };
 
             Content = new ScrollView()

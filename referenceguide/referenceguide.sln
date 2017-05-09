@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "referenceguide.iOS", "iOS\r
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "referenceguide.Droid", "Droid\referenceguide.Droid.csproj", "{3676A936-1B3D-4D32-ADD9-7E9862FDB694}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore", "..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.shproj", "{9FBF1BE8-6CC0-4DC2-BC5B-AB11181D64E3}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore", "..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.shproj", "{9FBF1BE8-6CC0-4DC2-BC5B-AB11181D64E3}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.MaterialDesign", "..\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.shproj", "{82EC8F9E-EF09-4F94-A4F0-85AC1F5DE0AF}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Xamarin.Forms.CommonCore.MaterialDesign", "..\Core Projects\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.shproj", "{82EC8F9E-EF09-4F94-A4F0-85AC1F5DE0AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
