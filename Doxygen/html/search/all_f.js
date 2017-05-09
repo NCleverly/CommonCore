@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['rankingcontrol',['RankingControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html',1,'Xamarin.Forms.CommonCore.RankingControl'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#acb9317422edfb0e429d29d35dcc787c8',1,'Xamarin.Forms.CommonCore.RankingControl.RankingControl()']]],
+  ['rankingcontrol_2ecs',['RankingControl.cs',['../_ranking_control_8cs.html',1,'']]],
+  ['rating',['Rating',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a5ede99397e2bbe25cb523250eac086b3',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
+  ['ratingproperty',['RatingProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a434ae01426bd92007a99dbec8e05e32e',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
+  ['regexbehavior',['RegExBehavior',['../class_xamarin_1_1_forms_1_1_common_core_1_1_reg_ex_behavior.html',1,'Xamarin::Forms::CommonCore']]],
+  ['regexbehavior_2ecs',['RegExBehavior.cs',['../_reg_ex_behavior_8cs.html',1,'']]],
+  ['regexexp',['RegexExp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_reg_ex_behavior.html#a507f68fc8dbf95bbdefad38add1f85a6',1,'Xamarin::Forms::CommonCore::RegExBehavior']]],
+  ['regexexpproperty',['RegexExpProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_reg_ex_behavior.html#a27e93ad8a0f18ab50ca592e67489c25c',1,'Xamarin::Forms::CommonCore::RegExBehavior']]],
+  ['registernotificationhub',['RegisterNotificationHub',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_azure_notification_hub.html#a7aeae72372005916cf5dc71ec80a93ff',1,'Xamarin::Forms::CommonCore::IAzureNotificationHub']]],
+  ['relaycommand',['RelayCommand',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html',1,'Xamarin.Forms.CommonCore.RelayCommand'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#a489e5bba89f4bf0b4f85065f516e7654',1,'Xamarin.Forms.CommonCore.RelayCommand.RelayCommand()']]],
+  ['removeemptyrowseffect',['RemoveEmptyRowsEffect',['../class_xamarin_1_1_forms_1_1_common_core_1_1_remove_empty_rows_effect.html',1,'Xamarin.Forms.CommonCore.RemoveEmptyRowsEffect'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_remove_empty_rows_effect.html#a48ec4ef04e710138c3bdf15aab3d7eaf',1,'Xamarin.Forms.CommonCore.RemoveEmptyRowsEffect.RemoveEmptyRowsEffect()']]],
+  ['render',['Render',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a35f522ff4030bbaefde99f824facf10b',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
+  ['requestpermission',['RequestPermission',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_local_notify.html#ad51cd3fa30b96bc68766aceca33e0aec',1,'Xamarin::Forms::CommonCore::ILocalNotify']]],
+  ['requiredvalidator',['RequiredValidator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a5db04451285b7154273a50b8b3a31ebe',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
+  ['resourceloader_2ecs',['ResourceLoader.cs',['../_resource_loader_8cs.html',1,'']]],
+  ['response',['Response',['../class_xamarin_1_1_forms_1_1_common_core_1_1_generic_response.html#ab6e90eb6a87df24e2232c1ed5f5d4762',1,'Xamarin.Forms.CommonCore.GenericResponse.Response()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_string_response.html#a2cf1b1c7c259999362150123716bd63d',1,'Xamarin.Forms.CommonCore.StringResponse.Response()']]],
+  ['responsetypes_2ecs',['ResponseTypes.cs',['../_response_types_8cs.html',1,'']]],
+  ['rightbordercolor',['RightBorderColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abbbcc503a642affdad7d031bd7fc5208',1,'Xamarin::Forms::CommonCore::Popup']]],
+  ['rightbordercolorproperty',['RightBorderColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a4232be76bff55aea641cb405cafb53bb',1,'Xamarin::Forms::CommonCore::Popup']]],
+  ['rootobject',['RootObject',['../class_xamarin_1_1_forms_1_1_common_core_1_1_root_object.html',1,'Xamarin::Forms::CommonCore']]]
+];

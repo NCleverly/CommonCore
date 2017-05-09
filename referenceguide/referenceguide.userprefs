@@ -1,6 +1,6 @@
 ﻿<Properties StartupConfiguration="{3676A936-1B3D-4D32-ADD9-7E9862FDB694}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Config/json/config.dev.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide Status">
     <Files>
       <File FileName="referenceguide/Config/json/config.dev.json" Line="14" Column="5" />
       <File FileName="iOS/Info.plist" />
@@ -13,6 +13,7 @@
       <File FileName="iOS/AppDelegate.cs" Line="27" Column="70" />
       <File FileName="referenceguide/Config/AppSettings.cs" Line="1" Column="1" />
       <File FileName="Droid/monoconfig.txt" Line="1" Column="1" />
+      <File FileName="referenceguide Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

@@ -1,0 +1,14 @@
+var searchData=
+[
+  ['pagesizechanged',['PageSizeChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a67f60e0261d420d30ebcf56aee8568d7',1,'Xamarin::Forms::CommonCore::AbsoluteLayoutPage']]],
+  ['pingdomain',['PingDomain',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a4b1d57550cb5e27793fd3e90f9e0afe4',1,'Xamarin.Forms.CommonCore.HttpService.PingDomain()'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#aee944529809fe5812b18b44ea95fce8c',1,'Xamarin.Forms.CommonCore.IHttpService.PingDomain()']]],
+  ['pingurl',['PingUrl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#af27e202f6418551c420681353837a5f2',1,'Xamarin.Forms.CommonCore.HttpService.PingUrl()'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#ac6b7290f1d7e5075ac1b6c7263b39390',1,'Xamarin.Forms.CommonCore.IHttpService.PingUrl()']]],
+  ['placecall',['PlaceCall',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_phone_call.html#a8134c61f1b8cff100f79f50d526e07f8',1,'Xamarin::Forms::CommonCore::IPhoneCall']]],
+  ['placecallwithcallback',['PlaceCallWithCallBack',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_phone_call.html#afcd8e7e645e007a7f2d768bf43081e36',1,'Xamarin::Forms::CommonCore::IPhoneCall']]],
+  ['popup',['Popup',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#aec82efe5cacf6695ddb2f6e9bbd1bced',1,'Xamarin::Forms::CommonCore::Popup']]],
+  ['popuppage',['PopupPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_page.html#a35eb6c03dc4fccee6b03ed81aa5f257b',1,'Xamarin::Forms::CommonCore::PopupPage']]],
+  ['popuppageinitializer',['PopupPageInitializer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_page_initializer.html#ac36950f9e0f32ce976ecf663dbaefd03',1,'Xamarin::Forms::CommonCore::PopupPageInitializer']]],
+  ['post_3c_20t_20_3e',['Post&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a5bd22fa8f13f4c94d6eacca230bea24d',1,'Xamarin.Forms.CommonCore.HttpService.Post&lt; T &gt;()'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#a2c646baf10b3692bc0f5546dee8b7368',1,'Xamarin.Forms.CommonCore.IHttpService.Post&lt; T &gt;()']]],
+  ['propertychangedbehavior',['PropertyChangedBehavior',['../class_xamarin_1_1_forms_1_1_common_core_1_1_property_changed_behavior.html#ad315ca4b1213bed04344eba531f79068',1,'Xamarin::Forms::CommonCore::PropertyChangedBehavior']]],
+  ['put_3c_20t_20_3e',['Put&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#ab9b23de399e0719ec89cdee048702b24',1,'Xamarin.Forms.CommonCore.HttpService.Put&lt; T &gt;()'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#aea9f43a20c77fbb61acca3bdf44197af',1,'Xamarin.Forms.CommonCore.IHttpService.Put&lt; T &gt;()']]]
+];
