@@ -1,0 +1,6 @@
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/obj/Debug/.NETPortable,Version=v4.5,Profile=Profile259.AssemblyAttribute.cs
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/bin/Debug/PushNotification.Plugin.Abstractions.dll.mdb
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/bin/Debug/PushNotification.Plugin.Abstractions.dll
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/obj/Debug/PushNotification.Plugin.Abstractions.dll
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/obj/Debug/PushNotification.Plugin.Abstractions.dll.mdb
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/bin/Debug/Newtonsoft.Json.dll
