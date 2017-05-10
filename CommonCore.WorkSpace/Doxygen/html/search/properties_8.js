@@ -10,6 +10,7 @@ var searchData=
   ['islistening',['IsListening',['../class_xamarin_1_1_forms_1_1_common_core_1_1_phone_callback.html#a1948c27b41b5d18048a6e46c9ee9237c',1,'Xamarin::Forms::CommonCore::PhoneCallback']]],
   ['isloadinghud',['IsLoadingHUD',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a8aa219e9ba54e6423852a31ebc246865',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['isloadingoverlay',['IsLoadingOverlay',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aec303684e2020b23f826d98b56f48feb',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
+  ['isregistered',['IsRegistered',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_azure_notification_hub.html#a076702cc181b1d612129e1729079903b',1,'Xamarin::Forms::CommonCore::IAzureNotificationHub']]],
   ['isstarred',['IsStarred',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#adc54e50703e19df329ba22c59c390354',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
   ['isusercontrol',['IsUserControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_tapped_event_args.html#a7fd34f519fb8c5462783ac6017be4509',1,'Xamarin::Forms::CommonCore::PopupTappedEventArgs']]],
   ['isvalid',['IsValid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a3e410f7353858224c29779299c367573',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],

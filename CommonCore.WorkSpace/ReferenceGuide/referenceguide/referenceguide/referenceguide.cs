@@ -2,8 +2,9 @@
 using Xamarin.Forms;
 using Plugin.Connectivity;
 using Plugin.Connectivity.Abstractions;
-using Microsoft.Practices.Unity;
-using PushNotification.Plugin;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 namespace referenceguide
 {
@@ -23,6 +24,9 @@ namespace referenceguide
 
 		protected override void OnStart()
 		{
+			var mobileCenterKeys = $"android={AppData.MobileCenter_HockeyAppAndroid};ios={AppData.MobileCenter_HockeyAppiOS}";
+			MobileCenter.Start(mobileCenterKeys, typeof(Analytics), typeof(Crashes));
+			
 			CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
 		}
 

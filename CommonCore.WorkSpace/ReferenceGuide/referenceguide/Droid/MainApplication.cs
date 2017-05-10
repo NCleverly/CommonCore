@@ -25,7 +25,6 @@ namespace referenceguide.Droid
 		{
 			base.OnCreate();
 			RegisterActivityLifecycleCallbacks(this);
-			//A great place to initialize Xamarin.Insights and Dependency Services!
 
 			AppContext = this.ApplicationContext;
 

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['webviewdisablescroll',['WebViewDisableScroll',['../class_xamarin_1_1_forms_1_1_common_core_1_1_common_effects.html#a5fe8b2cf2e73b54a38bc9f7fb8d3deac',1,'Xamarin::Forms::CommonCore::CommonEffects']]]
+  ['unselectedbackgroundproperty',['UnselectedBackgroundProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#af80c6a37c1c8d93c39ec7fc84b3c06cb',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
+  ['unselectedtextcolorproperty',['UnselectedTextColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a47a1b80bd9feec90fb65ad02be175cc0',1,'Xamarin::Forms::CommonCore::SegmentControl']]]
 ];

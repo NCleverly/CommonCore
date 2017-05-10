@@ -56,9 +56,9 @@ namespace referenceguide
 			var pnRegister = new GradientButton()
 			{
 				Style = AppStyles.LightOrange,
-				Text = "Register Push Notification",
 				AutomationId = "pnRegister"
 			};
+			pnRegister.SetBinding(Button.TextProperty, "PushButtonLabel");
 			pnRegister.SetBinding(Button.CommandProperty, "PushRegister");
 
             var stack = new StackLayout()

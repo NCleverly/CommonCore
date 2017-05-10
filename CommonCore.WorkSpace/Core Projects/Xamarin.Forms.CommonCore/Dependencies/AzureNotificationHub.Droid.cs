@@ -11,24 +11,11 @@ namespace Xamarin.Forms.CommonCore
 	{
 		public static NotificationHub Hub { get; set; }
 
-		public bool IsRegistered
-		{
-			get
-			{
-				return AzureNotificationHub.Hub != null;
-			}
-		}
-
 		public void RegisterNotificationHub(string registrationId)
 		{
-			if (!IsRegistered)
+			if (AzureNotificationHub.Hub==null)
 				AzureNotificationHub.Hub = new NotificationHub(AppData.AzureHubName, AppData.AzureListenConnection, Xamarin.Forms.Forms.Context);
 
-			UpdateRegistrationHub(registrationId);
-		}
-
-		public void UpdateRegistrationHub(string registrationId)
-		{
 			try
 			{
 				AzureNotificationHub.Hub.UnregisterAll(registrationId);
@@ -39,6 +26,7 @@ namespace Xamarin.Forms.CommonCore
 				var e = ex;
 			}
 		}
+
 	}
 }
 #endif

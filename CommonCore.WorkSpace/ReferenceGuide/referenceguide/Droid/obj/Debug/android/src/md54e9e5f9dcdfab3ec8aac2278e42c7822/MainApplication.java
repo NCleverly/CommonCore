@@ -2,7 +2,7 @@ package md54e9e5f9dcdfab3ec8aac2278e42c7822;
 
 
 public class MainApplication
-	extends android.app.Application
+	extends android.support.multidex.MultiDexApplication
 	implements
 		mono.android.IGCUserPeer,
 		android.app.Application.ActivityLifecycleCallbacks

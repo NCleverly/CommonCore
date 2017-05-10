@@ -1,11 +1,25 @@
 var searchData=
 [
-  ['unhookevents',['UnhookEvents',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a6eb4c66075bf4f582d9aac2fb5d7dfe7',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
-  ['unselectedbackground',['UnselectedBackground',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a70590438cad3287c4e6bbe485a2a5747',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
-  ['unselectedbackgroundproperty',['UnselectedBackgroundProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#af80c6a37c1c8d93c39ec7fc84b3c06cb',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
-  ['unselectedtextcolor',['UnselectedTextColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a2d85390576fb675011a8a9d1743e00f9',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
-  ['unselectedtextcolorproperty',['UnselectedTextColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a47a1b80bd9feec90fb65ad02be175cc0',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
-  ['url',['url',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_api.html#a49920b882f83bef219f908b7b1cfe900',1,'Xamarin::Forms::CommonCore::WebApi']]],
-  ['utctickstamp',['UTCTickStamp',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_data_model.html#ae54f65ff1416fed39b098998b3d5f016',1,'Xamarin.Forms.CommonCore.IDataModel.UTCTickStamp()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#a3d5dc9a65f5468196099bbea20642fa3',1,'Xamarin.Forms.CommonCore.DataModel.UTCTickStamp()']]],
-  ['uwpappid',['UWPAppId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html#afad55d6f189b2311f2b8eb898f74737a',1,'Xamarin::Forms::CommonCore::MobileCenterHockeyApp']]]
+  ['tablename',['TableName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_table_name.html',1,'Xamarin.Forms.CommonCore.TableName'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_table_name.html#abcccf6101f8df4b2b60a09e989921fdf',1,'Xamarin.Forms.CommonCore.TableName.tableName()']]],
+  ['tablenames',['TableNames',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html#a5bd2b3f5b40e84e396043ed45f08d425',1,'Xamarin::Forms::CommonCore::SqliteSettings']]],
+  ['tapgesturerecognizervisitor',['TapGestureRecognizerVisitor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_tap_gesture_recognizer_visitor.html',1,'Xamarin::Forms::CommonCore']]],
+  ['tapgesturerecognizervisitor_2ecs',['TapGestureRecognizerVisitor.cs',['../_tap_gesture_recognizer_visitor_8cs.html',1,'']]],
+  ['tapped',['Tapped',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a2b3d2505a7ec2c16a89dd4502622efa8',1,'Xamarin::Forms::CommonCore::Popup']]],
+  ['taprecognizer',['tapRecognizer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#ae606ea25620202fc6d61b38ebd1fda6f',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
+  ['textarea',['TextArea',['../class_common_1_1_core_1_1_text_area.html',1,'Common.Core.TextArea'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html',1,'Xamarin.Forms.CommonCore.TextArea']]],
+  ['textarea_2ecs',['TextArea.cs',['../_text_area_8cs.html',1,'']]],
+  ['textarearenderer_2ecs',['TextAreaRenderer.cs',['../_text_area_renderer_8cs.html',1,'']]],
+  ['textarearenderer_2edroid_2ecs',['TextAreaRenderer.Droid.cs',['../_text_area_renderer_8_droid_8cs.html',1,'']]],
+  ['textarearenderer_2eios_2ecs',['TextAreaRenderer.IOS.cs',['../_text_area_renderer_8_i_o_s_8cs.html',1,'']]],
+  ['timeelapsedevent',['TimeElapsedEvent',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_interval_callback.html#a99e094cea574bd34d22b754062a68b78',1,'Xamarin::Forms::CommonCore::IIntervalCallback']]],
+  ['title',['Title',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_version.html#a8bff0417fc2cb17a0061b594b1232495',1,'Xamarin.Forms.CommonCore.AppVersion.Title()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#a8b0957d1af8132ac91303016bdbf8bd4',1,'Xamarin.Forms.CommonCore.CalendarEventModel.Title()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_prompt.html#a58eb325418398a919822089230509551',1,'Xamarin.Forms.CommonCore.Prompt.Title()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#a7f96eb690cb22d0538c9276b2b55972c',1,'Xamarin.Forms.CommonCore.LocalNotification.Title()']]],
+  ['todictionary',['ToDictionary',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a6001ac232ba8cc4a6c81b4ca6afdc406',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
+  ['token_5ftype',['token_type',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#a4f58e6d64c06523e68cdadf7b44f352f',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]],
+  ['tokenbearer',['TokenBearer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a640f6beb9149417b1a052fcf31130413',1,'Xamarin::Forms::CommonCore::AppData']]],
+  ['tokenisvalid',['TokenIsValid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a15a32c5e522e467185003da2a58893e0',1,'Xamarin::Forms::CommonCore::AppData']]],
+  ['tolist',['ToList',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a1838e20ad80715e4441a8d73785c196f',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
+  ['toobservable_3c_20t_20_3e',['ToObservable&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ae63ff7cccad11109f9d9c41dbb810e4d',1,'Xamarin.Forms.CommonCore.CoreExtensions.ToObservable&lt; T &gt;(this List&lt; T &gt; list)'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a7b4382e7e0d1cbbba0047c8d2b2c14fb',1,'Xamarin.Forms.CommonCore.CoreExtensions.ToObservable&lt; T &gt;(this T[] array)']]],
+  ['topbordercolor',['TopBorderColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a730069eb37ba32a8fded602269bfefee',1,'Xamarin::Forms::CommonCore::Popup']]],
+  ['topbordercolorproperty',['TopBorderColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a16a04c9e558789ef51cc57963ea945c1',1,'Xamarin::Forms::CommonCore::Popup']]],
+  ['truncateasync_3c_20t_20_3e',['TruncateAsync&lt; T &gt;',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sqlite_db.html#aa17fc421436bb1b84fa4904a49159c0f',1,'Xamarin.Forms.CommonCore.ISqliteDb.TruncateAsync&lt; T &gt;()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#a2d9b599db049ecb50d95b149239300aa',1,'Xamarin.Forms.CommonCore.SqliteDb.TruncateAsync&lt; T &gt;()']]]
 ];

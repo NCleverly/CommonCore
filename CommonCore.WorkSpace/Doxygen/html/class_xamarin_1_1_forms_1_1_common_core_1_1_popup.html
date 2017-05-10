@@ -70,8 +70,13 @@ $(function() {
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pac-methods">Package Functions</a> &#124;
+<a href="#pac-static-attribs">Static Package Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="#events">Events</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Xamarin.Forms.CommonCore.Popup Class Reference</div>  </div>
@@ -108,35 +113,35 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:aea00fac6c11352d80e7981b2c956ab7f"><td class="memItemLeft" align="right" valign="top">VisualElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#aea00fac6c11352d80e7981b2c956ab7f">SectionContainer</a> =&gt; _sectionContainer</td></tr>
+<tr class="memitem:aea00fac6c11352d80e7981b2c956ab7f"><td class="memItemLeft" align="right" valign="top">VisualElement&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#aea00fac6c11352d80e7981b2c956ab7f">SectionContainer</a> =&gt; <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a5c9a4b32888090b60423879b00b03b15">_sectionContainer</a></td></tr>
 <tr class="memdesc:aea00fac6c11352d80e7981b2c956ab7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SecionContainer includes the <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a414efca4c1242d4b672684c971d644c0">Header</a>, <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#adb1efe251d49aa91d92ad197c22d98f4">Body</a>, and <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a9c300fbfe2094a2265ca46f2e66bbfef">Footer</a>  <a href="#aea00fac6c11352d80e7981b2c956ab7f">More...</a><br /></td></tr>
 <tr class="separator:aea00fac6c11352d80e7981b2c956ab7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a06f44a9a3fc2c2a7c75b041a1f98df15"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a06f44a9a3fc2c2a7c75b041a1f98df15">HeaderProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a414efca4c1242d4b672684c971d644c0">Header</a>), typeof(View), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), null, propertyChanged: OnHeaderPropertyChanged)</td></tr>
+<tr class="memitem:a06f44a9a3fc2c2a7c75b041a1f98df15"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a06f44a9a3fc2c2a7c75b041a1f98df15">HeaderProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a414efca4c1242d4b672684c971d644c0">Header</a>), typeof(View), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), null, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abf34ba03bfc0de95c252fd15da563033">OnHeaderPropertyChanged</a>)</td></tr>
 <tr class="separator:a06f44a9a3fc2c2a7c75b041a1f98df15"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3c11327bd312eadb898469c1d1f933e"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#ac3c11327bd312eadb898469c1d1f933e">BodyProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#adb1efe251d49aa91d92ad197c22d98f4">Body</a>), typeof(View), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), null, propertyChanged: OnBodyPropertyChanged)</td></tr>
+<tr class="memitem:ac3c11327bd312eadb898469c1d1f933e"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#ac3c11327bd312eadb898469c1d1f933e">BodyProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#adb1efe251d49aa91d92ad197c22d98f4">Body</a>), typeof(View), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), null, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a3f726d7b8d09aee63a143289ac935746">OnBodyPropertyChanged</a>)</td></tr>
 <tr class="separator:ac3c11327bd312eadb898469c1d1f933e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6192794266ba77bda03678b29980c990"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a6192794266ba77bda03678b29980c990">FooterProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a9c300fbfe2094a2265ca46f2e66bbfef">Footer</a>), typeof(View), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), null, propertyChanged: OnFooterPropertyChanged)</td></tr>
+<tr class="memitem:a6192794266ba77bda03678b29980c990"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a6192794266ba77bda03678b29980c990">FooterProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a9c300fbfe2094a2265ca46f2e66bbfef">Footer</a>), typeof(View), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), null, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a807e9c53e99ea3c8b06d2b8b2d10d0fa">OnFooterPropertyChanged</a>)</td></tr>
 <tr class="separator:a6192794266ba77bda03678b29980c990"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a9354b345773f9dcef1b69cfabc26f4"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a4a9354b345773f9dcef1b69cfabc26f4">XPositionRequestProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8351ca7cf644122f17cad0f31334f9ae">XPositionRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: OnPositionChanged)</td></tr>
+<tr class="memitem:a4a9354b345773f9dcef1b69cfabc26f4"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a4a9354b345773f9dcef1b69cfabc26f4">XPositionRequestProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8351ca7cf644122f17cad0f31334f9ae">XPositionRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8966194833280189c9e775d0dbe157df">OnPositionChanged</a>)</td></tr>
 <tr class="separator:a4a9354b345773f9dcef1b69cfabc26f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a87cff43fd59c2b357a7ee535fbcf1dde"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a87cff43fd59c2b357a7ee535fbcf1dde">YPositionRequestProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8351ca7cf644122f17cad0f31334f9ae">XPositionRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: OnPositionChanged)</td></tr>
+<tr class="memitem:a87cff43fd59c2b357a7ee535fbcf1dde"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a87cff43fd59c2b357a7ee535fbcf1dde">YPositionRequestProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8351ca7cf644122f17cad0f31334f9ae">XPositionRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8966194833280189c9e775d0dbe157df">OnPositionChanged</a>)</td></tr>
 <tr class="separator:a87cff43fd59c2b357a7ee535fbcf1dde"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dcffe1be5740a126aeb6b15c35ad859"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a3dcffe1be5740a126aeb6b15c35ad859">LeftBorderColorProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abdc8e910addc90c5d72cd072a0c87b77">LeftBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: OnLeftBorderChanged)</td></tr>
+<tr class="memitem:a3dcffe1be5740a126aeb6b15c35ad859"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a3dcffe1be5740a126aeb6b15c35ad859">LeftBorderColorProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abdc8e910addc90c5d72cd072a0c87b77">LeftBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a67e285cb36d6f61e16202637df993ab6">OnLeftBorderChanged</a>)</td></tr>
 <tr class="separator:a3dcffe1be5740a126aeb6b15c35ad859"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4232be76bff55aea641cb405cafb53bb"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a4232be76bff55aea641cb405cafb53bb">RightBorderColorProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abbbcc503a642affdad7d031bd7fc5208">RightBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: OnRightBorderChanged)</td></tr>
+<tr class="memitem:a4232be76bff55aea641cb405cafb53bb"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a4232be76bff55aea641cb405cafb53bb">RightBorderColorProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abbbcc503a642affdad7d031bd7fc5208">RightBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a83756189c1f8911b481a73c168d2d6a7">OnRightBorderChanged</a>)</td></tr>
 <tr class="separator:a4232be76bff55aea641cb405cafb53bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16a04c9e558789ef51cc57963ea945c1"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a16a04c9e558789ef51cc57963ea945c1">TopBorderColorProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a730069eb37ba32a8fded602269bfefee">TopBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: OnTopBorderChanged)</td></tr>
+<tr class="memitem:a16a04c9e558789ef51cc57963ea945c1"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a16a04c9e558789ef51cc57963ea945c1">TopBorderColorProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a730069eb37ba32a8fded602269bfefee">TopBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a9b2a5712b8f05b4437dd8c7cfe899fde">OnTopBorderChanged</a>)</td></tr>
 <tr class="separator:a16a04c9e558789ef51cc57963ea945c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa32bb525140308ee1ca3ffcd27ac9efe"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#aa32bb525140308ee1ca3ffcd27ac9efe">BottomBorderColorProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#af82fb71a3ec6f325889e9b4e06a3700c">BottomBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: OnBottomBorderChanged)</td></tr>
+<tr class="memitem:aa32bb525140308ee1ca3ffcd27ac9efe"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#aa32bb525140308ee1ca3ffcd27ac9efe">BottomBorderColorProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#af82fb71a3ec6f325889e9b4e06a3700c">BottomBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#ab38a9bc476458fbaf5a52fd05bcfb164">OnBottomBorderChanged</a>)</td></tr>
 <tr class="separator:aa32bb525140308ee1ca3ffcd27ac9efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3f2f2ab6a22e7506f05f096a5e973feb"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a3f2f2ab6a22e7506f05f096a5e973feb">HasDropShadowProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a51ba017b08a005f31e6e268754f9a900">HasDropShadow</a>), typeof(bool), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(bool), propertyChanged: OnDropShadowChanged)</td></tr>
+<tr class="memitem:a3f2f2ab6a22e7506f05f096a5e973feb"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a3f2f2ab6a22e7506f05f096a5e973feb">HasDropShadowProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a51ba017b08a005f31e6e268754f9a900">HasDropShadow</a>), typeof(bool), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(bool), propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a219e8762393f92f214a8d6567531ed5e">OnDropShadowChanged</a>)</td></tr>
 <tr class="separator:a3f2f2ab6a22e7506f05f096a5e973feb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a073b6645d9dcafaa1c2dec6f81838870"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a073b6645d9dcafaa1c2dec6f81838870">ContentWidthRequestProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#acfe0154e7275993db29d063f7265bf43">ContentWidthRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: OnPositionChanged)</td></tr>
+<tr class="memitem:a073b6645d9dcafaa1c2dec6f81838870"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a073b6645d9dcafaa1c2dec6f81838870">ContentWidthRequestProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#acfe0154e7275993db29d063f7265bf43">ContentWidthRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8966194833280189c9e775d0dbe157df">OnPositionChanged</a>)</td></tr>
 <tr class="separator:a073b6645d9dcafaa1c2dec6f81838870"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ea9a918e767cd6e961ee42ee6c0e88f"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8ea9a918e767cd6e961ee42ee6c0e88f">ContentHeightRequestProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a471177a7d42dead03c78b98c3a94fd84">ContentHeightRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: OnPositionChanged)</td></tr>
+<tr class="memitem:a8ea9a918e767cd6e961ee42ee6c0e88f"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8ea9a918e767cd6e961ee42ee6c0e88f">ContentHeightRequestProperty</a> = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a471177a7d42dead03c78b98c3a94fd84">ContentHeightRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8966194833280189c9e775d0dbe157df">OnPositionChanged</a>)</td></tr>
 <tr class="separator:a8ea9a918e767cd6e961ee42ee6c0e88f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
@@ -151,6 +156,16 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ab685821b93720d9720c1a5289ca42b1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0df64d4b130ef53258767ce6b2c63ace"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a0df64d4b130ef53258767ce6b2c63ace">OnHidden</a> ()</td></tr>
 <tr class="separator:a0df64d4b130ef53258767ce6b2c63ace"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-methods"></a>
+Package Functions</h2></td></tr>
+<tr class="memitem:a0c92b99db0f3a00f9a93edb4cd701458"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a0c92b99db0f3a00f9a93edb4cd701458">OnInitializing</a> ()</td></tr>
+<tr class="separator:a0c92b99db0f3a00f9a93edb4cd701458"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pac-static-attribs"></a>
+Static Package Attributes</h2></td></tr>
+<tr class="memitem:ab5698516ae1afdc17e5eae5fe8dc7cd5"><td class="memItemLeft" align="right" valign="top">static readonly BindableProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#ab5698516ae1afdc17e5eae5fe8dc7cd5">SectionTypeProperty</a> = BindableProperty.CreateAttached(&quot;SectionType&quot;, typeof(<a class="el" href="namespace_xamarin_1_1_forms_1_1_common_core.html#ad4fe7da17b7b9923b45f18fec89cb810">PopupSectionType</a>), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), <a class="el" href="namespace_xamarin_1_1_forms_1_1_common_core.html#ad4fe7da17b7b9923b45f18fec89cb810afaf396cbd83927b72a84d2616fac76ff">PopupSectionType.NotSet</a>)</td></tr>
+<tr class="separator:ab5698516ae1afdc17e5eae5fe8dc7cd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -193,10 +208,61 @@ Events</h2></td></tr>
 <tr class="separator:a1bb50bfa7e546a1fa07071d2a9d19dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c0daf2ee8922e31975fa5ec558b5901"><td class="memItemLeft" align="right" valign="top">EventHandler&lt; EventArgs &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a1c0daf2ee8922e31975fa5ec558b5901">Hidden</a></td></tr>
 <tr class="separator:a1c0daf2ee8922e31975fa5ec558b5901"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a7838edeaa619ce7f21e9194ec247fa1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a7838edeaa619ce7f21e9194ec247fa1f">OnPopupInitializing</a> (object sender, EventArgs e)</td></tr>
+<tr class="separator:a7838edeaa619ce7f21e9194ec247fa1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:a219e8762393f92f214a8d6567531ed5e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a219e8762393f92f214a8d6567531ed5e">OnDropShadowChanged</a> (BindableObject bindable, object oldValue, object newValue)</td></tr>
+<tr class="separator:a219e8762393f92f214a8d6567531ed5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf34ba03bfc0de95c252fd15da563033"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abf34ba03bfc0de95c252fd15da563033">OnHeaderPropertyChanged</a> (BindableObject bindable, object oldValue, object newValue)</td></tr>
+<tr class="separator:abf34ba03bfc0de95c252fd15da563033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f726d7b8d09aee63a143289ac935746"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a3f726d7b8d09aee63a143289ac935746">OnBodyPropertyChanged</a> (BindableObject bindable, object oldValue, object newValue)</td></tr>
+<tr class="separator:a3f726d7b8d09aee63a143289ac935746"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807e9c53e99ea3c8b06d2b8b2d10d0fa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a807e9c53e99ea3c8b06d2b8b2d10d0fa">OnFooterPropertyChanged</a> (BindableObject bindable, object oldValue, object newValue)</td></tr>
+<tr class="separator:a807e9c53e99ea3c8b06d2b8b2d10d0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8966194833280189c9e775d0dbe157df"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8966194833280189c9e775d0dbe157df">OnPositionChanged</a> (BindableObject bindable, object oldvalue, object newvalue)</td></tr>
+<tr class="separator:a8966194833280189c9e775d0dbe157df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67e285cb36d6f61e16202637df993ab6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a67e285cb36d6f61e16202637df993ab6">OnLeftBorderChanged</a> (BindableObject bindable, object oldvalue, object newvalue)</td></tr>
+<tr class="separator:a67e285cb36d6f61e16202637df993ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83756189c1f8911b481a73c168d2d6a7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a83756189c1f8911b481a73c168d2d6a7">OnRightBorderChanged</a> (BindableObject bindable, object oldvalue, object newvalue)</td></tr>
+<tr class="separator:a83756189c1f8911b481a73c168d2d6a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b2a5712b8f05b4437dd8c7cfe899fde"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a9b2a5712b8f05b4437dd8c7cfe899fde">OnTopBorderChanged</a> (BindableObject bindable, object oldvalue, object newvalue)</td></tr>
+<tr class="separator:a9b2a5712b8f05b4437dd8c7cfe899fde"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab38a9bc476458fbaf5a52fd05bcfb164"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#ab38a9bc476458fbaf5a52fd05bcfb164">OnBottomBorderChanged</a> (BindableObject bindable, object oldvalue, object newvalue)</td></tr>
+<tr class="separator:ab38a9bc476458fbaf5a52fd05bcfb164"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:ade3a51d8729ea555779b0ab8b0c04437"><td class="memItemLeft" align="right" valign="top">readonly AbsoluteLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#ade3a51d8729ea555779b0ab8b0c04437">_popupView</a> = new AbsoluteLayout()</td></tr>
+<tr class="separator:ade3a51d8729ea555779b0ab8b0c04437"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c9a4b32888090b60423879b00b03b15"><td class="memItemLeft" align="right" valign="top">readonly RelativeLayout&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a5c9a4b32888090b60423879b00b03b15">_sectionContainer</a> = new RelativeLayout()</td></tr>
+<tr class="separator:a5c9a4b32888090b60423879b00b03b15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a3b2600426fbe4a2995231214fe7793"><td class="memItemLeft" align="right" valign="top">readonly ContentView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a0a3b2600426fbe4a2995231214fe7793">_headerSection</a> = new ContentView()</td></tr>
+<tr class="separator:a0a3b2600426fbe4a2995231214fe7793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e56f33f040bf990658885b041d75ca7"><td class="memItemLeft" align="right" valign="top">readonly ContentView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a5e56f33f040bf990658885b041d75ca7">_bodySection</a> = new ContentView()</td></tr>
+<tr class="separator:a5e56f33f040bf990658885b041d75ca7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad398de985a086597cc9dacc2b5433946"><td class="memItemLeft" align="right" valign="top">readonly ContentView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#ad398de985a086597cc9dacc2b5433946">_footerSection</a> = new ContentView()</td></tr>
+<tr class="separator:ad398de985a086597cc9dacc2b5433946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e7e48f5979e14dbbb95e4b930b6a1b0"><td class="memItemLeft" align="right" valign="top">readonly BoxView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a2e7e48f5979e14dbbb95e4b930b6a1b0">_leftBorder</a> = new BoxView()</td></tr>
+<tr class="separator:a2e7e48f5979e14dbbb95e4b930b6a1b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada4a85540bb80c1578bd161c289a3d1f"><td class="memItemLeft" align="right" valign="top">readonly BoxView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#ada4a85540bb80c1578bd161c289a3d1f">_rightBorder</a> = new BoxView()</td></tr>
+<tr class="separator:ada4a85540bb80c1578bd161c289a3d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21327a476e8fcbad407612375a8f64ab"><td class="memItemLeft" align="right" valign="top">readonly BoxView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a21327a476e8fcbad407612375a8f64ab">_topBorder</a> = new BoxView()</td></tr>
+<tr class="separator:a21327a476e8fcbad407612375a8f64ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a868bcca61e67d3a9a7524c814d247a1f"><td class="memItemLeft" align="right" valign="top">readonly BoxView&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a868bcca61e67d3a9a7524c814d247a1f">_bottomBorder</a> = new BoxView()</td></tr>
+<tr class="separator:a868bcca61e67d3a9a7524c814d247a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0133410317992177810d3d34bae840"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a6f0133410317992177810d3d34bae840">BorderWidth</a> = 1</td></tr>
+<tr class="separator:a6f0133410317992177810d3d34bae840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html" title="Popup view to be displayed over a ContentPage. ">Popup</a> view to be displayed over a ContentPage. </p>
 <p>No default styles have been created for this view. </p>
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00013">13</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aec82efe5cacf6695ddb2f6e9bbd1bced"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec82efe5cacf6695ddb2f6e9bbd1bced">&#9670;&nbsp;</a></span>Popup()</h2>
@@ -212,6 +278,8 @@ Events</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00291">291</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -232,6 +300,8 @@ Events</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Hide the popup view. </p>
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00496">496</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -260,6 +330,228 @@ Events</h2></td></tr>
 </dl>
 <p>This method is not limited adding animations. </p>
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00463">463</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3f726d7b8d09aee63a143289ac935746"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f726d7b8d09aee63a143289ac935746">&#9670;&nbsp;</a></span>OnBodyPropertyChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.Popup.OnBodyPropertyChanged </td>
+          <td>(</td>
+          <td class="paramtype">BindableObject&#160;</td>
+          <td class="paramname"><em>bindable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>oldValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>newValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00226">226</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab38a9bc476458fbaf5a52fd05bcfb164"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab38a9bc476458fbaf5a52fd05bcfb164">&#9670;&nbsp;</a></span>OnBottomBorderChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.Popup.OnBottomBorderChanged </td>
+          <td>(</td>
+          <td class="paramtype">BindableObject&#160;</td>
+          <td class="paramname"><em>bindable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>oldvalue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>newvalue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00279">279</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a219e8762393f92f214a8d6567531ed5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a219e8762393f92f214a8d6567531ed5e">&#9670;&nbsp;</a></span>OnDropShadowChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.Popup.OnDropShadowChanged </td>
+          <td>(</td>
+          <td class="paramtype">BindableObject&#160;</td>
+          <td class="paramname"><em>bindable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>oldValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>newValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00212">212</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a807e9c53e99ea3c8b06d2b8b2d10d0fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a807e9c53e99ea3c8b06d2b8b2d10d0fa">&#9670;&nbsp;</a></span>OnFooterPropertyChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.Popup.OnFooterPropertyChanged </td>
+          <td>(</td>
+          <td class="paramtype">BindableObject&#160;</td>
+          <td class="paramname"><em>bindable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>oldValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>newValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00233">233</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="abf34ba03bfc0de95c252fd15da563033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf34ba03bfc0de95c252fd15da563033">&#9670;&nbsp;</a></span>OnHeaderPropertyChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.Popup.OnHeaderPropertyChanged </td>
+          <td>(</td>
+          <td class="paramtype">BindableObject&#160;</td>
+          <td class="paramname"><em>bindable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>oldValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>newValue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00219">219</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="a0df64d4b130ef53258767ce6b2c63ace"></a>
@@ -285,6 +577,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00082">82</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="ab685821b93720d9720c1a5289ca42b1c"></a>
@@ -309,6 +603,161 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00074">74</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0c92b99db0f3a00f9a93edb4cd701458"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c92b99db0f3a00f9a93edb4cd701458">&#9670;&nbsp;</a></span>OnInitializing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Xamarin.Forms.CommonCore.Popup.OnInitializing </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">package</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00054">54</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a67e285cb36d6f61e16202637df993ab6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67e285cb36d6f61e16202637df993ab6">&#9670;&nbsp;</a></span>OnLeftBorderChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.Popup.OnLeftBorderChanged </td>
+          <td>(</td>
+          <td class="paramtype">BindableObject&#160;</td>
+          <td class="paramname"><em>bindable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>oldvalue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>newvalue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00251">251</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7838edeaa619ce7f21e9194ec247fa1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7838edeaa619ce7f21e9194ec247fa1f">&#9670;&nbsp;</a></span>OnPopupInitializing()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Xamarin.Forms.CommonCore.Popup.OnPopupInitializing </td>
+          <td>(</td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EventArgs&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00504">504</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8966194833280189c9e775d0dbe157df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8966194833280189c9e775d0dbe157df">&#9670;&nbsp;</a></span>OnPositionChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.Popup.OnPositionChanged </td>
+          <td>(</td>
+          <td class="paramtype">BindableObject&#160;</td>
+          <td class="paramname"><em>bindable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>oldvalue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>newvalue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00240">240</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -336,6 +785,52 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00048">48</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a83756189c1f8911b481a73c168d2d6a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83756189c1f8911b481a73c168d2d6a7">&#9670;&nbsp;</a></span>OnRightBorderChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.Popup.OnRightBorderChanged </td>
+          <td>(</td>
+          <td class="paramtype">BindableObject&#160;</td>
+          <td class="paramname"><em>bindable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>oldvalue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>newvalue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00260">260</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="a02d184f9d808d5d55b671cc557daff66"></a>
@@ -360,6 +855,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00060">60</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -386,6 +883,52 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00068">68</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9b2a5712b8f05b4437dd8c7cfe899fde"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b2a5712b8f05b4437dd8c7cfe899fde">&#9670;&nbsp;</a></span>OnTopBorderChanged()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.Popup.OnTopBorderChanged </td>
+          <td>(</td>
+          <td class="paramtype">BindableObject&#160;</td>
+          <td class="paramname"><em>bindable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>oldvalue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">object&#160;</td>
+          <td class="paramname"><em>newvalue</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00270">270</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="aedbf0b0134c369c4a926e32a2c21949a"></a>
@@ -404,6 +947,8 @@ Events</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Show the popup view. </p>
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00448">448</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -432,9 +977,227 @@ Events</h2></td></tr>
 </dl>
 <p>This method is not limited adding animations. </p>
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00413">413</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5e56f33f040bf990658885b041d75ca7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e56f33f040bf990658885b041d75ca7">&#9670;&nbsp;</a></span>_bodySection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly ContentView Xamarin.Forms.CommonCore.Popup._bodySection = new ContentView()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00019">19</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a868bcca61e67d3a9a7524c814d247a1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a868bcca61e67d3a9a7524c814d247a1f">&#9670;&nbsp;</a></span>_bottomBorder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly BoxView Xamarin.Forms.CommonCore.Popup._bottomBorder = new BoxView()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00025">25</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad398de985a086597cc9dacc2b5433946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad398de985a086597cc9dacc2b5433946">&#9670;&nbsp;</a></span>_footerSection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly ContentView Xamarin.Forms.CommonCore.Popup._footerSection = new ContentView()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00020">20</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0a3b2600426fbe4a2995231214fe7793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a3b2600426fbe4a2995231214fe7793">&#9670;&nbsp;</a></span>_headerSection</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly ContentView Xamarin.Forms.CommonCore.Popup._headerSection = new ContentView()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00018">18</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2e7e48f5979e14dbbb95e4b930b6a1b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e7e48f5979e14dbbb95e4b930b6a1b0">&#9670;&nbsp;</a></span>_leftBorder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly BoxView Xamarin.Forms.CommonCore.Popup._leftBorder = new BoxView()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00022">22</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="ade3a51d8729ea555779b0ab8b0c04437"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade3a51d8729ea555779b0ab8b0c04437">&#9670;&nbsp;</a></span>_popupView</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly AbsoluteLayout Xamarin.Forms.CommonCore.Popup._popupView = new AbsoluteLayout()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00015">15</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="ada4a85540bb80c1578bd161c289a3d1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada4a85540bb80c1578bd161c289a3d1f">&#9670;&nbsp;</a></span>_rightBorder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly BoxView Xamarin.Forms.CommonCore.Popup._rightBorder = new BoxView()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00023">23</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5c9a4b32888090b60423879b00b03b15"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c9a4b32888090b60423879b00b03b15">&#9670;&nbsp;</a></span>_sectionContainer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly RelativeLayout Xamarin.Forms.CommonCore.Popup._sectionContainer = new RelativeLayout()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00016">16</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a21327a476e8fcbad407612375a8f64ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21327a476e8fcbad407612375a8f64ab">&#9670;&nbsp;</a></span>_topBorder</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly BoxView Xamarin.Forms.CommonCore.Popup._topBorder = new BoxView()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00024">24</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
 <a id="ac3c11327bd312eadb898469c1d1f933e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3c11327bd312eadb898469c1d1f933e">&#9670;&nbsp;</a></span>BodyProperty</h2>
 
@@ -445,7 +1208,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.BodyProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#adb1efe251d49aa91d92ad197c22d98f4">Body</a>), typeof(View), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), null, propertyChanged: OnBodyPropertyChanged)</td>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.BodyProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#adb1efe251d49aa91d92ad197c22d98f4">Body</a>), typeof(View), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), null, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a3f726d7b8d09aee63a143289ac935746">OnBodyPropertyChanged</a>)</td>
         </tr>
       </table>
   </td>
@@ -454,6 +1217,32 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00095">95</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6f0133410317992177810d3d34bae840"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f0133410317992177810d3d34bae840">&#9670;&nbsp;</a></span>BorderWidth</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const double Xamarin.Forms.CommonCore.Popup.BorderWidth = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00027">27</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -467,7 +1256,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.BottomBorderColorProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#af82fb71a3ec6f325889e9b4e06a3700c">BottomBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: OnBottomBorderChanged)</td>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.BottomBorderColorProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#af82fb71a3ec6f325889e9b4e06a3700c">BottomBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#ab38a9bc476458fbaf5a52fd05bcfb164">OnBottomBorderChanged</a>)</td>
         </tr>
       </table>
   </td>
@@ -476,6 +1265,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00104">104</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -489,7 +1280,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.ContentHeightRequestProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a471177a7d42dead03c78b98c3a94fd84">ContentHeightRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: OnPositionChanged)</td>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.ContentHeightRequestProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a471177a7d42dead03c78b98c3a94fd84">ContentHeightRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8966194833280189c9e775d0dbe157df">OnPositionChanged</a>)</td>
         </tr>
       </table>
   </td>
@@ -498,6 +1289,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00109">109</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -511,7 +1304,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.ContentWidthRequestProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#acfe0154e7275993db29d063f7265bf43">ContentWidthRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: OnPositionChanged)</td>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.ContentWidthRequestProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#acfe0154e7275993db29d063f7265bf43">ContentWidthRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8966194833280189c9e775d0dbe157df">OnPositionChanged</a>)</td>
         </tr>
       </table>
   </td>
@@ -520,6 +1313,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00108">108</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -533,7 +1328,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.FooterProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a9c300fbfe2094a2265ca46f2e66bbfef">Footer</a>), typeof(View), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), null, propertyChanged: OnFooterPropertyChanged)</td>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.FooterProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a9c300fbfe2094a2265ca46f2e66bbfef">Footer</a>), typeof(View), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), null, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a807e9c53e99ea3c8b06d2b8b2d10d0fa">OnFooterPropertyChanged</a>)</td>
         </tr>
       </table>
   </td>
@@ -542,6 +1337,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00096">96</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -555,7 +1352,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.HasDropShadowProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a51ba017b08a005f31e6e268754f9a900">HasDropShadow</a>), typeof(bool), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(bool), propertyChanged: OnDropShadowChanged)</td>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.HasDropShadowProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a51ba017b08a005f31e6e268754f9a900">HasDropShadow</a>), typeof(bool), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(bool), propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a219e8762393f92f214a8d6567531ed5e">OnDropShadowChanged</a>)</td>
         </tr>
       </table>
   </td>
@@ -564,6 +1361,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00106">106</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -577,7 +1376,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.HeaderProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a414efca4c1242d4b672684c971d644c0">Header</a>), typeof(View), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), null, propertyChanged: OnHeaderPropertyChanged)</td>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.HeaderProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a414efca4c1242d4b672684c971d644c0">Header</a>), typeof(View), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), null, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abf34ba03bfc0de95c252fd15da563033">OnHeaderPropertyChanged</a>)</td>
         </tr>
       </table>
   </td>
@@ -586,6 +1385,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00094">94</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -599,7 +1400,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.LeftBorderColorProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abdc8e910addc90c5d72cd072a0c87b77">LeftBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: OnLeftBorderChanged)</td>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.LeftBorderColorProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abdc8e910addc90c5d72cd072a0c87b77">LeftBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a67e285cb36d6f61e16202637df993ab6">OnLeftBorderChanged</a>)</td>
         </tr>
       </table>
   </td>
@@ -608,6 +1409,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00101">101</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -621,7 +1424,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.RightBorderColorProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abbbcc503a642affdad7d031bd7fc5208">RightBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: OnRightBorderChanged)</td>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.RightBorderColorProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abbbcc503a642affdad7d031bd7fc5208">RightBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a83756189c1f8911b481a73c168d2d6a7">OnRightBorderChanged</a>)</td>
         </tr>
       </table>
   </td>
@@ -630,6 +1433,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00102">102</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -640,12 +1445,38 @@ Events</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">VisualElement Xamarin.Forms.CommonCore.Popup.SectionContainer =&gt; _sectionContainer</td>
+          <td class="memname">VisualElement Xamarin.Forms.CommonCore.Popup.SectionContainer =&gt; <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a5c9a4b32888090b60423879b00b03b15">_sectionContainer</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>The SecionContainer includes the <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a414efca4c1242d4b672684c971d644c0">Header</a>, <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#adb1efe251d49aa91d92ad197c22d98f4">Body</a>, and <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a9c300fbfe2094a2265ca46f2e66bbfef">Footer</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00033">33</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab5698516ae1afdc17e5eae5fe8dc7cd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5698516ae1afdc17e5eae5fe8dc7cd5">&#9670;&nbsp;</a></span>SectionTypeProperty</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.SectionTypeProperty = BindableProperty.CreateAttached(&quot;SectionType&quot;, typeof(<a class="el" href="namespace_xamarin_1_1_forms_1_1_common_core.html#ad4fe7da17b7b9923b45f18fec89cb810">PopupSectionType</a>), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), <a class="el" href="namespace_xamarin_1_1_forms_1_1_common_core.html#ad4fe7da17b7b9923b45f18fec89cb810afaf396cbd83927b72a84d2616fac76ff">PopupSectionType.NotSet</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">package</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00111">111</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -659,7 +1490,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.TopBorderColorProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a730069eb37ba32a8fded602269bfefee">TopBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: OnTopBorderChanged)</td>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.TopBorderColorProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a730069eb37ba32a8fded602269bfefee">TopBorderColor</a>), typeof(Color), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), Color.Transparent, propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a9b2a5712b8f05b4437dd8c7cfe899fde">OnTopBorderChanged</a>)</td>
         </tr>
       </table>
   </td>
@@ -668,6 +1499,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00103">103</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -681,7 +1514,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.XPositionRequestProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8351ca7cf644122f17cad0f31334f9ae">XPositionRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: OnPositionChanged)</td>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.XPositionRequestProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8351ca7cf644122f17cad0f31334f9ae">XPositionRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8966194833280189c9e775d0dbe157df">OnPositionChanged</a>)</td>
         </tr>
       </table>
   </td>
@@ -690,6 +1523,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00098">98</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -703,7 +1538,7 @@ Events</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.YPositionRequestProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8351ca7cf644122f17cad0f31334f9ae">XPositionRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: OnPositionChanged)</td>
+          <td class="memname">readonly BindableProperty Xamarin.Forms.CommonCore.Popup.YPositionRequestProperty = BindableProperty.Create(nameof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8351ca7cf644122f17cad0f31334f9ae">XPositionRequest</a>), typeof(double), typeof(<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html">Popup</a>), default(double), propertyChanged: <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8966194833280189c9e775d0dbe157df">OnPositionChanged</a>)</td>
         </tr>
       </table>
   </td>
@@ -712,6 +1547,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00099">99</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -736,6 +1573,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00130">130</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="af82fb71a3ec6f325889e9b4e06a3700c"></a>
@@ -757,6 +1596,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00187">187</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -780,6 +1621,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00201">201</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="acfe0154e7275993db29d063f7265bf43"></a>
@@ -801,6 +1644,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00194">194</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -824,6 +1669,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00141">141</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="a51ba017b08a005f31e6e268754f9a900"></a>
@@ -845,6 +1692,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00114">114</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -868,6 +1717,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00120">120</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="abdc8e910addc90c5d72cd072a0c87b77"></a>
@@ -889,6 +1740,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00166">166</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -912,6 +1765,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00173">173</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="a730069eb37ba32a8fded602269bfefee"></a>
@@ -933,6 +1788,8 @@ Events</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00180">180</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -956,6 +1813,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00152">152</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="a5bddb7407ff2847a2502a49ac44f7bbe"></a>
@@ -978,6 +1837,8 @@ Events</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00159">159</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Event Documentation</h2>
@@ -993,6 +1854,8 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00045">45</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="a1bb50bfa7e546a1fa07071d2a9d19dd8"></a>
@@ -1006,6 +1869,8 @@ Events</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00044">44</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -1021,6 +1886,8 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00040">40</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="a9bfc34205be5ed24593db43e820287d3"></a>
@@ -1034,6 +1901,8 @@ Events</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00041">41</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
 
 </div>
 </div>
@@ -1049,6 +1918,8 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00042">42</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <a id="a2b3d2505a7ec2c16a89dd4502622efa8"></a>
@@ -1063,10 +1934,12 @@ Events</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p class="definition">Definition at line <a class="el" href="_popup_8cs_source.html#l00039">39</a> of file <a class="el" href="_popup_8cs_source.html">Popup.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>Core Projects/Xamarin.Forms.CommonCore/Controls/FormsPopup/<a class="el" href="_popup_8cs.html">Popup.cs</a></li>
+<li>/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/Core Projects/Xamarin.Forms.CommonCore/Controls/FormsPopup/<a class="el" href="_popup_8cs_source.html">Popup.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

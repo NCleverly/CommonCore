@@ -35,7 +35,7 @@ namespace referenceguide.iOS
 		{
 			if (CrossPushNotification.Current is IPushNotificationHandler)
 			{
-				((IPushNotificationHandler)CrossPushNotification.Current).OnRegisteredSuccess(deviceToken.ToString());
+				((IPushNotificationHandler)CrossPushNotification.Current).OnRegisteredSuccess(deviceToken);
 			}
 
 		}

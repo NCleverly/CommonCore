@@ -2,13 +2,13 @@
 <Paths>
   <Jars></Jars>
   <ResolvedResourceDirectories>
-    <ResolvedResourceDirectory>/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Android/obj/Debug/__library_projects__/Xamarin.GooglePlayServices.Basement/library_project_imports/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Android/obj/Debug/__library_projects__/Xamarin.GooglePlayServices.Base/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Android/obj/Debug/__library_projects__/Xamarin.GooglePlayServices.Basement/library_project_imports/res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories />
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
-    <ResolvedResourceDirectoryStamp>/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Android/obj/Debug/__library_projects__/Xamarin.GooglePlayServices.Basement.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Android/obj/Debug/__library_projects__/Xamarin.GooglePlayServices.Base.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Android/obj/Debug/__library_projects__/Xamarin.GooglePlayServices.Basement.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

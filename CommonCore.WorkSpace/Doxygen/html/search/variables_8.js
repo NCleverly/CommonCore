@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['iconproperty',['IconProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#aceb852292f3a61ba1358ab35574aa160',1,'Xamarin::Forms::CommonCore::EntryUnderline']]],
-  ['imagenameproperty',['ImageNameProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#a66e88cd88840e64845d59b39d3c35fb3',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
-  ['inactiveaccentcolorproperty',['InactiveAccentColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a5acd184447084ea1cf881ec58b3f4846',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
-  ['instance',['Instance',['../class_xamarin_1_1_forms_1_1_common_core_1_1_phone_callback.html#ab57090c5776a197ca69f984b36ddb4dd',1,'Xamarin::Forms::CommonCore::PhoneCallback']]],
-  ['isstarredproperty',['IsStarredProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a74419783523d24140160471d91e0dc9c',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
-  ['itemclickcommandproperty',['ItemClickCommandProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#afb1a5463020a817cd5a7c63177d3a194',1,'Xamarin::Forms::CommonCore::ListControl']]],
-  ['itemssourceproperty',['ItemsSourceProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a23da0878378b55904d55fd53c6ea128d',1,'Xamarin::Forms::CommonCore::BindablePicker']]]
+  ['hasdropshadowproperty',['HasDropShadowProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a3f2f2ab6a22e7506f05f096a5e973feb',1,'Xamarin::Forms::CommonCore::Popup']]],
+  ['haserrorproperty',['HasErrorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_reg_ex_behavior.html#a37899f12dcd85afd494f28a1e6f8df5f',1,'Xamarin.Forms.CommonCore.RegExBehavior.HasErrorProperty()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a425e89f1c745315fe7fdcc0834613d54',1,'Xamarin.Forms.CommonCore.EntryUnderline.HasErrorProperty()']]],
+  ['hasshadowproperty',['HasShadowProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#a485252afcf52d841374298b02660f39d',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
+  ['headerproperty',['HeaderProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a06f44a9a3fc2c2a7c75b041a1f98df15',1,'Xamarin::Forms::CommonCore::Popup']]],
+  ['hidetableseparator',['HideTableSeparator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_common_effects.html#abdb89de42d978c0ea7075114660bd2e8',1,'Xamarin::Forms::CommonCore::CommonEffects']]],
+  ['httpservice',['httpService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1f2b04c70ca63357f8bb2d329c24e528',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]]
 ];

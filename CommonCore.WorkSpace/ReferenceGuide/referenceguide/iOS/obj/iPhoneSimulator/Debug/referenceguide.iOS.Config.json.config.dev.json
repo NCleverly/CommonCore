@@ -1,10 +1,10 @@
 ﻿{
   "AzureSettings": {
-    "AzureServiceBusName": "AzureServiceBusName",
+    "AzureServiceBusName": "azdevelop",
     "AzureServiceBusUrl": "AzureServiceBusUrl",
     "AzureKey": "AzureKey",
     "AzureHubName": "referenceguide",
-    "AzureListenConnection": "Endpoint=sb://msmudemoapp.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=c6SHrkpOEJMkUnUxrF3h6nvZWF//pCqV00jskPwO+2k="
+    "AzureListenConnection": "Endpoint=sb://azdevelop.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=AqBvjstEkgLAG8kMDutovIF4mCdpdwYsVnDl67aNapw="
   },
   "HttpSettings": {
     "HttpTimeOut": 0,
@@ -16,14 +16,14 @@
     "GoogleSenderId": "638673396107"
   },
   "SqliteSettings": {
-    "SQLiteDatabase": "db.db3",
+    "SQLiteDatabase": "referenceguide.db3",
     "TableNames": [
       { "tableName": "referenceguide.Appointment" }
     ]
   },
   "MobileCenter_HockeyApp": {
-    "IOSAppId": "IOSAppId",
-    "AndroidAppId": "IOSAppId",
+    "IOSAppId": "ef8a82a8-2a28-403b-943e-15465f85916b",
+    "AndroidAppId": "18a8936c-d627-4b55-b794-e48fa7172d3e",
     "UWPAppId": "IOSAppId"
   },
   "WebApi": [

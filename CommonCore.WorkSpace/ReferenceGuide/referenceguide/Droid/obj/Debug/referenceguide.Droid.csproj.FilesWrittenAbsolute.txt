@@ -1,4 +1,4 @@
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/obj/Debug/MonoAndroid,Version=v7.1.AssemblyAttribute.cs
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/obj/Debug/MonoAndroid,Version=v7.0.AssemblyAttribute.cs
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/obj/Debug/XbdMerge/Xamarin.Android.Support.Annotations.dll.stamp
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/obj/Debug/XbdMerge/Xamarin.Android.Support.Compat.dll.stamp
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/obj/Debug/XbdMerge/Xamarin.Android.Support.Core.UI.dll.stamp
@@ -113,3 +113,9 @@
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/bin/Debug/Xamarin.GooglePlayServices.Gcm.dll
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/bin/Debug/PushNotification.Plugin.dll
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/bin/Debug/PushNotification.Plugin.Abstractions.dll
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/bin/Debug/Microsoft.Azure.Mobile.Android.Bindings.dll
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/bin/Debug/Microsoft.Azure.Mobile.dll
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/bin/Debug/Microsoft.Azure.Mobile.Analytics.Android.Bindings.dll
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/bin/Debug/Microsoft.Azure.Mobile.Analytics.dll
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/bin/Debug/Microsoft.Azure.Mobile.Crashes.Android.Bindings.dll
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/Droid/bin/Debug/Microsoft.Azure.Mobile.Crashes.dll
