@@ -227,6 +227,12 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.5.239-pre3\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="PushNotification.Plugin.Abstractions">
+      <HintPath>..\..\..\..\ExternalLibraries\PushNotification\PushNotification\PushNotification.Plugin.iOSUnified\bin\iPhone\Debug\PushNotification.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="PushNotification.Plugin">
+      <HintPath>..\..\..\..\ExternalLibraries\PushNotification\PushNotification\PushNotification.Plugin.iOSUnified\bin\iPhone\Debug\PushNotification.Plugin.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />

@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using FFImageLoading.Forms.Touch;
 using Foundation;
-using PushNotification.Plugin;
+using PushNotification.Plugin; //Xam.Plugin.PushNotification from nuget or get from github and compile to latest version
 using UIKit;
 using Xamarin.Forms.CommonCore;
 

@@ -4,7 +4,7 @@ Implement CrossPushNotificationListener per the explanation found at:
 
 Droid:
 - In the MainActivity set LocalNotify.MainType = typeof(MainActivity);
-
+- You might have to enable in the project settings Multi-Dex
 
 iOS:
 - enable background modes - remote notifications

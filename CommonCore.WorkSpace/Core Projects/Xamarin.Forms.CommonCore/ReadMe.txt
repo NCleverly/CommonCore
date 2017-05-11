@@ -17,7 +17,7 @@ Required Nuget Installs
  - Xam.Plugin.Connectivity
  - Xam.Plugins.Settings
  - Plugin.Permissions
- - Xam.Plugin.PushNotification /*Android may need to be download from github and recompiled to latest SDK*/
+ - Xam.Plugin.PushNotification /*Android may need to be downloaded from github and recompiled to latest SDK */
  - Xamarin.FFImageLoading.Forms
  - Xamarin.FFImageLoading.Transformations
  - Xamarin.Auth

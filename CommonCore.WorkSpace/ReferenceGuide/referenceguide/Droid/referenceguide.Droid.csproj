@@ -270,6 +270,12 @@
     <Reference Include="Xamarin.GooglePlayServices.Gcm">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Gcm.42.1021.1\lib\MonoAndroid70\Xamarin.GooglePlayServices.Gcm.dll</HintPath>
     </Reference>
+    <Reference Include="PushNotification.Plugin.Abstractions">
+      <HintPath>..\..\..\..\ExternalLibraries\PushNotification\PushNotification\PushNotification.Plugin.Android\bin\Debug\PushNotification.Plugin.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="PushNotification.Plugin">
+      <HintPath>..\..\..\..\ExternalLibraries\PushNotification\PushNotification\PushNotification.Plugin.Android\bin\Debug\PushNotification.Plugin.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />

@@ -1,6 +1,5 @@
 <WorkspaceItem ctype="Workspace">
   <Items>
     <Item>ReferenceGuide/referenceguide/referenceguide.sln</Item>
-    <Item>ExternalLibraries/PushNotification/PushNotification.sln</Item>
   </Items>
 </WorkspaceItem>

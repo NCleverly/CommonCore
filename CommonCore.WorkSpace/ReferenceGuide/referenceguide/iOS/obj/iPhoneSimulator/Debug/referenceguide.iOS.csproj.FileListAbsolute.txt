@@ -79,10 +79,6 @@
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Plugin.Permissions.Abstractions.xml
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Plugin.Permissions.xml
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/SkiaSharp.xml
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/PushNotification.Plugin.Abstractions.pdb
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/PushNotification.Plugin.Abstractions.dll.mdb
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/PushNotification.Plugin.pdb
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/PushNotification.Plugin.dll.mdb
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.pdb
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll.mdb
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.xml
@@ -91,6 +87,10 @@
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.pdb
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll.mdb
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.xml
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/PushNotification.Plugin.Abstractions.pdb
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/PushNotification.Plugin.Abstractions.dll.mdb
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/PushNotification.Plugin.pdb
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/PushNotification.Plugin.dll.mdb
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/af/Humanizer.resources.dll
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/ar/Humanizer.resources.dll
 /Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/bg/Humanizer.resources.dll

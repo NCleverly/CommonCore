@@ -4,7 +4,7 @@ using System.Windows.Input;
 using Xamarin.Forms;
 using System.Linq;
 using Xamarin.Forms.CommonCore;
-using PushNotification.Plugin;
+using PushNotification.Plugin; //Xam.Plugin.PushNotification from nuget or get from github and compile to latest version
 
 namespace referenceguide
 {

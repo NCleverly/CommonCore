@@ -84,9 +84,9 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.4/lib/Xamarin.iOS10/Plugin.Settings.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll" \
+	"/Volumes/Personal 240/CommonCore/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.dll" \
+	"/Volumes/Personal 240/CommonCore/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/packages/Remotion.Linq.2.1.1/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll" \
 	-r \
@@ -456,9 +456,9 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.4/lib/Xamarin.iOS10/Plugin.Settings.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll" \
+	"/Volumes/Personal 240/CommonCore/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.dll" \
+	"/Volumes/Personal 240/CommonCore/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ReferenceGuide/referenceguide/packages/Remotion.Linq.2.1.1/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll" \
 	-r \
