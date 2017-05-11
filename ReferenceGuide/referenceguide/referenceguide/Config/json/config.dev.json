@@ -1,0 +1,45 @@
+﻿{
+  "AzureSettings": {
+    "AzureServiceBusName": "azdevelop",
+    "AzureServiceBusUrl": "AzureServiceBusUrl",
+    "AzureKey": "AzureKey",
+    "AzureHubName": "referenceguide",
+    "AzureListenConnection": "Endpoint=sb://azdevelop.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=AqBvjstEkgLAG8kMDutovIF4mCdpdwYsVnDl67aNapw="
+  },
+  "HttpSettings": {
+    "HttpTimeOut": 0,
+    "HttpAllowAutoRedirect": false,
+    "IOSHttpHandler": "ModernHttpClient",
+    "AndroidHttpHandler": "ModernHttpClient"
+  },
+  "GoogleSettings": {
+    "GoogleSenderId": "638673396107"
+  },
+  "SqliteSettings": {
+    "SQLiteDatabase": "referenceguide.db3",
+    "TableNames": [
+      { "tableName": "referenceguide.Appointment" }
+    ]
+  },
+  "MobileCenter_HockeyApp": {
+    "IOSAppId": "ef8a82a8-2a28-403b-943e-15465f85916b",
+    "AndroidAppId": "18a8936c-d627-4b55-b794-e48fa7172d3e",
+    "UWPAppId": "IOSAppId"
+  },
+  "WebApi": [
+    {
+      "name": "randomuser",
+      "url": "https://randomuser.me/api/?results=200"
+    },
+    {
+      "name": "randomuserpaginated",
+      "url": "https://randomuser.me/api/?page={0}&results=30"
+    }
+  ],
+  "CustomSettings": [
+    {
+      "name": "",
+      "value": ""
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+var searchData=
+[
+  ['iaccountservice_2ecs',['IAccountService.cs',['../_i_account_service_8cs.html',1,'']]],
+  ['iazurenotificationhub_2ecs',['IAzureNotificationHub.cs',['../_i_azure_notification_hub_8cs.html',1,'']]],
+  ['ibackgroundtimerservice_2ecs',['IBackgroundTimerService.cs',['../_i_background_timer_service_8cs.html',1,'']]],
+  ['ibluroverlay_2ecs',['IBlurOverlay.cs',['../_i_blur_overlay_8cs.html',1,'']]],
+  ['icalendarevent_2ecs',['ICalendarEvent.cs',['../_i_calendar_event_8cs.html',1,'']]],
+  ['ideviceinfo_2ecs',['IDeviceInfo.cs',['../_i_device_info_8cs.html',1,'']]],
+  ['idialogprompt_2ecs',['IDialogPrompt.cs',['../_i_dialog_prompt_8cs.html',1,'']]],
+  ['iencryptionservice_2ecs',['IEncryptionService.cs',['../_i_encryption_service_8cs.html',1,'']]],
+  ['ifilestore_2ecs',['IFileStore.cs',['../_i_file_store_8cs.html',1,'']]],
+  ['ihttpservice_2ecs',['IHttpService.cs',['../_i_http_service_8cs.html',1,'']]],
+  ['ilocalnotify_2ecs',['ILocalNotify.cs',['../_i_local_notify_8cs.html',1,'']]],
+  ['imapnavigate_2ecs',['IMapNavigate.cs',['../_i_map_navigate_8cs.html',1,'']]],
+  ['ioverlaydependency_2ecs',['IOverlayDependency.cs',['../_i_overlay_dependency_8cs.html',1,'']]],
+  ['iphonecall_2ecs',['IPhoneCall.cs',['../_i_phone_call_8cs.html',1,'']]],
+  ['iprogressindicator_2ecs',['IProgressIndicator.cs',['../_i_progress_indicator_8cs.html',1,'']]],
+  ['isqlitedb_2ecs',['ISqliteDb.cs',['../_i_sqlite_db_8cs.html',1,'']]]
+];

@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
+  <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
+  </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/LandingPage.cs">
+    <Files>
+      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="105" Column="1" />
+      <File FileName="referenceguide/PushNotifications/CrossPushNotificationListener.cs" Line="42" Column="1" />
+      <File FileName="referenceguide/Views/MainPage.cs" Line="11" Column="20" />
+      <File FileName="referenceguide/referenceguide.cs" Line="14" Column="4" />
+      <File FileName="iOS/AppDelegate.cs" Line="27" Column="16" />
+      <File FileName="iOS/Info.plist" />
+      <File FileName="referenceguide/Views/LandingPage.cs" Line="26" Column="67" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.192.168.57.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide HideGettingStarted="True" />
+  <MultiItemStartupConfigurations />
+</Properties>

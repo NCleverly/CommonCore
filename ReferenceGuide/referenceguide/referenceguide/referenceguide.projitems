@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{63814FF2-C644-4627-B82B-C000111A6E80}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>referenceguide</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)referenceguide.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\MainPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\SlidingPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\LandingPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\BehaviorPages\BehaviorsMain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DependencyPages\DependeciesMain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EffectsPages\EffectsMain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ControlPages\ControlsMain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\DataExampleViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\RandomUserServiceModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\Appointment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Styles\AppStyles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SimpleViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ControlsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPages\ServicesMain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPages\EncryptionPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPages\HttpServicesPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ServicesPages\SqlitePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DependencyPages\CalendarDependencyPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Common\CalendarEventPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\CalendarViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Config\AppSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ControlPages\MaterialDesignPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ControlPages\PaginagedListControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\PaginatedViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Common\RandomUserCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EffectsPages\ListViewEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\EffectsPages\WebViewEffect.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\TimerCallbackService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\CrossPushNotificationListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PushMessage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Styles\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Config\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\BehaviorPages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\EffectsPages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\ControlPages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\DependencyPages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Models\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Views\ServicesPages\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Common\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Config\json\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\">
+    </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.dev.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.prod.json" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Config\json\config.qa.json" />
+  </ItemGroup>
+</Project>
