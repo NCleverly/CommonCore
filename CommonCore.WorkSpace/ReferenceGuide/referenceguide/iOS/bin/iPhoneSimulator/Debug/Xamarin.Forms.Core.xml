@@ -422,30 +422,6 @@ namespace AbsoluteLayoutDemo
         <member name="F:Xamarin.Forms.AbsoluteLayoutFlags.YProportional">
             <summary>Interpret y property as proportional to the remaining space after height is accounted for.</summary>
         </member>
-        <member name="T:Xamarin.Forms.Accessibility">
-            <summary>Contains both abbreviated and detailed UI information that is supplied to accessibility services.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="C:Xamarin.Forms.Accessibility">
-            <summary>Creates a new <see cref="T:Xamarin.Forms.Accessibility" /> object with default values.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="F:Xamarin.Forms.Accessibility.HintProperty">
-            <summary>Backing store for the attached property that contains the detailed description of the UI element and its behavior.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="F:Xamarin.Forms.Accessibility.IsInAccessibleTreeProperty">
-            <summary>Backing store for the attached property that contains a Boolean value that tells whether the element is available to the accessible app.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="F:Xamarin.Forms.Accessibility.LabeledByProperty">
-            <summary>Backing store for the attached property that holds a reference to the element that labels the element that is being made accessible.</summary>
-            <remarks>To be added.</remarks>
-        </member>
-        <member name="F:Xamarin.Forms.Accessibility.NameProperty">
-            <summary>Backing store for the attached property that contains the brief description of the UI element</summary>
-            <remarks>To be added.</remarks>
-        </member>
         <member name="T:Xamarin.Forms.ActivityIndicator">
             <summary>A visual control used to indicate that something is ongoing.</summary>
             <remarks>
@@ -899,6 +875,78 @@ var indicator = new ActivityIndicator {
         </member>
         <member name="F:Xamarin.Forms.Aspect.Fill">
             <summary>Scale the image so it exactly fills the view. Scaling may not be uniform in X and Y.</summary>
+        </member>
+        <member name="T:Xamarin.Forms.AutomationProperties">
+            <summary>Contains both abbreviated and detailed UI information that is supplied to accessibility services.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="C:Xamarin.Forms.AutomationProperties">
+            <summary>Creates a new <see cref="T:Xamarin.Forms.AutomationProperties" /> object with default values.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.AutomationProperties.GetHelpText(Xamarin.Forms.BindableObject)">
+            <param name="bindable">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.AutomationProperties.GetIsInAccessibleTree(Xamarin.Forms.BindableObject)">
+            <param name="bindable">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.AutomationProperties.GetLabeledBy(Xamarin.Forms.BindableObject)">
+            <param name="bindable">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.AutomationProperties.GetName(Xamarin.Forms.BindableObject)">
+            <param name="bindable">To be added.</param>
+            <summary>To be added.</summary>
+            <returns>To be added.</returns>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="F:Xamarin.Forms.AutomationProperties.HelpTextProperty">
+            <summary>Backing store for the attached property that contains the detailed description of the UI element and its behavior.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="F:Xamarin.Forms.AutomationProperties.IsInAccessibleTreeProperty">
+            <summary>Backing store for the attached property that contains a Boolean value that tells whether the element is available to the accessible app.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="F:Xamarin.Forms.AutomationProperties.LabeledByProperty">
+            <summary>Backing store for the attached property that holds a reference to the element that labels the element that is being made accessible.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="F:Xamarin.Forms.AutomationProperties.NameProperty">
+            <summary>Backing store for the attached property that contains the brief description of the UI element</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.AutomationProperties.SetHelpText(Xamarin.Forms.BindableObject,System.String)">
+            <param name="bindable">To be added.</param>
+            <param name="value">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.AutomationProperties.SetIsInAccessibleTree(Xamarin.Forms.BindableObject,System.Nullable{System.Boolean})">
+            <param name="bindable">To be added.</param>
+            <param name="value">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.AutomationProperties.SetLabeledBy(Xamarin.Forms.BindableObject,Xamarin.Forms.VisualElement)">
+            <param name="bindable">To be added.</param>
+            <param name="value">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
+        </member>
+        <member name="M:Xamarin.Forms.AutomationProperties.SetName(Xamarin.Forms.BindableObject,System.String)">
+            <param name="bindable">To be added.</param>
+            <param name="value">To be added.</param>
+            <summary>To be added.</summary>
+            <remarks>To be added.</remarks>
         </member>
         <member name="T:Xamarin.Forms.BackButtonPressedEventArgs">
             <summary>Internal use only. Contains arguments for the event that is raised when a back button is pressed.</summary>

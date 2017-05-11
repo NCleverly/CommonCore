@@ -39,6 +39,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\EffectsPages\WebViewEffect.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\TimerCallbackService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\CrossPushNotificationListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\PushMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />

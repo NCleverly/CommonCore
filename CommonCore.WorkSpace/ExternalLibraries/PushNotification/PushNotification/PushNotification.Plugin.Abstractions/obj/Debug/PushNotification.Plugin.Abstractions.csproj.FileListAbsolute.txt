@@ -1,0 +1,8 @@
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/bin/Debug/PushNotification.Plugin.Abstractions.dll
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/bin/Debug/PushNotification.Plugin.Abstractions.pdb
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/bin/Debug/Newtonsoft.Json.dll
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/bin/Debug/Newtonsoft.Json.xml
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/obj/Debug/PushNotification.Plugin.Abstractions.csprojResolveAssemblyReference.cache
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/obj/Debug/PushNotification.Plugin.Abstractions.csproj.CoreCompileInputs.cache
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/obj/Debug/PushNotification.Plugin.Abstractions.dll
+/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.Abstractions/obj/Debug/PushNotification.Plugin.Abstractions.pdb

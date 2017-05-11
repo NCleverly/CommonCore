@@ -15,6 +15,7 @@ namespace referenceguide
 		//Messages arrives as a dictionary, the device type is also sent in order to check specific keys correctly depending on the platform.
 		void IPushNotificationListener.OnMessage(JObject parameters, DeviceType deviceType)
 		{
+            var message = parameters;
 			//this is where you do blind updates or foregrounded behavior
 		}
 		//Gets the registration token after push registration

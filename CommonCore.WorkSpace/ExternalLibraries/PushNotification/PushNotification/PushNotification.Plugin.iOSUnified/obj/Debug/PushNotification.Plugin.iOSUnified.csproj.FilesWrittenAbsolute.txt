@@ -1,9 +1,0 @@
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/obj/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/obj/Debug/optimized/
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.dll.mdb
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.dll
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/obj/Debug/PushNotification.Plugin.dll
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/obj/Debug/PushNotification.Plugin.dll.mdb
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/Newtonsoft.Json.dll
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll
-/Volumes/Personal 240/CommonCore/CommonCore.WorkSpace/ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll.mdb

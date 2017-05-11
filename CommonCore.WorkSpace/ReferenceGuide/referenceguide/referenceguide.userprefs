@@ -8,7 +8,7 @@
       <File FileName="referenceguide/PushNotifications/CrossPushNotificationListener.cs" Line="42" Column="1" />
       <File FileName="referenceguide/Views/MainPage.cs" Line="11" Column="20" />
       <File FileName="referenceguide/referenceguide.cs" Line="14" Column="4" />
-      <File FileName="iOS/AppDelegate.cs" Line="28" Column="4" />
+      <File FileName="iOS/AppDelegate.cs" Line="27" Column="16" />
       <File FileName="iOS/Info.plist" />
     </Files>
   </MonoDevelop.Ide.Workbench>
@@ -16,6 +16,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.referenceguide.Droid PreferredExecutionTarget="Android.192.168.57.101:5555" />
   <MonoDevelop.Ide.ItemProperties.referenceguide HideGettingStarted="True" />
