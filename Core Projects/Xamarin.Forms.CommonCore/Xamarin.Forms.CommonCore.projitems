@@ -159,7 +159,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\DataModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configurations\ResourceLoader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configurations\ConfigurationModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Configurations\ConfigurationLoader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ISqliteDb.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AltSqliteCode\SqliteDb.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\BackgroundTimerService.Droid.cs">
@@ -198,5 +197,6 @@
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />
     <None Include="$(MSBuildThisFileDirectory)AzureNotifications\readme.txt" />
+    <None Include="$(MSBuildThisFileDirectory)Config\config.dev.txt" />
   </ItemGroup>
 </Project>

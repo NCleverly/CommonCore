@@ -24,16 +24,23 @@ namespace referenceguide.Droid
 		public override void OnCreate()
 		{
 			base.OnCreate();
+
+#if DEBUG
+            AppBuid.CurrentBuid = "dev";
+#elif QA
+            AppBuid.CurrentBuid = "qa";
+#elif RELEASE
+			AppBuid.CurrentBuid = "prod";
+#endif
+
 			RegisterActivityLifecycleCallbacks(this);
 
 			AppContext = this.ApplicationContext;
 
-			Task.Run(async () =>
-			{
-				await ConfigurationLoader.Load();
-				CrossPushNotification.Initialize<CrossPushNotificationListener>(AppData.GoogleSenderId);
-				StartPushService();
-			});
+
+			CrossPushNotification.Initialize<CrossPushNotificationListener>(AppData.Instance.GoogleSenderId);
+			StartPushService();
+	
 
 		}
 

@@ -158,7 +158,7 @@ namespace Xamarin.Forms.CommonCore
 
                 for (int x = (nav.NavigationStack.Count - 1); x > -1; x--)
                 {
-                    var page = AppData.AppNav.NavigationStack[nav.NavigationStack.Count - (x - 1)];
+                    var page = AppData.Instance.AppNav.NavigationStack[nav.NavigationStack.Count - (x - 1)];
                     var name = page.GetType().Name;
                     if (name == pageName)
                     {

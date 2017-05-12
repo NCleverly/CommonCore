@@ -14,12 +14,12 @@ namespace Xamarin.Forms.CommonCore
 		public void RegisterNotificationHub(string registrationId)
 		{
 			if (AzureNotificationHub.Hub==null)
-				AzureNotificationHub.Hub = new NotificationHub(AppData.AzureHubName, AppData.AzureListenConnection, Xamarin.Forms.Forms.Context);
+				AzureNotificationHub.Hub = new NotificationHub(AppData.Instance.AzureHubName, AppData.Instance.AzureListenConnection, Xamarin.Forms.Forms.Context);
 
 			try
 			{
 				AzureNotificationHub.Hub.UnregisterAll(registrationId);
-				var hubRegistration = AzureNotificationHub.Hub.Register(registrationId, AppData.NotificationTags.ToArray());
+				var hubRegistration = AzureNotificationHub.Hub.Register(registrationId, AppData.Instance.NotificationTags.ToArray());
 			}
 			catch (Exception ex)
 			{

@@ -111,7 +111,7 @@ namespace Xamarin.Forms.CommonCore
 
 		public INavigation Navigation
 		{
-			get { return AppData.AppNav; }
+			get { return AppData.Instance.AppNav; }
 		}
 
 		public string LoadingMessageOverlay

@@ -27,8 +27,6 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/Plugin.Connectivity.Abstractions.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/Plugin.Connectivity.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/Plugin.CurrentActivity.dll
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/Plugin.Permissions.Abstractions.dll
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/Plugin.Permissions.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/Plugin.Settings.Abstractions.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/Plugin.Settings.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/PushNotification.Plugin.Abstractions.dll

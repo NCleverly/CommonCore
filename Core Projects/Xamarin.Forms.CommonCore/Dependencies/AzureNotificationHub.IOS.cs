@@ -15,7 +15,7 @@ namespace Xamarin.Forms.CommonCore
         public void RegisterNotificationHub(string registrationId)
         {
             if (AzureNotificationHub.HUB == null)
-                AzureNotificationHub.HUB = new SBNotificationHub(AppData.AzureListenConnection, AppData.AzureHubName);
+                AzureNotificationHub.HUB = new SBNotificationHub(AppData.Instance.AzureListenConnection, AppData.Instance.AzureHubName);
 
 			var deviceToken = NSData.FromString($"<{registrationId}>");
 
@@ -26,7 +26,7 @@ namespace Xamarin.Forms.CommonCore
 										Console.WriteLine("Error calling Unregister: {0}", error.ToString());
 										return;
 									}
-									NSSet tags = new NSSet(AppData.NotificationTags.ToArray());
+									NSSet tags = new NSSet(AppData.Instance.NotificationTags.ToArray());
 									AzureNotificationHub.HUB.RegisterNativeAsync(deviceToken, tags, (errorCallback) =>
 													{
 														if (errorCallback != null)

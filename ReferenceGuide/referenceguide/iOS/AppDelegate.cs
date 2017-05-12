@@ -8,17 +8,20 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide.iOS
 {
-	[Register("AppDelegate")]
-	public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
-	{
+    [Register("AppDelegate")]
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    {
 
-		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-		{
-
-			Task.Run(async () =>
-			{
-				await ConfigurationLoader.Load();
-			});
+        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+        {
+            
+#if DEBUG
+            AppBuid.CurrentBuid = "dev";
+#elif QA
+            AppBuid.CurrentBuid = "qa";
+#elif RELEASE
+			AppBuid.CurrentBuid = "prod";
+#endif
 
 			global::Xamarin.Forms.Forms.Init();
 

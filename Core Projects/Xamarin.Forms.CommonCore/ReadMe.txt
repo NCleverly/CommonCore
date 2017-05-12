@@ -16,8 +16,7 @@ Required Nuget Installs
  - Newtonsoft.Json
  - Xam.Plugin.Connectivity
  - Xam.Plugins.Settings
- - Plugin.Permissions
- - Xam.Plugin.PushNotification /*Android may need to be downloaded from github and recompiled to latest SDK */
+ - Xam.Plugin.PushNotification (Not Required) /*Android may need to be downloaded from github and recompiled to latest SDK */
  - Xamarin.FFImageLoading.Forms
  - Xamarin.FFImageLoading.Transformations
  - Xamarin.Auth
@@ -42,57 +41,23 @@ Suggested
 
 Setup Tasks:
 
-Step 1: Dependency Injection & Configuration Loader code -> MainActivity (SplashScreen) / AppDelegate:
+Step 1: 
+    Create a folder in your application called Config and copy the config.dev.txt file to it.  Change
+    the extension to json. Make the file build action embedded resource. Update the settings as needed. Also 
+    create a config.qa.json and config.prod.json file.
 
-	Task.Run(async () =>
-	{
-		await ConfigurationLoader.Load();
-	});
+    FYI: 
+        HTTPSettings Handler Options:  "Managed", "CFNetwork", "NSURLSession", "ModernHttpClient"
+        HttpTimeOut: zero means there is no timeout
 
-Step 2: create config.dev.json, qa & prod //(means comment options):
-
-	{
-	    "AzureSettings": {
-	        "AzureServiceBusName": "AzureServiceBusName",
-			"AzureServiceBusUrl": "AzureServiceBusUrl",
-			"AzureKey": "AzureKey",
-			"AzureHubName": "AzureHubName",
-			"AzureListenConnection": "AzureListenConnection"
-	    },
-	    "HttpSettings":{
-	        "HttpTimeOut": 0, /* zero means there is no timeout */
-			"HttpAllowAutoRedirect": false,
-	        "IOSHttpHandler":"ModernHttpClient",   /* "Managed", "CFNetwork", "NSURLSession", "ModernHttpClient" */
-	        "AndroidHttpHandler":"ModernHttpClient" /* "Managed", "AndroidClientHandler", "ModernHttpClient" */
-	    },
-		"GoogleSettings": {
-	        "GoogleSenderId": "GoogleSenderId"
-	    },
-	    "SqliteSettings": {
-	        "SQLiteDatabase": "db.db3",
-	        "TableNames": 
-				[
-					{"tableName":"referenceguide.Person"}, 
-					{"tableName":"referenceguide.Appointment"}
-				]
-	    },
-		"MobileCenter_HockeyApp": {
-	        "IOSAppId": "IOSAppId",
-	        "AndroidAppId": "IOSAppId",
-			"UWPAppId": "IOSAppId"
-	    },
-		"WebApi":[{"name":"demosite", "url":"http://com.company.test/api"}],
-		"CustomSettings":[{"name":"", "value":""}]
-	}
-
-Step 4 (enabling push notifications) -> see readme under AzureNotifications
+   
+Step 2 (enabling push notifications) -> see readme under AzureNotifications
 
 *** REMEMBER ***
 Grant Access In Android & IOS to Access Resource Like Calendar, Contacts (Internet)
 
 Additional References: 
 
-The folder named AdditionalReferences contains code samples not yet implemented generally in the CommonCore framework
 
 TLS explanation : https://blog.xamarin.com/securing-web-requests-with-tls-1-2/
 Icon tool: http://apetools.webprofusion.com/tools/imagegorilla

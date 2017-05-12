@@ -12,19 +12,19 @@ namespace referenceguide
 	{
 		public App()
 		{
-			AppData.NotificationTags.Add("referenceguide");
+			AppData.Instance.NotificationTags.Add("referenceguide");
 			AppSettings.AESEncryptionKey = "8675309";
 			MainPage = new MainPage();
 		}
 
 		private void ConnectivityChanged(object sender, ConnectivityChangedEventArgs args)
 		{
-			AppData.IsConnected = args.IsConnected;
+			AppData.Instance.IsConnected = args.IsConnected;
 		}
 
 		protected override void OnStart()
 		{
-			var mobileCenterKeys = $"android={AppData.MobileCenter_HockeyAppAndroid};ios={AppData.MobileCenter_HockeyAppiOS}";
+			var mobileCenterKeys = $"android={AppData.Instance.MobileCenter_HockeyAppAndroid};ios={AppData.Instance.MobileCenter_HockeyAppiOS}";
 			MobileCenter.Start(mobileCenterKeys, typeof(Analytics), typeof(Crashes));
 			
 			CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;

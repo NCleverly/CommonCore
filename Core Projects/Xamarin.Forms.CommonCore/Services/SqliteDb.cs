@@ -25,10 +25,10 @@ namespace Xamarin.Forms.CommonCore
 				try
 				{
 					string folder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-					conn = new SQLiteAsyncConnection(System.IO.Path.Combine(folder, AppData.SqliteDbName));
+					conn = new SQLiteAsyncConnection(System.IO.Path.Combine(folder, AppData.Instance.SqliteDbName));
 
 					var method = typeof(SQLiteAsyncConnection).GetMethod("CreateTableAsync");
-					foreach (var table in AppData.SqliteTableNames)
+					foreach (var table in AppData.Instance.SqliteTableNames)
 					{
 						var t = Type.GetType(table);
 						var genericMethod = method.MakeGenericMethod(t);

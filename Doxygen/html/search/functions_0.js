@@ -8,6 +8,7 @@ var searchData=
   ['aesdecryptstringfrombytes',['AesDecryptStringFromBytes',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a0b75a2ce11a51d4fc89b056a4c18e2df',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
   ['aesencrypt',['AesEncrypt',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a74b3dc6b9dde7bbfdaa50aabc5706f4b',1,'Xamarin.Forms.CommonCore.EncryptionService.AesEncrypt()'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_encryption_service.html#abfe230f3cb111a8d3f0d09cd661c2e75',1,'Xamarin.Forms.CommonCore.IEncryptionService.AesEncrypt()']]],
   ['aesencryptstringtobytes',['AesEncryptStringToBytes',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a8e59122b6fc6400cd0f820debdb0d09f',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
+  ['appdata',['AppData',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#aa3d838706b59e428128e7d9bae6aed44',1,'Xamarin::Forms::CommonCore::AppData']]],
   ['attachtolistviewdelegate',['AttachToListViewDelegate',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#ae7beaf0221bf3171ff5c6f383627aa8b',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['authenticationtoken',['AuthenticationToken',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#a1c18ee0bb42b539c690362a83901872d',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]]
 ];

@@ -18,7 +18,7 @@ namespace referenceguide
 				Style = AppStyles.LightOrange,
 				Command = new Command(async (obj) =>
 				{
-					await AppData.AppNav.PushAsync(new MaterialDesignPage());
+					await AppData.Instance.AppNav.PushAsync(new MaterialDesignPage());
 				})
 			};
 
@@ -28,7 +28,7 @@ namespace referenceguide
 				Style = AppStyles.LightOrange,
 				Command = new Command(async(obj) =>
 				{
-					await AppData.AppNav.PushAsync(new PaginagedListControl());
+					await AppData.Instance.AppNav.PushAsync(new PaginagedListControl());
 				})
 			};
 

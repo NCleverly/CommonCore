@@ -19,7 +19,7 @@ namespace referenceguide.Droid
 
 			CachedImageRenderer.Init();
 			LocalNotify.MainType = typeof(MainActivity);
-			AppData.AppIcon = Resource.Drawable.icon;
+			AppData.Instance.AppIcon = Resource.Drawable.icon;
 
 			var intent = new Intent(this, typeof(MainActivity));
 			StartActivity(intent);

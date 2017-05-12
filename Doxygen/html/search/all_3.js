@@ -28,8 +28,6 @@ var searchData=
   ['commoneffects_2edroid_2ecs',['CommonEffects.Droid.cs',['../_common_effects_8_droid_8cs.html',1,'']]],
   ['commoneffects_2eios_2ecs',['CommonEffects.IOS.cs',['../_common_effects_8_i_o_s_8cs.html',1,'']]],
   ['complete',['Complete',['../class_xamarin_1_1_forms_1_1_common_core_1_1_phone_callback.html#aa1751ba2e7c4bcb78305073337460597',1,'Xamarin::Forms::CommonCore::PhoneCallback']]],
-  ['configurationloader',['ConfigurationLoader',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_loader.html',1,'Xamarin::Forms::CommonCore']]],
-  ['configurationloader_2ecs',['ConfigurationLoader.cs',['../_configuration_loader_8cs.html',1,'']]],
   ['configurationmodel_2ecs',['ConfigurationModel.cs',['../_configuration_model_8cs.html',1,'']]],
   ['conn',['conn',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#aa65b98feb20727331d627d1c9d04e5b2',1,'Xamarin::Forms::CommonCore::SqliteDb']]],
   ['consolewrite',['ConsoleWrite',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a52e7edfcff4cb88a7bdb9d1706deca41',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
@@ -56,5 +54,6 @@ var searchData=
   ['create',['Create',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_tapped_event_args.html#a82266f2dc6ea40c36663da9857e4648f',1,'Xamarin::Forms::CommonCore::PopupTappedEventArgs']]],
   ['createcalendarevent',['CreateCalendarEvent',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_calendar_event.html#ab8c73e0d02d687256ae8cfa15cc8a7ae',1,'Xamarin::Forms::CommonCore::ICalendarEvent']]],
   ['createkey',['CreateKey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#ac20f1484053f1c0f1a16cdf1820a69a5',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
+  ['currentbuid',['CurrentBuid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_buid.html#a748ef45a3659bd6ce3c79c6aa1cdec42',1,'Xamarin::Forms::CommonCore::AppBuid']]],
   ['customsettings',['CustomSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#ab1ace3c0f6a6d569bf5fc4af1d037cd4',1,'Xamarin.Forms.CommonCore.AppData.CustomSettings()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_root_object.html#ab70d8df5e40bfdffe910422004058f84',1,'Xamarin.Forms.CommonCore.RootObject.CustomSettings()']]]
 ];

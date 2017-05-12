@@ -1,0 +1,41 @@
+﻿{
+  "AzureSettings": {
+    "AzureServiceBusName": "busname",
+    "AzureServiceBusUrl": "busurl",
+    "AzureKey": "key",
+    "AzureHubName": "hubname",
+    "AzureListenConnection": "listenconnection"
+  },
+  "HttpSettings": {
+    "HttpTimeOut": 0,
+    "HttpAllowAutoRedirect": false,
+    "IOSHttpHandler": "ModernHttpClient",
+    "AndroidHttpHandler": "ModernHttpClient"
+  },
+  "GoogleSettings": {
+    "GoogleSenderId": ""
+  },
+  "SqliteSettings": {
+    "SQLiteDatabase": "app.db3",
+    "TableNames": [
+      { "tableName": "namespace.modelname" }
+    ]
+  },
+  "MobileCenter_HockeyApp": {
+    "IOSAppId": "guid",
+    "AndroidAppId": "guid",
+    "UWPAppId": "guid"
+  },
+  "WebApi": [
+    {
+      "name": "friendlyname",
+      "url": "apiurl"
+    }
+  ],
+  "CustomSettings": [
+    {
+      "name": "friendlyname",
+      "value": "somevalue"
+    }
+  ]
+}

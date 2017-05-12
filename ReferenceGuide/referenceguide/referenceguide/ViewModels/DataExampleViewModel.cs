@@ -155,7 +155,7 @@ namespace referenceguide
 			this.LoadingMessageHUD = "Performing download...";
 			this.IsLoadingHUD = true;
 
-			var url = AppData.WebApis["randomuser"];
+			var url = AppData.Instance.WebApis["randomuser"];
 
 			//var isAvailable = await this.HttpService.PingDomain(url);
 

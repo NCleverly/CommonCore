@@ -93,8 +93,8 @@ namespace Xamarin.Forms.CommonCore
 		public WebClient GetWebClient()
 		{
 			var client = new WebClient();
-			if (AppData.TokenBearer != null)
-				client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + AppData.TokenBearer.access_token);
+			if (AppData.Instance.TokenBearer != null)
+				client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + AppData.Instance.TokenBearer.access_token);
 			return client;
 		}
 
@@ -104,34 +104,34 @@ namespace Xamarin.Forms.CommonCore
 
 #if __IOS__
 			HttpMessageHandler handler;
-			switch (AppData.IOSHttpHandler)
+			switch (AppData.Instance.IOSHttpHandler)
 			{
 				case "ModernHttpClient":
 					handler = new NativeMessageHandler()
 					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect,
-						Credentials = AppData.HttpCredentials
+						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect,
+						Credentials = AppData.Instance.HttpCredentials
 					};
 
 					break;
 				case "CFNetwork":
 					handler = new CFNetworkHandler()
 					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect
+						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect
 					};
 					break;
 				case "NSURLSession":
 					handler = new NSUrlSessionHandler()
 					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect,
-						Credentials = AppData.HttpCredentials
+						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect,
+						Credentials = AppData.Instance.HttpCredentials
 					};
 					break;
 				default:
 					handler = new HttpClientHandler()
 					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect,
-						Credentials = AppData.HttpCredentials
+						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect,
+						Credentials = AppData.Instance.HttpCredentials
 					};
 
 					break;
@@ -139,27 +139,27 @@ namespace Xamarin.Forms.CommonCore
 
 #elif __ANDROID__
 			HttpMessageHandler handler;
-			switch (AppData.AndroidHttpHandler)
+			switch (AppData.Instance.AndroidHttpHandler)
 			{
 				case "ModernHttpClient":
 					handler = new NativeMessageHandler()
 					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect,
-						Credentials = AppData.HttpCredentials
+						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect,
+						Credentials = AppData.Instance.HttpCredentials
 					};
 
 					break;
 				case "AndroidClientHandler":
 					handler = new Xamarin.Android.Net.AndroidClientHandler()
 					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect
+						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect
 					};
 					break;
 				default:
 					handler = new HttpClientHandler()
 					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect,
-						Credentials = AppData.HttpCredentials
+						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect,
+						Credentials = AppData.Instance.HttpCredentials
 					};
 					break;
 			}
@@ -172,17 +172,17 @@ namespace Xamarin.Forms.CommonCore
 			//if (AppData.HttpCredentials != null)
 			//	handler.Credentials = AppData.HttpCredentials;
 
-			if (AppData.HttpTimeOut > 0)
+			if (AppData.Instance.HttpTimeOut > 0)
 			{
-				client = new HttpClient(handler, true) { Timeout = new TimeSpan(0, 0, AppData.HttpTimeOut) };
+				client = new HttpClient(handler, true) { Timeout = new TimeSpan(0, 0, AppData.Instance.HttpTimeOut) };
 			}
 			else
 			{
 				client = new HttpClient(handler, true);
 			}
 
-			if (AppData.TokenBearer != null)
-				client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + AppData.TokenBearer.access_token);
+			if (AppData.Instance.TokenBearer != null)
+				client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + AppData.Instance.TokenBearer.access_token);
 
 			return client;
 		}
@@ -190,7 +190,7 @@ namespace Xamarin.Forms.CommonCore
 		{
 			var response = new StringResponse() { };
 
-			if (!AppData.IsConnected)
+			if (!AppData.Instance.IsConnected)
 			{
 				response.Success = false;
 				response.Error = new ApplicationException("Network Connection Error");
@@ -226,7 +226,7 @@ namespace Xamarin.Forms.CommonCore
 		{
 			var response = new GenericResponse<T>() { };
 
-			if (!AppData.IsConnected)
+			if (!AppData.Instance.IsConnected)
 			{
 				response.Success = false;
 				response.Error = new ApplicationException("Network Connection Error");
@@ -259,7 +259,7 @@ namespace Xamarin.Forms.CommonCore
 		{
 			var response = new GenericResponse<T>() { };
 
-			if (!AppData.IsConnected)
+			if (!AppData.Instance.IsConnected)
 			{
 				response.Success = false;
 				response.Error = new ApplicationException("Network Connection Error");
@@ -295,7 +295,7 @@ namespace Xamarin.Forms.CommonCore
 		{
 			var response = new GenericResponse<T>() { };
 
-			if (!AppData.IsConnected)
+			if (!AppData.Instance.IsConnected)
 			{
 				response.Success = false;
 				response.Error = new ApplicationException("Network Connection Error");
