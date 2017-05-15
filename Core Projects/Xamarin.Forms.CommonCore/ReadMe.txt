@@ -66,6 +66,8 @@ In Order to accomplish this, add the following to the Toolbar.xml file and imple
         android:visibility="gone"
         android:id="@+id/searchView" />
 
+In the MainActivity in the OnCreate method set:
+    AppData.Instance.SearchView = Resource.Id.searchView;
 
 
 
