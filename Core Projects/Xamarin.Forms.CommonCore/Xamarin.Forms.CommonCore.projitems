@@ -101,15 +101,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\OverlayDependency.IOS.cs">
       <DependentUpon>IOverlayDependency.cs</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\FormsPopup\Popup.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\FormsPopup\PopupHidingEventArgs.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\FormsPopup\PopupPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\FormsPopup\PopupPageInitializer.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\FormsPopup\PopupSectionType.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\FormsPopup\PopupShowingEventArgs.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\FormsPopup\PopupTappedEventArgs.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\FormsPopup\TapGestureRecognizerVisitor.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\FormsPopup\VisualElementExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\CalendarEvent.Droid.cs">
       <DependentUpon>ICalendarEvent.cs</DependentUpon>
     </Compile>
@@ -192,7 +183,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Pages\" />
     <Folder Include="$(MSBuildThisFileDirectory)Behaviors\" />
     <Folder Include="$(MSBuildThisFileDirectory)Effects\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Controls\FormsPopup\" />
     <Folder Include="$(MSBuildThisFileDirectory)AzureNotifications\" />
     <Folder Include="$(MSBuildThisFileDirectory)Configurations\">
     </Folder>

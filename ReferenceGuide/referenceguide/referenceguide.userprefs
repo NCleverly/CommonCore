@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../Core Projects/Xamarin.Forms.CommonCore/ReadMe.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/ControlPages/ControlsMain.cs">
     <Files>
       <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/SearchPageRenderer.Droid.cs" Line="19" Column="1" />
       <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/BoundPage.cs" Line="28" Column="2" />
@@ -12,7 +12,9 @@
       <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="18" Column="4" />
       <File FileName="referenceguide/ViewModels/SearchViewModel.cs" Line="12" Column="36" />
       <File FileName="Droid/MainActivity.cs" Line="19" Column="13" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/ReadMe.txt" Line="69" Column="48" />
+      <File FileName="Droid/MainApplication.cs" Line="36" Column="24" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/ReadMe.txt" Line="34" Column="75" />
+      <File FileName="referenceguide/Views/ControlPages/ControlsMain.cs" Line="9" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

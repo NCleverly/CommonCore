@@ -30,8 +30,8 @@ Required Nuget Installs
 
 Suggested
 - Humanizer /* Displaying strings, enums, dates, times, timespans */
-- Xam.Plugin.EmbeddedResource
 - Xam.Plugins.Messaging
+- Plugin.Fingerprint /* https://github.com/smstuebe/xamarin-fingerprint */
 - Plugin.Share
 - NodaTime /* Date and time API */
 - Refractored.XamForms.PullToRefresh
