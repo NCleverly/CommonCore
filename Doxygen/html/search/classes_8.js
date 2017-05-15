@@ -18,5 +18,6 @@ var searchData=
   ['ioverlaydependency',['IOverlayDependency',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_overlay_dependency.html',1,'Xamarin::Forms::CommonCore']]],
   ['iphonecall',['IPhoneCall',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_phone_call.html',1,'Xamarin::Forms::CommonCore']]],
   ['iprogressindicator',['IProgressIndicator',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_progress_indicator.html',1,'Xamarin::Forms::CommonCore']]],
+  ['isearchprovider',['ISearchProvider',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_search_provider.html',1,'Xamarin::Forms::CommonCore']]],
   ['isqlitedb',['ISqliteDb',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sqlite_db.html',1,'Xamarin::Forms::CommonCore']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['taprecognizer',['tapRecognizer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#ae606ea25620202fc6d61b38ebd1fda6f',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
-  ['topbordercolorproperty',['TopBorderColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a16a04c9e558789ef51cc57963ea945c1',1,'Xamarin::Forms::CommonCore::Popup']]]
+  ['unselectedbackgroundproperty',['UnselectedBackgroundProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#af80c6a37c1c8d93c39ec7fc84b3c06cb',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
+  ['unselectedtextcolorproperty',['UnselectedTextColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a47a1b80bd9feec90fb65ad02be175cc0',1,'Xamarin::Forms::CommonCore::SegmentControl']]]
 ];

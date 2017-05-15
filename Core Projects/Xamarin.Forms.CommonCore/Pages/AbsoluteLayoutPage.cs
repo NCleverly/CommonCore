@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace Xamarin.Forms.CommonCore
 {
-    public class AbsoluteLayoutPage<T> : BoundPage<T>
+    public abstract class AbsoluteLayoutPage<T> : BoundPage<T>
      where T : ObservableViewModel, new()
     {
         private AbsoluteLayout layout;

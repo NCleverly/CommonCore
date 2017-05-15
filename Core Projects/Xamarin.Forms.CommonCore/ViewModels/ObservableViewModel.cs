@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Input;
+using Xamarin.Forms.CommonCore.Styles;
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -52,7 +53,7 @@ namespace Xamarin.Forms.CommonCore
 	/// <summary>
 	/// Observable view model.
 	/// </summary>
-	public abstract class ObservableViewModel : ObservableObject
+	public class ObservableViewModel : ObservableObject
 	{
 		private bool isLoadingHUD;
 		private bool isLoadingOverlay;
@@ -152,8 +153,8 @@ namespace Xamarin.Forms.CommonCore
 				SetProperty(ref isLoadingOverlay, value);
 				if (value)
 				{
-					var color = Color.FromHex(AppStyles.OverlayColor);
-					DependencyService.Get<IOverlayDependency>().ShowOverlay(loadingMessageOverlay, color, AppStyles.OverlayOpacity);
+					var color = Color.FromHex(CoreStyles.OverlayColor);
+					DependencyService.Get<IOverlayDependency>().ShowOverlay(loadingMessageOverlay, color, CoreStyles.OverlayOpacity);
 				}
 				else
 				{

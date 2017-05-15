@@ -10,6 +10,10 @@ namespace referenceguide
 			Title = "Landing";
 			BackgroundColor = Color.White;
 
+            ToolbarItems.Add(new ToolbarItem(){ Text="Add", Command= new Command(() => {
+                
+            })});
+
 			var topImage = new CachedImage()
 			{
 				Source = "sharedcode.png"

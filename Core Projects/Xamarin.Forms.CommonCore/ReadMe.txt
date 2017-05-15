@@ -14,6 +14,7 @@ Required Nuget Installs
  - sqlite-net-pcl
  - ModernHttpClient
  - Newtonsoft.Json
+ - PCLCrypto
  - Xam.Plugin.Connectivity
  - Xam.Plugins.Settings
  - Xam.Plugin.PushNotification (Not Required) /*Android may need to be downloaded from github and recompiled to latest SDK */
@@ -52,6 +53,22 @@ Step 1:
 
    
 Step 2 (enabling push notifications) -> see readme under AzureNotifications
+
+*** Search View ***
+IOS uses the Search bar as a control in the UI but Android generally expects it in the Actionbar.
+In Order to accomplish this, add the following to the Toolbar.xml file and implement the ISearchProvider on the ViewModel.
+    <SearchView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="right"
+        android:visibility="gone"
+        android:id="@+id/searchView" />
+
+
+
+
 
 *** REMEMBER ***
 Grant Access In Android & IOS to Access Resource Like Calendar, Contacts (Internet)

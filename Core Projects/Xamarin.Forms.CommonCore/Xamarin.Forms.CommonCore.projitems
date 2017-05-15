@@ -175,6 +175,11 @@
       <DependentUpon>IAzureNotificationHub.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IAzureNotificationHub.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Styles\CoreStyles.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\SearchPageRenderer.Droid.cs">
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ISearchProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\BasePages.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -193,6 +198,9 @@
     </Folder>
     <Folder Include="$(MSBuildThisFileDirectory)Services\AltSqliteCode\">
     </Folder>
+    <Folder Include="$(MSBuildThisFileDirectory)Styles\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\Base\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />

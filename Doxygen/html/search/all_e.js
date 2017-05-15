@@ -41,8 +41,8 @@ var searchData=
   ['onviewmessagereceived',['OnViewMessageReceived',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a414415865b6e5a788fe40fe66b00415a',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['optiontext',['OptionText',['../class_xamarin_1_1_forms_1_1_common_core_1_1_picker_item.html#a2dad30698cc56849b01369254b41e914',1,'Xamarin::Forms::CommonCore::PickerItem']]],
   ['osversion',['OSVersion',['../class_xamarin_1_1_forms_1_1_common_core_1_1_device_information.html#a22e6688cfb2976f2e020de7a2705efc7',1,'Xamarin::Forms::CommonCore::DeviceInformation']]],
-  ['overlaycolor',['OverlayColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_styles.html#a06bda1861c736d5a3cd1e4ded6da1db4',1,'Xamarin::Forms::CommonCore::AppStyles']]],
+  ['overlaycolor',['OverlayColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_styles_1_1_core_styles.html#a84bfa41f898454241812a2f92103bd1f',1,'Xamarin::Forms::CommonCore::Styles::CoreStyles']]],
   ['overlaydependency_2edroid_2ecs',['OverlayDependency.Droid.cs',['../_overlay_dependency_8_droid_8cs.html',1,'']]],
   ['overlaydependency_2eios_2ecs',['OverlayDependency.IOS.cs',['../_overlay_dependency_8_i_o_s_8cs.html',1,'']]],
-  ['overlayopacity',['OverlayOpacity',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_styles.html#a7e3917e8c5688b6cbcc8b394d7e31a30',1,'Xamarin::Forms::CommonCore::AppStyles']]]
+  ['overlayopacity',['OverlayOpacity',['../class_xamarin_1_1_forms_1_1_common_core_1_1_styles_1_1_core_styles.html#a905c9716d8fded3aeb5504aee0eb944c',1,'Xamarin::Forms::CommonCore::Styles::CoreStyles']]]
 ];

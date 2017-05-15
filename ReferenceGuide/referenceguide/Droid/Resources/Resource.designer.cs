@@ -3315,8 +3315,8 @@ namespace referenceguide.Droid
 			// aapt resource value: 0x7f0b008a
 			public const int loadingProgressWheel = 2131427466;
 			
-			// aapt resource value: 0x7f0b00bf
-			public const int masked = 2131427519;
+			// aapt resource value: 0x7f0b00c0
+			public const int masked = 2131427520;
 			
 			// aapt resource value: 0x7f0b00ab
 			public const int media_actions = 2131427499;
@@ -3470,6 +3470,9 @@ namespace referenceguide.Droid
 			
 			// aapt resource value: 0x7f0b0047
 			public const int scrollable = 2131427399;
+			
+			// aapt resource value: 0x7f0b00be
+			public const int searchView = 2131427518;
 			
 			// aapt resource value: 0x7f0b006f
 			public const int search_badge = 2131427439;
@@ -3627,8 +3630,8 @@ namespace referenceguide.Droid
 			// aapt resource value: 0x7f0b000e
 			public const int view_offset_helper = 2131427342;
 			
-			// aapt resource value: 0x7f0b00be
-			public const int visible = 2131427518;
+			// aapt resource value: 0x7f0b00bf
+			public const int visible = 2131427519;
 			
 			// aapt resource value: 0x7f0b009d
 			public const int volume_item_container = 2131427485;

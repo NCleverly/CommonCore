@@ -4,7 +4,6 @@ using System.Linq.Expressions;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
-using referenceguide;
 using SQLite;
 
 namespace Xamarin.Forms.CommonCore

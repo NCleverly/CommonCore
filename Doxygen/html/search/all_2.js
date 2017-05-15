@@ -6,6 +6,8 @@ var searchData=
   ['backgroundtimerservice_2edroid_2ecs',['BackgroundTimerService.Droid.cs',['../_background_timer_service_8_droid_8cs.html',1,'']]],
   ['backgroundtimerservice_2eios_2ecs',['BackgroundTimerService.IOS.cs',['../_background_timer_service_8_i_o_s_8cs.html',1,'']]],
   ['badge',['Badge',['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#aada622a7438c54bfa1beeea880b16bdf',1,'Xamarin::Forms::CommonCore::LocalNotification']]],
+  ['basepages',['BasePages',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html',1,'Xamarin::Forms::CommonCore']]],
+  ['basepages_2ecs',['BasePages.cs',['../_base_pages_8cs.html',1,'']]],
   ['behavior5',['behavior5',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#a4b0a9724560d4b25bcd0348b9d8efde1',1,'Xamarin::Forms::CommonCore::RankingControl']]],
   ['bindablepicker',['BindablePicker',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html',1,'Xamarin.Forms.CommonCore.BindablePicker'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a526a68b71997e1e77688a01d0affe6c5',1,'Xamarin.Forms.CommonCore.BindablePicker.BindablePicker()']]],
   ['bindablepicker_2ecs',['BindablePicker.cs',['../_bindable_picker_8cs.html',1,'']]],

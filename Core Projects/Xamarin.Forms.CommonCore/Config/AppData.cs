@@ -5,6 +5,9 @@ using Microsoft.Practices.Unity;
 using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;
 using System.Reflection;
+#if __ANDROID__
+using Android.Widget;
+#endif
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -95,12 +98,6 @@ namespace Xamarin.Forms.CommonCore
         }
     }
 
-    public class AppStyles
-    {
-        public const string OverlayColor = "#000000";
-        public const float OverlayOpacity = 0.85f;
-    }
-
     public class AppBuid
     {
         public static string CurrentBuid { get; set; } = "dev";
@@ -116,6 +113,8 @@ namespace Xamarin.Forms.CommonCore
         {
             Load();
         }
+
+
         public string MobileCenter_HockeyAppiOS { get; set; }
         public string MobileCenter_HockeyAppAndroid { get; set; }
         public string MobileCenter_HockeyAppUWP { get; set; }
@@ -130,7 +129,6 @@ namespace Xamarin.Forms.CommonCore
         public string SqliteDbName { get; set; } = "appSqlite.db";
         public List<string> SqliteTableNames { get; set; } = new List<string>();
 
-        public string Environment { get; set; } = "dev";
         public Dictionary<string, string> WebApis { get; set; } = new Dictionary<string, string>();
 
         public Dictionary<string, string> CustomSettings { get; set; } = new Dictionary<string, string>();
@@ -158,6 +156,7 @@ namespace Xamarin.Forms.CommonCore
 
 #if __ANDROID__
 		public  int AppIcon { get; set; }
+        public int SearchView { get; set; }
 #endif
 
 #if __IOS__

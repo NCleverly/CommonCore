@@ -40,6 +40,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\TimerCallbackService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\CrossPushNotificationListener.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\PushMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ControlPages\SearchContentPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SearchViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />

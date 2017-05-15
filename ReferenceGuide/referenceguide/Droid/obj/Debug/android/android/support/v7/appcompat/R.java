@@ -3352,7 +3352,7 @@ containing a value of this type.
         public static final int loadingImage=0x7f0b0089;
         public static final int loadingProgressBar=0x7f0b0087;
         public static final int loadingProgressWheel=0x7f0b008a;
-        public static final int masked=0x7f0b00bf;
+        public static final int masked=0x7f0b00c0;
         public static final int media_actions=0x7f0b00ab;
         public static final int middle=0x7f0b002a;
         public static final int mini=0x7f0b0045;
@@ -3404,6 +3404,7 @@ containing a value of this type.
         public static final int scrollIndicatorUp=0x7f0b0056;
         public static final int scrollView=0x7f0b0057;
         public static final int scrollable=0x7f0b0047;
+        public static final int searchView=0x7f0b00be;
         public static final int search_badge=0x7f0b006f;
         public static final int search_bar=0x7f0b006e;
         public static final int search_button=0x7f0b0070;
@@ -3456,7 +3457,7 @@ containing a value of this type.
         public static final int up=0x7f0b0009;
         public static final int useLogo=0x7f0b0020;
         public static final int view_offset_helper=0x7f0b000e;
-        public static final int visible=0x7f0b00be;
+        public static final int visible=0x7f0b00bf;
         public static final int volume_item_container=0x7f0b009d;
         public static final int webview=0x7f0b007a;
         public static final int wide=0x7f0b0014;

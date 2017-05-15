@@ -42,11 +42,21 @@ namespace referenceguide
 			   })
 			};
 
+			var searchPage = new GradientButton()
+			{
+				Text = "Search Page",
+				Style = AppStyles.LightOrange,
+				Command = new Command(async(obj) =>
+			   {
+                   await AppData.Instance.AppNav.PushAsync(new SearchContentPage());
+			   })
+			};
+
 			var stack = new StackLayout()
 			{
 				Padding = 20,
 				Spacing = 10,
-				Children = { popButton, listPage, md }
+				Children = { popButton, listPage, md, searchPage }
 			};
 
 			Content = new ScrollView()

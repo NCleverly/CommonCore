@@ -1,10 +1,11 @@
 using System;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
+using Xamarin.Forms.CommonCore.Styles;
 
 namespace referenceguide
 {
-	public class AppStyles
+	public class AppStyles: CoreStyles
 	{
 		public static Style _lightOrange;
 		public static Style _lightBlue;

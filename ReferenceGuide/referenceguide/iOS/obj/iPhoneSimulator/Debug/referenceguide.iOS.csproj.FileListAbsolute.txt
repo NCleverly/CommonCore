@@ -161,6 +161,10 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/zh-HK/Xamarin.Forms.Platform.iOS.resources.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/zh-Hans/Xamarin.Forms.Platform.iOS.resources.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/zh-Hant/Xamarin.Forms.Platform.iOS.resources.dll
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csprojResolveAssemblyReference.cache
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csproj.CoreCompileInputs.cache
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.exe
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.pdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/ibtool/_BundleResourceWithLogicalName.items
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/_PartialAppManifest.items
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/actool/_BundleResourceWithLogicalName.items
@@ -175,6 +179,3 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/plus.png
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/sharedcode.png
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csproj.CoreCompileInputs.cache
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.exe
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.pdb

@@ -25,7 +25,6 @@ var searchData=
   ['appdata',['AppData',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html',1,'Xamarin.Forms.CommonCore.AppData'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#aa3d838706b59e428128e7d9bae6aed44',1,'Xamarin.Forms.CommonCore.AppData.AppData()']]],
   ['appdata_2ecs',['AppData.cs',['../_app_data_8cs.html',1,'']]],
   ['appnav',['AppNav',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a22d34dae0eeb5deb6fb976965e9e6e34',1,'Xamarin::Forms::CommonCore::AppData']]],
-  ['appstyles',['AppStyles',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_styles.html',1,'Xamarin::Forms::CommonCore']]],
   ['attachtolistviewdelegate',['AttachToListViewDelegate',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#ae7beaf0221bf3171ff5c6f383627aa8b',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['authenticationtoken',['AuthenticationToken',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html',1,'Xamarin.Forms.CommonCore.AuthenticationToken'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#a1c18ee0bb42b539c690362a83901872d',1,'Xamarin.Forms.CommonCore.AuthenticationToken.AuthenticationToken()']]],
   ['authenticationtoken_2ecs',['AuthenticationToken.cs',['../_authentication_token_8cs.html',1,'']]],

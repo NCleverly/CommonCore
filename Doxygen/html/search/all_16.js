@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['commoncore',['CommonCore',['../namespace_xamarin_1_1_forms_1_1_common_core.html',1,'Xamarin::Forms']]],
-  ['forms',['Forms',['../namespace_xamarin_1_1_forms.html',1,'Xamarin']]],
-  ['materialdesign',['MaterialDesign',['../namespace_xamarin_1_1_forms_1_1_common_core_1_1_material_design.html',1,'Xamarin::Forms::CommonCore']]],
-  ['xamarin',['Xamarin',['../namespace_xamarin.html',1,'']]],
-  ['xpositionrequest',['XPositionRequest',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a8351ca7cf644122f17cad0f31334f9ae',1,'Xamarin::Forms::CommonCore::Popup']]],
-  ['xpositionrequestproperty',['XPositionRequestProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a4a9354b345773f9dcef1b69cfabc26f4',1,'Xamarin::Forms::CommonCore::Popup']]]
+  ['webapi',['WebApi',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_api.html',1,'Xamarin.Forms.CommonCore.WebApi'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_root_object.html#a0a238bf60e7e4d851e736d44553b6f69',1,'Xamarin.Forms.CommonCore.RootObject.WebApi()']]],
+  ['webapis',['WebApis',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#ac8637e8009448324f695eb08a5460ae6',1,'Xamarin::Forms::CommonCore::AppData']]],
+  ['webdownloadclient',['WebDownloadClient',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html',1,'Xamarin::Forms::CommonCore']]],
+  ['webviewdisablescroll',['WebViewDisableScroll',['../class_xamarin_1_1_forms_1_1_common_core_1_1_common_effects.html#a5fe8b2cf2e73b54a38bc9f7fb8d3deac',1,'Xamarin::Forms::CommonCore::CommonEffects']]],
+  ['withtimeout_3c_20t_20_3e',['WithTimeout&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ad54e57e18720538cc4042194861d514c',1,'Xamarin::Forms::CommonCore::CoreExtensions']]]
 ];
