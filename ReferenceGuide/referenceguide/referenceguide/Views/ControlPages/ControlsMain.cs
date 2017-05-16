@@ -4,10 +4,23 @@ using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
+    public class StateViewCell:ViewCell
+    {
+        public StateViewCell()
+        {
+            var lbl = new Label() { Margin = 5 };
+            lbl.SetBinding(Label.TextProperty,"Text");
+            View = new StackLayout()
+            {
+                Children = { lbl }
+            };
+        }
+    }
     public class StateView: PopupView 
     {
         public StateView()
         {
+            //this.AnimateOpen = false;
             var lbl = new Label() { Text = "Select A State", Margin = 10 };
             var top = new StackLayout()
             {
@@ -18,6 +31,7 @@ namespace referenceguide
             var lstView = new ListControl(ListViewCachingStrategy.RecycleElement)
             {
                 VerticalOptions = LayoutOptions.CenterAndExpand,
+                ItemTemplate = new DataTemplate(typeof(StateViewCell)),
                 MaintainSelection=true
             };
             lstView.SetBinding(ListControl.ItemsSourceProperty,"States");

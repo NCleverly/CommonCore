@@ -20,6 +20,7 @@ var searchData=
   ['aesencryptstringtobytes',['AesEncryptStringToBytes',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a8e59122b6fc6400cd0f820debdb0d09f',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
   ['androidappid',['AndroidAppId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html#a9a8d1b6a4618f46c3b369d24e87ed7e5',1,'Xamarin::Forms::CommonCore::MobileCenterHockeyApp']]],
   ['androidhttphandler',['AndroidHttpHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a9143b176c39f10b2afec40ebf10f94a7',1,'Xamarin.Forms.CommonCore.AppData.AndroidHttpHandler()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_settings.html#a179824ba71f7bc055e37a14da96efd50',1,'Xamarin.Forms.CommonCore.HttpSettings.AndroidHttpHandler()']]],
+  ['animateopen',['AnimateOpen',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#af820072d7c7c1e79e58df8a6625503c8',1,'Xamarin::Forms::CommonCore::PopupView']]],
   ['appbuid',['AppBuid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_buid.html',1,'Xamarin::Forms::CommonCore']]],
   ['appdata',['AppData',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html',1,'Xamarin.Forms.CommonCore.AppData'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#aa3d838706b59e428128e7d9bae6aed44',1,'Xamarin.Forms.CommonCore.AppData.AppData()']]],
   ['appdata_2ecs',['AppData.cs',['../_app_data_8cs.html',1,'']]],

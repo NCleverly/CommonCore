@@ -6,6 +6,7 @@ var searchData=
   ['inactiveaccentcolor',['InactiveAccentColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a3e86c745acc50f0291e37eb9a4a57e77',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
   ['iosappid',['IOSAppId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html#a809abac6137bfdc5a38d7246e338b173',1,'Xamarin::Forms::CommonCore::MobileCenterHockeyApp']]],
   ['ioshttphandler',['IOSHttpHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a52ee55abc1a84e5646e2b9f4c188c517',1,'Xamarin.Forms.CommonCore.AppData.IOSHttpHandler()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_settings.html#a6340c2449d2f7665eda1cccc2f335c0d',1,'Xamarin.Forms.CommonCore.HttpSettings.IOSHttpHandler()']]],
+  ['isclippedtobounds',['IsClippedToBounds',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#af86a3cce62961d6fab9b6bae5981b5c1',1,'Xamarin::Forms::CommonCore::PopupView']]],
   ['isconnected',['IsConnected',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a8f4a02e5adb7933c8c62009705a57a31',1,'Xamarin::Forms::CommonCore::AppData']]],
   ['islistening',['IsListening',['../class_xamarin_1_1_forms_1_1_common_core_1_1_phone_callback.html#a1948c27b41b5d18048a6e46c9ee9237c',1,'Xamarin::Forms::CommonCore::PhoneCallback']]],
   ['isloadinghud',['IsLoadingHUD',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a8aa219e9ba54e6423852a31ebc246865',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],

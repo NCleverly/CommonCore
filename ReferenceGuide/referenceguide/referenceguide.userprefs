@@ -1,13 +1,12 @@
-﻿<Properties StartupConfiguration="{3676A936-1B3D-4D32-ADD9-7E9862FDB694}|Default">
+﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../Core Projects/Xamarin.Forms.CommonCore/Pages/AbsoluteLayoutPage.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/ControlPages/ControlsMain.cs">
     <Files>
-      <File FileName="referenceguide/Views/ControlPages/ControlsMain.cs" Line="96" Column="47" />
-      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="29" Column="44" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/AbsoluteLayoutPage.cs" Line="54" Column="33" />
+      <File FileName="referenceguide/Views/ControlPages/ControlsMain.cs" Line="14" Column="14" />
       <File FileName="Droid/MainActivity.cs" Line="29" Column="8" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/AbsoluteLayoutPage.cs" Line="73" Column="34" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />

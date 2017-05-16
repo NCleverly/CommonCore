@@ -178,3 +178,4 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csproj.CoreCompileInputs.cache
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.exe
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.pdb
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csprojResolveAssemblyReference.cache

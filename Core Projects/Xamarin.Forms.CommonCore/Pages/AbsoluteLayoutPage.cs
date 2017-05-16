@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Xamarin.Forms.CommonCore
@@ -8,14 +9,20 @@ namespace Xamarin.Forms.CommonCore
         AbsoluteLayout Parent { get; set; }
         Frame ParentObject { get; set; }
     }
-	public class PopupView : ContentView, IPopup
-	{
-		public new AbsoluteLayout Parent { get; set; }
+    public class PopupView : ContentView, IPopup
+    {
+        public bool AnimateOpen { get; set; } = true;
+        public float CornerRadius = 3;
+        public bool HasShadow { get; set; } = true;
+        public Color OutlineColor { get; set; } = Color.Gray;
+        public new bool IsClippedToBounds { get; set; } = false;
+        public new AbsoluteLayout Parent { get; set; }
         public Frame ParentObject { get; set; }
-        public virtual void Close(){
+        public virtual void Close()
+        {
             this.Parent.Children.Remove(ParentObject);
         }
-	}
+    }
     public abstract class AbsoluteLayoutPage<T> : BoundPage<T>
      where T : ObservableViewModel, new()
     {
@@ -46,27 +53,37 @@ namespace Xamarin.Forms.CommonCore
 
         public void ShowPopup(PopupView view, Rectangle bounds, int padding)
         {
-            wrapper = new Frame() { 
-                Content = view, 
-                HasShadow = true, 
-                IsClippedToBounds=true, 
-                OutlineColor= Color.Gray, 
-                CornerRadius=3, 
-                Padding = padding 
+
+            wrapper = new Frame()
+            {
+                Content = view,
+                HasShadow = view.HasShadow,
+                OutlineColor = view.OutlineColor,
+                IsClippedToBounds = view.IsClippedToBounds,
+                CornerRadius = view.CornerRadius,
+                Padding = padding
             };
             ((IPopup)view).Parent = this.layout;
-			((IPopup)view).ParentObject = this.wrapper;
+            ((IPopup)view).ParentObject = this.wrapper;
 
             AbsoluteLayout.SetLayoutBounds(wrapper, bounds);
-			AbsoluteLayout.SetLayoutFlags(wrapper, AbsoluteLayoutFlags.All);
+            AbsoluteLayout.SetLayoutFlags(wrapper, AbsoluteLayoutFlags.All);
             this.layout.Children.Add(wrapper);
             view.BindingContext = this.BindingContext;
+            if (view.AnimateOpen)
+            {
+                wrapper.ScaleTo(0.99, 200).ContinueWith(async (t) =>
+                {
+                    await wrapper.ScaleTo(1, 200);
+                });
+            }
         }
 
-        public void ClosePopup(){
+        public void ClosePopup()
+        {
             if (wrapper != null)
             {
-				((IPopup)wrapper).Parent = null;
+                ((IPopup)wrapper).Parent = null;
                 this.layout.Children.Remove(wrapper);
             }
         }
