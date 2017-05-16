@@ -26,7 +26,7 @@ namespace referenceguide.Droid
 
             Window.SetStatusBarColor(Android.Graphics.Color.Argb(255, 0, 0, 0)); //here
 
-        
+       
 
         }
 

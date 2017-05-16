@@ -1,8 +1,6 @@
 var searchData=
 [
   ['scrollindexproperty',['ScrollIndexProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#ae89b5ef09c326621e87bfad0d4fffcbd',1,'Xamarin::Forms::CommonCore::ListControl']]],
-  ['sectioncontainer',['SectionContainer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#aea00fac6c11352d80e7981b2c956ab7f',1,'Xamarin::Forms::CommonCore::Popup']]],
-  ['sectiontypeproperty',['SectionTypeProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#ab5698516ae1afdc17e5eae5fe8dc7cd5',1,'Xamarin::Forms::CommonCore::Popup']]],
   ['segmentbuttons',['segmentButtons',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#ad44b607223ff25e5de2dd096e99748e0',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['selectedbackgroundproperty',['SelectedBackgroundProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a5f48cc8edda3103ce9fc94dd5879bba4',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['selecteditemproperty',['SelectedItemProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#aa355c228212fa7f0141c440305488465',1,'Xamarin::Forms::CommonCore::BindablePicker']]],

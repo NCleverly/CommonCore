@@ -5,6 +5,5 @@ var searchData=
   ['title',['Title',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#a8b0957d1af8132ac91303016bdbf8bd4',1,'Xamarin.Forms.CommonCore.CalendarEventModel.Title()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_prompt.html#a58eb325418398a919822089230509551',1,'Xamarin.Forms.CommonCore.Prompt.Title()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#a7f96eb690cb22d0538c9276b2b55972c',1,'Xamarin.Forms.CommonCore.LocalNotification.Title()']]],
   ['token_5ftype',['token_type',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#a4f58e6d64c06523e68cdadf7b44f352f',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]],
   ['tokenbearer',['TokenBearer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a640f6beb9149417b1a052fcf31130413',1,'Xamarin::Forms::CommonCore::AppData']]],
-  ['tokenisvalid',['TokenIsValid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a15a32c5e522e467185003da2a58893e0',1,'Xamarin::Forms::CommonCore::AppData']]],
-  ['topbordercolor',['TopBorderColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a730069eb37ba32a8fded602269bfefee',1,'Xamarin::Forms::CommonCore::Popup']]]
+  ['tokenisvalid',['TokenIsValid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a15a32c5e522e467185003da2a58893e0',1,'Xamarin::Forms::CommonCore::AppData']]]
 ];

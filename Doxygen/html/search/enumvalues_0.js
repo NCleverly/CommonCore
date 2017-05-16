@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['backdrop',['Backdrop',['../namespace_xamarin_1_1_forms_1_1_common_core.html#ad4fe7da17b7b9923b45f18fec89cb810af15cb087cad34d317ad1fb51a1757c21',1,'Xamarin::Forms::CommonCore']]],
-  ['body',['Body',['../namespace_xamarin_1_1_forms_1_1_common_core.html#ad4fe7da17b7b9923b45f18fec89cb810aac101b32dda4448cf13a93fe283dddd8',1,'Xamarin::Forms::CommonCore']]],
-  ['border',['Border',['../namespace_xamarin_1_1_forms_1_1_common_core.html#ad4fe7da17b7b9923b45f18fec89cb810a070554647306343cbea29ebfdd278ba8',1,'Xamarin::Forms::CommonCore']]]
+  ['mini',['Mini',['../namespace_xamarin_1_1_forms_1_1_common_core_1_1_material_design.html#a84f0950ee1269c9faac3dca329e5f719ad3d5b2e9cc26e07d9bf4ebfbab15fda4',1,'Xamarin::Forms::CommonCore::MaterialDesign']]]
 ];

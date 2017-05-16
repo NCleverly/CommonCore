@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['hidden',['Hidden',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a1c0daf2ee8922e31975fa5ec558b5901',1,'Xamarin::Forms::CommonCore::Popup']]],
-  ['hiding',['Hiding',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a1bb50bfa7e546a1fa07071d2a9d19dd8',1,'Xamarin::Forms::CommonCore::Popup']]]
+  ['propertychanged',['PropertyChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_object.html#a7ef344e2669eee03dab511bfaad721ec',1,'Xamarin.Forms.CommonCore.ObservableObject.PropertyChanged()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a448c73e43a6c2b5244c53fd7bb7f1d94',1,'Xamarin.Forms.CommonCore.WebDownloadClient.PropertyChanged()']]]
 ];

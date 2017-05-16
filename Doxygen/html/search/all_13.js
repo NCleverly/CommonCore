@@ -2,9 +2,6 @@ var searchData=
 [
   ['tablename',['TableName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_table_name.html',1,'Xamarin.Forms.CommonCore.TableName'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_table_name.html#abcccf6101f8df4b2b60a09e989921fdf',1,'Xamarin.Forms.CommonCore.TableName.tableName()']]],
   ['tablenames',['TableNames',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html#a5bd2b3f5b40e84e396043ed45f08d425',1,'Xamarin::Forms::CommonCore::SqliteSettings']]],
-  ['tapgesturerecognizervisitor',['TapGestureRecognizerVisitor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_tap_gesture_recognizer_visitor.html',1,'Xamarin::Forms::CommonCore']]],
-  ['tapgesturerecognizervisitor_2ecs',['TapGestureRecognizerVisitor.cs',['../_tap_gesture_recognizer_visitor_8cs.html',1,'']]],
-  ['tapped',['Tapped',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a2b3d2505a7ec2c16a89dd4502622efa8',1,'Xamarin::Forms::CommonCore::Popup']]],
   ['taprecognizer',['tapRecognizer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#ae606ea25620202fc6d61b38ebd1fda6f',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
   ['textarea',['TextArea',['../class_common_1_1_core_1_1_text_area.html',1,'Common.Core.TextArea'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html',1,'Xamarin.Forms.CommonCore.TextArea']]],
   ['textarea_2ecs',['TextArea.cs',['../_text_area_8cs.html',1,'']]],
@@ -19,7 +16,5 @@ var searchData=
   ['tokenisvalid',['TokenIsValid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a15a32c5e522e467185003da2a58893e0',1,'Xamarin::Forms::CommonCore::AppData']]],
   ['tolist',['ToList',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a1838e20ad80715e4441a8d73785c196f',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['toobservable_3c_20t_20_3e',['ToObservable&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ae63ff7cccad11109f9d9c41dbb810e4d',1,'Xamarin.Forms.CommonCore.CoreExtensions.ToObservable&lt; T &gt;(this List&lt; T &gt; list)'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a7b4382e7e0d1cbbba0047c8d2b2c14fb',1,'Xamarin.Forms.CommonCore.CoreExtensions.ToObservable&lt; T &gt;(this T[] array)']]],
-  ['topbordercolor',['TopBorderColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a730069eb37ba32a8fded602269bfefee',1,'Xamarin::Forms::CommonCore::Popup']]],
-  ['topbordercolorproperty',['TopBorderColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a16a04c9e558789ef51cc57963ea945c1',1,'Xamarin::Forms::CommonCore::Popup']]],
   ['truncateasync_3c_20t_20_3e',['TruncateAsync&lt; T &gt;',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sqlite_db.html#aa17fc421436bb1b84fa4904a49159c0f',1,'Xamarin.Forms.CommonCore.ISqliteDb.TruncateAsync&lt; T &gt;()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#a2d9b599db049ecb50d95b149239300aa',1,'Xamarin.Forms.CommonCore.SqliteDb.TruncateAsync&lt; T &gt;()']]]
 ];

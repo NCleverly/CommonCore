@@ -5,7 +5,6 @@ var searchData=
   ['searchcommand',['SearchCommand',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_search_provider.html#a7fa3471712a04b7f51e4def84deeff71',1,'Xamarin::Forms::CommonCore::ISearchProvider']]],
   ['searchisdefaultaction',['SearchIsDefaultAction',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_search_provider.html#a812b352cde4bb18ac1101bb547977d5b',1,'Xamarin::Forms::CommonCore::ISearchProvider']]],
   ['secondsoffset',['SecondsOffSet',['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#a8d79cdf5d287f9c3dad831665ce3fccf',1,'Xamarin::Forms::CommonCore::LocalNotification']]],
-  ['section',['Section',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_tapped_event_args.html#aaed4a58add7e0c7f99a5aed1ae449200',1,'Xamarin::Forms::CommonCore::PopupTappedEventArgs']]],
   ['segmentcontrolheight',['SegmentControlHeight',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a94ee713d1f7b9e7fdf40c603881297a6',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['segmentviews',['SegmentViews',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a7665512b8f1e3d6982e38195c03f0ffa',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['selectedbackground',['SelectedBackground',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a69fb4acfc4c75074c4e2bf8b5cb81c0c',1,'Xamarin::Forms::CommonCore::SegmentControl']]],

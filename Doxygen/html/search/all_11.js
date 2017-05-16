@@ -24,7 +24,5 @@ var searchData=
   ['resourceloader_2ecs',['ResourceLoader.cs',['../_resource_loader_8cs.html',1,'']]],
   ['response',['Response',['../class_xamarin_1_1_forms_1_1_common_core_1_1_generic_response.html#ab6e90eb6a87df24e2232c1ed5f5d4762',1,'Xamarin.Forms.CommonCore.GenericResponse.Response()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_string_response.html#a2cf1b1c7c259999362150123716bd63d',1,'Xamarin.Forms.CommonCore.StringResponse.Response()']]],
   ['responsetypes_2ecs',['ResponseTypes.cs',['../_response_types_8cs.html',1,'']]],
-  ['rightbordercolor',['RightBorderColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#abbbcc503a642affdad7d031bd7fc5208',1,'Xamarin::Forms::CommonCore::Popup']]],
-  ['rightbordercolorproperty',['RightBorderColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a4232be76bff55aea641cb405cafb53bb',1,'Xamarin::Forms::CommonCore::Popup']]],
   ['rootobject',['RootObject',['../class_xamarin_1_1_forms_1_1_common_core_1_1_root_object.html',1,'Xamarin::Forms::CommonCore']]]
 ];

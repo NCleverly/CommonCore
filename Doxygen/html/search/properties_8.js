@@ -11,7 +11,6 @@ var searchData=
   ['isloadinghud',['IsLoadingHUD',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a8aa219e9ba54e6423852a31ebc246865',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['isloadingoverlay',['IsLoadingOverlay',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aec303684e2020b23f826d98b56f48feb',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['isstarred',['IsStarred',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#adc54e50703e19df329ba22c59c390354',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
-  ['isusercontrol',['IsUserControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_tapped_event_args.html#a7fd34f519fb8c5462783ac6017be4509',1,'Xamarin::Forms::CommonCore::PopupTappedEventArgs']]],
   ['isvalid',['IsValid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a3e410f7353858224c29779299c367573',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
   ['itemclickcommand',['ItemClickCommand',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#a614204e3033426d4e9d20270fdb011a3',1,'Xamarin::Forms::CommonCore::ListControl']]],
   ['itemssource',['ItemsSource',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#add5a2b7896badfb1f8c354707a852fee',1,'Xamarin::Forms::CommonCore::BindablePicker']]]

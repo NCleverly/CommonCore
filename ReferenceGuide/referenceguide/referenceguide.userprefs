@@ -1,20 +1,13 @@
-﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
+﻿<Properties StartupConfiguration="{3676A936-1B3D-4D32-ADD9-7E9862FDB694}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/ControlPages/ControlsMain.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Core Projects/Xamarin.Forms.CommonCore/Pages/AbsoluteLayoutPage.cs">
     <Files>
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/SearchPageRenderer.Droid.cs" Line="19" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/BoundPage.cs" Line="28" Column="2" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BasePages.cs" Line="22" Column="22" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/AbsoluteLayoutPage.cs" Line="14" Column="16" />
-      <File FileName="referenceguide/Views/ControlPages/SearchContentPage.cs" Line="18" Column="53" />
-      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="18" Column="4" />
-      <File FileName="referenceguide/ViewModels/SearchViewModel.cs" Line="12" Column="36" />
-      <File FileName="Droid/MainActivity.cs" Line="19" Column="13" />
-      <File FileName="Droid/MainApplication.cs" Line="36" Column="24" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/ReadMe.txt" Line="34" Column="75" />
-      <File FileName="referenceguide/Views/ControlPages/ControlsMain.cs" Line="9" Column="5" />
+      <File FileName="referenceguide/Views/ControlPages/ControlsMain.cs" Line="96" Column="47" />
+      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="29" Column="44" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/AbsoluteLayoutPage.cs" Line="54" Column="33" />
+      <File FileName="Droid/MainActivity.cs" Line="29" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -23,7 +16,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.57.101:5555" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.ItemProperties.referenceguide HideGettingStarted="True" />
   <MultiItemStartupConfigurations />
 </Properties>
