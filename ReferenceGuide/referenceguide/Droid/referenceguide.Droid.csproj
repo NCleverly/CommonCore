@@ -329,6 +329,20 @@
     <AndroidResource Include="Resources\drawable\plus.png" />
     <AndroidResource Include="Resources\drawable\sharedcode.png" />
     <AndroidResource Include="Resources\values\strings.xml" />
+    <AndroidResource Include="Resources\drawable\screen.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\screen.png" />
+    <AndroidResource Include="Resources\drawable-land\screen.png" />
+    <AndroidResource Include="Resources\drawable-land-hdpi\screen.png" />
+    <AndroidResource Include="Resources\drawable-land-ldpi\screen.png" />
+    <AndroidResource Include="Resources\drawable-land-mdpi\screen.png" />
+    <AndroidResource Include="Resources\drawable-land-xhdpi\screen.png" />
+    <AndroidResource Include="Resources\drawable-land-xxhdpi\screen.png" />
+    <AndroidResource Include="Resources\drawable-land-xxxhdpi\screen.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\screen.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\screen.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\screen.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\screen.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\screen.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable-hdpi\" />

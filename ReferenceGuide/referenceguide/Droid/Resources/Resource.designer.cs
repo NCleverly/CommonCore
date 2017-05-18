@@ -3026,11 +3026,11 @@ namespace referenceguide.Droid
 			// aapt resource value: 0x7f020128
 			public const int notification_icon_background = 2130837800;
 			
-			// aapt resource value: 0x7f020131
-			public const int notification_template_icon_bg = 2130837809;
-			
 			// aapt resource value: 0x7f020132
-			public const int notification_template_icon_low_bg = 2130837810;
+			public const int notification_template_icon_bg = 2130837810;
+			
+			// aapt resource value: 0x7f020133
+			public const int notification_template_icon_low_bg = 2130837811;
 			
 			// aapt resource value: 0x7f020129
 			public const int notification_tile_bg = 2130837801;
@@ -3051,10 +3051,13 @@ namespace referenceguide.Droid
 			public const int roundedbgdark = 2130837806;
 			
 			// aapt resource value: 0x7f02012f
-			public const int sharedcode = 2130837807;
+			public const int screen = 2130837807;
 			
 			// aapt resource value: 0x7f020130
-			public const int SplashScreen = 2130837808;
+			public const int sharedcode = 2130837808;
+			
+			// aapt resource value: 0x7f020131
+			public const int SplashScreen = 2130837809;
 			
 			static Drawable()
 			{

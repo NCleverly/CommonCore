@@ -114,11 +114,21 @@ namespace referenceguide
                })
             };
 
+			var bckImage = new GradientButton()
+			{
+				Text = "Background Image",
+				Style = AppStyles.LightOrange,
+				Command = new Command(async(obj) =>
+			   {
+				   await AppData.Instance.AppNav.PushAsync(new BackgroundImagePage());
+			   })
+			};
+
             var stack = new StackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { listPage, md, searchPage, popup }
+                Children = { listPage, md, searchPage, popup, bckImage }
             };
 
             Content = new ScrollView()

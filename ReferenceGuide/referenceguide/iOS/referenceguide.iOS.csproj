@@ -292,6 +292,7 @@
     <BundleResource Include="Resources\calendar.png" />
     <BundleResource Include="Resources\plus.png" />
     <BundleResource Include="Resources\sharedcode.png" />
+    <BundleResource Include="Resources\Default.png" />
   </ItemGroup>
   <Import Project="..\..\..\Core Projects\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems" Label="Shared" Condition="Exists('..\..\..\Core Projects\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems')" />
   <Import Project="..\..\..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />

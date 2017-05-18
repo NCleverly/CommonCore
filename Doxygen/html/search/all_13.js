@@ -3,7 +3,7 @@ var searchData=
   ['tablename',['TableName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_table_name.html',1,'Xamarin.Forms.CommonCore.TableName'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_table_name.html#abcccf6101f8df4b2b60a09e989921fdf',1,'Xamarin.Forms.CommonCore.TableName.tableName()']]],
   ['tablenames',['TableNames',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html#a5bd2b3f5b40e84e396043ed45f08d425',1,'Xamarin::Forms::CommonCore::SqliteSettings']]],
   ['taprecognizer',['tapRecognizer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#ae606ea25620202fc6d61b38ebd1fda6f',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
-  ['textarea',['TextArea',['../class_common_1_1_core_1_1_text_area.html',1,'Common.Core.TextArea'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html',1,'Xamarin.Forms.CommonCore.TextArea']]],
+  ['textarea',['TextArea',['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html',1,'Xamarin.Forms.CommonCore.TextArea'],['../class_common_1_1_core_1_1_text_area.html',1,'Common.Core.TextArea']]],
   ['textarea_2ecs',['TextArea.cs',['../_text_area_8cs.html',1,'']]],
   ['textarearenderer_2ecs',['TextAreaRenderer.cs',['../_text_area_renderer_8cs.html',1,'']]],
   ['textarearenderer_2edroid_2ecs',['TextAreaRenderer.Droid.cs',['../_text_area_renderer_8_droid_8cs.html',1,'']]],

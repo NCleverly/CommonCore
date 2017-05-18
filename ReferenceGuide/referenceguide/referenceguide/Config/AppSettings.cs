@@ -28,5 +28,11 @@ namespace referenceguide
 			set { _appSettings.AddOrUpdateValue<long>("LastSync", value); }
 		}
 
+		public static string InstallationId
+		{
+			get { return _appSettings.GetValueOrDefault<string>("InstallationId", null); }
+			set { _appSettings.AddOrUpdateValue<string>("InstallationId", value); }
+		}
+
 	}
 }

@@ -5,6 +5,7 @@ using Plugin.Connectivity.Abstractions;
 using Microsoft.Azure.Mobile;
 using Microsoft.Azure.Mobile.Analytics;
 using Microsoft.Azure.Mobile.Crashes;
+using System;
 
 namespace referenceguide
 {
@@ -14,6 +15,11 @@ namespace referenceguide
 		{
 			AppData.Instance.NotificationTags.Add("referenceguide");
 			AppSettings.AESEncryptionKey = "8675309";
+
+            if (string.IsNullOrEmpty(AppSettings.InstallationId))
+                AppSettings.InstallationId = Guid.NewGuid().ToString();
+
+            var x = AppSettings.InstallationId;
 			MainPage = new MainPage();
 		}
 

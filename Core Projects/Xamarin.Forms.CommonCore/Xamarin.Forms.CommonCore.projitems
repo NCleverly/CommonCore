@@ -167,10 +167,14 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IAzureNotificationHub.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Styles\CoreStyles.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Pages\SearchPageRenderer.Droid.cs">
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ISearchProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\BasePages.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\BasePageRenderer.Droid.cs">
+      <DependentUpon>BasePages.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\BasePageRenderer.IOS.cs">
+      <DependentUpon>BasePages.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

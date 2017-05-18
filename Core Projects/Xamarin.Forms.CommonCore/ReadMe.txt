@@ -69,7 +69,8 @@ In Order to accomplish this, add the following to the Toolbar.xml file and imple
 In the MainActivity in the OnCreate method set:
     AppData.Instance.SearchView = Resource.Id.searchView;
 
-
+*** Background Page Image / Splash Screen ***
+http://apetools.webprofusion.com/tools/imagegorilla  -> create icons and screens
 
 
 *** REMEMBER ***

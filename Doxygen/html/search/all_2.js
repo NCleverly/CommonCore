@@ -1,10 +1,14 @@
 var searchData=
 [
   ['b',['B',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_a_b_c_d_struct.html#a53c498e63470eaec80a438c4a593842f',1,'Xamarin::Forms::CommonCore::ABCDStruct']]],
+  ['backgroundimage',['backgroundImage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_page_renderer.html#a7bafc7eedb65759cdf61ef93bea2f900',1,'Xamarin::Forms::CommonCore::BasePageRenderer']]],
   ['backgroundtimer',['BackgroundTimer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_background_timer.html',1,'Xamarin.Forms.CommonCore.BackgroundTimer'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a36e7709c75414ad7b2c0187e53d79fff',1,'Xamarin.Forms.CommonCore.ObservableViewModel.backgroundTimer()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ab50a2ea91e68623497b2397cdbae424a',1,'Xamarin.Forms.CommonCore.ObservableViewModel.BackgroundTimer()']]],
   ['backgroundtimerservice_2edroid_2ecs',['BackgroundTimerService.Droid.cs',['../_background_timer_service_8_droid_8cs.html',1,'']]],
   ['backgroundtimerservice_2eios_2ecs',['BackgroundTimerService.IOS.cs',['../_background_timer_service_8_i_o_s_8cs.html',1,'']]],
   ['badge',['Badge',['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#aada622a7438c54bfa1beeea880b16bdf',1,'Xamarin::Forms::CommonCore::LocalNotification']]],
+  ['basepagerenderer',['BasePageRenderer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_page_renderer.html',1,'Xamarin::Forms::CommonCore']]],
+  ['basepagerenderer_2edroid_2ecs',['BasePageRenderer.Droid.cs',['../_base_page_renderer_8_droid_8cs.html',1,'']]],
+  ['basepagerenderer_2eios_2ecs',['BasePageRenderer.IOS.cs',['../_base_page_renderer_8_i_o_s_8cs.html',1,'']]],
   ['basepages',['BasePages',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html',1,'Xamarin::Forms::CommonCore']]],
   ['basepages_2ecs',['BasePages.cs',['../_base_pages_8cs.html',1,'']]],
   ['behavior5',['behavior5',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#a4b0a9724560d4b25bcd0348b9d8efde1',1,'Xamarin::Forms::CommonCore::RankingControl']]],
