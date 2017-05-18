@@ -16,21 +16,22 @@ namespace Xamarin.Forms.CommonCore
         {
             var page = Element as ContentPage;
             backgroundImage = page.BackgroundImage;
+
             base.OnElementChanged(e);
         }
 		public override void ViewWillAppear(bool animated)
 		{
             
 			base.ViewWillAppear(false);
+			if (backgroundImage != null)
+			{
+				UIGraphics.BeginImageContext(this.View.Frame.Size);
+				UIImage i = UIImage.FromFile(backgroundImage);
+				i = i.Scale(this.View.Frame.Size);
 
-            if (backgroundImage != null)
-            {
-                UIGraphics.BeginImageContext(this.View.Frame.Size);
-                UIImage i = UIImage.FromFile(backgroundImage);
-                i = i.Scale(this.View.Frame.Size);
+				this.View.BackgroundColor = UIColor.FromPatternImage(i);
+			}
 
-                this.View.BackgroundColor = UIColor.FromPatternImage(i);
-            }
 
 		}
     }

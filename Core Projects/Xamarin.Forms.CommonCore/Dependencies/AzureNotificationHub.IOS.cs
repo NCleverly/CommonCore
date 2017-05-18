@@ -14,6 +14,7 @@ namespace Xamarin.Forms.CommonCore
 
         public void RegisterNotificationHub(string registrationId)
         {
+            AppData.Instance.NotificationTags.Add("happy");
             if (AzureNotificationHub.HUB == null)
                 AzureNotificationHub.HUB = new SBNotificationHub(AppData.Instance.AzureListenConnection, AppData.Instance.AzureHubName);
 

@@ -12279,7 +12279,7 @@ _mono_aot_file_info:
 	.long 440,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 217,17,220,202,94,62,72,129,174,180,3,202,233,221,173,46
+	.byte 88,228,177,222,129,66,128,107,210,18,200,125,242,125,8,255
 	.globl _mono_aot_module_FFImageLoading_Forms_info
 	.align 2
 _mono_aot_module_FFImageLoading_Forms_info:

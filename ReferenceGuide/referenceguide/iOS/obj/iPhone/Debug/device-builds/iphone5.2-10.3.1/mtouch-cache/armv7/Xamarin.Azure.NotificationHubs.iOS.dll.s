@@ -12820,7 +12820,7 @@ _mono_aot_file_info:
 	.long 384,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 251,206,83,88,140,171,67,89,111,127,131,127,34,203,76,83
+	.byte 128,21,27,190,163,191,133,182,237,16,22,81,37,61,223,158
 	.globl _mono_aot_module_Xamarin_Azure_NotificationHubs_iOS_info
 	.align 2
 _mono_aot_module_Xamarin_Azure_NotificationHubs_iOS_info:

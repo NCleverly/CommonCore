@@ -1,31 +1,26 @@
 ﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
-  <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
+  <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.548c2002650cf1e3586f7cd1b3ba85ec5508c40f">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../Core Projects/Xamarin.Forms.CommonCore/ReadMe.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/ControlPages/BackgroundImagePage.cs">
     <Files>
-      <File FileName="referenceguide/Views/ControlPages/ControlsMain.cs" Line="126" Column="13" />
-      <File FileName="Droid/MainActivity.cs" Line="17" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/AbsoluteLayoutPage.cs" Line="73" Column="34" />
-      <File FileName="referenceguide/Views/ControlPages/SearchContentPage.cs" Line="23" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/BoundPage.cs" Line="7" Column="42" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BasePages.cs" Line="7" Column="6" />
-      <File FileName="referenceguide/referenceguide.cs" Line="23" Column="1" />
-      <File FileName="referenceguide/Config/AppSettings.cs" Line="31" Column="38" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/ReadMe.txt" Line="74" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Services/FileStore.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Views/ControlPages/BackgroundImagePage.cs" Line="16" Column="1" />
-      <File FileName="referenceguide/ViewModels/ControlsViewModel.cs" Line="1" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BasePageRenderer.Droid.cs" Line="15" Column="34" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BasePageRenderer.IOS.cs" Line="19" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/BlurOverlay.Droid.cs" Line="1" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/BlurOverlay.IOS.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/ControlPages/BackgroundImagePage.cs" Line="11" Column="63" />
+      <File FileName="referenceguide/referenceguide.cs" Line="16" Column="57" />
+      <File FileName="referenceguide/PushNotifications/CrossPushNotificationListener.cs" Line="24" Column="1" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BasePageRenderer.IOS.cs" Line="25" Column="31" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/AzureNotificationHub.IOS.cs" Line="23" Column="43" />
+      <File FileName="referenceguide/Views/ControlPages/ControlsMain.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/referenceguide/Views/ControlPages/SearchContentPage.cs" relfile="referenceguide/Views/ControlPages/SearchContentPage.cs" line="23" column="1" />
+      <Breakpoint file="/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/referenceguide/PushNotifications/CrossPushNotificationListener.cs" relfile="referenceguide/PushNotifications/CrossPushNotificationListener.cs" line="18" column="1" />
+      <Breakpoint file="/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/referenceguide/PushNotifications/CrossPushNotificationListener.cs" relfile="referenceguide/PushNotifications/CrossPushNotificationListener.cs" line="24" column="1" />
+      <Breakpoint file="/Volumes/Personal 240/CommonCore/Core Projects/Xamarin.Forms.CommonCore/Dependencies/AzureNotificationHub.IOS.cs" line="23" column="1" />
+      <Breakpoint file="/Volumes/Personal 240/CommonCore/Core Projects/Xamarin.Forms.CommonCore/Dependencies/AzureNotificationHub.IOS.cs" line="27" column="1" />
+      <Breakpoint file="/Volumes/Personal 240/CommonCore/Core Projects/Xamarin.Forms.CommonCore/Dependencies/AzureNotificationHub.IOS.cs" line="34" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />

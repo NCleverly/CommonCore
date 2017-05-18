@@ -329,7 +329,7 @@ _mono_aot_file_info:
 	.long 40,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 224,92,132,143,254,195,154,194,86,158,147,141,160,11,225,76
+	.byte 183,30,212,75,2,52,22,248,96,32,80,0,222,190,125,20
 	.globl _mono_aot_module_PushNotification_Plugin_Abstractions_info
 	.align 2
 _mono_aot_module_PushNotification_Plugin_Abstractions_info:

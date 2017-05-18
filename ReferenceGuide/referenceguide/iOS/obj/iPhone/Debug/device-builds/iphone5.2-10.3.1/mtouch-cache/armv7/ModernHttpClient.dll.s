@@ -27931,7 +27931,7 @@ _mono_aot_file_info:
 	.long 664,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 15,23,180,39,58,40,21,149,191,249,24,17,123,194,202,238
+	.byte 56,47,237,75,81,222,126,92,55,19,244,218,235,72,141,6
 	.globl _mono_aot_module_ModernHttpClient_info
 	.align 2
 _mono_aot_module_ModernHttpClient_info:

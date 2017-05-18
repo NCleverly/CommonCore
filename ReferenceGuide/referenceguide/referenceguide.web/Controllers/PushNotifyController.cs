@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
 using Microsoft.Azure.NotificationHubs;
 using Newtonsoft.Json;
 
@@ -61,12 +58,12 @@ namespace referenceguide.web.Controllers
 
 		private NotificationOutcome SendAPNS(PushMessage msg)
 		{
-            var obj = new APNS.RootObject() { 
-                Content = new APNS.Aps() { 
-                    Alert = new APNS.Alert(){ Title=msg.Title, Messsage = msg.Message}, 
-                    Badge=1, 
-                    ContentAvailable = 1 
-                } };
+            var obj = new APNS.RootObject();
+            obj.Content.Alert.Add("title","Special Alert");
+            obj.Content.Alert.Add("body", "There is a sale at Walmart");
+            obj.Content.Badge = 1;
+            obj.Content.ContentAvailable = 1;
+
             var json = JsonConvert.SerializeObject(obj);
             return hub.SendAppleNativeNotificationAsync(json, msg.Tag).Result;
 		}
@@ -75,29 +72,23 @@ namespace referenceguide.web.Controllers
 
 namespace GCMMessage
 {
-	public class RootObject
+    public class RootObject
 	{
 		public string collapse_key { get; set; }
 		public bool delay_while_idle { get; set; }
 		public string to { get; set; }
+        public string silent { get; set; }
         public Dictionary<string, string> data { get; set; } = new Dictionary<string, string>();
 		public int time_to_live { get; set; }
 	}
 }
 namespace APNS
 {
-    public class Alert
-	{
-        [JsonProperty("title")]
-		public string Title { get; set; }
-        [JsonProperty("body")]
-		public string Messsage { get; set; }
-	}
 
-	public class Aps
+    public class Aps
 	{
         [JsonProperty("alert")]
-		public Alert Alert { get; set; }
+		public Dictionary<string, string> Alert { get; set; } = new Dictionary<string, string>();
         [JsonProperty("content-available")]
 		public int ContentAvailable { get; set; }
         [JsonProperty("badge")]

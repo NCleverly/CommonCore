@@ -882,7 +882,7 @@ _mono_aot_file_info:
 	.long 48,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 110,82,216,112,11,132,104,24,219,43,9,9,17,198,210,146
+	.byte 162,192,64,240,145,206,253,26,158,158,189,98,224,216,186,7
 	.globl _mono_aot_module_WebP_Touch_info
 	.align 2
 _mono_aot_module_WebP_Touch_info:

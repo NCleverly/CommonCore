@@ -2138,7 +2138,7 @@ _mono_aot_file_info:
 	.long 120,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 212,146,148,222,214,243,233,144,14,144,135,23,233,38,214,148
+	.byte 45,105,35,231,62,106,150,69,23,102,190,90,187,233,150,118
 	.globl _mono_aot_module_Microsoft_Practices_ServiceLocation_info
 	.align 2
 _mono_aot_module_Microsoft_Practices_ServiceLocation_info:

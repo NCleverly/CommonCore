@@ -8187,7 +8187,7 @@ _mono_aot_file_info:
 	.long 296,0,0,0,0,0,0,0
 	.long 0,0,0,0,0,0,0,0
 	.long 0
-	.byte 238,112,164,136,243,13,209,94,182,22,98,131,1,41,220,2
+	.byte 52,17,49,86,230,66,87,221,185,72,237,57,41,249,97,61
 	.globl _mono_aot_module_PInvoke_Kernel32_info
 	.align 2
 _mono_aot_module_PInvoke_Kernel32_info:
