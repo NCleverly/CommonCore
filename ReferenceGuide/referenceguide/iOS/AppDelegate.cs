@@ -36,6 +36,7 @@ namespace referenceguide.iOS
 
 		public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
 		{
+            AppData.Instance.DeviceToken = deviceToken; 
 			if (CrossPushNotification.Current is IPushNotificationHandler)
 			{
 				((IPushNotificationHandler)CrossPushNotification.Current).OnRegisteredSuccess(deviceToken);

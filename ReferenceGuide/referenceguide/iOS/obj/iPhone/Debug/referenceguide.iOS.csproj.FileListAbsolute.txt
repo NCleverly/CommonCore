@@ -251,8 +251,6 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Microsoft.Practices.ServiceLocation.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Microsoft.Practices.Unity.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Remotion.Linq.xml
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Settings.Abstractions.xml
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Settings.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/SQLite-net.dll.mdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/SQLite-net.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Newtonsoft.Json.xml
@@ -271,6 +269,8 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll.mdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/PushNotification.Plugin.pdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/PushNotification.Plugin.dll.mdb
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Settings.Abstractions.xml
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Settings.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/af/Humanizer.resources.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/ar/Humanizer.resources.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/bg/Humanizer.resources.dll

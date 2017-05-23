@@ -14,8 +14,16 @@ namespace Xamarin.Forms.CommonCore
 
        protected override void OnElementChanged(VisualElementChangedEventArgs e)
         {
-            var page = Element as ContentPage;
-            backgroundImage = page.BackgroundImage;
+            try
+            {
+				var page = Element as ContentPage;
+				backgroundImage = page.BackgroundImage;
+            }
+            catch (Exception ex)
+            {
+                //I bet you misplelled or used in proper casing in the name of the background image
+            }
+
 
             base.OnElementChanged(e);
         }
@@ -23,14 +31,22 @@ namespace Xamarin.Forms.CommonCore
 		{
             
 			base.ViewWillAppear(false);
-			if (backgroundImage != null)
-			{
-				UIGraphics.BeginImageContext(this.View.Frame.Size);
-				UIImage i = UIImage.FromFile(backgroundImage);
-				i = i.Scale(this.View.Frame.Size);
+            try
+            {
+				if (backgroundImage != null)
+				{
+					UIGraphics.BeginImageContext(this.View.Frame.Size);
+					UIImage i = UIImage.FromFile(backgroundImage);
+					i = i.Scale(this.View.Frame.Size);
 
-				this.View.BackgroundColor = UIColor.FromPatternImage(i);
+					this.View.BackgroundColor = UIColor.FromPatternImage(i);
+				}
+            }
+            catch (Exception ex)
+            {
+				//I bet you misplelled or used in proper casing in the name of the background image
 			}
+
 
 
 		}

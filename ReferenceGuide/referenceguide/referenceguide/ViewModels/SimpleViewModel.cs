@@ -18,6 +18,7 @@ namespace referenceguide
 	{
 		private string firstName;
 		private string pushButtonLabel;
+      
 		private ObservableCollection<State> states;
 
 		public string FirstName

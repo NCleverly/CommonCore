@@ -105,8 +105,6 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/Microsoft.Practices.ServiceLocation.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/Microsoft.Practices.Unity.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/Remotion.Linq.xml
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/Plugin.Settings.Abstractions.xml
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/Plugin.Settings.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/SQLite-net.dll.mdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/SQLite-net.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/Newtonsoft.Json.xml
@@ -114,7 +112,6 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/FFImageLoading.Transformations.dll.mdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/FFImageLoading.Transformations.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/Plugin.CurrentActivity.xml
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/SkiaSharp.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/FormsViewGroup.pdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/FormsViewGroup.dll.mdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/Xamarin.Forms.Core.pdb
@@ -128,6 +125,11 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/PushNotification.Plugin.Abstractions.pdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/PushNotification.Plugin.Abstractions.dll.mdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/PushNotification.Plugin.pdb
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/Plugin.Settings.Abstractions.xml
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/Plugin.Settings.xml
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/SkiaSharp.xml
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/Xamarin.Auth.pdb
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/Xamarin.Auth.dll.mdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/af/Humanizer.resources.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/ar/Humanizer.resources.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/bin/Debug/bg/Humanizer.resources.dll

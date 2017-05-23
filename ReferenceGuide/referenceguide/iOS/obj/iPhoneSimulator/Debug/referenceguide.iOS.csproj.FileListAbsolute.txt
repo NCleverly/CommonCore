@@ -1,3 +1,4 @@
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/referenceguide.iOS.exe.config
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/referenceguide.iOS.exe
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/referenceguide.iOS.pdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/BTProgressHUD.dll
@@ -67,14 +68,11 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Microsoft.Practices.ServiceLocation.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Microsoft.Practices.Unity.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Remotion.Linq.xml
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Plugin.Settings.Abstractions.xml
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Plugin.Settings.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/SQLite-net.dll.mdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/SQLite-net.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/FFImageLoading.Transformations.pdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/FFImageLoading.Transformations.xml
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/SkiaSharp.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.pdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll.mdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.xml
@@ -87,6 +85,10 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/PushNotification.Plugin.Abstractions.dll.mdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/PushNotification.Plugin.pdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/PushNotification.Plugin.dll.mdb
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Plugin.Settings.Abstractions.xml
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Plugin.Settings.xml
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/SkiaSharp.xml
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/Xamarin.Auth.pdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/af/Humanizer.resources.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/ar/Humanizer.resources.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhoneSimulator/Debug/bg/Humanizer.resources.dll
@@ -177,6 +179,7 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/Default.png
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csprojResolveAssemblyReference.cache
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csproj.referenceguide.iOS.exe.config
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csproj.CoreCompileInputs.cache
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.exe
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.pdb

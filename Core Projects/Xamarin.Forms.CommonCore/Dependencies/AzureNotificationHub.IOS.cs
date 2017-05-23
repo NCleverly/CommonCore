@@ -14,13 +14,12 @@ namespace Xamarin.Forms.CommonCore
 
         public void RegisterNotificationHub(string registrationId)
         {
-            AppData.Instance.NotificationTags.Add("happy");
             if (AzureNotificationHub.HUB == null)
                 AzureNotificationHub.HUB = new SBNotificationHub(AppData.Instance.AzureListenConnection, AppData.Instance.AzureHubName);
 
-			var deviceToken = NSData.FromString($"<{registrationId}>");
+			//var deviceToken = NSData.FromString($"<{registrationId}>");
 
-			AzureNotificationHub.HUB.UnregisterAllAsync(deviceToken, (error) =>
+			AzureNotificationHub.HUB.UnregisterAllAsync(AppData.Instance.DeviceToken, (error) =>
 								{
 									if (error != null)
 									{
@@ -28,7 +27,7 @@ namespace Xamarin.Forms.CommonCore
 										return;
 									}
 									NSSet tags = new NSSet(AppData.Instance.NotificationTags.ToArray());
-									AzureNotificationHub.HUB.RegisterNativeAsync(deviceToken, tags, (errorCallback) =>
+									AzureNotificationHub.HUB.RegisterNativeAsync(AppData.Instance.DeviceToken, tags, (errorCallback) =>
 													{
 														if (errorCallback != null)
 															Console.WriteLine("RegisterNativeAsync error: " + errorCallback.ToString());

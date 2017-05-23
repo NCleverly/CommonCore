@@ -21,11 +21,13 @@ namespace Xamarin.Forms.CommonCore
 {
     public static class CoreExtensions
     {
-        public static void ConsoleWrite(this Exception ex)
+        public static void ConsoleWrite(this Exception ex, bool includeImageMarker = false)
         {
 #if DEBUG
             Console.WriteLine();
             Console.WriteLine();
+            if (includeImageMarker)
+                DrawMonkey();
             Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*- " + ex.GetType().Name + " DEBUG EXCEPTION *-*-*-*-*-*-*-*-*-*-*-*-*-");
             Console.WriteLine(ex.Message);
             Console.WriteLine(ex.InnerException?.InnerException);
@@ -35,6 +37,26 @@ namespace Xamarin.Forms.CommonCore
             Console.WriteLine();
 #endif
         }
+
+        public static void ConsoleWrite(this string str,string title, bool includeImageMarker = false)
+        {
+			if (includeImageMarker)
+				DrawMonkey();
+            Console.WriteLine($"*-*-*-*-*-*-*-*-*-*-*-*- {title} *-*-*-*-*-*-*-*-*-*-*-*-*-");
+            Console.WriteLine(str);
+            Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+        }
+
+        private static void DrawMonkey(){
+            Console.WriteLine("         .-\"-.");
+            Console.WriteLine("       _/.-.-.\\_");
+            Console.WriteLine("      ( ( o o ) )");
+            Console.WriteLine("       |/  \"  \\|");
+            Console.WriteLine("        \\ .-. /");
+            Console.WriteLine("        /`\"\"\"'\\");
+            Console.WriteLine("       /       \\");                         
+        }
+
         /// <summary>
         /// Task extension to add a timeout.
         /// </summary>

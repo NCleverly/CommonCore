@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Net;
+using FFImageLoading.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 
@@ -12,7 +14,7 @@ namespace referenceguide
 		{
 			try
 			{
-				Master = new SlidingPage();
+                Master = new SlidingPage();
 				Detail = new NavigationPage(new LandingPage())
 				{
 					BarBackgroundColor = Color.FromHex("#b85921"),
@@ -27,6 +29,5 @@ namespace referenceguide
 			}
 
 		}
-
 	}
 }

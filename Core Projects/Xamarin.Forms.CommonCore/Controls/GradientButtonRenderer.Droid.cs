@@ -76,6 +76,7 @@ namespace Xamarin.Forms.CommonCore
 		private void SetButtonDisableState()
 		{
 
+         
 			int[][] states = new int[][] {
 				new int[] { Droid.Resource.Attribute.StateEnabled }, // enabled
                 new int[] {-Droid.Resource.Attribute.StateEnabled }, // disabled

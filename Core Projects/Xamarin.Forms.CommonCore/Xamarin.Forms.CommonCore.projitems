@@ -175,6 +175,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\BasePageRenderer.IOS.cs">
       <DependentUpon>BasePages.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\BaseTabbedPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\BaseTabbedPageRenderer.Droid.cs">
+      <DependentUpon>BaseTabbedPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\BaseTabbedPageRenderer.IOS.cs">
+      <DependentUpon>BaseTabbedPage.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -195,6 +202,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Styles\" />
     <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\Base\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Logging\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />

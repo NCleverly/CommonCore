@@ -43,6 +43,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\ControlPages\SearchContentPage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SearchViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\ControlPages\BackgroundImagePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SlidingViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\SlidingPageItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />

@@ -11,6 +11,7 @@ public class AndroidCrashListener
 	public static final String __md_methods;
 	static {
 		__md_methods = 
+			"n_getErrorAttachments:(Lcom/microsoft/azure/mobile/crashes/model/ErrorReport;)Ljava/lang/Iterable;:GetGetErrorAttachments_Lcom_microsoft_azure_mobile_crashes_model_ErrorReport_Handler:Com.Microsoft.Azure.Mobile.Crashes.ICrashesListenerInvoker, Microsoft.Azure.Mobile.Crashes.Android.Bindings\n" +
 			"n_onBeforeSending:(Lcom/microsoft/azure/mobile/crashes/model/ErrorReport;)V:GetOnBeforeSending_Lcom_microsoft_azure_mobile_crashes_model_ErrorReport_Handler:Com.Microsoft.Azure.Mobile.Crashes.ICrashesListenerInvoker, Microsoft.Azure.Mobile.Crashes.Android.Bindings\n" +
 			"n_onSendingFailed:(Lcom/microsoft/azure/mobile/crashes/model/ErrorReport;Ljava/lang/Exception;)V:GetOnSendingFailed_Lcom_microsoft_azure_mobile_crashes_model_ErrorReport_Ljava_lang_Exception_Handler:Com.Microsoft.Azure.Mobile.Crashes.ICrashesListenerInvoker, Microsoft.Azure.Mobile.Crashes.Android.Bindings\n" +
 			"n_onSendingSucceeded:(Lcom/microsoft/azure/mobile/crashes/model/ErrorReport;)V:GetOnSendingSucceeded_Lcom_microsoft_azure_mobile_crashes_model_ErrorReport_Handler:Com.Microsoft.Azure.Mobile.Crashes.ICrashesListenerInvoker, Microsoft.Azure.Mobile.Crashes.Android.Bindings\n" +
@@ -27,6 +28,14 @@ public class AndroidCrashListener
 		if (getClass () == AndroidCrashListener.class)
 			mono.android.TypeManager.Activate ("Microsoft.Azure.Mobile.Crashes.AndroidCrashListener, Microsoft.Azure.Mobile.Crashes, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
+
+
+	public java.lang.Iterable getErrorAttachments (com.microsoft.azure.mobile.crashes.model.ErrorReport p0)
+	{
+		return n_getErrorAttachments (p0);
+	}
+
+	private native java.lang.Iterable n_getErrorAttachments (com.microsoft.azure.mobile.crashes.model.ErrorReport p0);
 
 
 	public void onBeforeSending (com.microsoft.azure.mobile.crashes.model.ErrorReport p0)

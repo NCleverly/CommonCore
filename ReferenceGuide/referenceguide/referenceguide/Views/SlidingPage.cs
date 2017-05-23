@@ -1,21 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using FFImageLoading.Forms;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
-
-	public class MasterPageItem
-	{
-		public string Title { get; set; }
-
-		public string IconSource { get; set; }
-
-		public Type TargetType { get; set; }
-	}
-
 	public class SlidingPageCell : ViewCell
 	{
 		private readonly CachedImage img;
@@ -53,7 +42,7 @@ namespace referenceguide
 		//On a listview that uses RecycleElement binding can be costly
 		protected override void OnBindingContextChanged()
 		{
-			var item = (MasterPageItem)BindingContext;
+			var item = (SlidingPageItem)BindingContext;
 			img.Source = item.IconSource;
 			lbl.Text = item.Title;
 
@@ -61,47 +50,13 @@ namespace referenceguide
 		}
 	}
 
-
-	public class SlidingPage : ContentPage
+	public class SlidingPage : BoundPage<SlidingViewModel>
 	{
-
-		private Dictionary<string, NavigationPage> NavPages { get; set; } = new Dictionary<string, NavigationPage>();
 
 		public SlidingPage()
 		{
 			BackgroundColor = Color.FromHex("#b85921");
-			var masterPageItems = new List<MasterPageItem>();
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Behaviors",
-				IconSource = "index24.png",
-				TargetType = typeof(BehaviorsMain)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Dependencies",
-				IconSource = "index24.png",
-				TargetType = typeof(DependeciesMain)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Effects",
-				IconSource = "index24.png",
-				TargetType = typeof(EffectsMain)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Services",
-				IconSource = "index24.png",
-				TargetType = typeof(ServicesMain)
-			});
-			masterPageItems.Add(new MasterPageItem
-			{
-				Title = "Controls",
-				IconSource = "index24.png",
-				TargetType = typeof(ControlsMain)
-			});
-
+			
 			var monkey = new CachedImage()
 			{
 				Margin = 5,
@@ -131,36 +86,12 @@ namespace referenceguide
 			var listView = new ListControl
 			{
 				BackgroundColor = Color.White,
-				ItemsSource = masterPageItems,
 				ItemTemplate = new DataTemplate(typeof(SlidingPageCell)),
 				VerticalOptions = LayoutOptions.FillAndExpand,
 				SeparatorVisibility = SeparatorVisibility.None,
-				ItemClickCommand = new Command((obj) =>
-				{
-					var item = (MasterPageItem)obj;
-					var page = (MasterDetailPage)Application.Current.MainPage;
-
-					if (!NavPages.ContainsKey(item.TargetType.Name))
-					{
-						var np = new NavigationPage((Page)Activator.CreateInstance(item.TargetType))
-						{
-							BarBackgroundColor = Color.FromHex("#b85921"),
-							BarTextColor = Color.White
-						};
-						NavPages.Add(item.TargetType.Name, np);
-					}
-					page.Detail = NavPages[item.TargetType.Name];
-
-					/* using this implementation increases memory 3x more than the one above */
-					//page.Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType))
-					//{
-					//	BarBackgroundColor = Color.FromHex("#b85921"),
-					//	BarTextColor = Color.White
-					//};
-
-					page.IsPresented = false;
-				})
 			};
+            listView.SetBinding(ListControl.ItemsSourceProperty,"MasterPageItems");
+            listView.SetBinding(ListControl.ItemClickCommandProperty,"NavClicked");
 
 			Padding = new Thickness(0, 40, 0, 0);
 			Icon = "hamburger.png";

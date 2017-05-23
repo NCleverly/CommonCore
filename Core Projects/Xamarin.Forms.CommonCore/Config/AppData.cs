@@ -5,8 +5,12 @@ using Microsoft.Practices.Unity;
 using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;
 using System.Reflection;
+
 #if __ANDROID__
 using Android.Widget;
+#endif
+#if __IOS__
+using Foundation;
 #endif
 
 namespace Xamarin.Forms.CommonCore
@@ -160,7 +164,7 @@ namespace Xamarin.Forms.CommonCore
 #endif
 
 #if __IOS__
-
+        public NSData DeviceToken { get; set; }
 #endif
 
         private void Load()

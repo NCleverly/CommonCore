@@ -38,17 +38,17 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Humanizer.Core.2.2.0/lib/netstandard1.0/Humanizer.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Analytics.0.11.1/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Analytics.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Analytics.0.12.0/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Analytics.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Analytics.0.11.1/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Analytics.iOS.Bindings.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Analytics.0.12.0/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Analytics.iOS.Bindings.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Crashes.0.11.1/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Crashes.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Crashes.0.12.0/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Crashes.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Crashes.0.11.1/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Crashes.iOS.Bindings.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Crashes.0.12.0/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Crashes.iOS.Bindings.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.0.11.1/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.0.12.0/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.0.11.1/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.iOS.Bindings.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.0.12.0/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.iOS.Bindings.dll" \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Microsoft.CSharp.dll \
 	-r \
@@ -76,9 +76,9 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugin.Connectivity.2.3.0/lib/Xamarin.iOS10/Plugin.Connectivity.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.4/lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.8/lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.4/lib/Xamarin.iOS10/Plugin.Settings.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.8/lib/Xamarin.iOS10/Plugin.Settings.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore.ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll" \
 	-r \
@@ -86,7 +86,7 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Remotion.Linq.2.1.1/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/SkiaSharp.1.57.1/lib/XamariniOS/SkiaSharp.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/SkiaSharp.1.58.0/lib/XamariniOS/SkiaSharp.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/sqlite-net-pcl.1.3.1/lib/netstandard1.1/SQLite-net.dll" \
 	-r \
@@ -114,7 +114,7 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/WebP.Touch.1.0.3/lib/Xamarin.iOS10/WebP.Touch.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xamarin.Auth.1.4.1.0/lib/Xamarin.iOS10/Xamarin.Auth.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xamarin.Auth.1.5.0/lib/Xamarin.iOS10/Xamarin.Auth.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xamarin.Azure.NotificationHubs.iOS.1.2.5.2/lib/Xamarin.iOS10/Xamarin.Azure.NotificationHubs.iOS.dll" \
 	-r \
@@ -410,17 +410,17 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Humanizer.Core.2.2.0/lib/netstandard1.0/Humanizer.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Analytics.0.11.1/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Analytics.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Analytics.0.12.0/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Analytics.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Analytics.0.11.1/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Analytics.iOS.Bindings.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Analytics.0.12.0/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Analytics.iOS.Bindings.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Crashes.0.11.1/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Crashes.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Crashes.0.12.0/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Crashes.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Crashes.0.11.1/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Crashes.iOS.Bindings.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.Crashes.0.12.0/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.Crashes.iOS.Bindings.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.0.11.1/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.0.12.0/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.0.11.1/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.iOS.Bindings.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Microsoft.Azure.Mobile.0.12.0/lib/Xamarin.iOS10/Microsoft.Azure.Mobile.iOS.Bindings.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/CommonServiceLocator.1.3/lib/portable-net4+sl5+netcore45+wpa81+wp8/Microsoft.Practices.ServiceLocation.dll" \
 	-r \
@@ -444,9 +444,9 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugin.Connectivity.2.3.0/lib/Xamarin.iOS10/Plugin.Connectivity.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.4/lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.8/lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.4/lib/Xamarin.iOS10/Plugin.Settings.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.8/lib/Xamarin.iOS10/Plugin.Settings.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore.ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll" \
 	-r \
@@ -454,7 +454,7 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Remotion.Linq.2.1.1/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/SkiaSharp.1.57.1/lib/XamariniOS/SkiaSharp.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/SkiaSharp.1.58.0/lib/XamariniOS/SkiaSharp.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/sqlite-net-pcl.1.3.1/lib/netstandard1.1/SQLite-net.dll" \
 	-r \
@@ -470,7 +470,7 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/WebP.Touch.1.0.3/lib/Xamarin.iOS10/WebP.Touch.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xamarin.Auth.1.4.1.0/lib/Xamarin.iOS10/Xamarin.Auth.dll" \
+	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xamarin.Auth.1.5.0/lib/Xamarin.iOS10/Xamarin.Auth.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xamarin.Azure.NotificationHubs.iOS.1.2.5.2/lib/Xamarin.iOS10/Xamarin.Azure.NotificationHubs.iOS.dll" \
 	-r \

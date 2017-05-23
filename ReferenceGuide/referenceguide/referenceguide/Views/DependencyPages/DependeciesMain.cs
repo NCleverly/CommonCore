@@ -61,6 +61,7 @@ namespace referenceguide
 			pnRegister.SetBinding(Button.TextProperty, "PushButtonLabel");
 			pnRegister.SetBinding(Button.CommandProperty, "PushRegister");
 
+
             var stack = new StackLayout()
             {
                 Padding = 20,
