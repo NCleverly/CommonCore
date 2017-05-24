@@ -15,6 +15,7 @@ Required Nuget Installs
  - ModernHttpClient
  - Newtonsoft.Json
  - PCLCrypto
+ - Plugin.Permissions
  - Xam.Plugin.Connectivity
  - Xam.Plugins.Settings
  - Xam.Plugin.PushNotification (Not Required) /*Android may need to be downloaded from github and recompiled to latest SDK */

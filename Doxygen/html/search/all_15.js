@@ -7,5 +7,5 @@ var searchData=
   ['viewshadow',['ViewShadow',['../class_xamarin_1_1_forms_1_1_common_core_1_1_common_effects.html#ae49478a92a0da2014895d8fabfcbcdc4',1,'Xamarin::Forms::CommonCore::CommonEffects']]],
   ['viewshadoweffect',['ViewShadowEffect',['../class_xamarin_1_1_forms_1_1_common_core_1_1_view_shadow_effect.html',1,'Xamarin.Forms.CommonCore.ViewShadowEffect'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_view_shadow_effect.html#a0189cc6764daa7b5ae01b4c5011e697b',1,'Xamarin.Forms.CommonCore.ViewShadowEffect.ViewShadowEffect()']]],
   ['viewwillappear',['ViewWillAppear',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_page_renderer.html#acdd4463aebec2f2e18b33ae8e0741fc2',1,'Xamarin::Forms::CommonCore::BasePageRenderer']]],
-  ['vm',['VM',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_page.html#ac581d4cadab5452016397249d1df7fbb',1,'Xamarin::Forms::CommonCore::BoundPage']]]
+  ['vm',['VM',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_bound_page.html#a7a4bed97ed617a8c66365d6075f13fca',1,'Xamarin.Forms.CommonCore.TelephonyBoundPage.VM()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_page.html#ac581d4cadab5452016397249d1df7fbb',1,'Xamarin.Forms.CommonCore.BoundPage.VM()']]]
 ];

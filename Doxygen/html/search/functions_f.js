@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['telephonyboundpage',['TelephonyBoundPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_bound_page.html#ac8a14cb60137cca5e1fbb0d4238d5c56',1,'Xamarin::Forms::CommonCore::TelephonyBoundPage']]],
   ['timeelapsedevent',['TimeElapsedEvent',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_interval_callback.html#a99e094cea574bd34d22b754062a68b78',1,'Xamarin::Forms::CommonCore::IIntervalCallback']]],
   ['todictionary',['ToDictionary',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a6001ac232ba8cc4a6c81b4ca6afdc406',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['tolist',['ToList',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a1838e20ad80715e4441a8d73785c196f',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],

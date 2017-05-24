@@ -6,6 +6,9 @@ using System.Linq;
 using System.Collections.Generic;
 using Xamarin.Forms.CommonCore;
 using PushNotification.Plugin; //Xam.Plugin.PushNotification from nuget or get from github and compile to latest version
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
+using System;
 
 namespace referenceguide
 {
@@ -18,9 +21,14 @@ namespace referenceguide
 	{
 		private string firstName;
 		private string pushButtonLabel;
-      
+        private long phoneNumber;
 		private ObservableCollection<State> states;
 
+        public long PhoneNumber
+        {
+            get { return phoneNumber; }
+            set { SetProperty(ref phoneNumber, value); }
+        }
 		public string FirstName
 		{
 			get { return firstName; }
@@ -46,7 +54,8 @@ namespace referenceguide
 		public ICommand Blur { get; set; }
 		public ICommand CreateCalendar { get; set; }
 		public ICommand PushRegister { get; set; }
-
+        public ICommand MakeCall { get; set; }
+        public ICommand MakeCallEvent { get; set; }
 
 		public SimpleViewModel()
 		{
@@ -183,6 +192,95 @@ namespace referenceguide
 
 
 			});
+
+            MakeCall = new RelayCommand(async(obj) => {
+				try
+				{
+					var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);
+					if (status != PermissionStatus.Granted)
+					{
+						if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Phone))
+						{
+                            DependencyService.Get<IDialogPrompt>().ShowMessage(new Prompt(){
+                                Title="Permission",
+                                Message="The application needs access to the phone."
+                            });
+						}
+
+						var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { Permission.Phone });
+						status = results[Permission.Location];
+					}
+
+					if (status == PermissionStatus.Granted)
+					{
+						DependencyService.Get<IPhoneCall>().PlaceCall(PhoneNumber.ToString());
+					}
+					else if (status != PermissionStatus.Unknown)
+					{
+						DependencyService.Get<IDialogPrompt>().ShowMessage(new Prompt()
+						{
+							Title = "Issue",
+							Message = "There was a problem accessing the phone."
+						});
+					}
+				}
+				catch (Exception ex)
+				{
+
+					DependencyService.Get<IDialogPrompt>().ShowMessage(new Prompt()
+					{
+						Title = "Error",
+						Message = "The application experience an error accessing the phone."
+					});
+				}
+
+            });
+
+			MakeCallEvent = new RelayCommand(async(obj) =>
+			{
+
+				try
+				{
+					var status = await CrossPermissions.Current.CheckPermissionStatusAsync(Permission.Phone);
+					if (status != PermissionStatus.Granted)
+					{
+						if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(Permission.Phone))
+						{
+							DependencyService.Get<IDialogPrompt>().ShowMessage(new Prompt()
+							{
+								Title = "Permission",
+								Message = "The application needs access to the phone."
+							});
+						}
+
+						var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { Permission.Phone });
+						status = results[Permission.Location];
+					}
+
+					if (status == PermissionStatus.Granted)
+					{
+						DependencyService.Get<IPhoneCall>().PlaceCallWithCallBack(PhoneNumber.ToString(), "PhoneCallBack");
+					}
+					else if (status != PermissionStatus.Unknown)
+					{
+						DependencyService.Get<IDialogPrompt>().ShowMessage(new Prompt()
+						{
+							Title = "Issue",
+							Message = "There was a problem accessing the phone."
+						});
+					}
+				}
+				catch (Exception ex)
+				{
+
+					DependencyService.Get<IDialogPrompt>().ShowMessage(new Prompt()
+					{
+						Title = "Error",
+						Message = "The application experience an error accessing the phone."
+					});
+				}
+
+			});
 		}
 
 		public void DisplayNotification(LocalNotification note)
@@ -192,6 +290,20 @@ namespace referenceguide
 				this.ShowNotification(note);
 			});
 		}
+
+        public override void OnViewMessageReceived(string key, object obj)
+        {
+            if(key=="PhoneCallBack"){
+				Device.BeginInvokeOnMainThread(() =>
+				{
+					DependencyService.Get<IDialogPrompt>().ShowMessage(new Prompt()
+					{
+						Title = "Completed",
+						Message = "Phone call action has been complete and action logged"
+					});
+				});
+            }
+        }
 	}
 }
 

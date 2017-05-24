@@ -5,7 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(TelephonyPage), typeof(TelephonyPageRenderer))]
+[assembly: ExportRenderer(typeof(TelephonyBoundPage<ObservableViewModel>), typeof(TelephonyPageRenderer))]
 namespace Xamarin.Forms.CommonCore
 {
     public class TelephoneManager

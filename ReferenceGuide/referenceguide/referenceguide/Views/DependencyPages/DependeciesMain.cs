@@ -45,6 +45,16 @@ namespace referenceguide
             };
             blur.SetBinding(Button.CommandProperty, "Blur");
 
+			var makeCall = new GradientButton()
+			{
+				Style = AppStyles.LightOrange,
+				Text = "Telephony Implementation",
+				AutomationId = "makeCall",
+                Command = new Command(async(obj) => {
+                    await AppData.Instance.AppNav.PushAsync(new PhonePage());
+                })
+			};
+
             var cal = new GradientButton()
             {
                 Style = AppStyles.LightOrange,
@@ -66,7 +76,7 @@ namespace referenceguide
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { dlg, not, overlay, blur, cal, pnRegister }
+                Children = { dlg, not, overlay, blur, makeCall, cal, pnRegister }
             };
 
             Content = new ScrollView()

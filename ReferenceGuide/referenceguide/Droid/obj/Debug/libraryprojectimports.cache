@@ -16,6 +16,7 @@
     <ResolvedResourceDirectory>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/PCLCrypto/library_project_imports/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/Plugin.Connectivity/library_project_imports/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/Plugin.CurrentActivity/library_project_imports/res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/Plugin.Permissions/library_project_imports/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/Plugin.Settings/library_project_imports/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/PushNotification.Plugin/library_project_imports/res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/Refractored.FloatingActionButton/library_project_imports/res</ResolvedResourceDirectory>
@@ -53,6 +54,7 @@
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/PCLCrypto/library_project_imports/assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.Connectivity/library_project_imports/assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.CurrentActivity/library_project_imports/assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.Permissions/library_project_imports/assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/Plugin.Settings/library_project_imports/assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/PushNotification.Plugin/library_project_imports/assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj/Debug/__library_projects__/Refractored.FloatingActionButton/library_project_imports/assets</ResolvedAssetDirectory>
@@ -83,6 +85,7 @@
     <ResolvedResourceDirectoryStamp>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/PCLCrypto.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/Plugin.Connectivity.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/Plugin.CurrentActivity.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/Plugin.Permissions.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/Plugin.Settings.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/PushNotification.Plugin.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/__library_projects__/Refractored.FloatingActionButton.stamp</ResolvedResourceDirectoryStamp>

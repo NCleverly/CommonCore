@@ -186,6 +186,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\TelephonyPageRenderer.IOS.cs">
       <DependentUpon>TelephonyPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\TelephonyPageRenderer.Droid.cs">
+      <DependentUpon>TelephonyPage.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

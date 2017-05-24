@@ -45,6 +45,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\ControlPages\BackgroundImagePage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SlidingViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SlidingPageItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\DependencyPages\PhonePage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />

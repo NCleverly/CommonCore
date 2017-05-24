@@ -127,6 +127,8 @@ class MonoPackageManager_Resources {
 		"Plugin.Connectivity.Abstractions.dll",
 		"Plugin.Connectivity.dll",
 		"Plugin.CurrentActivity.dll",
+		"Plugin.Permissions.Abstractions.dll",
+		"Plugin.Permissions.dll",
 		"Plugin.Settings.Abstractions.dll",
 		"Plugin.Settings.dll",
 		"PushNotification.Plugin.Abstractions.dll",

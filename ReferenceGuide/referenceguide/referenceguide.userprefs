@@ -1,23 +1,33 @@
-﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
+﻿<Properties StartupConfiguration="{3676A936-1B3D-4D32-ADD9-7E9862FDB694}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/TelephonyPageRenderer.IOS.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs">
     <Files>
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/PhoneCall.IOS.cs" Line="40" Column="56" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BasePageRenderer.IOS.cs" Line="5" Column="32" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BaseTabbedPageRenderer.IOS.cs" Line="30" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/PhoneCall.Droid.cs" Line="60" Column="10" />
+      <File FileName="referenceguide/Views/DependencyPages/PhonePage.cs" Line="45" Column="74" />
+      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="260" Column="1" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/TelephonyPageRenderer.IOS.cs" Line="8" Column="1" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/TelephonyPage.cs" Line="4" Column="36" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/BoundPage.cs" Line="8" Column="3" />
       <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BasePages.cs" Line="6" Column="27" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/TelephonyPage.cs" Line="9" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/IPhoneCall.cs" Line="20" Column="37" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/TelephonyPageRenderer.IOS.cs" Line="21" Column="37" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BaseTabbedPageRenderer.Droid.cs" Line="13" Column="1" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BaseTabbedPage.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Views/DependencyPages/DependeciesMain.cs" Line="7" Column="50" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/PhoneCall.Droid.cs" Line="44" Column="30" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BaseTabbedPageRenderer.Droid.cs" Line="1" Column="1" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/TelephonyPageRenderer.Droid.cs" Line="16" Column="1" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/ReadMe.txt" Line="18" Column="22" />
+      <File FileName="packages/Plugin.Permissions.1.2.1/readme.txt" Line="23" Column="1" />
+      <File FileName="Droid/packages.config" Line="1" Column="1" />
+      <File FileName="Droid/MainActivity.cs" Line="26" Column="13" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/PhoneCall.IOS.cs" Line="40" Column="56" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/MainActivity.cs" relfile="Droid/MainActivity.cs" line="35" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
