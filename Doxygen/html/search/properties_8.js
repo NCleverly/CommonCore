@@ -8,7 +8,6 @@ var searchData=
   ['ioshttphandler',['IOSHttpHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a52ee55abc1a84e5646e2b9f4c188c517',1,'Xamarin.Forms.CommonCore.AppData.IOSHttpHandler()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_settings.html#a6340c2449d2f7665eda1cccc2f335c0d',1,'Xamarin.Forms.CommonCore.HttpSettings.IOSHttpHandler()']]],
   ['isclippedtobounds',['IsClippedToBounds',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#af86a3cce62961d6fab9b6bae5981b5c1',1,'Xamarin::Forms::CommonCore::PopupView']]],
   ['isconnected',['IsConnected',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a8f4a02e5adb7933c8c62009705a57a31',1,'Xamarin::Forms::CommonCore::AppData']]],
-  ['islistening',['IsListening',['../class_xamarin_1_1_forms_1_1_common_core_1_1_phone_callback.html#a1948c27b41b5d18048a6e46c9ee9237c',1,'Xamarin::Forms::CommonCore::PhoneCallback']]],
   ['isloadinghud',['IsLoadingHUD',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a8aa219e9ba54e6423852a31ebc246865',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['isloadingoverlay',['IsLoadingOverlay',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aec303684e2020b23f826d98b56f48feb',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['isstarred',['IsStarred',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#adc54e50703e19df329ba22c59c390354',1,'Xamarin::Forms::CommonCore::StarBehavior']]],

@@ -18,12 +18,8 @@ namespace Xamarin.Forms.CommonCore
             tabbedPage = (BaseTabbedPage)Element;
             TabBar.BackgroundImage = new UIImage();
             TabBar.BackgroundColor = tabbedPage.TabBackgroundColor.ToUIColor();
-            TabBar.TintColor = tabbedPage.TabForegroundColor.ToUIColor();
-            TabBar.SelectedImageTintColor = tabbedPage.SelectedTabForegroundColor.ToUIColor();
-
-		
-            TabBar.BarTintColor = tabbedPage.TabForegroundColor.ToUIColor();
- 
+            TabBar.SelectedImageTintColor = tabbedPage.SelectedForegroundColor.ToUIColor();
+            TabBar.UnselectedItemTintColor =tabbedPage.UnSelectedForegroundColor.ToUIColor();
         }
     }
 }

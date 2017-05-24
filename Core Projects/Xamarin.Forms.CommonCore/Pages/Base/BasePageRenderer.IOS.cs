@@ -10,7 +10,7 @@ namespace Xamarin.Forms.CommonCore
 {
     public class BasePageRenderer : PageRenderer
     {
-        private string backgroundImage;
+       private string backgroundImage;
 
        protected override void OnElementChanged(VisualElementChangedEventArgs e)
         {
@@ -46,8 +46,6 @@ namespace Xamarin.Forms.CommonCore
             {
 				//I bet you misplelled or used in proper casing in the name of the background image
 			}
-
-
 
 		}
     }

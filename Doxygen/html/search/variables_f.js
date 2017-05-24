@@ -3,6 +3,7 @@ var searchData=
   ['scrollindexproperty',['ScrollIndexProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#ae89b5ef09c326621e87bfad0d4fffcbd',1,'Xamarin::Forms::CommonCore::ListControl']]],
   ['segmentbuttons',['segmentButtons',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#ad44b607223ff25e5de2dd096e99748e0',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['selectedbackgroundproperty',['SelectedBackgroundProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a5f48cc8edda3103ce9fc94dd5879bba4',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
+  ['selectedforegroundcolorproperty',['SelectedForegroundColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_tabbed_page.html#afa99026e9512e6eabb03d5f6af7f0c6e',1,'Xamarin::Forms::CommonCore::BaseTabbedPage']]],
   ['selecteditemproperty',['SelectedItemProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#aa355c228212fa7f0141c440305488465',1,'Xamarin::Forms::CommonCore::BindablePicker']]],
   ['selectedrankproperty',['SelectedRankProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#a4832dfcec235db683888408d78592cd2',1,'Xamarin::Forms::CommonCore::RankingControl']]],
   ['selectedtextcolorproperty',['SelectedTextColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a7f5ddbf8db4418ee0509688ed2cb8eab',1,'Xamarin::Forms::CommonCore::SegmentControl']]],

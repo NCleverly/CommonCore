@@ -77,12 +77,13 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a8134c61f1b8cff100f79f50d526e07f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_phone_call.html#a8134c61f1b8cff100f79f50d526e07f8">PlaceCall</a> (string phoneNumber)</td></tr>
 <tr class="separator:a8134c61f1b8cff100f79f50d526e07f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcd8e7e645e007a7f2d768bf43081e36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_phone_call.html#afcd8e7e645e007a7f2d768bf43081e36">PlaceCallWithCallBack</a> (string phoneNumber)</td></tr>
-<tr class="separator:afcd8e7e645e007a7f2d768bf43081e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96dfbd06a1bad42fc70fb6384c8c5b36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_phone_call.html#a96dfbd06a1bad42fc70fb6384c8c5b36">PlaceCallWithCallBack</a> (string phoneNumber, string key)</td></tr>
+<tr class="memdesc:a96dfbd06a1bad42fc70fb6384c8c5b36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Places the call with call back to view model (see SendViewModelMessage)/&gt; . Returns back json object of status of completion of call. This requires the page to inherit from <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_page.html">TelephonyPage</a>  <a href="#a96dfbd06a1bad42fc70fb6384c8c5b36">More...</a><br /></td></tr>
+<tr class="separator:a96dfbd06a1bad42fc70fb6384c8c5b36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_i_phone_call_8cs_source.html#l00016">16</a> of file <a class="el" href="_i_phone_call_8cs_source.html">IPhoneCall.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_phone_call_8cs_source.html#l00011">11</a> of file <a class="el" href="_i_phone_call_8cs_source.html">IPhoneCall.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8134c61f1b8cff100f79f50d526e07f8"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8134c61f1b8cff100f79f50d526e07f8">&#9670;&nbsp;</a></span>PlaceCall()</h2>
@@ -102,8 +103,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afcd8e7e645e007a7f2d768bf43081e36"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcd8e7e645e007a7f2d768bf43081e36">&#9670;&nbsp;</a></span>PlaceCallWithCallBack()</h2>
+<a id="a96dfbd06a1bad42fc70fb6384c8c5b36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96dfbd06a1bad42fc70fb6384c8c5b36">&#9670;&nbsp;</a></span>PlaceCallWithCallBack()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -112,11 +113,30 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void Xamarin.Forms.CommonCore.IPhoneCall.PlaceCallWithCallBack </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>phoneNumber</em></td><td>)</td>
+          <td class="paramname"><em>phoneNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Places the call with call back to view model (see SendViewModelMessage)/&gt; . Returns back json object of status of completion of call. This requires the page to inherit from <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_page.html">TelephonyPage</a> </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">phoneNumber</td><td>Phone number.</td></tr>
+    <tr><td class="paramname">key</td><td>Key.</td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

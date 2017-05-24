@@ -15,10 +15,10 @@ namespace Xamarin.Forms.CommonCore
 {
     public class BaseTabbedPageRenderer :TabbedPageRenderer
     {
-		bool setup;
-		ViewPager pager;
-		TabLayout layout;
-        BaseTabbedPage tabbedPage;
+		private bool setup;
+		private ViewPager pager;
+		private TabLayout layout;
+        private BaseTabbedPage tabbedPage;
 
 		protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
 		{
@@ -35,6 +35,12 @@ namespace Xamarin.Forms.CommonCore
 				setup = true;
 
 				ColorStateList colors = CreateColorState();
+
+                layout.SetTabTextColors(tabbedPage.UnSelectedForegroundColor.ToAndroid(), tabbedPage.SelectedForegroundColor.ToAndroid());
+
+                if (tabbedPage.TabBackgroundColor != Color.Default)
+                    layout.SetBackgroundColor(tabbedPage.TabBackgroundColor.ToAndroid());
+           
 
 				for (int i = 0; i < layout.TabCount; i++)
 				{
@@ -57,8 +63,8 @@ namespace Xamarin.Forms.CommonCore
 			};
 			int[] colors = new int[] {
                
-				tabbedPage.SelectedTabForegroundColor.ToAndroid(),
-				tabbedPage.TabForegroundColor.ToAndroid()
+				tabbedPage.SelectedForegroundColor.ToAndroid(),
+				tabbedPage.UnSelectedForegroundColor.ToAndroid()
 			};
 			return new ColorStateList(states, colors);
 		}

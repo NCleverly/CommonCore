@@ -15,7 +15,7 @@ namespace Xamarin.Forms.CommonCore
     {
         private TelephonyManager telephonyManager;
         private PhoneCallListener phoneListener;
-
+        private string callBackKey;
         public void PlaceCall(string phoneNumber)
         {
             try
@@ -34,10 +34,11 @@ namespace Xamarin.Forms.CommonCore
 
         }
 
-        public void PlaceCallWithCallBack(string phoneNumber)
+        public void PlaceCallWithCallBack(string phoneNumber, string callBackKey)
         {
             try
             {
+                this.callBackKey = callBackKey;
                 var ctx = Xamarin.Forms.Forms.Context;
                 phoneListener = new PhoneCallListener();
                 telephonyManager = (TelephonyManager)ctx.GetSystemService(Context.TelephonyService);
@@ -61,7 +62,8 @@ namespace Xamarin.Forms.CommonCore
                 phoneListener.CallEndedEvent -= PhoneCallEnded;
             telephonyManager.Listen(phoneListener, PhoneStateListenerFlags.None);
             phoneListener = null;
-            PhoneCallback.Instance.Complete(true);
+            InjectionManager.SendViewModelMessage(callBackKey,true);
+            //PhoneCallback.Instance.Complete(true);
         }
     }
 

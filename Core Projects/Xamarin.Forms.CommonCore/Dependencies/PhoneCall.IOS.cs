@@ -10,8 +10,9 @@ namespace Xamarin.Forms.CommonCore
 {
     public class PhoneCall : IPhoneCall
     {
-        private CTCallCenter callCenter;
-        private bool callCenterIsListening;
+        //private CTCallCenter callCenter;
+        //private bool callCenterIsListening;
+        //private string callBackKey;
 
         public void PlaceCall(string phoneNumber)
         {
@@ -34,13 +35,14 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
-        public void PlaceCallWithCallBack(string phoneNumber)
+        public void PlaceCallWithCallBack(string phoneNumber, string callBackKey)
         {
+            TelephoneManager.CallBackKey = callBackKey;
             var currentNumber = CoreExtensions.CleanPhoneNumber(phoneNumber);
 
             if (UIApplication.SharedApplication.CanOpenUrl(new NSUrl("telprompt://" + currentNumber)))
             {
-                PhoneCallback.Instance.IsListening = true;
+                TelephoneManager.IsListening = true;
                 try
                 {
                     UIApplication.SharedApplication.OpenUrl(new NSUrl("telprompt://" + currentNumber));

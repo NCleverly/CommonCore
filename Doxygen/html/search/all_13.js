@@ -1,9 +1,15 @@
 var searchData=
 [
+  ['tabbackgroundcolor',['TabBackgroundColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_tabbed_page.html#aa24d486ee6585b1b21eec829a05f5731',1,'Xamarin::Forms::CommonCore::BaseTabbedPage']]],
+  ['tabbackgroundcolorproperty',['TabBackgroundColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_tabbed_page.html#add45067986af076adaf14e7bb0e95e7b',1,'Xamarin::Forms::CommonCore::BaseTabbedPage']]],
   ['tablename',['TableName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_table_name.html',1,'Xamarin.Forms.CommonCore.TableName'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_table_name.html#abcccf6101f8df4b2b60a09e989921fdf',1,'Xamarin.Forms.CommonCore.TableName.tableName()']]],
   ['tablenames',['TableNames',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html#a5bd2b3f5b40e84e396043ed45f08d425',1,'Xamarin::Forms::CommonCore::SqliteSettings']]],
   ['taprecognizer',['tapRecognizer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#ae606ea25620202fc6d61b38ebd1fda6f',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
-  ['textarea',['TextArea',['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html',1,'Xamarin.Forms.CommonCore.TextArea'],['../class_common_1_1_core_1_1_text_area.html',1,'Common.Core.TextArea']]],
+  ['telephonycompletestatus',['TelephonyCompleteStatus',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_complete_status.html',1,'Xamarin::Forms::CommonCore']]],
+  ['telephonypage',['TelephonyPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_page.html',1,'Xamarin::Forms::CommonCore']]],
+  ['telephonypage_2ecs',['TelephonyPage.cs',['../_telephony_page_8cs.html',1,'']]],
+  ['telephonypagerenderer_2eios_2ecs',['TelephonyPageRenderer.IOS.cs',['../_telephony_page_renderer_8_i_o_s_8cs.html',1,'']]],
+  ['textarea',['TextArea',['../class_common_1_1_core_1_1_text_area.html',1,'Common.Core.TextArea'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html',1,'Xamarin.Forms.CommonCore.TextArea']]],
   ['textarea_2ecs',['TextArea.cs',['../_text_area_8cs.html',1,'']]],
   ['textarearenderer_2ecs',['TextAreaRenderer.cs',['../_text_area_renderer_8cs.html',1,'']]],
   ['textarearenderer_2edroid_2ecs',['TextAreaRenderer.Droid.cs',['../_text_area_renderer_8_droid_8cs.html',1,'']]],

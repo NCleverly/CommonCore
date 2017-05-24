@@ -3,6 +3,8 @@ var searchData=
   ['unhookevents',['UnhookEvents',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a6eb4c66075bf4f582d9aac2fb5d7dfe7',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
   ['unselectedbackground',['UnselectedBackground',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a70590438cad3287c4e6bbe485a2a5747',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['unselectedbackgroundproperty',['UnselectedBackgroundProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#af80c6a37c1c8d93c39ec7fc84b3c06cb',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
+  ['unselectedforegroundcolor',['UnSelectedForegroundColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_tabbed_page.html#ab31bbe27edb7c7d79f9cdfd6eaee7ead',1,'Xamarin::Forms::CommonCore::BaseTabbedPage']]],
+  ['unselectedforegroundcolorproperty',['UnSelectedForegroundColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_tabbed_page.html#a67772db23bae5fc3914985cc45080130',1,'Xamarin::Forms::CommonCore::BaseTabbedPage']]],
   ['unselectedtextcolor',['UnselectedTextColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a2d85390576fb675011a8a9d1743e00f9',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['unselectedtextcolorproperty',['UnselectedTextColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a47a1b80bd9feec90fb65ad02be175cc0',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['url',['url',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_api.html#a49920b882f83bef219f908b7b1cfe900',1,'Xamarin::Forms::CommonCore::WebApi']]],

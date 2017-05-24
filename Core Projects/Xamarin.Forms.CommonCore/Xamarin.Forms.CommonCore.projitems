@@ -182,6 +182,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\BaseTabbedPageRenderer.IOS.cs">
       <DependentUpon>BaseTabbedPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\TelephonyPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\TelephonyPageRenderer.IOS.cs">
+      <DependentUpon>TelephonyPage.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

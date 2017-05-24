@@ -3,53 +3,40 @@ namespace Xamarin.Forms.CommonCore
 {
     public class BaseTabbedPage : TabbedPage
     {
-		//public static readonly BindableProperty SelectedTabBackgroundColorProperty =
-	 //       BindableProperty.Create("SelectedTabBackgroundColor",
-		//					typeof(Color),
-		//					typeof(BindablePicker),
-		//					Color.White);
-        
-		//public Color SelectedTabBackgroundColor
-		//{
-		//	get { return (Color)this.GetValue(SelectedTabBackgroundColorProperty); }
-		//	set { this.SetValue(SelectedTabBackgroundColorProperty, value); }
-		//}
-
-
-		public static readonly BindableProperty SelectedTabForegroundColorProperty =
-			BindableProperty.Create("SelectedTabForegroundColor",
+		public static readonly BindableProperty SelectedForegroundColorProperty =
+			BindableProperty.Create("SelectedForegroundColor",
 							typeof(Color),
-							typeof(BindablePicker),
+							typeof(BaseTabbedPage),
 							Color.Black);
 
-		public Color SelectedTabForegroundColor
+		public Color SelectedForegroundColor
 		{
-			get { return (Color)this.GetValue(SelectedTabForegroundColorProperty); }
-			set { this.SetValue(SelectedTabForegroundColorProperty, value); }
+			get { return (Color)this.GetValue(SelectedForegroundColorProperty); }
+			set { this.SetValue(SelectedForegroundColorProperty, value); }
 		}
 
+		public static readonly BindableProperty UnSelectedForegroundColorProperty =
+			BindableProperty.Create("UnSelectedForegroundColor",
+							typeof(Color),
+							typeof(BaseTabbedPage),
+							Color.Black);
+
+		public Color UnSelectedForegroundColor
+		{
+			get { return (Color)this.GetValue(UnSelectedForegroundColorProperty); }
+			set { this.SetValue(UnSelectedForegroundColorProperty, value); }
+		}
 
 		public static readonly BindableProperty TabBackgroundColorProperty =
 			BindableProperty.Create("TabBackgroundColor",
 							typeof(Color),
-							typeof(BindablePicker),
-							Color.White);
+							typeof(BaseTabbedPage),
+					        Color.Default);
+        
 		public Color TabBackgroundColor
 		{
 			get { return (Color)this.GetValue(TabBackgroundColorProperty); }
 			set { this.SetValue(TabBackgroundColorProperty, value); }
-		}
-
-		public static readonly BindableProperty TabForegroundColorProperty =
-			BindableProperty.Create("TabForegroundColor",
-							typeof(Color),
-							typeof(BindablePicker),
-							Color.Black);
-
-		public Color TabForegroundColor
-		{
-			get { return (Color)this.GetValue(TabForegroundColorProperty); }
-			set { this.SetValue(TabForegroundColorProperty, value); }
 		}
     }
 }
