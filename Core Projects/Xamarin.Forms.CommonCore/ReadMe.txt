@@ -28,6 +28,7 @@ Required Nuget Installs
             -> TTGSnackbar
             -> Refractored.FloatingActionButton
             -> Xamarin.Azure.NotificationHubs.Android
+            -> Xamarin.GooglePlayServices.Gcm
 
 Suggested
 - Humanizer /* Displaying strings, enums, dates, times, timespans */
