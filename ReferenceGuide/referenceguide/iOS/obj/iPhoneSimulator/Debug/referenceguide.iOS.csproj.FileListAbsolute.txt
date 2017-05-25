@@ -177,6 +177,7 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/sharedcode.png
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/Default.png
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/device-builds/iphone9.1-10.3/optimized/
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csprojResolveAssemblyReference.cache
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csproj.referenceguide.iOS.exe.config
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.csproj.CoreCompileInputs.cache
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhoneSimulator/Debug/referenceguide.iOS.exe

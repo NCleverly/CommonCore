@@ -2,21 +2,14 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../Core Projects/Xamarin.Forms.CommonCore/ReadMe.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Core Projects/Xamarin.Forms.CommonCore.PushNotifications/readme.txt">
     <Files>
       <File FileName="referenceguide/PushNotifications/CrossPushNotificationListener.cs" Line="18" Column="1" />
       <File FileName="iOS/AppDelegate.cs" Line="57" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore.PushNotifications/readme.txt" Line="16" Column="1" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore.PushNotifications/readme.txt" Line="5" Column="1" />
       <File FileName="../../Core Projects/Xamarin.Forms.CommonCore.PushNotifications/CrossPushNotification.cs" Line="19" Column="1" />
       <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/ReadMe.txt" Line="18" Column="21" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="referenceguide" expanded="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
@@ -30,7 +23,10 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore.PushNotifications HideGettingStarted="True" />
   <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
   <MonoDevelop.Ide.ItemProperties.referenceguide HideGettingStarted="True" />
+  <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore.MaterialDesign HideGettingStarted="True" />
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Xamarin.Forms.CommonCore HideGettingStarted="True" />
 </Properties>
