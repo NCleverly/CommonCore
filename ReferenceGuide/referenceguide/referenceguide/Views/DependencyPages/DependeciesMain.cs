@@ -55,6 +55,14 @@ namespace referenceguide
                 })
 			};
 
+			var snack = new GradientButton()
+			{
+				Style = AppStyles.LightOrange,
+				Text = "SnackBar",
+				AutomationId = "snack"
+			};
+			snack.SetBinding(Button.CommandProperty, "ShowSnack");
+
             var cal = new GradientButton()
             {
                 Style = AppStyles.LightOrange,
@@ -76,7 +84,7 @@ namespace referenceguide
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { dlg, not, overlay, blur, makeCall, cal, pnRegister }
+                Children = { dlg, not, overlay, blur, makeCall, snack, cal, pnRegister }
             };
 
             Content = new ScrollView()

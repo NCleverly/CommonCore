@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['physicaldevice',['PhysicalDevice',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aca74fda8bdb0d058a9987c8bfaac070ba824a3cc08b09357f5ab207dd2e7e6376',1,'Xamarin::Forms::CommonCore']]]
+  ['normal',['Normal',['../namespace_xamarin_1_1_forms_1_1_common_core_1_1_material_design.html#a84f0950ee1269c9faac3dca329e5f719a960b44c579bc2f6818d2daaf9e4c16f0',1,'Xamarin::Forms::CommonCore::MaterialDesign']]]
 ];

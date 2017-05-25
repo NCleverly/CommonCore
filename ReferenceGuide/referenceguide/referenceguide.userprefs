@@ -1,26 +1,16 @@
-﻿<Properties StartupConfiguration="{3676A936-1B3D-4D32-ADD9-7E9862FDB694}|Default">
+﻿<Properties StartupConfiguration="{000181F3-F36A-432D-A15D-96DA4B2B69DB}|Default">
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="referenceguide/Views/DependencyPages/PhonePage.cs">
     <Files>
-      <File FileName="referenceguide/Views/DependencyPages/PhonePage.cs" Line="45" Column="74" />
-      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="260" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/TelephonyPageRenderer.IOS.cs" Line="8" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/TelephonyPage.cs" Line="4" Column="36" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/BoundPage.cs" Line="8" Column="3" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BasePages.cs" Line="6" Column="27" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BaseTabbedPage.cs" Line="1" Column="1" />
-      <File FileName="referenceguide/Views/DependencyPages/DependeciesMain.cs" Line="7" Column="50" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/PhoneCall.Droid.cs" Line="44" Column="30" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/BaseTabbedPageRenderer.Droid.cs" Line="1" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Pages/Base/TelephonyPageRenderer.Droid.cs" Line="16" Column="1" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/ReadMe.txt" Line="18" Column="22" />
-      <File FileName="packages/Plugin.Permissions.1.2.1/readme.txt" Line="23" Column="1" />
-      <File FileName="Droid/packages.config" Line="1" Column="1" />
-      <File FileName="Droid/MainActivity.cs" Line="26" Column="13" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/PhoneCall.IOS.cs" Line="40" Column="56" />
-      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/CalendarEvent.IOS.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/ViewModels/SimpleViewModel.cs" Line="194" Column="17" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/SnackBar.Droid.cs" Line="21" Column="10" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/ISnackBar.cs" Line="31" Column="22" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Dependencies/SnackBar.IOS.cs" Line="45" Column="9" />
+      <File FileName="iOS/Main.cs" Line="1" Column="1" />
+      <File FileName="referenceguide/Styles/AppStyles.cs" Line="23" Column="93" />
+      <File FileName="referenceguide/Views/DependencyPages/PhonePage.cs" Line="17" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
@@ -31,7 +21,7 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.referenceguide.web PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.referenceguide.Droid AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.192.168.57.101:5555" />
   <MonoDevelop.Ide.ItemProperties.referenceguide HideGettingStarted="True" />
   <MultiItemStartupConfigurations />
 </Properties>

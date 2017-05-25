@@ -22,6 +22,7 @@ namespace referenceguide
 			{
 				Margin = new Thickness(5, 1, 5, 1),
                 Keyboard = Keyboard.Telephone,
+                Placeholder="(XXX) XXX-XXXX",
 				AutomationId = "phoneNum"
 			};
             phoneNum.SetBinding(Entry.TextProperty, "PhoneNumber");

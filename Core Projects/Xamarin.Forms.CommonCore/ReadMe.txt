@@ -26,6 +26,7 @@ Required Nuget Installs
     - iOS   -> BTProgressHud
          	-> Xamarin.Azure.NotificationHubs.iOS
     - Droid -> AndHud
+            -> TTGSnackbar
             -> Refractored.FloatingActionButton
             -> Xamarin.Azure.NotificationHubs.Android
 
@@ -39,7 +40,6 @@ Suggested
 - Xam.Plugins.Forms.ImageCircle
 - Xamarin.Forms.CarouselView
 - AIDatePickerController /* IOS DateTime Picker */
-- TTGSnackbar /* IOS SnackBar */
 
 Setup Tasks:
 

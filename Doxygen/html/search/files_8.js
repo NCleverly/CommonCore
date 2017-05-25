@@ -16,5 +16,6 @@ var searchData=
   ['iphonecall_2ecs',['IPhoneCall.cs',['../_i_phone_call_8cs.html',1,'']]],
   ['iprogressindicator_2ecs',['IProgressIndicator.cs',['../_i_progress_indicator_8cs.html',1,'']]],
   ['isearchprovider_2ecs',['ISearchProvider.cs',['../_i_search_provider_8cs.html',1,'']]],
+  ['isnackbar_2ecs',['ISnackBar.cs',['../_i_snack_bar_8cs.html',1,'']]],
   ['isqlitedb_2ecs',['ISqliteDb.cs',['../_i_sqlite_db_8cs.html',1,'']]]
 ];

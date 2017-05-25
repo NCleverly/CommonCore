@@ -13,7 +13,7 @@ var searchData=
   ['clickevent',['ClickEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a1798c153bf6be472670864d4c056241b',1,'Xamarin::Forms::CommonCore::GradientButton']]],
   ['client',['Client',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a026c3633f27d99034d204531cf661ec0',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
   ['clone',['Clone',['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#a2c068505b94be3c519add6e3ff579f0b',1,'Xamarin::Forms::CommonCore::DataModel']]],
-  ['close',['Close',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#a06697c64f60722ecd75e093b4be14608',1,'Xamarin::Forms::CommonCore::PopupView']]],
+  ['close',['Close',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_snack_bar.html#a1b2db2b65a5cd30d0de73101599903f6',1,'Xamarin.Forms.CommonCore.ISnackBar.Close()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#a06697c64f60722ecd75e093b4be14608',1,'Xamarin.Forms.CommonCore.PopupView.Close()']]],
   ['closepopup',['ClosePopup',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a30a08379af5159578c62397fb8d5ac4b',1,'Xamarin::Forms::CommonCore::AbsoluteLayoutPage']]],
   ['colornormal',['ColorNormal',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#aba65659206c347520e3fe72800fa7365',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['colornormalproperty',['ColorNormalProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#a42343716cf0837b1d6ca4158caf3f279',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],

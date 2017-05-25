@@ -189,6 +189,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Pages\Base\TelephonyPageRenderer.Droid.cs">
       <DependentUpon>TelephonyPage.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ISnackBar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\SnackBar.Droid.cs">
+      <DependentUpon>ISnackBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\SnackBar.IOS.cs">
+      <DependentUpon>ISnackBar.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

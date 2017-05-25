@@ -27,5 +27,6 @@ var searchData=
   ['downloadcomplete',['DownloadComplete',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#af139a5b57e73bdf8c95f7853e889bfac',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
   ['downloadurl',['DownloadUrl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a75afb20ef61b9d740918aacd0f5b6f7c',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
   ['downprogresschanged',['DownprogressChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#afbe698750f692120be05500eadbbeb64',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
-  ['drawmonkey',['DrawMonkey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a422700bd12d967568eed229d5767c108',1,'Xamarin::Forms::CommonCore::CoreExtensions']]]
+  ['drawmonkey',['DrawMonkey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a422700bd12d967568eed229d5767c108',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
+  ['duration',['Duration',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#a362e3ec57ba54e4a4046450b448d4461',1,'Xamarin::Forms::CommonCore::Snack']]]
 ];

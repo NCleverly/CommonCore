@@ -56,6 +56,7 @@ namespace referenceguide
 		public ICommand PushRegister { get; set; }
         public ICommand MakeCall { get; set; }
         public ICommand MakeCallEvent { get; set; }
+        public ICommand ShowSnack { get; set; }
 
 		public SimpleViewModel()
 		{
@@ -192,6 +193,22 @@ namespace referenceguide
 
 
 			});
+
+            ShowSnack = new RelayCommand((obj) => {
+
+                DependencyService.Get<ISnackBar>().Show(new Snack()
+                {
+                    Duration = 10000,
+                    Background = Color.FromHex("#DF8049"),
+                    TextColor=Color.White,
+                    ActionTextColor=Color.White,
+                    Text = "Excellent Work!!",
+                    ActionText = "Ok",
+                    Action = (aobj) => {
+                        DependencyService.Get<ISnackBar>().Close();
+                    }
+                });
+            });
 
             MakeCall = new RelayCommand(async(obj) => {
 				try
