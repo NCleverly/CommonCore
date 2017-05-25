@@ -2,36 +2,26 @@
   <MonoDevelop.Ide.ItemProperties.referenceguide.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6A794C2D-6526-4E9C-A04A-01CFA3CA1D5D">
     <MonoDevelop.MacDev.AppleDevelopmentTeam DeveloperId="N4VY6BQV5D" TeamId="BY726TB2DL" />
   </MonoDevelop.Ide.ItemProperties.referenceguide.iOS>
-  <MonoDevelop.Ide.Workbench ActiveDocument="../../Core Projects/Xamarin.Forms.CommonCore/ReadMe.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../Core Projects/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs">
     <Files>
       <File FileName="referenceguide/PushNotifications/CrossPushNotificationListener.cs" Line="18" Column="1" />
-      <File FileName="iOS/AppDelegate.cs" Line="57" Column="1" />
+      <File FileName="iOS/AppDelegate.cs" Line="30" Column="1" />
       <File FileName="../../Core Projects/Xamarin.Forms.CommonCore.PushNotifications/readme.txt" Line="5" Column="1" />
       <File FileName="../../Core Projects/Xamarin.Forms.CommonCore.PushNotifications/CrossPushNotification.cs" Line="19" Column="1" />
       <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/ReadMe.txt" Line="18" Column="21" />
       <File FileName="Droid/packages.config" Line="158" Column="46" />
       <File FileName="iOS/packages.config" Line="1" Column="1" />
       <File FileName="referenceguide.web/Controllers/HomeController.cs" Line="8" Column="41" />
+      <File FileName="referenceguide.web/Controllers/PushNotifyController.cs" Line="33" Column="6" />
+      <File FileName="referenceguide/Views/LandingPage.cs" Line="20" Column="32" />
+      <File FileName="referenceguide/Views/ControlPages/BackgroundImagePage.cs" Line="12" Column="36" />
+      <File FileName="../../Core Projects/Xamarin.Forms.CommonCore/Extensions/CoreExtensions.cs" Line="200" Column="10" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="referenceguide" expanded="True">
-            <Node name="Xamarin.Forms.CommonCore" expanded="True">
-              <Node name="ReadMe.txt" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/MainActivity.cs" relfile="Droid/MainActivity.cs" line="35" column="1" />
-      <Breakpoint file="/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/AppDelegate.cs" relfile="iOS/AppDelegate.cs" line="42" column="1" />
-      <Breakpoint file="/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/AppDelegate.cs" relfile="iOS/AppDelegate.cs" line="30" column="1" />
-      <Breakpoint file="/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/AppDelegate.cs" relfile="iOS/AppDelegate.cs" line="39" column="1" />
       <Breakpoint file="/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/referenceguide/PushNotifications/CrossPushNotificationListener.cs" relfile="referenceguide/PushNotifications/CrossPushNotificationListener.cs" line="18" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

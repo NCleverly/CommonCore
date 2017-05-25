@@ -21,6 +21,11 @@ namespace Xamarin.Forms.CommonCore
 {
     public static class CoreExtensions
     {
+        /// <summary>
+        /// Display error during debug to console with optional image marker
+        /// </summary>
+        /// <param name="ex">Ex.</param>
+        /// <param name="includeImageMarker">If set to <c>true</c> include image marker.</param>
         public static void ConsoleWrite(this Exception ex, bool includeImageMarker = false)
         {
 #if DEBUG
@@ -38,14 +43,22 @@ namespace Xamarin.Forms.CommonCore
 #endif
         }
 
-        public static void ConsoleWrite(this string str,string title, bool includeImageMarker = false)
+		/// <summary>
+		/// Display text during debug to console with optional image marker
+		/// </summary>
+		/// <param name="str">String.</param>
+		/// <param name="title">Title.</param>
+		/// <param name="includeImageMarker">If set to <c>true</c> include image marker.</param>
+		public static void ConsoleWrite(this string str,string title, bool includeImageMarker = false)
         {
+#if DEBUG
 			if (includeImageMarker)
 				DrawMonkey();
             Console.WriteLine($"*-*-*-*-*-*-*-*-*-*-*-*- {title} *-*-*-*-*-*-*-*-*-*-*-*-*-");
             Console.WriteLine(str);
             Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
-        }
+#endif
+		}
 
         private static void DrawMonkey(){
             Console.WriteLine("         .-\"-.");
@@ -75,7 +88,11 @@ namespace Xamarin.Forms.CommonCore
             return default(T);
         }
 
-        public static void ContinueOn(this Task task)
+		/// <summary>
+		/// Extension method that executes ContinueWith in shorthand form
+		/// </summary>
+		/// <param name="task">Task.</param>
+		public static void ContinueOn(this Task task)
         {
             task.ContinueWith((t) => { });
         }
@@ -92,6 +109,12 @@ namespace Xamarin.Forms.CommonCore
             }, null);
         }
 
+        /// <summary>
+        /// Returns index of an object in the array.
+        /// </summary>
+        /// <returns>The of.</returns>
+        /// <param name="array">Array.</param>
+        /// <param name="obj">Object.</param>
         public static int IndexOf(this object[] array, object obj)
         {
             var idx = -1;
@@ -106,12 +129,24 @@ namespace Xamarin.Forms.CommonCore
             return idx;
         }
 
+        /// <summary>
+        /// First or Default on a async (promised) collection
+        /// </summary>
+        /// <returns>The or default.</returns>
+        /// <param name="taskCollection">Task collection.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
         public static async Task<T> FirstOrDefault<T>(this Task<List<T>> taskCollection)
         {
             var result = await taskCollection;
             return result.FirstOrDefault();
         }
-        public static async Task<T> FirstOrDefault<T>(this Task<GenericResponse<List<T>>> taskCollection)
+		/// <summary>
+		/// First or Default on a async (promised) collection in a GenericResponse object
+		/// </summary>
+		/// <returns>The or default.</returns>
+		/// <param name="taskCollection">Task collection.</param>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
+		public static async Task<T> FirstOrDefault<T>(this Task<GenericResponse<List<T>>> taskCollection)
         {
             var result = await taskCollection;
             if (result.Success)
@@ -119,19 +154,36 @@ namespace Xamarin.Forms.CommonCore
             else
                 return default(T);
         }
-        public static ObservableCollection<T> ToObservable<T>(this List<T> list)
+		/// <summary>
+		/// Converts List to ObservableCollection
+		/// </summary>
+		/// <returns>The observable.</returns>
+		/// <param name="list">List.</param>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
+		public static ObservableCollection<T> ToObservable<T>(this List<T> list)
         {
             var collection = new ObservableCollection<T>();
             list?.ForEach((item) => collection.Add(item));
             return collection;
         }
-        public static ObservableCollection<T> ToObservable<T>(this T[] array)
+		/// <summary>
+		/// Converts Array to ObservableCollection
+		/// </summary>
+		/// <returns>The observable.</returns>
+		/// <param name="array">Array.</param>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
+		public static ObservableCollection<T> ToObservable<T>(this T[] array)
         {
             var collection = new ObservableCollection<T>();
             for (int x = 0; x < array.Length; x++)
                 collection.Add(array[x]);
             return collection;
         }
+
+        /// <summary>
+        /// Disables all controls in the layout view
+        /// </summary>
+        /// <param name="layout">Layout.</param>
         public static void DisableChildren(this Layout<View> layout)
         {
             foreach (var element in layout.Children)
@@ -146,7 +198,11 @@ namespace Xamarin.Forms.CommonCore
                 }
             }
         }
-        public static void EnableChildren(this Layout<View> layout)
+		/// <summary>
+		/// Enables all controls in the layout view
+		/// </summary>
+		/// <param name="layout">Layout.</param>
+		public static void EnableChildren(this Layout<View> layout)
         {
             foreach (var element in layout.Children)
             {
@@ -160,17 +216,41 @@ namespace Xamarin.Forms.CommonCore
                 }
             }
         }
+        /// <summary>
+        /// Add Span with Text to Formatted String Instance at the same time
+        /// </summary>
+        /// <param name="formattedString">Formatted string.</param>
+        /// <param name="text">Text.</param>
+        public static void AddTextSpan(this FormattedString formattedString, string text){
+            formattedString.Spans.Add(new Span() { Text = text });
+        }
+        /// <summary>
+        /// Convert Byte Array to Dictionary
+        /// </summary>
+        /// <returns>The dictionary.</returns>
+        /// <param name="array">Array.</param>
         public static List<IDictionary<string, object>> ToDictionary(this byte[] array)
         {
             var json = Encoding.Default.GetString(array);
             return JsonConvert.DeserializeObject<List<IDictionary<string, object>>>(json);
         }
 
+        /// <summary>
+        /// Cleans the phone number of all non-numeric characters
+        /// </summary>
+        /// <returns>The phone number.</returns>
+        /// <param name="phoneNum">Phone number.</param>
         public static string CleanPhoneNumber(this string phoneNum)
         {
             return phoneNum.Replace(" ", string.Empty).Replace("(", string.Empty).Replace(")", string.Empty).Replace("-", string.Empty);
         }
 
+        /// <summary>
+        /// Navigate back in the stack to a specific page while remove pages along the way
+        /// </summary>
+        /// <returns>The to.</returns>
+        /// <param name="nav">Nav.</param>
+        /// <param name="pageName">Page name.</param>
         public static async Task<Page> PopTo(this INavigation nav, string pageName)
         {
             if (nav.NavigationStack.Any(x => x.GetType().Name == pageName) && nav.NavigationStack.Count > 1)
@@ -196,10 +276,21 @@ namespace Xamarin.Forms.CommonCore
             }
             return null;
         }
+        /// <summary>
+        /// Cast IEnumerable to IList
+        /// </summary>
+        /// <returns>The list.</returns>
+        /// <param name="enumerable">Enumerable.</param>
         public static IList ToList(this IEnumerable enumerable)
         {
             return (IList)enumerable;
         }
+        /// <summary>
+        /// Return object at a given index in a collection
+        /// </summary>
+        /// <returns>The <see cref="T:System.Object"/>.</returns>
+        /// <param name="enumerable">Enumerable.</param>
+        /// <param name="index">Index.</param>
         public static object ObjectAt(this IEnumerable enumerable, int index)
         {
             if (index < 0)

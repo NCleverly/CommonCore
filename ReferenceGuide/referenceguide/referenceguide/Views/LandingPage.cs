@@ -1,5 +1,6 @@
 ﻿using FFImageLoading.Forms;
 using Xamarin.Forms;
+using Xamarin.Forms.CommonCore;
 
 namespace referenceguide
 {
@@ -10,34 +11,23 @@ namespace referenceguide
 			Title = "Landing";
 			BackgroundColor = Color.White;
 
-            ToolbarItems.Add(new ToolbarItem(){ Text="Add", Command= new Command(() => {
-                
-            })});
-
 			var topImage = new CachedImage()
 			{
 				Source = "sharedcode.png"
 			};
 
-			var s = new Span()
-			{
-				Text = "  Xamarin.Forms provides a platform to resuse code across logic and UI development. " +
-					"There is tremendous debate on the use of portable class libraries versus shared projects. \n\n"
-			};
-			var s1 = new Span()
-			{
-				Text = "  After using the CommonCore project, the benefits of shared projects should be apparent with nested files, compiler directives and ease of change." +
-					" It is still possible to write spaghetti code which XAML does help prevent but good team standards can mitigate these issues.\n\n"
-			};
-			var s3 = new Span()
-			{
-				Text = "  CommonCore uses Unity to create static instances of the application's view models and service classes through dependency injection." +
-					" Take a moment to view the readme file in order to understand all the nuget files and configuration settings available through CommonCore."
-			};
+
 			var fs = new FormattedString();
-			fs.Spans.Add(s);
-			fs.Spans.Add(s1);
-			fs.Spans.Add(s3);
+			
+            fs.AddTextSpan("  Xamarin.Forms provides a platform to resuse code across logic and UI development. " +
+					"There is tremendous debate on the use of portable class libraries versus shared projects. \n\n");
+			
+            fs.AddTextSpan("  After using the CommonCore project, the benefits of shared projects should be apparent with nested files, compiler directives and ease of change." +
+					" It is still possible to write spaghetti code which XAML does help prevent but good team standards can mitigate these issues.\n\n");
+
+            fs.AddTextSpan("  CommonCore uses Unity to create static instances of the application's view models and service classes through dependency injection." +
+                           " Take a moment to view the readme file in order to understand all the nuget files and configuration settings available through CommonCore.");
+
 
 			var lbl = new Label() { FormattedText = fs, Margin = 10 };
 

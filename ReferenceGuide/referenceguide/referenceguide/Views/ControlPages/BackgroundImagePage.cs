@@ -12,8 +12,8 @@ namespace referenceguide
             this.BackgroundImage = imgName;
 
             var formattedString = new FormattedString();
-            formattedString.Spans.Add(new Span() { Text = "\tSimply setting the background image in iOS may result in the image tiling across the screen. Some articles suggest using an absolute layout with a bottom layer being an image. In the readme.txt find a url to create icons and splash screen assets and place them in your project. \n\n" });
-            formattedString.Spans.Add(new Span(){ Text = "\tSet the page's BackgroundImage property and the BasePageRenderer in the CommonCore will fix the tiling issue without you having to layer controls to accomplish the effect." });
+            formattedString.AddTextSpan("\tSimply setting the background image in iOS may result in the image tiling across the screen. Some articles suggest using an absolute layout with a bottom layer being an image. In the readme.txt find a url to create icons and splash screen assets and place them in your project. \n\n");
+            formattedString.AddTextSpan("\tSet the page's BackgroundImage property and the BasePageRenderer in the CommonCore will fix the tiling issue without you having to layer controls to accomplish the effect.");
             var lbl = new Label()
             {
                 FormattedText =formattedString
