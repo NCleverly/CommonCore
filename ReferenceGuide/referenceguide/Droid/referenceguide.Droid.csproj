@@ -250,12 +250,6 @@
     <Reference Include="Xamarin.GooglePlayServices.Gcm">
       <HintPath>..\packages\Xamarin.GooglePlayServices.Gcm.42.1021.1\lib\MonoAndroid70\Xamarin.GooglePlayServices.Gcm.dll</HintPath>
     </Reference>
-    <Reference Include="PushNotification.Plugin.Abstractions">
-      <HintPath>..\..\..\..\CommonCore.ExternalLibraries\PushNotification\PushNotification\PushNotification.Plugin.Android\bin\Debug\PushNotification.Plugin.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="PushNotification.Plugin">
-      <HintPath>..\..\..\..\CommonCore.ExternalLibraries\PushNotification\PushNotification\PushNotification.Plugin.Android\bin\Debug\PushNotification.Plugin.dll</HintPath>
-    </Reference>
     <Reference Include="Plugin.Settings.Abstractions">
       <HintPath>..\packages\Xam.Plugins.Settings.2.5.8\lib\MonoAndroid10\Plugin.Settings.Abstractions.dll</HintPath>
     </Reference>
@@ -361,6 +355,7 @@
   <ItemGroup>
     <AndroidEnvironment Include="monoconfig.txt" />
   </ItemGroup>
+  <Import Project="..\..\..\Core Projects\Xamarin.Forms.CommonCore.PushNotifications\Xamarin.Forms.CommonCore.PushNotifications.projitems" Label="Shared" Condition="Exists('..\..\..\Core Projects\Xamarin.Forms.CommonCore.PushNotifications\Xamarin.Forms.CommonCore.PushNotifications.projitems')" />
   <Import Project="..\..\..\Core Projects\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems" Label="Shared" Condition="Exists('..\..\..\Core Projects\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems')" />
   <Import Project="..\..\..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
   <Import Project="..\referenceguide\referenceguide.projitems" Label="Shared" Condition="Exists('..\referenceguide\referenceguide.projitems')" />

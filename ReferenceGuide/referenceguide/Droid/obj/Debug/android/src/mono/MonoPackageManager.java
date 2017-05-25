@@ -131,8 +131,6 @@ class MonoPackageManager_Resources {
 		"Plugin.Permissions.dll",
 		"Plugin.Settings.Abstractions.dll",
 		"Plugin.Settings.dll",
-		"PushNotification.Plugin.Abstractions.dll",
-		"PushNotification.Plugin.dll",
 		"Refractored.FloatingActionButton.dll",
 		"Remotion.Linq.dll",
 		"SkiaSharp.dll",

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mini',['Mini',['../namespace_xamarin_1_1_forms_1_1_common_core_1_1_material_design.html#a84f0950ee1269c9faac3dca329e5f719ad3d5b2e9cc26e07d9bf4ebfbab15fda4',1,'Xamarin::Forms::CommonCore::MaterialDesign']]]
+  ['bottom',['Bottom',['../namespace_xamarin_1_1_forms_1_1_common_core.html#a52d1e547aa153bc6d2c93d7b63621e5ba2ad9d63b69c4a10a5cc9cad923133bc4',1,'Xamarin::Forms::CommonCore']]]
 ];

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['d',['D',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_a_b_c_d_struct.html#a9d329d81086bcb10c96b1923b7eda38d',1,'Xamarin::Forms::CommonCore::ABCDStruct']]],
+  ['data',['Data',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#ac957af985ca9e956ce8cf0d056daed3b',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
   ['datamodel',['DataModel',['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html',1,'Xamarin::Forms::CommonCore']]],
   ['datamodel_2ecs',['DataModel.cs',['../_data_model_8cs.html',1,'']]],
   ['decrypt',['Decrypt',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#ab2f722e30944f3dcc33f3978c28419eb',1,'Xamarin::Forms::CommonCore::AccountService']]],
@@ -14,7 +15,8 @@ var searchData=
   ['deviceinfo_2eios_2ecs',['DeviceInfo.IOS.cs',['../_device_info_8_i_o_s_8cs.html',1,'']]],
   ['deviceinformation',['DeviceInformation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_device_information.html',1,'Xamarin::Forms::CommonCore']]],
   ['devicestate',['DeviceState',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aca74fda8bdb0d058a9987c8bfaac070b',1,'Xamarin::Forms::CommonCore']]],
-  ['devicetype',['DeviceType',['../class_xamarin_1_1_forms_1_1_common_core_1_1_device_information.html#a8f3d2f761ea633aea7ce84edff029512',1,'Xamarin::Forms::CommonCore::DeviceInformation']]],
+  ['devicetype',['DeviceType',['../class_xamarin_1_1_forms_1_1_common_core_1_1_device_information.html#a8f3d2f761ea633aea7ce84edff029512',1,'Xamarin.Forms.CommonCore.DeviceInformation.DeviceType()'],['../namespace_push_notification_1_1_plugin_1_1_abstractions.html#a1ce4369c799a8f4045fa0c9c7d4820a3',1,'PushNotification.Plugin.Abstractions.DeviceType()']]],
+  ['devicetype_2ecs',['DeviceType.cs',['../_device_type_8cs.html',1,'']]],
   ['dialogpromp_2edroid_2ecs',['DialogPromp.Droid.cs',['../_dialog_promp_8_droid_8cs.html',1,'']]],
   ['dialogprompt_2eios_2ecs',['DialogPrompt.IOS.cs',['../_dialog_prompt_8_i_o_s_8cs.html',1,'']]],
   ['disablechildren',['DisableChildren',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a00a1fcb00596fe96e68787d376217caa',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
@@ -24,6 +26,7 @@ var searchData=
   ['dismiss',['Dismiss',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_progress_indicator.html#a7ae77414f3e2a82043026c6fd946405b',1,'Xamarin::Forms::CommonCore::IProgressIndicator']]],
   ['displaytitle',['DisplayTitle',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control_view.html#a638910fbe741f83af21fd1ad49bbb18c',1,'Xamarin::Forms::CommonCore::SegmentControlView']]],
   ['dispose',['Dispose',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a2e7cdebcb2aa60013e77ef8771ef1617',1,'Xamarin.Forms.CommonCore.BindablePicker.Dispose()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a18d3e081d55855939528b251a39cebbb',1,'Xamarin.Forms.CommonCore.GradientButton.Dispose()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#aa35df07182c528ec75686deaeaef874a',1,'Xamarin.Forms.CommonCore.ListControl.Dispose()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#a645bd6e2a2859f553333cdcc443688a5',1,'Xamarin.Forms.CommonCore.RankingControl.Dispose()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#ad06c480b8cdc8b51f3fd66ba80c13f46',1,'Xamarin.Forms.CommonCore.DataModel.Dispose()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a9e85ff6239caaba1215fc9db1c08ed7f',1,'Xamarin.Forms.CommonCore.AbsoluteLayoutPage.Dispose()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#aa4156b20bf152cc02d1b39f610b5b779',1,'Xamarin.Forms.CommonCore.RelayCommand.Dispose()']]],
+  ['domainname',['DomainName',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#af91f6d117bef7446dc3b0b26007ebf0e',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
   ['downloadcomplete',['DownloadComplete',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#af139a5b57e73bdf8c95f7853e889bfac',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
   ['downloadurl',['DownloadUrl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a75afb20ef61b9d740918aacd0f5b6f7c',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
   ['downprogresschanged',['DownprogressChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#afbe698750f692120be05500eadbbeb64',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],

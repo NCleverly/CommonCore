@@ -211,8 +211,6 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Connectivity.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Settings.Abstractions.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Settings.dll
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/PushNotification.Plugin.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Remotion.Linq.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/SkiaSharp.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/SQLite-net.dll
@@ -265,10 +263,6 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Xamarin.Forms.Xaml.pdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Xamarin.Forms.Xaml.dll.mdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Xamarin.Forms.Xaml.xml
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.pdb
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll.mdb
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/PushNotification.Plugin.pdb
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/PushNotification.Plugin.dll.mdb
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Settings.Abstractions.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Settings.xml
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/af/Humanizer.resources.dll
@@ -364,3 +358,11 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhone/Debug/referenceguide.iOS.csproj.CoreCompileInputs.cache
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhone/Debug/referenceguide.iOS.exe
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhone/Debug/referenceguide.iOS.pdb
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/referenceguide.iOS.exe.config
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Permissions.Abstractions.dll
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Permissions.dll
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/TTGSnackbar.dll
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Xamarin.Auth.pdb
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Permissions.Abstractions.xml
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/bin/iPhone/Debug/Plugin.Permissions.xml
+/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/iOS/obj/iPhone/Debug/referenceguide.iOS.csproj.referenceguide.iOS.exe.config

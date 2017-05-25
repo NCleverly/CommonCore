@@ -15,6 +15,8 @@ var searchData=
   ['ioverlaydependency_2ecs',['IOverlayDependency.cs',['../_i_overlay_dependency_8cs.html',1,'']]],
   ['iphonecall_2ecs',['IPhoneCall.cs',['../_i_phone_call_8cs.html',1,'']]],
   ['iprogressindicator_2ecs',['IProgressIndicator.cs',['../_i_progress_indicator_8cs.html',1,'']]],
+  ['ipushnotification_2ecs',['IPushNotification.cs',['../_i_push_notification_8cs.html',1,'']]],
+  ['ipushnotificationlistener_2ecs',['IPushNotificationListener.cs',['../_abstractions_2_i_push_notification_listener_8cs.html',1,'(Global Namespace)'],['../_i_o_s_2_i_push_notification_listener_8cs.html',1,'(Global Namespace)']]],
   ['isearchprovider_2ecs',['ISearchProvider.cs',['../_i_search_provider_8cs.html',1,'']]],
   ['isnackbar_2ecs',['ISnackBar.cs',['../_i_snack_bar_8cs.html',1,'']]],
   ['isqlitedb_2ecs',['ISqliteDb.cs',['../_i_sqlite_db_8cs.html',1,'']]]

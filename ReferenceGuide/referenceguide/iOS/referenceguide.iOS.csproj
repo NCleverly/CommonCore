@@ -222,12 +222,6 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.5.239-pre3\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
-    <Reference Include="PushNotification.Plugin.Abstractions">
-      <HintPath>..\..\..\..\CommonCore.ExternalLibraries\PushNotification\PushNotification\PushNotification.Plugin.iOSUnified\bin\iPhone\Debug\PushNotification.Plugin.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="PushNotification.Plugin">
-      <HintPath>..\..\..\..\CommonCore.ExternalLibraries\PushNotification\PushNotification\PushNotification.Plugin.iOSUnified\bin\iPhone\Debug\PushNotification.Plugin.dll</HintPath>
-    </Reference>
     <Reference Include="Plugin.Settings.Abstractions">
       <HintPath>..\packages\Xam.Plugins.Settings.2.5.8\lib\Xamarin.iOS10\Plugin.Settings.Abstractions.dll</HintPath>
     </Reference>
@@ -304,6 +298,7 @@
     <BundleResource Include="Resources\sharedcode.png" />
     <BundleResource Include="Resources\Default.png" />
   </ItemGroup>
+  <Import Project="..\..\..\Core Projects\Xamarin.Forms.CommonCore.PushNotifications\Xamarin.Forms.CommonCore.PushNotifications.projitems" Label="Shared" Condition="Exists('..\..\..\Core Projects\Xamarin.Forms.CommonCore.PushNotifications\Xamarin.Forms.CommonCore.PushNotifications.projitems')" />
   <Import Project="..\..\..\Core Projects\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems" Label="Shared" Condition="Exists('..\..\..\Core Projects\Xamarin.Forms.CommonCore.MaterialDesign\Xamarin.Forms.CommonCore.MaterialDesign.projitems')" />
   <Import Project="..\..\..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
   <Import Project="..\referenceguide\referenceguide.projitems" Label="Shared" Condition="Exists('..\referenceguide\referenceguide.projitems')" />

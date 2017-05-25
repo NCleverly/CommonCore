@@ -31,8 +31,6 @@
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/Plugin.Permissions.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/Plugin.Settings.Abstractions.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/Plugin.Settings.dll
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/PushNotification.Plugin.Abstractions.dll
-/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/PushNotification.Plugin.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/Refractored.FloatingActionButton.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/Remotion.Linq.dll
 /Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/Droid/obj/Debug/android/assets/SkiaSharp.dll

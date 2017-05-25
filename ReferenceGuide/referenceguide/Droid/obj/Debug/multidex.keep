@@ -12,7 +12,6 @@ mono/android/TypeManager.class
 android/support/design/widget/FloatingActionButtonIcs.class
 android/support/v4/app/NotificationCompatBase$Action$Factory.class
 android/support/design/R$layout.class
-md563bb5d7cd114ceda82ec85fb57ce3637/PushNotificationInstanceIDListenerService.class
 android/support/v4/app/NotificationCompat$Extender.class
 com/google/firebase/FirebaseException.class
 android/support/v4/view/NestedScrollingParent.class
@@ -116,7 +115,6 @@ android/support/v7/graphics/drawable/DrawerArrowDrawable.class
 com/google/android/gms/internal/zzl.class
 android/support/v4/media/session/MediaSessionCompat$ResultReceiverWrapper.class
 android/support/v4/app/TaskStackBuilder.class
-md563bb5d7cd114ceda82ec85fb57ce3637/PushNotificationService.class
 com/google/android/gms/gcm/GcmTaskService$zza.class
 android/support/v7/app/ActionBar$OnNavigationListener.class
 com/google/android/gms/common/internal/zzaj.class
@@ -253,7 +251,6 @@ android/support/v4/app/NotificationBuilderWithBuilderAccessor.class
 android/support/v4/content/res/ConfigurationHelper.class
 com/google/android/gms/R$styleable.class
 com/google/android/gms/common/GooglePlayServicesUtil.class
-md563bb5d7cd114ceda82ec85fb57ce3637/PushNotificationsReceiver.class
 mono/MonoRuntimeProvider.class
 android/support/v7/widget/LinearLayoutCompat$DividerMode.class
 com/google/android/gms/internal/zzabt.class
@@ -280,6 +277,7 @@ android/support/design/widget/ValueAnimatorCompat$AnimatorUpdateListener.class
 android/support/v4/media/MediaBrowserCompat$ItemCallback.class
 android/support/v4/widget/SearchViewCompat$OnCloseListenerCompat.class
 md54e9e5f9dcdfab3ec8aac2278e42c7822/MainActivity.class
+md5ee71e424d7f7acd12651d6358f939e24/PushNotificationsReceiver.class
 android/support/v4/app/NotificationCompat$NotificationCompatImplBase.class
 android/support/v7/view/menu/CascadingMenuPopup$CascadingMenuInfo.class
 android/support/v7/widget/OpReorderer$Callback.class
@@ -332,6 +330,7 @@ android/support/v4/media/MediaMetadataCompat$BitmapKey.class
 android/support/v4/app/FragmentManagerImpl$PopBackStackState.class
 android/support/customtabs/CustomTabsService$Result.class
 android/support/v4/util/MapCollections.class
+md5ee71e424d7f7acd12651d6358f939e24/PushNotificationRegistrationIntentService.class
 android/support/v4/graphics/drawable/DrawableCompat.class
 com/google/android/gms/common/zzg.class
 android/support/multidex/ZipUtil$CentralDirectory.class
@@ -437,6 +436,7 @@ android/support/v4/app/ActivityCompat.class
 android/support/v7/media/MediaRouteSelector$Builder.class
 android/support/v4/media/MediaMetadataCompat.class
 android/support/design/widget/CoordinatorLayout$HierarchyChangeListener.class
+md5ee71e424d7f7acd12651d6358f939e24/AppUpdateReceiver.class
 android/support/v4/view/PagerTitleStrip.class
 md53c585be971e02235139fd1aef11fc0c1/WebAuthenticatorActivity.class
 android/support/design/widget/ViewUtilsLollipop.class
@@ -446,7 +446,7 @@ android/support/v4/media/RatingCompat$1.class
 android/support/v4/view/ViewCompat$JBViewCompatImpl.class
 android/support/v7/view/menu/MenuAdapter.class
 android/support/v7/widget/RecyclerViewAccessibilityDelegate.class
-md563bb5d7cd114ceda82ec85fb57ce3637/AppUpdateReceiver.class
+md5ee71e424d7f7acd12651d6358f939e24/PushNotificationService.class
 android/support/v7/media/MediaRouteProviderService$ReceiveHandler.class
 android/support/v4/media/MediaMetadataCompatApi21.class
 com/google/android/gms/gcm/GcmTaskService$1.class
@@ -500,6 +500,7 @@ android/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl$3.class
 md5b60ffeb829f638581ab2bb9b1a7f4f3f/AndroidActivity.class
 android/support/v4/media/MediaBrowserServiceCompat$ServiceBinderImpl.class
 android/support/v4/app/NoSaveStateFrameLayout.class
+md5ee71e424d7f7acd12651d6358f939e24/PushNotificationInstanceIDListenerService.class
 android/support/design/R$style.class
 android/support/v4/view/ViewCompatJB.class
 android/support/v7/widget/RecyclerView$ItemAnimatorRestoreListener.class
@@ -624,7 +625,6 @@ android/support/v7/widget/RecyclerView$ChildDrawingOrderCallback.class
 android/support/v4/app/NotificationCompat$InboxStyle.class
 android/support/v7/media/MediaRouteDescriptor$Builder.class
 android/support/v4/media/session/PlaybackStateCompat$CustomAction.class
-md563bb5d7cd114ceda82ec85fb57ce3637/PushNotificationRegistrationIntentService.class
 android/support/v4/view/ViewPager$ViewPositionComparator.class
 android/support/v4/widget/ViewDragHelper$Callback.class
 android/support/design/widget/BaseTransientBottomBar$6.class

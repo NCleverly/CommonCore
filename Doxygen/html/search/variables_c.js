@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['notifier',['notifier',['../class_xamarin_1_1_forms_1_1_common_core_1_1_property_changed_behavior.html#a66dfc5c46704ffe0312dadb16844425c',1,'Xamarin::Forms::CommonCore::PropertyChangedBehavior']]]
+  ['message',['Message',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#af789e8dff10bd1a84c9c2aef10d762d0',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]]
 ];

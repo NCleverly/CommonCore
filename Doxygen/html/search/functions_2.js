@@ -12,5 +12,6 @@ var searchData=
   ['converter',['Converter',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a936de4817f78d029d509fb3cdfe7a7d4',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
   ['convertto_3c_20t_20_3e',['ConvertTo&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_json_data_extension.html#aa0df1f6703986a6639b7ad4c161d87f4',1,'Xamarin::Forms::CommonCore::JsonDataExtension']]],
   ['createcalendarevent',['CreateCalendarEvent',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_calendar_event.html#ab8c73e0d02d687256ae8cfa15cc8a7ae',1,'Xamarin::Forms::CommonCore::ICalendarEvent']]],
-  ['createkey',['CreateKey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#ac20f1484053f1c0f1a16cdf1820a69a5',1,'Xamarin::Forms::CommonCore::EncryptionService']]]
+  ['createkey',['CreateKey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#ac20f1484053f1c0f1a16cdf1820a69a5',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
+  ['createpushnotification',['CreatePushNotification',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a9f1bfba17bd374ae9f3096235f00f3d2',1,'PushNotification::Plugin::CrossPushNotification']]]
 ];

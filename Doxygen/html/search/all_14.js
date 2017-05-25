@@ -1,6 +1,7 @@
 var searchData=
 [
   ['unhookevents',['UnhookEvents',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a6eb4c66075bf4f582d9aac2fb5d7dfe7',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
+  ['unregister',['Unregister',['../interface_push_notification_1_1_plugin_1_1_abstractions_1_1_i_push_notification.html#ad7e386df805f921b3c0d387be5beb647',1,'PushNotification::Plugin::Abstractions::IPushNotification']]],
   ['unselectedbackground',['UnselectedBackground',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a70590438cad3287c4e6bbe485a2a5747',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['unselectedbackgroundproperty',['UnselectedBackgroundProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#af80c6a37c1c8d93c39ec7fc84b3c06cb',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['unselectedforegroundcolor',['UnSelectedForegroundColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_tabbed_page.html#ab31bbe27edb7c7d79f9cdfd6eaee7ead',1,'Xamarin::Forms::CommonCore::BaseTabbedPage']]],

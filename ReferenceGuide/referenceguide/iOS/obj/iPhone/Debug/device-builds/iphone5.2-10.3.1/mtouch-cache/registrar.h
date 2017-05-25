@@ -13,6 +13,8 @@
 #import <QuartzCore/CAEmitterBehavior.h>
 #import <WebKit/WebKit.h>
 #import <CoreImage/CoreImage.h>
+#import <CoreLocation/CoreLocation.h>
+#import <CoreMotion/CoreMotion.h>
 #import <CoreSpotlight/CoreSpotlight.h>
 #import <CoreTelephony/CoreTelephonyDefines.h>
 #import <CoreTelephony/CTCall.h>
@@ -22,11 +24,14 @@
 #import <CoreTelephony/CTSubscriber.h>
 #import <CoreTelephony/CTSubscriberInfo.h>
 #import <EventKit/EventKit.h>
+#import <Photos/Photos.h>
 #import <CloudKit/CloudKit.h>
 #import <Accounts/Accounts.h>
 #import <SafariServices/SafariServices.h>
+#import <Speech/Speech.h>
 #import <UserNotifications/UserNotifications.h>
 #import <GLKit/GLKit.h>
+#import <AVFoundation/AVFoundation.h>
 #import <CoreGraphics/CoreGraphics.h>
 
 @protocol CALayerDelegate;
@@ -37,8 +42,8 @@
 @class __Xamarin_NSTimerActionDispatcher;
 @class __MonoMac_NSAsyncActionDispatcher;
 @class UIKit_UIControlEventProxy;
-@class CoreImage_CIColorMatrix;
 @class CoreImage_CIGaussianBlur;
+@class CoreImage_CIColorMatrix;
 @class Xamarin_Forms_Platform_iOS_VisualElementRenderer_1;
 @class Xamarin_Forms_Platform_iOS_ViewRenderer_2;
 @class Xamarin_Forms_Platform_iOS_EntryRenderer;
@@ -51,6 +56,9 @@
 @class Xamarin_Forms_CommonCore_UserNotificationCenterDelegate;
 @class Xamarin_Forms_Platform_iOS_PageRenderer;
 @class Xamarin_Forms_CommonCore_BasePageRenderer;
+@class Xamarin_Forms_Platform_iOS_TabbedRenderer;
+@class Xamarin_Forms_CommonCore_BaseTabbedPageRenderer;
+@class Xamarin_Forms_CommonCore_TelephonyPageRenderer;
 @class Xamarin_Forms_CommonCore_MaterialDesign_FTEControlRenderer;
 @class Xamarin_Forms_Platform_iOS_FormsApplicationDelegate;
 @class AppDelegate;
@@ -110,7 +118,6 @@
 @class Xamarin_Forms_Platform_iOS_PhoneMasterDetailRenderer;
 @class Xamarin_Forms_Platform_iOS_PickerRenderer_PickerSource;
 @class Xamarin_Forms_Platform_iOS_PickerRenderer;
-@class Xamarin_Forms_Platform_iOS_TabbedRenderer;
 @class Xamarin_Forms_Platform_iOS_TabletMasterDetailRenderer_InnerDelegate;
 @class Xamarin_Forms_Platform_iOS_TabletMasterDetailRenderer;
 @class Xamarin_Forms_Platform_iOS_TimePickerRenderer;
@@ -126,20 +133,21 @@
 @class UIKit_UITextView__UITextViewDelegate;
 @class UIKit_UIView_UIViewAppearance;
 @class UIKit_UIControl_UIControlAppearance;
+@class CoreLocation_CLLocationManager__CLLocationManagerDelegate;
 @class GLKit_GLKView__GLKViewDelegate;
-@class __NSObject_Disposer;
 @class UIKit_UIGestureRecognizer__UIGestureRecognizerDelegate;
 @class __UIGestureRecognizerToken;
 @class __UIGestureRecognizerParameterlessToken;
 @class __UIGestureRecognizerParametrizedToken;
+@class __NSObject_Disposer;
 @class __UILongPressGestureRecognizer;
-@class UIKit_UINavigationBar_UINavigationBarAppearance;
-@class __UIPanGestureRecognizer;
 @class UIKit_UIButton_UIButtonAppearance;
+@class UIKit_UINavigationBar_UINavigationBarAppearance;
 @class UIKit_UIAlertView__UIAlertViewDelegate;
 @class UIKit_UIBarButtonItem_Callback;
 @class __UIRotationGestureRecognizer;
 @class __UITapGestureRecognizer;
+@class __UIPanGestureRecognizer;
 @class __UIPinchGestureRecognizer;
 @class __UISwipeGestureRecognizer;
 @class __UIScreenEdgePanGestureRecognizer;
@@ -166,6 +174,7 @@
 @class SBTokenProvider;
 @class StoredRegistrationEntry;
 @class SBNotificationHub;
+@class TTGSnackBar_TTGSnackbar;
 @class MvxImageLoadingView;
 @protocol WebPDecoder;
 @class BigTed_ProgressHUD;
@@ -185,6 +194,7 @@
 @protocol MSCrashesDelegate;
 @class Microsoft_Azure_Mobile_Crashes_CrashesDelegate;
 @class MSCrashes;
+@class MSErrorAttachmentLog;
 @class MSErrorReport;
 @class MSException;
 @class MSStackFrame;

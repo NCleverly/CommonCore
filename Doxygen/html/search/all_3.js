@@ -51,6 +51,10 @@ var searchData=
   ['correlationid',['CorrelationID',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_data_model.html#a4d8d1dc920530d3485f12358e7f7d79a',1,'Xamarin.Forms.CommonCore.IDataModel.CorrelationID()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#af6c624278b1a90444c4ff38456f671c9',1,'Xamarin.Forms.CommonCore.DataModel.CorrelationID()']]],
   ['createcalendarevent',['CreateCalendarEvent',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_calendar_event.html#ab8c73e0d02d687256ae8cfa15cc8a7ae',1,'Xamarin::Forms::CommonCore::ICalendarEvent']]],
   ['createkey',['CreateKey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#ac20f1484053f1c0f1a16cdf1820a69a5',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
+  ['createpushnotification',['CreatePushNotification',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a9f1bfba17bd374ae9f3096235f00f3d2',1,'PushNotification::Plugin::CrossPushNotification']]],
+  ['crosspushnotification',['CrossPushNotification',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html',1,'PushNotification::Plugin']]],
+  ['crosspushnotification_2ecs',['CrossPushNotification.cs',['../_cross_push_notification_8cs.html',1,'']]],
+  ['current',['Current',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a4132cf38f37171437cdc4f62f877524d',1,'PushNotification::Plugin::CrossPushNotification']]],
   ['currentbuid',['CurrentBuid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_buid.html#a748ef45a3659bd6ce3c79c6aa1cdec42',1,'Xamarin::Forms::CommonCore::AppBuid']]],
   ['customsettings',['CustomSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#ab1ace3c0f6a6d569bf5fc4af1d037cd4',1,'Xamarin.Forms.CommonCore.AppData.CustomSettings()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_root_object.html#ab70d8df5e40bfdffe910422004058f84',1,'Xamarin.Forms.CommonCore.RootObject.CustomSettings()']]]
 ];

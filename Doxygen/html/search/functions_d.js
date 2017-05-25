@@ -6,6 +6,7 @@ var searchData=
   ['r4',['r4',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#aae702898003e4944b07c2b0f07a474eb',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
   ['rankingcontrol',['RankingControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#acb9317422edfb0e429d29d35dcc787c8',1,'Xamarin::Forms::CommonCore::RankingControl']]],
   ['ratingchangedevent',['RatingchangedEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#ab62c7982d4d363a790d067dcb7cd57d2',1,'Xamarin::Forms::CommonCore::RankingControl']]],
+  ['register',['Register',['../interface_push_notification_1_1_plugin_1_1_abstractions_1_1_i_push_notification.html#a4b82f9a90cdcd4efe3735f00c8e60c5d',1,'PushNotification::Plugin::Abstractions::IPushNotification']]],
   ['registernotificationhub',['RegisterNotificationHub',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_azure_notification_hub.html#a7aeae72372005916cf5dc71ec80a93ff',1,'Xamarin::Forms::CommonCore::IAzureNotificationHub']]],
   ['relaycommand',['RelayCommand',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#a489e5bba89f4bf0b4f85065f516e7654',1,'Xamarin::Forms::CommonCore::RelayCommand']]],
   ['reload',['Reload',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a9a116d6ede38c03bc2e0a2c77d5d3837',1,'Xamarin::Forms::CommonCore::AppData']]],

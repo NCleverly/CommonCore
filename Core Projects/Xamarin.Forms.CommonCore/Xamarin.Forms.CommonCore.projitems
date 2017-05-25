@@ -151,7 +151,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Configurations\ResourceLoader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Configurations\ConfigurationModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ISqliteDb.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\AltSqliteCode\SqliteDb.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\BackgroundTimerService.Droid.cs">
       <DependentUpon>IBackgroundTimerService.cs</DependentUpon>
     </Compile>
@@ -211,12 +210,11 @@
     <Folder Include="$(MSBuildThisFileDirectory)AzureNotifications\" />
     <Folder Include="$(MSBuildThisFileDirectory)Configurations\">
     </Folder>
-    <Folder Include="$(MSBuildThisFileDirectory)Services\AltSqliteCode\">
-    </Folder>
     <Folder Include="$(MSBuildThisFileDirectory)Styles\" />
     <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\Base\" />
     <Folder Include="$(MSBuildThisFileDirectory)Logging\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Utilities\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />

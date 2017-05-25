@@ -84,10 +84,6 @@
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.8/lib/Xamarin.iOS10/Plugin.Settings.dll" \
 	-r \
-	"/Volumes/Personal 240/CommonCore.ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll" \
-	-r \
-	"/Volumes/Personal 240/CommonCore.ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.dll" \
-	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Remotion.Linq.2.1.1/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/SkiaSharp.1.58.0/lib/XamariniOS/SkiaSharp.dll" \
@@ -457,10 +453,6 @@
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.8/lib/Xamarin.iOS10/Plugin.Settings.Abstractions.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Xam.Plugins.Settings.2.5.8/lib/Xamarin.iOS10/Plugin.Settings.dll" \
-	-r \
-	"/Volumes/Personal 240/CommonCore.ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.Abstractions.dll" \
-	-r \
-	"/Volumes/Personal 240/CommonCore.ExternalLibraries/PushNotification/PushNotification/PushNotification.Plugin.iOSUnified/bin/iPhone/Debug/PushNotification.Plugin.dll" \
 	-r \
 	"/Volumes/Personal 240/CommonCore/ReferenceGuide/referenceguide/packages/Remotion.Linq.2.1.1/lib/portable-net45+win+wpa81+wp80/Remotion.Linq.dll" \
 	-r \

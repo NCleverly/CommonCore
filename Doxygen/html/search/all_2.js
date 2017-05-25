@@ -6,6 +6,7 @@ var searchData=
   ['backgroundtimer',['BackgroundTimer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_background_timer.html',1,'Xamarin.Forms.CommonCore.BackgroundTimer'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a36e7709c75414ad7b2c0187e53d79fff',1,'Xamarin.Forms.CommonCore.ObservableViewModel.backgroundTimer()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ab50a2ea91e68623497b2397cdbae424a',1,'Xamarin.Forms.CommonCore.ObservableViewModel.BackgroundTimer()']]],
   ['backgroundtimerservice_2edroid_2ecs',['BackgroundTimerService.Droid.cs',['../_background_timer_service_8_droid_8cs.html',1,'']]],
   ['backgroundtimerservice_2eios_2ecs',['BackgroundTimerService.IOS.cs',['../_background_timer_service_8_i_o_s_8cs.html',1,'']]],
+  ['backoffmilliseconds',['BackOffMilliseconds',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#aa1a8bde287a3df0a77a27fe24421f131',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
   ['badge',['Badge',['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#aada622a7438c54bfa1beeea880b16bdf',1,'Xamarin::Forms::CommonCore::LocalNotification']]],
   ['basepagerenderer',['BasePageRenderer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_page_renderer.html',1,'Xamarin::Forms::CommonCore']]],
   ['basepagerenderer_2edroid_2ecs',['BasePageRenderer.Droid.cs',['../_base_page_renderer_8_droid_8cs.html',1,'']]],

@@ -12,7 +12,7 @@ public class PushNotificationGcmListener
 		__md_methods = 
 			"n_onMessageReceived:(Ljava/lang/String;Landroid/os/Bundle;)V:GetOnMessageReceived_Ljava_lang_String_Landroid_os_Bundle_Handler\n" +
 			"";
-		mono.android.Runtime.register ("PushNotification.Plugin.PushNotificationGcmListener, PushNotification.Plugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", PushNotificationGcmListener.class, __md_methods);
+		mono.android.Runtime.register ("PushNotification.Plugin.PushNotificationGcmListener, referenceguide.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", PushNotificationGcmListener.class, __md_methods);
 	}
 
 
@@ -20,7 +20,7 @@ public class PushNotificationGcmListener
 	{
 		super ();
 		if (getClass () == PushNotificationGcmListener.class)
-			mono.android.TypeManager.Activate ("PushNotification.Plugin.PushNotificationGcmListener, PushNotification.Plugin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
+			mono.android.TypeManager.Activate ("PushNotification.Plugin.PushNotificationGcmListener, referenceguide.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "", this, new java.lang.Object[] {  });
 	}
 
 

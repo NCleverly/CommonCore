@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['validatejson',['ValidateJSON',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a8dfc4beb83aac19e2920251aab040e97',1,'PushNotification::Plugin::CrossPushNotification']]],
   ['validator',['Validator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#aed5bbbb943ecdab2ceccdb88b16801fe',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
   ['validatorproperty',['ValidatorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a4b709123f2e6965f8208a253db41f15c',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
   ['value',['value',['../class_xamarin_1_1_forms_1_1_common_core_1_1_setting.html#aaf408e4f2d73cb66bb3f23ef9a9897bc',1,'Xamarin::Forms::CommonCore::Setting']]],

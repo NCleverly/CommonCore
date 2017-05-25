@@ -19,6 +19,8 @@ var searchData=
   ['iphonecall',['IPhoneCall',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_phone_call.html',1,'Xamarin::Forms::CommonCore']]],
   ['ipopup',['IPopup',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_popup.html',1,'Xamarin::Forms::CommonCore']]],
   ['iprogressindicator',['IProgressIndicator',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_progress_indicator.html',1,'Xamarin::Forms::CommonCore']]],
+  ['ipushnotification',['IPushNotification',['../interface_push_notification_1_1_plugin_1_1_abstractions_1_1_i_push_notification.html',1,'PushNotification::Plugin::Abstractions']]],
+  ['ipushnotificationlistener',['IPushNotificationListener',['../interface_push_notification_1_1_plugin_1_1_i_push_notification_listener.html',1,'PushNotification::Plugin']]],
   ['isearchprovider',['ISearchProvider',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_search_provider.html',1,'Xamarin::Forms::CommonCore']]],
   ['isnackbar',['ISnackBar',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_snack_bar.html',1,'Xamarin::Forms::CommonCore']]],
   ['isqlitedb',['ISqliteDb',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sqlite_db.html',1,'Xamarin::Forms::CommonCore']]]

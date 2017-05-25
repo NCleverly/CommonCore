@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{E713B9FE-0265-4DCD-96C0-E3818362C5F2}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Xamarin.Forms.CommonCore.PushNotifications</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\DeviceType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IPushNotification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\IPushNotificationListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\PushNotificationKeys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Abstractions\PushNotificationNotInitializedException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CrossPushNotification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Android\PushNotificationGcmListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Android\PushNotificationImplementation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Android\PushNotificationInstanceIDListenerService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Android\PushNotificationRegistrationIntentService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Android\PushNotificationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Android\PushNotificationsReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Android\AppUpdateReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IOS\IPushNotificationListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IOS\PushNotificationImplementation.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Android\" />
+    <Folder Include="$(MSBuildThisFileDirectory)IOS\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Abstractions\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)readme.txt" />
+  </ItemGroup>
+</Project>

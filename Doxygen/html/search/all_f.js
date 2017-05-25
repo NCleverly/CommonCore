@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['abstractions',['Abstractions',['../namespace_push_notification_1_1_plugin_1_1_abstractions.html',1,'PushNotification::Plugin']]],
   ['pagesizechanged',['PageSizeChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a67f60e0261d420d30ebcf56aee8568d7',1,'Xamarin::Forms::CommonCore::AbsoluteLayoutPage']]],
   ['pagetitle',['pageTitle',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1592353712582a5191058adb5c1492dd',1,'Xamarin.Forms.CommonCore.ObservableViewModel.pageTitle()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1e49a72465d315c10dd181361abc7fcd',1,'Xamarin.Forms.CommonCore.ObservableViewModel.PageTitle()']]],
   ['parent',['Parent',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_popup.html#a0110f5beda67d63cdc3e4fc848a3f33b',1,'Xamarin.Forms.CommonCore.IPopup.Parent()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#a1b107508c0997e2edf5b5ce30f5b7dc8',1,'Xamarin.Forms.CommonCore.PopupView.Parent()']]],
@@ -18,6 +19,7 @@ var searchData=
   ['pingurl',['PingUrl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#af27e202f6418551c420681353837a5f2',1,'Xamarin.Forms.CommonCore.HttpService.PingUrl()'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#ac6b7290f1d7e5075ac1b6c7263b39390',1,'Xamarin.Forms.CommonCore.IHttpService.PingUrl()']]],
   ['placecall',['PlaceCall',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_phone_call.html#a8134c61f1b8cff100f79f50d526e07f8',1,'Xamarin::Forms::CommonCore::IPhoneCall']]],
   ['placecallwithcallback',['PlaceCallWithCallBack',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_phone_call.html#a96dfbd06a1bad42fc70fb6384c8c5b36',1,'Xamarin::Forms::CommonCore::IPhoneCall']]],
+  ['plugin',['Plugin',['../namespace_push_notification_1_1_plugin.html',1,'PushNotification']]],
   ['popto',['PopTo',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#abc59e384a32c18165ced5246a1204dc5',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['popupview',['PopupView',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html',1,'Xamarin::Forms::CommonCore']]],
   ['post_3c_20t_20_3e',['Post&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a5bd22fa8f13f4c94d6eacca230bea24d',1,'Xamarin.Forms.CommonCore.HttpService.Post&lt; T &gt;()'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#a2c646baf10b3692bc0f5546dee8b7368',1,'Xamarin.Forms.CommonCore.IHttpService.Post&lt; T &gt;()']]],
@@ -30,6 +32,18 @@ var searchData=
   ['propertychangedbehavior_2ecs',['PropertyChangedBehavior.cs',['../_property_changed_behavior_8cs.html',1,'']]],
   ['propertychangedevent',['PropertyChangedEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#ad266f84d10b038e0b0752c8d6f513585',1,'Xamarin::Forms::CommonCore::RelayCommand']]],
   ['protectedstore',['protectedStore',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a3fc733593e00b7e02f91f3557e9239fb',1,'Xamarin::Forms::CommonCore::AccountService']]],
+  ['pushnotification',['PushNotification',['../namespace_push_notification.html',1,'']]],
+  ['pushnotificationgcmlistener_2ecs',['PushNotificationGcmListener.cs',['../_push_notification_gcm_listener_8cs.html',1,'']]],
+  ['pushnotificationimplementation_2ecs',['PushNotificationImplementation.cs',['../_android_2_push_notification_implementation_8cs.html',1,'(Global Namespace)'],['../_i_o_s_2_push_notification_implementation_8cs.html',1,'(Global Namespace)']]],
+  ['pushnotificationinstanceidlistenerservice_2ecs',['PushNotificationInstanceIDListenerService.cs',['../_push_notification_instance_i_d_listener_service_8cs.html',1,'']]],
+  ['pushnotificationkey',['PushNotificationKey',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html',1,'PushNotification::Plugin::Abstractions']]],
+  ['pushnotificationkeys_2ecs',['PushNotificationKeys.cs',['../_push_notification_keys_8cs.html',1,'']]],
+  ['pushnotificationlistener',['PushNotificationListener',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a4cc53baaaf029700519103c426455a0b',1,'PushNotification::Plugin::CrossPushNotification']]],
+  ['pushnotificationnotinitializedexception',['PushNotificationNotInitializedException',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_not_initialized_exception.html',1,'PushNotification.Plugin.Abstractions.PushNotificationNotInitializedException'],['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_not_initialized_exception.html#a6102014d91e82f98970f8884a207b77b',1,'PushNotification.Plugin.Abstractions.PushNotificationNotInitializedException.PushNotificationNotInitializedException()'],['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_not_initialized_exception.html#a2ece1df63715c33980e67a6f0d4183bd',1,'PushNotification.Plugin.Abstractions.PushNotificationNotInitializedException.PushNotificationNotInitializedException(string message)']]],
+  ['pushnotificationnotinitializedexception_2ecs',['PushNotificationNotInitializedException.cs',['../_push_notification_not_initialized_exception_8cs.html',1,'']]],
+  ['pushnotificationregistrationintentservice_2ecs',['PushNotificationRegistrationIntentService.cs',['../_push_notification_registration_intent_service_8cs.html',1,'']]],
+  ['pushnotificationservice_2ecs',['PushNotificationService.cs',['../_push_notification_service_8cs.html',1,'']]],
+  ['pushnotificationsreceiver_2ecs',['PushNotificationsReceiver.cs',['../_push_notifications_receiver_8cs.html',1,'']]],
   ['put_3c_20t_20_3e',['Put&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#ab9b23de399e0719ec89cdee048702b24',1,'Xamarin.Forms.CommonCore.HttpService.Put&lt; T &gt;()'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#aea9f43a20c77fbb61acca3bdf44197af',1,'Xamarin.Forms.CommonCore.IHttpService.Put&lt; T &gt;()']]],
   ['pwkey',['pwKey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a9ef883771813d2eef81f0b5dff233922',1,'Xamarin::Forms::CommonCore::AccountService']]]
 ];
