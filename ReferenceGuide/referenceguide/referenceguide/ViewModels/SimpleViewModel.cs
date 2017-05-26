@@ -22,8 +22,25 @@ namespace referenceguide
 		private string firstName;
 		private string pushButtonLabel;
         private long phoneNumber;
+        private int selectedRank;
+        private string selectedRankText;
 		private ObservableCollection<State> states;
 
+        public int SelectedRank
+        {
+			get { return selectedRank; }
+			set 
+            { 
+                SetProperty(ref selectedRank, value);
+                var plural = value == 1 ? "star" : "stars";
+                SelectedRankText = $"You selected {value} {plural}";
+            }
+        }
+        public string SelectedRankText
+        {
+			get { return selectedRankText; }
+			set { SetProperty(ref selectedRankText, value); }
+        }
         public long PhoneNumber
         {
             get { return phoneNumber; }

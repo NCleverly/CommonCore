@@ -49,7 +49,10 @@ Step 1:
     create a config.qa.json and config.prod.json file.
 
     FYI: 
-        HTTPSettings Handler Options:  "Managed", "CFNetwork", "NSURLSession", "ModernHttpClient"
+        HTTPSettings Handler Options:  
+                IOS -> "Managed", "CFNetwork", "NSURLSession", "ModernHttpClient"
+                DROID -> "Managed", "AndroidClientHandler", "ModernHttpClient"
+
         HttpTimeOut: zero means there is no timeout
 
    

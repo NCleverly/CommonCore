@@ -17,7 +17,6 @@ var searchData=
   ['basetabbedpage_2ecs',['BaseTabbedPage.cs',['../_base_tabbed_page_8cs.html',1,'']]],
   ['basetabbedpagerenderer_2edroid_2ecs',['BaseTabbedPageRenderer.Droid.cs',['../_base_tabbed_page_renderer_8_droid_8cs.html',1,'']]],
   ['basetabbedpagerenderer_2eios_2ecs',['BaseTabbedPageRenderer.IOS.cs',['../_base_tabbed_page_renderer_8_i_o_s_8cs.html',1,'']]],
-  ['behavior5',['behavior5',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#a4b0a9724560d4b25bcd0348b9d8efde1',1,'Xamarin::Forms::CommonCore::RankingControl']]],
   ['bindablepicker',['BindablePicker',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html',1,'Xamarin.Forms.CommonCore.BindablePicker'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a526a68b71997e1e77688a01d0affe6c5',1,'Xamarin.Forms.CommonCore.BindablePicker.BindablePicker()']]],
   ['bindablepicker_2ecs',['BindablePicker.cs',['../_bindable_picker_8cs.html',1,'']]],
   ['bindingpath',['BindingPath',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a7a7f6204de498193ed11e8b330ac2bcf',1,'Xamarin::Forms::CommonCore::BindablePicker']]],

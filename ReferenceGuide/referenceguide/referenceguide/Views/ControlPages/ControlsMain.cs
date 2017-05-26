@@ -124,11 +124,27 @@ namespace referenceguide
 			   })
 			};
 
+            var ranking = new RankingControl()
+            {
+                Margin=5,
+                Count=5,
+                UnSelectedImage="star_outline.png",
+                SelectedImage = "star_selected.png",
+            };
+            ranking.SetBinding(RankingControl.SelectedRankProperty,new Binding("SelectedRank",BindingMode.TwoWay));
+
+            var starLbl = new Label() 
+            { 
+                Margin = 5,
+                HorizontalOptions = LayoutOptions.Center 
+            };
+            starLbl.SetBinding(Label.TextProperty,"SelectedRankText");
+
             var stack = new StackLayout()
             {
                 Padding = 20,
                 Spacing = 10,
-                Children = { listPage, md, searchPage, popup, bckImage }
+                Children = { listPage, md, searchPage, popup, bckImage, ranking, starLbl }
             };
 
             Content = new ScrollView()

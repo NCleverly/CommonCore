@@ -7,7 +7,54 @@ namespace Xamarin.Forms.CommonCore
 {
     public class RankingControl : StackLayout, IDisposable
     {
-        private StarBehavior behavior5;
+
+        private List<Grid> starList;
+        public List<Grid> StarList
+        {
+            get { return starList ?? (starList = new List<Grid>()); }
+            set { starList = value; }
+        }
+
+        public static readonly BindableProperty CountProperty =
+        BindableProperty.Create("Count",
+                                typeof(int),
+                                typeof(RankingControl),
+                                5);
+
+        public int Count
+        {
+            get { return (int)GetValue(CountProperty); }
+            set 
+            { 
+                SetValue(CountProperty, value);
+                InitControl();
+            }
+        }
+
+        public static readonly BindableProperty UnSelectedImageProperty =
+                BindableProperty.Create("UnSelectedImage",
+                                        typeof(string),
+                                        typeof(RankingControl),
+                                        null);
+
+        public string UnSelectedImage
+        {
+            get { return (string)GetValue(UnSelectedImageProperty); }
+            set { SetValue(UnSelectedImageProperty, value); }
+        }
+
+
+        public static readonly BindableProperty SelectedImageProperty =
+                BindableProperty.Create("SelectedImage",
+                                        typeof(string),
+                                        typeof(RankingControl),
+                                        null);
+
+        public string SelectedImage
+        {
+            get { return (string)GetValue(SelectedImageProperty); }
+            set { SetValue(SelectedImageProperty, value); }
+        }
 
         public static readonly BindableProperty SelectedRankProperty =
             BindableProperty.Create("SelectedRank",
@@ -22,91 +69,69 @@ namespace Xamarin.Forms.CommonCore
             {
 
                 this.SetValue(SelectedRankProperty, value);
-
-                if (behavior5 != null)
-                    behavior5.Rating = value;
             }
         }
 
         public RankingControl()
         {
             this.HeightRequest = 44;
-            var behavior1 = new StarBehavior() { GroupName = "WMAStar" };
-            var gd1 = new Grid();
-            var unSelectedImg1 = new Image() { Source = "star_outline.png" };
-            var selectedImg1 = new Image() { Source = "star_selected.png" };
-            selectedImg1.SetBinding(Image.IsVisibleProperty, new Binding(source: behavior1, path: "IsStarred"));
-            gd1.Children.Add(unSelectedImg1, 0, 0);
-            gd1.Children.Add(selectedImg1, 0, 0);
-            gd1.Behaviors.Add(behavior1);
-
-            var behavior2 = new StarBehavior() { GroupName = "WMAStar" };
-            var gd2 = new Grid();
-            var unSelectedImg2 = new Image() { Source = "star_outline.png" };
-            var selectedImg2 = new Image() { Source = "star_selected.png" };
-            selectedImg2.SetBinding(Image.IsVisibleProperty, new Binding(source: behavior2, path: "IsStarred"));
-            gd2.Children.Add(unSelectedImg2, 0, 0);
-            gd2.Children.Add(selectedImg2, 0, 0);
-            gd2.Behaviors.Add(behavior2);
-
-            var behavior3 = new StarBehavior() { GroupName = "WMAStar" };
-            var gd3 = new Grid();
-            var unSelectedImg3 = new Image() { Source = "star_outline.png" };
-            var selectedImg3 = new Image() { Source = "star_selected.png" };
-            selectedImg3.SetBinding(Image.IsVisibleProperty, new Binding(source: behavior3, path: "IsStarred"));
-            gd3.Children.Add(unSelectedImg3, 0, 0);
-            gd3.Children.Add(selectedImg3, 0, 0);
-            gd3.Behaviors.Add(behavior3);
-
-            var behavior4 = new StarBehavior() { GroupName = "WMAStar" };
-            var gd4 = new Grid();
-            var unSelectedImg4 = new Image() { Source = "star_outline.png" };
-            var selectedImg4 = new Image() { Source = "star_selected.png" };
-            selectedImg4.SetBinding(Image.IsVisibleProperty, new Binding(source: behavior4, path: "IsStarred"));
-            gd4.Children.Add(unSelectedImg4, 0, 0);
-            gd4.Children.Add(selectedImg4, 0, 0);
-            gd4.Behaviors.Add(behavior4);
-
-            behavior5 = new StarBehavior() { GroupName = "WMAStar" };
-            var gd5 = new Grid();
-            var unSelectedImg5 = new Image() { Source = "star_outline.png" };
-            var selectedImg5 = new Image() { Source = "star_selected.png" };
-            selectedImg5.SetBinding(Image.IsVisibleProperty, new Binding(source: behavior5, path: "IsStarred"));
-            gd5.Children.Add(unSelectedImg5, 0, 0);
-            gd5.Children.Add(selectedImg5, 0, 0);
-            gd5.Behaviors.Add(behavior5);
-
-            behavior5.PropertyChanged += RatingchangedEvent;
-
             this.Orientation = StackOrientation.Horizontal;
-            this.Children.Add(gd1);
-            this.Children.Add(gd2);
-            this.Children.Add(gd3);
-            this.Children.Add(gd4);
-            this.Children.Add(gd5);
+        }
+
+        public void InitControl()
+        {
+            foreach (var star in StarList)
+            {
+                var behavior = (StarBehavior)star.Behaviors[0];
+                behavior.PropertyChanged -= RatingchangedEvent;
+                star.Behaviors.Remove(behavior);
+                Children.Remove(star);
+            }
+
+            for (int x = 0; x < this.Count; x++)
+            {
+                var behavior = new StarBehavior() { GroupName = "starGrouping" };
+                behavior.Index = (x + 1);
+                var gd = new Grid();
+                var unSelectedImg = new Image();
+                unSelectedImg.SetBinding(Image.SourceProperty, new Binding(source: this, path: "UnSelectedImage"));
+                var selectedImg = new Image();
+                selectedImg.SetBinding(Image.SourceProperty, new Binding(source: this, path: "SelectedImage"));
+                selectedImg.SetBinding(Image.IsVisibleProperty, new Binding(source: behavior, path: "IsStarred"));
+                gd.Children.Add(unSelectedImg, 0, 0);
+                gd.Children.Add(selectedImg, 0, 0);
+
+                if (x == (Count - 1))
+                    behavior.PropertyChanged += RatingchangedEvent;
+
+                gd.Behaviors.Add(behavior);
+                Children.Add(gd);
+            }
         }
 
         private void RatingchangedEvent(object sender, PropertyChangedEventArgs args)
         {
             if (args.PropertyName == "Rating")
             {
-                SelectedRank = behavior5.Rating;
+                var behavior = (StarBehavior)sender;
+                SelectedRank = behavior.Rating;
             }
         }
         ~RankingControl()
         {
-            if (behavior5 != null)
-                behavior5.PropertyChanged -= RatingchangedEvent;
+            var behavior = (StarBehavior)StarList[Count - 1].Behaviors[0];
+            behavior.PropertyChanged -= RatingchangedEvent;
         }
         public void Dispose()
         {
-            if (behavior5 != null)
-                behavior5.PropertyChanged -= RatingchangedEvent;
+			var behavior = (StarBehavior)StarList[Count - 1].Behaviors[0];
+			behavior.PropertyChanged -= RatingchangedEvent;
         }
     }
 
     public class StarBehavior : Behavior<View>
     {
+        public int Index { get; set; }
         TapGestureRecognizer tapRecognizer;
         static List<StarBehavior> defaultBehaviors = new List<StarBehavior>();
         static Dictionary<string, List<StarBehavior>> starGroups = new Dictionary<string, List<StarBehavior>>();
@@ -214,8 +239,7 @@ namespace Xamarin.Forms.CommonCore
                 }
 
                 bool itemReached = false;
-                int count = 1, position = 0;
-                // all positions to left IsStarred = true and all position to the right is false
+
                 foreach (var item in behaviors)
                 {
                     if (item != behavior && !itemReached)
@@ -226,13 +250,12 @@ namespace Xamarin.Forms.CommonCore
                     {
                         itemReached = true;
                         item.IsStarred = true;
-                        position = count;
                     }
                     if (item != behavior && itemReached)
                         item.IsStarred = false;
 
-                    item.Rating = position;
-                    count++;
+                    item.Rating = behavior.Index;
+
                 }
 
             }

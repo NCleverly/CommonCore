@@ -195,6 +195,35 @@
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\SnackBar.IOS.cs">
       <DependentUpon>ISnackBar.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Abstractions\DeviceType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Abstractions\IPushNotification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Abstractions\IPushNotificationListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Abstractions\PushNotificationKeys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Abstractions\PushNotificationNotInitializedException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\AppUpdateReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\PushNotificationGcmListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\PushNotificationImplementation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\PushNotificationInstanceIDListenerService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\PushNotificationRegistrationIntentService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\PushNotificationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\PushNotificationsReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\IOS\IPushNotificationListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\IOS\PushNotificationImplementation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\CrossPushNotification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\FABControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\FABControlRenderer.Droid.cs">
+      <DependentUpon>..\..\MaterialDesign\FABControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\FABControlRenderer.IOS.cs">
+      <DependentUpon>..\..\MaterialDesign\FABControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\FTEControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\FTEControlRenderer.Droid.cs">
+      <DependentUpon>..\..\MaterialDesign\FTEControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\FTEControlRenderer.IOS.cs">
+      <DependentUpon>..\..\MaterialDesign\FTEControl.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -215,10 +244,16 @@
     <Folder Include="$(MSBuildThisFileDirectory)Pages\Base\" />
     <Folder Include="$(MSBuildThisFileDirectory)Logging\" />
     <Folder Include="$(MSBuildThisFileDirectory)Utilities\" />
+    <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\" />
+    <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\Abstractions\" />
+    <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\Android\" />
+    <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\IOS\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />
     <None Include="$(MSBuildThisFileDirectory)AzureNotifications\readme.txt" />
     <None Include="$(MSBuildThisFileDirectory)Config\config.dev.txt" />
+    <None Include="$(MSBuildThisFileDirectory)PushNotifications\readme.txt" />
   </ItemGroup>
 </Project>

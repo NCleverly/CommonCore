@@ -76,6 +76,12 @@ namespace referenceguide
 				IconSource = "index24.png",
 				TargetType = typeof(ControlsMain)
 			});
+			lst.Add(new SlidingPageItem
+			{
+				Title = "Authentication",
+				IconSource = "index24.png",
+				TargetType = typeof(AuthenticationMain)
+			});
 			MasterPageItems = lst.ToObservable();
 		}
 	}

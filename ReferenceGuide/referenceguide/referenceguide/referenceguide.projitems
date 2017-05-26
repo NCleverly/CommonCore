@@ -46,6 +46,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SlidingViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\SlidingPageItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Views\DependencyPages\PhonePage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Views\Authentication\AuthenticationMain.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AuthenticationViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Views\" />
@@ -64,6 +66,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Services\">
     </Folder>
     <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Views\Authentication\" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

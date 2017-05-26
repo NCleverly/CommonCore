@@ -163,7 +163,7 @@ namespace referenceguide
 			this.IsLoadingHUD = false;
 			if (result.Success)
 			{
-				RandomUsers = result.Response.results.ToRandomUserCollection().ToObservable();
+                RandomUsers = result.Response.results.ToRandomUserObservableCollection();
 			}
 
 		}

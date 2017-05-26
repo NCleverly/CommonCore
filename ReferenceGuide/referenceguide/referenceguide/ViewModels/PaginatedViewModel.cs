@@ -55,7 +55,7 @@ namespace referenceguide
 			this.IsLoadingHUD = false;
 			if (result.Success)
 			{
-                result.Response.results.ToRandomUserCollection().ForEach((item) => { RandomUsers.Add(item); });
+                result.Response.results.ToRandomUserList().ForEach((item) => { RandomUsers.Add(item); });
 			}
 
 		}

@@ -4,6 +4,7 @@ using Newtonsoft.Json;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using Humanizer;
+using System.Collections.ObjectModel;
 
 namespace referenceguide
 {
@@ -111,7 +112,28 @@ namespace referenceguide
 
 	public static class RootObjectExtension
 	{
-		public static List<RandomUser> ToRandomUserCollection(this List<Result> list)
+		public static ObservableCollection<RandomUser> ToRandomUserObservableCollection(this List<Result> list)
+		{
+			var collection = new ObservableCollection<RandomUser>();
+			foreach (var item in list)
+			{
+
+				collection.Add(new RandomUser()
+				{
+					FirstName = item.name.first,
+					LastName = item.name.last,
+					ImageUrl = item.picture.medium,
+					Address = item.location.street,
+					City = item.location.city,
+					State = item.location.state,
+					Zip = item.location.postcode,
+					Phone = item.cell
+				});
+			}
+			return collection;
+		}
+
+		public static List<RandomUser> ToRandomUserList(this List<Result> list)
 		{
 			var collection = new List<RandomUser>();
 			foreach (var item in list)
