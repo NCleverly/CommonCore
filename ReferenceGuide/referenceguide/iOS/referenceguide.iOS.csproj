@@ -300,7 +300,7 @@
     <BundleResource Include="Resources\star_outline.png" />
     <BundleResource Include="Resources\star_selected.png" />
   </ItemGroup>
-  <Import Project="..\..\..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\..\Core Projects\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
+  <Import Project="..\..\..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems" Label="Shared" Condition="Exists('..\..\..\Xamarin.Forms.CommonCore\Xamarin.Forms.CommonCore.projitems')" />
   <Import Project="..\referenceguide\referenceguide.projitems" Label="Shared" Condition="Exists('..\referenceguide\referenceguide.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.5.239-pre3\build\netstandard1.0\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.5.239-pre3\build\netstandard1.0\Xamarin.Forms.targets')" />
