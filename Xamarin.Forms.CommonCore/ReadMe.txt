@@ -7,7 +7,12 @@ Android SDK Manager - > Extras
  Mac IDE - > Add-ins - Gallery - IDE Extensions
  - Nuget Package Explorer
  - Nuget Package Management Extensions
-  
+
+ ******** QUICKSTART *********
+ nuget packets listed below can be imported using the following:
+ https://www.nuget.org/packages/Xamarin.Form.CommonCore.Droid/1.0.0
+ https://www.nuget.org/packages/Xamarin.Form.CommonCore.IOS/1.0.0
+ *****************************
 
 Required Nuget Installs
  - Unity /* Microsoft's dependency injection framework */
