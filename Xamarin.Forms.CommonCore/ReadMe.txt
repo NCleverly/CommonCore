@@ -23,9 +23,9 @@ Required Nuget Installs
  - Xamarin.Auth
  - Platform Specific Installs:
     - iOS   -> BTProgressHud
+            -> TTGSnackbar
          	-> Xamarin.Azure.NotificationHubs.iOS
     - Droid -> AndHud
-            -> TTGSnackbar
             -> Refractored.FloatingActionButton
             -> Xamarin.Azure.NotificationHubs.Android
             -> Xamarin.GooglePlayServices.Gcm
