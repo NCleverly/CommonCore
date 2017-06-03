@@ -161,10 +161,11 @@ namespace Xamarin.Forms.CommonCore
 #if __ANDROID__
 		public  int AppIcon { get; set; }
         public int SearchView { get; set; }
+        public string DeviceToken { get; set; }
 #endif
 
 #if __IOS__
-        public NSData DeviceToken { get; set; }
+		public NSData DeviceToken { get; set; }
 #endif
 
         private void Load()

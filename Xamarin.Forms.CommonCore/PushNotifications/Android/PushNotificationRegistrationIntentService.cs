@@ -14,6 +14,7 @@ using Android.Gms.Iid;
 using Android.Gms.Gcm;
 using PushNotification.Plugin.Abstractions;
 using Android.Support.V4.Content;
+using Xamarin.Forms.CommonCore;
 
 namespace PushNotification.Plugin
 {
@@ -48,6 +49,8 @@ namespace PushNotification.Plugin
 
                     string token = instanceID.GetToken(CrossPushNotification.SenderId,
                         GoogleCloudMessaging.InstanceIdScope, null);
+
+                    AppData.Instance.DeviceToken = token;
 
                     CrossPushNotification.PushNotificationListener.OnRegistered(token, DeviceType.Android);
                     PushNotificationImplementation.StoreRegistrationId(Android.App.Application.Context, token);

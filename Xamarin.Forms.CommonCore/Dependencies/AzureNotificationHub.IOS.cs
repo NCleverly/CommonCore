@@ -12,27 +12,34 @@ namespace Xamarin.Forms.CommonCore
     {
         public static SBNotificationHub HUB;
 
-        public void RegisterNotificationHub(string registrationId)
+        public void RegisterNotificationHub()
         {
+            if (AppData.Instance.DeviceToken == null)
+            {
+                "Push notification token has not been set".ConsoleWrite("Missing Token", true);
+                return;
+            }
+            
+            var registrationId = AppData.Instance.DeviceToken;
+
             if (AzureNotificationHub.HUB == null)
                 AzureNotificationHub.HUB = new SBNotificationHub(AppData.Instance.AzureListenConnection, AppData.Instance.AzureHubName);
 
-			//var deviceToken = NSData.FromString($"<{registrationId}>");
 
-			AzureNotificationHub.HUB.UnregisterAllAsync(AppData.Instance.DeviceToken, (error) =>
-								{
-									if (error != null)
-									{
-										Console.WriteLine("Error calling Unregister: {0}", error.ToString());
-										return;
-									}
-									NSSet tags = new NSSet(AppData.Instance.NotificationTags.ToArray());
-									AzureNotificationHub.HUB.RegisterNativeAsync(AppData.Instance.DeviceToken, tags, (errorCallback) =>
-													{
-														if (errorCallback != null)
-															Console.WriteLine("RegisterNativeAsync error: " + errorCallback.ToString());
-													});
-								});
+            AzureNotificationHub.HUB.UnregisterAllAsync(registrationId, (error) =>
+            {
+                if (error != null)
+                {
+                    Console.WriteLine("Error calling Unregister: {0}", error.ToString());
+                    return;
+                }
+                NSSet tags = new NSSet(AppData.Instance.NotificationTags.ToArray());
+                AzureNotificationHub.HUB.RegisterNativeAsync(registrationId, tags, (errorCallback) =>
+                {
+                    if (errorCallback != null)
+                        Console.WriteLine("RegisterNativeAsync error: " + errorCallback.ToString());
+                });
+            });
         }
 
     }
