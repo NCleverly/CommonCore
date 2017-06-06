@@ -26,6 +26,7 @@ Required Nuget Installs
  - Xamarin.FFImageLoading.Forms
  - Xamarin.FFImageLoading.Transformations
  - Xamarin.Auth
+ - Xamarin.Auth.XamarinForms
  - Platform Specific Installs:
     - iOS   -> BTProgressHud
             -> TTGSnackbar
@@ -61,7 +62,7 @@ Step 1:
         HttpTimeOut: zero means there is no timeout
 
    
-Step 2 (enabling push notifications) -> see readme under AzureNotifications
+Step 2 (enabling push notifications) -> see readme under PushNotifications
 
 *** Search View ***
 IOS uses the Search bar as a control in the UI but Android generally expects it in the Actionbar.

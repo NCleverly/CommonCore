@@ -6,7 +6,8 @@ using Android.Content;
 using Android.OS;
 using Android.Support.V4.App;
 using Xamarin.Forms.CommonCore;
-using Droid = Android;
+using App = Android.App;
+using Content = Android.Content;
 
 [assembly: Xamarin.Forms.Dependency(typeof(LocalNotify))]
 namespace Xamarin.Forms.CommonCore
@@ -32,7 +33,7 @@ namespace Xamarin.Forms.CommonCore
             }
 
             // Construct a back stack for cross-task navigation:
-            var stackBuilder = Droid.App.TaskStackBuilder.Create(Ctx);
+            var stackBuilder = App.TaskStackBuilder.Create(Ctx);
             stackBuilder.AddParentStack(Java.Lang.Class.FromType(LocalNotify.MainType));
             stackBuilder.AddNextIntent(resultIntent);
 
@@ -74,7 +75,7 @@ namespace Xamarin.Forms.CommonCore
             }
             else
             {
-                return Ctx.PackageManager.GetApplicationInfo(Ctx.PackageName, Droid.Content.PM.PackageInfoFlags.MetaData).Icon;
+                return Ctx.PackageManager.GetApplicationInfo(Ctx.PackageName, Content.PM.PackageInfoFlags.MetaData).Icon;
             }
         }
     }

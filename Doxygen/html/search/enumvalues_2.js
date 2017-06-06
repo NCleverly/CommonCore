@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ios',['iOS',['../namespace_push_notification_1_1_plugin_1_1_abstractions.html#a1ce4369c799a8f4045fa0c9c7d4820a3a1bdf605991920db11cbdf8508204c4eb',1,'PushNotification::Plugin::Abstractions']]]
+  ['facebook',['Facebook',['../namespace_xamarin_1_1_forms_1_1_common_core.html#a8d7dff76827bcf514a260783d2c15168ad85544fce402c7a2a96a48078edaf203',1,'Xamarin::Forms::CommonCore']]]
 ];

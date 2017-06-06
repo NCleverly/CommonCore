@@ -5,7 +5,7 @@ using Android.Graphics.Drawables;
 using Android.Graphics.Drawables.Shapes;
 using Android.Support.V4.View;
 using Android.Util;
-using Droid = Android;
+using Attribute = Android.Resource.Attribute;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
@@ -78,10 +78,10 @@ namespace Xamarin.Forms.CommonCore
 
          
 			int[][] states = new int[][] {
-				new int[] { Droid.Resource.Attribute.StateEnabled }, // enabled
-                new int[] {-Droid.Resource.Attribute.StateEnabled }, // disabled
-                new int[] {-Droid.Resource.Attribute.StateChecked }, // unchecked
-                new int[] { Droid.Resource.Attribute.StatePressed }  // pressed
+				new int[] { Attribute.StateEnabled }, // enabled
+                new int[] {-Attribute.StateEnabled }, // disabled
+                new int[] {-Attribute.StateChecked }, // unchecked
+                new int[] { Attribute.StatePressed }  // pressed
             };
 			int[] colors = new int[] {
 				caller.TextColor.ToAndroid(),

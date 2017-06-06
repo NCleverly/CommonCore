@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['normal',['Normal',['../namespace_xamarin_1_1_forms_1_1_common_core_1_1_material_design.html#a84f0950ee1269c9faac3dca329e5f719a960b44c579bc2f6818d2daaf9e4c16f0',1,'Xamarin::Forms::CommonCore::MaterialDesign']]]
+  ['ios',['iOS',['../namespace_push_notification_1_1_plugin_1_1_abstractions.html#a1ce4369c799a8f4045fa0c9c7d4820a3a1bdf605991920db11cbdf8508204c4eb',1,'PushNotification::Plugin::Abstractions']]]
 ];

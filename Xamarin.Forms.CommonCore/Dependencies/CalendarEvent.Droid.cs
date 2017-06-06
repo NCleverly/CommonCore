@@ -2,7 +2,7 @@
 using System;
 using Android.Content;
 using Xamarin.Forms.CommonCore;
-using Droid = Android;
+using Provider = Android.Provider;
 
 [assembly: Xamarin.Forms.Dependency(typeof(CalendarEvent))]
 namespace Xamarin.Forms.CommonCore
@@ -15,14 +15,14 @@ namespace Xamarin.Forms.CommonCore
             try
             {
                 Intent intent = new Intent(Intent.ActionInsert);
-                intent.SetData(Droid.Provider.CalendarContract.Events.ContentUri);
-                intent.PutExtra(Droid.Provider.CalendarContract.ExtraEventBeginTime, CurrentTimeMillis(calEvent.StartTime));
-                intent.PutExtra(Droid.Provider.CalendarContract.EventsColumns.AllDay, false);
-                intent.PutExtra(Droid.Provider.CalendarContract.EventsColumns.HasAlarm, calEvent.HasReminder);
-                intent.PutExtra(Droid.Provider.CalendarContract.EventsColumns.EventLocation, calEvent.Location);
-                intent.PutExtra(Droid.Provider.CalendarContract.EventsColumns.Description, calEvent.Description);
-                intent.PutExtra(Droid.Provider.CalendarContract.ExtraEventEndTime, CurrentTimeMillis(calEvent.EndTime));
-                intent.PutExtra(Droid.Provider.CalendarContract.EventsColumns.Title, calEvent.Title);
+                intent.SetData(Provider.CalendarContract.Events.ContentUri);
+                intent.PutExtra(Provider.CalendarContract.ExtraEventBeginTime, CurrentTimeMillis(calEvent.StartTime));
+                intent.PutExtra(Provider.CalendarContract.EventsColumns.AllDay, false);
+                intent.PutExtra(Provider.CalendarContract.EventsColumns.HasAlarm, calEvent.HasReminder);
+                intent.PutExtra(Provider.CalendarContract.EventsColumns.EventLocation, calEvent.Location);
+                intent.PutExtra(Provider.CalendarContract.EventsColumns.Description, calEvent.Description);
+                intent.PutExtra(Provider.CalendarContract.ExtraEventEndTime, CurrentTimeMillis(calEvent.EndTime));
+                intent.PutExtra(Provider.CalendarContract.EventsColumns.Title, calEvent.Title);
                 Xamarin.Forms.Forms.Context.StartActivity(intent);
 				callback?.Invoke(true);
             }

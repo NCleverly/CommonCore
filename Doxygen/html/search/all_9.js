@@ -2,6 +2,8 @@ var searchData=
 [
   ['iaccountservice',['IAccountService',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_account_service.html',1,'Xamarin::Forms::CommonCore']]],
   ['iaccountservice_2ecs',['IAccountService.cs',['../_i_account_service_8cs.html',1,'']]],
+  ['iauthenticatorservice',['IAuthenticatorService',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_authenticator_service.html',1,'Xamarin::Forms::CommonCore']]],
+  ['iauthenticatorservice_2ecs',['IAuthenticatorService.cs',['../_i_authenticator_service_8cs.html',1,'']]],
   ['iazurenotificationhub',['IAzureNotificationHub',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_azure_notification_hub.html',1,'Xamarin::Forms::CommonCore']]],
   ['iazurenotificationhub_2ecs',['IAzureNotificationHub.cs',['../_i_azure_notification_hub_8cs.html',1,'']]],
   ['ibackgroundtimer',['IBackgroundTimer',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_background_timer.html',1,'Xamarin::Forms::CommonCore']]],
@@ -77,5 +79,7 @@ var searchData=
   ['itemclickcommandproperty',['ItemClickCommandProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#afb1a5463020a817cd5a7c63177d3a194',1,'Xamarin::Forms::CommonCore::ListControl']]],
   ['itemsourcebindablelist',['ItemSourceBindableList',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a4d7d78a40dec930abc664bbd6e128686',1,'Xamarin::Forms::CommonCore::BindablePicker']]],
   ['itemssource',['ItemsSource',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#add5a2b7896badfb1f8c354707a852fee',1,'Xamarin::Forms::CommonCore::BindablePicker']]],
-  ['itemssourceproperty',['ItemsSourceProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a23da0878378b55904d55fd53c6ea128d',1,'Xamarin::Forms::CommonCore::BindablePicker']]]
+  ['itemssourceproperty',['ItemsSourceProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a23da0878378b55904d55fd53c6ea128d',1,'Xamarin::Forms::CommonCore::BindablePicker']]],
+  ['iviewstack',['IViewStack',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_view_stack.html',1,'Xamarin::Forms::CommonCore']]],
+  ['iviewstack_2ecs',['IViewStack.cs',['../_i_view_stack_8cs.html',1,'']]]
 ];

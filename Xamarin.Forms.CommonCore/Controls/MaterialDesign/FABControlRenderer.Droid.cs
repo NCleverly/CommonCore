@@ -6,6 +6,7 @@ using Xamarin.Forms.Platform.Android;
 using com.refractored.fab;
 using Android.Views;
 using System.IO;
+using Ctx = Android.Content.Context;
 using Droid = Android;
 using System.Threading.Tasks;
 using Android.App;
@@ -24,7 +25,8 @@ namespace Xamarin.Forms.CommonCore.MaterialDesign
 		private const int FAB_MINI_FRAME_HEIGHT_WITH_PADDING = (MARGIN_DIPS * 2) + FAB_HEIGHT_MINI;
 		private const int FAB_MINI_FRAME_WIDTH_WITH_PADDING = (MARGIN_DIPS * 2) + FAB_HEIGHT_MINI;
 		private readonly FloatingActionButton fab;
-		private readonly Droid.Content.Context context;
+
+		private readonly Ctx context;
 
 
 		public FABControlRenderer()
@@ -47,7 +49,6 @@ namespace Xamarin.Forms.CommonCore.MaterialDesign
 
 		protected override void OnElementChanged(ElementChangedEventArgs<FABControl> e)
 		{
-
 			base.OnElementChanged(e);
 
 			if (e.OldElement != null || this.Element == null)
@@ -125,6 +126,7 @@ namespace Xamarin.Forms.CommonCore.MaterialDesign
 
 		void SetFabImage(string imageName)
 		{
+  
 			if (!string.IsNullOrWhiteSpace(imageName))
 			{
 				try
@@ -133,8 +135,8 @@ namespace Xamarin.Forms.CommonCore.MaterialDesign
 					{
 						var source = FileImageSource.FromFile(imageName);
 						var handler = source.GetHandler();
-						var bm = await handler.LoadImageAsync(source, this.context);
-						(this.context as Activity).RunOnUiThread(() =>
+						var bm = await handler.LoadImageAsync(source, context);
+						(context as Activity).RunOnUiThread(() =>
 						{
 							fab.SetImageBitmap(bm);
 						});

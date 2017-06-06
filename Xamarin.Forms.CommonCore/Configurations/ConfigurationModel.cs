@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿﻿using System;
 using System.Collections.Generic;
 
 namespace Xamarin.Forms.CommonCore
@@ -19,10 +19,18 @@ namespace Xamarin.Forms.CommonCore
 		public string IOSHttpHandler { get; set; } = "Managed";
 		public string AndroidHttpHandler { get; set; } = "Managed";
 	}
+    public class SocialMedia
+    {
+        public GoogleSettings GoogleSettings { get; set; }
+        public string FaceBookAppId { get; set; }
+    }
 
 	public class GoogleSettings
 	{
 		public string GoogleSenderId { get; set; }
+		public string OAuthClientID_iOS { get; set; }
+		public string OAuthClientID_Android { get; set; }
+		public string OAuthClientID_UWP { get; set; }
 	}
 
 	public class TableName
@@ -59,7 +67,7 @@ namespace Xamarin.Forms.CommonCore
 	{
 		public HttpSettings HttpSettings { get; set; }
 		public AzureSettings AzureSettings { get; set; }
-		public GoogleSettings GoogleSettings { get; set; }
+		public SocialMedia SocialMedia { get; set; }
 		public SqliteSettings SqliteSettings { get; set; }
 		public MobileCenterHockeyApp MobileCenter_HockeyApp { get; set; }
 		public List<WebApi> WebApi { get; set; }

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['iaccountservice',['IAccountService',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_account_service.html',1,'Xamarin::Forms::CommonCore']]],
+  ['iauthenticatorservice',['IAuthenticatorService',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_authenticator_service.html',1,'Xamarin::Forms::CommonCore']]],
   ['iazurenotificationhub',['IAzureNotificationHub',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_azure_notification_hub.html',1,'Xamarin::Forms::CommonCore']]],
   ['ibackgroundtimer',['IBackgroundTimer',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_background_timer.html',1,'Xamarin::Forms::CommonCore']]],
   ['ibluroverlay',['IBlurOverlay',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_blur_overlay.html',1,'Xamarin::Forms::CommonCore']]],
@@ -23,5 +24,6 @@ var searchData=
   ['ipushnotificationlistener',['IPushNotificationListener',['../interface_push_notification_1_1_plugin_1_1_i_push_notification_listener.html',1,'PushNotification::Plugin']]],
   ['isearchprovider',['ISearchProvider',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_search_provider.html',1,'Xamarin::Forms::CommonCore']]],
   ['isnackbar',['ISnackBar',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_snack_bar.html',1,'Xamarin::Forms::CommonCore']]],
-  ['isqlitedb',['ISqliteDb',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sqlite_db.html',1,'Xamarin::Forms::CommonCore']]]
+  ['isqlitedb',['ISqliteDb',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sqlite_db.html',1,'Xamarin::Forms::CommonCore']]],
+  ['iviewstack',['IViewStack',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_view_stack.html',1,'Xamarin::Forms::CommonCore']]]
 ];

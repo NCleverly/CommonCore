@@ -4,7 +4,7 @@ using Android.Graphics.Drawables;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using Droid = Android;
+using Graphics = Android.Graphics;
 using Android.Views;
 
 [assembly: ExportEffect(typeof(ViewShadow), "ViewShadow")]
@@ -19,7 +19,7 @@ namespace Xamarin.Forms.CommonCore
 			{
 				var listView = Control as global::Android.Widget.ListView;
 				//listView.Divider = null;
-				listView.Divider = new ColorDrawable(Droid.Graphics.Color.Transparent);
+				listView.Divider = new ColorDrawable(Graphics.Color.Transparent);
 				listView.DividerHeight = 0;
 			}
 		}

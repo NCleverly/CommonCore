@@ -6,7 +6,8 @@ using Android.Widget;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using Droid = Android;
+using Views = Android.Views;
+using Graphics = Android.Graphics;
 
 [assembly: ExportRenderer(typeof(EntryUnderline), typeof(EntryUnderlineRenderer))]
 namespace Xamarin.Forms.CommonCore
@@ -29,7 +30,7 @@ namespace Xamarin.Forms.CommonCore
                 var wl = editText.CompoundPaddingLeft;
                 var wr = w - editText.CompoundPaddingRight;
                 var x = aa.Event.GetX();
-                if (wr < x && aa.Event.Action == Droid.Views.MotionEventActions.Down)
+                if (wr < x && aa.Event.Action == Views.MotionEventActions.Down)
                 {
                     formControl.IsPassword = !formControl.IsPassword;
                 }
@@ -42,8 +43,8 @@ namespace Xamarin.Forms.CommonCore
                 //var rightDrawable = formControl.IsPassword == true ? GetDrawable("view.png") : null;
                 //editText.SetCompoundDrawablesWithIntrinsicBounds(GetDrawable(formControl.Icon)?.Target as Drawable, null, rightDrawable?.Target as Drawable, null);
                 editText.CompoundDrawablePadding = 20;
-                editText.Gravity = Droid.Views.GravityFlags.Bottom;
-                editText.Background.Mutate().SetColorFilter(formControl.EntryColor.ToAndroid(), Droid.Graphics.PorterDuff.Mode.SrcAtop);
+                editText.Gravity = Views.GravityFlags.Bottom;
+                editText.Background.Mutate().SetColorFilter(formControl.EntryColor.ToAndroid(), Graphics.PorterDuff.Mode.SrcAtop);
             }
         }
 
@@ -52,7 +53,7 @@ namespace Xamarin.Forms.CommonCore
             var img = fileName.Replace(".png", "");
             var id = GetResourceIdByName(img);
             var drawable = new WeakReference((Drawable)Resources.GetDrawable(id));
-            ((Drawable)drawable.Target).SetColorFilter(formControl.EntryColor.ToAndroid(), Droid.Graphics.PorterDuff.Mode.SrcAtop);
+            ((Drawable)drawable.Target).SetColorFilter(formControl.EntryColor.ToAndroid(), Graphics.PorterDuff.Mode.SrcAtop);
             return drawable;
         }
 

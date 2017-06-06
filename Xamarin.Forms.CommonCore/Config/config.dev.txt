@@ -1,4 +1,4 @@
-﻿{
+﻿﻿﻿﻿{
   "AzureSettings": {
     "AzureServiceBusName": "busname",
     "AzureServiceBusUrl": "busurl",
@@ -12,8 +12,14 @@
     "IOSHttpHandler": "ModernHttpClient",
     "AndroidHttpHandler": "ModernHttpClient"
   },
-  "GoogleSettings": {
-    "GoogleSenderId": ""
+  "SocialMedia": {
+    "GoogleSettings": {
+      "GoogleSenderId": "",
+      "OAuthClientID_iOS": "",
+      "OAuthClientID_Android": "",
+      "OAuthClientID_UWP": ""
+    },
+    "FaceBookAppId": ""
   },
   "SqliteSettings": {
     "SQLiteDatabase": "app.db3",

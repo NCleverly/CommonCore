@@ -1,4 +1,4 @@
-﻿using System;
+﻿﻿﻿using System;
 using System.Collections.Generic;
 using System.Net;
 using Microsoft.Practices.Unity;
@@ -126,7 +126,14 @@ namespace Xamarin.Forms.CommonCore
         public string AzureServiceBusName { get; set; }
         public string AzureServiceBusUrl { get; set; }
         public string AzureKey { get; set; }
+
         public string GoogleSenderId { get; set; }
+        public string OAuthClientID_iOS { get; set; }
+		public string OAuthClientID_Android { get; set; }
+        public string OAuthClientID_UWP { get; set; }
+
+        public string FaceBookAppId { get; set; }
+
         public string AzureHubName { get; set; }
         public string AzureListenConnection { get; set; }
 
@@ -203,10 +210,16 @@ namespace Xamarin.Forms.CommonCore
                     IOSHttpHandler = root.HttpSettings.IOSHttpHandler;
                     AndroidHttpHandler = root.HttpSettings.AndroidHttpHandler;
                 }
-                if (root.GoogleSettings != null)
-                {
-                    GoogleSenderId = root.GoogleSettings.GoogleSenderId;
+                if(root.SocialMedia!=null){
+                    if(root.SocialMedia.GoogleSettings!=null){
+						GoogleSenderId = root.SocialMedia.GoogleSettings.GoogleSenderId;
+						OAuthClientID_iOS = root.SocialMedia.GoogleSettings.OAuthClientID_iOS;
+						OAuthClientID_Android = root.SocialMedia.GoogleSettings.OAuthClientID_Android;
+						OAuthClientID_UWP = root.SocialMedia.GoogleSettings.OAuthClientID_UWP;
+                    }
+                    FaceBookAppId = root.SocialMedia.FaceBookAppId;
                 }
+
                 if (root.MobileCenter_HockeyApp != null)
                 {
                     MobileCenter_HockeyAppiOS = root.MobileCenter_HockeyApp.IOSAppId;

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['iaccountservice_2ecs',['IAccountService.cs',['../_i_account_service_8cs.html',1,'']]],
+  ['iauthenticatorservice_2ecs',['IAuthenticatorService.cs',['../_i_authenticator_service_8cs.html',1,'']]],
   ['iazurenotificationhub_2ecs',['IAzureNotificationHub.cs',['../_i_azure_notification_hub_8cs.html',1,'']]],
   ['ibackgroundtimerservice_2ecs',['IBackgroundTimerService.cs',['../_i_background_timer_service_8cs.html',1,'']]],
   ['ibluroverlay_2ecs',['IBlurOverlay.cs',['../_i_blur_overlay_8cs.html',1,'']]],
@@ -19,5 +20,6 @@ var searchData=
   ['ipushnotificationlistener_2ecs',['IPushNotificationListener.cs',['../_abstractions_2_i_push_notification_listener_8cs.html',1,'(Global Namespace)'],['../_i_o_s_2_i_push_notification_listener_8cs.html',1,'(Global Namespace)']]],
   ['isearchprovider_2ecs',['ISearchProvider.cs',['../_i_search_provider_8cs.html',1,'']]],
   ['isnackbar_2ecs',['ISnackBar.cs',['../_i_snack_bar_8cs.html',1,'']]],
-  ['isqlitedb_2ecs',['ISqliteDb.cs',['../_i_sqlite_db_8cs.html',1,'']]]
+  ['isqlitedb_2ecs',['ISqliteDb.cs',['../_i_sqlite_db_8cs.html',1,'']]],
+  ['iviewstack_2ecs',['IViewStack.cs',['../_i_view_stack_8cs.html',1,'']]]
 ];

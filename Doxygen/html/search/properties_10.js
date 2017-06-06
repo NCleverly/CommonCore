@@ -20,6 +20,7 @@ var searchData=
   ['shadowradius',['ShadowRadius',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a8c7abcd94aae6b9a11bd6cb958eb2648',1,'Xamarin::Forms::CommonCore::GradientButton']]],
   ['show',['Show',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#aac727a8366ef04dceb6bffac72164a23',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['size',['Size',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#ab2ef1c885d6ce1ec5ef68899ce422d68',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
+  ['socialmedia',['SocialMedia',['../class_xamarin_1_1_forms_1_1_common_core_1_1_root_object.html#afe3d7e654c1d27e3ca7062ce2a57d4ff',1,'Xamarin::Forms::CommonCore::RootObject']]],
   ['sound',['Sound',['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#a0a9e64737e207d1a7134ccdd1cb812ff',1,'Xamarin::Forms::CommonCore::LocalNotification']]],
   ['sqlitedatabase',['SQLiteDatabase',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html#af0ab7c6b45b37dd53e8097fc528eae5a',1,'Xamarin::Forms::CommonCore::SqliteSettings']]],
   ['sqlitedb',['SqliteDb',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aeb2e3aad6fbbee716144616892c11b90',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['snackorientation',['SnackOrientation',['../namespace_xamarin_1_1_forms_1_1_common_core.html#a52d1e547aa153bc6d2c93d7b63621e5b',1,'Xamarin::Forms::CommonCore']]]
+  ['fabcontrolsize',['FABControlSize',['../namespace_xamarin_1_1_forms_1_1_common_core_1_1_material_design.html#a84f0950ee1269c9faac3dca329e5f719',1,'Xamarin::Forms::CommonCore::MaterialDesign']]]
 ];

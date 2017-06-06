@@ -224,6 +224,20 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\FTEControlRenderer.IOS.cs">
       <DependentUpon>..\..\MaterialDesign\FTEControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IAuthenticatorService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticatorService.cs">
+      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticatorService.Facebook.cs">
+      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticatorService.Google.cs">
+      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IViewStack.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ViewStack.IOS.cs">
+      <DependentUpon>IViewStack.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -236,13 +250,11 @@
     <Folder Include="$(MSBuildThisFileDirectory)Pages\" />
     <Folder Include="$(MSBuildThisFileDirectory)Behaviors\" />
     <Folder Include="$(MSBuildThisFileDirectory)Effects\" />
-    <Folder Include="$(MSBuildThisFileDirectory)AzureNotifications\" />
     <Folder Include="$(MSBuildThisFileDirectory)Configurations\">
     </Folder>
     <Folder Include="$(MSBuildThisFileDirectory)Styles\" />
     <Folder Include="$(MSBuildThisFileDirectory)Interfaces\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\Base\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Logging\" />
     <Folder Include="$(MSBuildThisFileDirectory)Utilities\" />
     <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\" />
     <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\Abstractions\" />
@@ -252,8 +264,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />
-    <None Include="$(MSBuildThisFileDirectory)AzureNotifications\readme.txt" />
     <None Include="$(MSBuildThisFileDirectory)Config\config.dev.txt" />
     <None Include="$(MSBuildThisFileDirectory)PushNotifications\readme.txt" />
+    <None Include="$(MSBuildThisFileDirectory)Services\readme.authentication.txt">
+      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
+    </None>
   </ItemGroup>
 </Project>

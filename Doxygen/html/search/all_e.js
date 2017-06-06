@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['oauthclientid_5fandroid',['OAuthClientID_Android',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#aae878771188aa357e5f35b72ef80b8a1',1,'Xamarin.Forms.CommonCore.AppData.OAuthClientID_Android()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_google_settings.html#a26d1f742f7bf8a61c548746638b8353b',1,'Xamarin.Forms.CommonCore.GoogleSettings.OAuthClientID_Android()']]],
+  ['oauthclientid_5fios',['OAuthClientID_iOS',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#af052fe6152b63eb0d3bfa51c9c6a6ccb',1,'Xamarin.Forms.CommonCore.AppData.OAuthClientID_iOS()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_google_settings.html#aaca13dd2ac56c19a15324000d298f03c',1,'Xamarin.Forms.CommonCore.GoogleSettings.OAuthClientID_iOS()']]],
+  ['oauthclientid_5fuwp',['OAuthClientID_UWP',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#aae576b15d8a0fc313b83a80a0a0a26b8',1,'Xamarin.Forms.CommonCore.AppData.OAuthClientID_UWP()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_google_settings.html#a9e20962811d762b36c6a09095e94f17b',1,'Xamarin.Forms.CommonCore.GoogleSettings.OAuthClientID_UWP()']]],
   ['objectat',['ObjectAt',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a78103a10c2d6c85b59b0102f776d5f94',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['observableobject',['ObservableObject',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_object.html',1,'Xamarin::Forms::CommonCore']]],
   ['observableobject_2ecs',['ObservableObject.cs',['../_observable_object_8cs.html',1,'']]],

@@ -5,7 +5,7 @@ using Android.Content;
 using Android.Widget;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
-using Droid = Android;
+using Net = Android.Net;
 
 [assembly: Xamarin.Forms.Dependency(typeof(MapNavigate))]
 namespace Xamarin.Forms.CommonCore
@@ -18,7 +18,7 @@ namespace Xamarin.Forms.CommonCore
             {
                 var activity = (Activity)Xamarin.Forms.Forms.Context;
                 address = System.Net.WebUtility.UrlEncode(address);
-                var gmmIntentUri = Droid.Net.Uri.Parse("google.navigation:q=" + address);
+                var gmmIntentUri = Net.Uri.Parse("google.navigation:q=" + address);
                 var mapIntent = new Intent(Intent.ActionView, gmmIntentUri);
                 mapIntent.SetPackage("com.google.android.apps.maps");
                 activity.StartActivity(mapIntent);

@@ -68,7 +68,12 @@ namespace Xamarin.Forms.CommonCore
 		private IEncryptionService encryptionService;
 		private ISqliteDb sqliteDb;
         private IBackgroundTimer backgroundTimer;
+        private IAuthenticatorService authenticatorService;
 
+		protected IAuthenticatorService AuthenticatorService
+		{
+			get { return authenticatorService ?? (authenticatorService = InjectionManager.GetService<IAuthenticatorService, AuthenticatorService>(true)); }
+		}
 
 		protected IBackgroundTimer BackgroundTimer
 		{

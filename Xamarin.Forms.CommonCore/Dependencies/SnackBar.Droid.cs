@@ -2,7 +2,7 @@
 using System;
 using Android.App;
 using Android.Support.Design.Widget;
-using Droid = Android;
+using Id = Android.Resource.Id;
 using Xamarin.Forms.Platform.Android;
 using Android.Widget;
 using Android.Content;
@@ -24,9 +24,9 @@ namespace Xamarin.Forms.CommonCore
 				SnackBar.Bar.Dismiss();
 
 			}
-
+          
             var activity = (Activity)Forms.Context; 
-            var view = activity.FindViewById(Droid.Resource.Id.Content);
+            var view = activity.FindViewById(Id.Content);
 
             SnackBar.Bar = Snackbar.Make(view, snack.Text, Snackbar.LengthLong);
 
