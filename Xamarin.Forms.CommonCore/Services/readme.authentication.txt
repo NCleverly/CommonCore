@@ -1,53 +1,19 @@
 ﻿Configuration steps
 
+Developer Google Console OAuth 2 Setup:
+- https://support.google.com/cloud/answer/6158849?hl=en
 
+Facebook Setup:
+- https://developers.facebook.com/apps
 
-
+Microsoft Setup:
+- https://apps.dev.microsoft.com
+- https://blog.xamarin.com/enterprise-apps-made-easy-updated-libraries-apis/
 
 Android:
 
-Create the following class and add it to your Android project.  Update the DataSchemes as appropriate
-    [Activity(Label = "ActivityCustomUrlSchemeInterceptor", NoHistory = true, LaunchMode = LaunchMode.SingleTop)]
-    [
-        IntentFilter
-        (
-            actions: new[] { Android.Content.Intent.ActionView },
-            Categories = new[]
-                    {
-                        Android.Content.Intent.CategoryDefault,
-                        Android.Content.Intent.CategoryBrowsable
-                    },
-            DataSchemes = new[]
-                    {
-                        "com.googleusercontent.apps.senderID-ClientId",
-                        "facebookAppID://localhost/path",
-                    },
-            //DataHost = "localhost",
-            DataPath = "/oauth2redirect"
-        )
-    ]
-    public class ActivityCustomUrlSchemeInterceptor : Activity
-    {
-        string message;
-
-        protected override void OnCreate(Bundle savedInstanceState)
-        {
-            base.OnCreate(savedInstanceState);
-
-            global::Android.Net.Uri uri_android = Intent.Data;
-
-            // Convert iOS NSUrl to C#/netxf/BCL System.Uri - common API
-            Uri uri_netfx = new Uri(uri_android.ToString());
-
-            // load redirect_url Page
-            AuthenticationState.Authenticator.OnPageLoading(uri_netfx);
-
-            this.Finish();
-
-            return;
-        }
-    }   
-
+Copy ActivityCustomUrlSchemeInterceptor.txt found to your Android project and change the extension to cs to enable
+it compilation.  Update the namespace and DataScheme values.
 
 IOS:
 

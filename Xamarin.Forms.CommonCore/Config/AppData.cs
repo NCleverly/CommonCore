@@ -133,6 +133,7 @@ namespace Xamarin.Forms.CommonCore
         public string OAuthClientID_UWP { get; set; }
 
         public string FaceBookAppId { get; set; }
+        public string MicrosoftAppId { get; set; }
 
         public string AzureHubName { get; set; }
         public string AzureListenConnection { get; set; }
@@ -218,6 +219,7 @@ namespace Xamarin.Forms.CommonCore
 						OAuthClientID_UWP = root.SocialMedia.GoogleSettings.OAuthClientID_UWP;
                     }
                     FaceBookAppId = root.SocialMedia.FaceBookAppId;
+                    MicrosoftAppId = root.SocialMedia.MicrosoftAppId;
                 }
 
                 if (root.MobileCenter_HockeyApp != null)

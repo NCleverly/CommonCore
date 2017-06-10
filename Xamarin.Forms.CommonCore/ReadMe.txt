@@ -27,6 +27,10 @@ Required Nuget Installs
  - Xamarin.FFImageLoading.Transformations
  - Xamarin.Auth
  - Xamarin.Auth.XamarinForms
+
+ - Microsoft.Identity.Client /* This is required if you are doing Microsoft Authentication */
+    - Microsoft.Graph
+
  - Platform Specific Installs:
     - iOS   -> BTProgressHud
             -> TTGSnackbar
@@ -63,6 +67,9 @@ Step 1:
 
    
 Step 2 (enabling push notifications) -> see readme under PushNotifications
+
+Step 3 (optional OAuth Setup) -> see readme.authentication.txt nested file under IAuthenticatorService 
+in the Services folder. /* CustomTab for Android has issues with Xamarin.Android.Support version 25 */
 
 *** Search View ***
 IOS uses the Search bar as a control in the UI but Android generally expects it in the Actionbar.

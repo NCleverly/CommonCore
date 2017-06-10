@@ -38,7 +38,6 @@ var searchData=
   ['authenticationtoken_2ecs',['AuthenticationToken.cs',['../_authentication_token_8cs.html',1,'']]],
   ['authenticator',['Authenticator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_state.html#a902f0efc0c409e69c50ebbf68f654986',1,'Xamarin::Forms::CommonCore::AuthenticationState']]],
   ['authenticatorservice',['AuthenticatorService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authenticator_service.html',1,'Xamarin.Forms.CommonCore.AuthenticatorService'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ade0d9f0ec635337d9abb4d6b0cd9de73',1,'Xamarin.Forms.CommonCore.ObservableViewModel.authenticatorService()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#acf1cc20e5b9c6031eadc7a26c6aba68b',1,'Xamarin.Forms.CommonCore.ObservableViewModel.AuthenticatorService()']]],
-  ['authenticatorservice_2ecs',['AuthenticatorService.cs',['../_authenticator_service_8cs.html',1,'']]],
   ['authenticatorservice_2efacebook_2ecs',['AuthenticatorService.Facebook.cs',['../_authenticator_service_8_facebook_8cs.html',1,'']]],
   ['authenticatorservice_2egoogle_2ecs',['AuthenticatorService.Google.cs',['../_authenticator_service_8_google_8cs.html',1,'']]],
   ['authenticatortype',['AuthenticatorType',['../namespace_xamarin_1_1_forms_1_1_common_core.html#a8d7dff76827bcf514a260783d2c15168',1,'Xamarin::Forms::CommonCore']]],

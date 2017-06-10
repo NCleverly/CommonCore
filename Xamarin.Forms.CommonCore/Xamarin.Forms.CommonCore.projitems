@@ -225,9 +225,6 @@
       <DependentUpon>..\..\MaterialDesign\FTEControl.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Services\IAuthenticatorService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticatorService.cs">
-      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticatorService.Facebook.cs">
       <DependentUpon>IAuthenticatorService.cs</DependentUpon>
     </Compile>
@@ -267,6 +264,9 @@
     <None Include="$(MSBuildThisFileDirectory)Config\config.dev.txt" />
     <None Include="$(MSBuildThisFileDirectory)PushNotifications\readme.txt" />
     <None Include="$(MSBuildThisFileDirectory)Services\readme.authentication.txt">
+      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)Services\ActivityCustomUrlSchemeInterceptor.txt">
       <DependentUpon>IAuthenticatorService.cs</DependentUpon>
     </None>
   </ItemGroup>

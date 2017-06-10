@@ -23,6 +23,7 @@ namespace Xamarin.Forms.CommonCore
     {
         public GoogleSettings GoogleSettings { get; set; }
         public string FaceBookAppId { get; set; }
+        public string MicrosoftAppId { get; set; }
     }
 
 	public class GoogleSettings

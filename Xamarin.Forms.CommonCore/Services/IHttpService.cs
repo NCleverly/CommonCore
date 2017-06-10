@@ -15,5 +15,6 @@ namespace Xamarin.Forms.CommonCore
 		Task<string> GetStringContent<T>(HttpResponseMessage response) where T : class, new();
 		Task<bool> PingDomain(string url);
 		Task<bool> PingUrl(string url);
+        Task<StringResponse> GetRaw(string url);
 	}
 }

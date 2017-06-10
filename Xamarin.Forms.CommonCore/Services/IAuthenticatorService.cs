@@ -13,13 +13,29 @@ namespace Xamarin.Forms.CommonCore
 		Google,
 		Facebook,
 		//Twitter,
-        //Amazon,
-        //LinkedIn,
-        //MicrosoftLive
+		//Amazon,
+		//LinkedIn,
 	}
 
-    public interface IAuthenticatorService
+	public interface IAuthenticatorService
+	{
+		OAuth2Authenticator GetAuthenticator(AuthenticatorType type, Action<Account> completed, Action<Exception> error);
+	}
+
+    public partial class AuthenticatorService :IAuthenticatorService
     {
-        OAuth2Authenticator GetAuthenticator(AuthenticatorType type, Action<Account> completed, Action<Exception> error);
+        public OAuth2Authenticator GetAuthenticator(AuthenticatorType type, Action<Account> completed, Action<Exception> error)
+        {
+            OAuth2Authenticator authenticator = null;
+            switch(type){
+                case AuthenticatorType.Google:
+                    authenticator = GetGoogleAuthenticator(completed, error);
+                    break;
+				case AuthenticatorType.Facebook:
+                    authenticator = GetFaceBookAuthenticator(completed, error);
+					break;
+            }
+            return authenticator;
+        }
     }
 }

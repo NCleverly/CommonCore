@@ -222,6 +222,35 @@ namespace Xamarin.Forms.CommonCore
 			return response;
 		}
 
+        public async Task<StringResponse> GetRaw(string url)
+        {
+			var response = new StringResponse() { };
+
+			if (!AppData.Instance.IsConnected)
+			{
+				response.Success = false;
+				response.Error = new ApplicationException("Network Connection Error");
+				return response;
+			}
+			try
+			{
+				using (var client = GetClient())
+				{
+					using (var srvResponse = client.GetAsync(url).Result)
+					{
+						var jsonResult = await srvResponse.Content.ReadAsStringAsync();
+						response.Success = true;
+					}
+				}
+			}
+			catch (Exception ex)
+			{
+				ex.ConsoleWrite();
+				response.Error = ex;
+			}
+
+			return response;
+        }
 		public async Task<GenericResponse<T>> Get<T>(string url) where T : class, new()
 		{
 			var response = new GenericResponse<T>() { };

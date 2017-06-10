@@ -19,7 +19,8 @@
       "OAuthClientID_Android": "",
       "OAuthClientID_UWP": ""
     },
-    "FaceBookAppId": ""
+    "FaceBookAppId": "",
+    "MicrosoftAppId": ""
   },
   "SqliteSettings": {
     "SQLiteDatabase": "app.db3",
