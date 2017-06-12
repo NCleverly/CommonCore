@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace Xamarin.Forms.CommonCore
 {
-	public class ObservableObject : INotifyPropertyChanged
+	public class ObservableObject : INotifyPropertyChanged, IDisposable
 	{
 
 		protected bool SetProperty<T>(
@@ -27,6 +27,10 @@ namespace Xamarin.Forms.CommonCore
 		public void OnPropertyChanged([CallerMemberName]string propertyName = "") =>
 		 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
-	}
+        public virtual void Dispose()
+        {
+            
+        }
+    }
 }
 

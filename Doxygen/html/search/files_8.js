@@ -1,6 +1,7 @@
 var searchData=
 [
   ['iaccountservice_2ecs',['IAccountService.cs',['../_i_account_service_8cs.html',1,'']]],
+  ['iaudioplayer_2ecs',['IAudioPlayer.cs',['../_i_audio_player_8cs.html',1,'']]],
   ['iauthenticatorservice_2ecs',['IAuthenticatorService.cs',['../_i_authenticator_service_8cs.html',1,'']]],
   ['iazurenotificationhub_2ecs',['IAzureNotificationHub.cs',['../_i_azure_notification_hub_8cs.html',1,'']]],
   ['ibackgroundtimerservice_2ecs',['IBackgroundTimerService.cs',['../_i_background_timer_service_8cs.html',1,'']]],

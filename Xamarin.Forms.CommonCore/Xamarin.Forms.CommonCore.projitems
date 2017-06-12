@@ -235,6 +235,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ViewStack.IOS.cs">
       <DependentUpon>IViewStack.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\AudioPlayer.IOS.cs">
+      <DependentUpon>IAudioPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\AudioPlayer.Droid.cs">
+      <DependentUpon>IAudioPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IAudioPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

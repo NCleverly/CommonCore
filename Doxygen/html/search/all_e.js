@@ -18,6 +18,7 @@ var searchData=
   ['onelementchanged',['OnElementChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_page_renderer.html#ac01399be80089bba146271bbcc787c10',1,'Xamarin::Forms::CommonCore::BasePageRenderer']]],
   ['onentrytextchanged',['OnEntryTextChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_phone_mask_behavior.html#adf86f6297a99529b97c3a4852a933ade',1,'Xamarin::Forms::CommonCore::PhoneMaskBehavior']]],
   ['onerror',['OnError',['../interface_push_notification_1_1_plugin_1_1_i_push_notification_listener.html#a6d37d74ed030ff750efcfa473cf3cf61',1,'PushNotification::Plugin::IPushNotificationListener']]],
+  ['onfinishedplaying',['OnFinishedPlaying',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_audio_player.html#ab1adebbdda0719a93d2b1ce2b85805c0',1,'Xamarin::Forms::CommonCore::IAudioPlayer']]],
   ['ongroupnamechanged',['OnGroupNameChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#adbd7841d2a25f4089fc4af0a53aa090a',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
   ['onisstarredchanged',['OnIsStarredChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a3333b3732f69dd355be238336e2fb488',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
   ['onitemappearing',['OnItemAppearing',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#aa4e2648ff21cb2a4cbcb6ab82d6144e2',1,'Xamarin::Forms::CommonCore::ListControl']]],

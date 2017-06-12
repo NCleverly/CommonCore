@@ -33,6 +33,8 @@ var searchData=
   ['appupdatereceiver_2ecs',['AppUpdateReceiver.cs',['../_app_update_receiver_8cs.html',1,'']]],
   ['appversion',['AppVersion',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#a04a2a964feae9b0b504f25965a065402',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
   ['attachtolistviewdelegate',['AttachToListViewDelegate',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#ae7beaf0221bf3171ff5c6f383627aa8b',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
+  ['audioplayer_2edroid_2ecs',['AudioPlayer.Droid.cs',['../_audio_player_8_droid_8cs.html',1,'']]],
+  ['audioplayer_2eios_2ecs',['AudioPlayer.IOS.cs',['../_audio_player_8_i_o_s_8cs.html',1,'']]],
   ['authenticationstate',['AuthenticationState',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_state.html',1,'Xamarin::Forms::CommonCore']]],
   ['authenticationtoken',['AuthenticationToken',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html',1,'Xamarin.Forms.CommonCore.AuthenticationToken'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#a1c18ee0bb42b539c690362a83901872d',1,'Xamarin.Forms.CommonCore.AuthenticationToken.AuthenticationToken()']]],
   ['authenticationtoken_2ecs',['AuthenticationToken.cs',['../_authentication_token_8cs.html',1,'']]],

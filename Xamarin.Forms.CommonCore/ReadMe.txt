@@ -28,8 +28,13 @@ Required Nuget Installs
  - Xamarin.Auth
  - Xamarin.Auth.XamarinForms
 
- - Microsoft.Identity.Client /* This is required if you are doing Microsoft Authentication */
-    - Microsoft.Graph
+(Optional - if you are using Microsoft Authentication)
+ - Microsoft.Identity.Client
+ - Microsoft.Graph
+
+(Optional - if you are using Mobile Center)
+- Mobile Center Analytics
+- Mobile Center Crashes
 
  - Platform Specific Installs:
     - iOS   -> BTProgressHud

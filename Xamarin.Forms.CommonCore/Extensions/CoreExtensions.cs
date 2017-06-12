@@ -9,12 +9,14 @@ using System.Collections.ObjectModel;
 using System.Collections;
 using System.Threading;
 
+
 #if __ANDROID__
 using Xamarin.Forms.Platform.Android;
 using Android.Util;
 #endif
 #if __IOS__
 using Foundation;
+using AudioToolbox;
 #endif
 
 namespace Xamarin.Forms.CommonCore
@@ -378,6 +380,22 @@ namespace Xamarin.Forms.CommonCore
             }
             return notification;
         }
+
+		//public static void PlaySoundFile(this UIViewController controller, string filePath)
+		//{
+		//	var url = NSUrl.FromFilename(filePath);
+		//	var newSound = new SystemSound(url);
+		//	newSound.PlaySystemSound();
+		//}
+
+		//private static UIViewController GetUIController()
+		//{
+		//	var win = UIApplication.SharedApplication.KeyWindow;
+		//	var vc = win.RootViewController;
+		//	while (vc.PresentedViewController != null)
+		//		vc = vc.PresentedViewController;
+		//	return vc;
+		//}
 #endif
 
 #if __ANDROID__

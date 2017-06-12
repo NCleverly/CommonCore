@@ -10,40 +10,6 @@ namespace Xamarin.Forms.CommonCore
 	/// </summary>
 	public static class ResourceLoader
 	{
-
-		//NOTE: These convenience methods are not available in WinRT, but they're available 
-		// in Xamarin.iOS and Xamarin.Android, so i'm commenting them out so they build as
-		// a PCL lib, but you may want them in your own code if you're not targeting WinRT.
-		//		/// <summary>
-		//		/// Attempts to find and return the given resource from within the calling assembly.
-		//		/// </summary>
-		//		/// <returns>The embedded resource as a stream.</returns>
-		//		/// <param name="resourceFileName">Resource file name.</param>
-		//		public static Stream GetEmbeddedResourceStream(string resourceFileName)
-		//		{
-		//			return GetEmbeddedResourceStream (Assembly.GetCallingAssembly (), resourceFileName);
-		//		}
-		//
-		//		/// <summary>
-		//		/// Attempts to find and return the given resource from within the calling assembly.
-		//		/// </summary>
-		//		/// <returns>The embedded resource as a byte array.</returns>
-		//		/// <param name="resourceFileName">Resource file name.</param>
-		//		public static byte[] GetEmbeddedResourceBytes (string resourceFileName)
-		//		{
-		//			return GetEmbeddedResourceBytes (Assembly.GetCallingAssembly (), resourceFileName);
-		//		}
-		//
-		//		/// <summary>
-		//		/// Attempts to find and return the given resource from within the calling assembly.
-		//		/// </summary>
-		//		/// <returns>The embedded resource as a string.</returns>
-		//		/// <param name="resourceFileName">Resource file name.</param>
-		//		public static string GetEmbeddedResourceString (string resourceFileName)
-		//		{
-		//			return GetEmbeddedResourceString (System.Reflection.Assembly. Assembly.GetCallingAssembly (), resourceFileName);
-		//		}
-
 		/// <summary>
 		/// Attempts to find and return the given resource from within the specified assembly.
 		/// </summary>

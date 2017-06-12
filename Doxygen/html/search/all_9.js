@@ -2,6 +2,8 @@ var searchData=
 [
   ['iaccountservice',['IAccountService',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_account_service.html',1,'Xamarin::Forms::CommonCore']]],
   ['iaccountservice_2ecs',['IAccountService.cs',['../_i_account_service_8cs.html',1,'']]],
+  ['iaudioplayer',['IAudioPlayer',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_audio_player.html',1,'Xamarin::Forms::CommonCore']]],
+  ['iaudioplayer_2ecs',['IAudioPlayer.cs',['../_i_audio_player_8cs.html',1,'']]],
   ['iauthenticatorservice',['IAuthenticatorService',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_authenticator_service.html',1,'Xamarin::Forms::CommonCore']]],
   ['iauthenticatorservice_2ecs',['IAuthenticatorService.cs',['../_i_authenticator_service_8cs.html',1,'']]],
   ['iazurenotificationhub',['IAzureNotificationHub',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_azure_notification_hub.html',1,'Xamarin::Forms::CommonCore']]],
