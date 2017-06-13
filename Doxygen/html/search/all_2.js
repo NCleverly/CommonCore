@@ -21,6 +21,7 @@ var searchData=
   ['bindablepicker_2ecs',['BindablePicker.cs',['../_bindable_picker_8cs.html',1,'']]],
   ['bindingpath',['BindingPath',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a7a7f6204de498193ed11e8b330ac2bcf',1,'Xamarin::Forms::CommonCore::BindablePicker']]],
   ['bindingpathproperty',['BindingPathProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#ac34b69607281b608c651c2e00becd36d',1,'Xamarin::Forms::CommonCore::BindablePicker']]],
+  ['bluroverlay',['BlurOverlay',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ab185173b22885068918b4a81ce0c44f5',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['bluroverlay_2edroid_2ecs',['BlurOverlay.Droid.cs',['../_blur_overlay_8_droid_8cs.html',1,'']]],
   ['bluroverlay_2eios_2ecs',['BlurOverlay.IOS.cs',['../_blur_overlay_8_i_o_s_8cs.html',1,'']]],
   ['booleanresponse',['BooleanResponse',['../class_xamarin_1_1_forms_1_1_common_core_1_1_boolean_response.html',1,'Xamarin::Forms::CommonCore']]],

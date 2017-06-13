@@ -1,6 +1,7 @@
 var searchData=
 [
   ['maintainselection',['MaintainSelection',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#ac66520209ddb43231f9ea733a65a386f',1,'Xamarin::Forms::CommonCore::ListControl']]],
+  ['mapnavigate',['MapNavigate',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#afa277bba4554b8f7ffe64dcbd7607599',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['mapnavigate_2edroid_2ecs',['MapNavigate.Droid.cs',['../_map_navigate_8_droid_8cs.html',1,'']]],
   ['mapnavigate_2eios_2ecs',['MapNavigate.IOS.cs',['../_map_navigate_8_i_o_s_8cs.html',1,'']]],
   ['markedfordelete',['MarkedForDelete',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_data_model.html#a3382560bb198fa1c2c3f62f234742a1e',1,'Xamarin.Forms.CommonCore.IDataModel.MarkedForDelete()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#a1b1775d04e8d7bb4cd117c109412b7ac',1,'Xamarin.Forms.CommonCore.DataModel.MarkedForDelete()']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ios',['iOS',['../namespace_push_notification_1_1_plugin_1_1_abstractions.html#a1ce4369c799a8f4045fa0c9c7d4820a3a1bdf605991920db11cbdf8508204c4eb',1,'PushNotification::Plugin::Abstractions']]]
+  ['emergencycall',['EmergencyCall',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aebd939a54cefa043add7c8ba6eab51daa9c5c8b856f8f87bf37a5fbbddc1dd27a',1,'Xamarin::Forms::CommonCore']]]
 ];

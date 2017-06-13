@@ -1,6 +1,7 @@
 var searchData=
 [
   ['c',['C',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_a_b_c_d_struct.html#a13e205310ab897347f036516aed0680d',1,'Xamarin::Forms::CommonCore::ABCDStruct']]],
+  ['calendarevent',['CalendarEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a44fdba518a2bad4c44005679a87c7367',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['calendarevent_2edroid_2ecs',['CalendarEvent.Droid.cs',['../_calendar_event_8_droid_8cs.html',1,'']]],
   ['calendarevent_2eios_2ecs',['CalendarEvent.IOS.cs',['../_calendar_event_8_i_o_s_8cs.html',1,'']]],
   ['calendareventmodel',['CalendarEventModel',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html',1,'Xamarin::Forms::CommonCore']]],
@@ -28,6 +29,7 @@ var searchData=
   ['commoneffects_2ecs',['CommonEffects.cs',['../_common_effects_8cs.html',1,'']]],
   ['commoneffects_2edroid_2ecs',['CommonEffects.Droid.cs',['../_common_effects_8_droid_8cs.html',1,'']]],
   ['commoneffects_2eios_2ecs',['CommonEffects.IOS.cs',['../_common_effects_8_i_o_s_8cs.html',1,'']]],
+  ['communication',['Communication',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a222a50c2782cc576ed591f152dfc65fa',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['communication_2edroid_2ecs',['Communication.Droid.cs',['../_communication_8_droid_8cs.html',1,'']]],
   ['communication_2eios_2ecs',['Communication.IOS.cs',['../_communication_8_i_o_s_8cs.html',1,'']]],
   ['completed',['Completed',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_complete_status.html#a869e6c318e20622d6811bfaca57a44f6',1,'Xamarin::Forms::CommonCore::TelephonyCompleteStatus']]],
@@ -40,6 +42,7 @@ var searchData=
   ['contentviewrounded_2ecs',['ContentViewRounded.cs',['../_content_view_rounded_8cs.html',1,'']]],
   ['contentviewroundedrenderer_2edroid_2ecs',['ContentViewRoundedRenderer.Droid.cs',['../_content_view_rounded_renderer_8_droid_8cs.html',1,'']]],
   ['contentviewroundedrenderer_2eios_2ecs',['ContentViewRoundedRenderer.IOS.cs',['../_content_view_rounded_renderer_8_i_o_s_8cs.html',1,'']]],
+  ['continue',['Continue',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aebd939a54cefa043add7c8ba6eab51daaa0bfb8e59e6c13fc8d990781f77694fe',1,'Xamarin::Forms::CommonCore']]],
   ['continueon',['ContinueOn',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a74d3ac3d1d4c6446a736b014a02000d6',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['converter',['Converter',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a936de4817f78d029d509fb3cdfe7a7d4',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
   ['convertto_3c_20t_20_3e',['ConvertTo&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_json_data_extension.html#aa0df1f6703986a6639b7ad4c161d87f4',1,'Xamarin::Forms::CommonCore::JsonDataExtension']]],

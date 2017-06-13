@@ -12,5 +12,6 @@ var searchData=
   ['reload',['Reload',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a9a116d6ede38c03bc2e0a2c77d5d3837',1,'Xamarin::Forms::CommonCore::AppData']]],
   ['removeemptyrowseffect',['RemoveEmptyRowsEffect',['../class_xamarin_1_1_forms_1_1_common_core_1_1_remove_empty_rows_effect.html#a48ec4ef04e710138c3bdf15aab3d7eaf',1,'Xamarin::Forms::CommonCore::RemoveEmptyRowsEffect']]],
   ['render',['Render',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a35f522ff4030bbaefde99f824facf10b',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
-  ['requestpermission',['RequestPermission',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_local_notify.html#ad51cd3fa30b96bc68766aceca33e0aec',1,'Xamarin::Forms::CommonCore::ILocalNotify']]]
+  ['requestpermission',['RequestPermission',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_local_notify.html#ad51cd3fa30b96bc68766aceca33e0aec',1,'Xamarin::Forms::CommonCore::ILocalNotify']]],
+  ['returnkeyhandler',['ReturnKeyHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a0cf311929b5f625f4c7da421e7c619f5',1,'Xamarin::Forms::CommonCore::EntryUnderline']]]
 ];

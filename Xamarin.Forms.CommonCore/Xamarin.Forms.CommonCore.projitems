@@ -243,6 +243,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IAudioPlayer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ICommunication.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\EmailMessage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RelayCommand.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

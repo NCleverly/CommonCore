@@ -8,15 +8,19 @@ using System.Linq;
 using System.Collections.ObjectModel;
 using System.Collections;
 using System.Threading;
+using System.ComponentModel;
 
 
 #if __ANDROID__
 using Xamarin.Forms.Platform.Android;
 using Android.Util;
+using Android.Views.InputMethods;
 #endif
 #if __IOS__
 using Foundation;
 using AudioToolbox;
+using UIKit;
+using CoreGraphics;
 #endif
 
 namespace Xamarin.Forms.CommonCore
@@ -381,25 +385,73 @@ namespace Xamarin.Forms.CommonCore
             return notification;
         }
 
-		//public static void PlaySoundFile(this UIViewController controller, string filePath)
-		//{
-		//	var url = NSUrl.FromFilename(filePath);
-		//	var newSound = new SystemSound(url);
-		//	newSound.PlaySystemSound();
-		//}
+		public static UIImage ChangeImageColor(this UIImage image, UIColor color)
+		{
+			var rect = new CGRect(0, 0, image.Size.Width, image.Size.Height);
+			UIGraphics.BeginImageContext(rect.Size);
+			var ctx = UIGraphics.GetCurrentContext();
+			ctx.ClipToMask(rect, image.CGImage);
+			ctx.SetFillColor(color.CGColor);
+			ctx.FillRect(rect);
+			var img = UIGraphics.GetImageFromCurrentImageContext();
+			UIGraphics.EndImageContext();
+			return UIImage.FromImage(img.CGImage, 1.0f, UIImageOrientation.DownMirrored);
+		}
 
-		//private static UIViewController GetUIController()
-		//{
-		//	var win = UIApplication.SharedApplication.KeyWindow;
-		//	var vc = win.RootViewController;
-		//	while (vc.PresentedViewController != null)
-		//		vc = vc.PresentedViewController;
-		//	return vc;
-		//}
+		public static void Resize(this UIImageView imgView, nfloat size)
+		{
+			var newSize = new CGSize(size, size);
+			UIGraphics.BeginImageContextWithOptions(newSize, false, UIScreen.MainScreen.Scale);
+			imgView.Image.Draw(new CGRect(0, 0, newSize.Width, newSize.Height));
+			imgView.Image = UIGraphics.GetImageFromCurrentImageContext();
+			imgView.ContentMode = UIViewContentMode.ScaleAspectFit;
+		}
+
+		public static UIReturnKeyType GetValueFromDescription(this ReturnKeyTypes value)
+		{
+			var type = typeof(UIReturnKeyType);
+			if (!type.IsEnum) throw new InvalidOperationException();
+			foreach (var field in type.GetFields())
+			{
+				var attribute = Attribute.GetCustomAttribute(field,
+					typeof(DescriptionAttribute)) as DescriptionAttribute;
+				if (attribute != null)
+				{
+					if (attribute.Description == value.ToString())
+						return (UIReturnKeyType)field.GetValue(null);
+				}
+				else
+				{
+					if (field.Name == value.ToString())
+						return (UIReturnKeyType)field.GetValue(null);
+				}
+			}
+			throw new NotSupportedException($"Not supported on iOS: {value}");
+		}
 #endif
 
 #if __ANDROID__
-
+		public static ImeAction GetValueFromDescription(this ReturnKeyTypes value)
+		{
+			var type = typeof(ImeAction);
+			if (!type.IsEnum) throw new InvalidOperationException();
+			foreach (var field in type.GetFields())
+			{
+				var attribute = Attribute.GetCustomAttribute(field,
+					typeof(DescriptionAttribute)) as DescriptionAttribute;
+				if (attribute != null)
+				{
+					if (attribute.Description == value.ToString())
+						return (ImeAction)field.GetValue(null);
+				}
+				else
+				{
+					if (field.Name == value.ToString())
+						return (ImeAction)field.GetValue(null);
+				}
+			}
+			throw new NotSupportedException($"Not supported on Android: {value}");
+		}
 		public static float ToDevicePixels(this float number)
 		{
 			var displayMetrics = Xamarin.Forms.Forms.Context.Resources.DisplayMetrics;

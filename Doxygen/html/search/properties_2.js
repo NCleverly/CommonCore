@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['calendarevent',['CalendarEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a44fdba518a2bad4c44005679a87c7367',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['callback',['Callback',['../class_xamarin_1_1_forms_1_1_common_core_1_1_prompt.html#aeb628d03eaf041ac56289e069172cb05',1,'Xamarin::Forms::CommonCore::Prompt']]],
   ['clicked',['Clicked',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#a497d78f2dae86fd154b15bd72c735b59',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['client',['Client',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a026c3633f27d99034d204531cf661ec0',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
@@ -7,6 +8,7 @@ var searchData=
   ['colorpressed',['ColorPressed',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#a0e39835b1bc8394be0f2a70a266e1879',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['colorripple',['ColorRipple',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#adca26fcfcf7f4f7a3e6002d329aa0b11',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['command',['Command',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#ad26099a78dad3c5d5985e63be68bb051',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
+  ['communication',['Communication',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a222a50c2782cc576ed591f152dfc65fa',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['completed',['Completed',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_complete_status.html#a869e6c318e20622d6811bfaca57a44f6',1,'Xamarin::Forms::CommonCore::TelephonyCompleteStatus']]],
   ['container',['Container',['../class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a4ea7b21fcb37ffbd05c77dc36ead6246',1,'Xamarin::Forms::CommonCore::InjectionManager']]],
   ['content',['Content',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a77c383b8689245fc2d3044a6479dcad8',1,'Xamarin::Forms::CommonCore::AbsoluteLayoutPage']]],

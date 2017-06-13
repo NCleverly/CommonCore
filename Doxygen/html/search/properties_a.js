@@ -1,6 +1,7 @@
 var searchData=
 [
   ['maintainselection',['MaintainSelection',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#ac66520209ddb43231f9ea733a65a386f',1,'Xamarin::Forms::CommonCore::ListControl']]],
+  ['mapnavigate',['MapNavigate',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#afa277bba4554b8f7ffe64dcbd7607599',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['markedfordelete',['MarkedForDelete',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_data_model.html#a3382560bb198fa1c2c3f62f234742a1e',1,'Xamarin.Forms.CommonCore.IDataModel.MarkedForDelete()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#a1b1775d04e8d7bb4cd117c109412b7ac',1,'Xamarin.Forms.CommonCore.DataModel.MarkedForDelete()']]],
   ['message',['Message',['../class_xamarin_1_1_forms_1_1_common_core_1_1_prompt.html#a4492f106437cbc80c6047fd9832fdef1',1,'Xamarin.Forms.CommonCore.Prompt.Message()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#a4a7506ffaf666e4f64c2ce10746809c6',1,'Xamarin.Forms.CommonCore.LocalNotification.Message()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_email_message.html#ab01311f1a0b04652dedc15c0872454bc',1,'Xamarin.Forms.CommonCore.EmailMessage.Message()']]],
   ['meta_5fdata',['meta_data',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#ae9a60e51458a83c31f676f5ef5614b17',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]],

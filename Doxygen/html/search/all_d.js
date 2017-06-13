@@ -5,6 +5,8 @@ var searchData=
   ['navigatewithaddress',['NavigateWithAddress',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_map_navigate.html#ad55001c218a03bacc5f05a43f3c12290',1,'Xamarin::Forms::CommonCore::IMapNavigate']]],
   ['navigation',['Navigation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a5a41c951ab43daf14e2bdc350774303f',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['newpushnotificationnotinitializedexception',['NewPushNotificationNotInitializedException',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#ac6acdc2833ba2014f1323dad7f6d9723',1,'PushNotification::Plugin::CrossPushNotification']]],
+  ['next',['Next',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aebd939a54cefa043add7c8ba6eab51daa10ac3d04253ef7e1ddc73e6091c0cd55',1,'Xamarin::Forms::CommonCore']]],
+  ['nextfocus',['NextFocus',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a9be7235915fcfc680edf7f0f005fc0b1',1,'Xamarin::Forms::CommonCore::EntryUnderline']]],
   ['normal',['Normal',['../namespace_xamarin_1_1_forms_1_1_common_core_1_1_material_design.html#a84f0950ee1269c9faac3dca329e5f719a960b44c579bc2f6818d2daaf9e4c16f0',1,'Xamarin::Forms::CommonCore::MaterialDesign']]],
   ['notificationfired',['NotificationFired',['../class_xamarin_1_1_forms_1_1_common_core_1_1_property_changed_behavior.html#abf6d495a6cc96c449a7bc84bc565d93c',1,'Xamarin::Forms::CommonCore::PropertyChangedBehavior']]],
   ['notificationtags',['NotificationTags',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a588a037cfa482265219793ac0340df3f',1,'Xamarin::Forms::CommonCore::AppData']]],

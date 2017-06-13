@@ -6,5 +6,6 @@ var searchData=
   ['passwordrevealenabled',['PasswordRevealEnabled',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a799d37fcca76b5f38a87ddc3acd85783',1,'Xamarin::Forms::CommonCore::EntryUnderline']]],
   ['percentagechanged',['PercentageChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a7166b5e4fc6a2cf5fa5dcd203152683c',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
   ['progress',['Progress',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a4d01f6995098d7da223cc2d1811cc018',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
+  ['progressindicator',['ProgressIndicator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aa6aa5778aab6c166ceee5643e3169c82',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['pushnotificationlistener',['PushNotificationListener',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a4cc53baaaf029700519103c426455a0b',1,'PushNotification::Plugin::CrossPushNotification']]]
 ];
