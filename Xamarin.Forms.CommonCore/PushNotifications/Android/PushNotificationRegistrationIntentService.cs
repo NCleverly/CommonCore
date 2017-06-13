@@ -1,19 +1,11 @@
 #if __ANDROID__
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.Gms.Iid;
 using Android.Gms.Gcm;
 using PushNotification.Plugin.Abstractions;
-using Android.Support.V4.Content;
 using Xamarin.Forms.CommonCore;
 
 namespace PushNotification.Plugin
@@ -66,12 +58,7 @@ namespace PushNotification.Plugin
 
                 CrossPushNotification.PushNotificationListener.OnError($"{ex.ToString()} - Register - {Tag}", DeviceType.Android);
 
-
             }
-
-            // Intent registrationComplete = new Intent(PushNotificationKey.RegistrationComplete);
-            // LocalBroadcastManager.GetInstance(Android.App.Application.Context).SendBroadcast(registrationComplete);
-
         }
 
         private void SubscribeTopics(string token)

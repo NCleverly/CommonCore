@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['emailaddress',['EmailAddress',['../class_xamarin_1_1_forms_1_1_common_core_1_1_email_message.html#af66d6afdacc2a6a3dbba93dee638f211',1,'Xamarin::Forms::CommonCore::EmailMessage']]],
   ['emailvalidator',['EmailValidator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a6b8e628b0a3eba50063f0c4ee7dcf269',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
   ['encryptionservice',['EncryptionService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a853f6e901546fcac7c26c5918d80a966',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['endcolor',['EndColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a40e36afee27681a7690da594ca0889b8',1,'Xamarin::Forms::CommonCore::GradientButton']]],

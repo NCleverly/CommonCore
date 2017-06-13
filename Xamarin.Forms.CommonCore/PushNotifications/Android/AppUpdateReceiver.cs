@@ -4,6 +4,7 @@ using Android.Content;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 
+[assembly: UsesPermission(Name = "android.permission.WAKE_LOCK")]
 namespace PushNotification.Plugin
 {
     [BroadcastReceiver]

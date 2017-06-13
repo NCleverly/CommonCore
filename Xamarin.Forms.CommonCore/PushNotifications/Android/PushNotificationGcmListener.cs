@@ -1,19 +1,13 @@
 #if __ANDROID__
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using PushNotification.Plugin.Abstractions;
 using Android.Gms.Gcm;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.Support.V4.App;
 using Android.Media;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace PushNotification.Plugin
@@ -198,12 +192,8 @@ namespace PushNotification.Plugin
                     System.Diagnostics.Debug.WriteLine(ex1.ToString());
                 }
 
-
-
             }
         }
-
-
 
         void CreateNotification(string title, string message, int notifyId, string tag, Bundle extras)
         {
@@ -243,8 +233,6 @@ namespace PushNotification.Plugin
 
 
             Intent resultIntent = context.PackageManager.GetLaunchIntentForPackage(context.PackageName);
-
-            //Intent resultIntent = new Intent(context, typeof(T));
 
             if (extras != null) { resultIntent.PutExtras(extras); }
 

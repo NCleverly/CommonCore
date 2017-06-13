@@ -12,12 +12,13 @@ using Xamarin.Forms.CommonCore;
 using Android.Content.PM;
 using Android.Support.V4.App;
 
+[assembly: UsesPermission(Name = "android.permission.SEND_SMS")]
 [assembly: UsesPermission(Name = "android.permission.CALL_PHONE")]
 [assembly: UsesPermission(Name = "android.permission.READ_PHONE_STATE")]
-[assembly: Xamarin.Forms.Dependency(typeof(PhoneCall))]
+[assembly: Xamarin.Forms.Dependency(typeof(Communication))]
 namespace Xamarin.Forms.CommonCore
 {
-    public class PhoneCall : IPhoneCall
+    public partial class Communication : ICommunication
     {
         private TelephonyManager telephonyManager;
         private PhoneCallListener phoneListener;
@@ -67,6 +68,21 @@ namespace Xamarin.Forms.CommonCore
                 toast.Show();
             }
         }
+
+		public void SendEmail(EmailMessage message)
+		{
+			var emailIntent = new Intent(Intent.ActionSend);
+			emailIntent.SetType("message/rfc822");
+			emailIntent.PutExtra(Intent.ExtraEmail, new string[] { message.EmailAddress });
+			emailIntent.PutExtra(Intent.ExtraSubject, message.Subject);
+			emailIntent.PutExtra(Intent.ExtraText, message.Message);
+            Xamarin.Forms.Forms.Context.StartActivity(Intent.CreateChooser(emailIntent, message.Title));
+		}
+
+		public void SendSMS(string phoneNumber, string message)
+		{
+            SmsManager.Default.SendTextMessage(phoneNumber, null, message, null, null);
+		}
 
         private void PhoneCallEnded(DateTime start, DateTime end)
         {

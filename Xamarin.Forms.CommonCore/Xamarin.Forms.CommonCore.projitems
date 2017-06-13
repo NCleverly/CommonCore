@@ -79,9 +79,8 @@
       <DependentUpon>ContentViewRounded.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Controls\ContentViewRounded.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IPhoneCall.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\PhoneCall.Droid.cs">
-      <DependentUpon>IPhoneCall.cs</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\Communication.Droid.cs">
+      <DependentUpon>ICommunication.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Effects\CommonEffects.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Effects\CommonEffects.Droid.cs">
@@ -90,8 +89,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Effects\CommonEffects.IOS.cs">
       <DependentUpon>CommonEffects.cs</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\PhoneCall.IOS.cs">
-      <DependentUpon>IPhoneCall.cs</DependentUpon>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\Communication.IOS.cs">
+      <DependentUpon>ICommunication.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\ResponseTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IOverlayDependency.cs" />
@@ -242,6 +241,8 @@
       <DependentUpon>IAudioPlayer.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IAudioPlayer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ICommunication.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\EmailMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

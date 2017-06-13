@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['emailaddress',['EmailAddress',['../class_xamarin_1_1_forms_1_1_common_core_1_1_email_message.html#af66d6afdacc2a6a3dbba93dee638f211',1,'Xamarin::Forms::CommonCore::EmailMessage']]],
+  ['emailmessage',['EmailMessage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_email_message.html',1,'Xamarin::Forms::CommonCore']]],
+  ['emailmessage_2ecs',['EmailMessage.cs',['../_email_message_8cs.html',1,'']]],
   ['emailvalidator',['EmailValidator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a6b8e628b0a3eba50063f0c4ee7dcf269',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
   ['enablechildren',['EnableChildren',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a3632bc3c77c47d8dcc9a9fdbb3a4d650',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['encrypt',['Encrypt',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a7c33e4923b696a910a2427027234e6b1',1,'Xamarin::Forms::CommonCore::AccountService']]],

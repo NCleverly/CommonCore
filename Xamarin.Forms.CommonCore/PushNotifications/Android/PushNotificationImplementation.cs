@@ -1,21 +1,9 @@
 #if __ANDROID__
-using Android.App;
 using Android.Content;
 using PushNotification.Plugin.Abstractions;
-using System;
-using System.Threading.Tasks;
-using Android.Gms.Common;
-using Java.Util.Logging;
 using Android.Gms.Gcm;
-using Android.Util;
 using Java.Lang;
 using Android.Content.PM;
-using Android.OS;
-using System.Collections.Generic;
-using Android.Preferences;
-using Android.Support.V4.App;
-using Android.Media;
-using Android;
 using Android.Gms.Iid;
 using System.Threading;
 using Java.IO;
@@ -61,8 +49,6 @@ namespace PushNotification.Plugin
             else //if (string.IsNullOrEmpty(Token))
             {
                 System.Diagnostics.Debug.WriteLine($"{PushNotificationKey.DomainName} - Register -  Registering for Push Notifications");
-                //ResetBackoff();
-
 
                 ThreadPool.QueueUserWorkItem(state =>
                 {
@@ -81,16 +67,7 @@ namespace PushNotification.Plugin
                     }
 
                 });
-
-
-
-
             }
-            //else
-            //{
-            //    System.Diagnostics.Debug.WriteLine(string.Format("{0} - Register -  Already Registered for Push Notifications", PushNotificationKey.DomainName));
-
-            //}
 
         }
 
@@ -99,8 +76,7 @@ namespace PushNotification.Plugin
         /// </summary>
         public void Unregister()
         {
-
-
+            
             ThreadPool.QueueUserWorkItem(state =>
             {
                 System.Diagnostics.Debug.WriteLine($"{PushNotificationKey.DomainName} - Unregister -  Unregistering push notifications");
@@ -119,12 +95,8 @@ namespace PushNotification.Plugin
 
                     CrossPushNotification.PushNotificationListener.OnError($"{Tag} - Unregister - {ex.Message}", DeviceType.Android);
 
-
                 }
             });
-
-
-
 
         }
 
@@ -146,9 +118,7 @@ namespace PushNotification.Plugin
 
                 return retVal;
             }
-            // Check if app was updated; if so, it must clear the registration ID
-            // since the existing registration ID is not guaranteed to work with
-            // the new app version.
+
             int registeredVersion = prefs.GetInt(PushNotificationKey.AppVersion, Integer.MinValue);
             int currentVersion = GetAppVersion(context);
             if (registeredVersion != currentVersion)
@@ -165,9 +135,7 @@ namespace PushNotification.Plugin
         }
         internal static ISharedPreferences GetGCMPreferences(Context context)
         {
-            // This sample app persists the registration ID in shared preferences, but
-            // how you store the registration ID in your app is up to you.
-
+            
             return context.GetSharedPreferences(GcmPreferencesKey, FileCreationMode.Private);
         }
 
@@ -198,33 +166,6 @@ namespace PushNotification.Plugin
             editor.PutInt(PushNotificationKey.AppVersion, appVersion);
             editor.Commit();
         }
-
-
-        /* internal void ResetBackoff()
-         {
-            // Logger.Debug("resetting backoff for " + context.PackageName);
-             Context context = Android.App.Application.Context;
-             SetBackoff(DefaultBackOffMilliseconds);
-         }
-
-         internal int GetBackoff()
-         {
-             Context context = Android.App.Application.Context;
-             var prefs = GetGCMPreferences(context);
-             return prefs.GetInt(PushNotificationKey.BackOffMilliseconds, DefaultBackOffMilliseconds);
-         }
-
-         internal void SetBackoff(int backoff)
-         {
-             Context context = Android.App.Application.Context;
-             var prefs = GetGCMPreferences(context);
-             var editor = prefs.Edit();
-             editor.PutInt(PushNotificationKey.BackOffMilliseconds, backoff);
-             editor.Commit();
-         }*/
-
-
-
 
     }
 }
