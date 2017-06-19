@@ -5,7 +5,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(ContentPage), typeof(BasePageRenderer))]
+[assembly: ExportRenderer(typeof(BasePages), typeof(BasePageRenderer))]
 namespace Xamarin.Forms.CommonCore
 {
     public class BasePageRenderer : PageRenderer

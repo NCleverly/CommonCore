@@ -9,7 +9,8 @@ using System.Collections.ObjectModel;
 using System.Collections;
 using System.Threading;
 using System.ComponentModel;
-
+using System.Reflection;
+using System.Text.RegularExpressions;
 
 #if __ANDROID__
 using Xamarin.Forms.Platform.Android;
@@ -27,6 +28,43 @@ namespace Xamarin.Forms.CommonCore
 {
     public static class CoreExtensions
     {
+        public static void SetAutomationIds(this ContentPage page)
+        {
+            var bindingFlags = BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public;
+            var fields = page.GetType().GetFields(bindingFlags);
+            foreach (var field in fields)
+            {
+                try
+                {
+                    var fObj = field.GetValue(page);
+                    if (fObj != null && fObj is View)
+                    {
+                        var ctrl = (View)fObj;
+                        if (string.IsNullOrEmpty(ctrl.AutomationId))
+                            ctrl.AutomationId = field.Name;
+                    }
+                }
+                catch { }//suppress error
+
+            }
+            var props = page.GetType().GetProperties(bindingFlags);
+            foreach (var prop in props)
+            {
+                try
+                {
+                    var pObj = prop.GetValue(page);
+                    if (pObj != null && pObj is View)
+                    {
+                        var ctrl = (View)pObj;
+                        if (string.IsNullOrEmpty(ctrl.AutomationId))
+                            ctrl.AutomationId = prop.Name;
+
+                    }
+                }
+                catch { }//suppress error
+
+            }
+        }
         /// <summary>
         /// Display error during debug to console with optional image marker
         /// </summary>
@@ -49,31 +87,32 @@ namespace Xamarin.Forms.CommonCore
 #endif
         }
 
-		/// <summary>
-		/// Display text during debug to console with optional image marker
-		/// </summary>
-		/// <param name="str">String.</param>
-		/// <param name="title">Title.</param>
-		/// <param name="includeImageMarker">If set to <c>true</c> include image marker.</param>
-		public static void ConsoleWrite(this string str,string title, bool includeImageMarker = false)
+        /// <summary>
+        /// Display text during debug to console with optional image marker
+        /// </summary>
+        /// <param name="str">String.</param>
+        /// <param name="title">Title.</param>
+        /// <param name="includeImageMarker">If set to <c>true</c> include image marker.</param>
+        public static void ConsoleWrite(this string str, string title, bool includeImageMarker = false)
         {
 #if DEBUG
-			if (includeImageMarker)
-				DrawMonkey();
+            if (includeImageMarker)
+                DrawMonkey();
             Console.WriteLine($"*-*-*-*-*-*-*-*-*-*-*-*- {title} *-*-*-*-*-*-*-*-*-*-*-*-*-");
             Console.WriteLine(str);
             Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
 #endif
-		}
+        }
 
-        private static void DrawMonkey(){
+        private static void DrawMonkey()
+        {
             Console.WriteLine("         .-\"-.");
             Console.WriteLine("       _/.-.-.\\_");
             Console.WriteLine("      ( ( o o ) )");
             Console.WriteLine("       |/  \"  \\|");
             Console.WriteLine("        \\ .-. /");
             Console.WriteLine("        /`\"\"\"'\\");
-            Console.WriteLine("       /       \\");                         
+            Console.WriteLine("       /       \\");
         }
 
         /// <summary>
@@ -94,11 +133,11 @@ namespace Xamarin.Forms.CommonCore
             return default(T);
         }
 
-		/// <summary>
-		/// Extension method that executes ContinueWith in shorthand form
-		/// </summary>
-		/// <param name="task">Task.</param>
-		public static void ContinueOn(this Task task)
+        /// <summary>
+        /// Extension method that executes ContinueWith in shorthand form
+        /// </summary>
+        /// <param name="task">Task.</param>
+        public static void ContinueOn(this Task task)
         {
             task.ContinueWith((t) => { });
         }
@@ -146,13 +185,13 @@ namespace Xamarin.Forms.CommonCore
             var result = await taskCollection;
             return result.FirstOrDefault();
         }
-		/// <summary>
-		/// First or Default on a async (promised) collection in a GenericResponse object
-		/// </summary>
-		/// <returns>The or default.</returns>
-		/// <param name="taskCollection">Task collection.</param>
-		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static async Task<T> FirstOrDefault<T>(this Task<GenericResponse<List<T>>> taskCollection)
+        /// <summary>
+        /// First or Default on a async (promised) collection in a GenericResponse object
+        /// </summary>
+        /// <returns>The or default.</returns>
+        /// <param name="taskCollection">Task collection.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static async Task<T> FirstOrDefault<T>(this Task<GenericResponse<List<T>>> taskCollection)
         {
             var result = await taskCollection;
             if (result.Success)
@@ -160,25 +199,25 @@ namespace Xamarin.Forms.CommonCore
             else
                 return default(T);
         }
-		/// <summary>
-		/// Converts List to ObservableCollection
-		/// </summary>
-		/// <returns>The observable.</returns>
-		/// <param name="list">List.</param>
-		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static ObservableCollection<T> ToObservable<T>(this List<T> list)
+        /// <summary>
+        /// Converts List to ObservableCollection
+        /// </summary>
+        /// <returns>The observable.</returns>
+        /// <param name="list">List.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static ObservableCollection<T> ToObservable<T>(this List<T> list)
         {
             var collection = new ObservableCollection<T>();
             list?.ForEach((item) => collection.Add(item));
             return collection;
         }
-		/// <summary>
-		/// Converts Array to ObservableCollection
-		/// </summary>
-		/// <returns>The observable.</returns>
-		/// <param name="array">Array.</param>
-		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static ObservableCollection<T> ToObservable<T>(this T[] array)
+        /// <summary>
+        /// Converts Array to ObservableCollection
+        /// </summary>
+        /// <returns>The observable.</returns>
+        /// <param name="array">Array.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static ObservableCollection<T> ToObservable<T>(this T[] array)
         {
             var collection = new ObservableCollection<T>();
             for (int x = 0; x < array.Length; x++)
@@ -204,11 +243,11 @@ namespace Xamarin.Forms.CommonCore
                 }
             }
         }
-		/// <summary>
-		/// Enables all controls in the layout view
-		/// </summary>
-		/// <param name="layout">Layout.</param>
-		public static void EnableChildren(this Layout<View> layout)
+        /// <summary>
+        /// Enables all controls in the layout view
+        /// </summary>
+        /// <param name="layout">Layout.</param>
+        public static void EnableChildren(this Layout<View> layout)
         {
             foreach (var element in layout.Children)
             {
@@ -227,7 +266,8 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <param name="formattedString">Formatted string.</param>
         /// <param name="text">Text.</param>
-        public static void AddTextSpan(this FormattedString formattedString, string text){
+        public static void AddTextSpan(this FormattedString formattedString, string text)
+        {
             formattedString.Spans.Add(new Span() { Text = text });
         }
         /// <summary>
@@ -246,9 +286,9 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <returns>The phone number.</returns>
         /// <param name="phoneNum">Phone number.</param>
-        public static string CleanPhoneNumber(this string phoneNum)
+        public static string ToNumericString(this string phoneNum)
         {
-            return phoneNum.Replace(" ", string.Empty).Replace("(", string.Empty).Replace(")", string.Empty).Replace("-", string.Empty);
+            return new Regex("[^0-9]").Replace(phoneNum, "");
         }
 
         /// <summary>
@@ -431,60 +471,60 @@ namespace Xamarin.Forms.CommonCore
 #endif
 
 #if __ANDROID__
-		public static ImeAction GetValueFromDescription(this ReturnKeyTypes value)
-		{
-			var type = typeof(ImeAction);
-			if (!type.IsEnum) throw new InvalidOperationException();
-			foreach (var field in type.GetFields())
-			{
-				var attribute = Attribute.GetCustomAttribute(field,
-					typeof(DescriptionAttribute)) as DescriptionAttribute;
-				if (attribute != null)
-				{
-					if (attribute.Description == value.ToString())
-						return (ImeAction)field.GetValue(null);
-				}
-				else
-				{
-					if (field.Name == value.ToString())
-						return (ImeAction)field.GetValue(null);
-				}
-			}
-			throw new NotSupportedException($"Not supported on Android: {value}");
-		}
-		public static float ToDevicePixels(this float number)
-		{
-			var displayMetrics = Xamarin.Forms.Forms.Context.Resources.DisplayMetrics;
-			return (float)System.Math.Round(number * (displayMetrics.Xdpi / (float)DisplayMetrics.DensityDefault));
-		}
-		public static object Call(this object o, string methodName, params object[] args)
-		{
-			var mi = o.GetType().GetMethod(methodName, System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-			if (mi != null)
-			{
-				return mi.Invoke(o, args);
-			}
-			return null;
-		}
-		public static IImageSourceHandler GetHandler(this ImageSource source)
-		{
-			IImageSourceHandler returnValue = null;
-			if (source is UriImageSource)
-			{
-				returnValue = new ImageLoaderSourceHandler();
-			}
-			else if (source is FileImageSource)
-			{
-				returnValue = new FileImageSourceHandler();
-			}
-			else if (source is StreamImageSource)
-			{
-				returnValue = new StreamImagesourceHandler();
-			}
-			return returnValue;
-		}
+        public static ImeAction GetValueFromDescription(this ReturnKeyTypes value)
+        {
+            var type = typeof(ImeAction);
+            if (!type.IsEnum) throw new InvalidOperationException();
+            foreach (var field in type.GetFields())
+            {
+                var attribute = Attribute.GetCustomAttribute(field,
+                    typeof(DescriptionAttribute)) as DescriptionAttribute;
+                if (attribute != null)
+                {
+                    if (attribute.Description == value.ToString())
+                        return (ImeAction)field.GetValue(null);
+                }
+                else
+                {
+                    if (field.Name == value.ToString())
+                        return (ImeAction)field.GetValue(null);
+                }
+            }
+            throw new NotSupportedException($"Not supported on Android: {value}");
+        }
+        public static float ToDevicePixels(this float number)
+        {
+            var displayMetrics = Xamarin.Forms.Forms.Context.Resources.DisplayMetrics;
+            return (float)System.Math.Round(number * (displayMetrics.Xdpi / (float)DisplayMetrics.DensityDefault));
+        }
+        public static object Call(this object o, string methodName, params object[] args)
+        {
+            var mi = o.GetType().GetMethod(methodName, System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
+            if (mi != null)
+            {
+                return mi.Invoke(o, args);
+            }
+            return null;
+        }
+        public static IImageSourceHandler GetHandler(this ImageSource source)
+        {
+            IImageSourceHandler returnValue = null;
+            if (source is UriImageSource)
+            {
+                returnValue = new ImageLoaderSourceHandler();
+            }
+            else if (source is FileImageSource)
+            {
+                returnValue = new FileImageSourceHandler();
+            }
+            else if (source is StreamImageSource)
+            {
+                returnValue = new StreamImagesourceHandler();
+            }
+            return returnValue;
+        }
 #endif
 
-	}
+    }
 }
 

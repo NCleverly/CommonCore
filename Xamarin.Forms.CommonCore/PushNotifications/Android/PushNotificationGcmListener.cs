@@ -66,6 +66,19 @@ namespace PushNotification.Plugin
                     string message = "";
                     string tag = "";
 
+                    if (parameters.ContainsKey(PushNotificationKey.Icon))
+                    {
+                        try
+                        {
+							var iconName = parameters[PushNotificationKey.Icon].ToString();
+							CrossPushNotification.IconResource = Resources.GetIdentifier(iconName, "drawable", context.PackageName);
+                        }
+                        catch
+                        {
+                            CrossPushNotification.IconResource = 0;
+                        }
+
+                    }
                     if (!string.IsNullOrEmpty(CrossPushNotification.NotificationContentTextKey) && parameters.ContainsKey(CrossPushNotification.NotificationContentTextKey))
                     {
                         message = parameters[CrossPushNotification.NotificationContentTextKey].ToString();

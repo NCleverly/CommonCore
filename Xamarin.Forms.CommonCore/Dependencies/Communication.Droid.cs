@@ -35,7 +35,7 @@ namespace Xamarin.Forms.CommonCore
             try
             {
                 var intent = new Intent(Intent.ActionCall);
-                var uri = global::Android.Net.Uri.Parse("tel:" + CoreExtensions.CleanPhoneNumber(phoneNumber));
+                var uri = global::Android.Net.Uri.Parse("tel:" + CoreExtensions.ToNumericString(phoneNumber));
                 intent.SetData(uri);
                 Ctx.StartActivity(intent);
             }
@@ -58,7 +58,7 @@ namespace Xamarin.Forms.CommonCore
 
                 telephonyManager.Listen(phoneListener, PhoneStateListenerFlags.CallState);
                 var intent = new Intent(Intent.ActionCall);
-                var uri = global::Android.Net.Uri.Parse("tel:" + CoreExtensions.CleanPhoneNumber(phoneNumber));
+                var uri = global::Android.Net.Uri.Parse("tel:" + CoreExtensions.ToNumericString(phoneNumber));
                 intent.SetData(uri);
                 Ctx.StartActivity(intent);
             }

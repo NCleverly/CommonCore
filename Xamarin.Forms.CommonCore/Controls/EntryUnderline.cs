@@ -19,7 +19,7 @@ namespace Xamarin.Forms.CommonCore
 		Continue
 	}
 
-	public class EntryUnderline : Entry
+	public class EntryUnderline : MaskedTextField
 	{
 		public Action NextFocus { get; set; }
 

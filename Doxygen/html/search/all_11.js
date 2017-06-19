@@ -9,6 +9,7 @@ var searchData=
   ['rating',['Rating',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a5ede99397e2bbe25cb523250eac086b3',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
   ['ratingchangedevent',['RatingchangedEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#ab62c7982d4d363a790d067dcb7cd57d2',1,'Xamarin::Forms::CommonCore::RankingControl']]],
   ['ratingproperty',['RatingProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a434ae01426bd92007a99dbec8e05e32e',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
+  ['regex',['regex',['../class_xamarin_1_1_forms_1_1_common_core_1_1_masked_text_field.html#ad3dd70eca90a6b69eb3f5d296ef246de',1,'Xamarin::Forms::CommonCore::MaskedTextField']]],
   ['regexbehavior',['RegExBehavior',['../class_xamarin_1_1_forms_1_1_common_core_1_1_reg_ex_behavior.html',1,'Xamarin::Forms::CommonCore']]],
   ['regexbehavior_2ecs',['RegExBehavior.cs',['../_reg_ex_behavior_8cs.html',1,'']]],
   ['regexexp',['RegexExp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_reg_ex_behavior.html#a507f68fc8dbf95bbdefad38add1f85a6',1,'Xamarin::Forms::CommonCore::RegExBehavior']]],

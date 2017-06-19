@@ -13,7 +13,7 @@ namespace Xamarin.Forms.CommonCore
 
         public void PlaceCall(string phoneNumber)
         {
-            var currentNumber = CoreExtensions.CleanPhoneNumber(phoneNumber);
+            var currentNumber = CoreExtensions.ToNumericString(phoneNumber);
 
             if (UIApplication.SharedApplication.CanOpenUrl(new NSUrl("telprompt://" + currentNumber)))
             {
@@ -36,7 +36,7 @@ namespace Xamarin.Forms.CommonCore
         public void PlaceCallWithCallBack(string phoneNumber, string callBackKey)
         {
             TelephoneManager.CallBackKey = callBackKey;
-            var currentNumber = CoreExtensions.CleanPhoneNumber(phoneNumber);
+            var currentNumber = CoreExtensions.ToNumericString(phoneNumber);
 
             if (UIApplication.SharedApplication.CanOpenUrl(new NSUrl("telprompt://" + currentNumber)))
             {

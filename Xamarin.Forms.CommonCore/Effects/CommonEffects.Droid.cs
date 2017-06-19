@@ -11,6 +11,7 @@ using Android.Views;
 [assembly: ExportEffect(typeof(HideTableSeparator), "HideTableSeparator")]
 namespace Xamarin.Forms.CommonCore
 {
+
 	public class HideTableSeparator : PlatformEffect
 	{
 		protected override void OnAttached()

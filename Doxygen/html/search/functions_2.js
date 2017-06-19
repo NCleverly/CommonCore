@@ -2,7 +2,6 @@ var searchData=
 [
   ['calendartitle',['CalendarTitle',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ac4f518986a128854d0bed8b75645e54b',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['canexecute',['CanExecute',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#af609c0ccefcf686042e708dc0b296fc0',1,'Xamarin::Forms::CommonCore::RelayCommand']]],
-  ['cleanphonenumber',['CleanPhoneNumber',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a868ac556f59292a698bb335b30c74531',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['clickevent',['ClickEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a1798c153bf6be472670864d4c056241b',1,'Xamarin::Forms::CommonCore::GradientButton']]],
   ['clone',['Clone',['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#a2c068505b94be3c519add6e3ff579f0b',1,'Xamarin::Forms::CommonCore::DataModel']]],
   ['close',['Close',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_snack_bar.html#a1b2db2b65a5cd30d0de73101599903f6',1,'Xamarin.Forms.CommonCore.ISnackBar.Close()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#a06697c64f60722ecd75e093b4be14608',1,'Xamarin.Forms.CommonCore.PopupView.Close()']]],

@@ -17,6 +17,7 @@ var searchData=
   ['localnotify',['LocalNotify',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ac78356cca2ac25df8657de6db75b2127',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['localnotify_2edroid_2ecs',['LocalNotify.Droid.cs',['../_local_notify_8_droid_8cs.html',1,'']]],
   ['localnotify_2eios_2ecs',['LocalNotify.IOS.cs',['../_local_notify_8_i_o_s_8cs.html',1,'']]],
+  ['localtimestamp',['LocalTimeStamp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#afb0b9674ae78c023b37fdbfa56433d67',1,'Xamarin::Forms::CommonCore::DataModel']]],
   ['location',['Location',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#a4d9766c9b2dd7615337ed45668193196',1,'Xamarin::Forms::CommonCore::CalendarEventModel']]],
   ['lsr',['LSR',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a0dd78f35b40f62aaf3177d6f6ceadd7d',1,'Xamarin::Forms::CommonCore::EncryptionService']]]
 ];

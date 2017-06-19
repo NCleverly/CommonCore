@@ -9,7 +9,6 @@ var searchData=
   ['callback',['Callback',['../class_xamarin_1_1_forms_1_1_common_core_1_1_prompt.html#aeb628d03eaf041ac56289e069172cb05',1,'Xamarin::Forms::CommonCore::Prompt']]],
   ['canexecute',['CanExecute',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#af609c0ccefcf686042e708dc0b296fc0',1,'Xamarin::Forms::CommonCore::RelayCommand']]],
   ['canexecutechanged',['CanExecuteChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#a32c9dfcc7172eb8b9c365696a6d1fde1',1,'Xamarin::Forms::CommonCore::RelayCommand']]],
-  ['cleanphonenumber',['CleanPhoneNumber',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a868ac556f59292a698bb335b30c74531',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['clicked',['Clicked',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#a497d78f2dae86fd154b15bd72c735b59',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['clickevent',['ClickEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a1798c153bf6be472670864d4c056241b',1,'Xamarin::Forms::CommonCore::GradientButton']]],
   ['client',['Client',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a026c3633f27d99034d204531cf661ec0',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['validatejson',['ValidateJSON',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a8dfc4beb83aac19e2920251aab040e97',1,'PushNotification::Plugin::CrossPushNotification']]],
-  ['viewshadoweffect',['ViewShadowEffect',['../class_xamarin_1_1_forms_1_1_common_core_1_1_view_shadow_effect.html#a0189cc6764daa7b5ae01b4c5011e697b',1,'Xamarin::Forms::CommonCore::ViewShadowEffect']]],
-  ['viewwillappear',['ViewWillAppear',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_page_renderer.html#acdd4463aebec2f2e18b33ae8e0741fc2',1,'Xamarin::Forms::CommonCore::BasePageRenderer']]]
+  ['unhookevents',['UnhookEvents',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a6eb4c66075bf4f582d9aac2fb5d7dfe7',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
+  ['unregister',['Unregister',['../interface_push_notification_1_1_plugin_1_1_abstractions_1_1_i_push_notification.html#ad7e386df805f921b3c0d387be5beb647',1,'PushNotification::Plugin::Abstractions::IPushNotification']]]
 ];
