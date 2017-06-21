@@ -5,9 +5,6 @@ namespace Xamarin.Forms.CommonCore
 {
 	public class AzureSettings
 	{
-		public string AzureServiceBusName { get; set; }
-		public string AzureServiceBusUrl { get; set; }
-		public string AzureKey { get; set; }
 		public string AzureHubName { get; set; }
 		public string AzureListenConnection { get; set; }
 	}
@@ -28,7 +25,7 @@ namespace Xamarin.Forms.CommonCore
 
 	public class GoogleSettings
 	{
-		public string GoogleSenderId { get; set; }
+		public string GoogleAppId { get; set; }
 		public string OAuthClientID_iOS { get; set; }
 		public string OAuthClientID_Android { get; set; }
 		public string OAuthClientID_UWP { get; set; }

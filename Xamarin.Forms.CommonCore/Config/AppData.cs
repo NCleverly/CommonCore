@@ -123,11 +123,7 @@ namespace Xamarin.Forms.CommonCore
         public string MobileCenter_HockeyAppAndroid { get; set; }
         public string MobileCenter_HockeyAppUWP { get; set; }
 
-        public string AzureServiceBusName { get; set; }
-        public string AzureServiceBusUrl { get; set; }
-        public string AzureKey { get; set; }
-
-        public string GoogleSenderId { get; set; }
+        public string GoogleAppId { get; set; }
         public string OAuthClientID_iOS { get; set; }
 		public string OAuthClientID_Android { get; set; }
         public string OAuthClientID_UWP { get; set; }
@@ -199,10 +195,7 @@ namespace Xamarin.Forms.CommonCore
                 if (root.AzureSettings != null)
                 {
                     AzureHubName = root.AzureSettings.AzureHubName;
-                    AzureKey = root.AzureSettings.AzureKey;
                     AzureListenConnection = root.AzureSettings.AzureListenConnection;
-                    AzureServiceBusName = root.AzureSettings.AzureServiceBusName;
-                    AzureServiceBusUrl = root.AzureSettings.AzureServiceBusUrl;
                 }
                 if (root.HttpSettings != null)
                 {
@@ -213,7 +206,7 @@ namespace Xamarin.Forms.CommonCore
                 }
                 if(root.SocialMedia!=null){
                     if(root.SocialMedia.GoogleSettings!=null){
-						GoogleSenderId = root.SocialMedia.GoogleSettings.GoogleSenderId;
+						GoogleAppId = root.SocialMedia.GoogleSettings.GoogleAppId;
 						OAuthClientID_iOS = root.SocialMedia.GoogleSettings.OAuthClientID_iOS;
 						OAuthClientID_Android = root.SocialMedia.GoogleSettings.OAuthClientID_Android;
 						OAuthClientID_UWP = root.SocialMedia.GoogleSettings.OAuthClientID_UWP;
