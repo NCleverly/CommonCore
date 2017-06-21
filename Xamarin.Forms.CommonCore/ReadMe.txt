@@ -46,15 +46,14 @@ Required Nuget Installs
             -> Xamarin.GooglePlayServices.Gcm
 
 Suggested
+- CarouselView.FormsPlugin /* see https://github.com/alexrainman/CarouselView to implement */
 - Humanizer /* Displaying strings, enums, dates, times, timespans */
-- Xam.Plugins.Messaging
 - Plugin.Fingerprint /* https://github.com/smstuebe/xamarin-fingerprint */
 - Plugin.Share
 - NodaTime /* Date and time API */
 - Refractored.XamForms.PullToRefresh
-- Xam.Plugins.Forms.ImageCircle
-- Xamarin.Forms.CarouselView
 - AIDatePickerController /* IOS DateTime Picker */
+- iOSCharts /* IOS Charting Controls */
 
 Setup Tasks:
 
