@@ -1,10 +1,7 @@
-﻿﻿﻿﻿{
+﻿{
   "AzureSettings": {
-    "AzureServiceBusName": "busname",
-    "AzureServiceBusUrl": "busurl",
-    "AzureKey": "key",
-    "AzureHubName": "hubname",
-    "AzureListenConnection": "listenconnection"
+    "AzureHubName": "",
+    "AzureListenConnection": ""
   },
   "HttpSettings": {
     "HttpTimeOut": 0,
@@ -14,7 +11,7 @@
   },
   "SocialMedia": {
     "GoogleSettings": {
-      "GoogleSenderId": "",
+      "GoogleAppId": "",
       "OAuthClientID_iOS": "",
       "OAuthClientID_Android": "",
       "OAuthClientID_UWP": ""
@@ -23,26 +20,26 @@
     "MicrosoftAppId": ""
   },
   "SqliteSettings": {
-    "SQLiteDatabase": "app.db3",
+    "SQLiteDatabase": "referenceguide.db3",
     "TableNames": [
-      { "tableName": "namespace.modelname" }
+      { "tableName": "referenceguide.Appointment" }
     ]
   },
   "MobileCenter_HockeyApp": {
-    "IOSAppId": "guid",
-    "AndroidAppId": "guid",
-    "UWPAppId": "guid"
+    "IOSAppId": "",
+    "AndroidAppId": "",
+    "UWPAppId": ""
   },
   "WebApi": [
     {
-      "name": "friendlyname",
-      "url": "apiurl"
+      "name": "somesite",
+      "url": "http://www.test.com/api/get"
     }
   ],
   "CustomSettings": [
     {
-      "name": "friendlyname",
-      "value": "somevalue"
+      "name": "apikey",
+      "value": "123"
     }
   ]
 }
