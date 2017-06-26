@@ -98,6 +98,15 @@ namespace Xamarin.Forms.CommonCore
 			return client;
 		}
 
+        public WebDownloadClient GetWebDownloadClient()
+        {
+			var client = new WebClient();
+			if (AppData.Instance.TokenBearer != null)
+				client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + AppData.Instance.TokenBearer.access_token);
+            return new WebDownloadClient() { Client = client };
+        }
+
+
 		private HttpClient GetClient()
 		{
 			HttpClient client = null;
@@ -200,13 +209,14 @@ namespace Xamarin.Forms.CommonCore
 
 			try
 			{
+                await new SynchronizationContextRemover();
 				using (var client = GetClient())
 				{
-					var postResponse = await client.PostAsync(url, content);
+					var postResponse = await client.PostAsync(url, content).ConfigureAwait(false);
 					postResponse.Content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
 					postResponse.EnsureSuccessStatusCode();
 
-					var raw = await postResponse.Content.ReadAsStringAsync();
+					var raw = await postResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
 					if (raw != null)
 					{
 						response.Response = raw;
@@ -234,11 +244,12 @@ namespace Xamarin.Forms.CommonCore
 			}
 			try
 			{
+                await new SynchronizationContextRemover();
 				using (var client = GetClient())
 				{
-					using (var srvResponse = client.GetAsync(url).Result)
+					using (var srvResponse = await client.GetAsync(url).ConfigureAwait(false))
 					{
-						var jsonResult = await srvResponse.Content.ReadAsStringAsync();
+						var jsonResult = await srvResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
 						response.Success = true;
 					}
 				}
@@ -264,12 +275,13 @@ namespace Xamarin.Forms.CommonCore
 
 			try
 			{
+                await new SynchronizationContextRemover();
 				using (var client = GetClient())
 				{
-					using (var srvResponse = client.GetAsync(url).Result)
+					using (var srvResponse = await client.GetAsync(url).ConfigureAwait(false))
 					{
-						json = await GetStringContent<T>(srvResponse);
-						response.Response = await DeserializeObject<T>(json);
+						json = await GetStringContent<T>(srvResponse).ConfigureAwait(false);
+						response.Response = await DeserializeObject<T>(json).ConfigureAwait(false);
 						response.Success = true;
 						json = string.Empty;
 					}
@@ -297,13 +309,14 @@ namespace Xamarin.Forms.CommonCore
 
 			try
 			{
+				await new SynchronizationContextRemover();
 				using (var client = GetClient())
 				{
 					var data = JsonConvert.SerializeObject(obj);
-					using (var srvResponse = client.PostAsync(url, new StringContent(data, Encoding.UTF8, "application/json")).Result)
+					using (var srvResponse = await client.PostAsync(url, new StringContent(data, Encoding.UTF8, "application/json")).ConfigureAwait(false))
 					{
-						json = await GetStringContent<T>(srvResponse);
-						response.Response = await DeserializeObject<T>(json);
+						json = await GetStringContent<T>(srvResponse).ConfigureAwait(false);
+						response.Response = await DeserializeObject<T>(json).ConfigureAwait(false);
 						response.Success = true;
 						json = string.Empty;
 					}
@@ -333,10 +346,11 @@ namespace Xamarin.Forms.CommonCore
 
 			try
 			{
+                await new SynchronizationContextRemover();
 				using (var client = GetClient())
 				{
 					var data = JsonConvert.SerializeObject(obj);
-					using (var srvResponse = client.PutAsync(url, new StringContent(data, Encoding.UTF8, "application/json")).Result)
+					using (var srvResponse = await client.PutAsync(url, new StringContent(data, Encoding.UTF8, "application/json")))
 					{
 						json = await GetStringContent<T>(srvResponse);
 						response.Response = await DeserializeObject<T>(json);

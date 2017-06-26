@@ -245,6 +245,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Models\EmailMessage.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\MaskedTextField.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\SynchronizationContextRemover.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

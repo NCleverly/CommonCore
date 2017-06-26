@@ -54,6 +54,7 @@ Suggested
 - Refractored.XamForms.PullToRefresh
 - AIDatePickerController /* IOS DateTime Picker */
 - iOSCharts /* IOS Charting Controls */
+- MPAndroidChart /* Android Charting Controls */
 
 Setup Tasks:
 
@@ -102,3 +103,16 @@ Additional References:
 
 TLS explanation : https://blog.xamarin.com/securing-web-requests-with-tls-1-2/
 Icon tool: http://apetools.webprofusion.com/tools/imagegorilla
+
+
+*** MAC Helps ***
+Configure Mac 127.0.0.1 to use a custom name so simulators/emulators will see the service. 
+i.e
+Alter Host File
+127.0.0.1   TestDev
+and then save....Open Terminal use the following commands in the terminal:
+
+sudo nano /etc/hosts
+
+
+

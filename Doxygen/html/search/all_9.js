@@ -62,6 +62,7 @@ var searchData=
   ['ipushnotificationlistener',['IPushNotificationListener',['../interface_push_notification_1_1_plugin_1_1_i_push_notification_listener.html',1,'PushNotification::Plugin']]],
   ['ipushnotificationlistener_2ecs',['IPushNotificationListener.cs',['../_abstractions_2_i_push_notification_listener_8cs.html',1,'(Global Namespace)'],['../_i_o_s_2_i_push_notification_listener_8cs.html',1,'(Global Namespace)']]],
   ['isclippedtobounds',['IsClippedToBounds',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#af86a3cce62961d6fab9b6bae5981b5c1',1,'Xamarin::Forms::CommonCore::PopupView']]],
+  ['iscompleted',['IsCompleted',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_synchronization_context_remover.html#a71941af8c72d13f12a7ca8a5b36bdb44',1,'Xamarin::Forms::CommonCore::SynchronizationContextRemover']]],
   ['isconnected',['IsConnected',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a8f4a02e5adb7933c8c62009705a57a31',1,'Xamarin::Forms::CommonCore::AppData']]],
   ['isdefaultvalue_3c_20t_20_3e',['IsDefaultValue&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#a9731698985d0a5488d275ff27b867129',1,'Xamarin::Forms::CommonCore::SqliteDb']]],
   ['isearchprovider',['ISearchProvider',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_search_provider.html',1,'Xamarin::Forms::CommonCore']]],

@@ -16,5 +16,7 @@ namespace Xamarin.Forms.CommonCore
 		Task<bool> PingDomain(string url);
 		Task<bool> PingUrl(string url);
         Task<StringResponse> GetRaw(string url);
+        WebClient GetWebClient();
+        WebDownloadClient GetWebDownloadClient();
 	}
 }
