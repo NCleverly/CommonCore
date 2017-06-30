@@ -198,10 +198,25 @@ namespace Xamarin.Forms.CommonCore
 			set { SetProperty(ref pageTitle, value); }
 		}
 
+        /// <summary>
+        /// Gets or sets the navigation.
+        /// </summary>
+        /// <value>The navigation.</value>
 		public INavigation Navigation
 		{
 			get { return AppData.Instance.AppNav; }
+            set { AppData.Instance.AppNav = value; }
 		}
+
+        /// <summary>
+        /// Gets or sets the app data.
+        /// </summary>
+        /// <value>The app data.</value>
+        public AppData AppData
+        {
+			get { return AppData.Instance; }
+			set { AppData.Instance = value; }
+        }
 
 		public string LoadingMessageOverlay
 		{

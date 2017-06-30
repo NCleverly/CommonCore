@@ -114,5 +114,7 @@ and then save....Open Terminal use the following commands in the terminal:
 
 sudo nano /etc/hosts
 
+*****************
+
 
 

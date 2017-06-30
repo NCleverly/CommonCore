@@ -291,26 +291,36 @@ namespace Xamarin.Forms.CommonCore
             return new Regex("[^0-9]").Replace(phoneNum, "");
         }
 
+
         /// <summary>
         /// Navigate back in the stack to a specific page while remove pages along the way
         /// </summary>
         /// <returns>The to.</returns>
         /// <param name="nav">Nav.</param>
         /// <param name="pageName">Page name.</param>
-        public static async Task<Page> PopTo(this INavigation nav, string pageName)
+        public static async Task<Page> PopTo<T>(this INavigation nav, bool animated = false) where T : ContentPage
         {
+            var pageName = typeof(T).Name;
+
             if (nav.NavigationStack.Any(x => x.GetType().Name == pageName) && nav.NavigationStack.Count > 1)
             {
                 if (nav.NavigationStack.Last().GetType().Name == pageName)
                     return null;
 
-                for (int x = (nav.NavigationStack.Count - 1); x > -1; x--)
+                for (int x = (nav.NavigationStack.Count - 2); x > -1; x--)
                 {
-                    var page = AppData.Instance.AppNav.NavigationStack[nav.NavigationStack.Count - (x - 1)];
+                    var page = nav.NavigationStack[x];
                     var name = page.GetType().Name;
                     if (name == pageName)
                     {
-                        return await nav.PopAsync();
+                        try
+                        {
+                            return await nav.PopAsync(animated);
+                        }
+                        catch (Exception ex)
+                        {
+                            return null;
+                        }
                     }
                     else
                     {

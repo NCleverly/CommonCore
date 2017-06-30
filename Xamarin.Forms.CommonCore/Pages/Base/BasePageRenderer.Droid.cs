@@ -39,6 +39,17 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
+        //protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        //{
+        //    base.OnElementPropertyChanged(sender, e);
+
+        //    if(e.PropertyName=="ExplicitlyRemoved")
+        //    {
+        //        var context = (Activity)Xamarin.Forms.Forms.Context;
+        //        context.Finish();
+        //    }
+        //}
+
        
         protected override void OnDetachedFromWindow()
         {

@@ -280,5 +280,6 @@
     <None Include="$(MSBuildThisFileDirectory)Services\ActivityCustomUrlSchemeInterceptor.txt">
       <DependentUpon>IAuthenticatorService.cs</DependentUpon>
     </None>
+    <None Include="$(MSBuildThisFileDirectory)Styles\AppStyles.txt" />
   </ItemGroup>
 </Project>
