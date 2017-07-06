@@ -1,6 +1,7 @@
 ﻿{
+  "AESEncryptionKey": "123",
   "AzureSettings": {
-    "AzureHubName": "",
+    "AzureHubName": "hubname",
     "AzureListenConnection": ""
   },
   "HttpSettings": {
@@ -20,9 +21,16 @@
     "MicrosoftAppId": ""
   },
   "SqliteSettings": {
-    "SQLiteDatabase": "referenceguide.db3",
+    "SQLiteDatabase": "app.db3",
+    "EncryptionEnabled": true,
     "TableNames": [
-      { "tableName": "referenceguide.Appointment" }
+      {
+        "Name": "namespace.tableName",
+      },
+      {
+        "Name": "namespace.tableName2",
+        "EncryptedProperties": [ "PropertyName" ]
+      }
     ]
   },
   "MobileCenter_HockeyApp": {
@@ -30,16 +38,12 @@
     "AndroidAppId": "",
     "UWPAppId": ""
   },
-  "WebApi": [
-    {
-      "name": "somesite",
-      "url": "http://www.test.com/api/get"
-    }
-  ],
-  "CustomSettings": [
-    {
-      "name": "apikey",
-      "value": "123"
-    }
-  ]
+  "WebApi": {
+    "customName": "https://someurl.com",
+    "customName2": "https://someurl2.com"
+  },
+  "CustomSettings": {
+    "CustomName": "somevalue",
+    "customName2": "somevalue2"
+  }
 }

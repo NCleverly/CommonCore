@@ -1,15 +1,11 @@
 var searchData=
 [
-  ['emailaddress',['EmailAddress',['../class_xamarin_1_1_forms_1_1_common_core_1_1_email_message.html#af66d6afdacc2a6a3dbba93dee638f211',1,'Xamarin::Forms::CommonCore::EmailMessage']]],
-  ['emailvalidator',['EmailValidator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a6b8e628b0a3eba50063f0c4ee7dcf269',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
-  ['encryptionservice',['EncryptionService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a853f6e901546fcac7c26c5918d80a966',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
-  ['endcolor',['EndColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a40e36afee27681a7690da594ca0889b8',1,'Xamarin::Forms::CommonCore::GradientButton']]],
-  ['endtime',['EndTime',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#a70863d0ef127056d3fe1de97b163bf65',1,'Xamarin::Forms::CommonCore::CalendarEventModel']]],
-  ['entrycolor',['EntryColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a9ea6e2ed584dd5662f710157defb36f4',1,'Xamarin.Forms.CommonCore.BindablePicker.EntryColor()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#aa907394b8086edb19a1aa677dd388871',1,'Xamarin.Forms.CommonCore.EntryUnderline.EntryColor()']]],
-  ['error',['Error',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_complete_status.html#af6a99528031eb02984a032edf51ed4c8',1,'Xamarin.Forms.CommonCore.TelephonyCompleteStatus.Error()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_generic_response.html#ace27ac84482c4f95dc561eb2adb4df5b',1,'Xamarin.Forms.CommonCore.GenericResponse.Error()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_string_response.html#a8940e4dd54b1bfbb53b2f6a04dc920da',1,'Xamarin.Forms.CommonCore.StringResponse.Error()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_boolean_response.html#ae5b08489af218bdb4cd0776056a56aad',1,'Xamarin.Forms.CommonCore.BooleanResponse.Error()']]],
-  ['errorcolor',['ErrorColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a2879b3b38b63e8ef43fcbbc085532ca6',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
-  ['errormessage',['ErrorMessage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_reg_ex_behavior.html#aa957ebdfa4625b6b00b2afdae5459d17',1,'Xamarin::Forms::CommonCore::RegExBehavior']]],
-  ['errortext',['ErrorText',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#af995bb618136113b1b5ed72c09e9aa3d',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
-  ['expires',['expires',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#a6e556007ec276c50646a3de735a35e72',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]],
-  ['expires_5fin',['expires_in',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#ab932224796fac15ab5030296aac418ff',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]]
+  ['description',['Description',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#a776ac94d8fc44edf8f7dc715e0b37c94',1,'Xamarin::Forms::CommonCore::CalendarEventModel']]],
+  ['deviceinfo',['DeviceInfo',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a37ec417ce12fa4fd2402e35c76a76196',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
+  ['devicetype',['DeviceType',['../class_xamarin_1_1_forms_1_1_common_core_1_1_device_information.html#a8f3d2f761ea633aea7ce84edff029512',1,'Xamarin::Forms::CommonCore::DeviceInformation']]],
+  ['dialogprompt',['DialogPrompt',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a5b9a393b0650acb82e458063235799b2',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
+  ['disabledtextcolor',['DisabledTextColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a2c5451c9f73ae855e28ae5254a96b52a',1,'Xamarin::Forms::CommonCore::GradientButton']]],
+  ['displaytitle',['DisplayTitle',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control_view.html#a638910fbe741f83af21fd1ad49bbb18c',1,'Xamarin::Forms::CommonCore::SegmentControlView']]],
+  ['downloadurl',['DownloadUrl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a75afb20ef61b9d740918aacd0f5b6f7c',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
+  ['duration',['Duration',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#a362e3ec57ba54e4a4046450b448d4461',1,'Xamarin::Forms::CommonCore::Snack']]]
 ];

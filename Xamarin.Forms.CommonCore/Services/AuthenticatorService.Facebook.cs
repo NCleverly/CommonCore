@@ -8,7 +8,7 @@ namespace Xamarin.Forms.CommonCore
     {
         private OAuth2Authenticator GetFaceBookAuthenticator(Action<Account> completed, Action<Exception> error)
         {
-            var fb_app_id = AppData.Instance.FaceBookAppId;
+            var fb_app_id = CoreSettings.Config.SocialMedia.FaceBookAppId;
             var native_ui = true;
 			var authenticator
 				 = new Xamarin.Auth.OAuth2Authenticator

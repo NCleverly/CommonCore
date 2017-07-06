@@ -42,7 +42,7 @@ namespace PushNotification.Plugin
                     string token = instanceID.GetToken(CrossPushNotification.SenderId,
                         GoogleCloudMessaging.InstanceIdScope, null);
 
-                    AppData.Instance.DeviceToken = token;
+                    CoreSettings.DeviceToken = token;
 
                     CrossPushNotification.PushNotificationListener.OnRegistered(token, DeviceType.Android);
                     PushNotificationImplementation.StoreRegistrationId(Android.App.Application.Context, token);

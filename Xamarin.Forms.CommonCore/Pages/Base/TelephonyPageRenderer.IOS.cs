@@ -46,27 +46,6 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
-        public override void ViewWillAppear(bool animated)
-        {
-            base.ViewWillAppear(animated);
-
-            var isVisible = !this.NavigationController.TopViewController.NavigationItem.HidesBackButton;
-            if (isVisible)
-            {
-                this.NavigationController.TopViewController.NavigationItem.SetHidesBackButton(true, false);
-
-                // Change back icon.
-                this.NavigationController.TopViewController.NavigationItem.LeftBarButtonItem =
-                    new UIBarButtonItem(
-                        "Back",
-                        UIBarButtonItemStyle.Plain,
-                        (sender, args) =>
-                        {
-                        // This will overwrite PopView behavior in Xamarin Forms.
-                        NavigationController.PopViewController(true);
-                        });
-            }
-        }
     }
 }
 #endif

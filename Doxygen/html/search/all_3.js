@@ -32,11 +32,13 @@ var searchData=
   ['communication_2edroid_2ecs',['Communication.Droid.cs',['../_communication_8_droid_8cs.html',1,'']]],
   ['communication_2eios_2ecs',['Communication.IOS.cs',['../_communication_8_i_o_s_8cs.html',1,'']]],
   ['completed',['Completed',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_complete_status.html#a869e6c318e20622d6811bfaca57a44f6',1,'Xamarin::Forms::CommonCore::TelephonyCompleteStatus']]],
+  ['config',['Config',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#abb7f500a39d0a9496d958ccdb142649a',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
+  ['configurationmodel',['ConfigurationModel',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html',1,'Xamarin::Forms::CommonCore']]],
   ['configurationmodel_2ecs',['ConfigurationModel.cs',['../_configuration_model_8cs.html',1,'']]],
   ['conn',['conn',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#aa65b98feb20727331d627d1c9d04e5b2',1,'Xamarin::Forms::CommonCore::SqliteDb']]],
   ['consolewrite',['ConsoleWrite',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#af0c2428a8fc9d4a102560b1efa9cadc2',1,'Xamarin.Forms.CommonCore.CoreExtensions.ConsoleWrite(this Exception ex, bool includeImageMarker=false)'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ae37670d06d387a2d65d77e23c6952b0c',1,'Xamarin.Forms.CommonCore.CoreExtensions.ConsoleWrite(this string str, string title, bool includeImageMarker=false)']]],
   ['container',['Container',['../class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a4ea7b21fcb37ffbd05c77dc36ead6246',1,'Xamarin::Forms::CommonCore::InjectionManager']]],
-  ['content',['content',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a2080ab6b10c833be79727f5269c47ae6',1,'Xamarin.Forms.CommonCore.AbsoluteLayoutPage.content()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a77c383b8689245fc2d3044a6479dcad8',1,'Xamarin.Forms.CommonCore.AbsoluteLayoutPage.Content()']]],
+  ['content',['Content',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a77c383b8689245fc2d3044a6479dcad8',1,'Xamarin.Forms.CommonCore.AbsoluteLayoutPage.Content()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a2080ab6b10c833be79727f5269c47ae6',1,'Xamarin.Forms.CommonCore.AbsoluteLayoutPage.content()']]],
   ['contentviewrounded',['ContentViewRounded',['../class_xamarin_1_1_forms_1_1_common_core_1_1_content_view_rounded.html',1,'Xamarin::Forms::CommonCore']]],
   ['contentviewrounded_2ecs',['ContentViewRounded.cs',['../_content_view_rounded_8cs.html',1,'']]],
   ['contentviewroundedrenderer_2edroid_2ecs',['ContentViewRoundedRenderer.Droid.cs',['../_content_view_rounded_renderer_8_droid_8cs.html',1,'']]],
@@ -48,6 +50,8 @@ var searchData=
   ['core',['Core',['../namespace_common_1_1_core.html',1,'Common']]],
   ['coreextensions',['CoreExtensions',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html',1,'Xamarin::Forms::CommonCore']]],
   ['coreextensions_2ecs',['CoreExtensions.cs',['../_core_extensions_8cs.html',1,'']]],
+  ['coresettings',['CoreSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html',1,'Xamarin::Forms::CommonCore']]],
+  ['coresettings_2ecs',['CoreSettings.cs',['../_core_settings_8cs.html',1,'']]],
   ['corestyles',['CoreStyles',['../class_xamarin_1_1_forms_1_1_common_core_1_1_styles_1_1_core_styles.html',1,'Xamarin::Forms::CommonCore::Styles']]],
   ['corestyles_2ecs',['CoreStyles.cs',['../_core_styles_8cs.html',1,'']]],
   ['cornerradius',['CornerRadius',['../class_xamarin_1_1_forms_1_1_common_core_1_1_content_view_rounded.html#a01f3c111ca7528bec50dc00fbb5596ef',1,'Xamarin.Forms.CommonCore.ContentViewRounded.CornerRadius()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a3664dc57060bc42c541acbb48da8e641',1,'Xamarin.Forms.CommonCore.GradientButton.CornerRadius()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#ad29a0718ba9145c9949792a1499816d1',1,'Xamarin.Forms.CommonCore.SegmentControl.CornerRadius()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#ae7c72c947f82d84cd02cdbc36de00bd2',1,'Xamarin.Forms.CommonCore.PopupView.CornerRadius()']]],
@@ -61,6 +65,6 @@ var searchData=
   ['crosspushnotification',['CrossPushNotification',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html',1,'PushNotification::Plugin']]],
   ['crosspushnotification_2ecs',['CrossPushNotification.cs',['../_cross_push_notification_8cs.html',1,'']]],
   ['current',['Current',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a4132cf38f37171437cdc4f62f877524d',1,'PushNotification::Plugin::CrossPushNotification']]],
-  ['currentbuid',['CurrentBuid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_buid.html#a748ef45a3659bd6ce3c79c6aa1cdec42',1,'Xamarin::Forms::CommonCore::AppBuid']]],
-  ['customsettings',['CustomSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#ab1ace3c0f6a6d569bf5fc4af1d037cd4',1,'Xamarin.Forms.CommonCore.AppData.CustomSettings()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_root_object.html#ab70d8df5e40bfdffe910422004058f84',1,'Xamarin.Forms.CommonCore.RootObject.CustomSettings()']]]
+  ['currentbuid',['CurrentBuid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#af44d78ca823a1a0dad953d36e90217e3',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
+  ['customsettings',['CustomSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#a1a2ee350c78375cdebd4d6a009e72a58',1,'Xamarin.Forms.CommonCore.ConfigurationModel.CustomSettings()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aa37beb84cabc6f249998561ddcd9448b',1,'Xamarin.Forms.CommonCore.ObservableViewModel.CustomSettings()']]]
 ];

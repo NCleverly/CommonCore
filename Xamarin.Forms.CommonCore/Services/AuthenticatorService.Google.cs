@@ -9,10 +9,10 @@ namespace Xamarin.Forms.CommonCore
         
         private OAuth2Authenticator GetGoogleAuthenticator(Action<Account> completed, Action<Exception> error)
         {
-            var appId = AppData.Instance.GoogleAppId;
-            var iosId = AppData.Instance.OAuthClientID_iOS;
-            var droidId = AppData.Instance.OAuthClientID_Android;
-            var uwpId = AppData.Instance.OAuthClientID_UWP;
+            var appId = CoreSettings.Config.SocialMedia.GoogleSettings.GoogleAppId;
+            var iosId = CoreSettings.Config.SocialMedia.GoogleSettings.OAuthClientID_iOS;
+            var droidId = CoreSettings.Config.SocialMedia.GoogleSettings.OAuthClientID_Android;
+            var uwpId = CoreSettings.Config.SocialMedia.GoogleSettings.OAuthClientID_UWP;
 
             var authenticator
 			     = new Xamarin.Auth.OAuth2Authenticator

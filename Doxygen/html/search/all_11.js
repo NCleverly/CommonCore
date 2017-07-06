@@ -19,7 +19,9 @@ var searchData=
   ['registrationcomplete',['RegistrationComplete',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#a738f4d0e1a3aefddbad92909654587f9',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
   ['relaycommand',['RelayCommand',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html',1,'Xamarin.Forms.CommonCore.RelayCommand'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#a489e5bba89f4bf0b4f85065f516e7654',1,'Xamarin.Forms.CommonCore.RelayCommand.RelayCommand()']]],
   ['relaycommand_2ecs',['RelayCommand.cs',['../_relay_command_8cs.html',1,'']]],
-  ['reload',['Reload',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a9a116d6ede38c03bc2e0a2c77d5d3837',1,'Xamarin::Forms::CommonCore::AppData']]],
+  ['releaser',['Releaser',['../class_xamarin_1_1_forms_1_1_common_core_1_1_async_lock_1_1_releaser.html',1,'Xamarin.Forms.CommonCore.AsyncLock.Releaser'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_async_lock_1_1_releaser.html#ac06503ce3957d49de3403d2051f6c8bf',1,'Xamarin.Forms.CommonCore.AsyncLock.Releaser.Releaser()']]],
+  ['reload',['Reload',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings_1_1_app_data.html#a5265d77d29acd41ed2a52658c33b5046',1,'Xamarin::Forms::CommonCore::CoreSettings::AppData']]],
+  ['removeanimations',['RemoveAnimations',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a7d5e8de85809583469092c0ac185b099',1,'Xamarin.Forms.CommonCore.CoreExtensions.RemoveAnimations(this ContentPage page)'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#adc5b5448b0fbdc9a1d9e589dbc165afd',1,'Xamarin.Forms.CommonCore.CoreExtensions.RemoveAnimations(this Layout&lt; View &gt; layout)']]],
   ['removeemptyrowseffect',['RemoveEmptyRowsEffect',['../class_xamarin_1_1_forms_1_1_common_core_1_1_remove_empty_rows_effect.html',1,'Xamarin.Forms.CommonCore.RemoveEmptyRowsEffect'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_remove_empty_rows_effect.html#a48ec4ef04e710138c3bdf15aab3d7eaf',1,'Xamarin.Forms.CommonCore.RemoveEmptyRowsEffect.RemoveEmptyRowsEffect()']]],
   ['render',['Render',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a35f522ff4030bbaefde99f824facf10b',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['requestpermission',['RequestPermission',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_local_notify.html#ad51cd3fa30b96bc68766aceca33e0aec',1,'Xamarin::Forms::CommonCore::ILocalNotify']]],
@@ -32,6 +34,5 @@ var searchData=
   ['returnkeytype',['ReturnKeyType',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a37094ef886194d9486f65323d1e9f5b8',1,'Xamarin::Forms::CommonCore::EntryUnderline']]],
   ['returnkeytypeproperty',['ReturnKeyTypeProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a72ecaa4bd701e55935ca7597ffe55e32',1,'Xamarin::Forms::CommonCore::EntryUnderline']]],
   ['returnkeytypes',['ReturnKeyTypes',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aebd939a54cefa043add7c8ba6eab51da',1,'Xamarin::Forms::CommonCore']]],
-  ['rootobject',['RootObject',['../class_xamarin_1_1_forms_1_1_common_core_1_1_root_object.html',1,'Xamarin::Forms::CommonCore']]],
   ['route',['Route',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aebd939a54cefa043add7c8ba6eab51daa9405c3aff9112c3c60d03b94792877dc',1,'Xamarin::Forms::CommonCore']]]
 ];

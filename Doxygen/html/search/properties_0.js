@@ -1,21 +1,4 @@
 var searchData=
 [
-  ['absolutelayer',['AbsoluteLayer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a5f35e9ffbaf821c62a76e85969d1c44d',1,'Xamarin::Forms::CommonCore::AbsoluteLayoutPage']]],
-  ['accentcolor',['AccentColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#acb227633001b95d713362fc72f699165',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
-  ['access_5ftoken',['access_token',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#a05466456cdce3072df53ea4560696313',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]],
-  ['accountencryptionkey',['AccountEncryptionKey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a94dfc84f3f3bec33b9c4f2c935555620',1,'Xamarin::Forms::CommonCore::AccountService']]],
-  ['accountservice',['AccountService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a4085a3700c28182d712ecb0a143f0d5f',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
-  ['action',['Action',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#a596d6a4e139aec9c0664db6a5e666d02',1,'Xamarin::Forms::CommonCore::Snack']]],
-  ['actiontext',['ActionText',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#aca7b80c0230ccaddbf79d7b6d9aae85a',1,'Xamarin::Forms::CommonCore::Snack']]],
-  ['actiontextcolor',['ActionTextColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#ac563084480d853e783a6aaad217aa930',1,'Xamarin::Forms::CommonCore::Snack']]],
-  ['androidappid',['AndroidAppId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html#a9a8d1b6a4618f46c3b369d24e87ed7e5',1,'Xamarin::Forms::CommonCore::MobileCenterHockeyApp']]],
-  ['androidhttphandler',['AndroidHttpHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a9143b176c39f10b2afec40ebf10f94a7',1,'Xamarin.Forms.CommonCore.AppData.AndroidHttpHandler()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_settings.html#a179824ba71f7bc055e37a14da96efd50',1,'Xamarin.Forms.CommonCore.HttpSettings.AndroidHttpHandler()']]],
-  ['animateopen',['AnimateOpen',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#af820072d7c7c1e79e58df8a6625503c8',1,'Xamarin::Forms::CommonCore::PopupView']]],
-  ['appnav',['AppNav',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a22d34dae0eeb5deb6fb976965e9e6e34',1,'Xamarin::Forms::CommonCore::AppData']]],
-  ['audioplayer',['AudioPlayer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a916d2d8d6fd9eea48cf6204fd84122bd',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
-  ['authenticatorservice',['AuthenticatorService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#acf1cc20e5b9c6031eadc7a26c6aba68b',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
-  ['azurehubname',['AzureHubName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#ae6d6bafbb89a56755dd9c5f5e0854989',1,'Xamarin.Forms.CommonCore.AppData.AzureHubName()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_azure_settings.html#a92b0b9765b07e3c2eee6bafee803423a',1,'Xamarin.Forms.CommonCore.AzureSettings.AzureHubName()']]],
-  ['azurelistenconnection',['AzureListenConnection',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a6fff47c19cb5f20eb19e168f10ed7fe5',1,'Xamarin.Forms.CommonCore.AppData.AzureListenConnection()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_azure_settings.html#a0ccc0034c1794b482d96ec15fc75e79f',1,'Xamarin.Forms.CommonCore.AzureSettings.AzureListenConnection()']]],
-  ['azurenotificationhub',['AzureNotificationHub',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a6962e26bb1460215b248a50a197d044c',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
-  ['azuresettings',['AzureSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_root_object.html#a45da6fdd25656dbdf92b7897d2d237ec',1,'Xamarin::Forms::CommonCore::RootObject']]]
+  ['_5fappsettings',['_appSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#ac0012fd92e8fda53069a7b8f1b7d12ce',1,'Xamarin::Forms::CommonCore::CoreSettings']]]
 ];

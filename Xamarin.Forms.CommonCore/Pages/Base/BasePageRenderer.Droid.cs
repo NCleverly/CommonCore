@@ -39,17 +39,6 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-        //protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        //{
-        //    base.OnElementPropertyChanged(sender, e);
-
-        //    if(e.PropertyName=="ExplicitlyRemoved")
-        //    {
-        //        var context = (Activity)Xamarin.Forms.Forms.Context;
-        //        context.Finish();
-        //    }
-        //}
-
        
         protected override void OnDetachedFromWindow()
         {
@@ -87,7 +76,7 @@ namespace Xamarin.Forms.CommonCore
 		{
             var context = (Activity)Xamarin.Forms.Forms.Context;
 
-			_searchView = context?.FindViewById<SearchView>(AppData.Instance.SearchView);
+			_searchView = context?.FindViewById<SearchView>(CoreSettings.SearchView);
 
 			if (_searchView == null) return;
 

@@ -43,7 +43,7 @@ namespace Xamarin.Forms.CommonCore
 
             int appIcon = GetResourceIdByName(notification.Icon);
             if (appIcon == 0)
-                appIcon = AppData.Instance.AppIcon;
+                appIcon = CoreSettings.AppIcon;
 
 
             // Build the notification:

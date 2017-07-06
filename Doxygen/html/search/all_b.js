@@ -7,7 +7,7 @@ var searchData=
   ['listcontrol_2ecs',['ListControl.cs',['../_list_control_8cs.html',1,'']]],
   ['listremoveemptyrows',['ListRemoveEmptyRows',['../class_common_1_1_core_1_1_list_remove_empty_rows.html',1,'Common.Core.ListRemoveEmptyRows'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_common_effects.html#aae0e56c7f84d40d6a8f5a2bf4dcc7934',1,'Xamarin.Forms.CommonCore.CommonEffects.ListRemoveEmptyRows()']]],
   ['listremoveemptyrows_2ecs',['ListRemoveEmptyRows.cs',['../_list_remove_empty_rows_8cs.html',1,'']]],
-  ['load',['Load',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#ac7c0d4b7d05969e25d9935fe0736a4e4',1,'Xamarin::Forms::CommonCore::AppData']]],
+  ['load',['Load',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings_1_1_app_data.html#a9f1ae9da63fa19256190011fe467bade',1,'Xamarin::Forms::CommonCore::CoreSettings::AppData']]],
   ['loadaccount_3c_20t_20_3e',['LoadAccount&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a8b811a7d5833515ae4e20779a0c3135d',1,'Xamarin::Forms::CommonCore::AccountService']]],
   ['loadingmessagehud',['loadingMessageHUD',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a33cf2955587456a4cf076987c504e183',1,'Xamarin.Forms.CommonCore.ObservableViewModel.loadingMessageHUD()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1bbf76dd1d1e527e47bef71a44aee6c6',1,'Xamarin.Forms.CommonCore.ObservableViewModel.LoadingMessageHUD()']]],
   ['loadingmessageoverlay',['loadingMessageOverlay',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a0c9aa403b518201cae4f2cd45dc5dbfb',1,'Xamarin.Forms.CommonCore.ObservableViewModel.loadingMessageOverlay()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1aea5ac101ba6ce4fe138f0d236b396c',1,'Xamarin.Forms.CommonCore.ObservableViewModel.LoadingMessageOverlay()']]],
@@ -19,5 +19,6 @@ var searchData=
   ['localnotify_2eios_2ecs',['LocalNotify.IOS.cs',['../_local_notify_8_i_o_s_8cs.html',1,'']]],
   ['localtimestamp',['LocalTimeStamp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#afb0b9674ae78c023b37fdbfa56433d67',1,'Xamarin::Forms::CommonCore::DataModel']]],
   ['location',['Location',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#a4d9766c9b2dd7615337ed45668193196',1,'Xamarin::Forms::CommonCore::CalendarEventModel']]],
+  ['lockasync',['LockAsync',['../class_xamarin_1_1_forms_1_1_common_core_1_1_async_lock.html#a14b31b19beadf869944e18f39b849af4',1,'Xamarin::Forms::CommonCore::AsyncLock']]],
   ['lsr',['LSR',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a0dd78f35b40f62aaf3177d6f6ceadd7d',1,'Xamarin::Forms::CommonCore::EncryptionService']]]
 ];

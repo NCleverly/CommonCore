@@ -33,12 +33,14 @@ namespace Xamarin.Forms.CommonCore
 
 	public class TableName
 	{
-		public string tableName { get; set; }
+		public string Name { get; set; }
+        public string[] EncryptedProperties { get; set; }
 	}
 
 	public class SqliteSettings
 	{
 		public string SQLiteDatabase { get; set; }
+        public bool EncryptionEnabled { get; set; }
 		public List<TableName> TableNames { get; set; }
 	}
 
@@ -49,26 +51,15 @@ namespace Xamarin.Forms.CommonCore
 		public string UWPAppId { get; set; }
 	}
 
-	public class WebApi
+	public class ConfigurationModel
 	{
-		public string name { get; set; }
-		public string url { get; set; }
-	}
-
-	public class Setting
-	{
-		public string name { get; set; }
-		public string value { get; set; }
-	}
-
-	public class RootObject
-	{
+        public string AESEncryptionKey { get; set; }
 		public HttpSettings HttpSettings { get; set; }
 		public AzureSettings AzureSettings { get; set; }
 		public SocialMedia SocialMedia { get; set; }
 		public SqliteSettings SqliteSettings { get; set; }
 		public MobileCenterHockeyApp MobileCenter_HockeyApp { get; set; }
-		public List<WebApi> WebApi { get; set; }
-		public List<Setting> CustomSettings { get; set; }
+		public Dictionary<string,string> WebApi { get; set; }
+		public Dictionary<string, string> CustomSettings { get; set; }
 	}
 }

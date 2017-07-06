@@ -1,7 +1,6 @@
 var searchData=
 [
   ['backgroundtimer',['BackgroundTimer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_background_timer.html',1,'Xamarin::Forms::CommonCore']]],
-  ['basepagerenderer',['BasePageRenderer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_page_renderer.html',1,'Xamarin::Forms::CommonCore']]],
   ['basepages',['BasePages',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html',1,'Xamarin::Forms::CommonCore']]],
   ['basetabbedpage',['BaseTabbedPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_tabbed_page.html',1,'Xamarin::Forms::CommonCore']]],
   ['bindablepicker',['BindablePicker',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html',1,'Xamarin::Forms::CommonCore']]],

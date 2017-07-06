@@ -19,5 +19,5 @@ var searchData=
   ['starlist',['starList',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#a2394f3914f187826365bd9c7dec9b092',1,'Xamarin::Forms::CommonCore::RankingControl']]],
   ['startcolorproperty',['StartColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a2b4d6cc2e905836756b1c2a0d40e133c',1,'Xamarin::Forms::CommonCore::GradientButton']]],
   ['subtitle',['Subtitle',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#afc44fc236896fa0539e45d4cdf6a7f9d',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
-  ['system',['System',['../_app_data_8cs.html#a4598c6b5042b9ab31ee4f4644765857d',1,'System():&#160;AppData.cs'],['../_configuration_model_8cs.html#a4598c6b5042b9ab31ee4f4644765857d',1,'System():&#160;ConfigurationModel.cs']]]
+  ['system',['System',['../_injection_manager_8cs.html#a4598c6b5042b9ab31ee4f4644765857d',1,'System():&#160;InjectionManager.cs'],['../_configuration_model_8cs.html#a4598c6b5042b9ab31ee4f4644765857d',1,'System():&#160;ConfigurationModel.cs']]]
 ];

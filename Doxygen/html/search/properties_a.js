@@ -1,16 +1,10 @@
 var searchData=
 [
-  ['maintainselection',['MaintainSelection',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#ac66520209ddb43231f9ea733a65a386f',1,'Xamarin::Forms::CommonCore::ListControl']]],
-  ['mapnavigate',['MapNavigate',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#afa277bba4554b8f7ffe64dcbd7607599',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
-  ['markedfordelete',['MarkedForDelete',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_data_model.html#a3382560bb198fa1c2c3f62f234742a1e',1,'Xamarin.Forms.CommonCore.IDataModel.MarkedForDelete()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#a1b1775d04e8d7bb4cd117c109412b7ac',1,'Xamarin.Forms.CommonCore.DataModel.MarkedForDelete()']]],
-  ['maskpattern',['MaskPattern',['../class_xamarin_1_1_forms_1_1_common_core_1_1_masked_text_field.html#abdc033270ab67bf0b82237ea903290df',1,'Xamarin::Forms::CommonCore::MaskedTextField']]],
-  ['message',['Message',['../class_xamarin_1_1_forms_1_1_common_core_1_1_prompt.html#a4492f106437cbc80c6047fd9832fdef1',1,'Xamarin.Forms.CommonCore.Prompt.Message()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#a4a7506ffaf666e4f64c2ce10746809c6',1,'Xamarin.Forms.CommonCore.LocalNotification.Message()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_email_message.html#ab01311f1a0b04652dedc15c0872454bc',1,'Xamarin.Forms.CommonCore.EmailMessage.Message()']]],
-  ['meta_5fdata',['meta_data',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#ae9a60e51458a83c31f676f5ef5614b17',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]],
-  ['metadata',['MetaData',['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#ab30e32ffa116b47b0ecbb54b62d3b05c',1,'Xamarin.Forms.CommonCore.LocalNotification.MetaData()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_generic_response.html#a5fb3daf262c08e1561052d73196d35b9',1,'Xamarin.Forms.CommonCore.GenericResponse.MetaData()']]],
-  ['microsoftappid',['MicrosoftAppId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a4e3c7dd0d7b523a7e52b4b1280e0aeda',1,'Xamarin.Forms.CommonCore.AppData.MicrosoftAppId()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_social_media.html#ad20e9d8d0c374c836a624dfb8a64230d',1,'Xamarin.Forms.CommonCore.SocialMedia.MicrosoftAppId()']]],
-  ['mobilecenter_5fhockeyapp',['MobileCenter_HockeyApp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_root_object.html#aa2a48825d505fab2d206ee9eed9040a5',1,'Xamarin::Forms::CommonCore::RootObject']]],
-  ['mobilecenter_5fhockeyappandroid',['MobileCenter_HockeyAppAndroid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#af2c393903fe09ab9e69184f74139e26f',1,'Xamarin::Forms::CommonCore::AppData']]],
-  ['mobilecenter_5fhockeyappios',['MobileCenter_HockeyAppiOS',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a942f25e6da2b4b702483a0e99f01c8bf',1,'Xamarin::Forms::CommonCore::AppData']]],
-  ['mobilecenter_5fhockeyappuwp',['MobileCenter_HockeyAppUWP',['../class_xamarin_1_1_forms_1_1_common_core_1_1_app_data.html#a9b545219339c5fdb45bee52b86f377ab',1,'Xamarin::Forms::CommonCore::AppData']]],
-  ['model',['Model',['../class_xamarin_1_1_forms_1_1_common_core_1_1_device_information.html#a8a99bcc05694b406320ad122de1eb6b5',1,'Xamarin::Forms::CommonCore::DeviceInformation']]]
+  ['linksenabled',['LinksEnabled',['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html#aac355b68acee02c583c7e32ff3df2eba',1,'Xamarin::Forms::CommonCore::TextArea']]],
+  ['loadingmessagehud',['LoadingMessageHUD',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1bbf76dd1d1e527e47bef71a44aee6c6',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
+  ['loadingmessageoverlay',['LoadingMessageOverlay',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1aea5ac101ba6ce4fe138f0d236b396c',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
+  ['loadmorecommand',['LoadMoreCommand',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#a4227e66d99cb725271dc368ffc136fb6',1,'Xamarin::Forms::CommonCore::ListControl']]],
+  ['localnotify',['LocalNotify',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ac78356cca2ac25df8657de6db75b2127',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
+  ['localtimestamp',['LocalTimeStamp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#afb0b9674ae78c023b37fdbfa56433d67',1,'Xamarin::Forms::CommonCore::DataModel']]],
+  ['location',['Location',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#a4d9766c9b2dd7615337ed45668193196',1,'Xamarin::Forms::CommonCore::CalendarEventModel']]]
 ];

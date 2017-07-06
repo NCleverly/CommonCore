@@ -1,8 +1,11 @@
 var searchData=
 [
+  ['_5fappsettings',['_appSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#ac0012fd92e8fda53069a7b8f1b7d12ce',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
   ['_5fcontainer',['_container',['../class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#af23d6f4fc46185daae4f3466c8f5613d',1,'Xamarin::Forms::CommonCore::InjectionManager']]],
   ['_5fexecute',['_execute',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#a6065a5f679d4d27130230ff1bb2f3224',1,'Xamarin::Forms::CommonCore::RelayCommand']]],
   ['_5fnpc',['_npc',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#a90e80cdf3eeb085afb495a01d70c89d6',1,'Xamarin::Forms::CommonCore::RelayCommand']]],
+  ['_5freleaser',['_releaser',['../class_xamarin_1_1_forms_1_1_common_core_1_1_async_lock.html#a5e672d88fe0a4254e4c637bc25f3504b',1,'Xamarin::Forms::CommonCore::AsyncLock']]],
+  ['_5fsemaphore',['_semaphore',['../class_xamarin_1_1_forms_1_1_common_core_1_1_async_lock.html#a54df2ab0b86a74ab4d701578ef81aadf',1,'Xamarin::Forms::CommonCore::AsyncLock']]],
   ['_5fservicelocator',['_serviceLocator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a205950f16b036b01765ee0386d6fdb5d',1,'Xamarin::Forms::CommonCore::InjectionManager']]],
   ['_5fvalidator',['_validator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#acb44a230c4bbe4bb33454246ef145eac',1,'Xamarin::Forms::CommonCore::RelayCommand']]]
 ];

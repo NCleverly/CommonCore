@@ -28,6 +28,106 @@ namespace Xamarin.Forms.CommonCore
 {
     public static class CoreExtensions
     {
+        public static string GetString(this PropertyInfo prop, object obj)
+        {
+            return (string)prop.GetValue(obj, null);
+        }
+
+        /// <summary>
+        /// Encrypteds the data model properties.
+        /// </summary>
+        /// <param name="obj">Object.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static void EncryptedDataModelProperties<T>(this T obj) where T : IDataModel
+        {
+            var n = typeof(T).FullName;
+            var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
+            if (table != null)
+            {
+                var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+                foreach (var prop in typeof(T).GetProperties())
+                {
+                    if (table.EncryptedProperties.Contains(prop.Name))
+                    {
+                        prop.SetValue(obj, service.AesEncrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Encrypteds the data model properties.
+        /// </summary>
+        /// <param name="list">List.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static void EncryptedDataModelProperties<T>(this IEnumerable<T> list) where T : IDataModel
+        {
+            var n = typeof(T).FullName;
+            var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
+            if (table != null)
+            {
+                var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+                foreach (var prop in typeof(T).GetProperties())
+                {
+                    if (table.EncryptedProperties.Contains(prop.Name))
+                    {
+                        foreach (var obj in list)
+                        {
+                            prop.SetValue(obj, service.AesEncrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                        }
+                    }
+                }
+            }
+        }
+        /// <summary>
+        /// Uns the encrypted data model properties.
+        /// </summary>
+        /// <param name="obj">Object.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static void UnEncryptedDataModelProperties<T>(this object obj) where T : IDataModel
+        {
+            var n = typeof(T).FullName;
+            var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
+            if (table != null)
+            {
+                var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+                foreach (var prop in typeof(T).GetProperties())
+                {
+                    if (table.EncryptedProperties.Contains(prop.Name))
+                    {
+                        prop.SetValue(obj, service.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                    }
+                }
+            }
+        }
+        /// <summary>
+        /// Uns the encrypted data model properties.
+        /// </summary>
+        /// <param name="list">List.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static void UnEncryptedDataModelProperties<T>(this IEnumerable<T> list) where T : IDataModel
+        {
+            var n = typeof(T).FullName;
+            var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
+            if (table != null)
+            {
+                var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+                foreach (var prop in typeof(T).GetProperties())
+                {
+                    if (table.EncryptedProperties.Contains(prop.Name))
+                    {
+                        foreach (var obj in list)
+                        {
+                            prop.SetValue(obj, service.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                        }
+                    }
+                }
+            }
+        }
+        /// <summary>
+        /// Sets the automation identifiers.
+        /// </summary>
+        /// <param name="page">Page.</param>
         public static void SetAutomationIds(this ContentPage page)
         {
             var bindingFlags = BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public;
@@ -224,6 +324,40 @@ namespace Xamarin.Forms.CommonCore
                 collection.Add(array[x]);
             return collection;
         }
+        /// <summary>
+        /// Removes the animations from page.
+        /// </summary>
+        /// <param name="page">Page.</param>
+        public static void RemoveAnimations(this ContentPage page)
+        {
+            if(page.Content is Layout<View>)
+            {
+                var layout = (Layout<View>)page.Content;
+                RemoveAnimations(layout);
+            }
+        }
+        /// <summary>
+        /// Removes the animations from Layout<View>.
+        /// </summary>
+        /// <param name="layout">Layout.</param>
+		public static void RemoveAnimations(this Layout<View> layout)
+		{
+			foreach (var element in layout.Children)
+			{
+                if (element is Layout<View>)
+                {
+                    RemoveAnimations((Layout<View>)element);
+                }
+                else
+                {
+                    try
+                    {
+                        ViewExtensions.CancelAnimations(element);
+                    }
+                    catch { }
+                }
+			}
+		}
 
         /// <summary>
         /// Disables all controls in the layout view
@@ -382,7 +516,15 @@ namespace Xamarin.Forms.CommonCore
 
             return index;
         }
-
+        /// <summary>
+        /// Adds the child to a grid.
+        /// </summary>
+        /// <param name="grid">Grid.</param>
+        /// <param name="view">View.</param>
+        /// <param name="row">Row.</param>
+        /// <param name="column">Column.</param>
+        /// <param name="rowspan">Rowspan.</param>
+        /// <param name="columnspan">Columnspan.</param>
         public static void AddChild(this Grid grid, View view, int row, int column, int rowspan = 1, int columnspan = 1)
         {
             if (row < 0)
@@ -411,6 +553,11 @@ namespace Xamarin.Forms.CommonCore
 
 
 #if __IOS__
+        /// <summary>
+        /// Tos the local notification.
+        /// </summary>
+        /// <returns>The local notification.</returns>
+        /// <param name="userInfo">User info.</param>
         public static LocalNotification ToLocalNotification(this NSDictionary userInfo)
         {
             var notification = new LocalNotification();
@@ -434,50 +581,64 @@ namespace Xamarin.Forms.CommonCore
             }
             return notification;
         }
-
-		public static UIImage ChangeImageColor(this UIImage image, UIColor color)
-		{
-			var rect = new CGRect(0, 0, image.Size.Width, image.Size.Height);
-			UIGraphics.BeginImageContext(rect.Size);
-			var ctx = UIGraphics.GetCurrentContext();
-			ctx.ClipToMask(rect, image.CGImage);
-			ctx.SetFillColor(color.CGColor);
-			ctx.FillRect(rect);
-			var img = UIGraphics.GetImageFromCurrentImageContext();
-			UIGraphics.EndImageContext();
-			return UIImage.FromImage(img.CGImage, 1.0f, UIImageOrientation.DownMirrored);
-		}
-
-		public static void Resize(this UIImageView imgView, nfloat size)
-		{
-			var newSize = new CGSize(size, size);
-			UIGraphics.BeginImageContextWithOptions(newSize, false, UIScreen.MainScreen.Scale);
-			imgView.Image.Draw(new CGRect(0, 0, newSize.Width, newSize.Height));
-			imgView.Image = UIGraphics.GetImageFromCurrentImageContext();
-			imgView.ContentMode = UIViewContentMode.ScaleAspectFit;
-		}
-
-		public static UIReturnKeyType GetValueFromDescription(this ReturnKeyTypes value)
-		{
-			var type = typeof(UIReturnKeyType);
-			if (!type.IsEnum) throw new InvalidOperationException();
-			foreach (var field in type.GetFields())
-			{
-				var attribute = Attribute.GetCustomAttribute(field,
-					typeof(DescriptionAttribute)) as DescriptionAttribute;
-				if (attribute != null)
-				{
-					if (attribute.Description == value.ToString())
-						return (UIReturnKeyType)field.GetValue(null);
-				}
-				else
-				{
-					if (field.Name == value.ToString())
-						return (UIReturnKeyType)field.GetValue(null);
-				}
-			}
-			throw new NotSupportedException($"Not supported on iOS: {value}");
-		}
+        /// <summary>
+        /// Changes the color of the image.
+        /// </summary>
+        /// <returns>The image color.</returns>
+        /// <param name="image">Image.</param>
+        /// <param name="color">Color.</param>
+        public static UIImage ChangeImageColor(this UIImage image, UIColor color)
+        {
+            var rect = new CGRect(0, 0, image.Size.Width, image.Size.Height);
+            UIGraphics.BeginImageContext(rect.Size);
+            var ctx = UIGraphics.GetCurrentContext();
+            ctx.ClipToMask(rect, image.CGImage);
+            ctx.SetFillColor(color.CGColor);
+            ctx.FillRect(rect);
+            var img = UIGraphics.GetImageFromCurrentImageContext();
+            UIGraphics.EndImageContext();
+            return UIImage.FromImage(img.CGImage, 1.0f, UIImageOrientation.DownMirrored);
+        }
+        /// <summary>
+        /// Resize the specified imgView and size.
+        /// </summary>
+        /// <returns>The resize.</returns>
+        /// <param name="imgView">Image view.</param>
+        /// <param name="size">Size.</param>
+        public static void Resize(this UIImageView imgView, nfloat size)
+        {
+            var newSize = new CGSize(size, size);
+            UIGraphics.BeginImageContextWithOptions(newSize, false, UIScreen.MainScreen.Scale);
+            imgView.Image.Draw(new CGRect(0, 0, newSize.Width, newSize.Height));
+            imgView.Image = UIGraphics.GetImageFromCurrentImageContext();
+            imgView.ContentMode = UIViewContentMode.ScaleAspectFit;
+        }
+        /// <summary>
+        /// Gets the value from description.
+        /// </summary>
+        /// <returns>The value from description.</returns>
+        /// <param name="value">Value.</param>
+        public static UIReturnKeyType GetValueFromDescription(this ReturnKeyTypes value)
+        {
+            var type = typeof(UIReturnKeyType);
+            if (!type.IsEnum) throw new InvalidOperationException();
+            foreach (var field in type.GetFields())
+            {
+                var attribute = Attribute.GetCustomAttribute(field,
+                    typeof(DescriptionAttribute)) as DescriptionAttribute;
+                if (attribute != null)
+                {
+                    if (attribute.Description == value.ToString())
+                        return (UIReturnKeyType)field.GetValue(null);
+                }
+                else
+                {
+                    if (field.Name == value.ToString())
+                        return (UIReturnKeyType)field.GetValue(null);
+                }
+            }
+            throw new NotSupportedException($"Not supported on iOS: {value}");
+        }
 #endif
 
 #if __ANDROID__

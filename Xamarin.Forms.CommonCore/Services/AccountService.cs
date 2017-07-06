@@ -18,8 +18,8 @@ namespace Xamarin.Forms.CommonCore
 
 		public string AccountEncryptionKey
 		{
-			get { return CrossSettings.Current.GetValueOrDefault<string>("AccountEncryptionKey", null); }
-			set { CrossSettings.Current.AddOrUpdateValue<string>("AccountEncryptionKey", value); }
+			get { return CrossSettings.Current.GetValueOrDefault("AccountEncryptionKey", null); }
+			set { CrossSettings.Current.AddOrUpdateValue("AccountEncryptionKey", value); }
 		}
 
 		public async Task<BooleanResponse> SaveAccountStore<T>(string username, T obj) where T : class, new()

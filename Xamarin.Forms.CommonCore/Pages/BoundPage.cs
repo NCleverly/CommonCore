@@ -21,7 +21,7 @@ namespace Xamarin.Forms.CommonCore
 		protected override void OnAppearing()
 		{
 			if (Navigation != null)
-				AppData.Instance.AppNav = Navigation;
+				CoreSettings.AppNav = Navigation;
 			base.OnAppearing();
 		}
 	}

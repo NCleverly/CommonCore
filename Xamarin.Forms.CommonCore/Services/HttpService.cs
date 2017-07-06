@@ -93,16 +93,16 @@ namespace Xamarin.Forms.CommonCore
 		public WebClient GetWebClient()
 		{
 			var client = new WebClient();
-			if (AppData.Instance.TokenBearer != null)
-				client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + AppData.Instance.TokenBearer.access_token);
+			if (CoreSettings.TokenBearer != null)
+				client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + CoreSettings.TokenBearer.access_token);
 			return client;
 		}
 
         public WebDownloadClient GetWebDownloadClient()
         {
 			var client = new WebClient();
-			if (AppData.Instance.TokenBearer != null)
-				client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + AppData.Instance.TokenBearer.access_token);
+			if (CoreSettings.TokenBearer != null)
+				client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + CoreSettings.TokenBearer.access_token);
             return new WebDownloadClient() { Client = client };
         }
 
@@ -113,34 +113,34 @@ namespace Xamarin.Forms.CommonCore
 
 #if __IOS__
 			HttpMessageHandler handler;
-			switch (AppData.Instance.IOSHttpHandler)
+			switch (CoreSettings.Config.HttpSettings.IOSHttpHandler)
 			{
 				case "ModernHttpClient":
 					handler = new NativeMessageHandler()
 					{
-						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect,
-						Credentials = AppData.Instance.HttpCredentials
+						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
+						Credentials = CoreSettings.HttpCredentials
 					};
 
 					break;
 				case "CFNetwork":
 					handler = new CFNetworkHandler()
 					{
-						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect
+						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
 					};
 					break;
 				case "NSURLSession":
 					handler = new NSUrlSessionHandler()
 					{
-						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect,
-						Credentials = AppData.Instance.HttpCredentials
+						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
+						Credentials = CoreSettings.HttpCredentials
 					};
 					break;
 				default:
 					handler = new HttpClientHandler()
 					{
-						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect,
-						Credentials = AppData.Instance.HttpCredentials
+						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
+						Credentials = CoreSettings.HttpCredentials
 					};
 
 					break;
@@ -148,27 +148,27 @@ namespace Xamarin.Forms.CommonCore
 
 #elif __ANDROID__
 			HttpMessageHandler handler;
-			switch (AppData.Instance.AndroidHttpHandler)
+			switch (CoreSettings.Config.HttpSettings.AndroidHttpHandler)
 			{
 				case "ModernHttpClient":
 					handler = new NativeMessageHandler()
 					{
-						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect,
-						Credentials = AppData.Instance.HttpCredentials
+						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
+						Credentials = CoreSettings.HttpCredentials
 					};
 
 					break;
 				case "AndroidClientHandler":
 					handler = new Xamarin.Android.Net.AndroidClientHandler()
 					{
-						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect
+						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
 					};
 					break;
 				default:
 					handler = new HttpClientHandler()
 					{
-						AllowAutoRedirect = AppData.Instance.HttpAllowAutoRedirect,
-						Credentials = AppData.Instance.HttpCredentials
+						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
+						Credentials = CoreSettings.HttpCredentials
 					};
 					break;
 			}
@@ -176,22 +176,18 @@ namespace Xamarin.Forms.CommonCore
 			var handler = new HttpClientHandler();
 #endif
 
-			//handler.AllowAutoRedirect = AppData.HttpAllowAutoRedirect;
 
-			//if (AppData.HttpCredentials != null)
-			//	handler.Credentials = AppData.HttpCredentials;
-
-			if (AppData.Instance.HttpTimeOut > 0)
+			if (CoreSettings.Config.HttpSettings.HttpTimeOut > 0)
 			{
-				client = new HttpClient(handler, true) { Timeout = new TimeSpan(0, 0, AppData.Instance.HttpTimeOut) };
+				client = new HttpClient(handler, true) { Timeout = new TimeSpan(0, 0, CoreSettings.Config.HttpSettings.HttpTimeOut) };
 			}
 			else
 			{
 				client = new HttpClient(handler, true);
 			}
 
-			if (AppData.Instance.TokenBearer != null)
-				client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + AppData.Instance.TokenBearer.access_token);
+			if (CoreSettings.TokenBearer != null)
+				client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + CoreSettings.TokenBearer.access_token);
 
 			return client;
 		}
@@ -199,7 +195,7 @@ namespace Xamarin.Forms.CommonCore
 		{
 			var response = new StringResponse() { };
 
-			if (!AppData.Instance.IsConnected)
+			if (!CoreSettings.IsConnected)
 			{
 				response.Success = false;
 				response.Error = new ApplicationException("Network Connection Error");
@@ -236,7 +232,7 @@ namespace Xamarin.Forms.CommonCore
         {
 			var response = new StringResponse() { };
 
-			if (!AppData.Instance.IsConnected)
+			if (!CoreSettings.IsConnected)
 			{
 				response.Success = false;
 				response.Error = new ApplicationException("Network Connection Error");
@@ -266,7 +262,7 @@ namespace Xamarin.Forms.CommonCore
 		{
 			var response = new GenericResponse<T>() { };
 
-			if (!AppData.Instance.IsConnected)
+			if (!CoreSettings.IsConnected)
 			{
 				response.Success = false;
 				response.Error = new ApplicationException("Network Connection Error");
@@ -300,7 +296,7 @@ namespace Xamarin.Forms.CommonCore
 		{
 			var response = new GenericResponse<T>() { };
 
-			if (!AppData.Instance.IsConnected)
+			if (!CoreSettings.IsConnected)
 			{
 				response.Success = false;
 				response.Error = new ApplicationException("Network Connection Error");
@@ -337,7 +333,7 @@ namespace Xamarin.Forms.CommonCore
 		{
 			var response = new GenericResponse<T>() { };
 
-			if (!AppData.Instance.IsConnected)
+			if (!CoreSettings.IsConnected)
 			{
 				response.Success = false;
 				response.Error = new ApplicationException("Network Connection Error");

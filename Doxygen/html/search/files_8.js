@@ -15,6 +15,7 @@ var searchData=
   ['ihttpservice_2ecs',['IHttpService.cs',['../_i_http_service_8cs.html',1,'']]],
   ['ilocalnotify_2ecs',['ILocalNotify.cs',['../_i_local_notify_8cs.html',1,'']]],
   ['imapnavigate_2ecs',['IMapNavigate.cs',['../_i_map_navigate_8cs.html',1,'']]],
+  ['injectionmanager_2ecs',['InjectionManager.cs',['../_injection_manager_8cs.html',1,'']]],
   ['ioverlaydependency_2ecs',['IOverlayDependency.cs',['../_i_overlay_dependency_8cs.html',1,'']]],
   ['iprogressindicator_2ecs',['IProgressIndicator.cs',['../_i_progress_indicator_8cs.html',1,'']]],
   ['ipushnotification_2ecs',['IPushNotification.cs',['../_i_push_notification_8cs.html',1,'']]],

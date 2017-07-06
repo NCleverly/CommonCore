@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms.CommonCore.Styles;
 
 namespace Xamarin.Forms.CommonCore
@@ -15,8 +16,40 @@ namespace Xamarin.Forms.CommonCore
 		private string loadingMessageOverlay;
 		private string pageTitle;
 
-		#region Injection Services (LAZY)
-		private IHttpService httpService;
+		#region ReadOnly AppData Settings
+        public string AESEncryptionKey { get { return CoreSettings.Config.AESEncryptionKey; } }
+
+		public string MobileCenter_HockeyAppiOS { get { return CoreSettings.Config?.MobileCenter_HockeyApp?.IOSAppId; } }
+		public string MobileCenter_HockeyAppAndroid { get { return CoreSettings.Config?.MobileCenter_HockeyApp?.AndroidAppId; } }
+		public string MobileCenter_HockeyAppUWP { get { return CoreSettings.Config?.MobileCenter_HockeyApp?.UWPAppId; } }
+
+		public string GoogleAppId { get { return CoreSettings.Config?.SocialMedia?.GoogleSettings?.GoogleAppId; } }
+		public string OAuthClientID_iOS { get { return CoreSettings.Config?.SocialMedia?.GoogleSettings?.OAuthClientID_iOS; } }
+		public string OAuthClientID_Android { get { return CoreSettings.Config?.SocialMedia?.GoogleSettings?.OAuthClientID_Android; } }
+		public string OAuthClientID_UWP { get { return CoreSettings.Config?.SocialMedia?.GoogleSettings?.OAuthClientID_UWP; } }
+
+		public int? HttpTimeOut { get { return CoreSettings.Config?.HttpSettings?.HttpTimeOut; } }
+		public bool? HttpAllowAutoRedirect { get { return CoreSettings.Config?.HttpSettings?.HttpAllowAutoRedirect; } }
+        public string IOSHttpHandler { get { return CoreSettings.Config?.HttpSettings?.IOSHttpHandler; } }
+		public string AndroidHttpHandler { get { return CoreSettings.Config?.HttpSettings?.AndroidHttpHandler; } }
+
+		public string FaceBookAppId { get { return CoreSettings.Config?.SocialMedia?.FaceBookAppId; } }
+		public string MicrosoftAppId { get { return CoreSettings.Config?.SocialMedia?.MicrosoftAppId; } }
+
+		public string AzureHubName { get { return CoreSettings.Config?.AzureSettings?.AzureHubName; } }
+		public string AzureListenConnection { get { return CoreSettings.Config?.AzureSettings?.AzureListenConnection; } }
+
+        public List<TableName> SqliteTableNames { get { return CoreSettings.Config?.SqliteSettings?.TableNames; } }
+
+        public string SqliteDbName { get { return CoreSettings.Config?.SqliteSettings?.SQLiteDatabase; } }
+
+		public Dictionary<string, string> WebApis { get { return CoreSettings.Config?.WebApi; } }
+
+		public Dictionary<string, string> CustomSettings { get { return CoreSettings.Config?.CustomSettings; } }
+        #endregion
+
+        #region Injection Services (LAZY)
+        private IHttpService httpService;
 		private IFileStore fileStore;
 		private IAccountService accountService;
 		private IEncryptionService encryptionService;
@@ -204,19 +237,10 @@ namespace Xamarin.Forms.CommonCore
         /// <value>The navigation.</value>
 		public INavigation Navigation
 		{
-			get { return AppData.Instance.AppNav; }
-            set { AppData.Instance.AppNav = value; }
+			get { return CoreSettings.AppNav; }
+            set { CoreSettings.AppNav = value; }
 		}
 
-        /// <summary>
-        /// Gets or sets the app data.
-        /// </summary>
-        /// <value>The app data.</value>
-        public AppData AppData
-        {
-			get { return AppData.Instance; }
-			set { AppData.Instance = value; }
-        }
 
 		public string LoadingMessageOverlay
 		{

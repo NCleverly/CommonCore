@@ -29,7 +29,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ObservableViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ObservableObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\CoreExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Config\AppData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Config\InjectionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\FileStore.cs">
       <DependentUpon>IFileStore.cs</DependentUpon>
     </Compile>
@@ -246,6 +246,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\RelayCommand.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\MaskedTextField.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\SynchronizationContextRemover.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AsyncLock.cs">
+      <DependentUpon>ISqliteDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Settings\CoreSettings.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -269,6 +273,9 @@
     <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\Android\" />
     <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\IOS\" />
     <Folder Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Settings\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Vault\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Vault\Renderers\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />
@@ -281,5 +288,7 @@
       <DependentUpon>IAuthenticatorService.cs</DependentUpon>
     </None>
     <None Include="$(MSBuildThisFileDirectory)Styles\AppStyles.txt" />
+    <None Include="$(MSBuildThisFileDirectory)Vault\Renderers\PageRemoveBackChevron.IOS.txt" />
+    <None Include="$(MSBuildThisFileDirectory)Vault\ReadMe.txt" />
   </ItemGroup>
 </Project>
