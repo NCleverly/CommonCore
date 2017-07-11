@@ -11,6 +11,7 @@ namespace Xamarin.Forms.CommonCore
 
 	public class HttpSettings
 	{
+        public bool DisplayRawJson { get; set; } = false;
 		public int HttpTimeOut { get; set; } = 0;
 		public bool HttpAllowAutoRedirect { get; set; } = false;
 		public string IOSHttpHandler { get; set; } = "Managed";

@@ -15,6 +15,13 @@ using Foundation;
 
 namespace Xamarin.Forms.CommonCore
 {
+    public enum NavType
+    {
+        MasterDetail,
+        Tabbed,
+        Stacked,
+        Undermined
+    }
     public class CoreSettings
     {
 		private static ISettings _appSettings
@@ -63,7 +70,7 @@ namespace Xamarin.Forms.CommonCore
 		public static bool IsConnected { get; set; } = true;
 		public static INavigation AppNav { get; set; }
 		public static Size ScreenSize { get; set; }
-
+        public static NavType NavStyle { get; set; } = NavType.Stacked;
 		public static List<string> NotificationTags { get; set; } = new List<string>();
 
 		public static bool TokenIsValid
@@ -73,6 +80,10 @@ namespace Xamarin.Forms.CommonCore
 				return TokenBearer?.expires > DateTimeOffset.Now;
 			}
 		}
+
+        #region Message Constants
+        public const string MasterDetailIsPresented = "IsPresented";
+#endregion
 
 #if __ANDROID__
         public  static int AppIcon { get; set; }

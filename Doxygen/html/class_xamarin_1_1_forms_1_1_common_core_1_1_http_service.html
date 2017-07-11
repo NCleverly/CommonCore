@@ -68,8 +68,10 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#properties">Properties</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Xamarin.Forms.CommonCore.HttpService Class Reference</div>  </div>
@@ -103,20 +105,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab9b23de399e0719ec89cdee048702b24"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06d1a5d9618a64f699ce04af7aad62a5"><td class="memItemLeft" align="right" valign="top">async Task&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a06d1a5d9618a64f699ce04af7aad62a5">GetStringContent&lt; T &gt;</a> (HttpResponseMessage response)</td></tr>
 <tr class="separator:a06d1a5d9618a64f699ce04af7aad62a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b1d57550cb5e27793fd3e90f9e0afe4"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a4b1d57550cb5e27793fd3e90f9e0afe4">PingDomain</a> (string url)</td></tr>
-<tr class="separator:a4b1d57550cb5e27793fd3e90f9e0afe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af27e202f6418551c420681353837a5f2"><td class="memItemLeft" align="right" valign="top">async Task&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#af27e202f6418551c420681353837a5f2">PingUrl</a> (string url)</td></tr>
-<tr class="separator:af27e202f6418551c420681353837a5f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1ac9af2d5ac6ef84899584c9120c36d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#ab1ac9af2d5ac6ef84899584c9120c36d">Dispose</a> ()</td></tr>
+<tr class="separator:ab1ac9af2d5ac6ef84899584c9120c36d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a2259fb524d142a68f28db87d6cc4730d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a2259fb524d142a68f28db87d6cc4730d">json</a></td></tr>
 <tr class="separator:a2259fb524d142a68f28db87d6cc4730d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
+Properties</h2></td></tr>
+<tr class="memitem:aa89e2dd09bfc3a2e168f25895c8c858a"><td class="memItemLeft" align="right" valign="top">HttpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#aa89e2dd09bfc3a2e168f25895c8c858a">Client</a><code> [get]</code></td></tr>
+<tr class="separator:aa89e2dd09bfc3a2e168f25895c8c858a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a46d191be1c6902f118a0b868a8c48a53"><td class="memItemLeft" align="right" valign="top">HttpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a46d191be1c6902f118a0b868a8c48a53">GetClient</a> ()</td></tr>
-<tr class="separator:a46d191be1c6902f118a0b868a8c48a53"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0cef22cfa581047dfc3807ab3056900"><td class="memItemLeft" align="right" valign="top">Task&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#ad0cef22cfa581047dfc3807ab3056900">FormattedJson</a> (string jsonResult)</td></tr>
 <tr class="separator:ad0cef22cfa581047dfc3807ab3056900"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -124,10 +127,19 @@ Private Member Functions</h2></td></tr>
 Static Private Member Functions</h2></td></tr>
 <tr class="memitem:a5e3f6f5a97cb687a7f39394b824a1502"><td class="memItemLeft" align="right" valign="top">static Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a5e3f6f5a97cb687a7f39394b824a1502">DeserializeObject&lt; T &gt;</a> (string content)</td></tr>
 <tr class="separator:a5e3f6f5a97cb687a7f39394b824a1502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aeb831d326ec975ac5e13cac0ab985bca"><td class="memItemLeft" align="right" valign="top">HttpClient&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#aeb831d326ec975ac5e13cac0ab985bca">httpClient</a></td></tr>
+<tr class="separator:aeb831d326ec975ac5e13cac0ab985bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab177e07fd53eb38ccf74106beb7114cf"><td class="memItemLeft" align="right" valign="top">HttpMessageHandler&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#ab177e07fd53eb38ccf74106beb7114cf">handler</a></td></tr>
+<tr class="separator:ab177e07fd53eb38ccf74106beb7114cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4d9f03af2cb485d5431881d99416774"><td class="memItemLeft" align="right" valign="top">JsonSerializer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#ae4d9f03af2cb485d5431881d99416774">_serializer</a></td></tr>
+<tr class="separator:ae4d9f03af2cb485d5431881d99416774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00089">89</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00017">17</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a5e3f6f5a97cb687a7f39394b824a1502"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e3f6f5a97cb687a7f39394b824a1502">&#9670;&nbsp;</a></span>DeserializeObject< T >()</h2>
@@ -162,7 +174,26 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00429">429</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00416">416</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab1ac9af2d5ac6ef84899584c9120c36d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1ac9af2d5ac6ef84899584c9120c36d">&#9670;&nbsp;</a></span>Dispose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Xamarin.Forms.CommonCore.HttpService.Dispose </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00424">424</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -190,7 +221,7 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00420">420</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00407">407</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -222,7 +253,7 @@ Static Private Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#add46c833f708870cd409cf0a5a17c438">Xamarin.Forms.CommonCore.IHttpService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00194">194</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00134">134</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -253,34 +284,7 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00261">261</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
-
-</div>
-</div>
-<a id="a46d191be1c6902f118a0b868a8c48a53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46d191be1c6902f118a0b868a8c48a53">&#9670;&nbsp;</a></span>GetClient()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">HttpClient Xamarin.Forms.CommonCore.HttpService.GetClient </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00110">110</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00200">200</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -302,7 +306,7 @@ Static Private Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#ad58be1f4074d067f80e3eaf18c329556">Xamarin.Forms.CommonCore.IHttpService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00231">231</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00171">171</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -333,7 +337,7 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00368">368</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00354">354</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -354,7 +358,7 @@ Static Private Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#a7c3b2208d3e663cbdb059413829bb7aa">Xamarin.Forms.CommonCore.IHttpService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00093">93</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00025">25</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -375,51 +379,7 @@ Static Private Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#a3be74aed122cd99fc95980bbe8ba1d1e">Xamarin.Forms.CommonCore.IHttpService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00101">101</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
-
-</div>
-</div>
-<a id="a4b1d57550cb5e27793fd3e90f9e0afe4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b1d57550cb5e27793fd3e90f9e0afe4">&#9670;&nbsp;</a></span>PingDomain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">async Task&lt;bool&gt; Xamarin.Forms.CommonCore.HttpService.PingDomain </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>url</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#aee944529809fe5812b18b44ea95fce8c">Xamarin.Forms.CommonCore.IHttpService</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00395">395</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
-
-</div>
-</div>
-<a id="af27e202f6418551c420681353837a5f2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af27e202f6418551c420681353837a5f2">&#9670;&nbsp;</a></span>PingUrl()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">async Task&lt;bool&gt; Xamarin.Forms.CommonCore.HttpService.PingUrl </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>url</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#ac6b7290f1d7e5075ac1b6c7263b39390">Xamarin.Forms.CommonCore.IHttpService</a>.</p>
-
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00403">403</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00033">33</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -460,7 +420,7 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00295">295</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00249">249</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -501,11 +461,83 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00332">332</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00301">301</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="ae4d9f03af2cb485d5431881d99416774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4d9f03af2cb485d5431881d99416774">&#9670;&nbsp;</a></span>_serializer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JsonSerializer Xamarin.Forms.CommonCore.HttpService._serializer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00021">21</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab177e07fd53eb38ccf74106beb7114cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab177e07fd53eb38ccf74106beb7114cf">&#9670;&nbsp;</a></span>handler</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpMessageHandler Xamarin.Forms.CommonCore.HttpService.handler</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00020">20</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+
+</div>
+</div>
+<a id="aeb831d326ec975ac5e13cac0ab985bca"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb831d326ec975ac5e13cac0ab985bca">&#9670;&nbsp;</a></span>httpClient</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpClient Xamarin.Forms.CommonCore.HttpService.httpClient</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00019">19</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+
+</div>
+</div>
 <a id="a2259fb524d142a68f28db87d6cc4730d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2259fb524d142a68f28db87d6cc4730d">&#9670;&nbsp;</a></span>json</h2>
 
@@ -518,7 +550,32 @@ Static Private Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00091">91</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00023">23</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="aa89e2dd09bfc3a2e168f25895c8c858a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa89e2dd09bfc3a2e168f25895c8c858a">&#9670;&nbsp;</a></span>Client</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">HttpClient Xamarin.Forms.CommonCore.HttpService.Client</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00043">43</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>

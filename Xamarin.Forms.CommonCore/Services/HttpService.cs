@@ -9,142 +9,78 @@ using Newtonsoft.Json;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using ModernHttpClient;
+using System.IO;
 
 namespace Xamarin.Forms.CommonCore
 {
+    
+    public class HttpService : IHttpService, IDisposable
+    {
+        private HttpClient httpClient;
+		private HttpMessageHandler handler;
+        private JsonSerializer _serializer;
 
-	public class WebDownloadClient : INotifyPropertyChanged
-	{
-		private double progress;
-		public string DownloadUrl { get; set; }
-		public WebClient Client { get; set; }
-		public Action<byte[]> FinishedEvent { get; set; }
-		public Action<double> PercentageChanged { get; set; }
+        public string json;
 
-		public double Progress
-		{
-			get
-			{
-				return progress;
-			}
-
-			set
-			{
-				PercentageChanged?.Invoke(value);
-				SetProperty(ref progress, value);
-			}
-		}
-		public async Task StartDownload()
-		{
-			if (Client == null)
-				Client = new WebClient();
-
-			await Task.Run(() =>
-			{
-				Client.DownloadProgressChanged += DownprogressChanged;
-				Client.DownloadDataCompleted += DownloadComplete;
-				Client.DownloadDataAsync(new Uri(DownloadUrl));
-			});
-
-		}
-		public void UnhookEvents()
-		{
-			Client.DownloadProgressChanged -= DownprogressChanged;
-			Client.DownloadDataCompleted -= DownloadComplete;
-		}
-		private void DownloadComplete(object sender, DownloadDataCompletedEventArgs args)
-		{
-			FinishedEvent?.Invoke(args.Result);
-		}
-		private void DownprogressChanged(object sender, DownloadProgressChangedEventArgs args)
-		{
-			Progress = (float)args.BytesReceived / (float)args.TotalBytesToReceive;
-		}
-
-		public event PropertyChangedEventHandler PropertyChanged;
-		protected bool SetProperty<T>(
-			ref T backingStore, T value,
-			[CallerMemberName]string propertyName = "",
-			Action onChanged = null)
-		{
-			if (EqualityComparer<T>.Default.Equals(backingStore, value))
-				return false;
-
-			backingStore = value;
-
-			if (onChanged != null)
-				onChanged();
-
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-			return true;
-		}
-		public void Notify(string propName)
-		{
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
-		}
-	}
-
-
-	public class HttpService : IHttpService
-	{
-		public string json;
-
-		public WebClient GetWebClient()
-		{
-			var client = new WebClient();
-			if (CoreSettings.TokenBearer != null)
-				client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + CoreSettings.TokenBearer.access_token);
-			return client;
-		}
+        public WebClient GetWebClient()
+        {
+            var client = new WebClient();
+            if (CoreSettings.TokenBearer != null)
+                client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + CoreSettings.TokenBearer.access_token);
+            return client;
+        }
 
         public WebDownloadClient GetWebDownloadClient()
         {
-			var client = new WebClient();
-			if (CoreSettings.TokenBearer != null)
-				client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + CoreSettings.TokenBearer.access_token);
+            var client = new WebClient();
+            if (CoreSettings.TokenBearer != null)
+                client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + CoreSettings.TokenBearer.access_token);
             return new WebDownloadClient() { Client = client };
         }
 
 
-		private HttpClient GetClient()
-		{
-			HttpClient client = null;
+        public HttpClient Client
+        {
+            get
+            {
+                if (httpClient == null)
+                {
+                    _serializer = new JsonSerializer();
 
 #if __IOS__
-			HttpMessageHandler handler;
-			switch (CoreSettings.Config.HttpSettings.IOSHttpHandler)
-			{
-				case "ModernHttpClient":
-					handler = new NativeMessageHandler()
-					{
-						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
-						Credentials = CoreSettings.HttpCredentials
-					};
+                   
+                    switch (CoreSettings.Config.HttpSettings.IOSHttpHandler)
+                    {
+                        case "ModernHttpClient":
+                            handler = new NativeMessageHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
+                                Credentials = CoreSettings.HttpCredentials
+                            };
 
-					break;
-				case "CFNetwork":
-					handler = new CFNetworkHandler()
-					{
-						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
-					};
-					break;
-				case "NSURLSession":
-					handler = new NSUrlSessionHandler()
-					{
-						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
-						Credentials = CoreSettings.HttpCredentials
-					};
-					break;
-				default:
-					handler = new HttpClientHandler()
-					{
-						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
-						Credentials = CoreSettings.HttpCredentials
-					};
+                            break;
+                        case "CFNetwork":
+                            handler = new CFNetworkHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
+                            };
+                            break;
+                        case "NSURLSession":
+                            handler = new NSUrlSessionHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
+                                Credentials = CoreSettings.HttpCredentials
+                            };
+                            break;
+                        default:
+                            handler = new HttpClientHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
+                                Credentials = CoreSettings.HttpCredentials
+                            };
 
-					break;
-			}
+                            break;
+                    }
 
 #elif __ANDROID__
 			HttpMessageHandler handler;
@@ -177,306 +113,330 @@ namespace Xamarin.Forms.CommonCore
 #endif
 
 
-			if (CoreSettings.Config.HttpSettings.HttpTimeOut > 0)
-			{
-				client = new HttpClient(handler, true) { Timeout = new TimeSpan(0, 0, CoreSettings.Config.HttpSettings.HttpTimeOut) };
-			}
-			else
-			{
-				client = new HttpClient(handler, true);
-			}
+                    if (CoreSettings.Config.HttpSettings.HttpTimeOut > 0)
+                    {
+                        httpClient = new HttpClient(handler, true) { Timeout = new TimeSpan(0, 0, CoreSettings.Config.HttpSettings.HttpTimeOut) };
+                    }
+                    else
+                    {
+                        httpClient = new HttpClient(handler, true);
+                    }
 
-			if (CoreSettings.TokenBearer != null)
-				client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + CoreSettings.TokenBearer.access_token);
+                    if (CoreSettings.TokenBearer != null)
+                        httpClient.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + CoreSettings.TokenBearer.access_token);
+                }
 
-			return client;
-		}
-		public async Task<StringResponse> FormPost(string url, HttpContent content)
-		{
-			var response = new StringResponse() { };
+                //httpClient.DefaultRequestHeaders.AcceptEncoding.Add(new StringWithQualityHeaderValue("gzip"));
 
-			if (!CoreSettings.IsConnected)
-			{
-				response.Success = false;
-				response.Error = new ApplicationException("Network Connection Error");
-				return response;
-			}
+                return httpClient;
+            }
+        }
+        public async Task<StringResponse> FormPost(string url, HttpContent content)
+        {
+            var response = new StringResponse() { };
+
+            if (!CoreSettings.IsConnected)
+            {
+                response.Success = false;
+                response.Error = new ApplicationException("Network Connection Error");
+                return response;
+            }
 
 
-			try
-			{
+            try
+            {
                 await new SynchronizationContextRemover();
-				using (var client = GetClient())
-				{
-					var postResponse = await client.PostAsync(url, content).ConfigureAwait(false);
-					postResponse.Content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
-					postResponse.EnsureSuccessStatusCode();
 
-					var raw = await postResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-					if (raw != null)
-					{
-						response.Response = raw;
-						response.Success = true;
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ex.ConsoleWrite();
-				response.Error = ex;
-			}
-			return response;
-		}
+                var postResponse = await Client.PostAsync(url, content).ConfigureAwait(false);
+                postResponse.Content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
+                postResponse.EnsureSuccessStatusCode();
+
+                var raw = await postResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+                if (raw != null)
+                {
+                    response.Response = raw;
+                    response.Success = true;
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                response.Error = ex;
+            }
+            return response;
+        }
 
         public async Task<StringResponse> GetRaw(string url)
         {
-			var response = new StringResponse() { };
+            var response = new StringResponse() { };
 
-			if (!CoreSettings.IsConnected)
-			{
-				response.Success = false;
-				response.Error = new ApplicationException("Network Connection Error");
-				return response;
-			}
-			try
-			{
+            if (!CoreSettings.IsConnected)
+            {
+                response.Success = false;
+                response.Error = new ApplicationException("Network Connection Error");
+                return response;
+            }
+            try
+            {
                 await new SynchronizationContextRemover();
-				using (var client = GetClient())
-				{
-					using (var srvResponse = await client.GetAsync(url).ConfigureAwait(false))
-					{
-						var jsonResult = await srvResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-						response.Success = true;
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ex.ConsoleWrite();
-				response.Error = ex;
-			}
 
-			return response;
+                using (var srvResponse = await Client.GetAsync(url).ConfigureAwait(false))
+                {
+                    var jsonResult = await srvResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    response.Success = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                response.Error = ex;
+            }
+
+            return response;
         }
-		public async Task<GenericResponse<T>> Get<T>(string url) where T : class, new()
-		{
-			var response = new GenericResponse<T>() { };
+        public async Task<GenericResponse<T>> Get<T>(string url) where T : class, new()
+        {
+            var response = new GenericResponse<T>() { };
 
-			if (!CoreSettings.IsConnected)
-			{
-				response.Success = false;
-				response.Error = new ApplicationException("Network Connection Error");
-				return response;
-			}
+            if (!CoreSettings.IsConnected)
+            {
+                response.Success = false;
+                response.Error = new ApplicationException("Network Connection Error");
+                return response;
+            }
 
-			try
-			{
+            try
+            {
                 await new SynchronizationContextRemover();
-				using (var client = GetClient())
-				{
-					using (var srvResponse = await client.GetAsync(url).ConfigureAwait(false))
-					{
+
+                using (var srvResponse = await Client.GetAsync(url).ConfigureAwait(false))
+                {
+                    if(CoreSettings.Config.HttpSettings.DisplayRawJson){
 						json = await GetStringContent<T>(srvResponse).ConfigureAwait(false);
 						response.Response = await DeserializeObject<T>(json).ConfigureAwait(false);
 						response.Success = true;
 						json = string.Empty;
 					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ex.ConsoleWrite();
-				response.Error = ex;
-				response.MetaData = json;
-			}
+                    else{
+						srvResponse.EnsureSuccessStatusCode();
+						using (var stream = await srvResponse.Content.ReadAsStreamAsync())
+						{
+							using (var reader = new StreamReader(stream))
+							{
+								using (var json = new JsonTextReader(reader))
+								{
+									response.Response = _serializer.Deserialize<T>(json);
+									response.Success = true;
+								}
+							}
+						}
+                    }
+                }
 
-			return response;
-		}
-		public async Task<GenericResponse<T>> Post<T>(string url, object obj) where T : class, new()
-		{
-			var response = new GenericResponse<T>() { };
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                response.Error = ex;
+                response.MetaData = json;
+            }
 
-			if (!CoreSettings.IsConnected)
-			{
-				response.Success = false;
-				response.Error = new ApplicationException("Network Connection Error");
-				return response;
-			}
+            return response;
+        }
+        public async Task<GenericResponse<T>> Post<T>(string url, object obj) where T : class, new()
+        {
+            var response = new GenericResponse<T>() { };
 
-			try
-			{
-				await new SynchronizationContextRemover();
-				using (var client = GetClient())
-				{
-					var data = JsonConvert.SerializeObject(obj);
-					using (var srvResponse = await client.PostAsync(url, new StringContent(data, Encoding.UTF8, "application/json")).ConfigureAwait(false))
-					{
-						json = await GetStringContent<T>(srvResponse).ConfigureAwait(false);
-						response.Response = await DeserializeObject<T>(json).ConfigureAwait(false);
-						response.Success = true;
-						json = string.Empty;
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ex.ConsoleWrite();
-				response.Error = ex;
-				response.MetaData = json;
-			}
+            if (!CoreSettings.IsConnected)
+            {
+                response.Success = false;
+                response.Error = new ApplicationException("Network Connection Error");
+                return response;
+            }
 
-
-			return response;
-
-		}
-		public async Task<GenericResponse<T>> Put<T>(string url, object obj) where T : class, new()
-		{
-			var response = new GenericResponse<T>() { };
-
-			if (!CoreSettings.IsConnected)
-			{
-				response.Success = false;
-				response.Error = new ApplicationException("Network Connection Error");
-				return response;
-			}
-
-			try
-			{
+            try
+            {
                 await new SynchronizationContextRemover();
-				using (var client = GetClient())
-				{
-					var data = JsonConvert.SerializeObject(obj);
-					using (var srvResponse = await client.PutAsync(url, new StringContent(data, Encoding.UTF8, "application/json")))
-					{
-						json = await GetStringContent<T>(srvResponse);
-						response.Response = await DeserializeObject<T>(json);
-						response.Success = true;
-						json = string.Empty;
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ex.ConsoleWrite();
-				response.Error = ex;
-				response.MetaData = json;
-			}
 
-			return response;
-		}
+                var data = JsonConvert.SerializeObject(obj);
+                using (var srvResponse = await Client.PostAsync(url, new StringContent(data, Encoding.UTF8, "application/json")).ConfigureAwait(false))
+                {
+                    if (CoreSettings.Config.HttpSettings.DisplayRawJson)
+                    {
+                        json = await GetStringContent<T>(srvResponse).ConfigureAwait(false);
+                        response.Response = await DeserializeObject<T>(json).ConfigureAwait(false);
+                        response.Success = true;
+                        json = string.Empty;
+                    }
+                    else{
+						srvResponse.EnsureSuccessStatusCode();
+						using (var stream = await srvResponse.Content.ReadAsStreamAsync())
+						{
+							using (var reader = new StreamReader(stream))
+							{
+								using (var json = new JsonTextReader(reader))
+								{
+									response.Response = _serializer.Deserialize<T>(json);
+									response.Success = true;
+								}
+							}
+						}
+                    }
+                }
 
-		public async Task<string> GetStringContent<T>(HttpResponseMessage response) where T : class, new()
-		{
-			var jsonResult = await response.Content.ReadAsStringAsync();
-#if DEBUG
-			Console.WriteLine();
-			Console.WriteLine();
-			var name = typeof(T).Name;
-			if (name == "List`1")
-			{
-				var types = typeof(T).GetGenericArguments();
-				if (types != null && types.Length > 0)
-				{
-					var obj = types[0];
-					name = "Collection of " + obj.Name;
-				}
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                response.Error = ex;
+                response.MetaData = json;
+            }
 
-			}
-			Console.WriteLine($"*-*-*-*-*-*-*-*-*-*-*-*- {name} - HTTP STRING RESULT *-*-*-*-*-*-*-*-*-*-*-*-*-");
-			var formatted = await FormattedJson(jsonResult);
-			Console.WriteLine(formatted);
-			Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
-			Console.WriteLine();
-			Console.WriteLine();
-#endif
-			return jsonResult;
-		}
+            return response;
 
-		public async Task<bool> PingDomain(string url)
-		{
-			var host = new Uri(url).Host;
-			var start = url.StartsWith("http", StringComparison.CurrentCultureIgnoreCase) ? "http" : "https";
-			var nUrl = $"{start}://{host}";
+        }
+        public async Task<GenericResponse<T>> Put<T>(string url, object obj) where T : class, new()
+        {
+            var response = new GenericResponse<T>() { };
 
-			return await PingUrl(nUrl);
-		}
-		public async Task<bool> PingUrl(string url)
-		{
-			try
-			{
-				var request = (HttpWebRequest)HttpWebRequest.Create(url);
-				request.Timeout = 3000;
-				request.AllowAutoRedirect = false; // find out if this site is up and don't follow a redirector
-				request.Method = "HEAD";
-				var response = await request.GetResponseAsync();
-				return true;
-			}
-			catch (Exception ex)
-			{
-				return false;
-			}
-		}
+            if (!CoreSettings.IsConnected)
+            {
+                response.Success = false;
+                response.Error = new ApplicationException("Network Connection Error");
+                return response;
+            }
 
-		private Task<string> FormattedJson(string jsonResult)
-		{
-			return Task.Run(() =>
-			{
-				var obj = JsonConvert.DeserializeObject(jsonResult);
-				return JsonConvert.SerializeObject(obj, Formatting.Indented);
-			});
-		}
+            try
+            {
+                await new SynchronizationContextRemover();
 
-		private static Task<T> DeserializeObject<T>(string content) where T : class, new()
-		{
-			return Task.Run(() =>
-			{
-				return JsonConvert.DeserializeObject<T>(content);
-			});
-		}
+                var data = JsonConvert.SerializeObject(obj);
+                using (var srvResponse = await Client.PutAsync(url, new StringContent(data, Encoding.UTF8, "application/json")))
+                {
+                    if (CoreSettings.Config.HttpSettings.DisplayRawJson)
+                    {
+                        json = await GetStringContent<T>(srvResponse);
+                        response.Response = await DeserializeObject<T>(json);
+                        response.Success = true;
+                        json = string.Empty;
+                    }
+                    else
+                    {
+						srvResponse.EnsureSuccessStatusCode();
+						using (var stream = await srvResponse.Content.ReadAsStreamAsync())
+						{
+							using (var reader = new StreamReader(stream))
+							{
+								using (var json = new JsonTextReader(reader))
+								{
+									response.Response = _serializer.Deserialize<T>(json);
+									response.Success = true;
+								}
+							}
+						}
+                    }
+                }
 
-	}
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                response.Error = ex;
+                response.MetaData = json;
+            }
 
-	public static class JsonDataExtension
-	{
-		public static T ConvertTo<T>(this StringResponse str) where T : struct
-		{
-			object result = null;
-			var code = Type.GetTypeCode(typeof(T));
-			switch (code)
-			{
-				case TypeCode.Int32:
-					result = JsonConvert.DeserializeObject<int>(str.Response);
-					break;
-				case TypeCode.Int16:
-					result = JsonConvert.DeserializeObject<short>(str.Response);
-					break;
-				case TypeCode.Int64:
-					result = JsonConvert.DeserializeObject<long>(str.Response);
-					break;
-				case TypeCode.String:
-					result = JsonConvert.DeserializeObject<string>(str.Response);
-					break;
-				case TypeCode.Boolean:
-					result = JsonConvert.DeserializeObject<bool>(str.Response);
-					break;
-				case TypeCode.Double:
-					result = JsonConvert.DeserializeObject<double>(str.Response);
-					break;
-				case TypeCode.Decimal:
-					result = JsonConvert.DeserializeObject<decimal>(str.Response);
-					break;
-				case TypeCode.Byte:
-					result = JsonConvert.DeserializeObject<Byte>(str.Response);
-					break;
-				case TypeCode.DateTime:
-					result = JsonConvert.DeserializeObject<DateTime>(str.Response);
-					break;
-				case TypeCode.Single:
-					result = JsonConvert.DeserializeObject<Single>(str.Response);
-					break;
-			}
-			return (T)result;
-		}
-	}
+            return response;
+        }
+
+        public async Task<string> GetStringContent<T>(HttpResponseMessage response) where T : class, new()
+        {
+            var jsonResult = await response.Content.ReadAsStringAsync();
+            if (CoreSettings.Config.HttpSettings.DisplayRawJson)
+            {
+                Console.WriteLine();
+                Console.WriteLine();
+                var name = typeof(T).Name;
+                if (name == "List`1")
+                {
+                    var types = typeof(T).GetGenericArguments();
+                    if (types != null && types.Length > 0)
+                    {
+                        var obj = types[0];
+                        name = "Collection of " + obj.Name;
+                    }
+
+                }
+                Console.WriteLine($"*-*-*-*-*-*-*-*-*-*-*-*- {name} - HTTP STRING RESULT *-*-*-*-*-*-*-*-*-*-*-*-*-");
+                var formatted = await FormattedJson(jsonResult);
+                Console.WriteLine(formatted);
+                Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                Console.WriteLine();
+                Console.WriteLine();
+            }
+            return jsonResult;
+        }
+
+        //public async Task<bool> PingDomain(string url)
+        //{
+        //    var host = new Uri(url).Host;
+        //    var start = url.StartsWith("http", StringComparison.CurrentCultureIgnoreCase) ? "http" : "https";
+        //    var nUrl = $"{start}://{host}";
+
+        //    return await PingUrl(nUrl);
+        //}
+        //public async Task<bool> PingUrl(string url)
+        //{
+        //    try
+        //    {
+        //        var request = (HttpWebRequest)HttpWebRequest.Create(url);
+        //        request.Timeout = 3000;
+        //        request.AllowAutoRedirect = false; // find out if this site is up and don't follow a redirector
+        //        request.Method = "HEAD";
+        //        var response = await request.GetResponseAsync();
+        //        return true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        private Task<string> FormattedJson(string jsonResult)
+        {
+            return Task.Run(() =>
+            {
+                var obj = JsonConvert.DeserializeObject(jsonResult);
+                return JsonConvert.SerializeObject(obj, Formatting.Indented);
+            });
+        }
+
+        private static Task<T> DeserializeObject<T>(string content) where T : class, new()
+        {
+            return Task.Run(() =>
+            {
+                return JsonConvert.DeserializeObject<T>(content);
+            });
+        }
+
+        public void Dispose()
+        {
+            if (!string.IsNullOrEmpty(json))
+            {
+                json = null;
+            }
+
+            if (httpClient != null)
+            {
+                httpClient.Dispose();
+                handler.Dispose();
+                _serializer = null;
+            }
+
+        }
+    }
+
 }
 

@@ -28,6 +28,8 @@ var searchData=
   ['borderthickness',['BorderThickness',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a493dd9e008423707c0fe7dbac24b9592',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['borderthicknessproperty',['BorderThicknessProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a2dbcafc12988927c0e7a10d9a4f8ff80',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['bottom',['Bottom',['../namespace_xamarin_1_1_forms_1_1_common_core.html#a52d1e547aa153bc6d2c93d7b63621e5ba2ad9d63b69c4a10a5cc9cad923133bc4',1,'Xamarin::Forms::CommonCore']]],
+  ['boundmasterdetailpage',['BoundMasterDetailPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_master_detail_page.html',1,'Xamarin.Forms.CommonCore.BoundMasterDetailPage&lt; T &gt;'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_master_detail_page.html#ab2a1f00b213ff821c0bd8a9c133ab75b',1,'Xamarin.Forms.CommonCore.BoundMasterDetailPage.BoundMasterDetailPage()']]],
+  ['boundmasterdetailpage_2ecs',['BoundMasterDetailPage.cs',['../_bound_master_detail_page_8cs.html',1,'']]],
   ['boundpage',['BoundPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_page.html',1,'Xamarin.Forms.CommonCore.BoundPage&lt; T &gt;'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_page.html#a1424ba1c9c96ebb22fcc6300e7fac6ec',1,'Xamarin.Forms.CommonCore.BoundPage.BoundPage()']]],
   ['boundpage_2ecs',['BoundPage.cs',['../_bound_page_8cs.html',1,'']]],
   ['buttonsclickedevent',['ButtonsClickedEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a5e0494d8ca0189c912f6ec824d0980d0',1,'Xamarin::Forms::CommonCore::SegmentControl']]],

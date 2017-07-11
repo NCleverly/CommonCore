@@ -13,6 +13,7 @@ var searchData=
   ['loadingmessageoverlay',['loadingMessageOverlay',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a0c9aa403b518201cae4f2cd45dc5dbfb',1,'Xamarin.Forms.CommonCore.ObservableViewModel.loadingMessageOverlay()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1aea5ac101ba6ce4fe138f0d236b396c',1,'Xamarin.Forms.CommonCore.ObservableViewModel.LoadingMessageOverlay()']]],
   ['loadmorecommand',['LoadMoreCommand',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#a4227e66d99cb725271dc368ffc136fb6',1,'Xamarin::Forms::CommonCore::ListControl']]],
   ['loadmorecommandproperty',['LoadMoreCommandProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#a42d8b0f57e24c85398b91dafa760495e',1,'Xamarin::Forms::CommonCore::ListControl']]],
+  ['loadviewmodelresources',['LoadViewModelResources',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a0adf9f2721d02e675824a4a9002380bc',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['localnotification',['LocalNotification',['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html',1,'Xamarin::Forms::CommonCore']]],
   ['localnotify',['LocalNotify',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ac78356cca2ac25df8657de6db75b2127',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['localnotify_2edroid_2ecs',['LocalNotify.Droid.cs',['../_local_notify_8_droid_8cs.html',1,'']]],

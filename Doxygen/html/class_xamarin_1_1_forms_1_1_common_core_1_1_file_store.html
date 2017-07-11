@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="class_xamarin_1_1_forms_1_1_common_core_1_1_file_store-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -85,6 +86,8 @@ Inheritance diagram for Xamarin.Forms.CommonCore.FileStore:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a5b78b2a5ab070940aa0cb92a8443cd70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_file_store.html#a5b78b2a5ab070940aa0cb92a8443cd70">FileStore</a> ()</td></tr>
+<tr class="separator:a5b78b2a5ab070940aa0cb92a8443cd70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97a732cdd7aee0f21244102f0b20012a"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_generic_response.html">GenericResponse</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_file_store.html#a97a732cdd7aee0f21244102f0b20012a">GetAsync&lt; T &gt;</a> (string contentName)</td></tr>
 <tr class="separator:a97a732cdd7aee0f21244102f0b20012a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab27e3599304d615ae385a0c91fa2f0bf"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_boolean_response.html">BooleanResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_file_store.html#ab27e3599304d615ae385a0c91fa2f0bf">DeleteAsync</a> (string contentName)</td></tr>
@@ -96,6 +99,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a47d9a0dbdbc138320576dcf7fbb34ca3"><td class="memItemLeft" align="right" valign="top">async Task&lt; <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_boolean_response.html">BooleanResponse</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_file_store.html#a47d9a0dbdbc138320576dcf7fbb34ca3">SaveStringAsync</a> (string contentName, string obj)</td></tr>
 <tr class="separator:a47d9a0dbdbc138320576dcf7fbb34ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:aafa9846fd0bbfd24b5ae6f4796b7cef6"><td class="memItemLeft" align="right" valign="top">JsonSerializer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_file_store.html#aafa9846fd0bbfd24b5ae6f4796b7cef6">_serializer</a></td></tr>
+<tr class="separator:aafa9846fd0bbfd24b5ae6f4796b7cef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a01f8fec6b143d4b2daa43d27fcbdee06"><td class="memItemLeft" align="right" valign="top">static SemaphoreSlim&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_file_store.html#a01f8fec6b143d4b2daa43d27fcbdee06">fileStoreLock</a> = new SemaphoreSlim(1)</td></tr>
@@ -103,8 +111,28 @@ Static Private Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00011">11</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00012">12</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a5b78b2a5ab070940aa0cb92a8443cd70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b78b2a5ab070940aa0cb92a8443cd70">&#9670;&nbsp;</a></span>FileStore()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Xamarin.Forms.CommonCore.FileStore.FileStore </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00019">19</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab27e3599304d615ae385a0c91fa2f0bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab27e3599304d615ae385a0c91fa2f0bf">&#9670;&nbsp;</a></span>DeleteAsync()</h2>
 
@@ -123,7 +151,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_file_store.html#ab96ec6a70048c5a22837a9651c89ecc2">Xamarin.Forms.CommonCore.IFileStore</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00063">63</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00072">72</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
 
 </div>
 </div>
@@ -154,7 +182,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00015">15</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00024">24</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
 
 </div>
 </div>
@@ -176,7 +204,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_file_store.html#a4052b6918c80233e7d8f94bd91800741">Xamarin.Forms.CommonCore.IFileStore</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00130">130</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00138">138</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
 
 </div>
 </div>
@@ -208,7 +236,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_file_store.html#a8cb3de7a61797050fb4b863e332eb9de">Xamarin.Forms.CommonCore.IFileStore</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00093">93</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00102">102</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
 
 </div>
 </div>
@@ -240,11 +268,35 @@ Static Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_file_store.html#a5fa18b5f3760c78a65ca6421f5596c5b">Xamarin.Forms.CommonCore.IFileStore</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00174">174</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00182">182</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="aafa9846fd0bbfd24b5ae6f4796b7cef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aafa9846fd0bbfd24b5ae6f4796b7cef6">&#9670;&nbsp;</a></span>_serializer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">JsonSerializer Xamarin.Forms.CommonCore.FileStore._serializer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00014">14</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
+
+</div>
+</div>
 <a id="a01f8fec6b143d4b2daa43d27fcbdee06"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a01f8fec6b143d4b2daa43d27fcbdee06">&#9670;&nbsp;</a></span>fileStoreLock</h2>
 
@@ -265,7 +317,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00013">13</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_file_store_8cs_source.html#l00016">16</a> of file <a class="el" href="_file_store_8cs_source.html">FileStore.cs</a>.</p>
 
 </div>
 </div>

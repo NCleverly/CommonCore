@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['handler',['handler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#ab177e07fd53eb38ccf74106beb7114cf',1,'Xamarin::Forms::CommonCore::HttpService']]],
   ['handletextchanged',['HandleTextChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_reg_ex_behavior.html#a4a5681feec76ca0b002136383b1fba04',1,'Xamarin::Forms::CommonCore::RegExBehavior']]],
   ['haserror',['HasError',['../class_xamarin_1_1_forms_1_1_common_core_1_1_reg_ex_behavior.html#adf361868f2770ba910cefdf534ba180d',1,'Xamarin.Forms.CommonCore.RegExBehavior.HasError()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a9eaf1ecd88a612ecea895f1679120ba0',1,'Xamarin.Forms.CommonCore.EntryUnderline.HasError()']]],
   ['haserrorproperty',['HasErrorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_reg_ex_behavior.html#a37899f12dcd85afd494f28a1e6f8df5f',1,'Xamarin.Forms.CommonCore.RegExBehavior.HasErrorProperty()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a425e89f1c745315fe7fdcc0834613d54',1,'Xamarin.Forms.CommonCore.EntryUnderline.HasErrorProperty()']]],
@@ -11,6 +12,7 @@ var searchData=
   ['hideoverlay',['HideOverlay',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_overlay_dependency.html#a2e8c9bcf6827b2592b0bf0d1c6721528',1,'Xamarin::Forms::CommonCore::IOverlayDependency']]],
   ['hidetableseparator',['HideTableSeparator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_common_effects.html#abdb89de42d978c0ea7075114660bd2e8',1,'Xamarin::Forms::CommonCore::CommonEffects']]],
   ['httpallowautoredirect',['HttpAllowAutoRedirect',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_settings.html#a13b893c813f7ea0502c30e00a810f7f4',1,'Xamarin.Forms.CommonCore.HttpSettings.HttpAllowAutoRedirect()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aadd303f8ff138b55bd2a4dbce086fc61',1,'Xamarin.Forms.CommonCore.ObservableViewModel.HttpAllowAutoRedirect()']]],
+  ['httpclient',['httpClient',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#aeb831d326ec975ac5e13cac0ab985bca',1,'Xamarin::Forms::CommonCore::HttpService']]],
   ['httpcredentials',['HttpCredentials',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#a039a7363945b8f92d7b8ece9d914107c',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
   ['httpservice',['HttpService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html',1,'Xamarin.Forms.CommonCore.HttpService'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1f2b04c70ca63357f8bb2d329c24e528',1,'Xamarin.Forms.CommonCore.ObservableViewModel.httpService()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aa9c97a632e2972d77e4cf2ad0b877dc9',1,'Xamarin.Forms.CommonCore.ObservableViewModel.HttpService()']]],
   ['httpservice_2ecs',['HttpService.cs',['../_http_service_8cs.html',1,'']]],

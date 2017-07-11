@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['maskedtextfield',['MaskedTextField',['../class_xamarin_1_1_forms_1_1_common_core_1_1_masked_text_field.html',1,'Xamarin::Forms::CommonCore']]],
-  ['mobilecenterhockeyapp',['MobileCenterHockeyApp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html',1,'Xamarin::Forms::CommonCore']]]
+  ['observableobject',['ObservableObject',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_object.html',1,'Xamarin::Forms::CommonCore']]],
+  ['observableviewmodel',['ObservableViewModel',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html',1,'Xamarin::Forms::CommonCore']]]
 ];

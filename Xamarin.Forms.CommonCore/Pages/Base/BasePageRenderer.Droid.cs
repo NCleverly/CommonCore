@@ -39,7 +39,6 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-       
         protected override void OnDetachedFromWindow()
         {
 			if (_searchView != null)

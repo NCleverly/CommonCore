@@ -5,6 +5,7 @@ using Microsoft.Practices.Unity;
 using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;
 using System.Reflection;
+using System.Linq;
 
 #if __ANDROID__
 using Android.Widget;
@@ -34,7 +35,24 @@ namespace Xamarin.Forms.CommonCore
 
             if (!Container.IsRegistered<T>())
                 Container.RegisterType<T>(new ContainerControlledLifetimeManager());
+            
             return Container.Resolve<T>();
+        }
+
+        public static void ReleaseAllViewModelResourcesExcept<T>() where T: ObservableViewModel
+        {
+            if (_serviceLocator == null)
+                return;
+            
+            foreach (var reg in Container.Registrations)
+            {
+                var isViewModel = reg.RegisteredType.IsSubclassOf(typeof(ObservableViewModel));
+                if(isViewModel && reg.RegisteredType.Name!=typeof(T).Name)
+                {
+					var obj = (ObservableViewModel)Container.Resolve(reg.RegisteredType);
+                    obj.ReleadViewModelResources();
+                }
+            }
         }
 
         public static void SendViewModelMessage(string key, object obj)

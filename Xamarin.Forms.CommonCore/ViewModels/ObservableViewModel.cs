@@ -364,6 +364,31 @@ namespace Xamarin.Forms.CommonCore
 		}
 
 		public virtual void OnViewMessageReceived(string key, object obj) { }
+
+		/// <summary>
+		/// //false is default value when system call back press
+		/// </summary>
+		/// <returns></returns>
+		public virtual bool OnBackButtonPressed()
+		{
+			//false is default value when system call back press
+			return false;
+		}
+
+		/// <summary>
+		/// called when page need override soft back button
+		/// </summary>
+		public virtual void OnSoftBackButtonPressed() { }
+
+        /// <summary>
+        /// Loads the view model resources.
+        /// </summary>
+        public virtual void LoadViewModelResources(){}
+        /// <summary>
+        /// Releads the view model resources.
+        /// </summary>
+        public virtual void ReleadViewModelResources(){}
+
 	}
 
 }

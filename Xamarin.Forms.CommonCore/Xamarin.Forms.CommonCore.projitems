@@ -250,6 +250,11 @@
       <DependentUpon>ISqliteDb.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Settings\CoreSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Navigation\CoreNavigationPageRenderer.Droid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\BoundMasterDetailPage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\WebDownloadClient.cs">
+      <DependentUpon>IHttpService.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -274,8 +279,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\IOS\" />
     <Folder Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\" />
     <Folder Include="$(MSBuildThisFileDirectory)Settings\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Vault\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Vault\Renderers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Pages\Navigation\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />
@@ -288,7 +292,5 @@
       <DependentUpon>IAuthenticatorService.cs</DependentUpon>
     </None>
     <None Include="$(MSBuildThisFileDirectory)Styles\AppStyles.txt" />
-    <None Include="$(MSBuildThisFileDirectory)Vault\Renderers\PageRemoveBackChevron.IOS.txt" />
-    <None Include="$(MSBuildThisFileDirectory)Vault\ReadMe.txt" />
   </ItemGroup>
 </Project>

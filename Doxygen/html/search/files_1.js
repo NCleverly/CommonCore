@@ -11,5 +11,6 @@ var searchData=
   ['bindablepicker_2ecs',['BindablePicker.cs',['../_bindable_picker_8cs.html',1,'']]],
   ['bluroverlay_2edroid_2ecs',['BlurOverlay.Droid.cs',['../_blur_overlay_8_droid_8cs.html',1,'']]],
   ['bluroverlay_2eios_2ecs',['BlurOverlay.IOS.cs',['../_blur_overlay_8_i_o_s_8cs.html',1,'']]],
+  ['boundmasterdetailpage_2ecs',['BoundMasterDetailPage.cs',['../_bound_master_detail_page_8cs.html',1,'']]],
   ['boundpage_2ecs',['BoundPage.cs',['../_bound_page_8cs.html',1,'']]]
 ];

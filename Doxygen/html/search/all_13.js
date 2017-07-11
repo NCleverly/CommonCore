@@ -2,6 +2,7 @@ var searchData=
 [
   ['tabbackgroundcolor',['TabBackgroundColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_tabbed_page.html#aa24d486ee6585b1b21eec829a05f5731',1,'Xamarin::Forms::CommonCore::BaseTabbedPage']]],
   ['tabbackgroundcolorproperty',['TabBackgroundColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_tabbed_page.html#add45067986af076adaf14e7bb0e95e7b',1,'Xamarin::Forms::CommonCore::BaseTabbedPage']]],
+  ['tabbed',['Tabbed',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aebe3f0e2d9f86565a6031631e20939f0a5a9bcd254ef990f0d957e9e1c1848663',1,'Xamarin::Forms::CommonCore']]],
   ['tablename',['TableName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_table_name.html',1,'Xamarin::Forms::CommonCore']]],
   ['tablenames',['TableNames',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html#a5bd2b3f5b40e84e396043ed45f08d425',1,'Xamarin::Forms::CommonCore::SqliteSettings']]],
   ['tag',['Tag',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#a8f154e3f07964f26135414167498a18d',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
@@ -13,7 +14,7 @@ var searchData=
   ['telephonypagerenderer_2edroid_2ecs',['TelephonyPageRenderer.Droid.cs',['../_telephony_page_renderer_8_droid_8cs.html',1,'']]],
   ['telephonypagerenderer_2eios_2ecs',['TelephonyPageRenderer.IOS.cs',['../_telephony_page_renderer_8_i_o_s_8cs.html',1,'']]],
   ['text',['Text',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#a8eff4d83c2306bb25b3848a4709f0b9c',1,'Xamarin.Forms.CommonCore.Snack.Text()'],['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#a47632ecc87907223a35c556beb06ffb8',1,'PushNotification.Plugin.Abstractions.PushNotificationKey.Text()']]],
-  ['textarea',['TextArea',['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html',1,'Xamarin.Forms.CommonCore.TextArea'],['../class_common_1_1_core_1_1_text_area.html',1,'Common.Core.TextArea']]],
+  ['textarea',['TextArea',['../class_common_1_1_core_1_1_text_area.html',1,'Common.Core.TextArea'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html',1,'Xamarin.Forms.CommonCore.TextArea']]],
   ['textarea_2ecs',['TextArea.cs',['../_text_area_8cs.html',1,'']]],
   ['textarearenderer_2ecs',['TextAreaRenderer.cs',['../_text_area_renderer_8cs.html',1,'']]],
   ['textarearenderer_2edroid_2ecs',['TextAreaRenderer.Droid.cs',['../_text_area_renderer_8_droid_8cs.html',1,'']]],

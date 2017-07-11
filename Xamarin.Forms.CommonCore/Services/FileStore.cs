@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.IO.IsolatedStorage;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -10,7 +11,15 @@ namespace Xamarin.Forms.CommonCore
 
 	public class FileStore : IFileStore
     {
+        private JsonSerializer _serializer;
+
         private static SemaphoreSlim fileStoreLock = new SemaphoreSlim(1);
+
+
+        public FileStore()
+        {
+            _serializer = new JsonSerializer();
+        }
 
         public async Task<GenericResponse<T>> GetAsync<T>(string contentName) where T : class, new()
         {
@@ -28,14 +37,14 @@ namespace Xamarin.Forms.CommonCore
                             {
                                 using (var s = isoStorage.OpenFile(contentName, FileMode.OpenOrCreate))
                                 {
-                                    using (var sr = new StreamReader(s))
-                                    {
-                                        var content = sr.ReadToEnd();
-                                        sr.Close();
-                                        response.Response = JsonConvert.DeserializeObject<T>(content);
-                                        response.Success = true;
-
-                                    }
+									using (var reader = new StreamReader(s))
+									{
+										using (var json = new JsonTextReader(reader))
+										{
+											response.Response = _serializer.Deserialize<T>(json);
+											response.Success = true;
+										}
+									}
                                 }
                             }
                             catch (Exception ex)
@@ -100,12 +109,11 @@ namespace Xamarin.Forms.CommonCore
                 {
                     using (var isoStorage = IsolatedStorageFile.GetUserStoreForApplication())
                     {
-                        var data = JsonConvert.SerializeObject(obj);
                         using (var s = isoStorage.OpenFile(contentName, FileMode.Create))
                         {
                             using (var sw = new StreamWriter(s))
                             {
-                                sw.Write(data);
+                                _serializer.Serialize(new JsonTextWriter(sw), obj);
                                 sw.Flush();
                                 sw.Close();
                                 response.Success = true;

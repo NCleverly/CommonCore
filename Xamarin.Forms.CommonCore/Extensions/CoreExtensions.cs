@@ -28,6 +28,46 @@ namespace Xamarin.Forms.CommonCore
 {
     public static class CoreExtensions
     {
+		public static T ConvertTo<T>(this StringResponse str) where T : struct
+		{
+			object result = null;
+			var code = Type.GetTypeCode(typeof(T));
+			switch (code)
+			{
+				case TypeCode.Int32:
+					result = JsonConvert.DeserializeObject<int>(str.Response);
+					break;
+				case TypeCode.Int16:
+					result = JsonConvert.DeserializeObject<short>(str.Response);
+					break;
+				case TypeCode.Int64:
+					result = JsonConvert.DeserializeObject<long>(str.Response);
+					break;
+				case TypeCode.String:
+					result = JsonConvert.DeserializeObject<string>(str.Response);
+					break;
+				case TypeCode.Boolean:
+					result = JsonConvert.DeserializeObject<bool>(str.Response);
+					break;
+				case TypeCode.Double:
+					result = JsonConvert.DeserializeObject<double>(str.Response);
+					break;
+				case TypeCode.Decimal:
+					result = JsonConvert.DeserializeObject<decimal>(str.Response);
+					break;
+				case TypeCode.Byte:
+					result = JsonConvert.DeserializeObject<Byte>(str.Response);
+					break;
+				case TypeCode.DateTime:
+					result = JsonConvert.DeserializeObject<DateTime>(str.Response);
+					break;
+				case TypeCode.Single:
+					result = JsonConvert.DeserializeObject<Single>(str.Response);
+					break;
+			}
+			return (T)result;
+		}
+
         public static string GetString(this PropertyInfo prop, object obj)
         {
             return (string)prop.GetValue(obj, null);
@@ -330,7 +370,7 @@ namespace Xamarin.Forms.CommonCore
         /// <param name="page">Page.</param>
         public static void RemoveAnimations(this ContentPage page)
         {
-            if(page.Content is Layout<View>)
+            if (page.Content is Layout<View>)
             {
                 var layout = (Layout<View>)page.Content;
                 RemoveAnimations(layout);
@@ -341,9 +381,9 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <param name="layout">Layout.</param>
 		public static void RemoveAnimations(this Layout<View> layout)
-		{
-			foreach (var element in layout.Children)
-			{
+        {
+            foreach (var element in layout.Children)
+            {
                 if (element is Layout<View>)
                 {
                     RemoveAnimations((Layout<View>)element);
@@ -356,8 +396,8 @@ namespace Xamarin.Forms.CommonCore
                     }
                     catch { }
                 }
-			}
-		}
+            }
+        }
 
         /// <summary>
         /// Disables all controls in the layout view
@@ -432,7 +472,7 @@ namespace Xamarin.Forms.CommonCore
         /// <returns>The to.</returns>
         /// <param name="nav">Nav.</param>
         /// <param name="pageName">Page name.</param>
-        public static async Task<Page> PopTo<T>(this INavigation nav, bool animated = false) where T : ContentPage
+        public static async Task<Page> PopTo<T>(this INavigation nav, bool animated = false) where T : ContentPage, new()
         {
             var pageName = typeof(T).Name;
 
@@ -441,31 +481,45 @@ namespace Xamarin.Forms.CommonCore
                 if (nav.NavigationStack.Last().GetType().Name == pageName)
                     return null;
 
-                for (int x = (nav.NavigationStack.Count - 2); x > -1; x--)
+                if (Device.RuntimePlatform.ToUpper() == "IOS")
                 {
-                    var page = nav.NavigationStack[x];
-                    var name = page.GetType().Name;
-                    if (name == pageName)
+                    for (int x = (nav.NavigationStack.Count - 2); x > -1; x--)
                     {
-                        try
+                        var page = nav.NavigationStack[x];
+                        var name = page.GetType().Name;
+                        if (name == pageName)
                         {
                             return await nav.PopAsync(animated);
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            return null;
+                            nav.RemovePage(page);
                         }
                     }
-                    else
-                    {
-                        nav.RemovePage(page);
-                    }
                 }
+                else
+                {
+                    /*
+                     * 
+                     * THIS IS A HACK JOB THAT NEEDS TO BE REVISITED
+                     * 
+                     */
+
+                    //This is a workaround for API 25 in Droid but this may have issues as well
+					while(nav.NavigationStack.Last().GetType().Name!=pageName)
+					{
+                        await nav.PopAsync(false); 
+					}
+				}
 
 
             }
             return null;
+
         }
+
+
+
         /// <summary>
         /// Cast IEnumerable to IList
         /// </summary>
