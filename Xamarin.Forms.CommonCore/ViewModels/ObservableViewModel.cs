@@ -8,7 +8,7 @@ namespace Xamarin.Forms.CommonCore
 	/// <summary>
 	/// Observable view model.
 	/// </summary>
-	public class ObservableViewModel : ObservableObject
+	public abstract class ObservableViewModel : ObservableObject
 	{
 		private bool isLoadingHUD;
 		private bool isLoadingOverlay;
@@ -18,33 +18,7 @@ namespace Xamarin.Forms.CommonCore
 
 		#region ReadOnly AppData Settings
         public string AESEncryptionKey { get { return CoreSettings.Config.AESEncryptionKey; } }
-
-		public string MobileCenter_HockeyAppiOS { get { return CoreSettings.Config?.MobileCenter_HockeyApp?.IOSAppId; } }
-		public string MobileCenter_HockeyAppAndroid { get { return CoreSettings.Config?.MobileCenter_HockeyApp?.AndroidAppId; } }
-		public string MobileCenter_HockeyAppUWP { get { return CoreSettings.Config?.MobileCenter_HockeyApp?.UWPAppId; } }
-
-		public string GoogleAppId { get { return CoreSettings.Config?.SocialMedia?.GoogleSettings?.GoogleAppId; } }
-		public string OAuthClientID_iOS { get { return CoreSettings.Config?.SocialMedia?.GoogleSettings?.OAuthClientID_iOS; } }
-		public string OAuthClientID_Android { get { return CoreSettings.Config?.SocialMedia?.GoogleSettings?.OAuthClientID_Android; } }
-		public string OAuthClientID_UWP { get { return CoreSettings.Config?.SocialMedia?.GoogleSettings?.OAuthClientID_UWP; } }
-
-		public int? HttpTimeOut { get { return CoreSettings.Config?.HttpSettings?.HttpTimeOut; } }
-		public bool? HttpAllowAutoRedirect { get { return CoreSettings.Config?.HttpSettings?.HttpAllowAutoRedirect; } }
-        public string IOSHttpHandler { get { return CoreSettings.Config?.HttpSettings?.IOSHttpHandler; } }
-		public string AndroidHttpHandler { get { return CoreSettings.Config?.HttpSettings?.AndroidHttpHandler; } }
-
-		public string FaceBookAppId { get { return CoreSettings.Config?.SocialMedia?.FaceBookAppId; } }
-		public string MicrosoftAppId { get { return CoreSettings.Config?.SocialMedia?.MicrosoftAppId; } }
-
-		public string AzureHubName { get { return CoreSettings.Config?.AzureSettings?.AzureHubName; } }
-		public string AzureListenConnection { get { return CoreSettings.Config?.AzureSettings?.AzureListenConnection; } }
-
-        public List<TableName> SqliteTableNames { get { return CoreSettings.Config?.SqliteSettings?.TableNames; } }
-
-        public string SqliteDbName { get { return CoreSettings.Config?.SqliteSettings?.SQLiteDatabase; } }
-
 		public Dictionary<string, string> WebApis { get { return CoreSettings.Config?.WebApi; } }
-
 		public Dictionary<string, string> CustomSettings { get { return CoreSettings.Config?.CustomSettings; } }
         #endregion
 
@@ -381,13 +355,14 @@ namespace Xamarin.Forms.CommonCore
 		public virtual void OnSoftBackButtonPressed() { }
 
         /// <summary>
-        /// Loads the view model resources.
+        /// Loads the view model resources. Do not perform blocking calls in this method!
+        /// 
         /// </summary>
-        public virtual void LoadViewModelResources(){}
+        public virtual void LoadResources(){}
         /// <summary>
         /// Releads the view model resources.
         /// </summary>
-        public virtual void ReleadViewModelResources(){}
+        public virtual void ReleaseResources(){}
 
 	}
 

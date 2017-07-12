@@ -28,18 +28,22 @@ namespace Xamarin.Forms.CommonCore
                 return _container ?? (_container = new UnityContainer());
             }
         }
-        public static T GetViewModel<T>() where T : ObservableViewModel
+        public static T GetViewModel<T>(bool loadResources = false) where T : ObservableViewModel
         {
             if (_serviceLocator == null)
                 InitializeServiceLocator();
 
             if (!Container.IsRegistered<T>())
                 Container.RegisterType<T>(new ContainerControlledLifetimeManager());
-            
-            return Container.Resolve<T>();
+
+            var vm = Container.Resolve<T>();
+            if (loadResources)
+                vm.LoadResources();
+
+            return vm;
         }
 
-        public static void ReleaseAllViewModelResourcesExcept<T>() where T: ObservableViewModel
+        public static void ReleaseResourcesExcept<T>() where T: ObservableViewModel
         {
             if (_serviceLocator == null)
                 return;
@@ -50,7 +54,7 @@ namespace Xamarin.Forms.CommonCore
                 if(isViewModel && reg.RegisteredType.Name!=typeof(T).Name)
                 {
 					var obj = (ObservableViewModel)Container.Resolve(reg.RegisteredType);
-                    obj.ReleadViewModelResources();
+                    obj.ReleaseResources();
                 }
             }
         }

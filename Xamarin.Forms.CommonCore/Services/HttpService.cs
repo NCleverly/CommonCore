@@ -83,7 +83,6 @@ namespace Xamarin.Forms.CommonCore
                     }
 
 #elif __ANDROID__
-			HttpMessageHandler handler;
 			switch (CoreSettings.Config.HttpSettings.AndroidHttpHandler)
 			{
 				case "ModernHttpClient":
@@ -109,7 +108,7 @@ namespace Xamarin.Forms.CommonCore
 					break;
 			}
 #else
-			var handler = new HttpClientHandler();
+			handler = new HttpClientHandler();
 #endif
 
 
@@ -222,17 +221,20 @@ namespace Xamarin.Forms.CommonCore
 					}
                     else{
 						srvResponse.EnsureSuccessStatusCode();
-						using (var stream = await srvResponse.Content.ReadAsStreamAsync())
-						{
-							using (var reader = new StreamReader(stream))
-							{
-								using (var json = new JsonTextReader(reader))
-								{
-									response.Response = _serializer.Deserialize<T>(json);
-									response.Success = true;
-								}
-							}
-						}
+						response.Response = await DeserializeStream<T>(srvResponse);
+						response.Success = true;
+
+						//using (var stream = await srvResponse.Content.ReadAsStreamAsync())
+						//{
+						//	using (var reader = new StreamReader(stream))
+						//	{
+						//		using (var json = new JsonTextReader(reader))
+						//		{
+						//			response.Response = _serializer.Deserialize<T>(json);
+						//			response.Success = true;
+						//		}
+						//	}
+						//}
                     }
                 }
 
@@ -273,17 +275,20 @@ namespace Xamarin.Forms.CommonCore
                     }
                     else{
 						srvResponse.EnsureSuccessStatusCode();
-						using (var stream = await srvResponse.Content.ReadAsStreamAsync())
-						{
-							using (var reader = new StreamReader(stream))
-							{
-								using (var json = new JsonTextReader(reader))
-								{
-									response.Response = _serializer.Deserialize<T>(json);
-									response.Success = true;
-								}
-							}
-						}
+						response.Response = await DeserializeStream<T>(srvResponse);
+						response.Success = true;
+
+						//using (var stream = await srvResponse.Content.ReadAsStreamAsync())
+						//{
+						//	using (var reader = new StreamReader(stream))
+						//	{
+						//		using (var json = new JsonTextReader(reader))
+						//		{
+						//			response.Response = _serializer.Deserialize<T>(json);
+						//			response.Success = true;
+						//		}
+						//	}
+						//}
                     }
                 }
 
@@ -326,17 +331,20 @@ namespace Xamarin.Forms.CommonCore
                     else
                     {
 						srvResponse.EnsureSuccessStatusCode();
-						using (var stream = await srvResponse.Content.ReadAsStreamAsync())
-						{
-							using (var reader = new StreamReader(stream))
-							{
-								using (var json = new JsonTextReader(reader))
-								{
-									response.Response = _serializer.Deserialize<T>(json);
-									response.Success = true;
-								}
-							}
-						}
+                        response.Response = await DeserializeStream<T>(srvResponse);
+						response.Success = true;
+
+						//using (var stream = await srvResponse.Content.ReadAsStreamAsync())
+						//{
+						//	using (var reader = new StreamReader(stream))
+						//	{
+						//		using (var json = new JsonTextReader(reader))
+						//		{
+						//			response.Response = _serializer.Deserialize<T>(json);
+						//			response.Success = true;
+						//		}
+						//	}
+						//}
                     }
                 }
 
@@ -379,31 +387,6 @@ namespace Xamarin.Forms.CommonCore
             return jsonResult;
         }
 
-        //public async Task<bool> PingDomain(string url)
-        //{
-        //    var host = new Uri(url).Host;
-        //    var start = url.StartsWith("http", StringComparison.CurrentCultureIgnoreCase) ? "http" : "https";
-        //    var nUrl = $"{start}://{host}";
-
-        //    return await PingUrl(nUrl);
-        //}
-        //public async Task<bool> PingUrl(string url)
-        //{
-        //    try
-        //    {
-        //        var request = (HttpWebRequest)HttpWebRequest.Create(url);
-        //        request.Timeout = 3000;
-        //        request.AllowAutoRedirect = false; // find out if this site is up and don't follow a redirector
-        //        request.Method = "HEAD";
-        //        var response = await request.GetResponseAsync();
-        //        return true;
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return false;
-        //    }
-        //}
-
         private Task<string> FormattedJson(string jsonResult)
         {
             return Task.Run(() =>
@@ -413,13 +396,30 @@ namespace Xamarin.Forms.CommonCore
             });
         }
 
-        private static Task<T> DeserializeObject<T>(string content) where T : class, new()
+        private Task<T> DeserializeObject<T>(string content) where T : class, new()
         {
             return Task.Run(() =>
             {
                 return JsonConvert.DeserializeObject<T>(content);
             });
         }
+
+		private Task<T> DeserializeStream<T>(HttpResponseMessage response)
+		{
+            return Task.Run(async () =>
+            {
+                using (var stream = await response.Content.ReadAsStreamAsync())
+                {
+                    using (var reader = new StreamReader(stream))
+                    {
+                        using (var json = new JsonTextReader(reader))
+                        {
+                            return _serializer.Deserialize<T>(json);
+                        }
+                    }
+                }
+            });
+		}
 
         public void Dispose()
         {
