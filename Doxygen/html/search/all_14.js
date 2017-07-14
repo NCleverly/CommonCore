@@ -12,6 +12,6 @@ var searchData=
   ['unselectedimageproperty',['UnSelectedImageProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#a975c26c4f4b46e7104195fbacfd3492e',1,'Xamarin::Forms::CommonCore::RankingControl']]],
   ['unselectedtextcolor',['UnselectedTextColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a2d85390576fb675011a8a9d1743e00f9',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
   ['unselectedtextcolorproperty',['UnselectedTextColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a47a1b80bd9feec90fb65ad02be175cc0',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
-  ['utctickstamp',['UTCTickStamp',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_data_model.html#ae54f65ff1416fed39b098998b3d5f016',1,'Xamarin.Forms.CommonCore.IDataModel.UTCTickStamp()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#a3d5dc9a65f5468196099bbea20642fa3',1,'Xamarin.Forms.CommonCore.DataModel.UTCTickStamp()']]],
+  ['utctickstamp',['UTCTickStamp',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sql_data_model.html#af3b151cd48dd014965c7375e6b85830b',1,'Xamarin.Forms.CommonCore.ISqlDataModel.UTCTickStamp()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_sql_data_model.html#a3c6e4c897ecc820e404e7dadedd161cd',1,'Xamarin.Forms.CommonCore.SqlDataModel.UTCTickStamp()']]],
   ['uwpappid',['UWPAppId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html#afad55d6f189b2311f2b8eb898f74737a',1,'Xamarin::Forms::CommonCore::MobileCenterHockeyApp']]]
 ];

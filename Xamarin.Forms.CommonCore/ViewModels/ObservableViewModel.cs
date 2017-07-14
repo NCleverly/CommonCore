@@ -8,7 +8,7 @@ namespace Xamarin.Forms.CommonCore
 	/// <summary>
 	/// Observable view model.
 	/// </summary>
-	public abstract class ObservableViewModel : ObservableObject
+	public abstract partial class ObservableViewModel : ObservableObject
 	{
 		private bool isLoadingHUD;
 		private bool isLoadingOverlay;

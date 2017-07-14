@@ -70,7 +70,6 @@ $(function() {
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -122,11 +121,10 @@ Properties</h2></td></tr>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:ad0cef22cfa581047dfc3807ab3056900"><td class="memItemLeft" align="right" valign="top">Task&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#ad0cef22cfa581047dfc3807ab3056900">FormattedJson</a> (string jsonResult)</td></tr>
 <tr class="separator:ad0cef22cfa581047dfc3807ab3056900"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a5e3f6f5a97cb687a7f39394b824a1502"><td class="memItemLeft" align="right" valign="top">static Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a5e3f6f5a97cb687a7f39394b824a1502">DeserializeObject&lt; T &gt;</a> (string content)</td></tr>
-<tr class="separator:a5e3f6f5a97cb687a7f39394b824a1502"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b3fb26789587833097f6db8e1bc1718"><td class="memItemLeft" align="right" valign="top">Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a5b3fb26789587833097f6db8e1bc1718">DeserializeObject&lt; T &gt;</a> (string content)</td></tr>
+<tr class="separator:a5b3fb26789587833097f6db8e1bc1718"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04e3db2304496e619699b4f1daf1c42f"><td class="memItemLeft" align="right" valign="top">Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a04e3db2304496e619699b4f1daf1c42f">DeserializeStream&lt; T &gt;</a> (HttpResponseMessage response)</td></tr>
+<tr class="separator:a04e3db2304496e619699b4f1daf1c42f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -141,8 +139,8 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00017">17</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5e3f6f5a97cb687a7f39394b824a1502"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e3f6f5a97cb687a7f39394b824a1502">&#9670;&nbsp;</a></span>DeserializeObject< T >()</h2>
+<a id="a5b3fb26789587833097f6db8e1bc1718"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b3fb26789587833097f6db8e1bc1718">&#9670;&nbsp;</a></span>DeserializeObject< T >()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,7 +149,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static Task&lt;T&gt; Xamarin.Forms.CommonCore.HttpService.DeserializeObject&lt; T &gt; </td>
+          <td class="memname">Task&lt;T&gt; Xamarin.Forms.CommonCore.HttpService.DeserializeObject&lt; T &gt; </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
           <td class="paramname"><em>content</em></td><td>)</td>
@@ -160,7 +158,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -174,7 +172,35 @@ Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00416">416</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00399">399</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+
+</div>
+</div>
+<a id="a04e3db2304496e619699b4f1daf1c42f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04e3db2304496e619699b4f1daf1c42f">&#9670;&nbsp;</a></span>DeserializeStream< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;T&gt; Xamarin.Forms.CommonCore.HttpService.DeserializeStream&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">HttpResponseMessage&#160;</td>
+          <td class="paramname"><em>response</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00407">407</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -221,7 +247,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00407">407</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00390">390</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -253,7 +279,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#add46c833f708870cd409cf0a5a17c438">Xamarin.Forms.CommonCore.IHttpService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00134">134</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00133">133</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -284,7 +310,7 @@ Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00200">200</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00199">199</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -306,7 +332,7 @@ Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#ad58be1f4074d067f80e3eaf18c329556">Xamarin.Forms.CommonCore.IHttpService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00171">171</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00170">170</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -337,7 +363,7 @@ Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00354">354</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00362">362</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -420,7 +446,7 @@ Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00249">249</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00251">251</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>
@@ -461,7 +487,7 @@ Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00301">301</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_http_service_8cs_source.html#l00306">306</a> of file <a class="el" href="_http_service_8cs_source.html">HttpService.cs</a>.</p>
 
 </div>
 </div>

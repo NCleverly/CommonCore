@@ -78,7 +78,7 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <param name="obj">Object.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void EncryptedDataModelProperties<T>(this T obj) where T : IDataModel
+        public static void EncryptedDataModelProperties<T>(this T obj) where T : ISqlDataModel
         {
             var n = typeof(T).FullName;
             var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
@@ -100,7 +100,7 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <param name="list">List.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void EncryptedDataModelProperties<T>(this IEnumerable<T> list) where T : IDataModel
+        public static void EncryptedDataModelProperties<T>(this IEnumerable<T> list) where T : ISqlDataModel
         {
             var n = typeof(T).FullName;
             var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
@@ -124,7 +124,7 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <param name="obj">Object.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void UnEncryptedDataModelProperties<T>(this object obj) where T : IDataModel
+        public static void UnEncryptedDataModelProperties<T>(this object obj) where T : ISqlDataModel
         {
             var n = typeof(T).FullName;
             var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
@@ -145,7 +145,7 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <param name="list">List.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void UnEncryptedDataModelProperties<T>(this IEnumerable<T> list) where T : IDataModel
+        public static void UnEncryptedDataModelProperties<T>(this IEnumerable<T> list) where T : ISqlDataModel
         {
             var n = typeof(T).FullName;
             var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
@@ -351,6 +351,23 @@ namespace Xamarin.Forms.CommonCore
             list?.ForEach((item) => collection.Add(item));
             return collection;
         }
+
+		/// <summary>
+		/// Converts IQueryable to ObservableCollection
+		/// </summary>
+		/// <returns>The observable.</returns>
+		/// <param name="query">Query.</param>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
+		public static ObservableCollection<T> ToObservable<T>(this IQueryable<T> query)
+        {
+            var collection = new ObservableCollection<T>();
+            foreach(var item in query.AsEnumerable<T>())
+            {
+                collection.Add(item);
+            }
+			return collection;
+        }
+
         /// <summary>
         /// Converts Array to ObservableCollection
         /// </summary>

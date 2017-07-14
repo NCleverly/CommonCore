@@ -2,8 +2,6 @@ var searchData=
 [
   ['d',['D',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_a_b_c_d_struct.html#a9d329d81086bcb10c96b1923b7eda38d',1,'Xamarin::Forms::CommonCore::ABCDStruct']]],
   ['data',['Data',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#ac957af985ca9e956ce8cf0d056daed3b',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
-  ['datamodel',['DataModel',['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html',1,'Xamarin::Forms::CommonCore']]],
-  ['datamodel_2ecs',['DataModel.cs',['../_data_model_8cs.html',1,'']]],
   ['decrypt',['Decrypt',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#ab2f722e30944f3dcc33f3978c28419eb',1,'Xamarin::Forms::CommonCore::AccountService']]],
   ['default',['Default',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aebd939a54cefa043add7c8ba6eab51daa7a1920d61156abc05a60135aefe8bc67',1,'Xamarin::Forms::CommonCore']]],
   ['defaultbehaviors',['defaultBehaviors',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a1eed400d1c2cc015fd85460319ccdf38',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
@@ -11,7 +9,8 @@ var searchData=
   ['deletebyinternalid_3c_20t_20_3e',['DeleteByInternalID&lt; T &gt;',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sqlite_db.html#a049d957ab3de30d6fc76b9b471fbb291',1,'Xamarin.Forms.CommonCore.ISqliteDb.DeleteByInternalID&lt; T &gt;()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#adb178671d421c698bb9686fd46d63ddd',1,'Xamarin.Forms.CommonCore.SqliteDb.DeleteByInternalID&lt; T &gt;()']]],
   ['deletebyquery_3c_20t_20_3e',['DeleteByQuery&lt; T &gt;',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sqlite_db.html#a29c5c3d6e0f1fe4c4821d19493e6bec9',1,'Xamarin.Forms.CommonCore.ISqliteDb.DeleteByQuery&lt; T &gt;()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#a67c2e28e64abf256ddde08851adeea00',1,'Xamarin.Forms.CommonCore.SqliteDb.DeleteByQuery&lt; T &gt;()']]],
   ['description',['Description',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#a776ac94d8fc44edf8f7dc715e0b37c94',1,'Xamarin::Forms::CommonCore::CalendarEventModel']]],
-  ['deserializeobject_3c_20t_20_3e',['DeserializeObject&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a5e3f6f5a97cb687a7f39394b824a1502',1,'Xamarin::Forms::CommonCore::HttpService']]],
+  ['deserializeobject_3c_20t_20_3e',['DeserializeObject&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a5b3fb26789587833097f6db8e1bc1718',1,'Xamarin::Forms::CommonCore::HttpService']]],
+  ['deserializestream_3c_20t_20_3e',['DeserializeStream&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a04e3db2304496e619699b4f1daf1c42f',1,'Xamarin::Forms::CommonCore::HttpService']]],
   ['deviceinfo',['DeviceInfo',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a37ec417ce12fa4fd2402e35c76a76196',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['deviceinfo_2edroid_2ecs',['DeviceInfo.Droid.cs',['../_device_info_8_droid_8cs.html',1,'']]],
   ['deviceinfo_2eios_2ecs',['DeviceInfo.IOS.cs',['../_device_info_8_i_o_s_8cs.html',1,'']]],

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 
 namespace Xamarin.Forms.CommonCore
 {
-	public class AzureSettings
+	public partial class AzureSettings
 	{
 		public string AzureHubName { get; set; }
 		public string AzureListenConnection { get; set; }
 	}
 
-	public class HttpSettings
+	public partial class HttpSettings
 	{
         public bool DisplayRawJson { get; set; } = false;
 		public int HttpTimeOut { get; set; } = 0;
@@ -17,14 +17,14 @@ namespace Xamarin.Forms.CommonCore
 		public string IOSHttpHandler { get; set; } = "Managed";
 		public string AndroidHttpHandler { get; set; } = "Managed";
 	}
-    public class SocialMedia
+    public partial class SocialMedia
     {
         public GoogleSettings GoogleSettings { get; set; }
         public string FaceBookAppId { get; set; }
         public string MicrosoftAppId { get; set; }
     }
 
-	public class GoogleSettings
+	public partial class GoogleSettings
 	{
 		public string GoogleAppId { get; set; }
 		public string OAuthClientID_iOS { get; set; }
@@ -52,7 +52,7 @@ namespace Xamarin.Forms.CommonCore
 		public string UWPAppId { get; set; }
 	}
 
-	public class ConfigurationModel
+	public partial class ConfigurationModel
 	{
         public string AESEncryptionKey { get; set; }
 		public HttpSettings HttpSettings { get; set; }

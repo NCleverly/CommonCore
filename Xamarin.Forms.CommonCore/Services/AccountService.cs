@@ -11,14 +11,17 @@ using Plugin.Settings;
 
 namespace Xamarin.Forms.CommonCore
 {
-	public class AccountService : IAccountService
-	{
-		const string protectedStore = "protectedStoreTokenAccount";
-		const string pwKey = "password";
+    public class AccountService : IAccountService
+    {
+        const string protectedStore = "protectedStoreTokenAccount";
+        const string pwKey = "password";
 
-		public string AccountEncryptionKey
-		{
-			get { return CrossSettings.Current.GetValueOrDefault("AccountEncryptionKey", null); }
+        public string AccountEncryptionKey
+        {
+            get
+            {
+                return CrossSettings.Current.GetValueOrDefault("AccountEncryptionKey", null);
+			}
 			set { CrossSettings.Current.AddOrUpdateValue("AccountEncryptionKey", value); }
 		}
 

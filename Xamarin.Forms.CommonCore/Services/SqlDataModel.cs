@@ -3,13 +3,13 @@ using SQLite;
 
 namespace Xamarin.Forms.CommonCore
 {
-    public interface IDataModel
+    public interface ISqlDataModel
     {
         Guid CorrelationID { get; set; }
         long UTCTickStamp { get; set; }
         bool MarkedForDelete { get; set; }
     }
-    public class DataModel : ObservableObject, IDataModel, ICloneable
+    public class SqlDataModel : ObservableObject, ISqlDataModel, ICloneable
     {
         [PrimaryKey]
         public Guid CorrelationID { get; set; }

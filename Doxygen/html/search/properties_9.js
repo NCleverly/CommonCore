@@ -7,7 +7,7 @@ var searchData=
   ['index',['Index',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a409b9d697ac8df830b815aa27959c191',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
   ['installationid',['InstallationId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#a4fd2d909b4ab7d9ff22de6b9f70b5324',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
   ['iosappid',['IOSAppId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html#a809abac6137bfdc5a38d7246e338b173',1,'Xamarin::Forms::CommonCore::MobileCenterHockeyApp']]],
-  ['ioshttphandler',['IOSHttpHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_settings.html#a6340c2449d2f7665eda1cccc2f335c0d',1,'Xamarin.Forms.CommonCore.HttpSettings.IOSHttpHandler()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a2ac41685ecbb9aaba10d3266a87a4f42',1,'Xamarin.Forms.CommonCore.ObservableViewModel.IOSHttpHandler()']]],
+  ['ioshttphandler',['IOSHttpHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_settings.html#a6340c2449d2f7665eda1cccc2f335c0d',1,'Xamarin::Forms::CommonCore::HttpSettings']]],
   ['isclippedtobounds',['IsClippedToBounds',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#af86a3cce62961d6fab9b6bae5981b5c1',1,'Xamarin::Forms::CommonCore::PopupView']]],
   ['iscompleted',['IsCompleted',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_synchronization_context_remover.html#a71941af8c72d13f12a7ca8a5b36bdb44',1,'Xamarin::Forms::CommonCore::SynchronizationContextRemover']]],
   ['isconnected',['IsConnected',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#ad69f2065d0288459fb23267a2fa11d0d',1,'Xamarin::Forms::CommonCore::CoreSettings']]],

@@ -8,7 +8,6 @@ var searchData=
   ['ibluroverlay',['IBlurOverlay',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_blur_overlay.html',1,'Xamarin::Forms::CommonCore']]],
   ['icalendarevent',['ICalendarEvent',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_calendar_event.html',1,'Xamarin::Forms::CommonCore']]],
   ['icommunication',['ICommunication',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_communication.html',1,'Xamarin::Forms::CommonCore']]],
-  ['idatamodel',['IDataModel',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_data_model.html',1,'Xamarin::Forms::CommonCore']]],
   ['ideviceinfo',['IDeviceInfo',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_device_info.html',1,'Xamarin::Forms::CommonCore']]],
   ['idialogprompt',['IDialogPrompt',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_dialog_prompt.html',1,'Xamarin::Forms::CommonCore']]],
   ['iencryptionservice',['IEncryptionService',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_encryption_service.html',1,'Xamarin::Forms::CommonCore']]],
@@ -25,6 +24,7 @@ var searchData=
   ['ipushnotificationlistener',['IPushNotificationListener',['../interface_push_notification_1_1_plugin_1_1_i_push_notification_listener.html',1,'PushNotification::Plugin']]],
   ['isearchprovider',['ISearchProvider',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_search_provider.html',1,'Xamarin::Forms::CommonCore']]],
   ['isnackbar',['ISnackBar',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_snack_bar.html',1,'Xamarin::Forms::CommonCore']]],
+  ['isqldatamodel',['ISqlDataModel',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sql_data_model.html',1,'Xamarin::Forms::CommonCore']]],
   ['isqlitedb',['ISqliteDb',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sqlite_db.html',1,'Xamarin::Forms::CommonCore']]],
   ['iviewstack',['IViewStack',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_view_stack.html',1,'Xamarin::Forms::CommonCore']]]
 ];

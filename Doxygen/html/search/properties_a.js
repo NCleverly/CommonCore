@@ -5,6 +5,6 @@ var searchData=
   ['loadingmessageoverlay',['LoadingMessageOverlay',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1aea5ac101ba6ce4fe138f0d236b396c',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['loadmorecommand',['LoadMoreCommand',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#a4227e66d99cb725271dc368ffc136fb6',1,'Xamarin::Forms::CommonCore::ListControl']]],
   ['localnotify',['LocalNotify',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ac78356cca2ac25df8657de6db75b2127',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
-  ['localtimestamp',['LocalTimeStamp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_data_model.html#afb0b9674ae78c023b37fdbfa56433d67',1,'Xamarin::Forms::CommonCore::DataModel']]],
+  ['localtimestamp',['LocalTimeStamp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sql_data_model.html#ad3ff9d05e78cf043737b84fde7683289',1,'Xamarin::Forms::CommonCore::SqlDataModel']]],
   ['location',['Location',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#a4d9766c9b2dd7615337ed45668193196',1,'Xamarin::Forms::CommonCore::CalendarEventModel']]]
 ];

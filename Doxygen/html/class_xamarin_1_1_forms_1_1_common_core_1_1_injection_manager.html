@@ -78,10 +78,10 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aed5ba43b39695453626b0e5a8dca8f43"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#aed5ba43b39695453626b0e5a8dca8f43">GetViewModel&lt; T &gt;</a> ()</td></tr>
-<tr class="separator:aed5ba43b39695453626b0e5a8dca8f43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2aa0754fb6ddb6788b999d2344b0e5a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#af2aa0754fb6ddb6788b999d2344b0e5a">ReleaseAllViewModelResourcesExcept&lt; T &gt;</a> ()</td></tr>
-<tr class="separator:af2aa0754fb6ddb6788b999d2344b0e5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a042aae6993636a08e3c2e951e1a96468"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a042aae6993636a08e3c2e951e1a96468">GetViewModel&lt; T &gt;</a> (bool loadResources=false)</td></tr>
+<tr class="separator:a042aae6993636a08e3c2e951e1a96468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03372458359edeafa2edc982cdac958f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a03372458359edeafa2edc982cdac958f">ReleaseResourcesExcept&lt; T &gt;</a> ()</td></tr>
+<tr class="separator:a03372458359edeafa2edc982cdac958f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae43c3c54333bfde4147488778d2eb592"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#ae43c3c54333bfde4147488778d2eb592">SendViewModelMessage</a> (string key, object obj)</td></tr>
 <tr class="separator:ae43c3c54333bfde4147488778d2eb592"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66b0a6f3eb2cc206a026094b54e23654"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a66b0a6f3eb2cc206a026094b54e23654">SendViewModelMessage&lt; T &gt;</a> (string key, object obj)</td></tr>
@@ -144,7 +144,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00100">100</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00104">104</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>
@@ -180,12 +180,12 @@ Static Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00084">84</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00088">88</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>
-<a id="aed5ba43b39695453626b0e5a8dca8f43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed5ba43b39695453626b0e5a8dca8f43">&#9670;&nbsp;</a></span>GetViewModel< T >()</h2>
+<a id="a042aae6993636a08e3c2e951e1a96468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a042aae6993636a08e3c2e951e1a96468">&#9670;&nbsp;</a></span>GetViewModel< T >()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -196,7 +196,8 @@ Static Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">static T Xamarin.Forms.CommonCore.InjectionManager.GetViewModel&lt; T &gt; </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>loadResources</em> = <code>false</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -242,12 +243,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00116">116</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00120">120</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>
-<a id="af2aa0754fb6ddb6788b999d2344b0e5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2aa0754fb6ddb6788b999d2344b0e5a">&#9670;&nbsp;</a></span>ReleaseAllViewModelResourcesExcept< T >()</h2>
+<a id="a03372458359edeafa2edc982cdac958f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03372458359edeafa2edc982cdac958f">&#9670;&nbsp;</a></span>ReleaseResourcesExcept< T >()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -256,7 +257,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static void Xamarin.Forms.CommonCore.InjectionManager.ReleaseAllViewModelResourcesExcept&lt; T &gt; </td>
+          <td class="memname">static void Xamarin.Forms.CommonCore.InjectionManager.ReleaseResourcesExcept&lt; T &gt; </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -277,7 +278,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00042">42</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00046">46</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>
@@ -315,7 +316,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00058">58</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00062">62</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>
@@ -361,7 +362,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00073">73</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00077">77</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>

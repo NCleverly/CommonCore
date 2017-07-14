@@ -40,7 +40,7 @@ namespace Xamarin.Forms.CommonCore
 			});
 		}
 
-		public async Task<GenericResponse<List<T>>> GetAll<T>(bool includeDeleted = false) where T : IDataModel, new()
+		public async Task<GenericResponse<List<T>>> GetAll<T>(bool includeDeleted = false) where T : ISqlDataModel, new()
 		{
 
 			var response = new GenericResponse<List<T>>();
@@ -74,7 +74,7 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-		public async Task<BooleanResponse> TruncateAsync<T>() where T : IDataModel, new()
+		public async Task<BooleanResponse> TruncateAsync<T>() where T : ISqlDataModel, new()
 		{
 			var response = new BooleanResponse();
 
@@ -105,7 +105,7 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-		public async Task<GenericResponse<T>> GetByInternalId<T>(Guid CorrelationID, bool includeDeleted = false) where T : class, IDataModel, new()
+		public async Task<GenericResponse<T>> GetByInternalId<T>(Guid CorrelationID, bool includeDeleted = false) where T : class, ISqlDataModel, new()
 		{
 			var response = new GenericResponse<T>();
 			try
@@ -138,7 +138,7 @@ namespace Xamarin.Forms.CommonCore
 			}
 
 		}
-		public async Task<GenericResponse<List<T>>> GetByQuery<T>(Expression<Func<T, bool>> exp) where T : IDataModel, new()
+		public async Task<GenericResponse<List<T>>> GetByQuery<T>(Expression<Func<T, bool>> exp) where T : ISqlDataModel, new()
 		{
 
 			var response = new GenericResponse<List<T>>();
@@ -168,7 +168,7 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-		public async Task<BooleanResponse> SyncExternalObject<T, P>(T obj, Expression<Func<T, P>> exp) where T : IDataModel, new()
+		public async Task<BooleanResponse> SyncExternalObject<T, P>(T obj, Expression<Func<T, P>> exp) where T : ISqlDataModel, new()
 		{
 
 			var response = new BooleanResponse();
@@ -226,7 +226,7 @@ namespace Xamarin.Forms.CommonCore
 			}
 
 		}
-		public async Task<BooleanResponse> AddOrUpdate<T>(IEnumerable<T> collection) where T : IDataModel, new()
+		public async Task<BooleanResponse> AddOrUpdate<T>(IEnumerable<T> collection) where T : ISqlDataModel, new()
 		{
 
 			var response = new BooleanResponse();
@@ -273,7 +273,7 @@ namespace Xamarin.Forms.CommonCore
 				return response;
 			}
 		}
-		public async Task<BooleanResponse> AddOrUpdate<T>(T obj) where T : IDataModel, new()
+		public async Task<BooleanResponse> AddOrUpdate<T>(T obj) where T : ISqlDataModel, new()
 		{
 
 			var response = new BooleanResponse();
@@ -315,7 +315,7 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-		public async Task<BooleanResponse> SyncExternalCollection<T, P>(List<T> collection, Expression<Func<T, P>> exp) where T : IDataModel, new()
+		public async Task<BooleanResponse> SyncExternalCollection<T, P>(List<T> collection, Expression<Func<T, P>> exp) where T : ISqlDataModel, new()
 		{
 
 			var st = DateTime.Now;
@@ -400,7 +400,7 @@ namespace Xamarin.Forms.CommonCore
 			}
 		}
 
-		public async Task<BooleanResponse> DeleteByInternalID<T>(Guid ID, bool softDelete = true) where T : class, IDataModel, new()
+		public async Task<BooleanResponse> DeleteByInternalID<T>(Guid ID, bool softDelete = true) where T : class, ISqlDataModel, new()
 		{
 
 			var response = new BooleanResponse();
@@ -436,7 +436,7 @@ namespace Xamarin.Forms.CommonCore
 				return response;
 			}
 		}
-		public async Task<BooleanResponse> DeleteByQuery<T>(Expression<Func<T, bool>> exp, bool softDelete = true) where T : IDataModel, new()
+		public async Task<BooleanResponse> DeleteByQuery<T>(Expression<Func<T, bool>> exp, bool softDelete = true) where T : ISqlDataModel, new()
 		{
 			var response = new BooleanResponse();
 			try
