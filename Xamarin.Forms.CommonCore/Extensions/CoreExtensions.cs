@@ -339,18 +339,27 @@ namespace Xamarin.Forms.CommonCore
             else
                 return default(T);
         }
-        /// <summary>
-        /// Converts List to ObservableCollection
-        /// </summary>
-        /// <returns>The observable.</returns>
-        /// <param name="list">List.</param>
-        /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static ObservableCollection<T> ToObservable<T>(this List<T> list)
+		/// <summary>
+		/// Converts List to ObservableCollection
+		/// </summary>
+		/// <returns>The observable.</returns>
+		/// <param name="taskList">List.</param>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
+		public static async Task<ObservableCollection<T>> ToObservable<T>(this Task<List<T>> taskList)
         {
+            var result = await taskList;
             var collection = new ObservableCollection<T>();
-            list?.ForEach((item) => collection.Add(item));
+            result?.ForEach((item) => collection.Add(item));
             return collection;
         }
+
+
+		public static ObservableCollection<T> ToObservable<T>(this List<T> list)
+		{
+			var collection = new ObservableCollection<T>();
+			list?.ForEach((item) => collection.Add(item));
+			return collection;
+		}
 
 		/// <summary>
 		/// Converts IQueryable to ObservableCollection
