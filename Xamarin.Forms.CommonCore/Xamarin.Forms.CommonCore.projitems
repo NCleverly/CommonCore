@@ -261,6 +261,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ContextMenuService.Droid.cs">
       <DependentUpon>IContextMenuService.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\SwitchControl.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\SwitchControlRenderer.Droid.cs">
+      <DependentUpon>SwitchControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\SwitchControlRenderer.IOS.cs">
+      <DependentUpon>SwitchControl.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

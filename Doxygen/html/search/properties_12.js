@@ -8,5 +8,6 @@ var searchData=
   ['token',['Token',['../interface_push_notification_1_1_plugin_1_1_abstractions_1_1_i_push_notification.html#a3106092a35beed1ec0e873cd95a5e6d1',1,'PushNotification::Plugin::Abstractions::IPushNotification']]],
   ['token_5ftype',['token_type',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#a4f58e6d64c06523e68cdadf7b44f352f',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]],
   ['tokenbearer',['TokenBearer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#aa65d097c775a4af2df6b25a07568451f',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
-  ['tokenisvalid',['TokenIsValid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#a655ab252d5485f653439de9b6de271fe',1,'Xamarin::Forms::CommonCore::CoreSettings']]]
+  ['tokenisvalid',['TokenIsValid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#a655ab252d5485f653439de9b6de271fe',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
+  ['truecolor',['TrueColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_switch_control.html#acbad4c70482594b72137140561302e58',1,'Xamarin::Forms::CommonCore::SwitchControl']]]
 ];

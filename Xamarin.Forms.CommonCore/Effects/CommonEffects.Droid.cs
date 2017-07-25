@@ -6,6 +6,9 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Graphics = Android.Graphics;
 using Android.Views;
+using OS = Android.OS;
+using Android.Graphics;
+using Android.Support.V7.Widget;
 
 [assembly: ExportEffect(typeof(ViewShadow), "ViewShadow")]
 [assembly: ExportEffect(typeof(HideTableSeparator), "HideTableSeparator")]
