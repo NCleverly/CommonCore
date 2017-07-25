@@ -14,7 +14,7 @@ var searchData=
   ['telephonypagerenderer_2edroid_2ecs',['TelephonyPageRenderer.Droid.cs',['../_telephony_page_renderer_8_droid_8cs.html',1,'']]],
   ['telephonypagerenderer_2eios_2ecs',['TelephonyPageRenderer.IOS.cs',['../_telephony_page_renderer_8_i_o_s_8cs.html',1,'']]],
   ['text',['Text',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#a8eff4d83c2306bb25b3848a4709f0b9c',1,'Xamarin.Forms.CommonCore.Snack.Text()'],['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#a47632ecc87907223a35c556beb06ffb8',1,'PushNotification.Plugin.Abstractions.PushNotificationKey.Text()']]],
-  ['textarea',['TextArea',['../class_common_1_1_core_1_1_text_area.html',1,'Common.Core.TextArea'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html',1,'Xamarin.Forms.CommonCore.TextArea']]],
+  ['textarea',['TextArea',['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html',1,'Xamarin.Forms.CommonCore.TextArea'],['../class_common_1_1_core_1_1_text_area.html',1,'Common.Core.TextArea']]],
   ['textarea_2ecs',['TextArea.cs',['../_text_area_8cs.html',1,'']]],
   ['textarearenderer_2ecs',['TextAreaRenderer.cs',['../_text_area_renderer_8cs.html',1,'']]],
   ['textarearenderer_2edroid_2ecs',['TextAreaRenderer.Droid.cs',['../_text_area_renderer_8_droid_8cs.html',1,'']]],

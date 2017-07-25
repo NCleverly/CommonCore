@@ -257,6 +257,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\SqlDataModel.cs">
       <DependentUpon>ISqliteDb.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IContextMenuService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ContextMenuService.Droid.cs">
+      <DependentUpon>IContextMenuService.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
