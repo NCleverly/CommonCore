@@ -29,6 +29,7 @@ namespace Xamarin.Forms.CommonCore
 {
     public static class CoreExtensions
     {
+
 		public static T ConvertTo<T>(this StringResponse str) where T : struct
 		{
 			object result = null;
@@ -354,6 +355,15 @@ namespace Xamarin.Forms.CommonCore
             return collection;
         }
 
+		public static ObservableCollection<T> ToObservable<T>(this IList list)
+		{
+			var collection = new ObservableCollection<T>();
+            for (var x = 0; x < list.Count;x++)
+            {
+                collection.Add((T)list[x]);
+            }
+			return collection;
+		}
 
 		public static ObservableCollection<T> ToObservable<T>(this List<T> list)
 		{
@@ -482,6 +492,23 @@ namespace Xamarin.Forms.CommonCore
             return JsonConvert.DeserializeObject<List<IDictionary<string, object>>>(json);
         }
 
+        /// <summary>
+        /// Turn entity type into a dictionary
+        /// </summary>
+        /// <returns>The dictionary.</returns>
+        /// <param name="obj">Object.</param>
+        public static Dictionary<string,object> ToDictionary(this object obj)
+        {
+            //var dict = new Dictionary<string, object>();
+            //foreach(var prop in obj.GetType().GetProperties())
+            //{
+            //    dict.Add(prop.Name, prop.GetValue(obj, null));
+            //}
+            //return dict;
+
+            var str = JsonConvert.SerializeObject(obj);
+            return JsonConvert.DeserializeObject<Dictionary<string, object>>(str);
+        }
         /// <summary>
         /// Cleans the phone number of all non-numeric characters
         /// </summary>

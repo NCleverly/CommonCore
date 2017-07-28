@@ -9,6 +9,7 @@ var searchData=
   ['actiontext',['ActionText',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#aca7b80c0230ccaddbf79d7b6d9aae85a',1,'Xamarin::Forms::CommonCore::Snack']]],
   ['actiontextcolor',['ActionTextColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#ac563084480d853e783a6aaad217aa930',1,'Xamarin::Forms::CommonCore::Snack']]],
   ['aesencryptionkey',['AESEncryptionKey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#a3ba855e16201274498da623433f64c31',1,'Xamarin.Forms.CommonCore.ConfigurationModel.AESEncryptionKey()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a75336962d4851024a2330dc9b31c109b',1,'Xamarin.Forms.CommonCore.ObservableViewModel.AESEncryptionKey()']]],
+  ['analyticsenabled',['AnalyticsEnabled',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#aaa73dffa80d50dd5df9ab5555647b418',1,'Xamarin::Forms::CommonCore::ConfigurationModel']]],
   ['androidappid',['AndroidAppId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html#a9a8d1b6a4618f46c3b369d24e87ed7e5',1,'Xamarin::Forms::CommonCore::MobileCenterHockeyApp']]],
   ['androidhttphandler',['AndroidHttpHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_settings.html#a179824ba71f7bc055e37a14da96efd50',1,'Xamarin::Forms::CommonCore::HttpSettings']]],
   ['animateopen',['AnimateOpen',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#af820072d7c7c1e79e58df8a6625503c8',1,'Xamarin::Forms::CommonCore::PopupView']]],

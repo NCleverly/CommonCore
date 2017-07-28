@@ -20,24 +20,27 @@ namespace Xamarin.Forms.CommonCore
             base.OnElementChanged(e);
             if (this.Control != null)
             {
-				switchControl = Control as UISwitch;
-				ctrl = (SwitchControl)e.NewElement;
-				trueColor = ctrl.TrueColor;
-				falseColor = ctrl.FalseColor;
+                if (e.NewElement != null)
+                {
+                    switchControl = Control as UISwitch;
+                    ctrl = (SwitchControl)e.NewElement;
+                    trueColor = ctrl.TrueColor;
+                    falseColor = ctrl.FalseColor;
 
-				switchControl.TintColor = UIColor.FromRGBA((nfloat)falseColor.R,
-										   (nfloat)falseColor.G,
-										   (nfloat)falseColor.B,
-										   0.50f);
-				// see example code for caveat about changing background colour...
+                    switchControl.TintColor = UIColor.FromRGBA((nfloat)falseColor.R,
+                                               (nfloat)falseColor.G,
+                                               (nfloat)falseColor.B,
+                                               0.50f);
+                    // see example code for caveat about changing background colour...
 
-				switchControl.OnTintColor = UIColor.FromRGBA((nfloat)trueColor.R,
-															 (nfloat)trueColor.G,
-															 (nfloat)trueColor.B,
-															 0.50f);
+                    switchControl.OnTintColor = UIColor.FromRGBA((nfloat)trueColor.R,
+                                                                 (nfloat)trueColor.G,
+                                                                 (nfloat)trueColor.B,
+                                                                 0.50f);
 
 
-                SetThumbTint();
+                    SetThumbTint();
+                }
             }
 
            

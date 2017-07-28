@@ -27,6 +27,7 @@ var searchData=
   ['sqlitedatabase',['SQLiteDatabase',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html#af0ab7c6b45b37dd53e8097fc528eae5a',1,'Xamarin::Forms::CommonCore::SqliteSettings']]],
   ['sqlitedb',['SqliteDb',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aeb2e3aad6fbbee716144616892c11b90',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['sqlitesettings',['SqliteSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#ac3246567a589994ed89b44e40f87a8ba',1,'Xamarin::Forms::CommonCore::ConfigurationModel']]],
+  ['stacktrace',['StackTrace',['../class_xamarin_1_1_forms_1_1_common_core_1_1_error_log.html#ad6afde12e660c15ae8fc7a26ccd822a4',1,'Xamarin::Forms::CommonCore::ErrorLog']]],
   ['starlist',['StarList',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#ae59c6d47e71aeeb3df91d60a9c08a84f',1,'Xamarin::Forms::CommonCore::RankingControl']]],
   ['startcolor',['StartColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#aa5a318c8e81b0b840e4bfde80fcb9513',1,'Xamarin::Forms::CommonCore::GradientButton']]],
   ['starttime',['StartTime',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#af6c976b9ab6e2f7c61b944cdbc48f2e2',1,'Xamarin::Forms::CommonCore::CalendarEventModel']]],

@@ -51,11 +51,13 @@ namespace Xamarin.Forms.CommonCore
 
 			if (this.Control.Checked)
 			{
+                this.Element.IsToggled = true;
 				this.Control.TrackDrawable.SetColorFilter(trueColor.ToAndroid(), PorterDuff.Mode.Multiply);
 				this.Control.ThumbDrawable.SetColorFilter(trueColor.ToAndroid(), PorterDuff.Mode.Multiply);
 			}
 			else
 			{
+                this.Element.IsToggled = false;
 				this.Control.TrackDrawable.SetColorFilter(falseColor.ToAndroid(), PorterDuff.Mode.Multiply);
 				this.Control.ThumbDrawable.SetColorFilter(falseColor.ToAndroid(), PorterDuff.Mode.Multiply);
 			}

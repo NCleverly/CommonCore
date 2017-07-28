@@ -15,6 +15,7 @@ var searchData=
   ['ifilestore_2ecs',['IFileStore.cs',['../_i_file_store_8cs.html',1,'']]],
   ['ihttpservice_2ecs',['IHttpService.cs',['../_i_http_service_8cs.html',1,'']]],
   ['ilocalnotify_2ecs',['ILocalNotify.cs',['../_i_local_notify_8cs.html',1,'']]],
+  ['ilogservice_2ecs',['ILogService.cs',['../_i_log_service_8cs.html',1,'']]],
   ['imapnavigate_2ecs',['IMapNavigate.cs',['../_i_map_navigate_8cs.html',1,'']]],
   ['injectionmanager_2ecs',['InjectionManager.cs',['../_injection_manager_8cs.html',1,'']]],
   ['ioverlaydependency_2ecs',['IOverlayDependency.cs',['../_i_overlay_dependency_8cs.html',1,'']]],

@@ -268,6 +268,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\SwitchControlRenderer.IOS.cs">
       <DependentUpon>SwitchControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ILogService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\LogService.cs">
+      <DependentUpon>ILogService.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -293,6 +297,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\" />
     <Folder Include="$(MSBuildThisFileDirectory)Settings\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\Navigation\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Logging\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />

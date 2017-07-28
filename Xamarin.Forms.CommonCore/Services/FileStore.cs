@@ -15,7 +15,6 @@ namespace Xamarin.Forms.CommonCore
 
         private static SemaphoreSlim fileStoreLock = new SemaphoreSlim(1);
 
-
         public FileStore()
         {
             _serializer = new JsonSerializer();

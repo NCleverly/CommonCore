@@ -63,7 +63,7 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <value>The current buid.</value>
         public static string CurrentBuid { get; set; } = "dev";
-
+        public static string UserId { get; set; }
 		public static AuthenticationToken TokenBearer { get; set; }
 		public static NetworkCredential HttpCredentials { get; set; }
 

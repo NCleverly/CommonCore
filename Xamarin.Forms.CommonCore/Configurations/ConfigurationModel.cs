@@ -54,6 +54,7 @@ namespace Xamarin.Forms.CommonCore
 
 	public partial class ConfigurationModel
 	{
+        public bool AnalyticsEnabled { get; set; } = false;
         public string AESEncryptionKey { get; set; }
 		public HttpSettings HttpSettings { get; set; }
 		public AzureSettings AzureSettings { get; set; }

@@ -2,6 +2,7 @@ var searchData=
 [
   ['calendartitle',['CalendarTitle',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ac4f518986a128854d0bed8b75645e54b',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['canexecute',['CanExecute',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#af609c0ccefcf686042e708dc0b296fc0',1,'Xamarin::Forms::CommonCore::RelayCommand']]],
+  ['clearlogging',['ClearLogging',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_log_service.html#ac843f7b9a0b08783db3bba5718c442b4',1,'Xamarin.Forms.CommonCore.ILogService.ClearLogging()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_log_service.html#a1c3a6996e54aead4287d5e89b19da4b4',1,'Xamarin.Forms.CommonCore.LogService.ClearLogging()']]],
   ['clickevent',['ClickEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a1798c153bf6be472670864d4c056241b',1,'Xamarin::Forms::CommonCore::GradientButton']]],
   ['clone',['Clone',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sql_data_model.html#a668cf6d4fd4c19face7c110c07a9d70d',1,'Xamarin::Forms::CommonCore::SqlDataModel']]],
   ['close',['Close',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_snack_bar.html#a1b2db2b65a5cd30d0de73101599903f6',1,'Xamarin.Forms.CommonCore.ISnackBar.Close()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#a06697c64f60722ecd75e093b4be14608',1,'Xamarin.Forms.CommonCore.PopupView.Close()']]],

@@ -30,6 +30,13 @@ namespace Xamarin.Forms.CommonCore
 		private ISqliteDb sqliteDb;
         private IBackgroundTimer backgroundTimer;
         private IAuthenticatorService authenticatorService;
+        private ILogService log;
+
+		public ILogService Log
+		{
+			get { return log ?? (log = InjectionManager.GetService<ILogService, LogService>(true)); }
+		}
+
 		/// <summary>
 		/// AuthenticatorService for Google, Facebook and Microsoft.
 		/// </summary>

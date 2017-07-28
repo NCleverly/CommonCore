@@ -16,6 +16,11 @@ namespace Xamarin.Forms.CommonCore
             if (!string.IsNullOrEmpty(VM.PageTitle))
                 VM.PageTitle = this.Title;
             this.SetBinding(ContentPage.TitleProperty, "PageTitle");
+
+            if(CoreSettings.AppData.Instance.Settings.AnalyticsEnabled)
+            {
+                VM.Log.LogAnalytics(this.GetType().FullName);
+            }
 		}
 
 		protected override void OnAppearing()

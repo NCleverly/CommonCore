@@ -5,6 +5,8 @@ var searchData=
   ['imagename',['ImageName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#a0b811b4d38e7748e5792975a31c9fce9',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['inactiveaccentcolor',['InactiveAccentColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a3e86c745acc50f0291e37eb9a4a57e77',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
   ['index',['Index',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a409b9d697ac8df830b815aa27959c191',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
+  ['innermessage',['InnerMessage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_error_log.html#ad0252ab14749ff0a1e31e29c38040415',1,'Xamarin::Forms::CommonCore::ErrorLog']]],
+  ['innertype',['InnerType',['../class_xamarin_1_1_forms_1_1_common_core_1_1_error_log.html#a0391b151aa55aabd8e0038c3abffdd02',1,'Xamarin::Forms::CommonCore::ErrorLog']]],
   ['installationid',['InstallationId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#a4fd2d909b4ab7d9ff22de6b9f70b5324',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
   ['iosappid',['IOSAppId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html#a809abac6137bfdc5a38d7246e338b173',1,'Xamarin::Forms::CommonCore::MobileCenterHockeyApp']]],
   ['ioshttphandler',['IOSHttpHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_settings.html#a6340c2449d2f7665eda1cccc2f335c0d',1,'Xamarin::Forms::CommonCore::HttpSettings']]],

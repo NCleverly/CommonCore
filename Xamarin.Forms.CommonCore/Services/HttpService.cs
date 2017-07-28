@@ -223,18 +223,6 @@ namespace Xamarin.Forms.CommonCore
 						srvResponse.EnsureSuccessStatusCode();
 						response.Response = await DeserializeStream<T>(srvResponse);
 						response.Success = true;
-
-						//using (var stream = await srvResponse.Content.ReadAsStreamAsync())
-						//{
-						//	using (var reader = new StreamReader(stream))
-						//	{
-						//		using (var json = new JsonTextReader(reader))
-						//		{
-						//			response.Response = _serializer.Deserialize<T>(json);
-						//			response.Success = true;
-						//		}
-						//	}
-						//}
                     }
                 }
 
@@ -277,18 +265,6 @@ namespace Xamarin.Forms.CommonCore
 						srvResponse.EnsureSuccessStatusCode();
 						response.Response = await DeserializeStream<T>(srvResponse);
 						response.Success = true;
-
-						//using (var stream = await srvResponse.Content.ReadAsStreamAsync())
-						//{
-						//	using (var reader = new StreamReader(stream))
-						//	{
-						//		using (var json = new JsonTextReader(reader))
-						//		{
-						//			response.Response = _serializer.Deserialize<T>(json);
-						//			response.Success = true;
-						//		}
-						//	}
-						//}
                     }
                 }
 
@@ -333,18 +309,6 @@ namespace Xamarin.Forms.CommonCore
 						srvResponse.EnsureSuccessStatusCode();
                         response.Response = await DeserializeStream<T>(srvResponse);
 						response.Success = true;
-
-						//using (var stream = await srvResponse.Content.ReadAsStreamAsync())
-						//{
-						//	using (var reader = new StreamReader(stream))
-						//	{
-						//		using (var json = new JsonTextReader(reader))
-						//		{
-						//			response.Response = _serializer.Deserialize<T>(json);
-						//			response.Success = true;
-						//		}
-						//	}
-						//}
                     }
                 }
 
