@@ -29,7 +29,6 @@ namespace Xamarin.Forms.CommonCore
 {
     public static class CoreExtensions
     {
-
 		public static T ConvertTo<T>(this StringResponse str) where T : struct
 		{
 			object result = null;

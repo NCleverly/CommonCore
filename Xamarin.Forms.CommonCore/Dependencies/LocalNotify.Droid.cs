@@ -71,6 +71,7 @@ namespace Xamarin.Forms.CommonCore
         {
             if (!string.IsNullOrEmpty(name))
             {
+                name = name.Replace(".png", string.Empty).Replace(".jpg", string.Empty);
                 return Ctx.Resources.GetIdentifier(name, "drawable", Ctx.PackageName);
             }
             else

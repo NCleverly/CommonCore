@@ -11,25 +11,51 @@ namespace Xamarin.Forms.CommonCore
 		Analytic
 	}
 
+    public class TrackingMetatData
+    {
+        public long StartUtc { get; set; }
+        public long EndUtc { get; set; }
+    }
 	public class AnalyticLog
 	{
 		public string ViewName { get; set; }
-		public long UTCTicks { get; set; }
+        public TrackingMetatData TrackingInfo { get; set; }
 		public string UserId { get; set; }
 		public string MetaData { get; set; }
+
+        public double OnTaskTime
+        {
+            get
+            {
+                if (TrackingInfo != null)
+                {
+                    var st = DateTime.FromFileTimeUtc(TrackingInfo.StartUtc).ToLocalTime();
+					var et = DateTime.FromFileTimeUtc(TrackingInfo.StartUtc).ToLocalTime();
+                    var diff = et - st;
+                    var totalSeconds = (diff.TotalHours * 60 * 60) + (diff.TotalMinutes * 60) + (diff.TotalSeconds);
+                    return totalSeconds;
+                }
+                else
+                {
+                    return 0.0;
+                }
+            }
+        }
 	}
 
-	public class ErrorLog
-	{
-		public string ErrorMessage { get; set; }
-		public string ErrorType { get; set; }
-		public string InnerType { get; set; }
-		public string InnerMessage { get; set; }
-		public string StackTrace { get; set; }
-		public long UTCTicks { get; set; }
-		public string UserId { get; set; }
-		public string MetaData { get; set; }
-	}
+    public class ErrorLog
+    {
+        public string ErrorMessage { get; set; }
+        public string ErrorType { get; set; }
+        public string InnerType { get; set; }
+        public string InnerMessage { get; set; }
+        public string StackTrace { get; set; }
+        public long UTCTicks { get; set; }
+        public string UserId { get; set; }
+        public string MetaData { get; set; }
+
+        public DateTime TimeStamp { get { return DateTime.FromFileTimeUtc(UTCTicks).ToLocalTime(); } }
+    }
 
     public interface ILogService
     {
@@ -47,7 +73,7 @@ namespace Xamarin.Forms.CommonCore
         /// Track analytics by page name
         /// </summary>
         /// <param name="pageName">Page name.</param>
-        void LogAnalytics(string pageName, string metatData=null);
+        void LogAnalytics(string pageName, TrackingMetatData trackingData = null, string metatData=null);
         /// <summary>
         /// Retrieve historical logs by type
         /// </summary>

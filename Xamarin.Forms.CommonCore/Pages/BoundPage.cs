@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Reflection;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 using Xamarin.Forms;
 
 namespace Xamarin.Forms.CommonCore
@@ -7,7 +9,7 @@ namespace Xamarin.Forms.CommonCore
 	public abstract class BoundPage<T> : BasePages
 		where T : ObservableViewModel
 	{
-        
+        private long appearingUTC;
 		public T VM { get; set; }
 		public BoundPage()
 		{
@@ -17,18 +19,29 @@ namespace Xamarin.Forms.CommonCore
                 VM.PageTitle = this.Title;
             this.SetBinding(ContentPage.TitleProperty, "PageTitle");
 
-            if(CoreSettings.AppData.Instance.Settings.AnalyticsEnabled)
-            {
-                VM.Log.LogAnalytics(this.GetType().FullName);
-            }
 		}
 
 		protected override void OnAppearing()
 		{
+            appearingUTC = DateTime.UtcNow.Ticks;
+
 			if (Navigation != null)
 				CoreSettings.AppNav = Navigation;
 			base.OnAppearing();
 		}
+
+        protected override void OnDisappearing()
+        {
+			if (CoreSettings.AppData.Instance.Settings.AnalyticsEnabled)
+			{
+                VM.Log.LogAnalytics(this.GetType().FullName, new TrackingMetatData()
+                {
+                    StartUtc = appearingUTC,
+                    EndUtc = DateTime.UtcNow.Ticks
+                });
+			}
+            base.OnDisappearing();
+        }
 	}
 }
 

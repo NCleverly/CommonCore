@@ -30,13 +30,13 @@ namespace Xamarin.Forms.CommonCore
             analayticFileName = $"analytic_{dayOfYear}";
         }
 
-        public void LogAnalytics(string pageName, string metatData)
+        public void LogAnalytics(string pageName, TrackingMetatData trackingData,  string metatData)
         {
             var aLog = new AnalyticLog()
             {
                 UserId = CoreSettings.UserId,
                 ViewName = pageName,
-                UTCTicks = DateTime.UtcNow.Ticks,
+                TrackingInfo = trackingData,
                 MetaData = metatData
             };
 
