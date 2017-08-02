@@ -69,6 +69,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pac-methods">Package Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Xamarin.Forms.CommonCore.EncryptionService Class Reference</div>  </div>
@@ -86,6 +87,8 @@ Inheritance diagram for Xamarin.Forms.CommonCore.EncryptionService:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:af1cda99404ef907790e610aab22cab5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#af1cda99404ef907790e610aab22cab5c">EncryptionService</a> ()</td></tr>
+<tr class="separator:af1cda99404ef907790e610aab22cab5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74b3dc6b9dde7bbfdaa50aabc5706f4b"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a74b3dc6b9dde7bbfdaa50aabc5706f4b">AesEncrypt</a> (string clearValue, string encryptionKey)</td></tr>
 <tr class="separator:a74b3dc6b9dde7bbfdaa50aabc5706f4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a031cfbfc53f2cde607764bd00edb08ec"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a031cfbfc53f2cde607764bd00edb08ec">AesDecrypt</a> (string encryptedValue, string encryptionKey)</td></tr>
@@ -130,11 +133,36 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a0dd78f35b40f62aaf3177d6f6ceadd7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a936de4817f78d029d509fb3cdfe7a7d4"><td class="memItemLeft" align="right" valign="top">uint []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a936de4817f78d029d509fb3cdfe7a7d4">Converter</a> (byte[] input, int ibStart)</td></tr>
 <tr class="separator:a936de4817f78d029d509fb3cdfe7a7d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a67702edf4640d25907ce01a7b027e880"><td class="memItemLeft" align="right" valign="top">byte []&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a67702edf4640d25907ce01a7b027e880">encryptionSalt</a></td></tr>
+<tr class="separator:a67702edf4640d25907ce01a7b027e880"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00016">16</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00017">17</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af1cda99404ef907790e610aab22cab5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1cda99404ef907790e610aab22cab5c">&#9670;&nbsp;</a></span>EncryptionService()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Xamarin.Forms.CommonCore.EncryptionService.EncryptionService </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00021">21</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a031cfbfc53f2cde607764bd00edb08ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a031cfbfc53f2cde607764bd00edb08ec">&#9670;&nbsp;</a></span>AesDecrypt()</h2>
 
@@ -163,7 +191,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_encryption_service.html#aca19fdb1946c03866cab4e0f7620958e">Xamarin.Forms.CommonCore.IEncryptionService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00030">30</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00043">43</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -207,7 +235,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00078">78</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00091">91</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -239,7 +267,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_encryption_service.html#abfe230f3cb111a8d3f0d09cd661c2e75">Xamarin.Forms.CommonCore.IEncryptionService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00019">19</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00032">32</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -283,7 +311,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00048">48</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00061">61</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -321,7 +349,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00333">333</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00346">346</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -359,7 +387,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00039">39</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00052">52</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -391,7 +419,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_encryption_service.html#a2a3730b1e69a79cc682a8e241cbbd522">Xamarin.Forms.CommonCore.IEncryptionService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00104">104</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00117">117</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -413,7 +441,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_encryption_service.html#ac618a418e63c7f4ba804cee0e59f3613">Xamarin.Forms.CommonCore.IEncryptionService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00116">116</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00129">129</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -435,7 +463,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_encryption_service.html#a4b93065f9462adef5427300ebaffa9c6">Xamarin.Forms.CommonCore.IEncryptionService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00149">149</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00162">162</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -479,7 +507,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00212">212</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00225">225</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -535,7 +563,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00172">172</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00185">185</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -557,7 +585,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_encryption_service.html#ab12f0a78461a05c5c17ac8aff278a084">Xamarin.Forms.CommonCore.IEncryptionService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00121">121</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00134">134</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -589,7 +617,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_encryption_service.html#ac9ffb956f3e4ae87de823f39af05e788">Xamarin.Forms.CommonCore.IEncryptionService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00132">132</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00145">145</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -611,7 +639,7 @@ Private Member Functions</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_encryption_service.html#aa6991a5b99f208a7615d7dbd4aa4c18d">Xamarin.Forms.CommonCore.IEncryptionService</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00144">144</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00157">157</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -649,7 +677,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00327">327</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00340">340</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -717,7 +745,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00296">296</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00309">309</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -785,7 +813,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00303">303</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00316">316</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -853,7 +881,7 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00310">310</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00323">323</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>
@@ -921,7 +949,32 @@ Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00317">317</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00330">330</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a67702edf4640d25907ce01a7b027e880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67702edf4640d25907ce01a7b027e880">&#9670;&nbsp;</a></span>encryptionSalt</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">byte [] Xamarin.Forms.CommonCore.EncryptionService.encryptionSalt</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_encryption_service_8cs_source.html#l00019">19</a> of file <a class="el" href="_encryption_service_8cs_source.html">EncryptionService.cs</a>.</p>
 
 </div>
 </div>

@@ -2,6 +2,7 @@
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
+using Plugin.Settings;
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -15,8 +16,20 @@ namespace Xamarin.Forms.CommonCore
 
 	public class EncryptionService : IEncryptionService
 	{
+        private byte[] encryptionSalt;
 
-		public string AesEncrypt(string clearValue, string encryptionKey)
+        public EncryptionService()
+        {
+            var defaultValue = Guid.NewGuid().ToString();
+            var temp = CrossSettings.Current.GetValueOrDefault("encryptionSalt", defaultValue);
+            if (!defaultValue.Equals(temp))
+            {
+                CrossSettings.Current.AddOrUpdateValue("encryptionSalt", defaultValue);
+            }
+            encryptionSalt = Encoding.UTF8.GetBytes(temp);
+        }
+
+        public string AesEncrypt(string clearValue, string encryptionKey)
 		{
 			using (Aes aes = Aes.Create())
 			{
@@ -38,7 +51,7 @@ namespace Xamarin.Forms.CommonCore
 
 		private byte[] CreateKey(string password, int keyBytes = 32)
 		{
-			byte[] salt = new byte[] { 80, 70, 60, 50, 40, 30, 20, 10 };
+            byte[] salt = encryptionSalt;// new byte[] { 80, 70, 60, 50, 40, 30, 20, 10 };
 			int iterations = 300;
 			using (var keyGenerator = new Rfc2898DeriveBytes(password, salt, iterations))
 			{

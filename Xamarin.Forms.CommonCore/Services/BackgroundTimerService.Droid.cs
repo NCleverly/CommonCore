@@ -54,46 +54,15 @@ namespace Xamarin.Forms.CommonCore
 		{
 			if (!IsAlarmSet())
 			{
-                var timeOffSet = GetMilliOffset();
-
 				alarm = (AlarmManager)Ctx.GetSystemService(Context.AlarmService);
 				pendingServiceIntent = PendingIntent.GetService(Ctx, 0, timerServiceIntent, PendingIntentFlags.CancelCurrent);
-				alarm.SetRepeating(AlarmType.Rtc, 0, timeOffSet, pendingServiceIntent);
+                alarm.SetRepeating(AlarmType.Rtc, 0, (1000 * 60 * IntervalMinutes), pendingServiceIntent);
 			}
 		}
 		bool IsAlarmSet()
 		{
 			return PendingIntent.GetBroadcast(Ctx, 0, timerServiceIntent, PendingIntentFlags.NoCreate) != null;
 		}
-
-        private long GetMilliOffset(){
-            // Create the alarm time in the local timezone
-
-            var currentTime = DateTime.Now;
-            currentTime = currentTime.AddMinutes(IntervalMinutes);
-
-			var localAlarmTime = new DateTime(currentTime.Year, 
-                                              currentTime.Month, 
-                                              currentTime.Day, 
-                                              currentTime.Hour, 
-                                              currentTime.Minute, 
-                                              currentTime.Second, 
-                                              currentTime.Millisecond, 
-                                              DateTimeKind.Local);
-
-			// Convert the alarm time to UTC
-			var utcAlarmTime = TimeZoneInfo.ConvertTimeToUtc(localAlarmTime);
-
-			// Work out the difference between epoch (Java) and ticks (.NET)
-			var t = new DateTime(1970, 1, 1) - DateTime.MinValue;
-			var epochDifferenceInSeconds = t.TotalSeconds;
-
-			// Convert from ticks to milliseconds
-			var utcAlarmTimeInMillis = utcAlarmTime.AddSeconds(-epochDifferenceInSeconds).Ticks / 10000;
-
-            return utcAlarmTimeInMillis;
-        }
-
 
 		public void TimerElapsedEvent()
 		{
