@@ -310,5 +310,6 @@
       <DependentUpon>IAuthenticatorService.cs</DependentUpon>
     </None>
     <None Include="$(MSBuildThisFileDirectory)Styles\AppStyles.txt" />
+    <None Include="$(MSBuildThisFileDirectory)Settings\AppSettings.txt" />
   </ItemGroup>
 </Project>

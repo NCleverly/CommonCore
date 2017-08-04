@@ -1,16 +1,29 @@
-﻿using System;
+﻿﻿using System;
 using System.Reflection;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Xamarin.Forms;
-
+using Xamarin.Forms.CommonCore;
 namespace Xamarin.Forms.CommonCore
 {
 	public abstract class BoundPage<T> : BasePages
 		where T : ObservableViewModel
 	{
         private long appearingUTC;
-		public T VM { get; set; }
+
+        private WeakReference<T> _vm;
+        public T VM 
+        {
+            get
+            {
+                return _vm.ToObject<T>();
+            }
+            set
+            {
+                _vm = new WeakReference<T>(value);
+            } 
+        }
+
 		public BoundPage()
 		{
 			VM = InjectionManager.GetViewModel<T>();
@@ -42,6 +55,7 @@ namespace Xamarin.Forms.CommonCore
 			}
             base.OnDisappearing();
         }
+
 	}
 }
 

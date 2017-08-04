@@ -17,6 +17,7 @@ using Xamarin.Forms.Platform.Android;
 using Android.Util;
 using Android.Views.InputMethods;
 using Views = Android.Views;
+using StrictMode = Android.OS.StrictMode;
 #endif
 #if __IOS__
 using Foundation;
@@ -27,8 +28,16 @@ using CoreGraphics;
 
 namespace Xamarin.Forms.CommonCore
 {
+
     public static class CoreExtensions
     {
+		public static T ToObject<T>(this WeakReference<T> reference) where T : class
+		{
+			T obj = null;
+			reference.TryGetTarget(out obj);
+			return obj;
+		}
+
 		public static T ConvertTo<T>(this StringResponse str) where T : struct
 		{
 			object result = null;
@@ -826,6 +835,15 @@ namespace Xamarin.Forms.CommonCore
                 returnValue = new StreamImagesourceHandler();
             }
             return returnValue;
+        }
+
+        public static void EnableStrictMode(this FormsAppCompatActivity activity)
+        {
+#if DEBUG
+            var builder = new StrictMode.VmPolicy.Builder();
+            var policy = builder.DetectActivityLeaks().PenaltyLog().Build();
+            StrictMode.SetVmPolicy(policy);
+#endif
         }
 #endif
 

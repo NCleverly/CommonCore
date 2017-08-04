@@ -23,19 +23,24 @@ namespace Xamarin.Forms.CommonCore
         #endregion
 
         #region Injection Services (LAZY)
-        private IHttpService httpService;
-		private IFileStore fileStore;
-		private IAccountService accountService;
-		private IEncryptionService encryptionService;
-		private ISqliteDb sqliteDb;
-        private IBackgroundTimer backgroundTimer;
-        private IAuthenticatorService authenticatorService;
-        private ILogService log;
+        private WeakReference<IHttpService> httpService;
+		private WeakReference<IFileStore> fileStore;
+		private WeakReference<IAccountService> accountService;
+		private WeakReference<IEncryptionService> encryptionService;
+		private WeakReference<ISqliteDb> sqliteDb;
+        private WeakReference<IBackgroundTimer> backgroundTimer;
+        private WeakReference<IAuthenticatorService> authenticatorService;
+        private WeakReference<ILogService> log;
 
-		public ILogService Log
-		{
-			get { return log ?? (log = InjectionManager.GetService<ILogService, LogService>(true)); }
-		}
+        public ILogService Log
+        {
+            get
+            {
+                if (log == null)
+                    log = new WeakReference<ILogService>(InjectionManager.GetService<ILogService, LogService>(true));
+                return log.ToObject<ILogService>();
+            }
+        }
 
 		/// <summary>
 		/// AuthenticatorService for Google, Facebook and Microsoft.
@@ -43,7 +48,12 @@ namespace Xamarin.Forms.CommonCore
 		/// <value>The authenticator service.</value>
 		protected IAuthenticatorService AuthenticatorService
 		{
-			get { return authenticatorService ?? (authenticatorService = InjectionManager.GetService<IAuthenticatorService, AuthenticatorService>(true)); }
+			get
+			{
+				if (authenticatorService == null)
+					authenticatorService = new WeakReference<IAuthenticatorService>(InjectionManager.GetService<IAuthenticatorService, AuthenticatorService>(true));
+				return authenticatorService.ToObject<IAuthenticatorService>();
+			}
 		}
 		/// <summary>
 		/// Backgrounding event timer that fires an event specified in the future on a repeating basis.
@@ -51,7 +61,12 @@ namespace Xamarin.Forms.CommonCore
 		/// <value>The background timer.</value>
 		protected IBackgroundTimer BackgroundTimer
 		{
-			get { return backgroundTimer ?? (backgroundTimer = InjectionManager.GetService<IBackgroundTimer, BackgroundTimer>(true)); }
+			get
+			{
+				if (backgroundTimer == null)
+					backgroundTimer = new WeakReference<IBackgroundTimer>(InjectionManager.GetService<IBackgroundTimer, BackgroundTimer>(true));
+				return backgroundTimer.ToObject<IBackgroundTimer>();
+			}
 		}
         /// <summary>
         /// Embedded local database with tables defined by the application configuration file
@@ -59,7 +74,12 @@ namespace Xamarin.Forms.CommonCore
         /// <value>The sqlite db.</value>
 		protected ISqliteDb SqliteDb
 		{
-			get { return sqliteDb ?? (sqliteDb = InjectionManager.GetService<ISqliteDb, SqliteDb>(true)); }
+			get
+			{
+				if (sqliteDb == null)
+					sqliteDb = new WeakReference<ISqliteDb>(InjectionManager.GetService<ISqliteDb, SqliteDb>(true));
+				return sqliteDb.ToObject<ISqliteDb>();
+			}
 		}
         /// <summary>
         /// Service that provides network calls over http.
@@ -67,7 +87,12 @@ namespace Xamarin.Forms.CommonCore
         /// <value>The http service.</value>
 		protected IHttpService HttpService
 		{
-			get { return httpService ?? (httpService = InjectionManager.GetService<IHttpService, HttpService>(true)); }
+			get
+			{
+				if (httpService == null)
+					httpService = new WeakReference<IHttpService>(InjectionManager.GetService<IHttpService, HttpService>(true));
+				return httpService.ToObject<IHttpService>();
+			}
 		}
 
         /// <summary>
@@ -76,7 +101,12 @@ namespace Xamarin.Forms.CommonCore
         /// <value>The file store.</value>
 		protected IFileStore FileStore
 		{
-			get { return fileStore ?? (fileStore = InjectionManager.GetService<IFileStore, FileStore>(true)); }
+			get
+			{
+				if (fileStore == null)
+					fileStore = new WeakReference<IFileStore>(InjectionManager.GetService<IFileStore, FileStore>(true));
+				return fileStore.ToObject<IFileStore>();
+			}
 		}
 
         /// <summary>
@@ -85,7 +115,12 @@ namespace Xamarin.Forms.CommonCore
         /// <value>The account service.</value>
 		protected IAccountService AccountService
 		{
-			get { return accountService ?? (accountService = InjectionManager.GetService<IAccountService, AccountService>(true)); }
+			get
+			{
+				if (accountService == null)
+					accountService = new WeakReference<IAccountService>(InjectionManager.GetService<IAccountService, AccountService>(true));
+				return accountService.ToObject<IAccountService>();
+			}
 		}
 
         /// <summary>
@@ -94,7 +129,12 @@ namespace Xamarin.Forms.CommonCore
         /// <value>The encryption service.</value>
 		protected IEncryptionService EncryptionService
 		{
-			get { return encryptionService ?? (encryptionService = InjectionManager.GetService<IEncryptionService, EncryptionService>(true)); }
+			get
+			{
+				if (encryptionService == null)
+					encryptionService = new WeakReference<IEncryptionService>(InjectionManager.GetService<IEncryptionService, EncryptionService>(true));
+				return encryptionService.ToObject<IEncryptionService>();
+			}
 		}
 		#endregion
 
@@ -365,11 +405,11 @@ namespace Xamarin.Forms.CommonCore
         /// Loads the view model resources. Do not perform blocking calls in this method!
         /// 
         /// </summary>
-        public virtual void LoadResources(){}
+        public virtual void LoadResources(string parameter=null){}
         /// <summary>
         /// Releads the view model resources.
         /// </summary>
-        public virtual void ReleaseResources(){}
+        public virtual void ReleaseResources(string parameter = null){}
 
 	}
 

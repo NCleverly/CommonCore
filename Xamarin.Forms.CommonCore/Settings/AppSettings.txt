@@ -1,0 +1,10 @@
+﻿using System;
+namespace Somenamespace
+{
+    public class AppSettings : CoreSettings
+    {
+        public AppSettings()
+        {
+        }
+    }
+}

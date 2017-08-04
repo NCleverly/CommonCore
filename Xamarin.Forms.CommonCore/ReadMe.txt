@@ -55,7 +55,7 @@ Suggested
 - AIDatePickerController /* IOS DateTime Picker */
 - iOSCharts /* IOS Charting Controls */
 - MPAndroidChart /* Android Charting Controls */
-
+- Xamarin.Plugin.ImageEdit /* https://github.com/muak/Xamarin.Plugin.ImageEdit */
 Setup Tasks:
 
 Step 1: 
