@@ -40,7 +40,7 @@ namespace Xamarin.Forms.CommonCore
 			});
 		}
 
-		public async Task<GenericResponse<List<T>>> GetAll<T>(bool includeDeleted = false) where T : ISqlDataModel, new()
+		public async Task<GenericResponse<List<T>>> GetAll<T>() where T : ISqlDataModel, new()
 		{
 
 			var response = new GenericResponse<List<T>>();
@@ -51,11 +51,8 @@ namespace Xamarin.Forms.CommonCore
                  
 					if (conn == null)
 						await InitializeConnection();
-					AsyncTableQuery<T> query;
-					if (!includeDeleted)
-						query = conn.Table<T>().Where(x => x.MarkedForDelete == false);
-					else
-						query = conn.Table<T>();
+                    
+					var query = conn.Table<T>();
 					response.Response = await query.ToListAsync();
 
                     if (CoreSettings.Config.SqliteSettings.EncryptionEnabled)
@@ -105,7 +102,7 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-		public async Task<GenericResponse<T>> GetByInternalId<T>(Guid CorrelationID, bool includeDeleted = false) where T : class, ISqlDataModel, new()
+		public async Task<GenericResponse<T>> GetByInternalId<T>(Guid CorrelationID) where T : class, ISqlDataModel, new()
 		{
 			var response = new GenericResponse<T>();
 			try
@@ -115,12 +112,7 @@ namespace Xamarin.Forms.CommonCore
                     if (conn == null)
                         await InitializeConnection();
 
-                    AsyncTableQuery<T> query;
-
-                    if (!includeDeleted)
-                        query = conn.Table<T>().Where(x => x.CorrelationID == CorrelationID && x.MarkedForDelete == false);
-                    else
-                        query = conn.Table<T>().Where(x => x.CorrelationID == CorrelationID);
+                    var query = conn.Table<T>().Where(x => x.CorrelationID == CorrelationID);
 
                     response.Response = await query.FirstOrDefaultAsync();
 
@@ -400,7 +392,7 @@ namespace Xamarin.Forms.CommonCore
 			}
 		}
 
-		public async Task<BooleanResponse> DeleteByInternalID<T>(Guid ID, bool softDelete = true) where T : class, ISqlDataModel, new()
+		public async Task<BooleanResponse> DeleteByInternalID<T>(Guid correlationId, bool softDelete = false) where T : class, ISqlDataModel, new()
 		{
 
 			var response = new BooleanResponse();
@@ -411,19 +403,19 @@ namespace Xamarin.Forms.CommonCore
                     if (conn == null)
                         await InitializeConnection();
 
-                    var obj = await GetByInternalId<T>(ID);
+                    var obj = await conn.Table<T>().Where(x => x.CorrelationID == correlationId).FirstOrDefaultAsync();
                     int rowsAffected = 0;
-                    if (obj.Success)
+                    if (obj!=null)
                     {
                         if (softDelete)
                         {
-                            obj.Response.UTCTickStamp = DateTime.UtcNow.Ticks;
-                            obj.Response.MarkedForDelete = softDelete;
-                            rowsAffected = await conn.UpdateAsync(obj.Response);
+                            obj.UTCTickStamp = DateTime.UtcNow.Ticks;
+                            obj.MarkedForDelete = true;
+                            rowsAffected = await conn.UpdateAsync(obj);
                         }
                         else
                         {
-                            rowsAffected = await conn.DeleteAsync(obj.Response);
+                            rowsAffected = await conn.DeleteAsync(obj);
                         }
                         response.Success = rowsAffected == 1 ? true : false;
                     }
@@ -436,7 +428,7 @@ namespace Xamarin.Forms.CommonCore
 				return response;
 			}
 		}
-		public async Task<BooleanResponse> DeleteByQuery<T>(Expression<Func<T, bool>> exp, bool softDelete = true) where T : ISqlDataModel, new()
+		public async Task<BooleanResponse> DeleteByQuery<T>(Expression<Func<T, bool>> exp, bool softDelete = false) where T : ISqlDataModel, new()
 		{
 			var response = new BooleanResponse();
 			try
@@ -453,7 +445,7 @@ namespace Xamarin.Forms.CommonCore
                         if (softDelete)
                         {
                             obj.UTCTickStamp = DateTime.UtcNow.Ticks;
-                            obj.MarkedForDelete = softDelete;
+                            obj.MarkedForDelete = true;
                             rowsAffected = await conn.UpdateAsync(obj);
                         }
                         else
