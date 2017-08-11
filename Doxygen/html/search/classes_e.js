@@ -9,6 +9,7 @@ var searchData=
   ['sqlitedb',['SqliteDb',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html',1,'Xamarin::Forms::CommonCore']]],
   ['sqlitesettings',['SqliteSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html',1,'Xamarin::Forms::CommonCore']]],
   ['starbehavior',['StarBehavior',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html',1,'Xamarin::Forms::CommonCore']]],
+  ['streamresponse',['StreamResponse',['../class_xamarin_1_1_forms_1_1_common_core_1_1_stream_response.html',1,'Xamarin::Forms::CommonCore']]],
   ['stringresponse',['StringResponse',['../class_xamarin_1_1_forms_1_1_common_core_1_1_string_response.html',1,'Xamarin::Forms::CommonCore']]],
   ['switchcontrol',['SwitchControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_switch_control.html',1,'Xamarin::Forms::CommonCore']]],
   ['synchronizationcontextremover',['SynchronizationContextRemover',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_synchronization_context_remover.html',1,'Xamarin::Forms::CommonCore']]]

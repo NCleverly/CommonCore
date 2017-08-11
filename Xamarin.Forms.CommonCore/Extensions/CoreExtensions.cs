@@ -363,6 +363,8 @@ namespace Xamarin.Forms.CommonCore
             return collection;
         }
 
+
+
 		public static ObservableCollection<T> ToObservable<T>(this IList list)
 		{
 			var collection = new ObservableCollection<T>();

@@ -101,22 +101,6 @@ namespace Xamarin.Forms.CommonCore
             return Container.Resolve<T>();
         }
 
-        //public static T Get<T>(bool isSingleton = false) where T : class
-        //{
-        //    if (_serviceLocator == null)
-        //        InitializeServiceLocator();
-
-        //    if (Container.IsRegistered<T>())
-        //    {
-        //        return Container.Resolve<T>();
-        //    }
-        //    else
-        //    {
-        //        return null;
-        //    }
-
-        //}
-
         private static void InitializeServiceLocator()
         {
             _serviceLocator = new UnityServiceLocator(Container);

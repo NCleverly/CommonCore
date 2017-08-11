@@ -16,8 +16,10 @@ namespace Xamarin.Forms.CommonCore
 		/// <returns>The embedded resource stream.</returns>
 		/// <param name="assembly">Assembly.</param>
 		/// <param name="resourceFileName">Resource file name.</param>
-		public static Stream GetEmbeddedResourceStream(Assembly assembly, string resourceFileName)
+		public static StreamResponse GetEmbeddedResourceStream(Assembly assembly, string resourceFileName)
 		{
+            var response = new StreamResponse() { Success = true };
+
 			var resourceNames = assembly.GetManifestResourceNames();
 
 			var resourcePaths = resourceNames
@@ -26,15 +28,20 @@ namespace Xamarin.Forms.CommonCore
 
 			if (!resourcePaths.Any())
 			{
-				throw new Exception(string.Format("Resource ending with {0} not found.", resourceFileName));
+				response.Error = new Exception(string.Format("Resource ending with {0} not found.", resourceFileName));
+                response.Success = false;
 			}
 
 			if (resourcePaths.Count() > 1)
 			{
-				throw new Exception(string.Format("Multiple resources ending with {0} found: {1}{2}", resourceFileName, Environment.NewLine, string.Join(Environment.NewLine, resourcePaths)));
+				response.Error = new Exception(string.Format("Multiple resources ending with {0} found: {1}{2}", resourceFileName, Environment.NewLine, string.Join(Environment.NewLine, resourcePaths)));
+                response.Success = false;
 			}
 
-			return assembly.GetManifestResourceStream(resourcePaths.Single());
+            response.Response = assembly.GetManifestResourceStream(resourcePaths.Single());
+
+            return response;
+
 		}
 
 		/// <summary>
@@ -45,13 +52,20 @@ namespace Xamarin.Forms.CommonCore
 		/// <param name="resourceFileName">Resource file name.</param>
 		public static byte[] GetEmbeddedResourceBytes(Assembly assembly, string resourceFileName)
 		{
-			var stream = GetEmbeddedResourceStream(assembly, resourceFileName);
+			var result = GetEmbeddedResourceStream(assembly, resourceFileName);
+            if (result.Success)
+            {
+                using (var memoryStream = new MemoryStream())
+                {
+                    result.Response.CopyTo(memoryStream);
+                    return memoryStream.ToArray();
+                }
+            }
+            else
+            {
+                return new byte[0];
+            }
 
-			using (var memoryStream = new MemoryStream())
-			{
-				stream.CopyTo(memoryStream);
-				return memoryStream.ToArray();
-			}
 		}
 
 		/// <summary>
@@ -60,14 +74,23 @@ namespace Xamarin.Forms.CommonCore
 		/// <returns>The embedded resource as a string.</returns>
 		/// <param name="assembly">Assembly.</param>
 		/// <param name="resourceFileName">Resource file name.</param>
-		public static string GetEmbeddedResourceString(Assembly assembly, string resourceFileName)
+		public static StringResponse GetEmbeddedResourceString(Assembly assembly, string resourceFileName)
 		{
-			var stream = GetEmbeddedResourceStream(assembly, resourceFileName);
-
-			using (var streamReader = new StreamReader(stream))
-			{
-				return streamReader.ReadToEnd();
-			}
+            var response = new StringResponse();
+			var result = GetEmbeddedResourceStream(assembly, resourceFileName);
+            if (result.Success)
+            {
+                using (var streamReader = new StreamReader(result.Response))
+                {
+                    response.Response=  streamReader.ReadToEnd();
+                    response.Success = true;
+                }
+            }
+            else{
+                response.Success = false;
+                response.Error = result.Error;
+            }
+            return response;
 		}
 	}
 }

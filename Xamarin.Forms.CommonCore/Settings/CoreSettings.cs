@@ -24,13 +24,13 @@ namespace Xamarin.Forms.CommonCore
     }
     public class CoreSettings
     {
-		private static ISettings _appSettings
-		{
-			get
-			{
-				return CrossSettings.Current;
-			}
-		}
+        private static ISettings _appSettings
+        {
+            get
+            {
+                return CrossSettings.Current;
+            }
+        }
 
         public static ConfigurationModel Config
         {
@@ -42,8 +42,8 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <value>The installation identifier.</value>
 		public static string InstallationId
-		{
-			get
+        {
+            get
             {
                 var id = _appSettings.GetValueOrDefault("InstallationId", null);
 
@@ -55,8 +55,8 @@ namespace Xamarin.Forms.CommonCore
 
                 return id;
             }
-			set { _appSettings.AddOrUpdateValue("InstallationId", value); }
-		}
+            set { _appSettings.AddOrUpdateValue("InstallationId", value); }
+        }
 
         /// <summary>
         /// Gets or sets the current buid.
@@ -64,26 +64,26 @@ namespace Xamarin.Forms.CommonCore
         /// <value>The current buid.</value>
         public static string CurrentBuid { get; set; } = "dev";
         public static string UserId { get; set; }
-		public static AuthenticationToken TokenBearer { get; set; }
-		public static NetworkCredential HttpCredentials { get; set; }
+        public static AuthenticationToken TokenBearer { get; set; }
+        public static NetworkCredential HttpCredentials { get; set; }
 
-		public static bool IsConnected { get; set; } = true;
-		public static INavigation AppNav { get; set; }
-		public static Size ScreenSize { get; set; }
+        public static bool IsConnected { get; set; } = true;
+        public static INavigation AppNav { get; set; }
+        public static Size ScreenSize { get; set; }
         public static NavType NavStyle { get; set; } = NavType.Stacked;
-		public static List<string> NotificationTags { get; set; } = new List<string>();
+        public static List<string> NotificationTags { get; set; } = new List<string>();
 
-		public static bool TokenIsValid
-		{
-			get
-			{
-				return TokenBearer?.expires > DateTimeOffset.Now;
-			}
-		}
+        public static bool TokenIsValid
+        {
+            get
+            {
+                return TokenBearer?.expires > DateTimeOffset.Now;
+            }
+        }
 
         #region Message Constants
         public const string MasterDetailIsPresented = "IsPresented";
-#endregion
+        #endregion
 
 #if __ANDROID__
         public  static int AppIcon { get; set; }
@@ -92,51 +92,63 @@ namespace Xamarin.Forms.CommonCore
 #endif
 
 #if __IOS__
-		public static NSData DeviceToken { get; set; }
+        public static NSData DeviceToken { get; set; }
 #endif
 
-		internal class AppData
-		{
-			public static AppData Instance = new AppData();
-			public AppData()
-			{
-				Load();
-			}
-			public void Reload()
-			{
-				Load();
-			}
+        internal class AppData
+        {
+            public static AppData Instance = new AppData();
+            public AppData()
+            {
+                Load();
+            }
+            public void Reload()
+            {
+                Load();
+            }
 
-			public ConfigurationModel Settings { get; private set; }
+            public ConfigurationModel Settings { get; private set; }
 
 
-			private void Load()
-			{
-				string fileName = null;
-				switch (CoreSettings.CurrentBuid)
-				{
-					case "qa":
-						fileName = "config.qa.json";
-						break;
-					case "prod":
-						fileName = "config.prod.json";
-						break;
-					default:
-						fileName = "config.dev.json";
-						break;
-				}
+            private void Load()
+            {
+                Settings = new ConfigurationModel();
+                string fileName = null;
+                switch (CoreSettings.CurrentBuid)
+                {
+                    case "qa":
+                        fileName = "config.qa.json";
+                        break;
+                    case "prod":
+                        fileName = "config.prod.json";
+                        break;
+                    default:
+                        fileName = "config.dev.json";
+                        break;
+                }
 
-				string json = ResourceLoader.GetEmbeddedResourceString(Assembly.GetAssembly(typeof(ResourceLoader)), fileName);
-				var root = JsonConvert.DeserializeObject<ConfigurationModel>(json);
-				if (root != null)
-				{
-					Settings = root;
-				}
+                var response = ResourceLoader.GetEmbeddedResourceString(Assembly.GetAssembly(typeof(ResourceLoader)), fileName);
+                if (response.Success)
+                {
+                    try
+                    {
+                        var root = JsonConvert.DeserializeObject<ConfigurationModel>(response.Response);
+                        if (root != null)
+                            Settings = root;
+                    }
+                    catch (Exception ex)
+                    {
+                        ex.ConsoleWrite();
+                    }
 
-			}
-		}
+                }
+                else
+                {
+                    response.Error?.ConsoleWrite();
+                }
+            }
+        }
 
-	}
-
+    }
 
 }

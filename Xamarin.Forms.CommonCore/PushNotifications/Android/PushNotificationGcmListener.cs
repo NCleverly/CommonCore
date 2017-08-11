@@ -251,7 +251,7 @@ namespace PushNotification.Plugin
 
             // Create a PendingIntent; we're only using one PendingIntent (ID = 0):
             const int pendingIntentId = 0;
-            PendingIntent resultPendingIntent = PendingIntent.GetActivity(context, pendingIntentId, resultIntent, PendingIntentFlags.OneShot | PendingIntentFlags.UpdateCurrent);
+            PendingIntent resultPendingIntent = PendingIntent.GetActivity(context, pendingIntentId, resultIntent, PendingIntentFlags.UpdateCurrent);
             // Build the notification
             builder = new NotificationCompat.Builder(context)
                       .SetAutoCancel(true) // dismiss the notification from the notification area when the user clicks on it
