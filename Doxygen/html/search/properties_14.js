@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['validator',['Validator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#aed5bbbb943ecdab2ceccdb88b16801fe',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
-  ['viewname',['ViewName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_analytic_log.html#a2628da820725661b935d7a4b9e6afc97',1,'Xamarin::Forms::CommonCore::AnalyticLog']]],
-  ['viewstack',['ViewStack',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a3eccf14d4cb10b2d56c349e4040fa43e',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
-  ['vm',['VM',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_bound_page.html#a7a4bed97ed617a8c66365d6075f13fca',1,'Xamarin.Forms.CommonCore.TelephonyBoundPage.VM()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_master_detail_page.html#a296772d2b89ffc5819eb439ee7a4c468',1,'Xamarin.Forms.CommonCore.BoundMasterDetailPage.VM()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_page.html#ac581d4cadab5452016397249d1df7fbb',1,'Xamarin.Forms.CommonCore.BoundPage.VM()']]]
+  ['unselectedbackground',['UnselectedBackground',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a70590438cad3287c4e6bbe485a2a5747',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
+  ['unselectedforegroundcolor',['UnSelectedForegroundColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_tabbed_page.html#ab31bbe27edb7c7d79f9cdfd6eaee7ead',1,'Xamarin::Forms::CommonCore::BaseTabbedPage']]],
+  ['unselectedimage',['UnSelectedImage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#a089906471d4a8aaa2014cf4b9c88aae1',1,'Xamarin::Forms::CommonCore::RankingControl']]],
+  ['unselectedtextcolor',['UnselectedTextColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a2d85390576fb675011a8a9d1743e00f9',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
+  ['userid',['UserId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_analytic_log.html#a9831b34fb64afab011f811a29760edd2',1,'Xamarin.Forms.CommonCore.AnalyticLog.UserId()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_error_log.html#a6ca97905834062745c6d9ebc44554674',1,'Xamarin.Forms.CommonCore.ErrorLog.UserId()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#aa1ad2f0e1ee4e20bfd0b4216bf8d103d',1,'Xamarin.Forms.CommonCore.CoreSettings.UserId()']]],
+  ['utcticks',['UTCTicks',['../class_xamarin_1_1_forms_1_1_common_core_1_1_error_log.html#a0130638be4f7ba4adb73333151487bd2',1,'Xamarin::Forms::CommonCore::ErrorLog']]],
+  ['utctickstamp',['UTCTickStamp',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sql_data_model.html#af3b151cd48dd014965c7375e6b85830b',1,'Xamarin.Forms.CommonCore.ISqlDataModel.UTCTickStamp()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_sql_data_model.html#a3c6e4c897ecc820e404e7dadedd161cd',1,'Xamarin.Forms.CommonCore.SqlDataModel.UTCTickStamp()']]],
+  ['uwpappid',['UWPAppId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html#afad55d6f189b2311f2b8eb898f74737a',1,'Xamarin::Forms::CommonCore::MobileCenterHockeyApp']]]
 ];

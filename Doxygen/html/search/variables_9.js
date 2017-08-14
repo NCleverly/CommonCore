@@ -11,6 +11,7 @@ var searchData=
   ['isformatting',['isFormatting',['../class_xamarin_1_1_forms_1_1_common_core_1_1_masked_text_field.html#a2b2c2f98ef6c53ebd9df5a47ed3b7358',1,'Xamarin::Forms::CommonCore::MaskedTextField']]],
   ['isloadinghud',['isLoadingHUD',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a6ceb451fe509291835f38b5b3dfc0e02',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['isloadingoverlay',['isLoadingOverlay',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a7f65ec27fb3626cef916a9c9d355f042',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
+  ['isrefreshing',['isRefreshing',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#ace383f6d13bc8ea311ecd0b417a52c43',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
   ['isstarredproperty',['IsStarredProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a74419783523d24140160471d91e0dc9c',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
   ['itemclickcommandproperty',['ItemClickCommandProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#afb1a5463020a817cd5a7c63177d3a194',1,'Xamarin::Forms::CommonCore::ListControl']]],
   ['itemssourceproperty',['ItemsSourceProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a23da0878378b55904d55fd53c6ea128d',1,'Xamarin::Forms::CommonCore::BindablePicker']]]

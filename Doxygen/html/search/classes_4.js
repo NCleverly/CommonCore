@@ -4,5 +4,6 @@ var searchData=
   ['emptyclass',['EmptyClass',['../class_xamarin_1_1_forms_1_1_common_core_1_1_utilities_1_1_empty_class.html',1,'Xamarin::Forms::CommonCore::Utilities']]],
   ['encryptionservice',['EncryptionService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html',1,'Xamarin::Forms::CommonCore']]],
   ['entryunderline',['EntryUnderline',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html',1,'Xamarin::Forms::CommonCore']]],
-  ['errorlog',['ErrorLog',['../class_xamarin_1_1_forms_1_1_common_core_1_1_error_log.html',1,'Xamarin::Forms::CommonCore']]]
+  ['errorlog',['ErrorLog',['../class_xamarin_1_1_forms_1_1_common_core_1_1_error_log.html',1,'Xamarin::Forms::CommonCore']]],
+  ['eventtocommandbehavior',['EventToCommandBehavior',['../class_xamarin_1_1_forms_1_1_common_core_1_1_event_to_command_behavior.html',1,'Xamarin::Forms::CommonCore']]]
 ];

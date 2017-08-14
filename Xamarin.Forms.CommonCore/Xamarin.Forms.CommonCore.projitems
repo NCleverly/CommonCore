@@ -272,6 +272,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\LogService.cs">
       <DependentUpon>ILogService.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\OptimizedObservableCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\GroupedObservableCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Collections\RefreshingCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\EventToCommandBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Behaviors\BindingContextBehavior.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -297,7 +302,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\" />
     <Folder Include="$(MSBuildThisFileDirectory)Settings\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\Navigation\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Logging\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Collections\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />
@@ -311,5 +316,6 @@
     </None>
     <None Include="$(MSBuildThisFileDirectory)Styles\AppStyles.txt" />
     <None Include="$(MSBuildThisFileDirectory)Settings\AppSettings.txt" />
+    <None Include="$(MSBuildThisFileDirectory)Config\InjectionManager.Unity.txt" />
   </ItemGroup>
 </Project>

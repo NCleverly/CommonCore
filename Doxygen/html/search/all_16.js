@@ -1,12 +1,14 @@
 var searchData=
 [
-  ['webapi',['WebApi',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#a67c01ea8663df4d80cc28bdd100a4ace',1,'Xamarin::Forms::CommonCore::ConfigurationModel']]],
-  ['webapis',['WebApis',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a63cd812f7acd33578a4ad9e4539e90bc',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
-  ['webdownloadclient',['WebDownloadClient',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html',1,'Xamarin::Forms::CommonCore']]],
-  ['webdownloadclient_2ecs',['WebDownloadClient.cs',['../_web_download_client_8cs.html',1,'']]],
-  ['webviewdisablescroll',['WebViewDisableScroll',['../class_xamarin_1_1_forms_1_1_common_core_1_1_common_effects.html#a5fe8b2cf2e73b54a38bc9f7fb8d3deac',1,'Xamarin::Forms::CommonCore::CommonEffects']]],
-  ['windows',['Windows',['../namespace_push_notification_1_1_plugin_1_1_abstractions.html#a1ce4369c799a8f4045fa0c9c7d4820a3aaea23489ce3aa9b6406ebb28e0cda430',1,'PushNotification::Plugin::Abstractions']]],
-  ['windowsphone',['WindowsPhone',['../namespace_push_notification_1_1_plugin_1_1_abstractions.html#a1ce4369c799a8f4045fa0c9c7d4820a3a9820f5311cc086a51ed63917987a973b',1,'PushNotification::Plugin::Abstractions']]],
-  ['withtimeout_3c_20t_20_3e',['WithTimeout&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ad54e57e18720538cc4042194861d514c',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
-  ['wrapper',['wrapper',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#ab3439aafaaef64d54972efc3a02af948',1,'Xamarin::Forms::CommonCore::AbsoluteLayoutPage']]]
+  ['validatejson',['ValidateJSON',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a8dfc4beb83aac19e2920251aab040e97',1,'PushNotification::Plugin::CrossPushNotification']]],
+  ['validator',['Validator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#aed5bbbb943ecdab2ceccdb88b16801fe',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
+  ['validatorproperty',['ValidatorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a4b709123f2e6965f8208a253db41f15c',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
+  ['view',['view',['../class_xamarin_1_1_forms_1_1_common_core_1_1_property_changed_behavior.html#a1aeadd2fe04e4ad851de6b490e0e61fe',1,'Xamarin::Forms::CommonCore::PropertyChangedBehavior']]],
+  ['viewname',['ViewName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_analytic_log.html#a2628da820725661b935d7a4b9e6afc97',1,'Xamarin::Forms::CommonCore::AnalyticLog']]],
+  ['viewshadow',['ViewShadow',['../class_xamarin_1_1_forms_1_1_common_core_1_1_common_effects.html#ae49478a92a0da2014895d8fabfcbcdc4',1,'Xamarin::Forms::CommonCore::CommonEffects']]],
+  ['viewshadoweffect',['ViewShadowEffect',['../class_xamarin_1_1_forms_1_1_common_core_1_1_view_shadow_effect.html',1,'Xamarin.Forms.CommonCore.ViewShadowEffect'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_view_shadow_effect.html#a0189cc6764daa7b5ae01b4c5011e697b',1,'Xamarin.Forms.CommonCore.ViewShadowEffect.ViewShadowEffect()']]],
+  ['viewstack',['ViewStack',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a3eccf14d4cb10b2d56c349e4040fa43e',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
+  ['viewstack_2eios_2ecs',['ViewStack.IOS.cs',['../_view_stack_8_i_o_s_8cs.html',1,'']]],
+  ['vm',['VM',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_bound_page.html#a7a4bed97ed617a8c66365d6075f13fca',1,'Xamarin.Forms.CommonCore.TelephonyBoundPage.VM()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_master_detail_page.html#a296772d2b89ffc5819eb439ee7a4c468',1,'Xamarin.Forms.CommonCore.BoundMasterDetailPage.VM()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_page.html#ac581d4cadab5452016397249d1df7fbb',1,'Xamarin.Forms.CommonCore.BoundPage.VM()']]],
+  ['vmcontainer',['vmContainer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a6cba499c4f93fc0d61d84669c1fc3828',1,'Xamarin::Forms::CommonCore::InjectionManager']]]
 ];

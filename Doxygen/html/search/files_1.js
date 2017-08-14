@@ -9,6 +9,7 @@ var searchData=
   ['basetabbedpagerenderer_2edroid_2ecs',['BaseTabbedPageRenderer.Droid.cs',['../_base_tabbed_page_renderer_8_droid_8cs.html',1,'']]],
   ['basetabbedpagerenderer_2eios_2ecs',['BaseTabbedPageRenderer.IOS.cs',['../_base_tabbed_page_renderer_8_i_o_s_8cs.html',1,'']]],
   ['bindablepicker_2ecs',['BindablePicker.cs',['../_bindable_picker_8cs.html',1,'']]],
+  ['bindingcontextbehavior_2ecs',['BindingContextBehavior.cs',['../_binding_context_behavior_8cs.html',1,'']]],
   ['bluroverlay_2edroid_2ecs',['BlurOverlay.Droid.cs',['../_blur_overlay_8_droid_8cs.html',1,'']]],
   ['bluroverlay_2eios_2ecs',['BlurOverlay.IOS.cs',['../_blur_overlay_8_i_o_s_8cs.html',1,'']]],
   ['boundmasterdetailpage_2ecs',['BoundMasterDetailPage.cs',['../_bound_master_detail_page_8cs.html',1,'']]],

@@ -1,113 +1,81 @@
-﻿﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Net;
-using Microsoft.Practices.Unity;
-using Microsoft.Practices.ServiceLocation;
-using Newtonsoft.Json;
-using System.Reflection;
 using System.Linq;
-
-#if __ANDROID__
-using Android.Widget;
-#endif
-#if __IOS__
-using Foundation;
-#endif
 
 namespace Xamarin.Forms.CommonCore
 {
     public class InjectionManager
     {
-        private static UnityContainer _container;
-        private static UnityServiceLocator _serviceLocator;
+        private static List<string> vmContainer = new List<string>();
+        private static List<string> srvContainer = new List<string>();
 
-        public static UnityContainer Container
-        {
-            get
-            {
-                return _container ?? (_container = new UnityContainer());
-            }
-        }
         public static T GetViewModel<T>(bool loadResources = false) where T : ObservableViewModel
         {
-            if (_serviceLocator == null)
-                InitializeServiceLocator();
 
-            if (!Container.IsRegistered<T>())
-                Container.RegisterType<T>(new ContainerControlledLifetimeManager());
+            if (!vmContainer.Any(x => x == typeof(T).FullName))
+            {
+                DependencyService.Register<T>();
+                vmContainer.Add(typeof(T).FullName);
+            }
+            var vm = DependencyService.Get<T>(DependencyFetchTarget.GlobalInstance);
 
-            var vm = Container.Resolve<T>();
             if (loadResources)
                 vm.LoadResources();
-
             return vm;
         }
 
-        public static void ReleaseResourcesExcept<T>() where T: ObservableViewModel
+        public static void ReleaseResourcesExcept<T>() where T : ObservableViewModel
         {
-            if (_serviceLocator == null)
-                return;
-            
-            foreach (var reg in Container.Registrations)
+            var caller = typeof(T).FullName;
+            foreach (var name in vmContainer)
             {
-                var isViewModel = reg.RegisteredType.IsSubclassOf(typeof(ObservableViewModel));
-                if(isViewModel && reg.RegisteredType.Name!=typeof(T).Name)
-                {
-					var obj = (ObservableViewModel)Container.Resolve(reg.RegisteredType);
-                    obj.ReleaseResources();
-                }
+                if (!name.Equals(caller))
+                    ((ObservableViewModel)GetObjectByName(name)).ReleaseResources();
             }
         }
 
         public static void SendViewModelMessage(string key, object obj)
         {
-            if (_serviceLocator == null)
-                InitializeServiceLocator();
-
-            foreach (ContainerRegistration item in Container.Registrations)
+            foreach (var name in vmContainer)
             {
-                var instance = Container.Resolve(item.RegisteredType, item.Name);
-                if (instance is ObservableViewModel)
-                {
-                    ((ObservableViewModel)instance).OnViewMessageReceived(key, obj);
-                }
+                ((ObservableViewModel)GetObjectByName(name)).OnViewMessageReceived(key, obj);
             }
         }
 
         public static void SendViewModelMessage<T>(string key, object obj) where T : ObservableViewModel
         {
-            if (_serviceLocator == null)
-                InitializeServiceLocator();
-
-            if (Container.IsRegistered<T>())
-            {
-                Container.Resolve<T>().OnViewMessageReceived(key, obj);
-            }
+            if (vmContainer.Any(x => x == typeof(T).FullName))
+                DependencyService.Get<T>(DependencyFetchTarget.GlobalInstance).OnViewMessageReceived(key, obj);
         }
 
-        public static T GetService<T, K>(bool isSingleton = false) where K : T
+        public static T GetService<T, K>(bool isSingleton = false) where K : class, T
         {
-            if (_serviceLocator == null)
-                InitializeServiceLocator();
-
-            if (!Container.IsRegistered<T>())
+            if (!srvContainer.Any(x => x == typeof(K).FullName))
             {
-                if (isSingleton)
-                    Container.RegisterType<T, K>(new ContainerControlledLifetimeManager());
-                else
-                    Container.RegisterType<T, K>();
+                DependencyService.Register<K>();
+                srvContainer.Add(typeof(T).FullName);
             }
 
-            return Container.Resolve<T>();
+            var iSrv = default(T);
+            if (isSingleton)
+            {
+                iSrv = (T)DependencyService.Get<K>(DependencyFetchTarget.GlobalInstance);
+            }
+            else
+            {
+                iSrv = (T)DependencyService.Get<K>(DependencyFetchTarget.NewInstance);
+            }
+            return iSrv;
         }
 
-        private static void InitializeServiceLocator()
+        private static object GetObjectByName(string typeName)
         {
-            _serviceLocator = new UnityServiceLocator(Container);
-            ServiceLocator.SetLocatorProvider(() => _serviceLocator);
+            var method = typeof(DependencyService).GetMethod("Get");
+            var t = Type.GetType(typeName);
+            var genericMethod = method.MakeGenericMethod(t);
+            return genericMethod.Invoke(null, new object[] { DependencyFetchTarget.GlobalInstance });
         }
+
     }
-
-
 }
 

@@ -11,6 +11,7 @@ using System.Threading;
 using System.ComponentModel;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using System.Globalization;
 
 #if __ANDROID__
 using Xamarin.Forms.Platform.Android;
@@ -24,6 +25,7 @@ using Foundation;
 using AudioToolbox;
 using UIKit;
 using CoreGraphics;
+using System.Globalization;
 #endif
 
 namespace Xamarin.Forms.CommonCore
@@ -37,6 +39,11 @@ namespace Xamarin.Forms.CommonCore
 			reference.TryGetTarget(out obj);
 			return obj;
 		}
+
+        public static string ToTitleCase(this string sentence)
+        {
+            return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(sentence.ToLower());
+        }
 
 		public static T ConvertTo<T>(this StringResponse str) where T : struct
 		{
@@ -82,6 +89,51 @@ namespace Xamarin.Forms.CommonCore
         {
             return (string)prop.GetValue(obj, null);
         }
+
+		/// <summary>
+		/// Returns an ObservableCollection from a set of enumerable items.
+		/// </summary>
+		/// <returns>The observable collection.</returns>
+		/// <param name="items">Items.</param>
+		/// <typeparam name="T">The 1st type parameter.</typeparam>
+		public static OptimizedObservableCollection<T> ToObservableCollection<T>(this IEnumerable<T> items)
+		{
+			return new OptimizedObservableCollection<T>(items);
+		}
+
+		/// <summary>
+		/// Add a range of IEnumerable collection to an existing Collection.
+		/// </summary>
+		///<typeparam name="T">Type of collection</typeparam>
+		///<param name="collection">Collection</param>
+		/// <param name="items">Items to add</param>
+		public static void AddRange<T>(this ICollection<T> collection, IEnumerable<T> items)
+		{
+			if (collection == null)
+				throw new ArgumentNullException("collection");
+			if (items == null)
+				throw new ArgumentNullException("items");
+
+			foreach (var item in items)
+				collection.Add(item);
+		}
+
+
+		/// <summary>
+		/// Removes a set of items from the collection.
+		/// </summary>
+		/// <param name="collection">Collection to remove from</param>
+		/// <param name="items">Items to remove from collection.</param>
+		public static void RemoveRange<T>(this ICollection<T> collection, IEnumerable<T> items)
+		{
+			if (collection == null)
+				throw new ArgumentNullException("collection");
+			if (items == null)
+				throw new ArgumentNullException("items");
+
+			foreach (var item in items)
+				collection.Remove(item);
+		}
 
         /// <summary>
         /// Encrypteds the data model properties.
@@ -538,11 +590,11 @@ namespace Xamarin.Forms.CommonCore
         /// <param name="pageName">Page name.</param>
         public static async Task<Page> PopTo<T>(this INavigation nav, bool animated = false) where T : ContentPage, new()
         {
-            var pageName = typeof(T).Name;
+            var pageName = typeof(T).FullName;
 
-            if (nav.NavigationStack.Any(x => x.GetType().Name == pageName) && nav.NavigationStack.Count > 1)
+            if (nav.NavigationStack.Any(x => x.GetType().FullName == pageName) && nav.NavigationStack.Count > 1)
             {
-                if (nav.NavigationStack.Last().GetType().Name == pageName)
+                if (nav.NavigationStack.Last().GetType().FullName == pageName)
                     return null;
 
                 if (Device.RuntimePlatform.ToUpper() == "IOS")
@@ -550,7 +602,7 @@ namespace Xamarin.Forms.CommonCore
                     for (int x = (nav.NavigationStack.Count - 2); x > -1; x--)
                     {
                         var page = nav.NavigationStack[x];
-                        var name = page.GetType().Name;
+                        var name = page.GetType().FullName;
                         if (name == pageName)
                         {
                             return await nav.PopAsync(animated);
@@ -570,9 +622,25 @@ namespace Xamarin.Forms.CommonCore
                      */
 
                     //This is a workaround for API 25 in Droid but this may have issues as well
-					while(nav.NavigationStack.Last().GetType().Name!=pageName)
-					{
-                        await nav.PopAsync(false); 
+                
+                    var totalPages = nav.NavigationStack.Count();
+                    var indexOf = 0;
+                    for (int x = (totalPages -1); x > -1;x--)
+                    {
+                        var nm = nav.NavigationStack[x].GetType().FullName;
+                        if(nm.Equals(pageName)){
+                            indexOf = totalPages - x;
+                            break;
+                        }
+                    }
+
+                    for (var x = 0; x < (indexOf - 1) ;x++)
+                    {
+                        if (CoreSettings.AppNav.NavigationStack.Count() != 0)
+                        {
+                            await CoreSettings.AppNav.PopAsync(false);
+                        }
+               
 					}
 				}
 

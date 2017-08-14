@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['ypositionrequest',['YPositionRequest',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup.html#a5bddb7407ff2847a2502a49ac44f7bbe',1,'Xamarin::Forms::CommonCore::Popup']]]
+  ['webapi',['WebApi',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#a67c01ea8663df4d80cc28bdd100a4ace',1,'Xamarin::Forms::CommonCore::ConfigurationModel']]],
+  ['webapis',['WebApis',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a63cd812f7acd33578a4ad9e4539e90bc',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]]
 ];
