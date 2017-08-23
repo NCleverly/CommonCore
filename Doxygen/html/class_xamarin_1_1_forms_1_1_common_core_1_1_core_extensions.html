@@ -76,8 +76,41 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8ae854cca070358cc6b73f2ab5f6b8f7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a8ae854cca070358cc6b73f2ab5f6b8f7">SaveState&lt; T &gt;</a> (this T vm)</td></tr>
+<tr class="memdesc:a8ae854cca070358cc6b73f2ab5f6b8f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save the state of the view model. Used for when the application may teardown the memory losing the property values of the view model.  <a href="#a8ae854cca070358cc6b73f2ab5f6b8f7">More...</a><br /></td></tr>
+<tr class="separator:a8ae854cca070358cc6b73f2ab5f6b8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a116814408bb02930430d6a95c58c0c12"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a116814408bb02930430d6a95c58c0c12">LoadState&lt; T &gt;</a> (this T vm)</td></tr>
+<tr class="memdesc:a116814408bb02930430d6a95c58c0c12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the state of the view model to ensure if torndown by the OS, it can regain the property values.  <a href="#a116814408bb02930430d6a95c58c0c12">More...</a><br /></td></tr>
+<tr class="separator:a116814408bb02930430d6a95c58c0c12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8fc916138c3cb2e77fe4b9d57d0abdf"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ad8fc916138c3cb2e77fe4b9d57d0abdf">SaveViewModelState</a> (this Application app)</td></tr>
+<tr class="memdesc:ad8fc916138c3cb2e77fe4b9d57d0abdf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the state of the view models in case the OS tearsdown the memory.  <a href="#ad8fc916138c3cb2e77fe4b9d57d0abdf">More...</a><br /></td></tr>
+<tr class="separator:ad8fc916138c3cb2e77fe4b9d57d0abdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae476d669261bb8e93648e2ede853d9c2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ae476d669261bb8e93648e2ede853d9c2">LoadViewModelState</a> (this Application app)</td></tr>
+<tr class="memdesc:ae476d669261bb8e93648e2ede853d9c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the state of the view model if they were torndown by the OS.  <a href="#ae476d669261bb8e93648e2ede853d9c2">More...</a><br /></td></tr>
+<tr class="separator:ae476d669261bb8e93648e2ede853d9c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a571ed73fc35bbbcb4ec8d76ab5be6e63"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a571ed73fc35bbbcb4ec8d76ab5be6e63">ToEnum&lt; T &gt;</a> (this string str)</td></tr>
+<tr class="separator:a571ed73fc35bbbcb4ec8d76ab5be6e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19458253e43a3423021fd26e6f0f3833"><td class="memItemLeft" align="right" valign="top">static PropertyInfo&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a19458253e43a3423021fd26e6f0f3833">GetProperty&lt; T, P &gt;</a> (this Expression&lt; Func&lt; T, P &gt;&gt; exp)</td></tr>
+<tr class="separator:a19458253e43a3423021fd26e6f0f3833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8aa1acac1983ee24bd3eb0b02656c3c8"><td class="memItemLeft" align="right" valign="top">static P&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a8aa1acac1983ee24bd3eb0b02656c3c8">GetPropertyValue&lt; T, P &gt;</a> (this Expression&lt; Func&lt; T, P &gt;&gt; exp, T obj)</td></tr>
+<tr class="separator:a8aa1acac1983ee24bd3eb0b02656c3c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f3f395c9bd32b5065786338a8a0b55d"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a5f3f395c9bd32b5065786338a8a0b55d">ValidateTextFields</a> (this <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html">ObservableViewModel</a> model, params string[] fields)</td></tr>
+<tr class="separator:a5f3f395c9bd32b5065786338a8a0b55d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac04a7e666d9b0e1d00ed160d19da99a9"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ac04a7e666d9b0e1d00ed160d19da99a9">ValidateNumberFields</a> (this <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html">ObservableViewModel</a> model, decimal minValue, decimal maxValue, params decimal[] fields)</td></tr>
+<tr class="separator:ac04a7e666d9b0e1d00ed160d19da99a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a971b7c02b53dc7b25f7e9fd63461002b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a971b7c02b53dc7b25f7e9fd63461002b">ValidateEmailFields</a> (this <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html">ObservableViewModel</a> model, params string[] fields)</td></tr>
+<tr class="separator:a971b7c02b53dc7b25f7e9fd63461002b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8de887c823d42d3cc58588401a8c44e2"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a8de887c823d42d3cc58588401a8c44e2">ValidatePasswordFields</a> (this <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html">ObservableViewModel</a> model, params string[] fields)</td></tr>
+<tr class="separator:a8de887c823d42d3cc58588401a8c44e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d8b517bdccd4ad9427d3bbcd34a224a"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a4d8b517bdccd4ad9427d3bbcd34a224a">ValidatePasswordMatch</a> (this <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html">ObservableViewModel</a> model, params string[] fields)</td></tr>
+<tr class="separator:a4d8b517bdccd4ad9427d3bbcd34a224a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28065474197e3703c8fc95d57efbc94e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a28065474197e3703c8fc95d57efbc94e">RemoveWhere&lt; T &gt;</a> (this ICollection&lt; T &gt; collection, Func&lt; T, bool &gt; predicate)</td></tr>
+<tr class="memdesc:a28065474197e3703c8fc95d57efbc94e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Use a predicate to remove items from a generic ICollection  <a href="#a28065474197e3703c8fc95d57efbc94e">More...</a><br /></td></tr>
+<tr class="separator:a28065474197e3703c8fc95d57efbc94e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb79f197ebdb0380c5ffbb489d6df32c"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#afb79f197ebdb0380c5ffbb489d6df32c">ToObject&lt; T &gt;</a> (this WeakReference&lt; T &gt; reference)</td></tr>
 <tr class="separator:afb79f197ebdb0380c5ffbb489d6df32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b496826a96a87da5a724d26179e598c"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a2b496826a96a87da5a724d26179e598c">Cast&lt; T &gt;</a> (this WeakReference obj)</td></tr>
+<tr class="separator:a2b496826a96a87da5a724d26179e598c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a269111c77dd288b8439d6f71b56db554"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a269111c77dd288b8439d6f71b56db554">ToTitleCase</a> (this string sentence)</td></tr>
 <tr class="separator:a269111c77dd288b8439d6f71b56db554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7947cb6abdc7fbb7534fa454d981fc6"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#af7947cb6abdc7fbb7534fa454d981fc6">ConvertTo&lt; T &gt;</a> (this <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_string_response.html">StringResponse</a> str)</td></tr>
@@ -128,6 +161,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b3c37383fa3430f9336b2b4b02d21ab"><td class="memItemLeft" align="right" valign="top">static async Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a3b3c37383fa3430f9336b2b4b02d21ab">FirstOrDefault&lt; T &gt;</a> (this Task&lt; List&lt; T &gt;&gt; taskCollection)</td></tr>
 <tr class="memdesc:a3b3c37383fa3430f9336b2b4b02d21ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">First or Default on a async (promised) collection  <a href="#a3b3c37383fa3430f9336b2b4b02d21ab">More...</a><br /></td></tr>
 <tr class="separator:a3b3c37383fa3430f9336b2b4b02d21ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cfc0d816e036aa3b540a454ed32eed2"><td class="memItemLeft" align="right" valign="top">static async Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a8cfc0d816e036aa3b540a454ed32eed2">LastOrDefault&lt; T &gt;</a> (this Task&lt; List&lt; T &gt;&gt; taskCollection)</td></tr>
+<tr class="memdesc:a8cfc0d816e036aa3b540a454ed32eed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lasts the or default on a async (promised) collection  <a href="#a8cfc0d816e036aa3b540a454ed32eed2">More...</a><br /></td></tr>
+<tr class="separator:a8cfc0d816e036aa3b540a454ed32eed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94090146bc48eed3434ea052ff002831"><td class="memItemLeft" align="right" valign="top">static async Task&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a94090146bc48eed3434ea052ff002831">FirstOrDefault&lt; T &gt;</a> (this Task&lt; <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_generic_response.html">GenericResponse</a>&lt; List&lt; T &gt;&gt;&gt; taskCollection)</td></tr>
 <tr class="memdesc:a94090146bc48eed3434ea052ff002831"><td class="mdescLeft">&#160;</td><td class="mdescRight">First or Default on a async (promised) collection in a <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_generic_response.html">GenericResponse</a> object  <a href="#a94090146bc48eed3434ea052ff002831">More...</a><br /></td></tr>
 <tr class="separator:a94090146bc48eed3434ea052ff002831"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -162,9 +198,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a6001ac232ba8cc4a6c81b4ca6afdc406"><td class="memItemLeft" align="right" valign="top">static List&lt; IDictionary&lt; string, object &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a6001ac232ba8cc4a6c81b4ca6afdc406">ToDictionary</a> (this byte[] array)</td></tr>
 <tr class="memdesc:a6001ac232ba8cc4a6c81b4ca6afdc406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convert Byte Array to Dictionary  <a href="#a6001ac232ba8cc4a6c81b4ca6afdc406">More...</a><br /></td></tr>
 <tr class="separator:a6001ac232ba8cc4a6c81b4ca6afdc406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b68a044dcaad5220dddebf9e059eb2f"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a6b68a044dcaad5220dddebf9e059eb2f">ToDictionary</a> (this object obj)</td></tr>
-<tr class="memdesc:a6b68a044dcaad5220dddebf9e059eb2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn entity type into a dictionary  <a href="#a6b68a044dcaad5220dddebf9e059eb2f">More...</a><br /></td></tr>
-<tr class="separator:a6b68a044dcaad5220dddebf9e059eb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a342ed528145625d08fb2ee2aca114768"><td class="memItemLeft" align="right" valign="top">static Dictionary&lt; string, object &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a342ed528145625d08fb2ee2aca114768">ToDictionary</a> (this object obj)</td></tr>
+<tr class="memdesc:a342ed528145625d08fb2ee2aca114768"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn entity type into a dictionary  <a href="#a342ed528145625d08fb2ee2aca114768">More...</a><br /></td></tr>
+<tr class="separator:a342ed528145625d08fb2ee2aca114768"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95cd7acd27b9ab244cf382e051c5edcb"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a95cd7acd27b9ab244cf382e051c5edcb">ToNumericString</a> (this string phoneNum)</td></tr>
 <tr class="memdesc:a95cd7acd27b9ab244cf382e051c5edcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cleans the phone number of all non-numeric characters  <a href="#a95cd7acd27b9ab244cf382e051c5edcb">More...</a><br /></td></tr>
 <tr class="separator:a95cd7acd27b9ab244cf382e051c5edcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -192,7 +228,7 @@ Static Private Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00034">34</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00035">35</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ad4c42c6eb9cce544f8c54141b6371657"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad4c42c6eb9cce544f8c54141b6371657">&#9670;&nbsp;</a></span>AddChild()</h2>
@@ -265,7 +301,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00714">714</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00930">930</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -313,7 +349,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00110">110</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00312">312</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -360,7 +396,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00542">542</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00757">757</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -388,7 +424,43 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00734">734</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00950">950</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2b496826a96a87da5a724d26179e598c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b496826a96a87da5a724d26179e598c">&#9670;&nbsp;</a></span>Cast< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T Xamarin.Forms.CommonCore.CoreExtensions.Cast&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this WeakReference&#160;</td>
+          <td class="paramname"><em>obj</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>class</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00237">237</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -435,7 +507,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00275">275</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00477">477</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -489,7 +561,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00298">298</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00500">500</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -525,7 +597,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00342">342</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00544">544</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -561,7 +633,7 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00048">48</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00250">250</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -597,7 +669,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00505">505</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00720">720</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -624,7 +696,7 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00309">309</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00511">511</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -660,7 +732,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00523">523</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00738">738</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -710,7 +782,7 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00143">143</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00345">345</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -760,7 +832,7 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00165">165</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00367">367</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -798,7 +870,7 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00347">347</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00549">549</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -841,7 +913,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00385">385</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00587">587</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -884,7 +956,73 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00396">396</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00611">611</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="a19458253e43a3423021fd26e6f0f3833"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19458253e43a3423021fd26e6f0f3833">&#9670;&nbsp;</a></span>GetProperty< T, P >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static PropertyInfo Xamarin.Forms.CommonCore.CoreExtensions.GetProperty&lt; T, P &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this Expression&lt; Func&lt; T, P &gt;&gt;&#160;</td>
+          <td class="paramname"><em>exp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00114">114</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8aa1acac1983ee24bd3eb0b02656c3c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8aa1acac1983ee24bd3eb0b02656c3c8">&#9670;&nbsp;</a></span>GetPropertyValue< T, P >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static P Xamarin.Forms.CommonCore.CoreExtensions.GetPropertyValue&lt; T, P &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this Expression&lt; Func&lt; T, P &gt;&gt;&#160;</td>
+          <td class="paramname"><em>exp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00120">120</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -922,7 +1060,7 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00088">88</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00290">290</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -970,7 +1108,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00365">365</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00567">567</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1008,7 +1146,137 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00685">685</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00901">901</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8cfc0d816e036aa3b540a454ed32eed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cfc0d816e036aa3b540a454ed32eed2">&#9670;&nbsp;</a></span>LastOrDefault< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static async Task&lt;T&gt; Xamarin.Forms.CommonCore.CoreExtensions.LastOrDefault&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this Task&lt; List&lt; T &gt;&gt;&#160;</td>
+          <td class="paramname"><em>taskCollection</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Lasts the or default on a async (promised) collection </p>
+<dl class="section return"><dt>Returns</dt><dd>The or default.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">taskCollection</td><td>Task collection.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The 1st type parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00599">599</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="a116814408bb02930430d6a95c58c0c12"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a116814408bb02930430d6a95c58c0c12">&#9670;&nbsp;</a></span>LoadState< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.CoreExtensions.LoadState&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this T&#160;</td>
+          <td class="paramname"><em>vm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads the state of the view model to ensure if torndown by the OS, it can regain the property values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td>Vm.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The 1st type parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>ObservableViewModel</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00055">55</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae476d669261bb8e93648e2ede853d9c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae476d669261bb8e93648e2ede853d9c2">&#9670;&nbsp;</a></span>LoadViewModelState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.CoreExtensions.LoadViewModelState </td>
+          <td>(</td>
+          <td class="paramtype">this Application&#160;</td>
+          <td class="paramname"><em>app</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Loads the state of the view model if they were torndown by the OS. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">app</td><td>App.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00087">87</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1056,7 +1324,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00670">670</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00886">886</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1113,7 +1381,7 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00591">591</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00806">806</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1149,7 +1417,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00470">470</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00685">685</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1185,7 +1453,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00482">482</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00697">697</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1232,7 +1500,147 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00127">127</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00329">329</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="a28065474197e3703c8fc95d57efbc94e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28065474197e3703c8fc95d57efbc94e">&#9670;&nbsp;</a></span>RemoveWhere< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.CoreExtensions.RemoveWhere&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this ICollection&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>collection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Func&lt; T, bool &gt;&#160;</td>
+          <td class="paramname"><em>predicate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Use a predicate to remove items from a generic ICollection </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collection</td><td></td></tr>
+    <tr><td class="paramname">predicate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00215">215</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8ae854cca070358cc6b73f2ab5f6b8f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ae854cca070358cc6b73f2ab5f6b8f7">&#9670;&nbsp;</a></span>SaveState< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.CoreExtensions.SaveState&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this T&#160;</td>
+          <td class="paramname"><em>vm</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Save the state of the view model. Used for when the application may teardown the memory losing the property values of the view model. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vm</td><td>Vm.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The 1st type parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>ObservableViewModel</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00043">43</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="ad8fc916138c3cb2e77fe4b9d57d0abdf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8fc916138c3cb2e77fe4b9d57d0abdf">&#9670;&nbsp;</a></span>SaveViewModelState()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Xamarin.Forms.CommonCore.CoreExtensions.SaveViewModelState </td>
+          <td>(</td>
+          <td class="paramtype">this Application&#160;</td>
+          <td class="paramname"><em>app</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Saves the state of the view models in case the OS tearsdown the memory. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">app</td><td>App.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00073">73</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1268,7 +1676,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00233">233</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00435">435</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1305,12 +1713,12 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00551">551</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00766">766</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
-<a id="a6b68a044dcaad5220dddebf9e059eb2f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6b68a044dcaad5220dddebf9e059eb2f">&#9670;&nbsp;</a></span>ToDictionary() <span class="overload">[2/2]</span></h2>
+<a id="a342ed528145625d08fb2ee2aca114768"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a342ed528145625d08fb2ee2aca114768">&#9670;&nbsp;</a></span>ToDictionary() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1319,7 +1727,7 @@ Static Private Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static Dictionary&lt;string,object&gt; Xamarin.Forms.CommonCore.CoreExtensions.ToDictionary </td>
+          <td class="memname">static Dictionary&lt;string, object&gt; Xamarin.Forms.CommonCore.CoreExtensions.ToDictionary </td>
           <td>(</td>
           <td class="paramtype">this object&#160;</td>
           <td class="paramname"><em>obj</em></td><td>)</td>
@@ -1342,7 +1750,43 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00562">562</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00777">777</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="a571ed73fc35bbbcb4ec8d76ab5be6e63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a571ed73fc35bbbcb4ec8d76ab5be6e63">&#9670;&nbsp;</a></span>ToEnum< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T Xamarin.Forms.CommonCore.CoreExtensions.ToEnum&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype">this string&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>struct</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00107">107</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1379,7 +1823,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00660">660</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00876">876</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1416,7 +1860,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00579">579</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00794">794</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1452,7 +1896,7 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00036">36</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00230">230</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1495,7 +1939,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00410">410</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00625">625</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1523,7 +1967,7 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00420">420</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00635">635</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1551,7 +1995,7 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00430">430</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00645">645</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1594,7 +2038,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00443">443</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00658">658</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1637,7 +2081,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00459">459</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00674">674</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1680,7 +2124,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00099">99</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00301">301</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1708,7 +2152,7 @@ Static Private Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00043">43</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00245">245</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1758,7 +2202,7 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00189">189</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00391">391</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1808,7 +2252,209 @@ Static Private Member Functions</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00210">210</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00412">412</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="a971b7c02b53dc7b25f7e9fd63461002b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a971b7c02b53dc7b25f7e9fd63461002b">&#9670;&nbsp;</a></span>ValidateEmailFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Xamarin.Forms.CommonCore.CoreExtensions.ValidateEmailFields </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html">ObservableViewModel</a>&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params string []&#160;</td>
+          <td class="paramname"><em>fields</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00145">145</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac04a7e666d9b0e1d00ed160d19da99a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac04a7e666d9b0e1d00ed160d19da99a9">&#9670;&nbsp;</a></span>ValidateNumberFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Xamarin.Forms.CommonCore.CoreExtensions.ValidateNumberFields </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html">ObservableViewModel</a>&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">decimal&#160;</td>
+          <td class="paramname"><em>minValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">decimal&#160;</td>
+          <td class="paramname"><em>maxValue</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params decimal []&#160;</td>
+          <td class="paramname"><em>fields</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00134">134</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8de887c823d42d3cc58588401a8c44e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8de887c823d42d3cc58588401a8c44e2">&#9670;&nbsp;</a></span>ValidatePasswordFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Xamarin.Forms.CommonCore.CoreExtensions.ValidatePasswordFields </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html">ObservableViewModel</a>&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params string []&#160;</td>
+          <td class="paramname"><em>fields</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00161">161</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4d8b517bdccd4ad9427d3bbcd34a224a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d8b517bdccd4ad9427d3bbcd34a224a">&#9670;&nbsp;</a></span>ValidatePasswordMatch()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Xamarin.Forms.CommonCore.CoreExtensions.ValidatePasswordMatch </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html">ObservableViewModel</a>&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params string []&#160;</td>
+          <td class="paramname"><em>fields</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00182">182</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5f3f395c9bd32b5065786338a8a0b55d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f3f395c9bd32b5065786338a8a0b55d">&#9670;&nbsp;</a></span>ValidateTextFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool Xamarin.Forms.CommonCore.CoreExtensions.ValidateTextFields </td>
+          <td>(</td>
+          <td class="paramtype">this <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html">ObservableViewModel</a>&#160;</td>
+          <td class="paramname"><em>model</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">params string []&#160;</td>
+          <td class="paramname"><em>fields</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00128">128</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>
@@ -1862,7 +2508,7 @@ Static Private Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00327">327</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_core_extensions_8cs_source.html#l00529">529</a> of file <a class="el" href="_core_extensions_8cs_source.html">CoreExtensions.cs</a>.</p>
 
 </div>
 </div>

@@ -85,6 +85,7 @@ var searchData=
   ['isqlitedb',['ISqliteDb',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sqlite_db.html',1,'Xamarin::Forms::CommonCore']]],
   ['isqlitedb_2ecs',['ISqliteDb.cs',['../_i_sqlite_db_8cs.html',1,'']]],
   ['isrefreshing',['isRefreshing',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#ace383f6d13bc8ea311ecd0b417a52c43',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
+  ['isregistered_3c_20t_20_3e',['IsRegistered&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#ac5c74a62f2fa07533c1d033b3398cd32',1,'Xamarin::Forms::CommonCore::InjectionManager']]],
   ['isstarred',['IsStarred',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#adc54e50703e19df329ba22c59c390354',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
   ['isstarredproperty',['IsStarredProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a74419783523d24140160471d91e0dc9c',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
   ['isvalid',['IsValid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a3e410f7353858224c29779299c367573',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],

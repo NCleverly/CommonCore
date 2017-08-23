@@ -12,6 +12,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Globalization;
+using System.Linq.Expressions;
 
 #if __ANDROID__
 using Xamarin.Forms.Platform.Android;
@@ -33,107 +34,308 @@ namespace Xamarin.Forms.CommonCore
 
     public static class CoreExtensions
     {
-		public static T ToObject<T>(this WeakReference<T> reference) where T : class
-		{
-			T obj = null;
-			reference.TryGetTarget(out obj);
-			return obj;
-		}
+        /// <summary>
+        /// Save the state of the view model.  Used for when the application may teardown the memory losing the property
+        /// values of the view model.
+        /// </summary>
+        /// <param name="vm">Vm.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static void SaveState<T>(this T vm) where T : ObservableViewModel, new()
+        {
+            Task.Run(async () =>
+            {
+                await InjectionManager.GetService<IFileStore, FileStore>(true)?.SaveAsync<T>(typeof(T).FullName, vm);
+            });
+        }
+        /// <summary>
+        /// Loads the state of the view model to ensure if torndown by the OS, it can regain the property values.
+        /// </summary>
+        /// <param name="vm">Vm.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static void LoadState<T>(this T vm) where T : ObservableViewModel, new()
+        {
+            Task.Run(async () =>
+            {
+                var result = await InjectionManager.GetService<IFileStore, FileStore>(true)?.GetAsync<T>(typeof(T).FullName);
+                if (result.Success)
+                {
+                    foreach (var prop in typeof(T).GetProperties())
+                    {
+                        prop.SetValue(vm, prop.GetValue(result.Response));
+                    }
+                }
+            });
+        }
+        /// <summary>
+        /// Saves the state of the view models in case the OS tearsdown the memory.
+        /// </summary>
+        /// <param name="app">App.</param>
+        public static void SaveViewModelState(this Application app)
+        {
+            var nameList = new List<string>();
+            foreach (var vm in InjectionManager.GetAllViewModels())
+            {
+                vm.SaveState();
+                nameList.Add(vm.GetType().FullName);
+            }
+            InjectionManager.GetService<IFileStore, FileStore>(true)?.SaveAsync<List<string>>("vmlistCoreExtensions", nameList).ContinueOn();
+        }
+        /// <summary>
+        /// Loads the state of the view model if they were torndown by the OS.
+        /// </summary>
+        /// <param name="app">App.</param>
+        public static void LoadViewModelState(this Application app)
+        {
+            if (!InjectionManager.HasViewModels)
+            {
+                Task.Run(async () =>
+                {
+                    var result = await InjectionManager.GetService<IFileStore, FileStore>(true)?.GetAsync<List<string>>("vmlistCoreExtensions");
+                    if (result.Success)
+                    {
+                        foreach (var vmName in result.Response)
+                        {
+                            InjectionManager.RegisterObjectByName(vmName);
+                            ((ObservableViewModel)InjectionManager.GetObjectByName(vmName)).LoadState();
+                        }
+                    }
+                });
+
+            }
+        }
+
+        public static T ToEnum<T>(this string str) where T : struct
+        {
+            T returnEnum;
+            Enum.TryParse(str, out returnEnum);
+            return returnEnum;
+        }
+
+        public static PropertyInfo GetProperty<T, P>(this Expression<Func<T, P>> exp)
+        {
+            var expression = (MemberExpression)exp.Body;
+            string name = expression.Member.Name;
+            return typeof(T).GetProperty(name);
+        }
+        public static P GetPropertyValue<T, P>(this Expression<Func<T, P>> exp, T obj)
+        {
+            var expression = (MemberExpression)exp.Body;
+            string name = expression.Member.Name;
+            var prop = obj.GetType().GetProperty(name);
+            return (P)prop.GetValue(obj, null);
+        }
+
+        public static bool ValidateTextFields(this ObservableViewModel model, params string[] fields)
+        {
+            foreach (var obj in fields) if (String.IsNullOrEmpty(obj)) return false;
+
+            return true;
+        }
+        public static bool ValidateNumberFields(this ObservableViewModel model, decimal minValue, decimal maxValue, params decimal[] fields)
+        {
+            foreach (var obj in fields)
+            {
+                if (obj < minValue || obj > maxValue)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public static bool ValidateEmailFields(this ObservableViewModel model, params string[] fields)
+        {
+            var RegexExp = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+            foreach (var obj in fields)
+            {
+                try
+                {
+                    return Regex.IsMatch(obj, RegexExp, RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+        public static bool ValidatePasswordFields(this ObservableViewModel model, params string[] fields)
+        {
+            var hasNumber = new Regex(@"[0-9]+");
+            var hasChar = new Regex(@"[a-zA-Z]+");
+            //var hasCorrectNumChars = new Regex(@"^.{8,16}$");
+            var hasCorrectNumChars = new Regex(@"^.{8,}$");
+
+            foreach (var obj in fields)
+            {
+                try
+                {
+                    return hasNumber.IsMatch(obj) && hasChar.IsMatch(obj) && hasCorrectNumChars.IsMatch(obj);
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+
+        public static bool ValidatePasswordMatch(this ObservableViewModel model, params string[] fields)
+        {
+            for (int i = 0; i < fields.Length; i++)
+            {
+                try
+                {
+                    var currentPassword = fields[i];
+
+                    // validate passwords match
+                    if (i > 0)
+                    {
+                        var previousPassword = fields[i - 1];
+                        var previousPasswordMatches = currentPassword == previousPassword;
+                        if (!previousPasswordMatches)
+                        {
+                            return false;
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Use a predicate to remove items from a generic ICollection
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="collection"></param>
+        /// <param name="predicate"></param>
+        public static void RemoveWhere<T>(this ICollection<T> collection, Func<T, bool> predicate)
+        {
+            int i = collection.Count;
+
+            while (--i > 0)
+            {
+                T element = collection.ElementAt(i);
+
+                if (predicate(element))
+                {
+                    collection.Remove(element);
+                }
+            }
+        }
+
+        public static T ToObject<T>(this WeakReference<T> reference) where T : class
+        {
+            T obj = null;
+            reference.TryGetTarget(out obj);
+            return obj;
+        }
+
+        public static T Cast<T>(this WeakReference obj) where T : class
+        {
+            if (obj.IsAlive)
+                return (T)obj.Target;
+            else
+                return null;
+        }
 
         public static string ToTitleCase(this string sentence)
         {
             return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(sentence.ToLower());
         }
 
-		public static T ConvertTo<T>(this StringResponse str) where T : struct
-		{
-			object result = null;
-			var code = Type.GetTypeCode(typeof(T));
-			switch (code)
-			{
-				case TypeCode.Int32:
-					result = JsonConvert.DeserializeObject<int>(str.Response);
-					break;
-				case TypeCode.Int16:
-					result = JsonConvert.DeserializeObject<short>(str.Response);
-					break;
-				case TypeCode.Int64:
-					result = JsonConvert.DeserializeObject<long>(str.Response);
-					break;
-				case TypeCode.String:
-					result = JsonConvert.DeserializeObject<string>(str.Response);
-					break;
-				case TypeCode.Boolean:
-					result = JsonConvert.DeserializeObject<bool>(str.Response);
-					break;
-				case TypeCode.Double:
-					result = JsonConvert.DeserializeObject<double>(str.Response);
-					break;
-				case TypeCode.Decimal:
-					result = JsonConvert.DeserializeObject<decimal>(str.Response);
-					break;
-				case TypeCode.Byte:
-					result = JsonConvert.DeserializeObject<Byte>(str.Response);
-					break;
-				case TypeCode.DateTime:
-					result = JsonConvert.DeserializeObject<DateTime>(str.Response);
-					break;
-				case TypeCode.Single:
-					result = JsonConvert.DeserializeObject<Single>(str.Response);
-					break;
-			}
-			return (T)result;
-		}
+        public static T ConvertTo<T>(this StringResponse str) where T : struct
+        {
+            object result = null;
+            var code = Type.GetTypeCode(typeof(T));
+            switch (code)
+            {
+                case TypeCode.Int32:
+                    result = JsonConvert.DeserializeObject<int>(str.Response);
+                    break;
+                case TypeCode.Int16:
+                    result = JsonConvert.DeserializeObject<short>(str.Response);
+                    break;
+                case TypeCode.Int64:
+                    result = JsonConvert.DeserializeObject<long>(str.Response);
+                    break;
+                case TypeCode.String:
+                    result = JsonConvert.DeserializeObject<string>(str.Response);
+                    break;
+                case TypeCode.Boolean:
+                    result = JsonConvert.DeserializeObject<bool>(str.Response);
+                    break;
+                case TypeCode.Double:
+                    result = JsonConvert.DeserializeObject<double>(str.Response);
+                    break;
+                case TypeCode.Decimal:
+                    result = JsonConvert.DeserializeObject<decimal>(str.Response);
+                    break;
+                case TypeCode.Byte:
+                    result = JsonConvert.DeserializeObject<Byte>(str.Response);
+                    break;
+                case TypeCode.DateTime:
+                    result = JsonConvert.DeserializeObject<DateTime>(str.Response);
+                    break;
+                case TypeCode.Single:
+                    result = JsonConvert.DeserializeObject<Single>(str.Response);
+                    break;
+            }
+            return (T)result;
+        }
 
         public static string GetString(this PropertyInfo prop, object obj)
         {
             return (string)prop.GetValue(obj, null);
         }
 
-		/// <summary>
-		/// Returns an ObservableCollection from a set of enumerable items.
-		/// </summary>
-		/// <returns>The observable collection.</returns>
-		/// <param name="items">Items.</param>
-		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static OptimizedObservableCollection<T> ToObservableCollection<T>(this IEnumerable<T> items)
-		{
-			return new OptimizedObservableCollection<T>(items);
-		}
+        /// <summary>
+        /// Returns an ObservableCollection from a set of enumerable items.
+        /// </summary>
+        /// <returns>The observable collection.</returns>
+        /// <param name="items">Items.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static OptimizedObservableCollection<T> ToObservableCollection<T>(this IEnumerable<T> items)
+        {
+            return new OptimizedObservableCollection<T>(items);
+        }
 
-		/// <summary>
-		/// Add a range of IEnumerable collection to an existing Collection.
-		/// </summary>
-		///<typeparam name="T">Type of collection</typeparam>
-		///<param name="collection">Collection</param>
-		/// <param name="items">Items to add</param>
-		public static void AddRange<T>(this ICollection<T> collection, IEnumerable<T> items)
-		{
-			if (collection == null)
-				throw new ArgumentNullException("collection");
-			if (items == null)
-				throw new ArgumentNullException("items");
+        /// <summary>
+        /// Add a range of IEnumerable collection to an existing Collection.
+        /// </summary>
+        ///<typeparam name="T">Type of collection</typeparam>
+        ///<param name="collection">Collection</param>
+        /// <param name="items">Items to add</param>
+        public static void AddRange<T>(this ICollection<T> collection, IEnumerable<T> items)
+        {
+            if (collection == null)
+                throw new ArgumentNullException("collection");
+            if (items == null)
+                throw new ArgumentNullException("items");
 
-			foreach (var item in items)
-				collection.Add(item);
-		}
+            foreach (var item in items)
+                collection.Add(item);
+        }
 
 
-		/// <summary>
-		/// Removes a set of items from the collection.
-		/// </summary>
-		/// <param name="collection">Collection to remove from</param>
-		/// <param name="items">Items to remove from collection.</param>
-		public static void RemoveRange<T>(this ICollection<T> collection, IEnumerable<T> items)
-		{
-			if (collection == null)
-				throw new ArgumentNullException("collection");
-			if (items == null)
-				throw new ArgumentNullException("items");
+        /// <summary>
+        /// Removes a set of items from the collection.
+        /// </summary>
+        /// <param name="collection">Collection to remove from</param>
+        /// <param name="items">Items to remove from collection.</param>
+        public static void RemoveRange<T>(this ICollection<T> collection, IEnumerable<T> items)
+        {
+            if (collection == null)
+                throw new ArgumentNullException("collection");
+            if (items == null)
+                throw new ArgumentNullException("items");
 
-			foreach (var item in items)
-				collection.Remove(item);
-		}
+            foreach (var item in items)
+                collection.Remove(item);
+        }
 
         /// <summary>
         /// Encrypteds the data model properties.
@@ -387,6 +589,19 @@ namespace Xamarin.Forms.CommonCore
             var result = await taskCollection;
             return result.FirstOrDefault();
         }
+
+        /// <summary>
+        /// Lasts the or default on a async (promised) collection
+        /// </summary>
+        /// <returns>The or default.</returns>
+        /// <param name="taskCollection">Task collection.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static async Task<T> LastOrDefault<T>(this Task<List<T>> taskCollection)
+        {
+            var result = await taskCollection;
+            return result.LastOrDefault();
+        }
+
         /// <summary>
         /// First or Default on a async (promised) collection in a GenericResponse object
         /// </summary>
@@ -401,13 +616,13 @@ namespace Xamarin.Forms.CommonCore
             else
                 return default(T);
         }
-		/// <summary>
-		/// Converts List to ObservableCollection
-		/// </summary>
-		/// <returns>The observable.</returns>
-		/// <param name="taskList">List.</param>
-		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static async Task<ObservableCollection<T>> ToObservable<T>(this Task<List<T>> taskList)
+        /// <summary>
+        /// Converts List to ObservableCollection
+        /// </summary>
+        /// <returns>The observable.</returns>
+        /// <param name="taskList">List.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static async Task<ObservableCollection<T>> ToObservable<T>(this Task<List<T>> taskList)
         {
             var result = await taskList;
             var collection = new ObservableCollection<T>();
@@ -417,37 +632,37 @@ namespace Xamarin.Forms.CommonCore
 
 
 
-		public static ObservableCollection<T> ToObservable<T>(this IList list)
-		{
-			var collection = new ObservableCollection<T>();
-            for (var x = 0; x < list.Count;x++)
+        public static ObservableCollection<T> ToObservable<T>(this IList list)
+        {
+            var collection = new ObservableCollection<T>();
+            for (var x = 0; x < list.Count; x++)
             {
                 collection.Add((T)list[x]);
             }
-			return collection;
-		}
+            return collection;
+        }
 
-		public static ObservableCollection<T> ToObservable<T>(this List<T> list)
-		{
-			var collection = new ObservableCollection<T>();
-			list?.ForEach((item) => collection.Add(item));
-			return collection;
-		}
-
-		/// <summary>
-		/// Converts IQueryable to ObservableCollection
-		/// </summary>
-		/// <returns>The observable.</returns>
-		/// <param name="query">Query.</param>
-		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static ObservableCollection<T> ToObservable<T>(this IQueryable<T> query)
+        public static ObservableCollection<T> ToObservable<T>(this List<T> list)
         {
             var collection = new ObservableCollection<T>();
-            foreach(var item in query.AsEnumerable<T>())
+            list?.ForEach((item) => collection.Add(item));
+            return collection;
+        }
+
+        /// <summary>
+        /// Converts IQueryable to ObservableCollection
+        /// </summary>
+        /// <returns>The observable.</returns>
+        /// <param name="query">Query.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static ObservableCollection<T> ToObservable<T>(this IQueryable<T> query)
+        {
+            var collection = new ObservableCollection<T>();
+            foreach (var item in query.AsEnumerable<T>())
             {
                 collection.Add(item);
             }
-			return collection;
+            return collection;
         }
 
         /// <summary>
@@ -559,7 +774,7 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <returns>The dictionary.</returns>
         /// <param name="obj">Object.</param>
-        public static Dictionary<string,object> ToDictionary(this object obj)
+        public static Dictionary<string, object> ToDictionary(this object obj)
         {
             //var dict = new Dictionary<string, object>();
             //foreach(var prop in obj.GetType().GetProperties())
@@ -622,27 +837,28 @@ namespace Xamarin.Forms.CommonCore
                      */
 
                     //This is a workaround for API 25 in Droid but this may have issues as well
-                
+
                     var totalPages = nav.NavigationStack.Count();
                     var indexOf = 0;
-                    for (int x = (totalPages -1); x > -1;x--)
+                    for (int x = (totalPages - 1); x > -1; x--)
                     {
                         var nm = nav.NavigationStack[x].GetType().FullName;
-                        if(nm.Equals(pageName)){
+                        if (nm.Equals(pageName))
+                        {
                             indexOf = totalPages - x;
                             break;
                         }
                     }
 
-                    for (var x = 0; x < (indexOf - 1) ;x++)
+                    for (var x = 0; x < (indexOf - 1); x++)
                     {
                         if (CoreSettings.AppNav.NavigationStack.Count() != 0)
                         {
                             await CoreSettings.AppNav.PopAsync(false);
                         }
-               
-					}
-				}
+
+                    }
+                }
 
 
             }

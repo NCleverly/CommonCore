@@ -317,5 +317,6 @@
     <None Include="$(MSBuildThisFileDirectory)Styles\AppStyles.txt" />
     <None Include="$(MSBuildThisFileDirectory)Settings\AppSettings.txt" />
     <None Include="$(MSBuildThisFileDirectory)Config\InjectionManager.Unity.txt" />
+    <None Include="$(MSBuildThisFileDirectory)FodyWeavers.txt" />
   </ItemGroup>
 </Project>

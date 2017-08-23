@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['pagetitle',['pageTitle',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1592353712582a5191058adb5c1492dd',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['parent',['parent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_optimized_observable_collection_1_1_mass_updater.html#a77b399fca01bbfb1efe150ed42851bd4',1,'Xamarin::Forms::CommonCore::OptimizedObservableCollection::MassUpdater']]],
   ['passwordrevealenabledproperty',['PasswordRevealEnabledProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a722e777d52b893eac24eae4e45280926',1,'Xamarin::Forms::CommonCore::EntryUnderline']]],
   ['progress',['progress',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a4c63ad74191676f05d6ea98e749270f7',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],

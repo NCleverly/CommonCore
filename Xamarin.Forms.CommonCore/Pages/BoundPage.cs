@@ -11,22 +11,13 @@ namespace Xamarin.Forms.CommonCore
 	{
         private long appearingUTC;
 
-        private WeakReference<T> _vm;
-        public T VM 
+        public T VM
         {
-            get
-            {
-                return _vm.ToObject<T>();
-            }
-            set
-            {
-                _vm = new WeakReference<T>(value);
-            } 
+            get { return InjectionManager.GetViewModel<T>(); }
         }
 
 		public BoundPage()
 		{
-			VM = InjectionManager.GetViewModel<T>();
 			this.BindingContext = VM;
             if (!string.IsNullOrEmpty(VM.PageTitle))
                 VM.PageTitle = this.Title;

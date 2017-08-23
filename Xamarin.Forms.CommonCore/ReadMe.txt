@@ -15,7 +15,6 @@ Android SDK Manager - > Extras
  *****************************
 
 Required Nuget Installs
- - Unity /* Microsoft's dependency injection framework */
  - sqlite-net-pcl
  - ModernHttpClient
  - Newtonsoft.Json
@@ -23,6 +22,7 @@ Required Nuget Installs
  - Plugin.Permissions
  - Xam.Plugin.Connectivity
  - Xam.Plugins.Settings
+ - PropertyChanged.Fody  /* https://github.com/Fody/PropertyChanged  includes documentation in wiki */
  - Xamarin.FFImageLoading.Forms
  - Xamarin.FFImageLoading.Transformations
  - Xamarin.Auth
@@ -75,6 +75,64 @@ Step 2 (enabling push notifications) -> see readme under PushNotifications
 
 Step 3 (optional OAuth Setup) -> see readme.authentication.txt nested file under IAuthenticatorService 
 in the Services folder. /* CustomTab for Android has issues with Xamarin.Android.Support version 25 */
+
+Step 4 (Setup Fody) ->  Make sure the FodyWeavers.xml file installed from PropertyChanged.Fody nuget has the following:
+<?xml version="1.0" encoding="utf-8" ?>
+<Weavers>
+    <PropertyChanged/>
+</Weavers>
+
+Step 5 (Optional) -> You may want to setup the Forms Application page to include the following within override lifecyle methods:
+
+        protected override void OnStart()
+        {
+            MainPage.SizeChanged += AppScreenSizeChanged;
+            CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
+        }
+
+        protected override void OnSleep()
+        {
+            MainPage.SizeChanged -= AppScreenSizeChanged;
+            CrossConnectivity.Current.ConnectivityChanged -= ConnectivityChanged;
+            this.SaveViewModelState();
+        }
+
+        protected override void OnResume()
+        {
+            MainPage.SizeChanged += AppScreenSizeChanged;
+            CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
+            this.LoadViewModelState();
+        }
+
+        private void ConnectivityChanged(object sender, ConnectivityChangedEventArgs args)
+        {
+            CoreSettings.IsConnected = args.IsConnected;
+        }
+
+        private void AppScreenSizeChanged(object sender, EventArgs args)
+        {
+            CoreSettings.ScreenSize = new Size(MainPage.Width, MainPage.Height);
+        }
+
+
+Step 6 (Optional) -> In order to use differnet configuration files across dev environments, you need to modify build settings.
+    * Right click on the solution and selection options
+    * In the dialog box under Build select Configuration
+    * Out of the box there should be Debug and Release.  You can add QA or any other custom name you want.
+    * When finished...open iOS and Android projects and select options.
+    * In the dialog box under Build select Compiler. Add appropriate environments names to Define Symbols for each configuration
+    * Add the following code:
+        * iOS -> AppDelegate -> FinishedLaunching
+        * android -> MainApplication -> OnCreate
+
+        #if DEBUG
+            AppSettings.CurrentBuid = "dev";
+        #elif QA
+            AppSettings.CurrentBuid = "qa";
+        #elif RELEASE
+            AppSettings.CurrentBuid = "prod";
+        #endif
+
 
 *** Search View ***
 IOS uses the Search bar as a control in the UI but Android generally expects it in the Actionbar.

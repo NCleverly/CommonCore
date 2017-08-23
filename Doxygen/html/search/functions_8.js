@@ -6,5 +6,6 @@ var searchData=
   ['initializeconnection',['InitializeConnection',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#a56842a01d7c8f8eb9496899deaaecbc2',1,'Xamarin::Forms::CommonCore::SqliteDb']]],
   ['isdefaultvalue_3c_20t_20_3e',['IsDefaultValue&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#a9731698985d0a5488d275ff27b867129',1,'Xamarin::Forms::CommonCore::SqliteDb']]],
   ['isemtpyornull',['IsEmtpyOrNull',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a913d0c20bc1565ad420803be2efc1e60',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
+  ['isregistered_3c_20t_20_3e',['IsRegistered&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#ac5c74a62f2fa07533c1d033b3398cd32',1,'Xamarin::Forms::CommonCore::InjectionManager']]],
   ['itemsourcebindablelist',['ItemSourceBindableList',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a4d7d78a40dec930abc664bbd6e128686',1,'Xamarin::Forms::CommonCore::BindablePicker']]]
 ];

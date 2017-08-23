@@ -9,6 +9,7 @@ var searchData=
   ['callback',['Callback',['../class_xamarin_1_1_forms_1_1_common_core_1_1_prompt.html#aeb628d03eaf041ac56289e069172cb05',1,'Xamarin::Forms::CommonCore::Prompt']]],
   ['canexecute',['CanExecute',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#af609c0ccefcf686042e708dc0b296fc0',1,'Xamarin::Forms::CommonCore::RelayCommand']]],
   ['canexecutechanged',['CanExecuteChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#a32c9dfcc7172eb8b9c365696a6d1fde1',1,'Xamarin::Forms::CommonCore::RelayCommand']]],
+  ['cast_3c_20t_20_3e',['Cast&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a2b496826a96a87da5a724d26179e598c',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['clearlogging',['ClearLogging',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_log_service.html#ac843f7b9a0b08783db3bba5718c442b4',1,'Xamarin.Forms.CommonCore.ILogService.ClearLogging()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_log_service.html#a1c3a6996e54aead4287d5e89b19da4b4',1,'Xamarin.Forms.CommonCore.LogService.ClearLogging()']]],
   ['clicked',['Clicked',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#a497d78f2dae86fd154b15bd72c735b59',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['clickevent',['ClickEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a1798c153bf6be472670864d4c056241b',1,'Xamarin::Forms::CommonCore::GradientButton']]],
@@ -70,5 +71,6 @@ var searchData=
   ['crosspushnotification_2ecs',['CrossPushNotification.cs',['../_cross_push_notification_8cs.html',1,'']]],
   ['current',['Current',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a4132cf38f37171437cdc4f62f877524d',1,'PushNotification::Plugin::CrossPushNotification']]],
   ['currentbuid',['CurrentBuid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#af44d78ca823a1a0dad953d36e90217e3',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
-  ['customsettings',['CustomSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#a1a2ee350c78375cdebd4d6a009e72a58',1,'Xamarin.Forms.CommonCore.ConfigurationModel.CustomSettings()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aa37beb84cabc6f249998561ddcd9448b',1,'Xamarin.Forms.CommonCore.ObservableViewModel.CustomSettings()']]]
+  ['customsettings',['CustomSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#a1a2ee350c78375cdebd4d6a009e72a58',1,'Xamarin.Forms.CommonCore.ConfigurationModel.CustomSettings()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aa37beb84cabc6f249998561ddcd9448b',1,'Xamarin.Forms.CommonCore.ObservableViewModel.CustomSettings()']]],
+  ['cvtrcontainer',['cvtrContainer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a63f74526b84c15eaf6bf1b7850b92bde',1,'Xamarin::Forms::CommonCore::InjectionManager']]]
 ];

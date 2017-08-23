@@ -15,7 +15,6 @@ var searchData=
   ['shouldraisenotifications',['shouldRaiseNotifications',['../class_xamarin_1_1_forms_1_1_common_core_1_1_optimized_observable_collection.html#adf4a18d37fda3cfa9f8d0e939d84ddc4',1,'Xamarin::Forms::CommonCore::OptimizedObservableCollection']]],
   ['silent',['Silent',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#aa664180eb2e9a7e2030ca7dfd41d65db',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
   ['sizeproperty',['SizeProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#a8298913ba63fd419d8f23c34fac2bd25',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
-  ['sqlitedb',['sqliteDb',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a908d6f2c987581c53db3b451c88121e8',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['srvcontainer',['srvContainer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a6f69ec208d470065568661d9f5ebb302',1,'Xamarin::Forms::CommonCore::InjectionManager']]],
   ['stargroups',['starGroups',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a3fc216e08268dcb32441335cf2b3a6c1',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
   ['starlist',['starList',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#a2394f3914f187826365bd9c7dec9b092',1,'Xamarin::Forms::CommonCore::RankingControl']]],
