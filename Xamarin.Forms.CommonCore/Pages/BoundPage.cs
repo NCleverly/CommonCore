@@ -1,12 +1,7 @@
-﻿﻿using System;
-using System.Reflection;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Xamarin.Forms;
-using Xamarin.Forms.CommonCore;
+﻿using System;
 namespace Xamarin.Forms.CommonCore
 {
-	public abstract class BoundPage<T> : BasePages
+    public abstract class BoundPage<T> : BasePages
 		where T : ObservableViewModel
 	{
         private long appearingUTC;

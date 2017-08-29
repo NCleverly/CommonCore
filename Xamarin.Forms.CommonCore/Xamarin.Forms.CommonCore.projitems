@@ -303,10 +303,13 @@
     <Folder Include="$(MSBuildThisFileDirectory)Settings\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\Navigation\" />
     <Folder Include="$(MSBuildThisFileDirectory)Collections\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Config\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Styles\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Settings\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Partials\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)ReadMe.txt" />
-    <None Include="$(MSBuildThisFileDirectory)Config\config.dev.txt" />
     <None Include="$(MSBuildThisFileDirectory)PushNotifications\readme.txt" />
     <None Include="$(MSBuildThisFileDirectory)Services\readme.authentication.txt">
       <DependentUpon>IAuthenticatorService.cs</DependentUpon>
@@ -314,9 +317,13 @@
     <None Include="$(MSBuildThisFileDirectory)Services\ActivityCustomUrlSchemeInterceptor.txt">
       <DependentUpon>IAuthenticatorService.cs</DependentUpon>
     </None>
-    <None Include="$(MSBuildThisFileDirectory)Styles\AppStyles.txt" />
-    <None Include="$(MSBuildThisFileDirectory)Settings\AppSettings.txt" />
     <None Include="$(MSBuildThisFileDirectory)Config\InjectionManager.Unity.txt" />
-    <None Include="$(MSBuildThisFileDirectory)FodyWeavers.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Config\config.dev.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Styles\AppStyles.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Settings\AppSettings.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\FodyWeavers.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\ReadMe.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Partials\PartialConfigurationModel.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Partials\PartialObservableViewModel.txt" />
   </ItemGroup>
 </Project>

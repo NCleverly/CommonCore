@@ -5,6 +5,11 @@ namespace Xamarin.Forms.CommonCore
 {
     public class BasePages : ContentPage
     {
+        public Size ScreenSize
+        {
+            get { return CoreSettings.ScreenSize; }
+        }
+
         protected override bool OnBackButtonPressed()
         {
             var bindingContext = BindingContext as ObservableViewModel;
