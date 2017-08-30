@@ -1,7 +1,8 @@
 var searchData=
 [
+  ['easingproperty',['EasingProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_animation_base.html#a889ee13d558fa97d71659aa5c2d27545',1,'Xamarin::Forms::CommonCore::AnimationBase']]],
   ['encryptionsalt',['encryptionSalt',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a67702edf4640d25907ce01a7b027e880',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
-  ['endcolorproperty',['EndColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#aa7a22661450894c78f7541c44a4324c8',1,'Xamarin::Forms::CommonCore::GradientButton']]],
+  ['endcolorproperty',['EndColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#aa7a22661450894c78f7541c44a4324c8',1,'Xamarin.Forms.CommonCore.GradientButton.EndColorProperty()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_stack_layout.html#a6d678d80e0883633aee6df40a2fc2f19',1,'Xamarin.Forms.CommonCore.GradientStackLayout.EndColorProperty()']]],
   ['entrycolorproperty',['EntryColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#ab7cf012113cb473e6eb0a5516a7dd86f',1,'Xamarin.Forms.CommonCore.BindablePicker.EntryColorProperty()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a1c962053109e8596cea6b050bf361bc0',1,'Xamarin.Forms.CommonCore.EntryUnderline.EntryColorProperty()']]],
   ['error',['Error',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#ab899ca84802651396d15e015b1dfab10',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
   ['errorcolorproperty',['ErrorColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#acd010cabdcb0cd776607220e5a315dca',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],

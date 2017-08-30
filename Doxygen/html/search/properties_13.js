@@ -2,6 +2,7 @@ var searchData=
 [
   ['tabbackgroundcolor',['TabBackgroundColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_tabbed_page.html#aa24d486ee6585b1b21eec829a05f5731',1,'Xamarin::Forms::CommonCore::BaseTabbedPage']]],
   ['tablenames',['TableNames',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html#a5bd2b3f5b40e84e396043ed45f08d425',1,'Xamarin::Forms::CommonCore::SqliteSettings']]],
+  ['target',['Target',['../class_xamarin_1_1_forms_1_1_common_core_1_1_animation_base.html#a9e671f7eb29769e18b54b0a9617bc0c1',1,'Xamarin::Forms::CommonCore::AnimationBase']]],
   ['text',['Text',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#a8eff4d83c2306bb25b3848a4709f0b9c',1,'Xamarin::Forms::CommonCore::Snack']]],
   ['textcolor',['TextColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#aa3a5a1351e414bfe7cb53b224ff227dc',1,'Xamarin::Forms::CommonCore::Snack']]],
   ['timestamp',['TimeStamp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_error_log.html#a380b2d67279106c230b7561ec8ec3f03',1,'Xamarin::Forms::CommonCore::ErrorLog']]],
@@ -11,5 +12,8 @@ var searchData=
   ['tokenbearer',['TokenBearer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#aa65d097c775a4af2df6b25a07568451f',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
   ['tokenisvalid',['TokenIsValid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#a655ab252d5485f653439de9b6de271fe',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
   ['trackinginfo',['TrackingInfo',['../class_xamarin_1_1_forms_1_1_common_core_1_1_analytic_log.html#ae1eddeaef8cdfbcd6f083dd612d84720',1,'Xamarin::Forms::CommonCore::AnalyticLog']]],
-  ['truecolor',['TrueColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_switch_control.html#acbad4c70482594b72137140561302e58',1,'Xamarin::Forms::CommonCore::SwitchControl']]]
+  ['translatex',['TranslateX',['../class_xamarin_1_1_forms_1_1_common_core_1_1_translate_to_animation.html#a6da737ab905e86bbc7abbf4864a9587e',1,'Xamarin::Forms::CommonCore::TranslateToAnimation']]],
+  ['translatey',['TranslateY',['../class_xamarin_1_1_forms_1_1_common_core_1_1_translate_to_animation.html#aa079d18924d31745ca573e0e3415271b',1,'Xamarin::Forms::CommonCore::TranslateToAnimation']]],
+  ['truecolor',['TrueColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_switch_control.html#acbad4c70482594b72137140561302e58',1,'Xamarin::Forms::CommonCore::SwitchControl']]],
+  ['trueobject',['TrueObject',['../class_xamarin_1_1_forms_1_1_common_core_1_1_boolean_to_object_converter.html#ab893f3545b7aa3d3a1ccd863930d14e5',1,'Xamarin::Forms::CommonCore::BooleanToObjectConverter']]]
 ];

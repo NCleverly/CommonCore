@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['ratingproperty',['RatingProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a434ae01426bd92007a99dbec8e05e32e',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
-  ['refreshdatafunc',['refreshDataFunc',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#a3cfead3fe75b5a1c78a895310baa86cf',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
-  ['regex',['regex',['../class_xamarin_1_1_forms_1_1_common_core_1_1_masked_text_field.html#ad3dd70eca90a6b69eb3f5d296ef246de',1,'Xamarin::Forms::CommonCore::MaskedTextField']]],
-  ['regexexpproperty',['RegexExpProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_reg_ex_behavior.html#a27e93ad8a0f18ab50ca592e67489c25c',1,'Xamarin::Forms::CommonCore::RegExBehavior']]],
-  ['registrationcomplete',['RegistrationComplete',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#a738f4d0e1a3aefddbad92909654587f9',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
-  ['returnkeytypeproperty',['ReturnKeyTypeProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a72ecaa4bd701e55935ca7597ffe55e32',1,'Xamarin::Forms::CommonCore::EntryUnderline']]]
+  ['parent',['parent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_optimized_observable_collection_1_1_mass_updater.html#a77b399fca01bbfb1efe150ed42851bd4',1,'Xamarin::Forms::CommonCore::OptimizedObservableCollection::MassUpdater']]],
+  ['passwordrevealenabledproperty',['PasswordRevealEnabledProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a722e777d52b893eac24eae4e45280926',1,'Xamarin::Forms::CommonCore::EntryUnderline']]],
+  ['progress',['progress',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a4c63ad74191676f05d6ea98e749270f7',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
+  ['protectedstore',['protectedStore',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a3fc733593e00b7e02f91f3557e9239fb',1,'Xamarin::Forms::CommonCore::AccountService']]],
+  ['pwkey',['pwKey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a9ef883771813d2eef81f0b5dff233922',1,'Xamarin::Forms::CommonCore::AccountService']]]
 ];

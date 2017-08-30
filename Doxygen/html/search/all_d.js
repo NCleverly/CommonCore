@@ -22,5 +22,6 @@ var searchData=
   ['mobilecenter_5fhockeyapp',['MobileCenter_HockeyApp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#a3f438b72c4cd68aebda4d7c4d84f7197',1,'Xamarin::Forms::CommonCore::ConfigurationModel']]],
   ['mobilecenterhockeyapp',['MobileCenterHockeyApp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html',1,'Xamarin::Forms::CommonCore']]],
   ['model',['Model',['../class_xamarin_1_1_forms_1_1_common_core_1_1_device_information.html#a8a99bcc05694b406320ad122de1eb6b5',1,'Xamarin::Forms::CommonCore::DeviceInformation']]],
+  ['movement',['Movement',['../class_xamarin_1_1_forms_1_1_common_core_1_1_jump_animation.html#aac55e920e84eba2450f7bdc0db9f66d0',1,'Xamarin.Forms.CommonCore.JumpAnimation.Movement()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_shake_animation.html#a6a7c1ad8364b4d08eacd349c98b8613f',1,'Xamarin.Forms.CommonCore.ShakeAnimation.Movement()']]],
   ['mutex',['Mutex',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#a3e402105334f038466b03e1171ccd26d',1,'Xamarin::Forms::CommonCore::SqliteDb']]]
 ];

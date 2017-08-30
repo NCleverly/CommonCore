@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['navigatelatlong',['NavigateLatLong',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_map_navigate.html#ac8fe5360cfd74e7e53f1b3c810922093',1,'Xamarin::Forms::CommonCore::IMapNavigate']]],
-  ['navigatewithaddress',['NavigateWithAddress',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_map_navigate.html#ad55001c218a03bacc5f05a43f3c12290',1,'Xamarin::Forms::CommonCore::IMapNavigate']]],
-  ['newpushnotificationnotinitializedexception',['NewPushNotificationNotInitializedException',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#ac6acdc2833ba2014f1323dad7f6d9723',1,'PushNotification::Plugin::CrossPushNotification']]],
-  ['notificationfired',['NotificationFired',['../class_xamarin_1_1_forms_1_1_common_core_1_1_property_changed_behavior.html#abf6d495a6cc96c449a7bc84bc565d93c',1,'Xamarin::Forms::CommonCore::PropertyChangedBehavior']]],
-  ['notify',['Notify',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a1c238c92703467d0ec726bc3678c9460',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
-  ['notimplementedinreferenceassembly',['NotImplementedInReferenceAssembly',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a36000c81d867f05eb3aa8abdd3e27485',1,'PushNotification::Plugin::CrossPushNotification']]]
+  ['maskedtextchanged',['MaskedTextChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_masked_text_field.html#a182533951e0a96d249f8ca3414b8b138',1,'Xamarin::Forms::CommonCore::MaskedTextField']]],
+  ['maskedtextfield',['MaskedTextField',['../class_xamarin_1_1_forms_1_1_common_core_1_1_masked_text_field.html#a304677ff1fc97288ee9bc84727854c44',1,'Xamarin::Forms::CommonCore::MaskedTextField']]],
+  ['massupdater',['MassUpdater',['../class_xamarin_1_1_forms_1_1_common_core_1_1_optimized_observable_collection_1_1_mass_updater.html#a063eb550baa87fddf50f44ff69db49fb',1,'Xamarin::Forms::CommonCore::OptimizedObservableCollection::MassUpdater']]]
 ];

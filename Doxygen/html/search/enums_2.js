@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fabcontrolsize',['FABControlSize',['../namespace_xamarin_1_1_forms_1_1_common_core_1_1_material_design.html#a84f0950ee1269c9faac3dca329e5f719',1,'Xamarin::Forms::CommonCore::MaterialDesign']]]
+  ['easingtype',['EasingType',['../namespace_xamarin_1_1_forms_1_1_common_core.html#a00394e187ad7303202b0a41ea4e05855',1,'Xamarin::Forms::CommonCore']]]
 ];

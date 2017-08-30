@@ -5,6 +5,7 @@ var searchData=
   ['oauthclientid_5fuwp',['OAuthClientID_UWP',['../class_xamarin_1_1_forms_1_1_common_core_1_1_google_settings.html#a9e20962811d762b36c6a09095e94f17b',1,'Xamarin::Forms::CommonCore::GoogleSettings']]],
   ['onfinishedplaying',['OnFinishedPlaying',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_audio_player.html#ab1adebbdda0719a93d2b1ce2b85805c0',1,'Xamarin::Forms::CommonCore::IAudioPlayer']]],
   ['ontasktime',['OnTaskTime',['../class_xamarin_1_1_forms_1_1_common_core_1_1_analytic_log.html#ae6f68236348906541de9f2168a3b2a8b',1,'Xamarin::Forms::CommonCore::AnalyticLog']]],
+  ['opacity',['Opacity',['../class_xamarin_1_1_forms_1_1_common_core_1_1_fade_to_animation.html#a7526e3e589262e9cc59f17930de82a31',1,'Xamarin::Forms::CommonCore::FadeToAnimation']]],
   ['optiontext',['OptionText',['../class_xamarin_1_1_forms_1_1_common_core_1_1_picker_item.html#a2dad30698cc56849b01369254b41e914',1,'Xamarin::Forms::CommonCore::PickerItem']]],
   ['orientation',['Orientation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#a2d9762691155e75824914454c0e87430',1,'Xamarin::Forms::CommonCore::Snack']]],
   ['osversion',['OSVersion',['../class_xamarin_1_1_forms_1_1_common_core_1_1_device_information.html#a22e6688cfb2976f2e020de7a2705efc7',1,'Xamarin::Forms::CommonCore::DeviceInformation']]],

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['route',['Route',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aebd939a54cefa043add7c8ba6eab51daa9405c3aff9112c3c60d03b94792877dc',1,'Xamarin::Forms::CommonCore']]]
+  ['physicaldevice',['PhysicalDevice',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aca74fda8bdb0d058a9987c8bfaac070ba824a3cc08b09357f5ab207dd2e7e6376',1,'Xamarin::Forms::CommonCore']]]
 ];

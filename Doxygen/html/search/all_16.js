@@ -8,6 +8,8 @@ var searchData=
   ['validatetextfields',['ValidateTextFields',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a5f3f395c9bd32b5065786338a8a0b55d',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['validator',['Validator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#aed5bbbb943ecdab2ceccdb88b16801fe',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
   ['validatorproperty',['ValidatorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a4b709123f2e6965f8208a253db41f15c',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
+  ['valueconversionattribute',['ValueConversionAttribute',['../class_xamarin_1_1_forms_1_1_common_core_1_1_value_conversion_attribute.html',1,'Xamarin.Forms.CommonCore.ValueConversionAttribute'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_value_conversion_attribute.html#a354f6acb764f8ea5a4d083004b0b658d',1,'Xamarin.Forms.CommonCore.ValueConversionAttribute.ValueConversionAttribute()']]],
+  ['valueconversionattribute_2ecs',['ValueConversionAttribute.cs',['../_value_conversion_attribute_8cs.html',1,'']]],
   ['view',['view',['../class_xamarin_1_1_forms_1_1_common_core_1_1_property_changed_behavior.html#a1aeadd2fe04e4ad851de6b490e0e61fe',1,'Xamarin::Forms::CommonCore::PropertyChangedBehavior']]],
   ['viewname',['ViewName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_analytic_log.html#a2628da820725661b935d7a4b9e6afc97',1,'Xamarin::Forms::CommonCore::AnalyticLog']]],
   ['viewshadow',['ViewShadow',['../class_xamarin_1_1_forms_1_1_common_core_1_1_common_effects.html#ae49478a92a0da2014895d8fabfcbcdc4',1,'Xamarin::Forms::CommonCore::CommonEffects']]],

@@ -1,9 +1,19 @@
 var searchData=
 [
-  ['tablename',['TableName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_table_name.html',1,'Xamarin::Forms::CommonCore']]],
-  ['telephonyboundpage',['TelephonyBoundPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_bound_page.html',1,'Xamarin::Forms::CommonCore']]],
-  ['telephonycompletestatus',['TelephonyCompleteStatus',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_complete_status.html',1,'Xamarin::Forms::CommonCore']]],
-  ['telephonypage',['TelephonyPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_page.html',1,'Xamarin::Forms::CommonCore']]],
-  ['textarea',['TextArea',['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html',1,'Xamarin.Forms.CommonCore.TextArea'],['../class_common_1_1_core_1_1_text_area.html',1,'Common.Core.TextArea']]],
-  ['trackingmetatdata',['TrackingMetatData',['../class_xamarin_1_1_forms_1_1_common_core_1_1_tracking_metat_data.html',1,'Xamarin::Forms::CommonCore']]]
+  ['scaletoanimation',['ScaleToAnimation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_scale_to_animation.html',1,'Xamarin::Forms::CommonCore']]],
+  ['segmentbutton',['SegmentButton',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_button.html',1,'Xamarin::Forms::CommonCore']]],
+  ['segmentcontrol',['SegmentControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html',1,'Xamarin::Forms::CommonCore']]],
+  ['segmentcontrolview',['SegmentControlView',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control_view.html',1,'Xamarin::Forms::CommonCore']]],
+  ['shakeanimation',['ShakeAnimation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_shake_animation.html',1,'Xamarin::Forms::CommonCore']]],
+  ['snack',['Snack',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html',1,'Xamarin::Forms::CommonCore']]],
+  ['socialmedia',['SocialMedia',['../class_xamarin_1_1_forms_1_1_common_core_1_1_social_media.html',1,'Xamarin::Forms::CommonCore']]],
+  ['sqldatamodel',['SqlDataModel',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sql_data_model.html',1,'Xamarin::Forms::CommonCore']]],
+  ['sqlitedb',['SqliteDb',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html',1,'Xamarin::Forms::CommonCore']]],
+  ['sqlitesettings',['SqliteSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html',1,'Xamarin::Forms::CommonCore']]],
+  ['starbehavior',['StarBehavior',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html',1,'Xamarin::Forms::CommonCore']]],
+  ['storyboard',['StoryBoard',['../class_xamarin_1_1_forms_1_1_common_core_1_1_story_board.html',1,'Xamarin::Forms::CommonCore']]],
+  ['streamresponse',['StreamResponse',['../class_xamarin_1_1_forms_1_1_common_core_1_1_stream_response.html',1,'Xamarin::Forms::CommonCore']]],
+  ['stringresponse',['StringResponse',['../class_xamarin_1_1_forms_1_1_common_core_1_1_string_response.html',1,'Xamarin::Forms::CommonCore']]],
+  ['switchcontrol',['SwitchControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_switch_control.html',1,'Xamarin::Forms::CommonCore']]],
+  ['synchronizationcontextremover',['SynchronizationContextRemover',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_synchronization_context_remover.html',1,'Xamarin::Forms::CommonCore']]]
 ];

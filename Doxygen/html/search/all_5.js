@@ -1,5 +1,11 @@
 var searchData=
 [
+  ['easing',['Easing',['../class_xamarin_1_1_forms_1_1_common_core_1_1_animation_base.html#aeb25755ccc6f7e2006ebcec594c1e1d1',1,'Xamarin::Forms::CommonCore::AnimationBase']]],
+  ['easinghelper',['EasingHelper',['../class_xamarin_1_1_forms_1_1_common_core_1_1_easing_helper.html',1,'Xamarin::Forms::CommonCore']]],
+  ['easinghelper_2ecs',['EasingHelper.cs',['../_easing_helper_8cs.html',1,'']]],
+  ['easingproperty',['EasingProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_animation_base.html#a889ee13d558fa97d71659aa5c2d27545',1,'Xamarin::Forms::CommonCore::AnimationBase']]],
+  ['easingtype',['EasingType',['../namespace_xamarin_1_1_forms_1_1_common_core.html#a00394e187ad7303202b0a41ea4e05855',1,'Xamarin::Forms::CommonCore']]],
+  ['easingtype_2ecs',['EasingType.cs',['../_easing_type_8cs.html',1,'']]],
   ['emailaddress',['EmailAddress',['../class_xamarin_1_1_forms_1_1_common_core_1_1_email_message.html#af66d6afdacc2a6a3dbba93dee638f211',1,'Xamarin::Forms::CommonCore::EmailMessage']]],
   ['emailmessage',['EmailMessage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_email_message.html',1,'Xamarin::Forms::CommonCore']]],
   ['emailmessage_2ecs',['EmailMessage.cs',['../_email_message_8cs.html',1,'']]],
@@ -15,8 +21,8 @@ var searchData=
   ['encryptionsalt',['encryptionSalt',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a67702edf4640d25907ce01a7b027e880',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
   ['encryptionservice',['EncryptionService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html',1,'Xamarin.Forms.CommonCore.EncryptionService'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a853f6e901546fcac7c26c5918d80a966',1,'Xamarin.Forms.CommonCore.ObservableViewModel.EncryptionService()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#af1cda99404ef907790e610aab22cab5c',1,'Xamarin.Forms.CommonCore.EncryptionService.EncryptionService()']]],
   ['encryptionservice_2ecs',['EncryptionService.cs',['../_encryption_service_8cs.html',1,'']]],
-  ['endcolor',['EndColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a40e36afee27681a7690da594ca0889b8',1,'Xamarin::Forms::CommonCore::GradientButton']]],
-  ['endcolorproperty',['EndColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#aa7a22661450894c78f7541c44a4324c8',1,'Xamarin::Forms::CommonCore::GradientButton']]],
+  ['endcolor',['EndColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a40e36afee27681a7690da594ca0889b8',1,'Xamarin.Forms.CommonCore.GradientButton.EndColor()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_stack_layout.html#a34b26c1ee34f397592f9d011accbf0a1',1,'Xamarin.Forms.CommonCore.GradientStackLayout.EndColor()']]],
+  ['endcolorproperty',['EndColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#aa7a22661450894c78f7541c44a4324c8',1,'Xamarin.Forms.CommonCore.GradientButton.EndColorProperty()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_stack_layout.html#a6d678d80e0883633aee6df40a2fc2f19',1,'Xamarin.Forms.CommonCore.GradientStackLayout.EndColorProperty()']]],
   ['endtime',['EndTime',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#a70863d0ef127056d3fe1de97b163bf65',1,'Xamarin::Forms::CommonCore::CalendarEventModel']]],
   ['endutc',['EndUtc',['../class_xamarin_1_1_forms_1_1_common_core_1_1_tracking_metat_data.html#a49dad341f88e5ae2818175a90a6cd673',1,'Xamarin::Forms::CommonCore::TrackingMetatData']]],
   ['entrycolor',['EntryColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#a9ea6e2ed584dd5662f710157defb36f4',1,'Xamarin.Forms.CommonCore.BindablePicker.EntryColor()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#aa907394b8086edb19a1aa677dd388871',1,'Xamarin.Forms.CommonCore.EntryUnderline.EntryColor()']]],

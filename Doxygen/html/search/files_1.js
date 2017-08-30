@@ -8,10 +8,14 @@ var searchData=
   ['basetabbedpage_2ecs',['BaseTabbedPage.cs',['../_base_tabbed_page_8cs.html',1,'']]],
   ['basetabbedpagerenderer_2edroid_2ecs',['BaseTabbedPageRenderer.Droid.cs',['../_base_tabbed_page_renderer_8_droid_8cs.html',1,'']]],
   ['basetabbedpagerenderer_2eios_2ecs',['BaseTabbedPageRenderer.IOS.cs',['../_base_tabbed_page_renderer_8_i_o_s_8cs.html',1,'']]],
+  ['beginanimation_2ecs',['BeginAnimation.cs',['../_begin_animation_8cs.html',1,'']]],
+  ['beginanimationbehavior_2ecs',['BeginAnimationBehavior.cs',['../_begin_animation_behavior_8cs.html',1,'']]],
   ['bindablepicker_2ecs',['BindablePicker.cs',['../_bindable_picker_8cs.html',1,'']]],
   ['bindingcontextbehavior_2ecs',['BindingContextBehavior.cs',['../_binding_context_behavior_8cs.html',1,'']]],
   ['bluroverlay_2edroid_2ecs',['BlurOverlay.Droid.cs',['../_blur_overlay_8_droid_8cs.html',1,'']]],
   ['bluroverlay_2eios_2ecs',['BlurOverlay.IOS.cs',['../_blur_overlay_8_i_o_s_8cs.html',1,'']]],
+  ['booleantoobjectconverter_2ecs',['BooleanToObjectConverter.cs',['../_boolean_to_object_converter_8cs.html',1,'']]],
+  ['bounceanimation_2ecs',['BounceAnimation.cs',['../_bounce_animation_8cs.html',1,'']]],
   ['boundmasterdetailpage_2ecs',['BoundMasterDetailPage.cs',['../_bound_master_detail_page_8cs.html',1,'']]],
   ['boundpage_2ecs',['BoundPage.cs',['../_bound_page_8cs.html',1,'']]]
 ];

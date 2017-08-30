@@ -2,6 +2,8 @@ var searchData=
 [
   ['lastordefault_3c_20t_20_3e',['LastOrDefault&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a8cfc0d816e036aa3b540a454ed32eed2',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['layout',['layout',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a59261c973e16c1c9a6867680b8b19ade',1,'Xamarin::Forms::CommonCore::AbsoluteLayoutPage']]],
+  ['left',['Left',['../class_xamarin_1_1_forms_1_1_common_core_1_1_flip_animation.html#a4baced48eaafcccccb4aaadf6523b098a945d5e233cf7d6240f6b783b36a374ff',1,'Xamarin::Forms::CommonCore::FlipAnimation']]],
+  ['linear',['Linear',['../namespace_xamarin_1_1_forms_1_1_common_core.html#a00394e187ad7303202b0a41ea4e05855a32a843da6ea40ab3b17a3421ccdf671b',1,'Xamarin::Forms::CommonCore']]],
   ['linksenabled',['LinksEnabled',['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html#aac355b68acee02c583c7e32ff3df2eba',1,'Xamarin::Forms::CommonCore::TextArea']]],
   ['linksenabledproperty',['LinksEnabledProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_text_area.html#afa6c0198d7f92da04846941c4980d3ea',1,'Xamarin::Forms::CommonCore::TextArea']]],
   ['listcontrol',['ListControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html',1,'Xamarin.Forms.CommonCore.ListControl'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#a64c9b7b389422b814b380fc8c34279be',1,'Xamarin.Forms.CommonCore.ListControl.ListControl()']]],
@@ -33,5 +35,7 @@ var searchData=
   ['logservice',['LogService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_log_service.html',1,'Xamarin.Forms.CommonCore.LogService'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_log_service.html#ad186b2419b413582d941d3d5b0fd1fcf',1,'Xamarin.Forms.CommonCore.LogService.LogService()']]],
   ['logservice_2ecs',['LogService.cs',['../_log_service_8cs.html',1,'']]],
   ['logtype',['LogType',['../namespace_xamarin_1_1_forms_1_1_common_core.html#a756bb1f15b78162953429f4c1a94b8d4',1,'Xamarin::Forms::CommonCore']]],
+  ['lowertextconverter',['LowerTextConverter',['../class_xamarin_1_1_forms_1_1_common_core_1_1_lower_text_converter.html',1,'Xamarin::Forms::CommonCore']]],
+  ['lowertextconverter_2ecs',['LowerTextConverter.cs',['../_lower_text_converter_8cs.html',1,'']]],
   ['lsr',['LSR',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a0dd78f35b40f62aaf3177d6f6ceadd7d',1,'Xamarin::Forms::CommonCore::EncryptionService']]]
 ];

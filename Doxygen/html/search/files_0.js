@@ -2,6 +2,8 @@ var searchData=
 [
   ['absolutelayoutpage_2ecs',['AbsoluteLayoutPage.cs',['../_absolute_layout_page_8cs.html',1,'']]],
   ['accountservice_2ecs',['AccountService.cs',['../_account_service_8cs.html',1,'']]],
+  ['animationbase_2ecs',['AnimationBase.cs',['../_animation_base_8cs.html',1,'']]],
+  ['animationextension_2ecs',['AnimationExtension.cs',['../_animation_extension_8cs.html',1,'']]],
   ['appupdatereceiver_2ecs',['AppUpdateReceiver.cs',['../_app_update_receiver_8cs.html',1,'']]],
   ['asynclock_2ecs',['AsyncLock.cs',['../_async_lock_8cs.html',1,'']]],
   ['audioplayer_2edroid_2ecs',['AudioPlayer.Droid.cs',['../_audio_player_8_droid_8cs.html',1,'']]],

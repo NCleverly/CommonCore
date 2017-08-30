@@ -277,6 +277,37 @@
     <Compile Include="$(MSBuildThisFileDirectory)Collections\RefreshingCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\EventToCommandBehavior.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Behaviors\BindingContextBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\GradientStackLayout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\GradientStackLayoutRenderer.iOS.cs">
+      <DependentUpon>GradientStackLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\GradientStackLayoutRenderer.Droid.cs">
+      <DependentUpon>GradientStackLayout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\Behaviors\BeginAnimationBehavior.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\Extensions\AnimationExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\Helpers\EasingHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\Triggers\BeginAnimation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\BounceAnimation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\EasingType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\FadeAnimation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\FlipAnimation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\HeartAnimation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\JumpAnimation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\RotateAnimation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\ScaleAnimation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\ShakeAnimation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\StoryBoard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\TranslateAnimation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\TurnstileAnimation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Animations\Base\AnimationBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\HasDataConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\HexToColorConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\InvertedBooleanConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\LowerTextConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\BooleanToObjectConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\UpperTextConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Converters\ValueConversionAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -308,6 +339,8 @@
     <Folder Include="$(MSBuildThisFileDirectory)_init\Styles\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Settings\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Partials\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Animations\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)PushNotifications\readme.txt" />

@@ -6,6 +6,7 @@ using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 using Foundation;
+using System.ComponentModel;
 
 [assembly: ExportEffect(typeof(ViewShadow), "ViewShadow")]
 [assembly: ExportEffect(typeof(ListRemoveEmptyRows), "ListRemoveEmptyRows")]
@@ -94,5 +95,7 @@ namespace Xamarin.Forms.CommonCore
 			view.Layer.ShadowRadius = 4.0f;
 		}
 	}
+
+	
 }
 #endif

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['screensize',['ScreenSize',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#ac3cf1dd41408a54744fac9f252463d5b',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
+  ['scale',['Scale',['../class_xamarin_1_1_forms_1_1_common_core_1_1_scale_to_animation.html#acb3a192634311455316cac82f024bab1',1,'Xamarin.Forms.CommonCore.ScaleToAnimation.Scale()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_rel_scale_to_animation.html#ae0a1fedf9b09bac9bc0e32038f8c04b2',1,'Xamarin.Forms.CommonCore.RelScaleToAnimation.Scale()']]],
+  ['screensize',['ScreenSize',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#aded6ea144b6a9820c079f372a4c6fba7',1,'Xamarin.Forms.CommonCore.BasePages.ScreenSize()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#ac3cf1dd41408a54744fac9f252463d5b',1,'Xamarin.Forms.CommonCore.CoreSettings.ScreenSize()']]],
   ['scrollindex',['ScrollIndex',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#a1df43ca585482723b7432f1f66be5af6',1,'Xamarin::Forms::CommonCore::ListControl']]],
   ['searchcommand',['SearchCommand',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_search_provider.html#a7fa3471712a04b7f51e4def84deeff71',1,'Xamarin::Forms::CommonCore::ISearchProvider']]],
   ['searchisdefaultaction',['SearchIsDefaultAction',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_search_provider.html#a812b352cde4bb18ac1101bb547977d5b',1,'Xamarin::Forms::CommonCore::ISearchProvider']]],
@@ -29,7 +30,7 @@ var searchData=
   ['sqlitesettings',['SqliteSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#ac3246567a589994ed89b44e40f87a8ba',1,'Xamarin::Forms::CommonCore::ConfigurationModel']]],
   ['stacktrace',['StackTrace',['../class_xamarin_1_1_forms_1_1_common_core_1_1_error_log.html#ad6afde12e660c15ae8fc7a26ccd822a4',1,'Xamarin::Forms::CommonCore::ErrorLog']]],
   ['starlist',['StarList',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#ae59c6d47e71aeeb3df91d60a9c08a84f',1,'Xamarin::Forms::CommonCore::RankingControl']]],
-  ['startcolor',['StartColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#aa5a318c8e81b0b840e4bfde80fcb9513',1,'Xamarin::Forms::CommonCore::GradientButton']]],
+  ['startcolor',['StartColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#aa5a318c8e81b0b840e4bfde80fcb9513',1,'Xamarin.Forms.CommonCore.GradientButton.StartColor()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_stack_layout.html#a1daeb67fe7c724f4a1f5def4d882e89c',1,'Xamarin.Forms.CommonCore.GradientStackLayout.StartColor()']]],
   ['starttime',['StartTime',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#af6c976b9ab6e2f7c61b944cdbc48f2e2',1,'Xamarin::Forms::CommonCore::CalendarEventModel']]],
   ['startutc',['StartUtc',['../class_xamarin_1_1_forms_1_1_common_core_1_1_tracking_metat_data.html#a1b4c2bfd77a82d6c871821a3e6cc4648',1,'Xamarin::Forms::CommonCore::TrackingMetatData']]],
   ['subject',['Subject',['../class_xamarin_1_1_forms_1_1_common_core_1_1_email_message.html#a9b45973fa2563aa76f33ddf3badebba7',1,'Xamarin::Forms::CommonCore::EmailMessage']]],

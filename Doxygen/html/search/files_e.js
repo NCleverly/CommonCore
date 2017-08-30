@@ -1,14 +1,10 @@
 var searchData=
 [
-  ['segmentcontrol_2ecs',['SegmentControl.cs',['../_segment_control_8cs.html',1,'']]],
-  ['segmentcontrolrenderer_2edroid_2ecs',['SegmentControlRenderer.Droid.cs',['../_segment_control_renderer_8_droid_8cs.html',1,'']]],
-  ['segmentcontrolrenderer_2eios_2ecs',['SegmentControlRenderer.IOS.cs',['../_segment_control_renderer_8_i_o_s_8cs.html',1,'']]],
-  ['snackbar_2edroid_2ecs',['SnackBar.Droid.cs',['../_snack_bar_8_droid_8cs.html',1,'']]],
-  ['snackbar_2eios_2ecs',['SnackBar.IOS.cs',['../_snack_bar_8_i_o_s_8cs.html',1,'']]],
-  ['sqldatamodel_2ecs',['SqlDataModel.cs',['../_sql_data_model_8cs.html',1,'']]],
-  ['sqlitedb_2ecs',['SqliteDb.cs',['../_sqlite_db_8cs.html',1,'']]],
-  ['switchcontrol_2ecs',['SwitchControl.cs',['../_switch_control_8cs.html',1,'']]],
-  ['switchcontrolrenderer_2edroid_2ecs',['SwitchControlRenderer.Droid.cs',['../_switch_control_renderer_8_droid_8cs.html',1,'']]],
-  ['switchcontrolrenderer_2eios_2ecs',['SwitchControlRenderer.IOS.cs',['../_switch_control_renderer_8_i_o_s_8cs.html',1,'']]],
-  ['synchronizationcontextremover_2ecs',['SynchronizationContextRemover.cs',['../_synchronization_context_remover_8cs.html',1,'']]]
+  ['rankingcontrol_2ecs',['RankingControl.cs',['../_ranking_control_8cs.html',1,'']]],
+  ['refreshingcollection_2ecs',['RefreshingCollection.cs',['../_refreshing_collection_8cs.html',1,'']]],
+  ['regexbehavior_2ecs',['RegExBehavior.cs',['../_reg_ex_behavior_8cs.html',1,'']]],
+  ['relaycommand_2ecs',['RelayCommand.cs',['../_relay_command_8cs.html',1,'']]],
+  ['resourceloader_2ecs',['ResourceLoader.cs',['../_resource_loader_8cs.html',1,'']]],
+  ['responsetypes_2ecs',['ResponseTypes.cs',['../_response_types_8cs.html',1,'']]],
+  ['rotateanimation_2ecs',['RotateAnimation.cs',['../_rotate_animation_8cs.html',1,'']]]
 ];

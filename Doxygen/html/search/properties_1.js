@@ -14,6 +14,8 @@ var searchData=
   ['androidappid',['AndroidAppId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html#a9a8d1b6a4618f46c3b369d24e87ed7e5',1,'Xamarin::Forms::CommonCore::MobileCenterHockeyApp']]],
   ['androidhttphandler',['AndroidHttpHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_settings.html#a179824ba71f7bc055e37a14da96efd50',1,'Xamarin::Forms::CommonCore::HttpSettings']]],
   ['animateopen',['AnimateOpen',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#af820072d7c7c1e79e58df8a6625503c8',1,'Xamarin::Forms::CommonCore::PopupView']]],
+  ['animation',['Animation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_begin_animation_behavior.html#ad1f4c1624097351a5ad8a5de1af38d29',1,'Xamarin.Forms.CommonCore.BeginAnimationBehavior.Animation()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_begin_animation.html#a9289a776f42816a85334bb5b2d2f1cee',1,'Xamarin.Forms.CommonCore.BeginAnimation.Animation()']]],
+  ['animations',['Animations',['../class_xamarin_1_1_forms_1_1_common_core_1_1_story_board.html#a8f5a68710bb6913fb3a2a1c8f6cfb8a9',1,'Xamarin::Forms::CommonCore::StoryBoard']]],
   ['appnav',['AppNav',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#a559c1b9b472425ebb5ce140fbf5f7088',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
   ['associatedobject',['AssociatedObject',['../class_xamarin_1_1_forms_1_1_common_core_1_1_binding_context_behavior.html#a588e695e2b1a9361fbc228e57097babf',1,'Xamarin::Forms::CommonCore::BindingContextBehavior']]],
   ['audioplayer',['AudioPlayer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a916d2d8d6fd9eea48cf6204fd84122bd',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],

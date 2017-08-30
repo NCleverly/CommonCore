@@ -1,10 +1,7 @@
 var searchData=
 [
-  ['validateemailfields',['ValidateEmailFields',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a971b7c02b53dc7b25f7e9fd63461002b',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
-  ['validatejson',['ValidateJSON',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a8dfc4beb83aac19e2920251aab040e97',1,'PushNotification::Plugin::CrossPushNotification']]],
-  ['validatenumberfields',['ValidateNumberFields',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ac04a7e666d9b0e1d00ed160d19da99a9',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
-  ['validatepasswordfields',['ValidatePasswordFields',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a8de887c823d42d3cc58588401a8c44e2',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
-  ['validatepasswordmatch',['ValidatePasswordMatch',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a4d8b517bdccd4ad9427d3bbcd34a224a',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
-  ['validatetextfields',['ValidateTextFields',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a5f3f395c9bd32b5065786338a8a0b55d',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
-  ['viewshadoweffect',['ViewShadowEffect',['../class_xamarin_1_1_forms_1_1_common_core_1_1_view_shadow_effect.html#a0189cc6764daa7b5ae01b4c5011e697b',1,'Xamarin::Forms::CommonCore::ViewShadowEffect']]]
+  ['unencrypteddatamodelproperties_3c_20t_20_3e',['UnEncryptedDataModelProperties&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a4da1f9f0e5cfe06e03aaba2fb31412ea',1,'Xamarin.Forms.CommonCore.CoreExtensions.UnEncryptedDataModelProperties&lt; T &gt;(this object obj)'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a1b88b8931d24c5bf329fbc01f71a0f47',1,'Xamarin.Forms.CommonCore.CoreExtensions.UnEncryptedDataModelProperties&lt; T &gt;(this IEnumerable&lt; T &gt; list)']]],
+  ['unhookevents',['UnhookEvents',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a6eb4c66075bf4f582d9aac2fb5d7dfe7',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
+  ['unregister',['Unregister',['../interface_push_notification_1_1_plugin_1_1_abstractions_1_1_i_push_notification.html#ad7e386df805f921b3c0d387be5beb647',1,'PushNotification::Plugin::Abstractions::IPushNotification']]],
+  ['unsubscribe',['Unsubscribe',['../class_xamarin_1_1_forms_1_1_common_core_1_1_event_to_command_behavior.html#acef6772ba3572c33b071681d5686bf94',1,'Xamarin::Forms::CommonCore::EventToCommandBehavior']]]
 ];

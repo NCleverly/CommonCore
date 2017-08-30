@@ -4,6 +4,8 @@ var searchData=
   ['absolutelayoutpage',['AbsoluteLayoutPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html',1,'Xamarin::Forms::CommonCore']]],
   ['accountservice',['AccountService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html',1,'Xamarin::Forms::CommonCore']]],
   ['analyticlog',['AnalyticLog',['../class_xamarin_1_1_forms_1_1_common_core_1_1_analytic_log.html',1,'Xamarin::Forms::CommonCore']]],
+  ['animationbase',['AnimationBase',['../class_xamarin_1_1_forms_1_1_common_core_1_1_animation_base.html',1,'Xamarin::Forms::CommonCore']]],
+  ['animationextension',['AnimationExtension',['../class_xamarin_1_1_forms_1_1_common_core_1_1_animation_extension.html',1,'Xamarin::Forms::CommonCore']]],
   ['appdata',['AppData',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings_1_1_app_data.html',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
   ['asynclock',['AsyncLock',['../class_xamarin_1_1_forms_1_1_common_core_1_1_async_lock.html',1,'Xamarin::Forms::CommonCore']]],
   ['authenticationstate',['AuthenticationState',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_state.html',1,'Xamarin::Forms::CommonCore']]],

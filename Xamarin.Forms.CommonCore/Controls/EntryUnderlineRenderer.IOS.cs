@@ -106,7 +106,9 @@ namespace Xamarin.Forms.CommonCore
 					Control.AutocorrectionType = UITextAutocorrectionType.No;           // No Autocorrection
 					Control.AutocapitalizationType = UITextAutocapitalizationType.None; // No Autocapitalization
 				}
-				formControl.HeightRequest = iconFrameHeight > iconPasswordFrameHeight ? iconFrameHeight : iconPasswordFrameHeight;
+
+                if(iconFrameHeight!=0 && iconPasswordFrameHeight!=0)
+				    formControl.HeightRequest = iconFrameHeight > iconPasswordFrameHeight ? iconFrameHeight : iconPasswordFrameHeight;
 			}
 		}
 
@@ -125,6 +127,15 @@ namespace Xamarin.Forms.CommonCore
 				var width = ((Entry)sender).Width;
 				var height = ((Entry)sender).Height;
 				bottomBorder?.RemoveFromSuperLayer();
+				if (width > 0 && height > 0)
+					CreateUnderline((nfloat)height, (nfloat)width);
+			}
+			if (e.PropertyName == EntryUnderline.EntryColorProperty.PropertyName)
+			{
+				var width = ((Entry)sender).Width;
+				var height = ((Entry)sender).Height;
+				bottomBorder?.RemoveFromSuperLayer();
+                controlColor = formControl.EntryColor.ToCGColor();
 				if (width > 0 && height > 0)
 					CreateUnderline((nfloat)height, (nfloat)width);
 			}
