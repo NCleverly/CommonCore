@@ -11,6 +11,6 @@ var searchData=
   ['toobservablecollection_3c_20t_20_3e',['ToObservableCollection&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#abcc7d14444091de5eef3b9b0666bdc6c',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['totitlecase',['ToTitleCase',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a269111c77dd288b8439d6f71b56db554',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['truncateasync_3c_20t_20_3e',['TruncateAsync&lt; T &gt;',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sqlite_db.html#aa17fc421436bb1b84fa4904a49159c0f',1,'Xamarin.Forms.CommonCore.ISqliteDb.TruncateAsync&lt; T &gt;()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#a2d9b599db049ecb50d95b149239300aa',1,'Xamarin.Forms.CommonCore.SqliteDb.TruncateAsync&lt; T &gt;()']]],
-  ['turnstilein',['TurnstileIn',['../class_xamarin_1_1_forms_1_1_common_core_1_1_turnstile_in_animation.html#a4d51b9449f46fbe674f8f028884f8456',1,'Xamarin::Forms::CommonCore::TurnstileInAnimation']]],
-  ['turnstileout',['TurnstileOut',['../class_xamarin_1_1_forms_1_1_common_core_1_1_turnstile_out_animation.html#a139c5b2363b57123ab7f7121393b7782',1,'Xamarin::Forms::CommonCore::TurnstileOutAnimation']]]
+  ['turnstilein',['TurnstileIn',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_turnstile_in_animation.html#aff641f0911bb61bcc0bcbbee7a29dbef',1,'Xamarin::Forms::CommonCore::CoreTurnstileInAnimation']]],
+  ['turnstileout',['TurnstileOut',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_turnstile_out_animation.html#ac34113bf40a4a98e28de46bcb3de1831',1,'Xamarin::Forms::CommonCore::CoreTurnstileOutAnimation']]]
 ];

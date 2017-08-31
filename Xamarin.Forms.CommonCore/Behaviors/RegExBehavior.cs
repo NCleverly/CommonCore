@@ -9,7 +9,7 @@ namespace Xamarin.Forms.CommonCore
 		public static readonly BindableProperty RegexExpProperty =
 			BindableProperty.Create("RegexExp",
 									typeof(string),
-									typeof(EntryUnderline),
+									typeof(CoreUnderlineEntry),
 									null);
 		public string RegexExp
 		{
@@ -20,7 +20,7 @@ namespace Xamarin.Forms.CommonCore
 		public static readonly BindableProperty ErrorMessageProperty =
 			BindableProperty.Create("ErrorMessage",
 									typeof(string),
-									typeof(EntryUnderline),
+									typeof(CoreUnderlineEntry),
 									null);
 		public string ErrorMessage
 		{

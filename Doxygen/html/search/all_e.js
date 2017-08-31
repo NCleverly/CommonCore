@@ -10,7 +10,7 @@ var searchData=
   ['needoverridesoftbackbuttonproperty',['NeedOverrideSoftBackButtonProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a38e893687b09943412814ad544006bb3',1,'Xamarin::Forms::CommonCore::BasePages']]],
   ['newpushnotificationnotinitializedexception',['NewPushNotificationNotInitializedException',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#ac6acdc2833ba2014f1323dad7f6d9723',1,'PushNotification::Plugin::CrossPushNotification']]],
   ['next',['Next',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aebd939a54cefa043add7c8ba6eab51daa10ac3d04253ef7e1ddc73e6091c0cd55',1,'Xamarin::Forms::CommonCore']]],
-  ['nextfocus',['NextFocus',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a9be7235915fcfc680edf7f0f005fc0b1',1,'Xamarin::Forms::CommonCore::EntryUnderline']]],
+  ['nextfocus',['NextFocus',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_underline_entry.html#a4711c4d9258d7808f7c79f7aa5784d14',1,'Xamarin::Forms::CommonCore::CoreUnderlineEntry']]],
   ['normal',['Normal',['../namespace_xamarin_1_1_forms_1_1_common_core_1_1_material_design.html#a84f0950ee1269c9faac3dca329e5f719a960b44c579bc2f6818d2daaf9e4c16f0',1,'Xamarin::Forms::CommonCore::MaterialDesign']]],
   ['notificationfired',['NotificationFired',['../class_xamarin_1_1_forms_1_1_common_core_1_1_property_changed_behavior.html#abf6d495a6cc96c449a7bc84bc565d93c',1,'Xamarin::Forms::CommonCore::PropertyChangedBehavior']]],
   ['notificationtags',['NotificationTags',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#a366a18e19b097489cb891a8d66f192c2',1,'Xamarin::Forms::CommonCore::CoreSettings']]],

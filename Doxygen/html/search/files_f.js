@@ -1,17 +1,7 @@
 var searchData=
 [
-  ['scaleanimation_2ecs',['ScaleAnimation.cs',['../_scale_animation_8cs.html',1,'']]],
-  ['segmentcontrol_2ecs',['SegmentControl.cs',['../_segment_control_8cs.html',1,'']]],
-  ['segmentcontrolrenderer_2edroid_2ecs',['SegmentControlRenderer.Droid.cs',['../_segment_control_renderer_8_droid_8cs.html',1,'']]],
-  ['segmentcontrolrenderer_2eios_2ecs',['SegmentControlRenderer.IOS.cs',['../_segment_control_renderer_8_i_o_s_8cs.html',1,'']]],
-  ['shakeanimation_2ecs',['ShakeAnimation.cs',['../_shake_animation_8cs.html',1,'']]],
-  ['snackbar_2edroid_2ecs',['SnackBar.Droid.cs',['../_snack_bar_8_droid_8cs.html',1,'']]],
-  ['snackbar_2eios_2ecs',['SnackBar.IOS.cs',['../_snack_bar_8_i_o_s_8cs.html',1,'']]],
-  ['sqldatamodel_2ecs',['SqlDataModel.cs',['../_sql_data_model_8cs.html',1,'']]],
-  ['sqlitedb_2ecs',['SqliteDb.cs',['../_sqlite_db_8cs.html',1,'']]],
-  ['storyboard_2ecs',['StoryBoard.cs',['../_story_board_8cs.html',1,'']]],
-  ['switchcontrol_2ecs',['SwitchControl.cs',['../_switch_control_8cs.html',1,'']]],
-  ['switchcontrolrenderer_2edroid_2ecs',['SwitchControlRenderer.Droid.cs',['../_switch_control_renderer_8_droid_8cs.html',1,'']]],
-  ['switchcontrolrenderer_2eios_2ecs',['SwitchControlRenderer.IOS.cs',['../_switch_control_renderer_8_i_o_s_8cs.html',1,'']]],
-  ['synchronizationcontextremover_2ecs',['SynchronizationContextRemover.cs',['../_synchronization_context_remover_8cs.html',1,'']]]
+  ['telephonypage_2ecs',['TelephonyPage.cs',['../_telephony_page_8cs.html',1,'']]],
+  ['telephonypagerenderer_2edroid_2ecs',['TelephonyPageRenderer.Droid.cs',['../_telephony_page_renderer_8_droid_8cs.html',1,'']]],
+  ['telephonypagerenderer_2eios_2ecs',['TelephonyPageRenderer.IOS.cs',['../_telephony_page_renderer_8_i_o_s_8cs.html',1,'']]],
+  ['textarearenderer_2ecs',['TextAreaRenderer.cs',['../_text_area_renderer_8cs.html',1,'']]]
 ];

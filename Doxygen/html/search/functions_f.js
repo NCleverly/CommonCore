@@ -4,8 +4,7 @@ var searchData=
   ['r2',['r2',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a6dd96aa61c3396846c23ee64fb5d6bb9',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
   ['r3',['r3',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a54b2c0d43e3fdef661700f7c31afa102',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
   ['r4',['r4',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#aae702898003e4944b07c2b0f07a474eb',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
-  ['rankingcontrol',['RankingControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#acb9317422edfb0e429d29d35dcc787c8',1,'Xamarin::Forms::CommonCore::RankingControl']]],
-  ['ratingchangedevent',['RatingchangedEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#ab62c7982d4d363a790d067dcb7cd57d2',1,'Xamarin::Forms::CommonCore::RankingControl']]],
+  ['ratingchangedevent',['RatingchangedEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_ranking.html#a6ef9b9d31bc5bef3e588e3ef3082f2e6',1,'Xamarin::Forms::CommonCore::CoreRanking']]],
   ['refreshasync',['RefreshAsync',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#ac2e30b8b56b9523d0353b52367b7d48e',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
   ['refreshingcollection',['RefreshingCollection',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#a730f539414dbd2690f85cda7496bbddd',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
   ['register',['Register',['../interface_push_notification_1_1_plugin_1_1_abstractions_1_1_i_push_notification.html#a4b82f9a90cdcd4efe3735f00c8e60c5d',1,'PushNotification::Plugin::Abstractions::IPushNotification']]],
@@ -18,10 +17,9 @@ var searchData=
   ['releaseresources_3c_20t_20_3e',['ReleaseResources&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a9209286ea9d636a5cbb385f7729eb49c',1,'Xamarin::Forms::CommonCore::InjectionManager']]],
   ['reload',['Reload',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings_1_1_app_data.html#a5265d77d29acd41ed2a52658c33b5046',1,'Xamarin::Forms::CommonCore::CoreSettings::AppData']]],
   ['removeanimations',['RemoveAnimations',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a7d5e8de85809583469092c0ac185b099',1,'Xamarin.Forms.CommonCore.CoreExtensions.RemoveAnimations(this ContentPage page)'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#adc5b5448b0fbdc9a1d9e589dbc165afd',1,'Xamarin.Forms.CommonCore.CoreExtensions.RemoveAnimations(this Layout&lt; View &gt; layout)']]],
-  ['removeemptyrowseffect',['RemoveEmptyRowsEffect',['../class_xamarin_1_1_forms_1_1_common_core_1_1_remove_empty_rows_effect.html#a48ec4ef04e710138c3bdf15aab3d7eaf',1,'Xamarin::Forms::CommonCore::RemoveEmptyRowsEffect']]],
   ['removerange_3c_20t_20_3e',['RemoveRange&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a951e923802900e538b5fdb1fee3ce2dd',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['removewhere_3c_20t_20_3e',['RemoveWhere&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a28065474197e3703c8fc95d57efbc94e',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
-  ['render',['Render',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a35f522ff4030bbaefde99f824facf10b',1,'Xamarin::Forms::CommonCore::SegmentControl']]],
+  ['render',['Render',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_segment.html#a984ae003291934702b7266ecaaf2f482',1,'Xamarin::Forms::CommonCore::CoreSegment']]],
   ['requestpermission',['RequestPermission',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_local_notify.html#ad51cd3fa30b96bc68766aceca33e0aec',1,'Xamarin::Forms::CommonCore::ILocalNotify']]],
-  ['returnkeyhandler',['ReturnKeyHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a0cf311929b5f625f4c7da421e7c619f5',1,'Xamarin::Forms::CommonCore::EntryUnderline']]]
+  ['returnkeyhandler',['ReturnKeyHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_underline_entry.html#a9053388bbf34c357765dce33885f68c5',1,'Xamarin::Forms::CommonCore::CoreUnderlineEntry']]]
 ];

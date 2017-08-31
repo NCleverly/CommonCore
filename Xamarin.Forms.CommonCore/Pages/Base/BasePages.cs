@@ -5,10 +5,24 @@ namespace Xamarin.Forms.CommonCore
 {
     public class BasePages : ContentPage
     {
+        private long appearingUTC;
+
+        public bool AnalyticsEnabled
+		{
+            get { return CoreSettings.AppData.Instance.Settings.AnalyticsEnabled; }
+        }
         public Size ScreenSize
         {
             get { return CoreSettings.ScreenSize; }
         }
+
+		public ILogService Log
+		{
+			get
+			{
+				return (ILogService)InjectionManager.GetService<ILogService, LogService>(true);
+			}
+		}
 
         protected override bool OnBackButtonPressed()
         {
@@ -72,6 +86,27 @@ namespace Xamarin.Forms.CommonCore
 
 #endif
 
+		protected override void OnAppearing()
+		{
+			appearingUTC = DateTime.UtcNow.Ticks;
+
+			if (Navigation != null)
+				CoreSettings.AppNav = Navigation;
+			base.OnAppearing();
+		}
+
+		protected override void OnDisappearing()
+		{
+			if (AnalyticsEnabled)
+			{
+				Log.LogAnalytics(this.GetType().FullName, new TrackingMetatData()
+				{
+					StartUtc = appearingUTC,
+					EndUtc = DateTime.UtcNow.Ticks
+				});
+			}
+			base.OnDisappearing();
+		}
 
     }
 

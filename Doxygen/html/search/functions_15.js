@@ -1,10 +1,10 @@
 var searchData=
 [
-  ['_7ebindablepicker',['~BindablePicker',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bindable_picker.html#afddce8fb09f58b8d73c8ae81b6752162',1,'Xamarin::Forms::CommonCore::BindablePicker']]],
-  ['_7eentryunderline',['~EntryUnderline',['../class_xamarin_1_1_forms_1_1_common_core_1_1_entry_underline.html#a2423123fc16cfc490687de7ab7fa3bff',1,'Xamarin::Forms::CommonCore::EntryUnderline']]],
-  ['_7egradientbutton',['~GradientButton',['../class_xamarin_1_1_forms_1_1_common_core_1_1_gradient_button.html#a90ec4d1e8fdc1b095c4ae4146e031c00',1,'Xamarin::Forms::CommonCore::GradientButton']]],
-  ['_7elistcontrol',['~ListControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#a48fa8eb3aa8a5f919df8432a0ae83e17',1,'Xamarin::Forms::CommonCore::ListControl']]],
-  ['_7erankingcontrol',['~RankingControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ranking_control.html#ad01b60813aab40354f47cd59bc38d426',1,'Xamarin::Forms::CommonCore::RankingControl']]],
-  ['_7erelaycommand',['~RelayCommand',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#acbde5726cc5fc60c16fb0b09130e05f2',1,'Xamarin::Forms::CommonCore::RelayCommand']]],
-  ['_7esegmentcontrol',['~SegmentControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_segment_control.html#a79cfa4231746c7149c9d8ae9f922069c',1,'Xamarin::Forms::CommonCore::SegmentControl']]]
+  ['_7ecorebutton',['~CoreButton',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_button.html#a9b4d4f1c0c9b679745bdac04c27c542f',1,'Xamarin::Forms::CommonCore::CoreButton']]],
+  ['_7ecorelistview',['~CoreListView',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_list_view.html#a31218485b55f2cce9f6139561cf341f8',1,'Xamarin::Forms::CommonCore::CoreListView']]],
+  ['_7ecorepicker',['~CorePicker',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#ad0644acbca71e29cfbd99ac7bc8be95a',1,'Xamarin::Forms::CommonCore::CorePicker']]],
+  ['_7ecoreranking',['~CoreRanking',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_ranking.html#a3439121728f2380308296247b71b95c0',1,'Xamarin::Forms::CommonCore::CoreRanking']]],
+  ['_7ecoresegment',['~CoreSegment',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_segment.html#ac950fef2caf1f534d902126a6fda9d2e',1,'Xamarin::Forms::CommonCore::CoreSegment']]],
+  ['_7ecoreunderlineentry',['~CoreUnderlineEntry',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_underline_entry.html#ae37a0bb5fbc7b85affd56f1493810ee6',1,'Xamarin::Forms::CommonCore::CoreUnderlineEntry']]],
+  ['_7erelaycommand',['~RelayCommand',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#acbde5726cc5fc60c16fb0b09130e05f2',1,'Xamarin::Forms::CommonCore::RelayCommand']]]
 ];

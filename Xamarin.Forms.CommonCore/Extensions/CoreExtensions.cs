@@ -1041,6 +1041,25 @@ namespace Xamarin.Forms.CommonCore
             }
             throw new NotSupportedException($"Not supported on iOS: {value}");
         }
+
+		public static nfloat StringHeight(this string text, UIFont font, nfloat width)
+		{
+			var nativeString = new NSString(text);
+
+			var rect = nativeString.GetBoundingRect(
+				new CGSize(width, nfloat.MaxValue),
+				NSStringDrawingOptions.UsesLineFragmentOrigin,
+				new UIStringAttributes() { Font = font },
+				null);
+
+			return rect.Height;
+		}
+
+        public static ImageSource GetImageResource<T>(this T obj, string imgName) where T:class
+        {
+            var assemblyName = Assembly.GetAssembly(obj.GetType()).FullName;
+            return ImageSource.FromResource($"{assemblyName}.{imgName}");
+        }
 #endif
 
 #if __ANDROID__

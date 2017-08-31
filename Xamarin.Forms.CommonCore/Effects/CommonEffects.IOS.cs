@@ -12,7 +12,6 @@ using System.ComponentModel;
 [assembly: ExportEffect(typeof(ListRemoveEmptyRows), "ListRemoveEmptyRows")]
 [assembly: ExportEffect(typeof(WebViewDisableScroll), "WebViewDisableScroll")]
 [assembly: ExportEffect(typeof(HideTableSeparator), "HideTableSeparator")]
-
 namespace Xamarin.Forms.CommonCore
 {
 

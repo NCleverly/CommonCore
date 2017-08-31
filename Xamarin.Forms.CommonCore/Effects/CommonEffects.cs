@@ -2,32 +2,30 @@
 using Xamarin.Forms;
 using System.Linq;
 
-[assembly: ResolutionGroupName("CommonEffects")]
+[assembly: ResolutionGroupName("CoreEffects")]
 namespace Xamarin.Forms.CommonCore
 {
-	public class CommonEffects
-	{
-		public const string ListRemoveEmptyRows = "CommonEffects.ListRemoveEmptyRows";
-		public const string WebViewDisableScroll = "CommonEffects.WebViewDisableScroll";
-		public const string HideTableSeparator = "CommonEffects.HideTableSeparator";
-		public const string ViewShadow = "CommonEffects.ViewShadow";
-	}
+    
+#if __IOS__
 
-	public class RemoveEmptyRowsEffect : RoutingEffect
+    public class RemoveEmptyRowsEffect : RoutingEffect
 	{
-		public RemoveEmptyRowsEffect() : base(CommonEffects.ListRemoveEmptyRows) { }
+        public RemoveEmptyRowsEffect() : base($"CoreEffects.{typeof(ListRemoveEmptyRows).Name}") { }
 	}
 	public class DisableWebViewScrollEffect : RoutingEffect
 	{
-		public DisableWebViewScrollEffect() : base(CommonEffects.WebViewDisableScroll) { }
+		public DisableWebViewScrollEffect() : base($"CoreEffects.{typeof(WebViewDisableScroll).Name}") { }
 	}
-	public class HideListSeparatorEffect : RoutingEffect
+
+#endif
+
+    public class HideListSeparatorEffect : RoutingEffect
 	{
-		public HideListSeparatorEffect() : base(CommonEffects.HideTableSeparator) { }
+		public HideListSeparatorEffect() : base($"CoreEffects.{typeof(HideTableSeparator).Name}") { }
 	}
 	public class ViewShadowEffect : RoutingEffect
 	{
-		public ViewShadowEffect() : base(CommonEffects.ViewShadow) { }
+		public ViewShadowEffect() : base($"CoreEffects.{typeof(ViewShadow).Name}") { }
 	}
 
 }

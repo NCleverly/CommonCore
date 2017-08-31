@@ -1,7 +1,6 @@
 var searchData=
 [
   ['lastordefault_3c_20t_20_3e',['LastOrDefault&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a8cfc0d816e036aa3b540a454ed32eed2',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
-  ['listcontrol',['ListControl',['../class_xamarin_1_1_forms_1_1_common_core_1_1_list_control.html#a64c9b7b389422b814b380fc8c34279be',1,'Xamarin::Forms::CommonCore::ListControl']]],
   ['load',['Load',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings_1_1_app_data.html#a9f1ae9da63fa19256190011fe467bade',1,'Xamarin::Forms::CommonCore::CoreSettings::AppData']]],
   ['loadaccount_3c_20t_20_3e',['LoadAccount&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a8b811a7d5833515ae4e20779a0c3135d',1,'Xamarin::Forms::CommonCore::AccountService']]],
   ['loadresources',['LoadResources',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a504b0a56c208eb8e192bb523db58dfa5',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
