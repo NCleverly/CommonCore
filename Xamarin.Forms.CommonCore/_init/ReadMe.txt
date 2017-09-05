@@ -46,6 +46,7 @@ Required Nuget Installs
             -> Xamarin.GooglePlayServices.Gcm
 
 Suggested
+- Iconize /* https://github.com/jsmarcus/Xamarin.Plugins/tree/master/Iconize */
 - CarouselView.FormsPlugin /* see https://github.com/alexrainman/CarouselView to implement */
 - Humanizer /* Displaying strings, enums, dates, times, timespans */
 - Plugin.Fingerprint /* https://github.com/smstuebe/xamarin-fingerprint */
@@ -56,6 +57,7 @@ Suggested
 - iOSCharts /* IOS Charting Controls */
 - MPAndroidChart /* Android Charting Controls */
 - Xamarin.Plugin.ImageEdit /* https://github.com/muak/Xamarin.Plugin.ImageEdit */
+- Android Bottom Tabs /* https://medium.com/naxam-blogs/bottomtabbedpage-bottom-navigation-for-xamarin-forms-on-android-325a1506e216 */
 Setup Tasks:
 
 Step 1: 

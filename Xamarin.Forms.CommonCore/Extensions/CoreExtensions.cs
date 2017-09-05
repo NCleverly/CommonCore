@@ -1001,6 +1001,32 @@ namespace Xamarin.Forms.CommonCore
             UIGraphics.EndImageContext();
             return UIImage.FromImage(img.CGImage, 1.0f, UIImageOrientation.DownMirrored);
         }
+
+        public static UIImage MaskeWithColor(this UIImage image, UIColor color){
+            
+			var maskImage = image.CGImage;
+			var width = image.Size.Width;
+			var height = image.Size.Height;
+			var bounds = new CGRect(0, 0, width, height);
+
+            using (var colorSpace = CGColorSpace.CreateDeviceRGB())
+            {
+                using (var bitmapContext = new CGBitmapContext(null, (nint)width, (nint)height, 8, 0, colorSpace, CGImageAlphaInfo.PremultipliedLast))
+                {
+                    bitmapContext.ClipToMask(bounds, maskImage);
+                    bitmapContext.SetFillColor(color.CGColor);
+                    bitmapContext.FillRect(bounds);
+
+                    using (var cImage = bitmapContext.ToImage())
+                    {
+                        var coloredImage = UIImage.FromImage(cImage);
+                        return coloredImage;
+                    }
+                }
+            }
+			
+		}
+
         /// <summary>
         /// Resize the specified imgView and size.
         /// </summary>

@@ -9,6 +9,26 @@ namespace Xamarin.Forms.CommonCore
     {
         public List<CoreRadioButton> rads;
 
+		public static readonly BindableProperty ImageColorProperty =
+        				BindableProperty.Create(propertyName: "ImageColor",
+        				returnType: typeof(Color),
+        				declaringType: typeof(CoreRadioGroup),
+        				defaultValue: Color.Black,
+        				propertyChanged: OnImageColorChanged);
+
+		public static readonly BindableProperty FontFamilyProperty =
+        				  BindableProperty.Create(propertyName: "FontFamily",
+                          returnType: typeof(string),
+                          declaringType: typeof(CoreRadioGroup),
+                          defaultValue: Font.Default.FontFamily,
+        				  propertyChanged: OnFontFamilyChanged);
+
+        public static readonly BindableProperty FontSizeProperty =
+        				BindableProperty.Create(propertyName: "FontSize",
+        				returnType: typeof(double),
+        				declaringType: typeof(CoreRadioGroup),
+        				defaultValue: Device.GetNamedSize(NamedSize.Default, typeof(Label)),
+        				propertyChanged: OnFontSizeChanged);
 
 		public static readonly BindableProperty TextColorProperty =
 						BindableProperty.Create(propertyName: "TextColor",
@@ -52,12 +72,29 @@ namespace Xamarin.Forms.CommonCore
                         defaultBindingMode: BindingMode.TwoWay,
         				propertyChanged: OnSelectedIndexChanged);
 
-		public Color TextColor
+		public Color ImageColor
+		{
+			get { return (Color)GetValue(ImageColorProperty); }
+			set { SetValue(ImageColorProperty, value); }
+		}
+
+        public string FontFamily
+		{
+			get { return (string)GetValue(FontFamilyProperty); }
+			set { SetValue(FontFamilyProperty, value); }
+		}
+
+        public double FontSize
+		{
+			get { return (double)GetValue(FontSizeProperty); }
+			set { SetValue(FontSizeProperty, value); }
+		}
+
+        public Color TextColor
 		{
 			get { return (Color)GetValue(TextColorProperty); }
 			set { SetValue(TextColorProperty, value); }
 		}
-
 
         public ICommand CheckedCommand
 		{
@@ -93,6 +130,33 @@ namespace Xamarin.Forms.CommonCore
 		public CoreRadioGroup()
 		{
 			rads = new List<CoreRadioButton>();
+		}
+
+		private static void OnImageColorChanged(BindableObject bindable, object oldValue, object newValue)
+		{
+			var radButtons = bindable as CoreRadioGroup;
+			foreach (CoreRadioButton btn in radButtons.Children)
+			{
+				btn.ImageColor = (Color)newValue;
+			}
+		}
+
+		private static void OnFontFamilyChanged(BindableObject bindable, object oldValue, object newValue)
+		{
+			var radButtons = bindable as CoreRadioGroup;
+			foreach (CoreRadioButton btn in radButtons.Children)
+			{
+				btn.FontFamily = (string)newValue;
+			}
+		}
+
+		private static void OnFontSizeChanged(BindableObject bindable, object oldValue, object newValue)
+		{
+			var radButtons = bindable as CoreRadioGroup;
+			foreach (CoreRadioButton btn in radButtons.Children)
+			{
+				btn.FontSize = (double)newValue;
+			}
 		}
 
 		private static void OnTextColorChanged(BindableObject bindable, object oldValue, object newValue)
@@ -137,6 +201,8 @@ namespace Xamarin.Forms.CommonCore
                     rad.SelectedImage = radButtons.SelectedImage;
                     rad.UnSelectedImage = radButtons.UnSelectedImage;;
                     rad.TextColor = radButtons.TextColor;
+                    rad.FontSize = radButtons.FontSize;
+                    rad.ImageColor = radButtons.ImageColor;
                     rad.Text = item.ToString();
                     rad.Id = radIndex;
 

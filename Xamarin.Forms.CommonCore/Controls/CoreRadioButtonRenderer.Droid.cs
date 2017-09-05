@@ -1,8 +1,10 @@
 #if __ANDROID__
+using Android.Content.Res;
 using Android.Widget;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms.Platform.Android;
+using Attribute = Android.Resource.Attribute;
 
 [assembly: ExportRenderer(typeof(CoreRadioButton), typeof(CoreRadioButtonRenderer))]
 namespace Xamarin.Forms.CommonCore
@@ -26,10 +28,17 @@ namespace Xamarin.Forms.CommonCore
                 this.SetNativeControl(radButton);
             }
 
-            Control.Text = e.NewElement.Text;
-            Control.Checked = e.NewElement.Checked;
+            if (e.NewElement != null)
+            {
+                Control.ButtonTintList = GetTintColors(e.NewElement.ImageColor);
+                Control.SetTextColor(GetTintColors(e.NewElement.TextColor));
+                Control.TextSize = (float)e.NewElement.FontSize;
+				Control.Text = e.NewElement.Text;
+                Control.Checked = e.NewElement.Checked;
+            }
 
-            Element.PropertyChanged += ElementOnPropertyChanged;
+            if(Element!=null)
+                Element.PropertyChanged += ElementOnPropertyChanged;
         }
 
         void radButton_CheckedChange(object sender, CompoundButton.CheckedChangeEventArgs e)
@@ -50,6 +59,23 @@ namespace Xamarin.Forms.CommonCore
 
             }
         }
+
+		private ColorStateList GetTintColors(Color color)
+		{
+			int[][] states = new int[][] {
+				new int[] { Attribute.StateEnabled }, // enabled
+                new int[] {-Attribute.StateEnabled }, // disabled
+                new int[] {-Attribute.StateChecked }, // unchecked
+                new int[] { Attribute.StatePressed }  // pressed
+            };
+			int[] colors = new int[] {
+				color.ToAndroid(),
+				color.ToAndroid(),
+				color.ToAndroid(),
+				color.ToAndroid()
+			};
+			return new ColorStateList(states, colors);
+		}
     }
 }
 #endif

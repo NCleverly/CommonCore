@@ -28,47 +28,27 @@ namespace Xamarin.Forms.CommonCore
 
             if (e.NewElement != null)
             {
+                var fontSize = e.NewElement.FontSize.Equals(0.0d) ? Control.Font.PointSize : (nfloat)e.NewElement.FontSize;
+                var fontFamily = string.IsNullOrEmpty(e.NewElement.FontFamily) ? Control.Font.FamilyName : e.NewElement.FontFamily;
+
+                var font = UIFont.FromName(fontFamily, fontSize);
+
+                Control.Font = font;
                 Control.LineBreakMode = UILineBreakMode.CharacterWrap;
-                Control.VerticalAlignment = UIControlContentVerticalAlignment.Top;
+                Control.VerticalAlignment = UIControlContentVerticalAlignment.Center;
                 Control.Text = e.NewElement.Text;
                 Control.Checked = e.NewElement.Checked;
                 Control.SetTitleColor(e.NewElement.TextColor.ToUIColor(), UIControlState.Normal);
                 Control.SetTitleColor(e.NewElement.TextColor.ToUIColor(), UIControlState.Selected);
+                Control.ImageColor = e.NewElement.ImageColor.ToUIColor();
             }
         }
 
-        private void ResizeText()
-        {
-
-            var text = this.Element.Text;
-
-            var bounds = this.Control.Bounds;
-
-            var width = this.Control.TitleLabel.Bounds.Width;
-
-            var height = text.StringHeight(this.Control.Font, width);
-
-            var minHeight = string.Empty.StringHeight(this.Control.Font, width);
-
-            var requiredLines = Math.Round(height / minHeight, MidpointRounding.AwayFromZero);
-
-            var supportedLines = Math.Round(bounds.Height / minHeight, MidpointRounding.ToEven);
-
-            if (!supportedLines.Equals(requiredLines))
-            {
-                bounds.Height += (float)(minHeight * (requiredLines - supportedLines));
-                this.Control.Bounds = bounds;
-                this.Element.HeightRequest = bounds.Height;
-            }
-        }
 
         public override void Draw(CGRect rect)
         {
             base.Draw(rect);
-            this.ResizeText();
         }
-
-
 
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
@@ -113,6 +93,8 @@ namespace Xamarin.Forms.CommonCore
 
         public string SelectedImage { get; set; }
 
+        public UIColor ImageColor { get; set; }
+
         public RadioButtonView()
         {
             Initialize();
@@ -139,6 +121,7 @@ namespace Xamarin.Forms.CommonCore
 
         void Initialize()
         {
+            
             this.AdjustEdgeInsets();
             this.ApplyStyle();
 
@@ -148,7 +131,7 @@ namespace Xamarin.Forms.CommonCore
         void AdjustEdgeInsets()
         {
             const float inset = 8f;
-
+            this.VerticalAlignment = UIControlContentVerticalAlignment.Center;
             this.HorizontalAlignment = UIControlContentHorizontalAlignment.Left;
             this.ImageEdgeInsets = new UIEdgeInsets(0f, inset, 0f, 0f);
             this.TitleEdgeInsets = new UIEdgeInsets(0f, inset * 2, 0f, 0f);
@@ -158,10 +141,10 @@ namespace Xamarin.Forms.CommonCore
         {
             if(SelectedImage!=null && UnSelectedImage!=null)
             {
-				this.SetImage(UIImage.FromBundle(this.SelectedImage), UIControlState.Selected);
-				this.SetImage(UIImage.FromBundle(this.UnSelectedImage), UIControlState.Normal);
+                var imgColor = ImageColor == null ? this.TitleLabel.TextColor : ImageColor;
+				this.SetImage(UIImage.FromBundle(this.SelectedImage).ChangeImageColor(imgColor), UIControlState.Selected);
+				this.SetImage(UIImage.FromBundle(this.UnSelectedImage).ChangeImageColor(imgColor), UIControlState.Normal);
             }
-
         }
     }
 }

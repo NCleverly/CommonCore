@@ -46,7 +46,7 @@ namespace Xamarin.Forms.CommonCore
 			};
 			var buttonStates = new ColorStateList(states, colors);
 			Control.SetTextColor(buttonStates);
-			//Control.ClipToOutline = true;
+
 		}
 
 		protected override void OnElementPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

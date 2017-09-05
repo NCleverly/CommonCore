@@ -5,6 +5,24 @@ namespace Xamarin.Forms.CommonCore
     public class CoreRadioButton : View
     {
         public EventHandler<bool> CheckedChanged;
+
+        public static readonly BindableProperty ImageColorProperty =
+                BindableProperty.Create(propertyName: "ImageColor",
+                returnType: typeof(Color),
+                declaringType: typeof(CoreRadioGroup),
+                defaultValue: Color.Black);
+        
+		public static readonly BindableProperty FontFamilyProperty =
+			  BindableProperty.Create(propertyName: "FontFamily",
+			  returnType: typeof(string),
+			  declaringType: typeof(CoreRadioGroup),
+			  defaultValue: Font.Default.FontFamily);
+        
+		public static readonly BindableProperty FontSizeProperty =
+				BindableProperty.Create(propertyName: "FontSize",
+				returnType: typeof(double),
+				declaringType: typeof(CoreRadioGroup),
+				defaultValue: Device.GetNamedSize(NamedSize.Medium, typeof(Label)));
         
 		public static readonly BindableProperty CheckedProperty =
 				BindableProperty.Create(propertyName: "Checked",
@@ -23,8 +41,7 @@ namespace Xamarin.Forms.CommonCore
         		returnType: typeof(Color),
         		declaringType: typeof(CoreRadioButton),
         		defaultValue: Color.Black);
-
-
+        
 		public static readonly BindableProperty UnSelectedImageProperty =
 				BindableProperty.Create("UnSelectedImage",
 				typeof(string),
@@ -36,7 +53,24 @@ namespace Xamarin.Forms.CommonCore
 				typeof(string),
 				typeof(CoreRadioButton),
 				null);
-        
+
+		public Color ImageColor
+		{
+			get { return (Color)GetValue(ImageColorProperty); }
+			set { SetValue(ImageColorProperty, value); }
+		}
+
+		public string FontFamily
+		{
+			get { return (string)GetValue(FontFamilyProperty); }
+			set { SetValue(FontFamilyProperty, value); }
+		}
+
+		public double FontSize
+		{
+			get { return (double)GetValue(FontSizeProperty); }
+			set { SetValue(FontSizeProperty, value); }
+		}
 
 		public string UnSelectedImage
 		{
