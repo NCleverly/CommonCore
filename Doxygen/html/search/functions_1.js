@@ -5,7 +5,8 @@ var searchData=
   ['beginmassupdate',['BeginMassUpdate',['../class_xamarin_1_1_forms_1_1_common_core_1_1_optimized_observable_collection.html#adedbb2b2a31dbb08a4ad69748ee12c83',1,'Xamarin::Forms::CommonCore::OptimizedObservableCollection']]],
   ['bouncein',['BounceIn',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_bounce_in_animation.html#a84559739bec34f0c11fdccae16932645',1,'Xamarin::Forms::CommonCore::CoreBounceInAnimation']]],
   ['bounceout',['BounceOut',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bounce_out_animation.html#ac17b6243edf72b51a4e732c64c0ec56b',1,'Xamarin::Forms::CommonCore::BounceOutAnimation']]],
+  ['boundcontenview',['BoundContenView',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_conten_view.html#a5548ded1fdefdd7cf5e2ca99d7883345',1,'Xamarin::Forms::CommonCore::BoundContenView']]],
   ['boundmasterdetailpage',['BoundMasterDetailPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_master_detail_page.html#ab2a1f00b213ff821c0bd8a9c133ab75b',1,'Xamarin::Forms::CommonCore::BoundMasterDetailPage']]],
-  ['boundpage',['BoundPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_page.html#a1424ba1c9c96ebb22fcc6300e7fac6ec',1,'Xamarin::Forms::CommonCore::BoundPage']]],
+  ['boundpage',['BoundPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_page.html#a1424ba1c9c96ebb22fcc6300e7fac6ec',1,'Xamarin.Forms.CommonCore.BoundPage.BoundPage()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_page.html#a1424ba1c9c96ebb22fcc6300e7fac6ec',1,'Xamarin.Forms.CommonCore.BoundPage.BoundPage()']]],
   ['buttonsclickedevent',['ButtonsClickedEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_segment.html#a8269a7884e32888c9610aa5ea676a367',1,'Xamarin::Forms::CommonCore::CoreSegment']]]
 ];

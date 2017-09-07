@@ -13,12 +13,56 @@ namespace Xamarin.Forms.CommonCore
 		public BoundPage()
 		{
 			this.BindingContext = VM;
-            if (!string.IsNullOrEmpty(VM.PageTitle))
-                VM.PageTitle = this.Title;
+            if (VM != null)
+            {
+                if (string.IsNullOrEmpty(VM.PageTitle))
+                    VM.PageTitle = this.Title;
+            }
             this.SetBinding(ContentPage.TitleProperty, "PageTitle");
 
 		}
 
 	}
+
+
+    public abstract class BoundPage : BasePages
+    {
+
+        string viewModel;
+
+        /// <summary>
+        /// Gets or sets the binding context based on the fully qualified name of the viewmodel.
+        /// </summary>
+        /// <value>The name of the view model.</value>
+        public string ViewModel
+        {
+            get
+            {
+                return viewModel;
+            }
+
+            set
+            {
+                viewModel = value;
+                if (!string.IsNullOrEmpty(value))
+                {
+                    this.BindingContext = InjectionManager.GetViewModel(viewModel);
+                    if (string.IsNullOrEmpty(VM.PageTitle))
+                        VM.PageTitle = this.Title;
+                }
+            }
+        }
+
+        public ObservableViewModel VM
+        {
+            get { return (ObservableViewModel)InjectionManager.GetViewModel(viewModel); }
+        }
+
+        public BoundPage()
+        {
+            this.SetBinding(ContentPage.TitleProperty, "PageTitle");
+        }
+
+    }
 }
 

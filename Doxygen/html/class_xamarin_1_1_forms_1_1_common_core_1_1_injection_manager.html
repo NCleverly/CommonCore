@@ -86,6 +86,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a042aae6993636a08e3c2e951e1a96468"><td class="memItemLeft" align="right" valign="top">static T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a042aae6993636a08e3c2e951e1a96468">GetViewModel&lt; T &gt;</a> (bool loadResources=false)</td></tr>
 <tr class="memdesc:a042aae6993636a08e3c2e951e1a96468"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the view model.  <a href="#a042aae6993636a08e3c2e951e1a96468">More...</a><br /></td></tr>
 <tr class="separator:a042aae6993636a08e3c2e951e1a96468"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab7224fe7b44e284c3b696bdef1efe4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html">ObservableViewModel</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#afab7224fe7b44e284c3b696bdef1efe4">GetViewModel</a> (string vmName, bool loadResources=false)</td></tr>
+<tr class="memdesc:afab7224fe7b44e284c3b696bdef1efe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the view model by fully qualified name.  <a href="#afab7224fe7b44e284c3b696bdef1efe4">More...</a><br /></td></tr>
+<tr class="separator:afab7224fe7b44e284c3b696bdef1efe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9209286ea9d636a5cbb385f7729eb49c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a9209286ea9d636a5cbb385f7729eb49c">ReleaseResources&lt; T &gt;</a> (bool ignoreCaller=false)</td></tr>
 <tr class="memdesc:a9209286ea9d636a5cbb385f7729eb49c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invoke ReleaseResources method on all ViewModels  <a href="#a9209286ea9d636a5cbb385f7729eb49c">More...</a><br /></td></tr>
 <tr class="separator:a9209286ea9d636a5cbb385f7729eb49c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,7 +199,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00144">144</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00170">170</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>
@@ -224,7 +227,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00164">164</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00190">190</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>
@@ -277,7 +280,55 @@ Static Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00119">119</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00145">145</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+
+</div>
+</div>
+<a id="afab7224fe7b44e284c3b696bdef1efe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afab7224fe7b44e284c3b696bdef1efe4">&#9670;&nbsp;</a></span>GetViewModel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html">ObservableViewModel</a> Xamarin.Forms.CommonCore.InjectionManager.GetViewModel </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>vmName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>loadResources</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the view model by fully qualified name. </p>
+<dl class="section return"><dt>Returns</dt><dd>The view model.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">vmName</td><td>Vm name.</td></tr>
+    <tr><td class="paramname">loadResources</td><td>If set to <code>true</code> load resources.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00071">71</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>
@@ -291,7 +342,7 @@ Static Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static T Xamarin.Forms.CommonCore.InjectionManager.GetViewModel&lt; T &gt; </td>
+          <td class="memname">static T <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#afab7224fe7b44e284c3b696bdef1efe4">Xamarin.Forms.CommonCore.InjectionManager.GetViewModel</a>&lt; T &gt; </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>loadResources</em> = <code>false</code></td><td>)</td>
@@ -400,7 +451,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00156">156</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00182">182</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>
@@ -450,7 +501,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00070">70</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00096">96</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>
@@ -497,7 +548,7 @@ Static Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00092">92</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00118">118</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>
@@ -558,7 +609,7 @@ Static Private Attributes</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00106">106</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_injection_manager_8cs_source.html#l00132">132</a> of file <a class="el" href="_injection_manager_8cs_source.html">InjectionManager.cs</a>.</p>
 
 </div>
 </div>

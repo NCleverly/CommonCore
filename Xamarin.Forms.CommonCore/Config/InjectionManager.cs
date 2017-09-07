@@ -62,6 +62,32 @@ namespace Xamarin.Forms.CommonCore
             return vm;
         }
 
+        /// <summary>
+        /// Gets the view model by fully qualified name.
+        /// </summary>
+        /// <returns>The view model.</returns>
+        /// <param name="vmName">Vm name.</param>
+        /// <param name="loadResources">If set to <c>true</c> load resources.</param>
+        public static ObservableViewModel GetViewModel(string vmName, bool loadResources = false)
+        {
+            if (!string.IsNullOrEmpty(vmName))
+            {
+                if (!vmContainer.Any(x => x == vmName))
+                {
+                    RegisterObjectByName(vmName);
+                    vmContainer.Add(vmName);
+                }
+                var vm = (ObservableViewModel)GetObjectByName(vmName);
+
+                if (loadResources)
+                    vm.LoadResources();
+                return vm;
+            }
+            else{
+                return null;
+            }
+        }
+
 		/// <summary>
 		/// Invoke ReleaseResources method on all ViewModels
 		/// </summary>

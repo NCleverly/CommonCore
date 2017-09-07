@@ -316,6 +316,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\CoreRadioButtonRenderer.Droid.cs">
       <DependentUpon>CoreRadioButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\BoundContenView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -366,5 +367,6 @@
     <None Include="$(MSBuildThisFileDirectory)_init\ReadMe.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Partials\PartialConfigurationModel.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Partials\PartialObservableViewModel.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Styles\AppStyles.xaml.txt" />
   </ItemGroup>
 </Project>

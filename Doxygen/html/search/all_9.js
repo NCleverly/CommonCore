@@ -36,6 +36,8 @@ var searchData=
   ['ilocalnotify_2ecs',['ILocalNotify.cs',['../_i_local_notify_8cs.html',1,'']]],
   ['ilogservice',['ILogService',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_log_service.html',1,'Xamarin::Forms::CommonCore']]],
   ['ilogservice_2ecs',['ILogService.cs',['../_i_log_service_8cs.html',1,'']]],
+  ['imagecolor',['ImageColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_button.html#a03b87274c3769d9e6a093726fc7143b3',1,'Xamarin.Forms.CommonCore.CoreRadioButton.ImageColor()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_group.html#a2f6180d5959e60b35191238081e86569',1,'Xamarin.Forms.CommonCore.CoreRadioGroup.ImageColor()']]],
+  ['imagecolorproperty',['ImageColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_button.html#acdb724504f063a7cd087cf8916dbac57',1,'Xamarin.Forms.CommonCore.CoreRadioButton.ImageColorProperty()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_group.html#a902363b75aa96068fd06a0c8c990f0c2',1,'Xamarin.Forms.CommonCore.CoreRadioGroup.ImageColorProperty()']]],
   ['imagename',['ImageName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#a0b811b4d38e7748e5792975a31c9fce9',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['imagenameproperty',['ImageNameProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#a66e88cd88840e64845d59b39d3c35fb3',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['imapnavigate',['IMapNavigate',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_map_navigate.html',1,'Xamarin::Forms::CommonCore']]],

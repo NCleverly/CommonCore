@@ -6,7 +6,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(ContentPage), typeof(BasePageRenderer))]
+[assembly: ExportRenderer(typeof(BasePages), typeof(BasePageRenderer))]
 namespace Xamarin.Forms.CommonCore
 {
     /// <summary>
@@ -33,8 +33,9 @@ namespace Xamarin.Forms.CommonCore
                     ConnectSearchView();
                     contentPage.Appearing += (s, a) => HandlePageReappearing();
                     contentPage.Disappearing += (s, a) => HandlePageDisappearing();
+
                 }
-    
+   
             }
 
 		}
@@ -56,7 +57,8 @@ namespace Xamarin.Forms.CommonCore
 			}
 		}
 
-        private void HandlePageReappearing(){
+        private void HandlePageReappearing()
+        {
             if(_searchView!=null && Element!=null && Element is ContentPage)
             {
                 var contentPage = Element as ContentPage;
@@ -77,7 +79,8 @@ namespace Xamarin.Forms.CommonCore
 
 			_searchView = context?.FindViewById<SearchView>(CoreSettings.SearchView);
 
-			if (_searchView == null) return;
+			if (_searchView == null) 
+                return;
 
 			var contentPage = Element as ContentPage;
 
