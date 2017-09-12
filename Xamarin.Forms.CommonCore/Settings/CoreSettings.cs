@@ -34,7 +34,7 @@ namespace Xamarin.Forms.CommonCore
 
         public static ConfigurationModel Config
         {
-            get { return AppData.Instance.Settings; }
+            get { return AppData.Settings; }
         }
 
         /// <summary>
@@ -97,20 +97,20 @@ namespace Xamarin.Forms.CommonCore
 
         internal class AppData
         {
-            public static AppData Instance = new AppData();
-            public AppData()
+            //public static AppData Instance = new AppData();
+            static AppData()
             {
                 Load();
             }
-            public void Reload()
+            public static void Reload()
             {
                 Load();
             }
 
-            public ConfigurationModel Settings { get; private set; }
+            public static ConfigurationModel Settings { get; private set; }
 
 
-            private void Load()
+            private static void Load()
             {
                 Settings = new ConfigurationModel();
                 string fileName = null;

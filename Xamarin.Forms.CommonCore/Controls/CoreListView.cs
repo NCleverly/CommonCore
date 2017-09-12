@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Windows.Input;
-using Xamarin.Forms;
 using System.Collections;
-using Xamarin.Forms.PlatformConfiguration;
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -49,11 +47,17 @@ namespace Xamarin.Forms.CommonCore
 			set { this.SetValue(LoadMoreCommandProperty, value); }
 		}
 
-		public CoreListView(ListViewCachingStrategy cachingStrategy = ListViewCachingStrategy.RecycleElement) : base(cachingStrategy)
+		public CoreListView(ListViewCachingStrategy cachingStrategy) : base(cachingStrategy)
 		{
 			this.ItemTapped += this.OnItemTapped;
 			this.ItemAppearing += this.OnItemAppearing;
 		}
+
+        public CoreListView() : base(ListViewCachingStrategy.RecycleElement)
+        {
+            this.ItemTapped += this.OnItemTapped;
+            this.ItemAppearing += this.OnItemAppearing;
+        }
 
 		~CoreListView()
 		{

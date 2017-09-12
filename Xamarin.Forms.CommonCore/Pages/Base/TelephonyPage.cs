@@ -16,7 +16,7 @@ namespace Xamarin.Forms.CommonCore
                 VM.PageTitle = this.Title;
             this.SetBinding(ContentPage.TitleProperty, "PageTitle");
 
-			if (CoreSettings.AppData.Instance.Settings.AnalyticsEnabled)
+			if (CoreSettings.AppData.Settings.AnalyticsEnabled)
 			{
 				VM.Log.LogAnalytics(this.GetType().FullName);
 			}

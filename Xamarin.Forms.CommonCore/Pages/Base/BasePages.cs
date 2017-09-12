@@ -9,7 +9,7 @@ namespace Xamarin.Forms.CommonCore
 
         public bool AnalyticsEnabled
 		{
-            get { return CoreSettings.AppData.Instance.Settings.AnalyticsEnabled; }
+            get { return CoreSettings.AppData.Settings.AnalyticsEnabled; }
         }
         public Size ScreenSize
         {
@@ -20,6 +20,7 @@ namespace Xamarin.Forms.CommonCore
 		{
 			get
 			{
+                
 				return (ILogService)InjectionManager.GetService<ILogService, LogService>(true);
 			}
 		}
