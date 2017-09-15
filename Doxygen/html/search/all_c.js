@@ -1,14 +1,14 @@
 var searchData=
 [
   ['lastordefault_3c_20t_20_3e',['LastOrDefault&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a8cfc0d816e036aa3b540a454ed32eed2',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
-  ['layout',['layout',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a59261c973e16c1c9a6867680b8b19ade',1,'Xamarin::Forms::CommonCore::AbsoluteLayoutPage']]],
+  ['layout',['layout',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a959e1eff5ff7b4f5e1796df278d004ea',1,'Xamarin::Forms::CommonCore::AbsoluteLayoutPage']]],
   ['left',['Left',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_flip_animation.html#acb45b4ccc8d19679519e1681fad6e210a945d5e233cf7d6240f6b783b36a374ff',1,'Xamarin::Forms::CommonCore::CoreFlipAnimation']]],
   ['linear',['Linear',['../namespace_xamarin_1_1_forms_1_1_common_core.html#a00394e187ad7303202b0a41ea4e05855a32a843da6ea40ab3b17a3421ccdf671b',1,'Xamarin::Forms::CommonCore']]],
   ['linksenabled',['LinksEnabled',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_text_area.html#afc4c9b8fe630ab3d0f7c39f0e34b6726',1,'Xamarin::Forms::CommonCore::CoreTextArea']]],
   ['linksenabledproperty',['LinksEnabledProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_text_area.html#a72baf944ec9f510c08c9a37de806ec45',1,'Xamarin::Forms::CommonCore::CoreTextArea']]],
   ['listremoveemptyrows',['ListRemoveEmptyRows',['../class_common_1_1_core_1_1_list_remove_empty_rows.html',1,'Common::Core']]],
   ['listremoveemptyrows_2ecs',['ListRemoveEmptyRows.cs',['../_list_remove_empty_rows_8cs.html',1,'']]],
-  ['load',['Load',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings_1_1_app_data.html#a9f1ae9da63fa19256190011fe467bade',1,'Xamarin::Forms::CommonCore::CoreSettings::AppData']]],
+  ['load',['Load',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings_1_1_app_data.html#a35e88fcc878e3c649ac746968ea259db',1,'Xamarin::Forms::CommonCore::CoreSettings::AppData']]],
   ['loadaccount_3c_20t_20_3e',['LoadAccount&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a8b811a7d5833515ae4e20779a0c3135d',1,'Xamarin::Forms::CommonCore::AccountService']]],
   ['loadingmessagehud',['LoadingMessageHUD',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1bbf76dd1d1e527e47bef71a44aee6c6',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['loadingmessageoverlay',['LoadingMessageOverlay',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a1aea5ac101ba6ce4fe138f0d236b396c',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],

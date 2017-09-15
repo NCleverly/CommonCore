@@ -3,6 +3,7 @@ var searchData=
   ['a',['A',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_a_b_c_d_struct.html#ac7d1f657360c87ba16a550da5e5e354c',1,'Xamarin::Forms::CommonCore::ABCDStruct']]],
   ['accentcolorproperty',['AccentColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a6b0dce00dbaf2642c20e245a7233e94b',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
   ['action',['action',['../class_xamarin_1_1_forms_1_1_common_core_1_1_property_changed_behavior.html#a6645cc8da9b42284146eb7ff04f521a5',1,'Xamarin::Forms::CommonCore::PropertyChangedBehavior']]],
+  ['activecolorproperty',['ActiveColorProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_controls_1_1_core_disclosure_view_cell.html#ac040b92635c536174af0f517866412d1',1,'Xamarin::Forms::CommonCore::Controls::CoreDisclosureViewCell']]],
   ['alert',['Alert',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#a4f3b18bae13de707ad2ff204f7fd78d1',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
   ['analayticfilename',['analayticFileName',['../class_xamarin_1_1_forms_1_1_common_core_1_1_log_service.html#aa2185880079c26eaceabc675cd69fc79',1,'Xamarin::Forms::CommonCore::LogService']]],
   ['analyticlogs',['analyticLogs',['../class_xamarin_1_1_forms_1_1_common_core_1_1_log_service.html#ae58aaf24ee57664f7b1e3be05f2403e9',1,'Xamarin::Forms::CommonCore::LogService']]],

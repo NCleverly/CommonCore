@@ -5,6 +5,7 @@ var searchData=
   ['contentviewrounded',['ContentViewRounded',['../class_xamarin_1_1_forms_1_1_common_core_1_1_content_view_rounded.html',1,'Xamarin::Forms::CommonCore']]],
   ['corebounceinanimation',['CoreBounceInAnimation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_bounce_in_animation.html',1,'Xamarin::Forms::CommonCore']]],
   ['corebutton',['CoreButton',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_button.html',1,'Xamarin::Forms::CommonCore']]],
+  ['coredisclosureviewcell',['CoreDisclosureViewCell',['../class_xamarin_1_1_forms_1_1_common_core_1_1_controls_1_1_core_disclosure_view_cell.html',1,'Xamarin::Forms::CommonCore::Controls']]],
   ['coreextensions',['CoreExtensions',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html',1,'Xamarin::Forms::CommonCore']]],
   ['corefadeinanimation',['CoreFadeInAnimation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_fade_in_animation.html',1,'Xamarin::Forms::CommonCore']]],
   ['corefadetoanimation',['CoreFadeToAnimation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_fade_to_animation.html',1,'Xamarin::Forms::CommonCore']]],

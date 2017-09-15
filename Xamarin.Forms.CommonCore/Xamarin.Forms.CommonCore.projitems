@@ -317,6 +317,15 @@
       <DependentUpon>CoreRadioButton.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\BoundContenView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CoreDisclosureViewCell.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fonts\FontAwesome.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fonts\EntypoPlus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fonts\Ionicons.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fonts\Material.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fonts\Meteocons.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fonts\SimpleLineIcons.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fonts\Typicons.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Fonts\WeatherIcons.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -350,6 +359,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)_init\Partials\" />
     <Folder Include="$(MSBuildThisFileDirectory)Animations\" />
     <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Fonts\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)PushNotifications\readme.txt" />

@@ -16,6 +16,7 @@ var searchData=
   ['corebutton_2ecs',['CoreButton.cs',['../_core_button_8cs.html',1,'']]],
   ['corebuttonrenderer_2edroid_2ecs',['CoreButtonRenderer.Droid.cs',['../_core_button_renderer_8_droid_8cs.html',1,'']]],
   ['corebuttonrenderer_2eios_2ecs',['CoreButtonRenderer.IOS.cs',['../_core_button_renderer_8_i_o_s_8cs.html',1,'']]],
+  ['coredisclosureviewcell_2ecs',['CoreDisclosureViewCell.cs',['../_core_disclosure_view_cell_8cs.html',1,'']]],
   ['coreextensions_2ecs',['CoreExtensions.cs',['../_core_extensions_8cs.html',1,'']]],
   ['corefadeanimation_2ecs',['CoreFadeAnimation.cs',['../_core_fade_animation_8cs.html',1,'']]],
   ['coreflipanimation_2ecs',['CoreFlipAnimation.cs',['../_core_flip_animation_8cs.html',1,'']]],

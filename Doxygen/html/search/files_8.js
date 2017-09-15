@@ -19,6 +19,7 @@ var searchData=
   ['imapnavigate_2ecs',['IMapNavigate.cs',['../_i_map_navigate_8cs.html',1,'']]],
   ['injectionmanager_2ecs',['InjectionManager.cs',['../_injection_manager_8cs.html',1,'']]],
   ['invertedbooleanconverter_2ecs',['InvertedBooleanConverter.cs',['../_inverted_boolean_converter_8cs.html',1,'']]],
+  ['ionicons_2ecs',['Ionicons.cs',['../_ionicons_8cs.html',1,'']]],
   ['ioverlaydependency_2ecs',['IOverlayDependency.cs',['../_i_overlay_dependency_8cs.html',1,'']]],
   ['iprogressindicator_2ecs',['IProgressIndicator.cs',['../_i_progress_indicator_8cs.html',1,'']]],
   ['ipushnotification_2ecs',['IPushNotification.cs',['../_i_push_notification_8cs.html',1,'']]],

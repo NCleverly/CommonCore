@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['absolutelayer',['AbsoluteLayer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a5f35e9ffbaf821c62a76e85969d1c44d',1,'Xamarin::Forms::CommonCore::AbsoluteLayoutPage']]],
+  ['absolutelayer',['AbsoluteLayer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a47511fbd649a10c1baa7eb1d413562d6',1,'Xamarin::Forms::CommonCore::AbsoluteLayoutPage']]],
   ['accentcolor',['AccentColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#acb227633001b95d713362fc72f699165',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
   ['access_5ftoken',['access_token',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#a05466456cdce3072df53ea4560696313',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]],
   ['accountencryptionkey',['AccountEncryptionKey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a94dfc84f3f3bec33b9c4f2c935555620',1,'Xamarin::Forms::CommonCore::AccountService']]],
@@ -8,6 +8,7 @@ var searchData=
   ['action',['Action',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#a596d6a4e139aec9c0664db6a5e666d02',1,'Xamarin::Forms::CommonCore::Snack']]],
   ['actiontext',['ActionText',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#aca7b80c0230ccaddbf79d7b6d9aae85a',1,'Xamarin::Forms::CommonCore::Snack']]],
   ['actiontextcolor',['ActionTextColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#ac563084480d853e783a6aaad217aa930',1,'Xamarin::Forms::CommonCore::Snack']]],
+  ['activecolor',['ActiveColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_controls_1_1_core_disclosure_view_cell.html#a313338e43908be4248a065bba4c8447a',1,'Xamarin::Forms::CommonCore::Controls::CoreDisclosureViewCell']]],
   ['aesencryptionkey',['AESEncryptionKey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#a3ba855e16201274498da623433f64c31',1,'Xamarin.Forms.CommonCore.ConfigurationModel.AESEncryptionKey()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a75336962d4851024a2330dc9b31c109b',1,'Xamarin.Forms.CommonCore.ObservableViewModel.AESEncryptionKey()']]],
   ['afterrefresh',['AfterRefresh',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#a280c5145454015b72b43fbbca410c13c',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
   ['analyticsenabled',['AnalyticsEnabled',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#aaa73dffa80d50dd5df9ab5555647b418',1,'Xamarin.Forms.CommonCore.ConfigurationModel.AnalyticsEnabled()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a8ff700f672f183b071e721be73800f5c',1,'Xamarin.Forms.CommonCore.BasePages.AnalyticsEnabled()']]],

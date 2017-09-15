@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['pagesizechanged',['PageSizeChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a67f60e0261d420d30ebcf56aee8568d7',1,'Xamarin::Forms::CommonCore::AbsoluteLayoutPage']]],
+  ['pagesizechanged',['PageSizeChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a67f60e0261d420d30ebcf56aee8568d7',1,'Xamarin.Forms.CommonCore.AbsoluteLayoutPage.PageSizeChanged(object sender, EventArgs args)'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_absolute_layout_page.html#a67f60e0261d420d30ebcf56aee8568d7',1,'Xamarin.Forms.CommonCore.AbsoluteLayoutPage.PageSizeChanged(object sender, EventArgs args)']]],
   ['pause',['Pause',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_audio_player.html#aabf0df752fb65168c8fe7317a055d52a',1,'Xamarin::Forms::CommonCore::IAudioPlayer']]],
   ['persistaccount_3c_20t_20_3e',['PersistAccount&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a879a546aaa192c8cfc55a9cda0b41f20',1,'Xamarin::Forms::CommonCore::AccountService']]],
   ['placecall',['PlaceCall',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_communication.html#ab1202be6b8f09d52e81821a2c0bce277',1,'Xamarin::Forms::CommonCore::ICommunication']]],

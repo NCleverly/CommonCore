@@ -20,6 +20,7 @@ var searchData=
   ['imapnavigate',['IMapNavigate',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_map_navigate.html',1,'Xamarin::Forms::CommonCore']]],
   ['injectionmanager',['InjectionManager',['../class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html',1,'Xamarin::Forms::CommonCore']]],
   ['invertedbooleanconverter',['InvertedBooleanConverter',['../class_xamarin_1_1_forms_1_1_common_core_1_1_inverted_boolean_converter.html',1,'Xamarin::Forms::CommonCore']]],
+  ['ionicons',['Ionicons',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ionicons.html',1,'Xamarin::Forms::CommonCore']]],
   ['ioverlaydependency',['IOverlayDependency',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_overlay_dependency.html',1,'Xamarin::Forms::CommonCore']]],
   ['ipopup',['IPopup',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_popup.html',1,'Xamarin::Forms::CommonCore']]],
   ['iprogressindicator',['IProgressIndicator',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_progress_indicator.html',1,'Xamarin::Forms::CommonCore']]],
