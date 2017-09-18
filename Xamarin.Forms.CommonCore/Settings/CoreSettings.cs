@@ -102,9 +102,13 @@ namespace Xamarin.Forms.CommonCore
             {
                 Load();
             }
+
             public static void Reload()
             {
+                InjectionManager.DisposeServices();
+                InjectionManager.ReleaseAllResources();
                 Load();
+                InjectionManager.ReloadAllResources();
             }
 
             public static ConfigurationModel Settings { get; private set; }
@@ -114,18 +118,7 @@ namespace Xamarin.Forms.CommonCore
             {
                 Settings = new ConfigurationModel();
                 string fileName = null;
-                switch (CoreSettings.CurrentBuid)
-                {
-                    case "qa":
-                        fileName = "config.qa.json";
-                        break;
-                    case "prod":
-                        fileName = "config.prod.json";
-                        break;
-                    default:
-                        fileName = "config.dev.json";
-                        break;
-                }
+                fileName = $"config.{CoreSettings.CurrentBuid}.json";
 
                 var response = ResourceLoader.GetEmbeddedResourceString(Assembly.GetAssembly(typeof(ResourceLoader)), fileName);
                 if (response.Success)

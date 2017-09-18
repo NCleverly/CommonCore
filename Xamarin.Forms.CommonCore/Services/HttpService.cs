@@ -38,7 +38,6 @@ namespace Xamarin.Forms.CommonCore
             return new WebDownloadClient() { Client = client };
         }
 
-
         public HttpClient Client
         {
             get

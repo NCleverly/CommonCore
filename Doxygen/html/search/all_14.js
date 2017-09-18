@@ -50,6 +50,6 @@ var searchData=
   ['turnstilein',['TurnstileIn',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_turnstile_in_animation.html#aff641f0911bb61bcc0bcbbee7a29dbef',1,'Xamarin::Forms::CommonCore::CoreTurnstileInAnimation']]],
   ['turnstileout',['TurnstileOut',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_turnstile_out_animation.html#ac34113bf40a4a98e28de46bcb3de1831',1,'Xamarin::Forms::CommonCore::CoreTurnstileOutAnimation']]],
   ['type',['Type',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#a785c027518b0e6490c6b69fdb4a18df7',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
-  ['typicons',['Typicons',['../class_xamarin_1_1_forms_1_1_common_core_1_1_typicons.html',1,'Xamarin.Forms.CommonCore.Typicons'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_typicons.html#a05cd774c28c09693b1ae7f3f3a6365aa',1,'Xamarin.Forms.CommonCore.Typicons.Typicons()']]],
+  ['typicons',['Typicons',['../class_xamarin_1_1_forms_1_1_common_core_1_1_typicons.html',1,'Xamarin.Forms.CommonCore.Typicons'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_typicons.html#a05cd774c28c09693b1ae7f3f3a6365aa',1,'Xamarin.Forms.CommonCore.Typicons.Typicons()'],['../namespace_xamarin_1_1_forms_1_1_common_core.html#a61ee3b5d6aebf30a079fe677ca58348ea9c15ee7953452777d7a1b9b2df4143ee',1,'Xamarin.Forms.CommonCore.Typicons()']]],
   ['typicons_2ecs',['Typicons.cs',['../_typicons_8cs.html',1,'']]]
 ];

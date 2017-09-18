@@ -3,8 +3,6 @@ var searchData=
   ['easing',['Easing',['../class_xamarin_1_1_forms_1_1_common_core_1_1_animation_base.html#aeb25755ccc6f7e2006ebcec594c1e1d1',1,'Xamarin::Forms::CommonCore::AnimationBase']]],
   ['emailaddress',['EmailAddress',['../class_xamarin_1_1_forms_1_1_common_core_1_1_email_message.html#af66d6afdacc2a6a3dbba93dee638f211',1,'Xamarin::Forms::CommonCore::EmailMessage']]],
   ['emailvalidator',['EmailValidator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a6b8e628b0a3eba50063f0c4ee7dcf269',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]],
-  ['encryptedproperties',['EncryptedProperties',['../class_xamarin_1_1_forms_1_1_common_core_1_1_table_name.html#ada7e6ba00053c81e1b0d38fe4c5709d0',1,'Xamarin::Forms::CommonCore::TableName']]],
-  ['encryptionenabled',['EncryptionEnabled',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html#aebaf0dc6951ebc85d9c3ba54f9f5812a',1,'Xamarin::Forms::CommonCore::SqliteSettings']]],
   ['encryptionservice',['EncryptionService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a853f6e901546fcac7c26c5918d80a966',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['endcolor',['EndColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_button.html#a6b586c61485ea8ce0a309ecee01d6227',1,'Xamarin.Forms.CommonCore.CoreButton.EndColor()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_stack_layout.html#ae81b271122c56286635ab4443c603484',1,'Xamarin.Forms.CommonCore.CoreStackLayout.EndColor()']]],
   ['endtime',['EndTime',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html#a70863d0ef127056d3fe1de97b163bf65',1,'Xamarin::Forms::CommonCore::CalendarEventModel']]],

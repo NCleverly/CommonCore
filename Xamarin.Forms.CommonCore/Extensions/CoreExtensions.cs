@@ -338,20 +338,22 @@ namespace Xamarin.Forms.CommonCore
         }
 
         /// <summary>
-        /// Encrypteds the data model properties.
+        /// Encrypts the model properties of ObservableObject lists.
         /// </summary>
-        /// <param name="obj">Object.</param>
+        /// <param name="list">List.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void EncryptedDataModelProperties<T>(this T obj) where T : ISqlDataModel
+        public static void EncryptedModelProperties<T>(IEnumerable<T> list) where T: ObservableObject
         {
-            var n = typeof(T).FullName;
-            var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
-            if (table != null)
+            var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+
+            var props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                     .Where(p => p.GetCustomAttributes(typeof(EncryptedPropertyAttribute)).Count() > 0).ToArray();
+
+            if (props.Count() > 0)
             {
-                var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
-                foreach (var prop in typeof(T).GetProperties())
+                foreach (var prop in props)
                 {
-                    if (table.EncryptedProperties.Contains(prop.Name))
+                    foreach (var obj in list)
                     {
                         prop.SetValue(obj, service.AesEncrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
                     }
@@ -360,74 +362,139 @@ namespace Xamarin.Forms.CommonCore
         }
 
         /// <summary>
-        /// Encrypteds the data model properties.
+        /// UnEncrypts the model properties of ObservableObject lists.
         /// </summary>
         /// <param name="list">List.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void EncryptedDataModelProperties<T>(this IEnumerable<T> list) where T : ISqlDataModel
+        public static void UnEncryptedModelProperties<T>(IEnumerable<T> list) where T : ObservableObject
         {
-            var n = typeof(T).FullName;
-            var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
-            if (table != null)
+            var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+
+            var props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                     .Where(p => p.GetCustomAttributes(typeof(EncryptedPropertyAttribute)).Count() > 0).ToArray();
+
+            if (props.Count() > 0)
             {
-                var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
-                foreach (var prop in typeof(T).GetProperties())
+                foreach (var prop in props)
                 {
-                    if (table.EncryptedProperties.Contains(prop.Name))
-                    {
-                        foreach (var obj in list)
-                        {
-                            prop.SetValue(obj, service.AesEncrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
-                        }
-                    }
-                }
-            }
-        }
-        /// <summary>
-        /// Uns the encrypted data model properties.
-        /// </summary>
-        /// <param name="obj">Object.</param>
-        /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void UnEncryptedDataModelProperties<T>(this object obj) where T : ISqlDataModel
-        {
-            var n = typeof(T).FullName;
-            var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
-            if (table != null)
-            {
-                var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
-                foreach (var prop in typeof(T).GetProperties())
-                {
-                    if (table.EncryptedProperties.Contains(prop.Name))
+                    foreach (var obj in list)
                     {
                         prop.SetValue(obj, service.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
                     }
                 }
             }
         }
+
+
+
         /// <summary>
-        /// Uns the encrypted data model properties.
+        /// Encrypts the model properties of ISqlDataModel object defined by SQLData instance type dictionary.
         /// </summary>
+        /// <param name="dict">Dict.</param>
+        /// <param name="obj">Object.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static void EncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, T obj) where T : ISqlDataModel
+        {
+            var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+            var props = dict[typeof(T)];
+            if (props.Count() > 0)
+            {
+                foreach (var prop in props)
+                {
+                    prop.SetValue(obj, service.AesEncrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Encrypts the model properties of ISqlDataModel list defined by SQLData instance type dictionary.
+        /// </summary>
+        /// <param name="dict">Dict.</param>
         /// <param name="list">List.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void UnEncryptedDataModelProperties<T>(this IEnumerable<T> list) where T : ISqlDataModel
+        public static void EncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, IEnumerable<T> list) where T : ISqlDataModel
         {
-            var n = typeof(T).FullName;
-            var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
-            if (table != null)
+            var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+            var props = dict[typeof(T)];
+            if (props.Count() > 0)
             {
-                var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
-                foreach (var prop in typeof(T).GetProperties())
+                foreach (var prop in props)
                 {
-                    if (table.EncryptedProperties.Contains(prop.Name))
+                    foreach (var obj in list)
                     {
-                        foreach (var obj in list)
-                        {
-                            prop.SetValue(obj, service.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
-                        }
+                        prop.SetValue(obj, service.AesEncrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
                     }
                 }
             }
         }
+
+        /// <summary>
+        /// UnEncrypts the model properties of ISqlDataModel object defined by SQLData instance type dictionary.
+        /// </summary>
+        /// <param name="dict">Dict.</param>
+        /// <param name="obj">Object.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static void UnEncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, T obj) where T : ISqlDataModel
+        {
+            var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+            var props = dict[typeof(T)];
+            if (props.Count() > 0)
+            {
+                foreach (var prop in props)
+                {
+                    prop.SetValue(obj, service.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                }
+            }
+        }
+
+        /// <summary>
+        /// UnEncrypts the model properties of ISqlDataModel list defined by SQLData instance type dictionary.
+        /// </summary>
+        /// <param name="dict">Dict.</param>
+        /// <param name="list">List.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static void UnEncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, IEnumerable<T> list)where T : ISqlDataModel
+        {
+            var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+            var props = dict[typeof(T)];
+            if(props.Count()>0)
+            {
+                foreach(var prop in props)
+                {
+                    foreach(var obj in list)
+                    {
+                        prop.SetValue(obj, service.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                    }
+                }
+            }
+        }
+
+        ///// <summary>
+        ///// Uns the encrypted data model properties.
+        ///// </summary>
+        ///// <param name="list">List.</param>
+        ///// <typeparam name="T">The 1st type parameter.</typeparam>
+        //public static void UnEncryptedDataModelProperties<T>(this IEnumerable<T> list) where T : ISqlDataModel
+        //{
+        //    var n = typeof(T).FullName;
+        //    var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
+        //    if (table != null)
+        //    {
+        //        var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+        //        foreach (var prop in typeof(T).GetProperties())
+        //        {
+        //            if (table.EncryptedProperties.Contains(prop.Name))
+        //            {
+        //                foreach (var obj in list)
+        //                {
+        //                    prop.SetValue(obj, service.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+        //                }
+        //            }
+        //        }
+        //    }
+        //}
+
+
         /// <summary>
         /// Sets the automation identifiers.
         /// </summary>

@@ -10,8 +10,8 @@ Android SDK Manager - > Extras
 
  ******** QUICKSTART *********
  nuget packets listed below can be imported using the following:
- https://www.nuget.org/packages/Xamarin.Form.CommonCore.Droid/1.0.0
- https://www.nuget.org/packages/Xamarin.Form.CommonCore.IOS/1.0.0
+ https://www.nuget.org/packages/Xamarin.Form.CommonCore.Droid/1.0.5
+ https://www.nuget.org/packages/Xamarin.Form.CommonCore.IOS/1.0.5
  *****************************
 
 Required Nuget Installs
@@ -149,7 +149,7 @@ In Order to accomplish this, add the following to the Toolbar.xml file and imple
         android:id="@+id/searchView" />
 
 In the MainActivity in the OnCreate method set:
-    AppData.Instance.SearchView = Resource.Id.searchView;
+     CoreSettings.SearchView = Resource.Id.searchView;
 
 *** Background Page Image / Splash Screen ***
 http://apetools.webprofusion.com/tools/imagegorilla  -> create icons and screens

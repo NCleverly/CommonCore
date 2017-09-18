@@ -4,6 +4,7 @@ using System.Linq.Expressions;
 using System.Threading.Tasks;
 using SQLite;
 using System.Linq;
+using System.Reflection;
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -14,8 +15,12 @@ namespace Xamarin.Forms.CommonCore
     
         private static readonly AsyncLock Mutex = new AsyncLock();
 
+        private Dictionary<Type, PropertyInfo[]> encrytedProperties;
+
         private async Task<bool> InitializeConnection()
 		{
+            encrytedProperties = new Dictionary<Type, PropertyInfo[]>();
+
 			return await Task.Run(async() =>
 			{
 				try
@@ -27,6 +32,7 @@ namespace Xamarin.Forms.CommonCore
 					foreach (var table in CoreSettings.Config.SqliteSettings.TableNames)
 					{
 						var t = Type.GetType(table.Name);
+                        encrytedProperties.Add(t, GetEncryptePropertyList(t));
 						var genericMethod = method.MakeGenericMethod(t);
 						var task = (Task<CreateTablesResult>)genericMethod.Invoke(conn, new object[] { CreateFlags.None });
                         await task;
@@ -39,6 +45,13 @@ namespace Xamarin.Forms.CommonCore
 				}
 			});
 		}
+
+        private PropertyInfo[] GetEncryptePropertyList(Type type)
+        {
+            var props = type.GetProperties(BindingFlags.Public | BindingFlags.Instance)
+                                 .Where(p => p.GetCustomAttributes(typeof(EncryptedPropertyAttribute)).Count() > 0).ToArray();
+            return props;
+        }
 
 		public async Task<GenericResponse<List<T>>> GetAll<T>() where T : ISqlDataModel, new()
 		{
@@ -55,9 +68,8 @@ namespace Xamarin.Forms.CommonCore
 					var query = conn.Table<T>();
 					response.Response = await query.ToListAsync();
 
-                    if (CoreSettings.Config.SqliteSettings.EncryptionEnabled)
-                     response.Response.UnEncryptedDataModelProperties<T>();
-                    
+                    encrytedProperties.UnEncryptedDataModelProperties<T>(response.Response);
+
 					response.Success = true;
 					return response;
                 }
@@ -116,9 +128,8 @@ namespace Xamarin.Forms.CommonCore
 
                     response.Response = await query.FirstOrDefaultAsync();
 
-                    if (CoreSettings.Config.SqliteSettings.EncryptionEnabled)
-                     response.Response.UnEncryptedDataModelProperties<T>();
-                    
+                    encrytedProperties.UnEncryptedDataModelProperties<T>(response.Response);
+
                     response.Success = true;
                     return response;
                 }
@@ -145,8 +156,7 @@ namespace Xamarin.Forms.CommonCore
 
                     response.Response = await query.ToListAsync();
 
-                    if(CoreSettings.Config.SqliteSettings.EncryptionEnabled)
-                        response.Response.UnEncryptedDataModelProperties<T>();
+                    encrytedProperties.UnEncryptedDataModelProperties<T>(response.Response);
                     
                     response.Success = true;
                     return response;
@@ -174,8 +184,7 @@ namespace Xamarin.Forms.CommonCore
                     if (conn == null)
                         await InitializeConnection();
 
-                    if (CoreSettings.Config.SqliteSettings.EncryptionEnabled)
-                        obj.EncryptedDataModelProperties<T>();
+                    encrytedProperties.EncryptedDataModelProperties<T>(obj);
 
                     var expression = (MemberExpression)exp.Body;
                     string name = expression.Member.Name;
@@ -230,8 +239,7 @@ namespace Xamarin.Forms.CommonCore
                     if (conn == null)
                         await InitializeConnection();
 
-                    if (CoreSettings.Config.SqliteSettings.EncryptionEnabled)
-                        collection.EncryptedDataModelProperties<T>();
+                    encrytedProperties.EncryptedDataModelProperties<T>(collection);
 
                     var inserts = new List<T>();
                     var updates = new List<T>();
@@ -280,8 +288,7 @@ namespace Xamarin.Forms.CommonCore
                     if (conn == null)
                         await InitializeConnection();
 
-                    if (CoreSettings.Config.SqliteSettings.EncryptionEnabled)
-                        obj.EncryptedDataModelProperties<T>();
+                    encrytedProperties.EncryptedDataModelProperties<T>(obj);
 
                     if (obj.CorrelationID != default(Guid))
                     {
@@ -321,8 +328,7 @@ namespace Xamarin.Forms.CommonCore
                     if (conn == null)
                         await InitializeConnection();
 
-                    if (CoreSettings.Config.SqliteSettings.EncryptionEnabled)
-                        collection.EncryptedDataModelProperties<T>();
+                    encrytedProperties.EncryptedDataModelProperties<T>(collection);
 
                     var expression = (MemberExpression)exp.Body;
                     string name = expression.Member.Name;

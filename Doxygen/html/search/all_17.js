@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['weathericons',['WeatherIcons',['../class_xamarin_1_1_forms_1_1_common_core_1_1_weather_icons.html',1,'Xamarin.Forms.CommonCore.WeatherIcons'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_weather_icons.html#a9bdb97de1b2fb70e965036812d7caa23',1,'Xamarin.Forms.CommonCore.WeatherIcons.WeatherIcons()']]],
+  ['weathericons',['WeatherIcons',['../class_xamarin_1_1_forms_1_1_common_core_1_1_weather_icons.html',1,'Xamarin.Forms.CommonCore.WeatherIcons'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_weather_icons.html#a9bdb97de1b2fb70e965036812d7caa23',1,'Xamarin.Forms.CommonCore.WeatherIcons.WeatherIcons()'],['../namespace_xamarin_1_1_forms_1_1_common_core.html#a61ee3b5d6aebf30a079fe677ca58348ea358dfd99616e35b4137552bf9b384ae6',1,'Xamarin.Forms.CommonCore.WeatherIcons()']]],
   ['weathericons_2ecs',['WeatherIcons.cs',['../_weather_icons_8cs.html',1,'']]],
   ['webapi',['WebApi',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#a67c01ea8663df4d80cc28bdd100a4ace',1,'Xamarin::Forms::CommonCore::ConfigurationModel']]],
   ['webapis',['WebApis',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a63cd812f7acd33578a4ad9e4539e90bc',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],

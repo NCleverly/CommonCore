@@ -64,7 +64,7 @@ var searchData=
   ['invertedbooleanconverter',['InvertedBooleanConverter',['../class_xamarin_1_1_forms_1_1_common_core_1_1_inverted_boolean_converter.html',1,'Xamarin::Forms::CommonCore']]],
   ['invertedbooleanconverter_2ecs',['InvertedBooleanConverter.cs',['../_inverted_boolean_converter_8cs.html',1,'']]],
   ['invoke',['Invoke',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_trigger_action.html#aa89df71f3cb9f12eb3c7221f6c9a1499',1,'Xamarin::Forms::CommonCore::CoreTriggerAction']]],
-  ['ionicons',['Ionicons',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ionicons.html',1,'Xamarin.Forms.CommonCore.Ionicons'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_ionicons.html#aaf35e1de12a97520509813b14f66a167',1,'Xamarin.Forms.CommonCore.Ionicons.Ionicons()']]],
+  ['ionicons',['Ionicons',['../class_xamarin_1_1_forms_1_1_common_core_1_1_ionicons.html',1,'Xamarin.Forms.CommonCore.Ionicons'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_ionicons.html#aaf35e1de12a97520509813b14f66a167',1,'Xamarin.Forms.CommonCore.Ionicons.Ionicons()'],['../namespace_xamarin_1_1_forms_1_1_common_core.html#a61ee3b5d6aebf30a079fe677ca58348ea941fd5bcd422c1dd72cd362d7f683958',1,'Xamarin.Forms.CommonCore.Ionicons()']]],
   ['ionicons_2ecs',['Ionicons.cs',['../_ionicons_8cs.html',1,'']]],
   ['ios',['iOS',['../namespace_push_notification_1_1_plugin_1_1_abstractions.html#a1ce4369c799a8f4045fa0c9c7d4820a3a1bdf605991920db11cbdf8508204c4eb',1,'PushNotification::Plugin::Abstractions']]],
   ['iosappid',['IOSAppId',['../class_xamarin_1_1_forms_1_1_common_core_1_1_mobile_center_hockey_app.html#a809abac6137bfdc5a38d7246e338b173',1,'Xamarin::Forms::CommonCore::MobileCenterHockeyApp']]],

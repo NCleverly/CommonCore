@@ -35,13 +35,11 @@ namespace Xamarin.Forms.CommonCore
 	public class TableName
 	{
 		public string Name { get; set; }
-        public string[] EncryptedProperties { get; set; }
 	}
 
 	public class SqliteSettings
 	{
 		public string SQLiteDatabase { get; set; }
-        public bool EncryptionEnabled { get; set; }
 		public List<TableName> TableNames { get; set; }
 	}
 

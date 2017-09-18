@@ -56,7 +56,6 @@ namespace Xamarin.Forms.CommonCore
                 vmContainer.Add(typeof(T).FullName);
             }
             var vm = DependencyService.Get<T>(DependencyFetchTarget.GlobalInstance);
-
             if (loadResources)
                 vm.LoadResources();
             return vm;
@@ -107,6 +106,45 @@ namespace Xamarin.Forms.CommonCore
                     vm.ReleaseResources();
                 }
 
+            }
+        }
+
+        /// <summary>
+        /// Releases all resources on all VM instances.
+        /// </summary>
+        public static void ReleaseAllResources()
+        {
+            foreach (var name in vmContainer)
+            {
+                var vm = ((ObservableViewModel)GetObjectByName(name));
+                vm.ReleaseResources();
+            }
+        }
+
+        /// <summary>
+        /// Reloads all resources on all VM instances.
+        /// </summary>
+        public static void ReloadAllResources()
+        {
+            foreach (var name in vmContainer)
+            {
+                var vm = ((ObservableViewModel)GetObjectByName(name));
+                vm.LoadResources();
+            }
+        }
+
+        /// <summary>
+        /// Calls the dispose method on all services
+        /// </summary>
+        public static void DisposeServices()
+        {
+            foreach (var name in srvContainer)
+            {
+                var obj = GetObjectByName(name);
+                if(obj is IDisposable)
+                {
+                    ((IDisposable)obj).Dispose();
+                }
             }
         }
 

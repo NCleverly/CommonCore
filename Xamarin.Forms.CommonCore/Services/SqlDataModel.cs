@@ -3,6 +3,9 @@ using SQLite;
 
 namespace Xamarin.Forms.CommonCore
 {
+    [AttributeUsage(AttributeTargets.Property)]  
+    public class EncryptedPropertyAttribute:Attribute{}
+
     public interface ISqlDataModel
     {
         Guid CorrelationID { get; set; }
