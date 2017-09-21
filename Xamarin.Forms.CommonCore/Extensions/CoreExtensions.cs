@@ -34,6 +34,14 @@ namespace Xamarin.Forms.CommonCore
 
     public static class CoreExtensions
     {
+        private static IEncryptionService Encryption
+        {
+            get
+            {
+                return InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+            }
+        }
+
         /// <summary>
         /// Save the state of the view model.  Used for when the application may teardown the memory losing the property
         /// values of the view model.
@@ -342,10 +350,8 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <param name="list">List.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void EncryptedModelProperties<T>(IEnumerable<T> list) where T: ObservableObject
+        public static void EncryptedModelProperties<T>(IEnumerable<T> list) where T : ObservableObject
         {
-            var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
-
             var props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance)
                      .Where(p => p.GetCustomAttributes(typeof(EncryptedPropertyAttribute)).Count() > 0).ToArray();
 
@@ -355,7 +361,7 @@ namespace Xamarin.Forms.CommonCore
                 {
                     foreach (var obj in list)
                     {
-                        prop.SetValue(obj, service.AesEncrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                        prop.SetValue(obj, Encryption.AesEncrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
                     }
                 }
             }
@@ -368,7 +374,6 @@ namespace Xamarin.Forms.CommonCore
         /// <typeparam name="T">The 1st type parameter.</typeparam>
         public static void UnEncryptedModelProperties<T>(IEnumerable<T> list) where T : ObservableObject
         {
-            var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
 
             var props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance)
                      .Where(p => p.GetCustomAttributes(typeof(EncryptedPropertyAttribute)).Count() > 0).ToArray();
@@ -379,7 +384,7 @@ namespace Xamarin.Forms.CommonCore
                 {
                     foreach (var obj in list)
                     {
-                        prop.SetValue(obj, service.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                        prop.SetValue(obj, Encryption.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
                     }
                 }
             }
@@ -395,13 +400,12 @@ namespace Xamarin.Forms.CommonCore
         /// <typeparam name="T">The 1st type parameter.</typeparam>
         public static void EncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, T obj) where T : ISqlDataModel
         {
-            var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
             var props = dict[typeof(T)];
             if (props.Count() > 0)
             {
                 foreach (var prop in props)
                 {
-                    prop.SetValue(obj, service.AesEncrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                    prop.SetValue(obj, Encryption.AesEncrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
                 }
             }
         }
@@ -414,7 +418,6 @@ namespace Xamarin.Forms.CommonCore
         /// <typeparam name="T">The 1st type parameter.</typeparam>
         public static void EncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, IEnumerable<T> list) where T : ISqlDataModel
         {
-            var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
             var props = dict[typeof(T)];
             if (props.Count() > 0)
             {
@@ -422,7 +425,7 @@ namespace Xamarin.Forms.CommonCore
                 {
                     foreach (var obj in list)
                     {
-                        prop.SetValue(obj, service.AesEncrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                        prop.SetValue(obj, Encryption.AesEncrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
                     }
                 }
             }
@@ -436,13 +439,12 @@ namespace Xamarin.Forms.CommonCore
         /// <typeparam name="T">The 1st type parameter.</typeparam>
         public static void UnEncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, T obj) where T : ISqlDataModel
         {
-            var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
             var props = dict[typeof(T)];
             if (props.Count() > 0)
             {
                 foreach (var prop in props)
                 {
-                    prop.SetValue(obj, service.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                    prop.SetValue(obj, Encryption.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
                 }
             }
         }
@@ -453,46 +455,20 @@ namespace Xamarin.Forms.CommonCore
         /// <param name="dict">Dict.</param>
         /// <param name="list">List.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void UnEncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, IEnumerable<T> list)where T : ISqlDataModel
+        public static void UnEncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, IEnumerable<T> list) where T : ISqlDataModel
         {
-            var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
             var props = dict[typeof(T)];
-            if(props.Count()>0)
+            if (props.Count() > 0)
             {
-                foreach(var prop in props)
+                foreach (var prop in props)
                 {
-                    foreach(var obj in list)
+                    foreach (var obj in list)
                     {
-                        prop.SetValue(obj, service.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
+                        prop.SetValue(obj, Encryption.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
                     }
                 }
             }
         }
-
-        ///// <summary>
-        ///// Uns the encrypted data model properties.
-        ///// </summary>
-        ///// <param name="list">List.</param>
-        ///// <typeparam name="T">The 1st type parameter.</typeparam>
-        //public static void UnEncryptedDataModelProperties<T>(this IEnumerable<T> list) where T : ISqlDataModel
-        //{
-        //    var n = typeof(T).FullName;
-        //    var table = CoreSettings.Config.SqliteSettings.TableNames.FirstOrDefault(x => x.Name == n && (x.EncryptedProperties != null && x.EncryptedProperties.Length > 0));
-        //    if (table != null)
-        //    {
-        //        var service = InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
-        //        foreach (var prop in typeof(T).GetProperties())
-        //        {
-        //            if (table.EncryptedProperties.Contains(prop.Name))
-        //            {
-        //                foreach (var obj in list)
-        //                {
-        //                    prop.SetValue(obj, service.AesDecrypt(prop.GetString(obj), CoreSettings.Config.AESEncryptionKey), null);
-        //                }
-        //            }
-        //        }
-        //    }
-        //}
 
 
         /// <summary>
@@ -1069,12 +1045,13 @@ namespace Xamarin.Forms.CommonCore
             return UIImage.FromImage(img.CGImage, 1.0f, UIImageOrientation.DownMirrored);
         }
 
-        public static UIImage MaskeWithColor(this UIImage image, UIColor color){
-            
-			var maskImage = image.CGImage;
-			var width = image.Size.Width;
-			var height = image.Size.Height;
-			var bounds = new CGRect(0, 0, width, height);
+        public static UIImage MaskeWithColor(this UIImage image, UIColor color)
+        {
+
+            var maskImage = image.CGImage;
+            var width = image.Size.Width;
+            var height = image.Size.Height;
+            var bounds = new CGRect(0, 0, width, height);
 
             using (var colorSpace = CGColorSpace.CreateDeviceRGB())
             {
@@ -1091,8 +1068,8 @@ namespace Xamarin.Forms.CommonCore
                     }
                 }
             }
-			
-		}
+
+        }
 
         /// <summary>
         /// Resize the specified imgView and size.
@@ -1135,20 +1112,20 @@ namespace Xamarin.Forms.CommonCore
             throw new NotSupportedException($"Not supported on iOS: {value}");
         }
 
-		public static nfloat StringHeight(this string text, UIFont font, nfloat width)
-		{
-			var nativeString = new NSString(text);
+        public static nfloat StringHeight(this string text, UIFont font, nfloat width)
+        {
+            var nativeString = new NSString(text);
 
-			var rect = nativeString.GetBoundingRect(
-				new CGSize(width, nfloat.MaxValue),
-				NSStringDrawingOptions.UsesLineFragmentOrigin,
-				new UIStringAttributes() { Font = font },
-				null);
+            var rect = nativeString.GetBoundingRect(
+                new CGSize(width, nfloat.MaxValue),
+                NSStringDrawingOptions.UsesLineFragmentOrigin,
+                new UIStringAttributes() { Font = font },
+                null);
 
-			return rect.Height;
-		}
+            return rect.Height;
+        }
 
-        public static ImageSource GetImageResource<T>(this T obj, string imgName) where T:class
+        public static ImageSource GetImageResource<T>(this T obj, string imgName) where T : class
         {
             var assemblyName = Assembly.GetAssembly(obj.GetType()).FullName;
             return ImageSource.FromResource($"{assemblyName}.{imgName}");

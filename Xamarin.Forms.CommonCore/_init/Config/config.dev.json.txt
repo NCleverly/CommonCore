@@ -1,4 +1,5 @@
 ﻿{
+  "NavStyle": "Stacked",
   "AnalyticsEnabled": false,
   "AESEncryptionKey": "123",
   "AzureSettings": {
@@ -23,15 +24,7 @@
     "MicrosoftAppId": ""
   },
   "SqliteSettings": {
-    "SQLiteDatabase": "app.db3",
-    "TableNames": [
-      {
-        "Name": "namespace.tableName",
-      },
-      {
-        "Name": "namespace.tableName2",
-      }
-    ]
+    "SQLiteDatabase": "app.db3"
   },
   "MobileCenter_HockeyApp": {
     "IOSAppId": "",

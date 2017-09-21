@@ -171,15 +171,7 @@ namespace Xamarin.Forms.CommonCore
         {
             get { return DependencyService.Get<ICommunication>(); }
         }
-        /// <summary>
-        /// DependencyService for IDeviceInfo.
-        /// </summary>
-        /// <value>The audio player.</value>
-        [JsonIgnore]
-        public IDeviceInfo DeviceInfo
-        {
-            get { return DependencyService.Get<IDeviceInfo>(); }
-        }
+
         /// <summary>
         /// DependencyService for IDialogPrompt.
         /// </summary>

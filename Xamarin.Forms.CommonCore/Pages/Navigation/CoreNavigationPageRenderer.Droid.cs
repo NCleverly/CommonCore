@@ -35,7 +35,7 @@ namespace Xamarin.Forms.CommonCore
 
 		public void OnClick(Views.View v)
 		{
-            if(CoreSettings.NavStyle== NavType.MasterDetail && CoreSettings.AppNav.NavigationStack.Count<=1)
+            if(CoreSettings.Config.NavStyle== NavType.MasterDetail && CoreSettings.AppNav.NavigationStack.Count<=1)
             {
                 InjectionManager.SendViewModelMessage(CoreSettings.MasterDetailIsPresented, null);
                 return;

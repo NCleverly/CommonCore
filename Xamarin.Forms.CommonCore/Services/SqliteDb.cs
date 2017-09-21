@@ -8,43 +8,43 @@ using System.Reflection;
 
 namespace Xamarin.Forms.CommonCore
 {
-
     public class SqliteDb : ISqliteDb
 	{
 		protected SQLiteAsyncConnection conn;
-    
-        private static readonly AsyncLock Mutex = new AsyncLock();
 
+        private List<string> tableRegistry;
+        private static readonly AsyncLock Mutex = new AsyncLock();
         private Dictionary<Type, PropertyInfo[]> encrytedProperties;
 
-        private async Task<bool> InitializeConnection()
-		{
-            encrytedProperties = new Dictionary<Type, PropertyInfo[]>();
+        private async Task ValidateSetup<T>() where T : ISqlDataModel, new()
+        {
+            await Task.Run(async() => { 
+               
+                var fullName = typeof(T).FullName;
+                if(conn==null)
+                {
+                    string folder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+                    conn = new SQLiteAsyncConnection(System.IO.Path.Combine(folder, CoreSettings.Config.SqliteSettings.SQLiteDatabase));
+                    encrytedProperties = new Dictionary<Type, PropertyInfo[]>();
+                }
+                if(tableRegistry==null)
+                {
+                    tableRegistry = new List<string>();
+                }
 
-			return await Task.Run(async() =>
-			{
-				try
-				{
-					string folder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-					conn = new SQLiteAsyncConnection(System.IO.Path.Combine(folder, CoreSettings.Config.SqliteSettings.SQLiteDatabase));
+                if (tableRegistry.Any(x => x == fullName))
+                {
+                    return;
+                }
+                else{
+                    await conn.CreateTableAsync<T>();
+                    var t = typeof(T);
+                    encrytedProperties.Add(t, GetEncryptePropertyList(t));
+                    tableRegistry.Add(fullName);
+                }
+            });
 
-					var method = typeof(SQLiteAsyncConnection).GetMethod("CreateTableAsync");
-					foreach (var table in CoreSettings.Config.SqliteSettings.TableNames)
-					{
-						var t = Type.GetType(table.Name);
-                        encrytedProperties.Add(t, GetEncryptePropertyList(t));
-						var genericMethod = method.MakeGenericMethod(t);
-						var task = (Task<CreateTablesResult>)genericMethod.Invoke(conn, new object[] { CreateFlags.None });
-                        await task;
-					}
-					return true;
-				}
-				catch (Exception ex)
-				{
-					return false;
-				}
-			});
-		}
+        }
 
         private PropertyInfo[] GetEncryptePropertyList(Type type)
         {
@@ -61,9 +61,8 @@ namespace Xamarin.Forms.CommonCore
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
-                 
-					if (conn == null)
-						await InitializeConnection();
+
+                    await ValidateSetup<T>();
                     
 					var query = conn.Table<T>();
 					response.Response = await query.ToListAsync();
@@ -93,8 +92,7 @@ namespace Xamarin.Forms.CommonCore
 				{
                     using (await Mutex.LockAsync().ConfigureAwait(false))
                     {
-                        if (conn == null)
-                            await InitializeConnection();
+                        await ValidateSetup<T>();
 
                         await conn.DropTableAsync<T>();
                         await conn.CreateTableAsync<T>();
@@ -121,8 +119,7 @@ namespace Xamarin.Forms.CommonCore
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
-                    if (conn == null)
-                        await InitializeConnection();
+                    await ValidateSetup<T>();
 
                     var query = conn.Table<T>().Where(x => x.CorrelationID == CorrelationID);
 
@@ -149,8 +146,7 @@ namespace Xamarin.Forms.CommonCore
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
-                    if (conn == null)
-                        await InitializeConnection();
+                    await ValidateSetup<T>();
 
                     var query = conn.Table<T>().Where(exp);
 
@@ -181,8 +177,7 @@ namespace Xamarin.Forms.CommonCore
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
-                    if (conn == null)
-                        await InitializeConnection();
+                    await ValidateSetup<T>();
 
                     encrytedProperties.EncryptedDataModelProperties<T>(obj);
 
@@ -236,8 +231,7 @@ namespace Xamarin.Forms.CommonCore
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
-                    if (conn == null)
-                        await InitializeConnection();
+                    await ValidateSetup<T>();
 
                     encrytedProperties.EncryptedDataModelProperties<T>(collection);
 
@@ -285,8 +279,7 @@ namespace Xamarin.Forms.CommonCore
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
-                    if (conn == null)
-                        await InitializeConnection();
+                    await ValidateSetup<T>();
 
                     encrytedProperties.EncryptedDataModelProperties<T>(obj);
 
@@ -325,8 +318,7 @@ namespace Xamarin.Forms.CommonCore
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
-                    if (conn == null)
-                        await InitializeConnection();
+                    await ValidateSetup<T>();
 
                     encrytedProperties.EncryptedDataModelProperties<T>(collection);
 
@@ -406,8 +398,7 @@ namespace Xamarin.Forms.CommonCore
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
-                    if (conn == null)
-                        await InitializeConnection();
+                    await ValidateSetup<T>();
 
                     var obj = await conn.Table<T>().Where(x => x.CorrelationID == correlationId).FirstOrDefaultAsync();
                     int rowsAffected = 0;
@@ -441,8 +432,7 @@ namespace Xamarin.Forms.CommonCore
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
-                    if (conn == null)
-                        await InitializeConnection();
+                    await ValidateSetup<T>();
 
                     int rowsAffected = 0;
                     var obj = await conn.Table<T>().Where(exp).FirstOrDefaultAsync();

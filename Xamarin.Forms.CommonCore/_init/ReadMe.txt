@@ -135,6 +135,24 @@ Step 6 (Optional) -> In order to use differnet configuration files across dev en
             AppSettings.CurrentBuid = "prod";
         #endif
 
+Step 7 (XAML projects only)
+    * Projects Options -> Output-> Assembly Name (make the same for both Android and iOS projects)
+    * Add the following xmlns to your pages:
+        xmlns:core="clr-namespace:Xamarin.Forms.CommonCore;assembly=yourassemblyname" 
+    * Define your pages with BoundPage and Set ViewModel property to fully qualified ViewModel name (example):
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <core:BoundPage xmlns="http://xamarin.com/schemas/2014/forms" 
+        ViewModel="fullyqualifiedNamespace.AppViewModel" 
+        xmlns:core="clr-namespace:Xamarin.Forms.CommonCore;assembly=yourassemblyname" 
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+        x:Class="fullyqualifiedNamespace.BehaviorsPage" 
+        Title="Core Behaviors">
+        <StackLayout>
+        </StackLayout>
+    </core:BoundPage>
+
+    * Copy Application.Resources from the _init/Styles/AppStyles.xaml.txt file into your App.xaml as a starter for styles.
 
 *** Search View ***
 IOS uses the Search bar as a control in the UI but Android generally expects it in the Actionbar.

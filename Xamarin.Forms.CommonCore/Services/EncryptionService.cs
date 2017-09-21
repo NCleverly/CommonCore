@@ -24,15 +24,14 @@ namespace Xamarin.Forms.CommonCore
 
         public EncryptionService()
         {
-            var info = DependencyService.Get<IDeviceInfo>().GetDeviceInformation();
-            if (info.DeviceType == DeviceState.Simulator)
+
+            var guid = CrossSettings.Current.GetValueOrDefault("encryptionSalt", Guid.Empty);
+            if(guid== Guid.Empty)
             {
-                encryptionSalt = new byte[] { 80, 70, 60, 50, 40, 30, 20, 10 };
+                guid = Guid.NewGuid();
+                CrossSettings.Current.AddOrUpdateValue("encryptionSalt", guid);
             }
-            else
-            {
-                encryptionSalt = Encoding.UTF8.GetBytes(info.SerialNumber);
-            }
+            encryptionSalt = guid.ToByteArray();
 
         }
 
@@ -58,9 +57,8 @@ namespace Xamarin.Forms.CommonCore
 
         private byte[] CreateKey(string password, int keyBytes = 32)
         {
-            byte[] salt = new byte[] { 80, 70, 60, 50, 40, 30, 20, 10 };// encryptionSalt;// 
             int iterations = 300;
-            using (var keyGenerator = new Rfc2898DeriveBytes(password, salt, iterations))
+            using (var keyGenerator = new Rfc2898DeriveBytes(password, encryptionSalt, iterations))
             {
                 return keyGenerator.GetBytes(keyBytes);
             }

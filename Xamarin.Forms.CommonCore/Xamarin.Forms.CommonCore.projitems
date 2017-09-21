@@ -107,13 +107,6 @@
       <DependentUpon>ICalendarEvent.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ICalendarEvent.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\DeviceInfo.Droid.cs">
-      <DependentUpon>IDeviceInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\DeviceInfo.IOS.cs">
-      <DependentUpon>IDeviceInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IDeviceInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\MapNavigate.Droid.cs">
       <DependentUpon>IMapNavigate.cs</DependentUpon>
     </Compile>

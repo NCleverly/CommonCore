@@ -5,6 +5,7 @@ using Plugin.Settings;
 using Plugin.Settings.Abstractions;
 using Newtonsoft.Json;
 using System.Reflection;
+using Newtonsoft.Json.Converters;
 
 #if __ANDROID__
 using Android.Widget;
@@ -70,7 +71,6 @@ namespace Xamarin.Forms.CommonCore
         public static bool IsConnected { get; set; } = true;
         public static INavigation AppNav { get; set; }
         public static Size ScreenSize { get; set; }
-        public static NavType NavStyle { get; set; } = NavType.Stacked;
         public static List<string> NotificationTags { get; set; } = new List<string>();
 
         public static bool TokenIsValid
