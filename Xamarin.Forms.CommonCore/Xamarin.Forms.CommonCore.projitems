@@ -92,7 +92,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\Communication.IOS.cs">
       <DependentUpon>ICommunication.cs</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ResponseTypes.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IOverlayDependency.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\OverlayDependency.Droid.cs">
       <DependentUpon>IOverlayDependency.cs</DependentUpon>
@@ -321,6 +320,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Fonts\WeatherIcons.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Fonts\Util\FontUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Fonts\Sources\FontImageSource.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)BusinessLayer\BusinessBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -357,6 +357,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)Fonts\" />
     <Folder Include="$(MSBuildThisFileDirectory)Fonts\Util\" />
     <Folder Include="$(MSBuildThisFileDirectory)Fonts\Sources\" />
+    <Folder Include="$(MSBuildThisFileDirectory)BusinessLayer\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)PushNotifications\readme.txt" />

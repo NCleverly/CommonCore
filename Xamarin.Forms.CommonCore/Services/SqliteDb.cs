@@ -53,39 +53,29 @@ namespace Xamarin.Forms.CommonCore
             return props;
         }
 
-		public async Task<GenericResponse<List<T>>> GetAll<T>() where T : ISqlDataModel, new()
+		public async Task<(List<T> Response, Exception Error)> GetAll<T>() where T : ISqlDataModel, new()
 		{
-
-			var response = new GenericResponse<List<T>>();
 			try
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
-
                     await ValidateSetup<T>();
-                    
 					var query = conn.Table<T>();
-					response.Response = await query.ToListAsync();
-
-                    encrytedProperties.UnEncryptedDataModelProperties<T>(response.Response);
-
-					response.Success = true;
-					return response;
+					var response = await query.ToListAsync();
+                    encrytedProperties.UnEncryptedDataModelProperties<T>(response);
+                    return (response, null);
                 }
 			}
 			catch (Exception ex)
 			{
-				response.Error = ex;
-				return response;
+				return (null, ex);
 			}
-
 
 		}
 
-		public async Task<BooleanResponse> TruncateAsync<T>() where T : ISqlDataModel, new()
+		public async Task<(bool Success, Exception Error)> TruncateAsync<T>() where T : ISqlDataModel, new()
 		{
-			var response = new BooleanResponse();
-
+            (bool Success, Exception Error) response = (false, null);
 			await conn.RunInTransactionAsync(async (tran) =>
 			{
 				try
@@ -102,75 +92,55 @@ namespace Xamarin.Forms.CommonCore
 				}
 				catch (Exception ex)
 				{
-					response.Error = ex;
+                    response.Error = ex;
 					tran.Rollback();
 				}
 
 			});
 			return response;
-
-
 		}
 
-		public async Task<GenericResponse<T>> GetByInternalId<T>(Guid CorrelationID) where T : class, ISqlDataModel, new()
+		public async Task<(T Response, Exception Error)> GetByInternalId<T>(Guid CorrelationID) where T : class, ISqlDataModel, new()
 		{
-			var response = new GenericResponse<T>();
 			try
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
                     await ValidateSetup<T>();
-
                     var query = conn.Table<T>().Where(x => x.CorrelationID == CorrelationID);
-
-                    response.Response = await query.FirstOrDefaultAsync();
-
-                    encrytedProperties.UnEncryptedDataModelProperties<T>(response.Response);
-
-                    response.Success = true;
-                    return response;
+                    var response = await query.FirstOrDefaultAsync();
+                    encrytedProperties.UnEncryptedDataModelProperties<T>(response);
+                    return (response, null);
                 }
 			}
 			catch (Exception ex)
 			{
-				response.Error = ex;
-				return response;
+                return (null, ex);
 			}
 
 		}
-		public async Task<GenericResponse<List<T>>> GetByQuery<T>(Expression<Func<T, bool>> exp) where T : ISqlDataModel, new()
+		public async Task<(List<T> Response, Exception Error)> GetByQuery<T>(Expression<Func<T, bool>> exp) where T : ISqlDataModel, new()
 		{
-
-			var response = new GenericResponse<List<T>>();
 			try
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
                     await ValidateSetup<T>();
-
                     var query = conn.Table<T>().Where(exp);
-
-                    response.Response = await query.ToListAsync();
-
-                    encrytedProperties.UnEncryptedDataModelProperties<T>(response.Response);
-                    
-                    response.Success = true;
-                    return response;
+                    var response = await query.ToListAsync();
+                    encrytedProperties.UnEncryptedDataModelProperties<T>(response);
+                    return (response, null);
                 }
 			}
 			catch (Exception ex)
 			{
-				response.Error = ex;
-				return response;
+				return (null, ex);
 			}
 
 		}
 
-		public async Task<BooleanResponse> SyncExternalObject<T, P>(T obj, Expression<Func<T, P>> exp) where T : ISqlDataModel, new()
+		public async Task<(bool Success, Exception Error)> SyncExternalObject<T, P>(T obj, Expression<Func<T, P>> exp) where T : ISqlDataModel, new()
 		{
-
-			var response = new BooleanResponse();
-
 			int rowsAffected = 0;
 			obj.UTCTickStamp = DateTime.UtcNow.Ticks;
 			try
@@ -210,23 +180,19 @@ namespace Xamarin.Forms.CommonCore
                             rowsAffected = await conn.InsertAsync(obj);
                         }
                     }
-                    response.Success = rowsAffected == 1 ? true : false;
-                    return response;
+                    var returnResult = rowsAffected == 1 ? true : false;
+                    return (returnResult, null);
                 }
 
 			}
 			catch (Exception ex)
 			{
-				response.Error = ex;
-				return response;
+				return (false, ex);
 			}
 
 		}
-		public async Task<BooleanResponse> AddOrUpdate<T>(IEnumerable<T> collection) where T : ISqlDataModel, new()
+		public async Task<(bool Success, Exception Error)> AddOrUpdate<T>(IEnumerable<T> collection) where T : ISqlDataModel, new()
 		{
-
-			var response = new BooleanResponse();
-
 			try
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
@@ -255,23 +221,20 @@ namespace Xamarin.Forms.CommonCore
                     var totalInserted = await conn.InsertAllAsync(inserts);
                     var totalUpdated = await conn.UpdateAllAsync(updates);
 
+                    bool result = false;
                     if (totalUpdated == updates.Count && totalInserted == inserts.Count)
-                        response.Success = true;
+                        result = true;
 
-                    return response;
+                    return (result, null);
                 }
 			}
 			catch (Exception ex)
 			{
-				response.Error = ex;
-				return response;
+				return (false, ex);
 			}
 		}
-		public async Task<BooleanResponse> AddOrUpdate<T>(T obj) where T : ISqlDataModel, new()
+		public async Task<(bool Success, Exception Error)> AddOrUpdate<T>(T obj) where T : ISqlDataModel, new()
 		{
-
-			var response = new BooleanResponse();
-
 			int rowsAffected = 0;
 			obj.UTCTickStamp = DateTime.UtcNow.Ticks;
 
@@ -295,24 +258,21 @@ namespace Xamarin.Forms.CommonCore
                             obj.CorrelationID = default(Guid);
                     }
 
-                    response.Success = rowsAffected == 1 ? true : false;
-                    return response;
+                    var result = rowsAffected == 1 ? true : false;
+                    return (result, null);
                 }
 			}
 			catch (Exception ex)
 			{
-				response.Error = ex;
-				return response;
+				return (false, ex);
 			}
 
 		}
 
-		public async Task<BooleanResponse> SyncExternalCollection<T, P>(List<T> collection, Expression<Func<T, P>> exp) where T : ISqlDataModel, new()
+		public async Task<(bool Success, Exception Error)> SyncExternalCollection<T, P>(List<T> collection, Expression<Func<T, P>> exp) where T : ISqlDataModel, new()
 		{
 
-			var st = DateTime.Now;
-
-			var response = new BooleanResponse();
+			//var st = DateTime.Now;
 			collection.ForEach((obj) => obj.UTCTickStamp = DateTime.UtcNow.Ticks);
 			try
 			{
@@ -362,16 +322,16 @@ namespace Xamarin.Forms.CommonCore
                     if (updates.Count > 0)
                         totalUpdated = await conn.UpdateAllAsync(updates);
 
+                    var returnResult = false;
                     if (totalUpdated == updates.Count && totalInserted == inserts.Count)
-                        response.Success = true;
+                        returnResult = true;
 
-                    return response;
+					return (returnResult, null);
                 }
 			}
 			catch (Exception ex)
 			{
-				response.Error = ex;
-				return response;
+				return (false, ex);
 			}
 		}
 
@@ -390,14 +350,14 @@ namespace Xamarin.Forms.CommonCore
 			}
 		}
 
-		public async Task<BooleanResponse> DeleteByInternalID<T>(Guid correlationId, bool softDelete = false) where T : class, ISqlDataModel, new()
+		public async Task<(bool Success, Exception Error)> DeleteByInternalID<T>(Guid correlationId, bool softDelete = false) where T : class, ISqlDataModel, new()
 		{
 
-			var response = new BooleanResponse();
 			try
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
+                    var result = false;
                     await ValidateSetup<T>();
 
                     var obj = await conn.Table<T>().Where(x => x.CorrelationID == correlationId).FirstOrDefaultAsync();
@@ -414,26 +374,24 @@ namespace Xamarin.Forms.CommonCore
                         {
                             rowsAffected = await conn.DeleteAsync(obj);
                         }
-                        response.Success = rowsAffected == 1 ? true : false;
+                        result = rowsAffected == 1 ? true : false;
                     }
-                    return response;
+                    return (result, null);
                 }
 			}
 			catch (Exception ex)
 			{
-				response.Error = ex;
-				return response;
+				return (false, ex);
 			}
 		}
-		public async Task<BooleanResponse> DeleteByQuery<T>(Expression<Func<T, bool>> exp, bool softDelete = false) where T : ISqlDataModel, new()
+		public async Task<(bool Success, Exception Error)> DeleteByQuery<T>(Expression<Func<T, bool>> exp, bool softDelete = false) where T : ISqlDataModel, new()
 		{
-			var response = new BooleanResponse();
 			try
 			{
                 using (await Mutex.LockAsync().ConfigureAwait(false))
                 {
                     await ValidateSetup<T>();
-
+					var result = false;
                     int rowsAffected = 0;
                     var obj = await conn.Table<T>().Where(exp).FirstOrDefaultAsync();
                     if (obj != null)
@@ -448,15 +406,14 @@ namespace Xamarin.Forms.CommonCore
                         {
                             rowsAffected = await conn.DeleteAsync(obj);
                         }
-                        response.Success = rowsAffected == 1 ? true : false;
+                        result = rowsAffected == 1 ? true : false;
                     }
-                    return response;
+                    return (result, null);
                 }
 			}
 			catch (Exception ex)
 			{
-				response.Error = ex;
-				return response;
+			    return (false, ex);
 			}
 		}
 

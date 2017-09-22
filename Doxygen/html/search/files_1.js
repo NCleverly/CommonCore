@@ -15,5 +15,6 @@ var searchData=
   ['booleantoobjectconverter_2ecs',['BooleanToObjectConverter.cs',['../_boolean_to_object_converter_8cs.html',1,'']]],
   ['boundcontenview_2ecs',['BoundContenView.cs',['../_bound_conten_view_8cs.html',1,'']]],
   ['boundmasterdetailpage_2ecs',['BoundMasterDetailPage.cs',['../_bound_master_detail_page_8cs.html',1,'']]],
-  ['boundpage_2ecs',['BoundPage.cs',['../_bound_page_8cs.html',1,'']]]
+  ['boundpage_2ecs',['BoundPage.cs',['../_bound_page_8cs.html',1,'']]],
+  ['businessbase_2ecs',['BusinessBase.cs',['../_business_base_8cs.html',1,'']]]
 ];

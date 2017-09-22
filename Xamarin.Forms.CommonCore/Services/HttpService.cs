@@ -129,17 +129,13 @@ namespace Xamarin.Forms.CommonCore
                 return httpClient;
             }
         }
-        public async Task<StringResponse> FormPost(string url, HttpContent content)
+        public async Task<(string Response, Exception Error)> FormPost(string url, HttpContent content)
         {
-            var response = new StringResponse() { };
-
+     
             if (!CoreSettings.IsConnected)
             {
-                response.Success = false;
-                response.Error = new ApplicationException("Network Connection Error");
-                return response;
+                return (null, new ApplicationException("Network Connection Error"));
             }
-
 
             try
             {
@@ -152,8 +148,11 @@ namespace Xamarin.Forms.CommonCore
                 var raw = await postResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                 if (raw != null)
                 {
-                    response.Response = raw;
-                    response.Success = true;
+                    return (raw, null);
+                }
+                else
+                {
+                    return (null, new ApplicationException("Return value is empty"));
                 }
 
 
@@ -161,21 +160,17 @@ namespace Xamarin.Forms.CommonCore
             catch (Exception ex)
             {
                 ex.ConsoleWrite();
-                response.Error = ex;
+                return (null, ex);
             }
-            return response;
         }
 
-        public async Task<StringResponse> GetRaw(string url)
+        public async Task<(string Response, Exception Error)> GetRaw(string url)
         {
-            var response = new StringResponse() { };
+			if (!CoreSettings.IsConnected)
+			{
+				return (null, new ApplicationException("Network Connection Error"));
+			}
 
-            if (!CoreSettings.IsConnected)
-            {
-                response.Success = false;
-                response.Error = new ApplicationException("Network Connection Error");
-                return response;
-            }
             try
             {
                 await new SynchronizationContextRemover();
@@ -183,28 +178,23 @@ namespace Xamarin.Forms.CommonCore
                 using (var srvResponse = await Client.GetAsync(url).ConfigureAwait(false))
                 {
                     var jsonResult = await srvResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    response.Success = true;
+                    return (jsonResult, null);
                 }
 
             }
             catch (Exception ex)
             {
-                ex.ConsoleWrite();
-                response.Error = ex;
+				ex.ConsoleWrite();
+				return (null, ex);
             }
 
-            return response;
         }
-        public async Task<GenericResponse<T>> Get<T>(string url) where T : class, new()
+        public async Task<(T Response, Exception Error)> Get<T>(string url) where T : class, new()
         {
-            var response = new GenericResponse<T>() { };
-
-            if (!CoreSettings.IsConnected)
-            {
-                response.Success = false;
-                response.Error = new ApplicationException("Network Connection Error");
-                return response;
-            }
+			if (!CoreSettings.IsConnected)
+			{
+				return (null, new ApplicationException("Network Connection Error"));
+			}
 
             try
             {
@@ -214,37 +204,30 @@ namespace Xamarin.Forms.CommonCore
                 {
                     if(CoreSettings.Config.HttpSettings.DisplayRawJson){
 						json = await GetStringContent<T>(srvResponse).ConfigureAwait(false);
-						response.Response = await DeserializeObject<T>(json).ConfigureAwait(false);
-						response.Success = true;
+                        var response = await DeserializeObject<T>(json).ConfigureAwait(false);
 						json = string.Empty;
+                        return (response, null);
 					}
                     else{
 						srvResponse.EnsureSuccessStatusCode();
-						response.Response = await DeserializeStream<T>(srvResponse);
-						response.Success = true;
+						var response = await DeserializeStream<T>(srvResponse);
+						return (response, null);
                     }
                 }
 
             }
             catch (Exception ex)
             {
-                ex.ConsoleWrite();
-                response.Error = ex;
-                response.MetaData = json;
+				ex.ConsoleWrite();
+				return (null, ex);
             }
-
-            return response;
         }
-        public async Task<GenericResponse<T>> Post<T>(string url, object obj) where T : class, new()
+        public async Task<(T Response, Exception Error)> Post<T>(string url, object obj) where T : class, new()
         {
-            var response = new GenericResponse<T>() { };
-
-            if (!CoreSettings.IsConnected)
-            {
-                response.Success = false;
-                response.Error = new ApplicationException("Network Connection Error");
-                return response;
-            }
+			if (!CoreSettings.IsConnected)
+			{
+				return (null, new ApplicationException("Network Connection Error"));
+			}
 
             try
             {
@@ -256,38 +239,31 @@ namespace Xamarin.Forms.CommonCore
                     if (CoreSettings.Config.HttpSettings.DisplayRawJson)
                     {
                         json = await GetStringContent<T>(srvResponse).ConfigureAwait(false);
-                        response.Response = await DeserializeObject<T>(json).ConfigureAwait(false);
-                        response.Success = true;
-                        json = string.Empty;
+                        var response = await DeserializeObject<T>(json).ConfigureAwait(false);
+						json = string.Empty;
+						return (response, null);
                     }
                     else{
 						srvResponse.EnsureSuccessStatusCode();
-						response.Response = await DeserializeStream<T>(srvResponse);
-						response.Success = true;
+						var response = await DeserializeStream<T>(srvResponse);
+						return (response, null);
                     }
                 }
 
             }
             catch (Exception ex)
             {
-                ex.ConsoleWrite();
-                response.Error = ex;
-                response.MetaData = json;
+				ex.ConsoleWrite();
+				return (null, ex);
             }
-
-            return response;
 
         }
-        public async Task<GenericResponse<T>> Put<T>(string url, object obj) where T : class, new()
+        public async Task<(T Response, Exception Error)> Put<T>(string url, object obj) where T : class, new()
         {
-            var response = new GenericResponse<T>() { };
-
-            if (!CoreSettings.IsConnected)
-            {
-                response.Success = false;
-                response.Error = new ApplicationException("Network Connection Error");
-                return response;
-            }
+			if (!CoreSettings.IsConnected)
+			{
+				return (null, new ApplicationException("Network Connection Error"));
+			}
 
             try
             {
@@ -299,27 +275,25 @@ namespace Xamarin.Forms.CommonCore
                     if (CoreSettings.Config.HttpSettings.DisplayRawJson)
                     {
                         json = await GetStringContent<T>(srvResponse);
-                        response.Response = await DeserializeObject<T>(json);
-                        response.Success = true;
-                        json = string.Empty;
+                        var response = await DeserializeObject<T>(json);
+						json = string.Empty;
+						return (response, null);
                     }
                     else
                     {
 						srvResponse.EnsureSuccessStatusCode();
-                        response.Response = await DeserializeStream<T>(srvResponse);
-						response.Success = true;
+                        var response = await DeserializeStream<T>(srvResponse);
+						return (response, null);
                     }
                 }
 
             }
             catch (Exception ex)
             {
-                ex.ConsoleWrite();
-                response.Error = ex;
-                response.MetaData = json;
+				ex.ConsoleWrite();
+				return (null, ex);
             }
 
-            return response;
         }
 
         public async Task<string> GetStringContent<T>(HttpResponseMessage response) where T : class, new()
@@ -399,6 +373,7 @@ namespace Xamarin.Forms.CommonCore
             }
 
         }
+
     }
 
 }

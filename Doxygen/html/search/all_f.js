@@ -57,7 +57,6 @@ var searchData=
   ['optimizedobservablecollection_3c_20tvalue_20_3e',['OptimizedObservableCollection&lt; TValue &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_optimized_observable_collection.html',1,'Xamarin::Forms::CommonCore']]],
   ['optiontext',['OptionText',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker_item.html#aaee2d4015792ecbbfe51f1de85fe3b9f',1,'Xamarin::Forms::CommonCore::CorePickerItem']]],
   ['orientation',['Orientation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#a2d9762691155e75824914454c0e87430',1,'Xamarin::Forms::CommonCore::Snack']]],
-  ['osversion',['OSVersion',['../class_xamarin_1_1_forms_1_1_common_core_1_1_device_information.html#a22e6688cfb2976f2e020de7a2705efc7',1,'Xamarin::Forms::CommonCore::DeviceInformation']]],
   ['outlinecolor',['OutlineColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#a0d42ecc66dae8c3d6708721380edb6c6',1,'Xamarin::Forms::CommonCore::PopupView']]],
   ['overlaycolor',['OverlayColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_styles_1_1_core_styles.html#a84bfa41f898454241812a2f92103bd1f',1,'Xamarin::Forms::CommonCore::Styles::CoreStyles']]],
   ['overlaydependency',['OverlayDependency',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ad6c8f465a0a14fef35785d7b96293238',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],

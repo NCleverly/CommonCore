@@ -1,7 +1,7 @@
 var searchData=
 [
   ['background',['Background',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#a84456e4096843ce3779beef141c977f3',1,'Xamarin::Forms::CommonCore::Snack']]],
-  ['backgroundtimer',['BackgroundTimer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ab50a2ea91e68623497b2397cdbae424a',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
+  ['backgroundtimer',['BackgroundTimer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_business_base.html#a533f7251737a3457c6d7085d7f64e801',1,'Xamarin.Forms.CommonCore.BusinessBase.BackgroundTimer()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ab50a2ea91e68623497b2397cdbae424a',1,'Xamarin.Forms.CommonCore.ObservableViewModel.BackgroundTimer()']]],
   ['badge',['Badge',['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#aada622a7438c54bfa1beeea880b16bdf',1,'Xamarin::Forms::CommonCore::LocalNotification']]],
   ['beforerefresh',['BeforeRefresh',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#a80fbda86fc6f76856cbba814e92c11fc',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
   ['bindingpath',['BindingPath',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#aa5b88a73e41bf1a7566f6c8020822e25',1,'Xamarin::Forms::CommonCore::CorePicker']]],

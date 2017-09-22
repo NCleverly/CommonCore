@@ -16,10 +16,9 @@ namespace Xamarin.Forms.CommonCore
 		/// <returns>The embedded resource stream.</returns>
 		/// <param name="assembly">Assembly.</param>
 		/// <param name="resourceFileName">Resource file name.</param>
-		public static StreamResponse GetEmbeddedResourceStream(Assembly assembly, string resourceFileName)
+		public static (Stream Response, Exception Error) GetEmbeddedResourceStream(Assembly assembly, string resourceFileName)
 		{
-            var response = new StreamResponse() { Success = true };
-
+            (Stream Response, Exception Error) response = (null, null);
 			var resourceNames = assembly.GetManifestResourceNames();
 
 			var resourcePaths = resourceNames
@@ -29,17 +28,14 @@ namespace Xamarin.Forms.CommonCore
 			if (!resourcePaths.Any())
 			{
 				response.Error = new Exception(string.Format("Resource ending with {0} not found.", resourceFileName));
-                response.Success = false;
 			}
 
 			if (resourcePaths.Count() > 1)
 			{
 				response.Error = new Exception(string.Format("Multiple resources ending with {0} found: {1}{2}", resourceFileName, Environment.NewLine, string.Join(Environment.NewLine, resourcePaths)));
-                response.Success = false;
 			}
 
             response.Response = assembly.GetManifestResourceStream(resourcePaths.Single());
-
             return response;
 
 		}
@@ -53,7 +49,7 @@ namespace Xamarin.Forms.CommonCore
 		public static byte[] GetEmbeddedResourceBytes(Assembly assembly, string resourceFileName)
 		{
 			var result = GetEmbeddedResourceStream(assembly, resourceFileName);
-            if (result.Success)
+            if (result.Error==null)
             {
                 using (var memoryStream = new MemoryStream())
                 {
@@ -74,23 +70,21 @@ namespace Xamarin.Forms.CommonCore
 		/// <returns>The embedded resource as a string.</returns>
 		/// <param name="assembly">Assembly.</param>
 		/// <param name="resourceFileName">Resource file name.</param>
-		public static StringResponse GetEmbeddedResourceString(Assembly assembly, string resourceFileName)
+		public static (string Response, Exception Error) GetEmbeddedResourceString(Assembly assembly, string resourceFileName)
 		{
-            var response = new StringResponse();
 			var result = GetEmbeddedResourceStream(assembly, resourceFileName);
-            if (result.Success)
+            if (result.Error==null)
             {
                 using (var streamReader = new StreamReader(result.Response))
                 {
-                    response.Response=  streamReader.ReadToEnd();
-                    response.Success = true;
+                    var stream=  streamReader.ReadToEnd();
+                    return (stream, null);
                 }
             }
             else{
-                response.Success = false;
-                response.Error = result.Error;
+                return (null, result.Error);
             }
-            return response;
+
 		}
 	}
 }

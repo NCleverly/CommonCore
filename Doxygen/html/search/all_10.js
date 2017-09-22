@@ -13,14 +13,13 @@ var searchData=
   ['persistaccount_3c_20t_20_3e',['PersistAccount&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a879a546aaa192c8cfc55a9cda0b41f20',1,'Xamarin::Forms::CommonCore::AccountService']]],
   ['phonemaskbehavior',['PhoneMaskBehavior',['../class_xamarin_1_1_forms_1_1_common_core_1_1_phone_mask_behavior.html',1,'Xamarin::Forms::CommonCore']]],
   ['phonemaskbehavior_2ecs',['PhoneMaskBehavior.cs',['../_phone_mask_behavior_8cs.html',1,'']]],
-  ['physicaldevice',['PhysicalDevice',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aca74fda8bdb0d058a9987c8bfaac070ba824a3cc08b09357f5ab207dd2e7e6376',1,'Xamarin::Forms::CommonCore']]],
   ['placecall',['PlaceCall',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_communication.html#ab1202be6b8f09d52e81821a2c0bce277',1,'Xamarin::Forms::CommonCore::ICommunication']]],
   ['placecallwithcallback',['PlaceCallWithCallBack',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_communication.html#a11eeeccae92ad08ae24ed9ea6d15dbd0',1,'Xamarin::Forms::CommonCore::ICommunication']]],
   ['play',['Play',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_audio_player.html#a9b1c51924899e205fabf3d21194814a2',1,'Xamarin.Forms.CommonCore.IAudioPlayer.Play(string pathToAudioFile)'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_audio_player.html#a7da3743cd4afaeff2cfa7557eed1c90a',1,'Xamarin.Forms.CommonCore.IAudioPlayer.Play()']]],
   ['plugin',['Plugin',['../namespace_push_notification_1_1_plugin.html',1,'PushNotification']]],
   ['popto_3c_20t_20_3e',['PopTo&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a98bd22737ca9c60e55c2de290815303e',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['popupview',['PopupView',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html',1,'Xamarin::Forms::CommonCore']]],
-  ['post_3c_20t_20_3e',['Post&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a5bd22fa8f13f4c94d6eacca230bea24d',1,'Xamarin.Forms.CommonCore.HttpService.Post&lt; T &gt;()'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#a2c646baf10b3692bc0f5546dee8b7368',1,'Xamarin.Forms.CommonCore.IHttpService.Post&lt; T &gt;()']]],
+  ['post_3c_20t_20_3e',['Post&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#af91e61fa9aa79b5b98d0c172ecf8b78f',1,'Xamarin.Forms.CommonCore.HttpService.Post&lt; T &gt;()'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#ab3f9e1a7fb86d8084a508acc0f00cfd2',1,'Xamarin.Forms.CommonCore.IHttpService.Post&lt; T &gt;()']]],
   ['progress',['progress',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a4c63ad74191676f05d6ea98e749270f7',1,'Xamarin.Forms.CommonCore.WebDownloadClient.progress()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a4d01f6995098d7da223cc2d1811cc018',1,'Xamarin.Forms.CommonCore.WebDownloadClient.Progress()']]],
   ['progressindicator',['ProgressIndicator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aa6aa5778aab6c166ceee5643e3169c82',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['progressindicator_2edroid_2ecs',['ProgressIndicator.Droid.cs',['../_progress_indicator_8_droid_8cs.html',1,'']]],
@@ -43,6 +42,6 @@ var searchData=
   ['pushnotificationregistrationintentservice_2ecs',['PushNotificationRegistrationIntentService.cs',['../_push_notification_registration_intent_service_8cs.html',1,'']]],
   ['pushnotificationservice_2ecs',['PushNotificationService.cs',['../_push_notification_service_8cs.html',1,'']]],
   ['pushnotificationsreceiver_2ecs',['PushNotificationsReceiver.cs',['../_push_notifications_receiver_8cs.html',1,'']]],
-  ['put_3c_20t_20_3e',['Put&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#ab9b23de399e0719ec89cdee048702b24',1,'Xamarin.Forms.CommonCore.HttpService.Put&lt; T &gt;()'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#aea9f43a20c77fbb61acca3bdf44197af',1,'Xamarin.Forms.CommonCore.IHttpService.Put&lt; T &gt;()']]],
+  ['put_3c_20t_20_3e',['Put&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_service.html#a372448c0a3fecf4e8ed3f0aa9c5e293b',1,'Xamarin.Forms.CommonCore.HttpService.Put&lt; T &gt;()'],['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_http_service.html#ae83f4ff79571ee24ab70c5f8028d087b',1,'Xamarin.Forms.CommonCore.IHttpService.Put&lt; T &gt;()']]],
   ['pwkey',['pwKey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_account_service.html#a9ef883771813d2eef81f0b5dff233922',1,'Xamarin::Forms::CommonCore::AccountService']]]
 ];

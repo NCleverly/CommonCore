@@ -2,7 +2,7 @@ var searchData=
 [
   ['b',['B',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_a_b_c_d_struct.html#a53c498e63470eaec80a438c4a593842f',1,'Xamarin::Forms::CommonCore::ABCDStruct']]],
   ['background',['Background',['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#a84456e4096843ce3779beef141c977f3',1,'Xamarin::Forms::CommonCore::Snack']]],
-  ['backgroundtimer',['BackgroundTimer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_background_timer.html',1,'Xamarin.Forms.CommonCore.BackgroundTimer'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ab50a2ea91e68623497b2397cdbae424a',1,'Xamarin.Forms.CommonCore.ObservableViewModel.BackgroundTimer()']]],
+  ['backgroundtimer',['BackgroundTimer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_background_timer.html',1,'Xamarin.Forms.CommonCore.BackgroundTimer'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_business_base.html#a533f7251737a3457c6d7085d7f64e801',1,'Xamarin.Forms.CommonCore.BusinessBase.BackgroundTimer()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ab50a2ea91e68623497b2397cdbae424a',1,'Xamarin.Forms.CommonCore.ObservableViewModel.BackgroundTimer()']]],
   ['backgroundtimerservice_2edroid_2ecs',['BackgroundTimerService.Droid.cs',['../_background_timer_service_8_droid_8cs.html',1,'']]],
   ['backgroundtimerservice_2eios_2ecs',['BackgroundTimerService.IOS.cs',['../_background_timer_service_8_i_o_s_8cs.html',1,'']]],
   ['backoffmilliseconds',['BackOffMilliseconds',['../class_push_notification_1_1_plugin_1_1_abstractions_1_1_push_notification_key.html#aa1a8bde287a3df0a77a27fe24421f131',1,'PushNotification::Plugin::Abstractions::PushNotificationKey']]],
@@ -27,10 +27,10 @@ var searchData=
   ['bindingcontextforwarded',['bindingContextForwarded',['../class_xamarin_1_1_forms_1_1_common_core_1_1_binding_context_behavior.html#a221f4bf62537945ec212be767a7cb18e',1,'Xamarin::Forms::CommonCore::BindingContextBehavior']]],
   ['bindingpath',['BindingPath',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#aa5b88a73e41bf1a7566f6c8020822e25',1,'Xamarin::Forms::CommonCore::CorePicker']]],
   ['bindingpathproperty',['BindingPathProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#a64327d53beff564787ea5999344ad6df',1,'Xamarin::Forms::CommonCore::CorePicker']]],
+  ['bllcontainer',['bllContainer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_injection_manager.html#a69c4458908c2a19855818707cb95a6aa',1,'Xamarin::Forms::CommonCore::InjectionManager']]],
   ['bluroverlay',['BlurOverlay',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#ab185173b22885068918b4a81ce0c44f5',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['bluroverlay_2edroid_2ecs',['BlurOverlay.Droid.cs',['../_blur_overlay_8_droid_8cs.html',1,'']]],
   ['bluroverlay_2eios_2ecs',['BlurOverlay.IOS.cs',['../_blur_overlay_8_i_o_s_8cs.html',1,'']]],
-  ['booleanresponse',['BooleanResponse',['../class_xamarin_1_1_forms_1_1_common_core_1_1_boolean_response.html',1,'Xamarin::Forms::CommonCore']]],
   ['booleantoobjectconverter',['BooleanToObjectConverter',['../class_xamarin_1_1_forms_1_1_common_core_1_1_boolean_to_object_converter.html',1,'Xamarin::Forms::CommonCore']]],
   ['booleantoobjectconverter_2ecs',['BooleanToObjectConverter.cs',['../_boolean_to_object_converter_8cs.html',1,'']]],
   ['bordercolor',['BorderColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_segment.html#a91cdfc3f7f0a2165846a8fb5ea5e6483',1,'Xamarin::Forms::CommonCore::CoreSegment']]],
@@ -47,6 +47,8 @@ var searchData=
   ['boundmasterdetailpage_2ecs',['BoundMasterDetailPage.cs',['../_bound_master_detail_page_8cs.html',1,'']]],
   ['boundpage',['BoundPage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_page.html',1,'Xamarin.Forms.CommonCore.BoundPage&lt; T &gt;'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_page.html#a1424ba1c9c96ebb22fcc6300e7fac6ec',1,'Xamarin.Forms.CommonCore.BoundPage.BoundPage()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_bound_page.html#a1424ba1c9c96ebb22fcc6300e7fac6ec',1,'Xamarin.Forms.CommonCore.BoundPage.BoundPage()']]],
   ['boundpage_2ecs',['BoundPage.cs',['../_bound_page_8cs.html',1,'']]],
+  ['businessbase',['BusinessBase',['../class_xamarin_1_1_forms_1_1_common_core_1_1_business_base.html',1,'Xamarin::Forms::CommonCore']]],
+  ['businessbase_2ecs',['BusinessBase.cs',['../_business_base_8cs.html',1,'']]],
   ['buttonsclickedevent',['ButtonsClickedEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_segment.html#a8269a7884e32888c9610aa5ea676a367',1,'Xamarin::Forms::CommonCore::CoreSegment']]],
   ['buttontitles',['ButtonTitles',['../class_xamarin_1_1_forms_1_1_common_core_1_1_prompt.html#aa472935ff24028fb3575db24f30978d0',1,'Xamarin::Forms::CommonCore::Prompt']]]
 ];

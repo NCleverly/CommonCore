@@ -8,7 +8,7 @@ var searchData=
   ['hide',['Hide',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#ae8920c361f88502e86cb05db9dedd207',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['httpallowautoredirect',['HttpAllowAutoRedirect',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_settings.html#a13b893c813f7ea0502c30e00a810f7f4',1,'Xamarin::Forms::CommonCore::HttpSettings']]],
   ['httpcredentials',['HttpCredentials',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#a039a7363945b8f92d7b8ece9d914107c',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
-  ['httpservice',['HttpService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aa9c97a632e2972d77e4cf2ad0b877dc9',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
+  ['httpservice',['HttpService',['../class_xamarin_1_1_forms_1_1_common_core_1_1_business_base.html#aefb41ecce5385a842ac2cf8b482708a2',1,'Xamarin.Forms.CommonCore.BusinessBase.HttpService()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aa9c97a632e2972d77e4cf2ad0b877dc9',1,'Xamarin.Forms.CommonCore.ObservableViewModel.HttpService()']]],
   ['httpsettings',['HttpSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#a9f02de74c34a66bf256303be59bcef89',1,'Xamarin::Forms::CommonCore::ConfigurationModel']]],
   ['httptimeout',['HttpTimeOut',['../class_xamarin_1_1_forms_1_1_common_core_1_1_http_settings.html#a3a97fbd2272f795b57deb4efc10e62dc',1,'Xamarin::Forms::CommonCore::HttpSettings']]]
 ];

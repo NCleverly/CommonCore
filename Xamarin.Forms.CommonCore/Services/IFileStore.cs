@@ -6,10 +6,10 @@ namespace Xamarin.Forms.CommonCore
 {
 	public interface IFileStore
 	{
-		Task<GenericResponse<T>> GetAsync<T>(string contentName) where T : class, new();
-		Task<BooleanResponse> DeleteAsync(string contentName);
-		Task<BooleanResponse> SaveAsync<T>(string contentName, object obj);
-		Task<StringResponse> GetStringAsync(string contentName);
-		Task<BooleanResponse> SaveStringAsync(string contentName, string obj);
+		Task<(T Response, Exception Error)> GetAsync<T>(string contentName) where T : class, new();
+		Task<(bool Success, Exception Error)> DeleteAsync(string contentName);
+		Task<(bool Success, Exception Error)> SaveAsync<T>(string contentName, object obj);
+		Task<(string Response, Exception Error)> GetStringAsync(string contentName);
+		Task<(bool Success, Exception Error)> SaveStringAsync(string contentName, string obj);
 	}
 }

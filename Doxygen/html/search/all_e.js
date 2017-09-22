@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['name',['Name',['../class_xamarin_1_1_forms_1_1_common_core_1_1_table_name.html#ae58f14b9e4d8b8b3533fd7777b5e6adb',1,'Xamarin.Forms.CommonCore.TableName.Name()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_device_information.html#a9e235ca429e7ecef9f2e0c489f8a7271',1,'Xamarin.Forms.CommonCore.DeviceInformation.Name()']]],
   ['navigatelatlong',['NavigateLatLong',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_map_navigate.html#ac8fe5360cfd74e7e53f1b3c810922093',1,'Xamarin::Forms::CommonCore::IMapNavigate']]],
   ['navigatewithaddress',['NavigateWithAddress',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_map_navigate.html#ad55001c218a03bacc5f05a43f3c12290',1,'Xamarin::Forms::CommonCore::IMapNavigate']]],
   ['navigation',['Navigation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a5a41c951ab43daf14e2bdc350774303f',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
-  ['navstyle',['NavStyle',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#ad4700189f40e46e6c1109d1b4a513146',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
+  ['navstyle',['NavStyle',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#ae9d408d2167c425a61ecd3f616fe9966',1,'Xamarin::Forms::CommonCore::ConfigurationModel']]],
   ['navtype',['NavType',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aebe3f0e2d9f86565a6031631e20939f0',1,'Xamarin::Forms::CommonCore']]],
   ['needoverridesoftbackbutton',['NeedOverrideSoftBackButton',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a5a3dfc36859f527676a9fce4b9713123',1,'Xamarin::Forms::CommonCore::BasePages']]],
   ['needoverridesoftbackbuttonproperty',['NeedOverrideSoftBackButtonProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a38e893687b09943412814ad544006bb3',1,'Xamarin::Forms::CommonCore::BasePages']]],

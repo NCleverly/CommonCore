@@ -42,6 +42,19 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
+		private static ILogService Log
+		{
+			get
+			{
+				return InjectionManager.GetService<ILogService, LogService>(true);
+			}
+		}
+
+        public static void LogException(this Exception ex,string metatData = null)
+        {
+            Log.LogException(ex,metatData);
+        }
+
         /// <summary>
         /// Save the state of the view model.  Used for when the application may teardown the memory losing the property
         /// values of the view model.
@@ -65,7 +78,7 @@ namespace Xamarin.Forms.CommonCore
             Task.Run(async () =>
             {
                 var result = await InjectionManager.GetService<IFileStore, FileStore>(true)?.GetAsync<T>(typeof(T).FullName);
-                if (result.Success)
+                if (result.Error==null)
                 {
                     foreach (var prop in typeof(T).GetProperties())
                     {
@@ -99,7 +112,7 @@ namespace Xamarin.Forms.CommonCore
                 Task.Run(async () =>
                 {
                     var result = await InjectionManager.GetService<IFileStore, FileStore>(true)?.GetAsync<List<string>>("vmlistCoreExtensions");
-                    if (result.Success)
+                    if (result.Error == null)
                     {
                         foreach (var vmName in result.Response)
                         {
@@ -255,41 +268,41 @@ namespace Xamarin.Forms.CommonCore
             return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(sentence.ToLower());
         }
 
-        public static T ConvertTo<T>(this StringResponse str) where T : struct
+        public static T ConvertTo<T>(this string str) where T : struct
         {
             object result = null;
             var code = Type.GetTypeCode(typeof(T));
             switch (code)
             {
                 case TypeCode.Int32:
-                    result = JsonConvert.DeserializeObject<int>(str.Response);
+                    result = JsonConvert.DeserializeObject<int>(str);
                     break;
                 case TypeCode.Int16:
-                    result = JsonConvert.DeserializeObject<short>(str.Response);
+                    result = JsonConvert.DeserializeObject<short>(str);
                     break;
                 case TypeCode.Int64:
-                    result = JsonConvert.DeserializeObject<long>(str.Response);
+                    result = JsonConvert.DeserializeObject<long>(str);
                     break;
                 case TypeCode.String:
-                    result = JsonConvert.DeserializeObject<string>(str.Response);
+                    result = JsonConvert.DeserializeObject<string>(str);
                     break;
                 case TypeCode.Boolean:
-                    result = JsonConvert.DeserializeObject<bool>(str.Response);
+                    result = JsonConvert.DeserializeObject<bool>(str);
                     break;
                 case TypeCode.Double:
-                    result = JsonConvert.DeserializeObject<double>(str.Response);
+                    result = JsonConvert.DeserializeObject<double>(str);
                     break;
                 case TypeCode.Decimal:
-                    result = JsonConvert.DeserializeObject<decimal>(str.Response);
+                    result = JsonConvert.DeserializeObject<decimal>(str);
                     break;
                 case TypeCode.Byte:
-                    result = JsonConvert.DeserializeObject<Byte>(str.Response);
+                    result = JsonConvert.DeserializeObject<Byte>(str);
                     break;
                 case TypeCode.DateTime:
-                    result = JsonConvert.DeserializeObject<DateTime>(str.Response);
+                    result = JsonConvert.DeserializeObject<DateTime>(str);
                     break;
                 case TypeCode.Single:
-                    result = JsonConvert.DeserializeObject<Single>(str.Response);
+                    result = JsonConvert.DeserializeObject<Single>(str);
                     break;
             }
             return (T)result;
@@ -651,10 +664,10 @@ namespace Xamarin.Forms.CommonCore
         /// <returns>The or default.</returns>
         /// <param name="taskCollection">Task collection.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static async Task<T> FirstOrDefault<T>(this Task<GenericResponse<List<T>>> taskCollection)
+        public static async Task<T> FirstOrDefault<T>(this Task<(List<T> Response,Exception Error)> taskCollection)
         {
             var result = await taskCollection;
-            if (result.Success)
+            if (result.Error==null)
                 return result.Response.FirstOrDefault();
             else
                 return default(T);

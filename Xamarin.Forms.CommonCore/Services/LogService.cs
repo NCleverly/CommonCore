@@ -43,14 +43,15 @@ namespace Xamarin.Forms.CommonCore
             if(analyticLogs==null){
 				GetAsync<List<AnalyticLog>>(analayticFileName, analyticStoreLock).ContinueWith((t) =>
                 {
-                	if (t.Result.Success)
+                    if(analyticLogs==null)
+                        analyticLogs = new List<AnalyticLog>();
+                    
+                	if (t.Result.Error==null)
                 	{
-                		analyticLogs = t.Result.Response;
+                        if(t.Result.Response!=null)
+                            analyticLogs = t.Result.Response;
                 	}
-                	else
-                	{
-                		analyticLogs = new List<AnalyticLog>();
-                	}
+
                     analyticLogs.Add(aLog);
                     SaveAsync<List<AnalyticLog>>(analayticFileName, analyticLogs, analyticStoreLock).ContinueWith((x) => { });
                 });
@@ -77,31 +78,26 @@ namespace Xamarin.Forms.CommonCore
             };
 
             if(errorLogs==null){
-				GetAsync<List<ErrorLog>>(errorFileName, errorStoreLock).ContinueWith((t) =>
-				{
-				    if (t.Result.Success)
-				    {
-				        errorLogs = t.Result.Response;
-				    }
-				    else
-				    {
-				        errorLogs = new List<ErrorLog>();
-				    }
-					errorLogs.Add(err);
-					SaveAsync<List<ErrorLog>>(errorFileName, errorLogs, errorStoreLock).ContinueWith((x) => { });
-				});
+                GetAsync<List<ErrorLog>>(errorFileName, errorStoreLock).ContinueWith((t) =>
+                {
+                    if (errorLogs == null)
+                        errorLogs = new List<ErrorLog>();
+                    
+                    if (t.Result.Error == null)
+                    {
+                        if (t.Result.Response != null)
+                            errorLogs = t.Result.Response;
+                    }
+
+                    errorLogs.Add(err);
+                    SaveAsync<List<ErrorLog>>(errorFileName, errorLogs, errorStoreLock).ContinueWith((x) => { });
+                });
 			}
             else{
 				errorLogs.Add(err);
 				SaveAsync<List<ErrorLog>>(errorFileName, errorLogs, errorStoreLock).ContinueWith((x) => { });
             }
 
-        }
-
-        public void LogResponse(IReponse response, string metatData)
-        {
-            if (response.Error != null)
-                LogException(response.Error, metatData);
         }
 
         public async Task ClearLogging(LogType logType)
@@ -113,7 +109,7 @@ namespace Xamarin.Forms.CommonCore
                     var doy = dayOfYear - x;
                     var doyfn = $"analytic_{doy}";
                     var result = await GetAsync<List<AnalyticLog>>(doyfn, analyticStoreLock);
-                    if (result.Success)
+                    if (result.Error==null)
                     {
                         await DeleteAsync(doyfn, analyticStoreLock);
 
@@ -128,7 +124,7 @@ namespace Xamarin.Forms.CommonCore
                     var doy = dayOfYear - x;
                     var doyfn = $"error_{doy}";
                     var result = await GetAsync<List<ErrorLog>>(doyfn, errorStoreLock);
-                    if (result.Success)
+                    if (result.Error == null)
                     {
 
                         await DeleteAsync(doyfn, errorStoreLock);
@@ -149,7 +145,7 @@ namespace Xamarin.Forms.CommonCore
                     var doy = dayOfYear - x;
                     var doyfn = $"analytic_{doy}";
                     var result = await GetAsync<List<AnalyticLog>>(doyfn, analyticStoreLock);
-                    if (result.Success)
+                    if (result.Error == null)
                     {
                         collection.AddRange(result.Response);
                     }
@@ -164,7 +160,7 @@ namespace Xamarin.Forms.CommonCore
 					var doy = dayOfYear - x;
 					var doyfn = $"error_{doy}";
 					var result = await GetAsync<List<ErrorLog>>(doyfn, errorStoreLock);
-					if (result.Success)
+					if (result.Error == null)
 					{
 						collection.AddRange(result.Response);
 					}
@@ -174,12 +170,12 @@ namespace Xamarin.Forms.CommonCore
 
         }
 
-		private async Task<GenericResponse<T>> GetAsync<T>(string contentName, SemaphoreSlim semaPhore) where T : class, new()
+		private async Task<(T Response, Exception Error)> GetAsync<T>(string contentName, SemaphoreSlim semaPhore) where T : class, new()
 		{
 			await semaPhore.WaitAsync();
 			return await Task.Run(() =>
 			{
-				var response = new GenericResponse<T>() { Success = false };
+                (T Response, Exception Error) response = (null, null);
 				try
 				{
 					using (var isoStorage = IsolatedStorageFile.GetUserStoreForApplication())
@@ -195,7 +191,6 @@ namespace Xamarin.Forms.CommonCore
 										using (var json = new JsonTextReader(reader))
 										{
 											response.Response = _serializer.Deserialize<T>(json);
-											response.Success = true;
 										}
 									}
 								}
@@ -205,6 +200,9 @@ namespace Xamarin.Forms.CommonCore
 								response.Error = ex;
 							}
 						}
+                        else{
+                            response.Error = new ApplicationException("File does not exists");
+                        }
 					}
 
 				}
@@ -223,12 +221,12 @@ namespace Xamarin.Forms.CommonCore
 		}
 
 
-		private async Task<BooleanResponse> SaveAsync<T>(string contentName, object obj, SemaphoreSlim semaPhore)
+		private async Task<(bool Success, Exception Error)> SaveAsync<T>(string contentName, object obj, SemaphoreSlim semaPhore)
 		{
 			await semaPhore.WaitAsync();
 			return await Task.Run(() =>
 			{
-				var response = new BooleanResponse() { Success = false };
+				(bool Success, Exception Error) response = (false, null);
 				try
 				{
 					using (var isoStorage = IsolatedStorageFile.GetUserStoreForApplication())
@@ -259,10 +257,10 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-		private async Task<BooleanResponse> DeleteAsync(string contentName, SemaphoreSlim semaPhore)
+		private async Task<(bool Success, Exception Error)> DeleteAsync(string contentName, SemaphoreSlim semaPhore)
 		{
 			await semaPhore.WaitAsync();
-			var response = new BooleanResponse() { Success = false };
+			(bool Success, Exception Error) response = (false, null);
 			try
 			{
 				await Task.Run(() =>

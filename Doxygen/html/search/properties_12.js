@@ -15,7 +15,6 @@ var searchData=
   ['selecteditem',['SelectedItem',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#a39626168185c771bcbfd623c78a1860a',1,'Xamarin::Forms::CommonCore::CorePicker']]],
   ['selectedrank',['SelectedRank',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_ranking.html#ab5e068de61335831c7a4a05548ae8c6b',1,'Xamarin::Forms::CommonCore::CoreRanking']]],
   ['selectedtextcolor',['SelectedTextColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_segment.html#ae41819886d4a3025f6f98a6e44c6350f',1,'Xamarin::Forms::CommonCore::CoreSegment']]],
-  ['serialnumber',['SerialNumber',['../class_xamarin_1_1_forms_1_1_common_core_1_1_device_information.html#ace72749ba220eb5136da3ce114e2120c',1,'Xamarin::Forms::CommonCore::DeviceInformation']]],
   ['settings',['Settings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings_1_1_app_data.html#a2312860c050ea11f01aad08c7ab60dc4',1,'Xamarin::Forms::CommonCore::CoreSettings::AppData']]],
   ['shadowcolor',['ShadowColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_button.html#ad59e4a8c5af46077bcb22964e5f1b747',1,'Xamarin::Forms::CommonCore::CoreButton']]],
   ['shadowoffset',['ShadowOffset',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_button.html#a00284e01b8826bb2c4008a66aeea80b9',1,'Xamarin::Forms::CommonCore::CoreButton']]],
@@ -27,7 +26,7 @@ var searchData=
   ['socialmedia',['SocialMedia',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#a3e6ae461abb4e3789b83088608693000',1,'Xamarin::Forms::CommonCore::ConfigurationModel']]],
   ['sound',['Sound',['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#a0a9e64737e207d1a7134ccdd1cb812ff',1,'Xamarin::Forms::CommonCore::LocalNotification']]],
   ['sqlitedatabase',['SQLiteDatabase',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html#af0ab7c6b45b37dd53e8097fc528eae5a',1,'Xamarin::Forms::CommonCore::SqliteSettings']]],
-  ['sqlitedb',['SqliteDb',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aeb2e3aad6fbbee716144616892c11b90',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
+  ['sqlitedb',['SqliteDb',['../class_xamarin_1_1_forms_1_1_common_core_1_1_business_base.html#a377e22c13632a462abde1ad58413d6d6',1,'Xamarin.Forms.CommonCore.BusinessBase.SqliteDb()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aeb2e3aad6fbbee716144616892c11b90',1,'Xamarin.Forms.CommonCore.ObservableViewModel.SqliteDb()']]],
   ['sqlitesettings',['SqliteSettings',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#ac3246567a589994ed89b44e40f87a8ba',1,'Xamarin::Forms::CommonCore::ConfigurationModel']]],
   ['stacktrace',['StackTrace',['../class_xamarin_1_1_forms_1_1_common_core_1_1_error_log.html#ad6afde12e660c15ae8fc7a26ccd822a4',1,'Xamarin::Forms::CommonCore::ErrorLog']]],
   ['starlist',['StarList',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_ranking.html#a3b0568d80fee3446c06635e7e1217a15',1,'Xamarin::Forms::CommonCore::CoreRanking']]],
@@ -36,5 +35,5 @@ var searchData=
   ['startutc',['StartUtc',['../class_xamarin_1_1_forms_1_1_common_core_1_1_tracking_metat_data.html#a1b4c2bfd77a82d6c871821a3e6cc4648',1,'Xamarin::Forms::CommonCore::TrackingMetatData']]],
   ['subject',['Subject',['../class_xamarin_1_1_forms_1_1_common_core_1_1_email_message.html#a9b45973fa2563aa76f33ddf3badebba7',1,'Xamarin::Forms::CommonCore::EmailMessage']]],
   ['subtitle',['SubTitle',['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#ad30f546222659ed03a43054bbdc25863',1,'Xamarin::Forms::CommonCore::LocalNotification']]],
-  ['success',['Success',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_complete_status.html#ae2d433f763e4703a702bb7ec4b348574',1,'Xamarin.Forms.CommonCore.TelephonyCompleteStatus.Success()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_generic_response.html#aae28b202fe32212f29dcdae7d469b35c',1,'Xamarin.Forms.CommonCore.GenericResponse.Success()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_string_response.html#a52dfc284e274004f81fb3fe66c7511e1',1,'Xamarin.Forms.CommonCore.StringResponse.Success()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_boolean_response.html#a9d90c7d8af54104607ab4fb38c4b7e9e',1,'Xamarin.Forms.CommonCore.BooleanResponse.Success()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_stream_response.html#a280f3eb483818260fde7ddafa8bf26a2',1,'Xamarin.Forms.CommonCore.StreamResponse.Success()']]]
+  ['success',['Success',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_complete_status.html#ae2d433f763e4703a702bb7ec4b348574',1,'Xamarin::Forms::CommonCore::TelephonyCompleteStatus']]]
 ];

@@ -121,7 +121,7 @@ namespace Xamarin.Forms.CommonCore
                 fileName = $"config.{CoreSettings.CurrentBuid}.json";
 
                 var response = ResourceLoader.GetEmbeddedResourceString(Assembly.GetAssembly(typeof(ResourceLoader)), fileName);
-                if (response.Success)
+                if (response.Error==null)
                 {
                     try
                     {

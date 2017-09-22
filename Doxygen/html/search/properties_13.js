@@ -1,7 +1,6 @@
 var searchData=
 [
   ['tabbackgroundcolor',['TabBackgroundColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_tabbed_page.html#aa24d486ee6585b1b21eec829a05f5731',1,'Xamarin::Forms::CommonCore::BaseTabbedPage']]],
-  ['tablenames',['TableNames',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_settings.html#a5bd2b3f5b40e84e396043ed45f08d425',1,'Xamarin::Forms::CommonCore::SqliteSettings']]],
   ['target',['Target',['../class_xamarin_1_1_forms_1_1_common_core_1_1_animation_base.html#a9e671f7eb29769e18b54b0a9617bc0c1',1,'Xamarin::Forms::CommonCore::AnimationBase']]],
   ['text',['Text',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_button.html#abd0d66a5d6ab86e0a879e7fe270d5ae5',1,'Xamarin.Forms.CommonCore.CoreRadioButton.Text()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#a8eff4d83c2306bb25b3848a4709f0b9c',1,'Xamarin.Forms.CommonCore.Snack.Text()']]],
   ['textcolor',['TextColor',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_button.html#a0eaca7cc66f3d9452aa4e3bb555d4c68',1,'Xamarin.Forms.CommonCore.CoreRadioButton.TextColor()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_group.html#a57b428275f2e4b279ad271eafc1b89b6',1,'Xamarin.Forms.CommonCore.CoreRadioGroup.TextColor()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_snack.html#aa3a5a1351e414bfe7cb53b224ff227dc',1,'Xamarin.Forms.CommonCore.Snack.TextColor()']]],

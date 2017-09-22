@@ -60,11 +60,6 @@ namespace Xamarin.Forms.CommonCore
     public interface ILogService
     {
         /// <summary>
-        /// Log error using response object
-        /// </summary>
-        /// <param name="response">Response.</param>
-        void LogResponse(IReponse response, string metatData = null);
-        /// <summary>
         /// Log error using Exception
         /// </summary>
         /// <param name="exception">Exception.</param>

@@ -25,11 +25,11 @@ namespace Xamarin.Forms.CommonCore
 			set { CrossSettings.Current.AddOrUpdateValue("AccountEncryptionKey", value); }
 		}
 
-		public async Task<BooleanResponse> SaveAccountStore<T>(string username, T obj) where T : class, new()
+		public async Task<(bool Success, Exception Error)> SaveAccountStore<T>(string username, T obj) where T : class, new()
 		{
 			return await Task.Run(() =>
 			{
-				var response = new BooleanResponse() { Success = false };
+				(bool Success, Exception Error) response = (false, null);
 				try
 				{
 					var account = GetAccount(username);
@@ -45,16 +45,15 @@ namespace Xamarin.Forms.CommonCore
 			});
 
 		}
-		public async Task<GenericResponse<T>> GetAccountStore<T>(string username) where T : class, new()
+		public async Task<(T Response, Exception Error)> GetAccountStore<T>(string username) where T : class, new()
 		{
 			return await Task.Run(() =>
 			{
-				var response = new GenericResponse<T>() { Success = false };
+				(T Response, Exception Error) response = (null, null);
 				try
 				{
 					var account = GetAccount(username);
 					response.Response = LoadAccount<T>(account, username);
-					response.Success = true;
 				}
 				catch (Exception ex)
 				{
@@ -65,11 +64,11 @@ namespace Xamarin.Forms.CommonCore
 			});
 
 		}
-		public async Task<BooleanResponse> SaveAccountStore<T>(string username, string password, T obj) where T : class, new()
+		public async Task<(bool Success, Exception Error)> SaveAccountStore<T>(string username, string password, T obj) where T : class, new()
 		{
 			return await Task.Run(() =>
 			{
-				var response = new BooleanResponse() { Success = false };
+				(bool Success, Exception Error) response = (false, null);
 				try
 				{
 					var account = GetAccount(username);
@@ -85,17 +84,15 @@ namespace Xamarin.Forms.CommonCore
 			});
 
 		}
-		public async Task<GenericResponse<T>> GetAccountStore<T>(string username, string password) where T : class, new()
+		public async Task<(T Response, Exception Error)> GetAccountStore<T>(string username, string password) where T : class, new()
 		{
 			return await Task.Run(() =>
 			{
-				var response = new GenericResponse<T>() { Success = false };
+				(T Response, Exception Error) response = (null, null);
 				try
 				{
 					var account = GetAccount(username);
 					response.Response = LoadAccount<T>(account, password);
-					if (response.Response != null)
-						response.Success = true;
 				}
 				catch (Exception ex)
 				{
@@ -233,6 +230,6 @@ namespace Xamarin.Forms.CommonCore
 			return key;
 		}
 
-	}
+    }
 }
 

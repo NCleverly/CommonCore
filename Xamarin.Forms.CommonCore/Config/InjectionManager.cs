@@ -9,6 +9,7 @@ namespace Xamarin.Forms.CommonCore
         private static List<string> vmContainer = new List<string>();
         private static List<string> srvContainer = new List<string>();
         private static List<string> cvtrContainer = new List<string>();
+        private static List<string> bllContainer = new List<string>();
 
         /// <summary>
         /// InjectionManager has view models
@@ -54,11 +55,24 @@ namespace Xamarin.Forms.CommonCore
             {
                 DependencyService.Register<T>();
                 vmContainer.Add(typeof(T).FullName);
+                loadResources = true;
             }
             var vm = DependencyService.Get<T>(DependencyFetchTarget.GlobalInstance);
             if (loadResources)
                 vm.LoadResources();
             return vm;
+        }
+
+   
+
+        public static T GetBusinessLayer<T>() where T : BusinessBase
+        {
+            if (!bllContainer.Any(x => x == typeof(T).FullName))
+            {
+                DependencyService.Register<T>();
+                bllContainer.Add(typeof(T).FullName);
+            }
+            return DependencyService.Get<T>(DependencyFetchTarget.GlobalInstance);
         }
 
         /// <summary>

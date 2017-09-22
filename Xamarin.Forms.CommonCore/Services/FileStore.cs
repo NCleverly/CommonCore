@@ -20,12 +20,12 @@ namespace Xamarin.Forms.CommonCore
             _serializer = new JsonSerializer();
         }
 
-        public async Task<GenericResponse<T>> GetAsync<T>(string contentName) where T : class, new()
+        public async Task<(T Response, Exception Error)> GetAsync<T>(string contentName) where T : class, new()
         {
             await fileStoreLock.WaitAsync();
             return await Task.Run(() =>
             {
-                var response = new GenericResponse<T>() { Success = false };
+                (T Response, Exception Error) response = (null, null);
                 try
                 {
                     using (var isoStorage = IsolatedStorageFile.GetUserStoreForApplication())
@@ -41,7 +41,6 @@ namespace Xamarin.Forms.CommonCore
 										using (var json = new JsonTextReader(reader))
 										{
 											response.Response = _serializer.Deserialize<T>(json);
-											response.Success = true;
 										}
 									}
                                 }
@@ -51,13 +50,17 @@ namespace Xamarin.Forms.CommonCore
                                 response.Error = ex;
                             }
                         }
+                        else
+                        {
+                            response.Error = new ApplicationException("File does not exist");
+                        }
                     }
 
                 }
                 catch (Exception ex)
                 {
-                    response.Error = ex;
                     ex.ConsoleWrite();
+					response.Error = ex;
                 }
                 finally
                 {
@@ -68,10 +71,10 @@ namespace Xamarin.Forms.CommonCore
 
         }
 
-        public async Task<BooleanResponse> DeleteAsync(string contentName)
+        public async Task<(bool Success, Exception Error)> DeleteAsync(string contentName)
         {
             await fileStoreLock.WaitAsync();
-            var response = new BooleanResponse() { Success = false };
+            (bool Success, Exception Error) response = (false, null);
             try
             {
                 await Task.Run(() =>
@@ -98,12 +101,12 @@ namespace Xamarin.Forms.CommonCore
             return response;
         }
 
-        public async Task<BooleanResponse> SaveAsync<T>(string contentName, object obj)
+        public async Task<(bool Success, Exception Error)> SaveAsync<T>(string contentName, object obj)
         {
             await fileStoreLock.WaitAsync();
             return await Task.Run(() =>
             {
-                var response = new BooleanResponse() { Success = false };
+				(bool Success, Exception Error) response = (false, null);
                 try
                 {
                     using (var isoStorage = IsolatedStorageFile.GetUserStoreForApplication())
@@ -134,10 +137,10 @@ namespace Xamarin.Forms.CommonCore
 
         }
 
-        public async Task<StringResponse> GetStringAsync(string contentName)
+        public async Task<(string Response, Exception Error)> GetStringAsync(string contentName)
         {
             await fileStoreLock.WaitAsync();
-            var response = new StringResponse { Success = false };
+            (string Response, Exception Error) response = (null, null);
             return await Task.Run(() =>
             {
                 try
@@ -154,7 +157,6 @@ namespace Xamarin.Forms.CommonCore
                                     {
                                         var content = sr.ReadToEnd();
                                         sr.Close();
-                                        response.Success = true;
                                         response.Response = content;
                                     }
                                 }
@@ -164,6 +166,10 @@ namespace Xamarin.Forms.CommonCore
                                 response.Error = ex;
                             }
                         }
+						else
+						{
+							response.Error = new ApplicationException("File does not exist");
+						}
                     }
                 }
                 catch (Exception ex)
@@ -178,11 +184,11 @@ namespace Xamarin.Forms.CommonCore
             });
         }
 
-        public async Task<BooleanResponse> SaveStringAsync(string contentName, string obj)
+        public async Task<(bool Success, Exception Error)> SaveStringAsync(string contentName, string obj)
         {
             await fileStoreLock.WaitAsync();
 
-            var response = new BooleanResponse() { Success = false };
+            (bool Success, Exception Error) response = (false, null);
             return await Task.Run(() =>
             {
                 try
