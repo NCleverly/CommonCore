@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
+using System.Reflection;
 using System.Threading.Tasks;
 using SQLite;
-using System.Linq;
-using System.Reflection;
 
 namespace Xamarin.Forms.CommonCore
 {

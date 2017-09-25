@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.IO.IsolatedStorage;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -9,7 +8,7 @@ using Newtonsoft.Json;
 namespace Xamarin.Forms.CommonCore
 {
 
-	public class FileStore : IFileStore
+    public class FileStore : IFileStore
     {
         private JsonSerializer _serializer;
 

@@ -6,6 +6,7 @@ using System.IO.IsolatedStorage;
 using System.Threading;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using Xamarin.Forms.CommonCore;
 
 namespace Xamarin.Forms.CommonCore
 {

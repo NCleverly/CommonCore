@@ -81,7 +81,7 @@ namespace Xamarin.Forms.CommonCore
 				}
 				if (formControl.IsPassword && formControl.PasswordRevealEnabled)
 				{
-					var imgView = new UIImageView(new CGRect(0, 0, (passwordIconHeight + 10), (passwordIconHeight + 10)));
+					imgView = new UIImageView(new CGRect(0, 0, (passwordIconHeight + 10), (passwordIconHeight + 10)));
                     imgView.Image = new UIImage("passwordeye.png").ChangeImageColor(formControl.EntryColor.ToUIColor());
 
 					Resize(imgView, passwordIconHeight + passwordIconPaddingWidth, passwordIconHeight);
@@ -116,28 +116,16 @@ namespace Xamarin.Forms.CommonCore
 		{
 			if (e.PropertyName == CoreUnderlineEntry.WidthProperty.PropertyName)
 			{
-				var width = ((Entry)sender).Width;
-				var height = ((Entry)sender).Height;
 				bottomBorder?.RemoveFromSuperLayer();
-				if (width > 0 && height > 0)
-					CreateUnderline((nfloat)height, (nfloat)width);
 			}
 			if (e.PropertyName == CoreUnderlineEntry.HeightProperty.PropertyName)
 			{
-				var width = ((Entry)sender).Width;
-				var height = ((Entry)sender).Height;
 				bottomBorder?.RemoveFromSuperLayer();
-				if (width > 0 && height > 0)
-					CreateUnderline((nfloat)height, (nfloat)width);
 			}
 			if (e.PropertyName == CoreUnderlineEntry.EntryColorProperty.PropertyName)
 			{
-				var width = ((Entry)sender).Width;
-				var height = ((Entry)sender).Height;
 				bottomBorder?.RemoveFromSuperLayer();
                 controlColor = formControl.EntryColor.ToCGColor();
-				if (width > 0 && height > 0)
-					CreateUnderline((nfloat)height, (nfloat)width);
 			}
 			if (e.PropertyName == CoreUnderlineEntry.HasErrorProperty.PropertyName)
 			{
@@ -173,6 +161,13 @@ namespace Xamarin.Forms.CommonCore
 					Control.ReturnKeyType = returnType.GetValueFromDescription();
 				}
 			}
+
+
+			var width = ((Entry)sender).Width;
+			var height = ((Entry)sender).Height;
+			if (width > 0 && height > 0)
+				CreateUnderline((nfloat)height, (nfloat)width);
+            
 
 			base.OnElementPropertyChanged(sender, e);
 		}

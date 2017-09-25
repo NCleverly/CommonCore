@@ -1,19 +1,16 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using ModernHttpClient;
-using System.IO;
+using Newtonsoft.Json;
 
 namespace Xamarin.Forms.CommonCore
 {
-    
+
     public class HttpService : IHttpService, IDisposable
     {
         private HttpClient httpClient;

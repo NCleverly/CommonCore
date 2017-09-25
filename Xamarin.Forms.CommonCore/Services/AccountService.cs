@@ -1,13 +1,13 @@
 ﻿using System;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using System.Linq;
-using Xamarin.Auth;
 using PCLCrypto;
-using static PCLCrypto.WinRTCrypto;
-
-using System.Text;
 using Plugin.Settings;
+using Xamarin.Auth;
+using Xamarin.Forms.CommonCore;
+using static PCLCrypto.WinRTCrypto;
 
 namespace Xamarin.Forms.CommonCore
 {

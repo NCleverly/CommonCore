@@ -7,7 +7,6 @@ using Android.OS;
 
 namespace Xamarin.Forms.CommonCore
 {
-
     public class TimerBackground
 	{
 		private TimerBackgroundingServiceConnection timerServiceConnection;
