@@ -37,40 +37,9 @@ namespace Xamarin.Forms.CommonCore
             set { this.SetValue(EntryColorProperty, value); }
         }
 
-        public static readonly BindableProperty ItemsSourceProperty =
-            BindableProperty.Create(propertyName: "ItemsSource",
-                           returnType: typeof(IEnumerable<object>),
-                           declaringType: typeof(CorePicker),
-                           defaultValue: null,
-                           propertyChanged: OnItemsSourcePropertyChanged);
-
-        public IEnumerable<object> ItemsSource
-        {
-            get { return (IEnumerable<object>)GetValue(ItemsSourceProperty); }
-            set
-            {
-                SetValue(ItemsSourceProperty, value);
-            }
-        }
-
-
-        public static readonly BindableProperty SelectedItemProperty =
-            BindableProperty.Create(propertyName: "SelectedItem",
-                           returnType: typeof(object),
-                           declaringType: typeof(CorePicker),
-                           defaultValue: null,
-                           defaultBindingMode: BindingMode.TwoWay,
-                           propertyChanged: OnSelectedItemPropertyChanged);
-
-        public object SelectedItem
-        {
-            get { return (object)GetValue(SelectedItemProperty); }
-            set { SetValue(SelectedItemProperty, value); }
-        }
-
         public CorePicker()
         {
-            if (Xamarin.Forms.Device.OS == TargetPlatform.Android)
+            if (Xamarin.Forms.Device.RuntimePlatform =="Android")
             {
                 this.SelectedIndexChanged += SelectedIndexHasChanged;
             }
@@ -80,7 +49,7 @@ namespace Xamarin.Forms.CommonCore
         }
         ~CorePicker()
         {
-            if (Xamarin.Forms.Device.OS == TargetPlatform.Android)
+            if (Xamarin.Forms.Device.RuntimePlatform == "Android")
             {
                 this.SelectedIndexChanged -= SelectedIndexHasChanged;
             }
@@ -91,7 +60,7 @@ namespace Xamarin.Forms.CommonCore
         }
         public void Dispose()
         {
-            if (Xamarin.Forms.Device.OS == TargetPlatform.Android)
+            if (Xamarin.Forms.Device.RuntimePlatform == "Android")
             {
                 this.SelectedIndexChanged -= SelectedIndexHasChanged;
             }
@@ -104,14 +73,14 @@ namespace Xamarin.Forms.CommonCore
             if (this.SelectedIndex == -1)
                 SelectedItem = null;
             else
-                SelectedItem = ItemsSource.ToArray()[this.SelectedIndex];
+                SelectedItem = ItemsSource[this.SelectedIndex];
         }
         private void SelectedIndexHasChanged(object sender, EventArgs args)
         {
             if (this.SelectedIndex == -1)
                 SelectedItem = null;
             else
-                SelectedItem = ItemsSource.ToArray()[this.SelectedIndex];
+                SelectedItem = ItemsSource[this.SelectedIndex];
         }
 
 

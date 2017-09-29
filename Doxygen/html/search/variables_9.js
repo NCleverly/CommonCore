@@ -15,5 +15,5 @@ var searchData=
   ['isrefreshing',['isRefreshing',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#ace383f6d13bc8ea311ecd0b417a52c43',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
   ['isstarredproperty',['IsStarredProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a74419783523d24140160471d91e0dc9c',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
   ['itemclickcommandproperty',['ItemClickCommandProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_list_view.html#a7d1ee96cb78281da4bd7d2a31662b8c1',1,'Xamarin::Forms::CommonCore::CoreListView']]],
-  ['itemssourceproperty',['ItemsSourceProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#a81e802ebbf2501f96ce706d052557746',1,'Xamarin.Forms.CommonCore.CorePicker.ItemsSourceProperty()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_group.html#a87758a9459bc5455f1f0b36e758c47cb',1,'Xamarin.Forms.CommonCore.CoreRadioGroup.ItemsSourceProperty()']]]
+  ['itemssourceproperty',['ItemsSourceProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_group.html#a87758a9459bc5455f1f0b36e758c47cb',1,'Xamarin::Forms::CommonCore::CoreRadioGroup']]]
 ];

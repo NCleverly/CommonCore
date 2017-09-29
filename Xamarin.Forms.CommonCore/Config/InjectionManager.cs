@@ -26,19 +26,20 @@ namespace Xamarin.Forms.CommonCore
         /// <typeparam name="T">The 1st type parameter.</typeparam>
         public static bool IsRegistered<T>() where T : ObservableViewModel
         {
-            return vmContainer.Any(x => x == typeof(T).FullName);
+            return vmContainer.Count(x => x == typeof(T).FullName) != 0;
         }
 
         /// <summary>
         /// Get all view model instances
         /// </summary>
         /// <returns>The all view models.</returns>
-        public static List<ObservableViewModel> GetAllViewModels(){
+        public static List<ObservableViewModel> GetAllViewModels()
+        {
             var lst = new List<ObservableViewModel>();
-			foreach (var name in vmContainer)
-			{
+            foreach (var name in vmContainer)
+            {
                 lst.Add((ObservableViewModel)GetObjectByName(name));
-			}
+            }
             return lst;
         }
 
@@ -51,7 +52,7 @@ namespace Xamarin.Forms.CommonCore
         public static T GetViewModel<T>(bool loadResources = false) where T : ObservableViewModel
         {
 
-            if (!vmContainer.Any(x => x == typeof(T).FullName))
+            if (vmContainer.Count(x => x == typeof(T).FullName) == 0)
             {
                 DependencyService.Register<T>();
                 vmContainer.Add(typeof(T).FullName);
@@ -63,11 +64,11 @@ namespace Xamarin.Forms.CommonCore
             return vm;
         }
 
-   
+
 
         public static T GetBusinessLayer<T>() where T : BusinessBase
         {
-            if (!bllContainer.Any(x => x == typeof(T).FullName))
+            if (bllContainer.Count(x => x == typeof(T).FullName) == 0)
             {
                 DependencyService.Register<T>();
                 bllContainer.Add(typeof(T).FullName);
@@ -85,7 +86,7 @@ namespace Xamarin.Forms.CommonCore
         {
             if (!string.IsNullOrEmpty(vmName))
             {
-                if (!vmContainer.Any(x => x == vmName))
+                if (vmContainer.Count(x => x == vmName) == 0)
                 {
                     RegisterObjectByName(vmName);
                     vmContainer.Add(vmName);
@@ -96,23 +97,25 @@ namespace Xamarin.Forms.CommonCore
                     vm.LoadResources();
                 return vm;
             }
-            else{
+            else
+            {
                 return null;
             }
         }
 
-		/// <summary>
-		/// Invoke ReleaseResources method on all ViewModels
-		/// </summary>
-		/// <param name="ignoreCaller">If set to <c>true</c> ignoreCaller caller.</param>
-		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static void ReleaseResources<T>(bool ignoreCaller = false) where T : ObservableViewModel
+        /// <summary>
+        /// Invoke ReleaseResources method on all ViewModels
+        /// </summary>
+        /// <param name="ignoreCaller">If set to <c>true</c> ignoreCaller caller.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static void ReleaseResources<T>(bool ignoreCaller = false) where T : ObservableViewModel
         {
             var caller = typeof(T).FullName;
             foreach (var name in vmContainer)
             {
                 var vm = ((ObservableViewModel)GetObjectByName(name));
-                if(ignoreCaller && name.Equals(caller)){
+                if (ignoreCaller && name.Equals(caller))
+                {
                     //skip and do nothing
                 }
                 else
@@ -155,7 +158,7 @@ namespace Xamarin.Forms.CommonCore
             foreach (var name in srvContainer)
             {
                 var obj = GetObjectByName(name);
-                if(obj is IDisposable)
+                if (obj is IDisposable)
                 {
                     ((IDisposable)obj).Dispose();
                 }
@@ -196,7 +199,7 @@ namespace Xamarin.Forms.CommonCore
         /// <typeparam name="K">The 2nd type parameter.</typeparam>
         public static T GetService<T, K>(bool isSingleton = false) where K : class, T
         {
-            if (!srvContainer.Any(x => x == typeof(K).FullName))
+            if (srvContainer.Count(x => x == typeof(K).FullName) == 0)
             {
                 DependencyService.Register<K>();
                 srvContainer.Add(typeof(T).FullName);
@@ -214,14 +217,14 @@ namespace Xamarin.Forms.CommonCore
             return iSrv;
         }
 
-		/// <summary>
-		/// Gets and registers a converter as a singleton.
-		/// </summary>
-		/// <returns>The converter.</returns>
-		/// <typeparam name="T">The 1st type parameter.</typeparam>
-		public static IValueConverter GetConverter<T>() where T : class, IValueConverter
+        /// <summary>
+        /// Gets and registers a converter as a singleton.
+        /// </summary>
+        /// <returns>The converter.</returns>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static IValueConverter GetConverter<T>() where T : class, IValueConverter
         {
-            if (!cvtrContainer.Any(x => x == typeof(T).FullName))
+            if (cvtrContainer.Count(x => x == typeof(T).FullName) == 0)
             {
                 DependencyService.Register<T>();
                 cvtrContainer.Add(typeof(T).FullName);
@@ -249,12 +252,12 @@ namespace Xamarin.Forms.CommonCore
 
     }
 
-	/// <summary>
-	/// Dependency clarifier helps resolve ambiguous match exceptions on static calls to the DependencyService.
-	/// </summary>
-	public class DependencyClarifier
-	{
-        public static void Register<T>() where T:class
+    /// <summary>
+    /// Dependency clarifier helps resolve ambiguous match exceptions on static calls to the DependencyService.
+    /// </summary>
+    public class DependencyClarifier
+    {
+        public static void Register<T>() where T : class
         {
             DependencyService.Register<T>();
         }

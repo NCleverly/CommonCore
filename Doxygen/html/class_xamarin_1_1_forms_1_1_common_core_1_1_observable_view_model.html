@@ -90,6 +90,15 @@ Inheritance diagram for Xamarin.Forms.CommonCore.ObservableViewModel:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a9c40ce2c62c59b0ab8f3bc361735959f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a9c40ce2c62c59b0ab8f3bc361735959f">NavigateTo&lt; T &gt;</a> ()</td></tr>
+<tr class="memdesc:a9c40ce2c62c59b0ab8f3bc361735959f"><td class="mdescLeft">&#160;</td><td class="mdescRight">PushAsync with ConfigureAwait(false)  <a href="#a9c40ce2c62c59b0ab8f3bc361735959f">More...</a><br /></td></tr>
+<tr class="separator:a9c40ce2c62c59b0ab8f3bc361735959f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9dc3518290bb3979c72187a2034bc1e0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a9dc3518290bb3979c72187a2034bc1e0">NavigateTo</a> (ContentPage page)</td></tr>
+<tr class="memdesc:a9dc3518290bb3979c72187a2034bc1e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">PushAsync with ConfigureAwait(false)  <a href="#a9dc3518290bb3979c72187a2034bc1e0">More...</a><br /></td></tr>
+<tr class="separator:a9dc3518290bb3979c72187a2034bc1e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a229e85feed270171343f84265be662a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a229e85feed270171343f84265be662a3">NavigateBack</a> (bool animate=true)</td></tr>
+<tr class="memdesc:a229e85feed270171343f84265be662a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">PopAsync with ConfigureAwait(false)  <a href="#a229e85feed270171343f84265be662a3">More...</a><br /></td></tr>
+<tr class="separator:a229e85feed270171343f84265be662a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a414415865b6e5a788fe40fe66b00415a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a414415865b6e5a788fe40fe66b00415a">OnViewMessageReceived</a> (string key, object obj)</td></tr>
 <tr class="memdesc:a414415865b6e5a788fe40fe66b00415a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to receive viewmodel messages. (NO BASE IMPLEMENTATION)  <a href="#a414415865b6e5a788fe40fe66b00415a">More...</a><br /></td></tr>
 <tr class="separator:a414415865b6e5a788fe40fe66b00415a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,7 +262,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00349">349</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00373">373</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
 
 </div>
 </div>
@@ -283,7 +292,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Loads the view model resources. Do not perform blocking calls in this method! (NO BASE IMPLEMENTATION) </p>
 
-<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00384">384</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00408">408</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
 
 </div>
 </div>
@@ -312,7 +321,99 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Loads viewmodel from some persisted state. (NO BASE IMPLEMENTATION) </p>
 
-<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00398">398</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00422">422</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+
+</div>
+</div>
+<a id="a229e85feed270171343f84265be662a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a229e85feed270171343f84265be662a3">&#9670;&nbsp;</a></span>NavigateBack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Xamarin.Forms.CommonCore.ObservableViewModel.NavigateBack </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>animate</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PopAsync with ConfigureAwait(false) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">animate</td><td>If set to <code>true</code> animate.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00331">331</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9dc3518290bb3979c72187a2034bc1e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9dc3518290bb3979c72187a2034bc1e0">&#9670;&nbsp;</a></span>NavigateTo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Xamarin.Forms.CommonCore.ObservableViewModel.NavigateTo </td>
+          <td>(</td>
+          <td class="paramtype">ContentPage&#160;</td>
+          <td class="paramname"><em>page</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PushAsync with ConfigureAwait(false) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">page</td><td>Page.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00322">322</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9c40ce2c62c59b0ab8f3bc361735959f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c40ce2c62c59b0ab8f3bc361735959f">&#9670;&nbsp;</a></span>NavigateTo< T >()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a9dc3518290bb3979c72187a2034bc1e0">Xamarin.Forms.CommonCore.ObservableViewModel.NavigateTo</a>&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PushAsync with ConfigureAwait(false) </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The 1st type parameter.</td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>ContentPage</em></td><td>&#160;</td></tr>
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
+
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00314">314</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
 
 </div>
 </div>
@@ -342,7 +443,7 @@ Additional Inherited Members</h2></td></tr>
 <p>//false is default value when system call back press </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00370">370</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00394">394</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
 
 </div>
 </div>
@@ -371,7 +472,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>called when page need override soft back button. (NO BASE IMPLEMENTATION) </p>
 
-<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00379">379</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00403">403</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
 
 </div>
 </div>
@@ -418,7 +519,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00364">364</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00388">388</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
 
 </div>
 </div>
@@ -448,7 +549,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Releads the view model resources. (NO BASE IMPLEMENTATION) </p>
 
-<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00388">388</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00412">412</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
 
 </div>
 </div>
@@ -477,7 +578,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Saves the state of the viewmodel. (NO BASE IMPLEMENTATION) </p>
 
-<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00393">393</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00417">417</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
 
 </div>
 </div>
@@ -524,7 +625,7 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00334">334</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00358">358</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
 
 </div>
 </div>
@@ -585,7 +686,7 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 </div>
 
-<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00344">344</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00368">368</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
 
 </div>
 </div>
@@ -613,7 +714,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00312">312</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00336">336</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
 
 </div>
 </div>
@@ -1059,7 +1160,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00283">283</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_observable_view_model_8cs_source.html#l00282">282</a> of file <a class="el" href="_observable_view_model_8cs_source.html">ObservableViewModel.cs</a>.</p>
 
 </div>
 </div>

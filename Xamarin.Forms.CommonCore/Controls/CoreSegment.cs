@@ -122,7 +122,7 @@ namespace Xamarin.Forms.CommonCore
 
         public void Render()
         {
-            if (Xamarin.Forms.Device.OS == TargetPlatform.Android)
+            if (Xamarin.Forms.Device.RuntimePlatform == "Android")
                 ColumnSpacing = -6.5;
             else
                 ColumnSpacing = BorderThickness;

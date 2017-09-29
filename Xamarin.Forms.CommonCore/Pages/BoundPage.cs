@@ -63,6 +63,7 @@ namespace Xamarin.Forms.CommonCore
             this.SetBinding(ContentPage.TitleProperty, "PageTitle");
         }
 
+
     }
 }
 

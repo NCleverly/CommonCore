@@ -99,8 +99,8 @@ var searchData=
   ['itemclickcommand',['ItemClickCommand',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_list_view.html#a046414f9b781e0ee5d14ac7aa879bd17',1,'Xamarin::Forms::CommonCore::CoreListView']]],
   ['itemclickcommandproperty',['ItemClickCommandProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_list_view.html#a7d1ee96cb78281da4bd7d2a31662b8c1',1,'Xamarin::Forms::CommonCore::CoreListView']]],
   ['itemsourcebindablelist',['ItemSourceBindableList',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#a3e31a8c65c5bc82e696d60b655df83d4',1,'Xamarin::Forms::CommonCore::CorePicker']]],
-  ['itemssource',['ItemsSource',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#a2ab038e8e46dc857bea01e956f18a3b6',1,'Xamarin.Forms.CommonCore.CorePicker.ItemsSource()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_group.html#a6cf8737dff5a1913ecb870b6f768ddbf',1,'Xamarin.Forms.CommonCore.CoreRadioGroup.ItemsSource()']]],
-  ['itemssourceproperty',['ItemsSourceProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#a81e802ebbf2501f96ce706d052557746',1,'Xamarin.Forms.CommonCore.CorePicker.ItemsSourceProperty()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_group.html#a87758a9459bc5455f1f0b36e758c47cb',1,'Xamarin.Forms.CommonCore.CoreRadioGroup.ItemsSourceProperty()']]],
+  ['itemssource',['ItemsSource',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_group.html#a6cf8737dff5a1913ecb870b6f768ddbf',1,'Xamarin::Forms::CommonCore::CoreRadioGroup']]],
+  ['itemssourceproperty',['ItemsSourceProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_group.html#a87758a9459bc5455f1f0b36e758c47cb',1,'Xamarin::Forms::CommonCore::CoreRadioGroup']]],
   ['iviewstack',['IViewStack',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_view_stack.html',1,'Xamarin::Forms::CommonCore']]],
   ['iviewstack_2ecs',['IViewStack.cs',['../_i_view_stack_8cs.html',1,'']]]
 ];

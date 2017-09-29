@@ -14,123 +14,123 @@ namespace Xamarin.Forms.CommonCore
         private bool isLoadingHUD;
         private bool isLoadingOverlay;
 
-		public string LoadingMessageOverlay { get; set; }
-		public string LoadingMessageHUD { get; set; }
+        public string LoadingMessageOverlay { get; set; }
+        public string LoadingMessageHUD { get; set; }
 
-		#region ReadOnly AppData Settings
-		[JsonIgnore]
-		public string AESEncryptionKey { get { return CoreSettings.Config.AESEncryptionKey; } }
-		[JsonIgnore]
-		public Dictionary<string, string> WebApis { get { return CoreSettings.Config?.WebApi; } }
-		[JsonIgnore]
-		public Dictionary<string, string> CustomSettings { get { return CoreSettings.Config?.CustomSettings; } }
-		#endregion
+        #region ReadOnly AppData Settings
+        [JsonIgnore]
+        public string AESEncryptionKey { get { return CoreSettings.Config.AESEncryptionKey; } }
+        [JsonIgnore]
+        public Dictionary<string, string> WebApis { get { return CoreSettings.Config?.WebApi; } }
+        [JsonIgnore]
+        public Dictionary<string, string> CustomSettings { get { return CoreSettings.Config?.CustomSettings; } }
+        #endregion
 
-		#region Injection Services
+        #region Injection Services
 
-		public ILogService Log
-		{
-			get
-			{
-				return (ILogService)InjectionManager.GetService<ILogService, LogService>(true);
-			}
-		}
+        public ILogService Log
+        {
+            get
+            {
+                return (ILogService)InjectionManager.GetService<ILogService, LogService>(true);
+            }
+        }
 
-		/// <summary>
-		/// AuthenticatorService for Google, Facebook and Microsoft.
-		/// </summary>
-		/// <value>The authenticator service.</value>
-		[JsonIgnore]
-		protected IAuthenticatorService AuthenticatorService
-		{
-			get
-			{
-				return (IAuthenticatorService)InjectionManager.GetService<IAuthenticatorService, AuthenticatorService>(true);
-			}
-		}
-		/// <summary>
-		/// Backgrounding event timer that fires an event specified in the future on a repeating basis.
-		/// </summary>
-		/// <value>The background timer.</value>
-		[JsonIgnore]
-		protected IBackgroundTimer BackgroundTimer
-		{
-			get
-			{
-				return (IBackgroundTimer)InjectionManager.GetService<IBackgroundTimer, BackgroundTimer>(true);
-			}
-		}
-		/// <summary>
-		/// Embedded local database with tables defined by the application configuration file
-		/// </summary>
-		/// <value>The sqlite db.</value>
-		[JsonIgnore]
-		protected ISqliteDb SqliteDb
-		{
-			get
-			{
-				return (ISqliteDb)InjectionManager.GetService<ISqliteDb, SqliteDb>(true);
-			}
-		}
-		/// <summary>
-		/// Service that provides network calls over http.
-		/// </summary>
-		/// <value>The http service.</value>
-		[JsonIgnore]
-		protected IHttpService HttpService
-		{
-			get
-			{
-				return (IHttpService)InjectionManager.GetService<IHttpService, HttpService>(true);
-			}
-		}
+        /// <summary>
+        /// AuthenticatorService for Google, Facebook and Microsoft.
+        /// </summary>
+        /// <value>The authenticator service.</value>
+        [JsonIgnore]
+        protected IAuthenticatorService AuthenticatorService
+        {
+            get
+            {
+                return (IAuthenticatorService)InjectionManager.GetService<IAuthenticatorService, AuthenticatorService>(true);
+            }
+        }
+        /// <summary>
+        /// Backgrounding event timer that fires an event specified in the future on a repeating basis.
+        /// </summary>
+        /// <value>The background timer.</value>
+        [JsonIgnore]
+        protected IBackgroundTimer BackgroundTimer
+        {
+            get
+            {
+                return (IBackgroundTimer)InjectionManager.GetService<IBackgroundTimer, BackgroundTimer>(true);
+            }
+        }
+        /// <summary>
+        /// Embedded local database with tables defined by the application configuration file
+        /// </summary>
+        /// <value>The sqlite db.</value>
+        [JsonIgnore]
+        protected ISqliteDb SqliteDb
+        {
+            get
+            {
+                return (ISqliteDb)InjectionManager.GetService<ISqliteDb, SqliteDb>(true);
+            }
+        }
+        /// <summary>
+        /// Service that provides network calls over http.
+        /// </summary>
+        /// <value>The http service.</value>
+        [JsonIgnore]
+        protected IHttpService HttpService
+        {
+            get
+            {
+                return (IHttpService)InjectionManager.GetService<IHttpService, HttpService>(true);
+            }
+        }
 
-		/// <summary>
-		/// Embedded file store that allow objects to be json serialized.
-		/// </summary>
-		/// <value>The file store.</value>
-		[JsonIgnore]
-		protected IFileStore FileStore
-		{
-			get
-			{
-				return (IFileStore)InjectionManager.GetService<IFileStore, FileStore>(true);
-			}
-		}
+        /// <summary>
+        /// Embedded file store that allow objects to be json serialized.
+        /// </summary>
+        /// <value>The file store.</value>
+        [JsonIgnore]
+        protected IFileStore FileStore
+        {
+            get
+            {
+                return (IFileStore)InjectionManager.GetService<IFileStore, FileStore>(true);
+            }
+        }
 
-		/// <summary>
-		/// Service that uses the OS account store to retrieve dictionary data
-		/// </summary>
-		/// <value>The account service.</value>
-		[JsonIgnore]
-		protected IAccountService AccountService
-		{
-			get
-			{
-				return (IAccountService)InjectionManager.GetService<IAccountService, AccountService>(true);
-			}
-		}
+        /// <summary>
+        /// Service that uses the OS account store to retrieve dictionary data
+        /// </summary>
+        /// <value>The account service.</value>
+        [JsonIgnore]
+        protected IAccountService AccountService
+        {
+            get
+            {
+                return (IAccountService)InjectionManager.GetService<IAccountService, AccountService>(true);
+            }
+        }
 
-		/// <summary>
-		/// AES encryption and Hash service.
-		/// </summary>
-		/// <value>The encryption service.</value>
-		[JsonIgnore]
-		protected IEncryptionService EncryptionService
-		{
-			get
-			{
-				return (IEncryptionService)InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
-			}
-		}
-		#endregion
+        /// <summary>
+        /// AES encryption and Hash service.
+        /// </summary>
+        /// <value>The encryption service.</value>
+        [JsonIgnore]
+        protected IEncryptionService EncryptionService
+        {
+            get
+            {
+                return (IEncryptionService)InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+            }
+        }
+        #endregion
 
-		#region Dependencies
-		/// <summary>
-		/// DependencyService for IAudioPlayer.
-		/// </summary>
-		/// <value>The audio player.</value>
-		[JsonIgnore]
+        #region Dependencies
+        /// <summary>
+        /// DependencyService for IAudioPlayer.
+        /// </summary>
+        /// <value>The audio player.</value>
+        [JsonIgnore]
         public IAudioPlayer AudioPlayer
         {
             get { return DependencyService.Get<IAudioPlayer>(); }
@@ -245,13 +245,13 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <value>The navigation.</value>
         [JsonIgnore]
-		public INavigation Navigation
+        public INavigation Navigation
         {
             get { return CoreSettings.AppNav; }
             set { CoreSettings.AppNav = value; }
         }
 
-		[JsonIgnore]
+        [JsonIgnore]
         public bool IsLoadingOverlay
         {
             get
@@ -261,24 +261,23 @@ namespace Xamarin.Forms.CommonCore
 
             set
             {
-                if (isLoadingOverlay != null)
+
+                isLoadingOverlay = value;
+                OnPropertyChanged("IsLoadingOverlay");
+                if (value)
                 {
-                    isLoadingOverlay = value;
-                    OnPropertyChanged("IsLoadingOverlay");
-                    if (value)
-                    {
-                        var color = Color.FromHex(CoreStyles.OverlayColor);
-                        OverlayDependency.ShowOverlay(LoadingMessageOverlay, color, CoreStyles.OverlayOpacity);
-                    }
-                    else
-                    {
-                        OverlayDependency.HideOverlay();
-                    }
+                    var color = Color.FromHex(CoreStyles.OverlayColor);
+                    OverlayDependency.ShowOverlay(LoadingMessageOverlay, color, CoreStyles.OverlayOpacity);
                 }
+                else
+                {
+                    OverlayDependency.HideOverlay();
+                }
+
             }
         }
 
-		[JsonIgnore]
+        [JsonIgnore]
         public bool IsLoadingHUD
         {
             get
@@ -308,6 +307,31 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
+        /// <summary>
+        /// PushAsync with ConfigureAwait(false)
+        /// </summary>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public void NavigateTo<T>() where T : ContentPage, new()
+        {
+            CoreSettings.AppNav.PushAsync(new T()).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// PushAsync with ConfigureAwait(false)
+        /// </summary>
+        /// <param name="page">Page.</param>
+        public void NavigateTo(ContentPage page)
+        {
+            CoreSettings.AppNav.PushAsync(page).ConfigureAwait(false);
+        }
+
+        /// <summary>
+        /// PopAsync with ConfigureAwait(false)
+        /// </summary>
+        /// <param name="animate">If set to <c>true</c> animate.</param>
+        public void NavigateBack(bool animate = true)
+        {
+            CoreSettings.AppNav.PopAsync(animate).ConfigureAwait(false);
+        }
 
         protected void ShowNotification(LocalNotification notification)
         {
@@ -356,12 +380,12 @@ namespace Xamarin.Forms.CommonCore
             return false;
         }
 
-		/// <summary>
-		/// Method to receive viewmodel messages.  (NO BASE IMPLEMENTATION)
-		/// </summary>
-		/// <param name="key">Key.</param>
-		/// <param name="obj">Object.</param>
-		public virtual void OnViewMessageReceived(string key, object obj) { }
+        /// <summary>
+        /// Method to receive viewmodel messages.  (NO BASE IMPLEMENTATION)
+        /// </summary>
+        /// <param name="key">Key.</param>
+        /// <param name="obj">Object.</param>
+        public virtual void OnViewMessageReceived(string key, object obj) { }
 
         /// <summary>
         /// //false is default value when system call back press
@@ -373,29 +397,29 @@ namespace Xamarin.Forms.CommonCore
             return false;
         }
 
-		/// <summary>
-		/// called when page need override soft back button.  (NO BASE IMPLEMENTATION)
-		/// </summary>
-		public virtual void OnSoftBackButtonPressed() { }
+        /// <summary>
+        /// called when page need override soft back button.  (NO BASE IMPLEMENTATION)
+        /// </summary>
+        public virtual void OnSoftBackButtonPressed() { }
 
-		/// <summary>
-		/// Loads the view model resources. Do not perform blocking calls in this method!  (NO BASE IMPLEMENTATION)
-		/// </summary>
-		public virtual void LoadResources(string parameter = null) { }
-		/// <summary>
-		/// Releads the view model resources.  (NO BASE IMPLEMENTATION)
-		/// </summary>
-		public virtual void ReleaseResources(string parameter = null) { }
+        /// <summary>
+        /// Loads the view model resources. Do not perform blocking calls in this method!  (NO BASE IMPLEMENTATION)
+        /// </summary>
+        public virtual void LoadResources(string parameter = null) { }
+        /// <summary>
+        /// Releads the view model resources.  (NO BASE IMPLEMENTATION)
+        /// </summary>
+        public virtual void ReleaseResources(string parameter = null) { }
 
-		/// <summary>
-		/// Saves the state of the viewmodel. (NO BASE IMPLEMENTATION)
-		/// </summary>
-		public virtual void SaveState() {}
+        /// <summary>
+        /// Saves the state of the viewmodel. (NO BASE IMPLEMENTATION)
+        /// </summary>
+        public virtual void SaveState() { }
 
-		/// <summary>
-		/// Loads viewmodel from some persisted state. (NO BASE IMPLEMENTATION)
-		/// </summary>
-		public virtual void LoadState() { }
+        /// <summary>
+        /// Loads viewmodel from some persisted state. (NO BASE IMPLEMENTATION)
+        /// </summary>
+        public virtual void LoadState() { }
     }
 
 }
