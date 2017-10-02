@@ -321,6 +321,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Fonts\Util\FontUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Fonts\Sources\FontImageSource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BusinessLayer\BusinessBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CorePickerRenderer.Droid.cs">
+      <DependentUpon>CorePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CorePickerRenderer.IOS.cs">
+      <DependentUpon>CorePicker.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

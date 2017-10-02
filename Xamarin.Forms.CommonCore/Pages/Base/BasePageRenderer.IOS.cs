@@ -23,23 +23,62 @@ namespace Xamarin.Forms.CommonCore
             {
                 basePage = (BasePages)page;
                 backgroundImage = page.BackgroundImage;
+                basePage.SizeChanged += PageSizedChanged;
             }
 
 
             base.OnElementChanged(e);
         }
 
+        private void PageSizedChanged(object sender, EventArgs args)
+        {
+            if (!string.IsNullOrEmpty(backgroundImage))
+            {
+                UIImage i = UIImage.FromFile(backgroundImage);
+                var size = new CoreGraphics.CGSize(0, 0);
+                if (CoreSettings.ScreenSize != null)
+                {
+                    size.Height = (nfloat)CoreSettings.ScreenSize.Height;
+                    size.Width = (nfloat)CoreSettings.ScreenSize.Width;
+                }
+
+                UIGraphics.BeginImageContext(size);
+                i = i.Scale(size);
+
+                this.View.BackgroundColor = UIColor.FromPatternImage(i);
+            }
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            basePage.SizeChanged -= PageSizedChanged;
+            base.Dispose(disposing);
+        }
         public override void ViewWillAppear(bool animated)
         {
 
-            base.ViewWillAppear(false);
+            base.ViewWillAppear(animated);
             try
             {
                 if (!string.IsNullOrEmpty(backgroundImage))
                 {
-                    UIGraphics.BeginImageContext(this.View.Frame.Size);
                     UIImage i = UIImage.FromFile(backgroundImage);
-                    i = i.Scale(this.View.Frame.Size);
+                    var size = new CoreGraphics.CGSize(0, 0);
+                    if(CoreSettings.ScreenSize!=null){
+                        size.Height = (nfloat)CoreSettings.ScreenSize.Height;
+                        size.Width = (nfloat)CoreSettings.ScreenSize.Width;
+                    }
+
+                    if (size.Height > this.View.Frame.Size.Height)
+                    {
+                        UIGraphics.BeginImageContext(size);
+                        i = i.Scale(size);
+                    }
+                    else
+                    {
+                        UIGraphics.BeginImageContext(this.View.Frame.Size);
+                        i = i.Scale(this.View.Frame.Size);
+                    }
 
                     this.View.BackgroundColor = UIColor.FromPatternImage(i);
                 }

@@ -88,6 +88,7 @@ Step 5 (Optional) -> You may want to setup the Forms Application page to include
 
         protected override void OnStart()
         {
+            CoreSettings.ScreenSize = new Size(MainPage.Width, MainPage.Height);
             MainPage.SizeChanged += AppScreenSizeChanged;
             CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
         }

@@ -8,7 +8,7 @@ namespace Xamarin.Forms.CommonCore
         private long appearingUTC;
 
         public bool AnalyticsEnabled
-		{
+        {
             get { return CoreSettings.AppData.Settings.AnalyticsEnabled; }
         }
         public Size ScreenSize
@@ -16,14 +16,14 @@ namespace Xamarin.Forms.CommonCore
             get { return CoreSettings.ScreenSize; }
         }
 
-		public ILogService Log
-		{
-			get
-			{
-                
-				return (ILogService)InjectionManager.GetService<ILogService, LogService>(true);
-			}
-		}
+        public ILogService Log
+        {
+            get
+            {
+
+                return (ILogService)InjectionManager.GetService<ILogService, LogService>(true);
+            }
+        }
 
         protected override bool OnBackButtonPressed()
         {
@@ -68,10 +68,10 @@ namespace Xamarin.Forms.CommonCore
 
 #if __IOS__
 
-		/// <summary>
-		/// Override default settings for back button and removes the chevron images leaving just text.
-		/// </summary>
-		public static readonly BindableProperty OverrideBackButtonProperty =
+        /// <summary>
+        /// Override default settings for back button and removes the chevron images leaving just text.
+        /// </summary>
+        public static readonly BindableProperty OverrideBackButtonProperty =
             BindableProperty.Create("OverrideBackButton", typeof(bool), typeof(BasePages), false);
 
         /// <summary>
@@ -88,41 +88,64 @@ namespace Xamarin.Forms.CommonCore
         /// The override back text property.
         /// </summary>
 		public static readonly BindableProperty OverrideBackTextProperty =
-		    BindableProperty.Create("OverrideBackText", typeof(string), typeof(BasePages), "Back");
+            BindableProperty.Create("OverrideBackText", typeof(string), typeof(BasePages), "Back");
 
         /// <summary>
         /// Gets or sets the override back text.
         /// </summary>
         /// <value>The override back text.</value>
 		public string OverrideBackText
-		{
-			get { return (string)GetValue(OverrideBackTextProperty); }
-			set { SetValue(OverrideBackTextProperty, value); }
-		}
+        {
+            get { return (string)GetValue(OverrideBackTextProperty); }
+            set { SetValue(OverrideBackTextProperty, value); }
+        }
 
 #endif
 
-		protected override void OnAppearing()
-		{
-			appearingUTC = DateTime.UtcNow.Ticks;
+        protected override void OnAppearing()
+        {
+            appearingUTC = DateTime.UtcNow.Ticks;
 
-			if (Navigation != null)
-				CoreSettings.AppNav = Navigation;
-			base.OnAppearing();
-		}
+            if (Navigation != null)
+                CoreSettings.AppNav = Navigation;
+            base.OnAppearing();
+        }
 
-		protected override void OnDisappearing()
-		{
-			if (AnalyticsEnabled)
-			{
-				Log.LogAnalytics(this.GetType().FullName, new TrackingMetatData()
-				{
-					StartUtc = appearingUTC,
-					EndUtc = DateTime.UtcNow.Ticks
-				});
-			}
-			base.OnDisappearing();
-		}
+        protected override void OnDisappearing()
+        {
+            if (AnalyticsEnabled)
+            {
+                Log.LogAnalytics(this.GetType().FullName, new TrackingMetatData()
+                {
+                    StartUtc = appearingUTC,
+                    EndUtc = DateTime.UtcNow.Ticks
+                });
+            }
+            base.OnDisappearing();
+        }
+
+        protected override void OnSizeAllocated(double width, double height)
+        {
+            if (width > 0 && height > 0)
+            {
+                if (CoreSettings.ScreenSize == null)
+                {
+                    CoreSettings.ScreenSize = new Size(width, height);
+                }
+                else
+                {
+                    if (!CoreSettings.ScreenSize.Width.IsEqual(width) && !CoreSettings.ScreenSize.Height.IsEqual(height))
+                    {
+                        var s = CoreSettings.ScreenSize;
+                        s.Width = width;
+                        s.Height = height;
+                        CoreSettings.ScreenSize = s;
+                    }
+
+                }
+            }
+            base.OnSizeAllocated(width, height);
+        }
 
     }
 

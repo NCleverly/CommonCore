@@ -146,6 +146,13 @@ namespace Xamarin.Forms.CommonCore
             return (P)prop.GetValue(obj, null);
         }
 
+        public static bool IsEqual(this double variable1, double variable2)
+        {
+            var var1 = (long)variable1 * 10000;
+            var var2 = (long)variable2 * 10000;
+            return var1 == var2;
+        }
+
         public static bool ValidateTextFields(this ObservableViewModel model, params string[] fields)
         {
             foreach (var obj in fields) if (String.IsNullOrEmpty(obj)) return false;
