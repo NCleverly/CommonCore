@@ -29,7 +29,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ObservableViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\ObservableObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\CoreExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Config\InjectionManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IOC\InjectionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\FileStore.cs">
       <DependentUpon>IFileStore.cs</DependentUpon>
     </Compile>
@@ -334,7 +334,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)Extensions\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Config\" />
+    <Folder Include="$(MSBuildThisFileDirectory)IOC\" />
     <Folder Include="$(MSBuildThisFileDirectory)Controls\" />
     <Folder Include="$(MSBuildThisFileDirectory)Pages\" />
     <Folder Include="$(MSBuildThisFileDirectory)Behaviors\" />
@@ -373,7 +373,7 @@
     <None Include="$(MSBuildThisFileDirectory)Services\ActivityCustomUrlSchemeInterceptor.txt">
       <DependentUpon>IAuthenticatorService.cs</DependentUpon>
     </None>
-    <None Include="$(MSBuildThisFileDirectory)Config\InjectionManager.Unity.txt" />
+    <None Include="$(MSBuildThisFileDirectory)IOC\InjectionManager.Unity.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Config\config.dev.json.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Styles\AppStyles.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Settings\AppSettings.cs.txt" />

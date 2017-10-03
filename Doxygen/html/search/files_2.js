@@ -25,6 +25,8 @@ var searchData=
   ['coremaskedentry_2ecs',['CoreMaskedEntry.cs',['../_core_masked_entry_8cs.html',1,'']]],
   ['corenavigationpagerenderer_2edroid_2ecs',['CoreNavigationPageRenderer.Droid.cs',['../_core_navigation_page_renderer_8_droid_8cs.html',1,'']]],
   ['corepicker_2ecs',['CorePicker.cs',['../_core_picker_8cs.html',1,'']]],
+  ['corepickerrenderer_2edroid_2ecs',['CorePickerRenderer.Droid.cs',['../_core_picker_renderer_8_droid_8cs.html',1,'']]],
+  ['corepickerrenderer_2eios_2ecs',['CorePickerRenderer.IOS.cs',['../_core_picker_renderer_8_i_o_s_8cs.html',1,'']]],
   ['corepulseanimation_2ecs',['CorePulseAnimation.cs',['../_core_pulse_animation_8cs.html',1,'']]],
   ['coreradiobutton_2ecs',['CoreRadioButton.cs',['../_core_radio_button_8cs.html',1,'']]],
   ['coreradiobuttonrenderer_2edroid_2ecs',['CoreRadioButtonRenderer.Droid.cs',['../_core_radio_button_renderer_8_droid_8cs.html',1,'']]],

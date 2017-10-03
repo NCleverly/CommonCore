@@ -17,6 +17,7 @@ var searchData=
   ['isclippedtobounds',['IsClippedToBounds',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#af86a3cce62961d6fab9b6bae5981b5c1',1,'Xamarin::Forms::CommonCore::PopupView']]],
   ['iscompleted',['IsCompleted',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_synchronization_context_remover.html#a71941af8c72d13f12a7ca8a5b36bdb44',1,'Xamarin::Forms::CommonCore::SynchronizationContextRemover']]],
   ['isconnected',['IsConnected',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#ad69f2065d0288459fb23267a2fa11d0d',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
+  ['isentryunderline',['IsEntryUnderline',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#a658c371d84d9a244748cada21334acd7',1,'Xamarin::Forms::CommonCore::CorePicker']]],
   ['isinitialized',['IsInitialized',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a8f1d2bd970c4454af93895b239cab1b5',1,'PushNotification::Plugin::CrossPushNotification']]],
   ['isloadinghud',['IsLoadingHUD',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a8aa219e9ba54e6423852a31ebc246865',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['isloadingoverlay',['IsLoadingOverlay',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#aec303684e2020b23f826d98b56f48feb',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],

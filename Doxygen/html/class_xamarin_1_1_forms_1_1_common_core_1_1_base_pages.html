@@ -95,12 +95,6 @@ Inheritance diagram for Xamarin.Forms.CommonCore.BasePages:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9684353b58b520ecc4ec22b0f2dde67f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a9684353b58b520ecc4ec22b0f2dde67f">OnSoftBackButtonPressed</a> ()</td></tr>
 <tr class="separator:a9684353b58b520ecc4ec22b0f2dde67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a368f98c1271c34bf5438541f2be991f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a368f98c1271c34bf5438541f2be991f5">NavigateTo&lt; T &gt;</a> ()</td></tr>
-<tr class="separator:a368f98c1271c34bf5438541f2be991f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a70ea2a8841292537385f6e84cd47b116"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a70ea2a8841292537385f6e84cd47b116">NavigateTo</a> (ContentPage page)</td></tr>
-<tr class="separator:a70ea2a8841292537385f6e84cd47b116"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a661c567cdd9d0eec1f5a318b6fc6a41d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a661c567cdd9d0eec1f5a318b6fc6a41d">NavigateBack</a> (bool animate=true)</td></tr>
-<tr class="separator:a661c567cdd9d0eec1f5a318b6fc6a41d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -115,6 +109,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:aef3a5ffbd48bdebc9485bbc31f69777b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf2df4348184b0eef7d9b75cef02de70"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#adf2df4348184b0eef7d9b75cef02de70">OnDisappearing</a> ()</td></tr>
 <tr class="separator:adf2df4348184b0eef7d9b75cef02de70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9257da513c01c6e157fe2dd65ff290f5"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a9257da513c01c6e157fe2dd65ff290f5">OnSizeAllocated</a> (double width, double height)</td></tr>
+<tr class="separator:a9257da513c01c6e157fe2dd65ff290f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -137,74 +133,6 @@ Private Attributes</h2></td></tr>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_base_pages_8cs_source.html#l00006">6</a> of file <a class="el" href="_base_pages_8cs_source.html">BasePages.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a661c567cdd9d0eec1f5a318b6fc6a41d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a661c567cdd9d0eec1f5a318b6fc6a41d">&#9670;&nbsp;</a></span>NavigateBack()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Xamarin.Forms.CommonCore.BasePages.NavigateBack </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>animate</em> = <code>true</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_base_pages_8cs_source.html#l00064">64</a> of file <a class="el" href="_base_pages_8cs_source.html">BasePages.cs</a>.</p>
-
-</div>
-</div>
-<a id="a70ea2a8841292537385f6e84cd47b116"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a70ea2a8841292537385f6e84cd47b116">&#9670;&nbsp;</a></span>NavigateTo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Xamarin.Forms.CommonCore.BasePages.NavigateTo </td>
-          <td>(</td>
-          <td class="paramtype">ContentPage&#160;</td>
-          <td class="paramname"><em>page</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_base_pages_8cs_source.html#l00059">59</a> of file <a class="el" href="_base_pages_8cs_source.html">BasePages.cs</a>.</p>
-
-</div>
-</div>
-<a id="a368f98c1271c34bf5438541f2be991f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a368f98c1271c34bf5438541f2be991f5">&#9670;&nbsp;</a></span>NavigateTo< T >()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a70ea2a8841292537385f6e84cd47b116">Xamarin.Forms.CommonCore.BasePages.NavigateTo</a>&lt; T &gt; </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<div class="typeconstraint">
-<dl><dt><b>Type Constraints</b></dt><dd>
-<table border="0" cellspacing="2" cellpadding="0">
-<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>ContentPage</em></td><td>&#160;</td></tr>
-<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
-</table>
-</dd>
-</dl>
-</div>
-
-<p class="definition">Definition at line <a class="el" href="_base_pages_8cs_source.html#l00054">54</a> of file <a class="el" href="_base_pages_8cs_source.html">BasePages.cs</a>.</p>
-
-</div>
-</div>
 <a id="aef3a5ffbd48bdebc9485bbc31f69777b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aef3a5ffbd48bdebc9485bbc31f69777b">&#9670;&nbsp;</a></span>OnAppearing()</h2>
 
@@ -228,7 +156,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_base_pages_8cs_source.html#l00105">105</a> of file <a class="el" href="_base_pages_8cs_source.html">BasePages.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_base_pages_8cs_source.html#l00091">91</a> of file <a class="el" href="_base_pages_8cs_source.html">BasePages.cs</a>.</p>
 
 </div>
 </div>
@@ -282,7 +210,45 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_base_pages_8cs_source.html#l00114">114</a> of file <a class="el" href="_base_pages_8cs_source.html">BasePages.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_base_pages_8cs_source.html#l00100">100</a> of file <a class="el" href="_base_pages_8cs_source.html">BasePages.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9257da513c01c6e157fe2dd65ff290f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9257da513c01c6e157fe2dd65ff290f5">&#9670;&nbsp;</a></span>OnSizeAllocated()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">override void Xamarin.Forms.CommonCore.BasePages.OnSizeAllocated </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_base_pages_8cs_source.html#l00113">113</a> of file <a class="el" href="_base_pages_8cs_source.html">BasePages.cs</a>.</p>
 
 </div>
 </div>

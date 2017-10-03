@@ -48,8 +48,6 @@ namespace Xamarin.Forms.CommonCore
 
 	public partial class ConfigurationModel
 	{
-        [JsonConverter(typeof(StringEnumConverter))]
-        public NavType NavStyle { get; set; } = NavType.Stacked;
         public bool AnalyticsEnabled { get; set; } = false;
         public string AESEncryptionKey { get; set; }
 		public HttpSettings HttpSettings { get; set; }

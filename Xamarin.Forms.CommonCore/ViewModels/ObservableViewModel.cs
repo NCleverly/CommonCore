@@ -307,31 +307,6 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
-        /// <summary>
-        /// PushAsync with ConfigureAwait(false)
-        /// </summary>
-        /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public void NavigateTo<T>() where T : ContentPage, new()
-        {
-            CoreSettings.AppNav.PushAsync(new T()).ConfigureAwait(false);
-        }
-        /// <summary>
-        /// PushAsync with ConfigureAwait(false)
-        /// </summary>
-        /// <param name="page">Page.</param>
-        public void NavigateTo(ContentPage page)
-        {
-            CoreSettings.AppNav.PushAsync(page).ConfigureAwait(false);
-        }
-
-        /// <summary>
-        /// PopAsync with ConfigureAwait(false)
-        /// </summary>
-        /// <param name="animate">If set to <c>true</c> animate.</param>
-        public void NavigateBack(bool animate = true)
-        {
-            CoreSettings.AppNav.PopAsync(animate).ConfigureAwait(false);
-        }
 
         protected void ShowNotification(LocalNotification notification)
         {

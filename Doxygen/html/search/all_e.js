@@ -1,12 +1,8 @@
 var searchData=
 [
-  ['navigateback',['NavigateBack',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a661c567cdd9d0eec1f5a318b6fc6a41d',1,'Xamarin.Forms.CommonCore.BasePages.NavigateBack()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a229e85feed270171343f84265be662a3',1,'Xamarin.Forms.CommonCore.ObservableViewModel.NavigateBack()']]],
   ['navigatelatlong',['NavigateLatLong',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_map_navigate.html#ac8fe5360cfd74e7e53f1b3c810922093',1,'Xamarin::Forms::CommonCore::IMapNavigate']]],
-  ['navigateto',['NavigateTo',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a70ea2a8841292537385f6e84cd47b116',1,'Xamarin.Forms.CommonCore.BasePages.NavigateTo()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a9dc3518290bb3979c72187a2034bc1e0',1,'Xamarin.Forms.CommonCore.ObservableViewModel.NavigateTo()']]],
-  ['navigateto_3c_20t_20_3e',['NavigateTo&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a368f98c1271c34bf5438541f2be991f5',1,'Xamarin.Forms.CommonCore.BasePages.NavigateTo&lt; T &gt;()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a9c40ce2c62c59b0ab8f3bc361735959f',1,'Xamarin.Forms.CommonCore.ObservableViewModel.NavigateTo&lt; T &gt;()']]],
   ['navigatewithaddress',['NavigateWithAddress',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_map_navigate.html#ad55001c218a03bacc5f05a43f3c12290',1,'Xamarin::Forms::CommonCore::IMapNavigate']]],
   ['navigation',['Navigation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a5a41c951ab43daf14e2bdc350774303f',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
-  ['navstyle',['NavStyle',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html#ae9d408d2167c425a61ecd3f616fe9966',1,'Xamarin::Forms::CommonCore::ConfigurationModel']]],
   ['navtype',['NavType',['../namespace_xamarin_1_1_forms_1_1_common_core.html#aebe3f0e2d9f86565a6031631e20939f0',1,'Xamarin::Forms::CommonCore']]],
   ['needoverridesoftbackbutton',['NeedOverrideSoftBackButton',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a5a3dfc36859f527676a9fce4b9713123',1,'Xamarin::Forms::CommonCore::BasePages']]],
   ['needoverridesoftbackbuttonproperty',['NeedOverrideSoftBackButtonProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_base_pages.html#a38e893687b09943412814ad544006bb3',1,'Xamarin::Forms::CommonCore::BasePages']]],

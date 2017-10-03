@@ -83,6 +83,8 @@ var searchData=
   ['corepicker',['CorePicker',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html',1,'Xamarin.Forms.CommonCore.CorePicker'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#a097138bc0f3b798ececaab61ed11a87f',1,'Xamarin.Forms.CommonCore.CorePicker.CorePicker()']]],
   ['corepicker_2ecs',['CorePicker.cs',['../_core_picker_8cs.html',1,'']]],
   ['corepickeritem',['CorePickerItem',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker_item.html',1,'Xamarin::Forms::CommonCore']]],
+  ['corepickerrenderer_2edroid_2ecs',['CorePickerRenderer.Droid.cs',['../_core_picker_renderer_8_droid_8cs.html',1,'']]],
+  ['corepickerrenderer_2eios_2ecs',['CorePickerRenderer.IOS.cs',['../_core_picker_renderer_8_i_o_s_8cs.html',1,'']]],
   ['corepulseanimation',['CorePulseAnimation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_pulse_animation.html',1,'Xamarin::Forms::CommonCore']]],
   ['corepulseanimation_2ecs',['CorePulseAnimation.cs',['../_core_pulse_animation_8cs.html',1,'']]],
   ['coreradiobutton',['CoreRadioButton',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_button.html',1,'Xamarin::Forms::CommonCore']]],

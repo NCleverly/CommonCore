@@ -51,20 +51,6 @@ namespace Xamarin.Forms.CommonCore
             set { SetValue(NeedOverrideSoftBackButtonProperty, value); }
         }
 
-        public void NavigateTo<T>() where T : ContentPage, new()
-        {
-            CoreSettings.AppNav.PushAsync(new T()).ConfigureAwait(false);
-        }
-
-        public void NavigateTo(ContentPage page)
-        {
-            CoreSettings.AppNav.PushAsync(page).ConfigureAwait(false);
-        }
-
-        public void NavigateBack(bool animate = true)
-        {
-            CoreSettings.AppNav.PopAsync(animate).ConfigureAwait(false);
-        }
 
 #if __IOS__
 

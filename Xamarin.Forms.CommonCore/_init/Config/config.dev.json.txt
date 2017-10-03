@@ -1,5 +1,4 @@
 ﻿{
-  "NavStyle": "Stacked",
   "AnalyticsEnabled": false,
   "AESEncryptionKey": "123",
   "AzureSettings": {

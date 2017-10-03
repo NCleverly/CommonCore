@@ -860,13 +860,26 @@ namespace Xamarin.Forms.CommonCore
         }
 
 
+        public static void PushNonAwaited<T>(this INavigation nav, bool animated = true) where T : ContentPage, new()
+        {
+            CoreSettings.AppNav.PushAsync(new T(), animated).ConfigureAwait(false);
+        }
+        public static void PushNonAwaited(this INavigation nav, ContentPage page, bool animated = true)
+        {
+            CoreSettings.AppNav.PushAsync(page, animated).ConfigureAwait(false);
+        }
+        public static void PopNonAwaited(this INavigation nav, bool animated = true)
+        {
+            CoreSettings.AppNav.PopAsync(animated).ConfigureAwait(false);
+        }
+
         /// <summary>
         /// Navigate back in the stack to a specific page while remove pages along the way
         /// </summary>
         /// <returns>The to.</returns>
         /// <param name="nav">Nav.</param>
         /// <param name="pageName">Page name.</param>
-        public static async Task<Page> PopTo<T>(this INavigation nav, bool animated = false) where T : ContentPage, new()
+        public static async Task<Page> PopTo<T>(this INavigation nav, bool animated = true) where T : ContentPage, new()
         {
             var pageName = typeof(T).FullName;
 
