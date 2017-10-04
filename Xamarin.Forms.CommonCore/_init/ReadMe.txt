@@ -54,8 +54,7 @@ Suggested
 - NodaTime /* Date and time API */
 - Refractored.XamForms.PullToRefresh
 - AIDatePickerController /* IOS DateTime Picker */
-- iOSCharts /* IOS Charting Controls */
-- MPAndroidChart /* Android Charting Controls */
+- Microcharts.Forms /* https://github.com/aloisdeniel/Microcharts */
 - Xamarin.Plugin.ImageEdit /* https://github.com/muak/Xamarin.Plugin.ImageEdit */
 - Android Bottom Tabs /* https://medium.com/naxam-blogs/bottomtabbedpage-bottom-navigation-for-xamarin-forms-on-android-325a1506e216 */
 Setup Tasks:
@@ -170,9 +169,6 @@ In Order to accomplish this, add the following to the Toolbar.xml file and imple
 In the MainActivity in the OnCreate method set:
      CoreSettings.SearchView = Resource.Id.searchView;
 
-*** Background Page Image / Splash Screen ***
-http://apetools.webprofusion.com/tools/imagegorilla  -> create icons and screens
-
 
 *** REMEMBER ***
 Grant Access In Android & IOS to Access Resource Like Calendar, Contacts (Internet)
@@ -194,6 +190,18 @@ and then save....Open Terminal use the following commands in the terminal:
 sudo nano /etc/hosts
 
 *****************
+
+
+****************************** TOOLS ******************************
+
+*** Background Page Image / Splash Screen ***
+http://apetools.webprofusion.com/tools/imagegorilla  -> create icons and screens
+
+*** Android Asset Studio ***
+https://romannurik.github.io/AndroidAssetStudio/index.html
+
+*** JSON to C# ***
+https://quicktype.io/
 
 
 

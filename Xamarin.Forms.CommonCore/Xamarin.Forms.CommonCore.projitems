@@ -27,7 +27,6 @@
       <DependentUpon>IHttpService.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ObservableViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\ObservableObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\CoreExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IOC\InjectionManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\FileStore.cs">

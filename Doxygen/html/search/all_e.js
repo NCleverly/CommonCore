@@ -14,6 +14,7 @@ var searchData=
   ['notificationtags',['NotificationTags',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#a366a18e19b097489cb891a8d66f192c2',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
   ['notifier',['notifier',['../class_xamarin_1_1_forms_1_1_common_core_1_1_property_changed_behavior.html#a66dfc5c46704ffe0312dadb16844425c',1,'Xamarin::Forms::CommonCore::PropertyChangedBehavior']]],
   ['notify',['Notify',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a1c238c92703467d0ec726bc3678c9460',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
+  ['notifybinder',['NotifyBinder',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#abf135e94f3cad4b50c5f99c6eaadd768',1,'Xamarin::Forms::CommonCore::RelayCommand']]],
   ['notimplementedinreferenceassembly',['NotImplementedInReferenceAssembly',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a36000c81d867f05eb3aa8abdd3e27485',1,'PushNotification::Plugin::CrossPushNotification']]],
   ['numericvalidator',['NumericValidator',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_t_e_control.html#a1b81c4fe0ba160b868c396a83984a96c',1,'Xamarin::Forms::CommonCore::MaterialDesign::FTEControl']]]
 ];

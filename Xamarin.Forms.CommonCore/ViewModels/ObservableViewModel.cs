@@ -9,7 +9,7 @@ namespace Xamarin.Forms.CommonCore
     /// <summary>
     /// Observable view model.
     /// </summary>
-    public partial class ObservableViewModel : ObservableObject
+    public partial class ObservableViewModel : BindableObject
     {
         private bool isLoadingHUD;
         private bool isLoadingOverlay;
@@ -354,6 +354,8 @@ namespace Xamarin.Forms.CommonCore
             }
             return false;
         }
+
+
 
         /// <summary>
         /// Method to receive viewmodel messages.  (NO BASE IMPLEMENTATION)

@@ -204,7 +204,7 @@ namespace Xamarin.Forms.CommonCore
                     rad.FontSize = radButtons.FontSize;
                     rad.ImageColor = radButtons.ImageColor;
                     rad.Text = item.ToString();
-                    rad.Id = radIndex;
+                    rad.RadioButtonId = radIndex;
 
                     if(radButtons.SelectedIndex!=-1 && radButtons.SelectedIndex==radIndex)
                     {
@@ -230,14 +230,14 @@ namespace Xamarin.Forms.CommonCore
 
             foreach (var rad in rads)
             {
-                if(!selectedRad.Id.Equals(rad.Id))
+                if(!selectedRad.RadioButtonId.Equals(rad.RadioButtonId))
                 {
                     rad.Checked = false;
                 }
                 else
                 {
-                    SelectedIndex = rad.Id;
-                    CheckedCommand?.Execute(rad.Id);
+                    SelectedIndex = rad.RadioButtonId;
+                    CheckedCommand?.Execute(rad.RadioButtonId);
                 }
                 
             }
@@ -253,7 +253,7 @@ namespace Xamarin.Forms.CommonCore
 
             foreach (var rad in bindableRadioGroup.rads)
             {
-                if (rad.Id == bindableRadioGroup.SelectedIndex)
+                if (rad.RadioButtonId == bindableRadioGroup.SelectedIndex)
                 {
                     rad.Checked = true;
                 }

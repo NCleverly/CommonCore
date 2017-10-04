@@ -23,5 +23,6 @@ var searchData=
   ['removewhere_3c_20t_20_3e',['RemoveWhere&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#a28065474197e3703c8fc95d57efbc94e',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['render',['Render',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_segment.html#a984ae003291934702b7266ecaaf2f482',1,'Xamarin::Forms::CommonCore::CoreSegment']]],
   ['requestpermission',['RequestPermission',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_local_notify.html#ad51cd3fa30b96bc68766aceca33e0aec',1,'Xamarin::Forms::CommonCore::ILocalNotify']]],
+  ['resetnotifier',['ResetNotifier',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ac235870b6ad1484a77366d8ff180111b',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['returnkeyhandler',['ReturnKeyHandler',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_underline_entry.html#a9053388bbf34c357765dce33885f68c5',1,'Xamarin::Forms::CommonCore::CoreUnderlineEntry']]]
 ];

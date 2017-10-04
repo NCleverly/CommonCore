@@ -11,6 +11,27 @@ namespace Xamarin.Forms.CommonCore
 		private INotifyPropertyChanged _npc;
 		public event EventHandler CanExecuteChanged;
 
+        /// <summary>
+        /// RelayCommand's INotifyPropertyChanged object.  Must be reset of the original object is reinstantiated.
+        /// </summary>
+        /// <value>The notify binder.</value>
+        public INotifyPropertyChanged NotifyBinder{
+            get
+            {
+                return _npc;
+            }
+            set
+            {
+                if (_npc != null)
+                    _npc.PropertyChanged -= PropertyChangedEvent;
+
+                _npc = value;
+
+                if (_npc != null)
+                    _npc.PropertyChanged += PropertyChangedEvent;
+                
+            }
+        }
 		public bool CanExecute(object parameter)
 		{
 			return _validator != null ? _validator.Invoke() : true;

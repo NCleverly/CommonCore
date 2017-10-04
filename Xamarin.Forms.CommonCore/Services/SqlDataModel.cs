@@ -12,7 +12,7 @@ namespace Xamarin.Forms.CommonCore
         long UTCTickStamp { get; set; }
         bool MarkedForDelete { get; set; }
     }
-    public class SqlDataModel : ObservableObject, ISqlDataModel, ICloneable
+    public class SqlDataModel : BindableObject, ISqlDataModel, ICloneable
     {
         [PrimaryKey]
         public Guid CorrelationID { get; set; }

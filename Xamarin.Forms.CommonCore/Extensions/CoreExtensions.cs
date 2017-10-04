@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using Xamarin.Forms;
 using System.Linq;
 using System.Collections.ObjectModel;
 using System.Collections;
@@ -13,6 +12,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Linq.Expressions;
+using System.Windows.Input;
 
 #if __ANDROID__
 using Xamarin.Forms.Platform.Android;
@@ -23,10 +23,8 @@ using StrictMode = Android.OS.StrictMode;
 #endif
 #if __IOS__
 using Foundation;
-using AudioToolbox;
 using UIKit;
 using CoreGraphics;
-using System.Globalization;
 #endif
 
 namespace Xamarin.Forms.CommonCore
@@ -34,6 +32,38 @@ namespace Xamarin.Forms.CommonCore
 
     public static class CoreExtensions
     {
+        /// <summary>
+        /// Replace obsolete Device.OnPlatform method
+        /// </summary>
+        /// <returns>The value.</returns>
+        /// <param name="runtimePlatform">Runtime platform.</param>
+        /// <param name="parameters">Parameters.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
+        public static T PlatformValue<T>(this string runtimePlatform, params T[] parameters )
+        {
+            T obj = default(T);
+
+            if (!string.IsNullOrEmpty(runtimePlatform))
+            {
+                switch (Device.RuntimePlatform.ToUpper())
+                {
+                    case "IOS":
+                        if (parameters.Length > 0)
+                            obj = parameters[0];
+                        break;
+                    case "ANDROID":
+                        if (parameters.Length > 1)
+                            obj = parameters[1];
+                        break;
+                    default:
+                        if (parameters.Length > 2)
+                            obj = parameters[2];
+                        break;
+                }
+            }
+            return obj;
+        }
+
         private static IEncryptionService Encryption
         {
             get
@@ -159,6 +189,19 @@ namespace Xamarin.Forms.CommonCore
 
             return true;
         }
+        public static bool ValidateTextFields(this bool chainedResponse, params string[] fields)
+        {
+            if (chainedResponse)
+            {
+                foreach (var obj in fields) if (String.IsNullOrEmpty(obj))
+                        return false;
+                return true;
+            }
+            else
+            {
+                return chainedResponse;
+            }
+        }
         public static bool ValidateNumberFields(this ObservableViewModel model, decimal minValue, decimal maxValue, params decimal[] fields)
         {
             foreach (var obj in fields)
@@ -169,6 +212,54 @@ namespace Xamarin.Forms.CommonCore
                 }
             }
             return true;
+        }
+        public static bool ValidateNumberFields(this bool chainedResponse, decimal minValue, decimal maxValue, params decimal[] fields)
+        {
+            if (chainedResponse)
+            {
+                foreach (var obj in fields)
+                {
+                    if (obj < minValue || obj > maxValue)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else
+            {
+                return chainedResponse;
+            }
+        }
+        public static bool ValidateDateFields(this ObservableViewModel model, DateTime minValue, DateTime maxValue, params DateTime[] fields)
+        {
+            foreach (var obj in fields)
+            {
+                if (obj < minValue || obj > maxValue)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public static bool ValidateDateFields(this bool chainedResponse, DateTime minValue, DateTime maxValue, params DateTime[] fields)
+        {
+            if (chainedResponse)
+            {
+                foreach (var obj in fields)
+                {
+                    if (obj < minValue || obj > maxValue)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else
+            {
+                return chainedResponse;
+            }
         }
         public static bool ValidateEmailFields(this ObservableViewModel model, params string[] fields)
         {
@@ -185,6 +276,29 @@ namespace Xamarin.Forms.CommonCore
                 }
             }
             return false;
+        }
+        public static bool ValidateEmailFields(this bool chainedResponse, params string[] fields)
+        {
+            if (chainedResponse)
+            {
+                var RegexExp = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+                foreach (var obj in fields)
+                {
+                    try
+                    {
+                        return Regex.IsMatch(obj, RegexExp, RegexOptions.IgnoreCase, TimeSpan.FromMilliseconds(250));
+                    }
+                    catch (Exception)
+                    {
+                        return false;
+                    }
+                }
+                return false;
+            }
+            else
+            {
+                return chainedResponse;
+            }
         }
         public static bool ValidatePasswordFields(this ObservableViewModel model, params string[] fields)
         {
@@ -205,6 +319,34 @@ namespace Xamarin.Forms.CommonCore
                 }
             }
             return false;
+        }
+
+        public static bool ValidatePasswordFields(this bool chainedResponse, params string[] fields)
+        {
+            if (chainedResponse)
+            {
+                var hasNumber = new Regex(@"[0-9]+");
+                var hasChar = new Regex(@"[a-zA-Z]+");
+                //var hasCorrectNumChars = new Regex(@"^.{8,16}$");
+                var hasCorrectNumChars = new Regex(@"^.{8,}$");
+
+                foreach (var obj in fields)
+                {
+                    try
+                    {
+                        return hasNumber.IsMatch(obj) && hasChar.IsMatch(obj) && hasCorrectNumChars.IsMatch(obj);
+                    }
+                    catch (Exception)
+                    {
+                        return false;
+                    }
+                }
+                return false;
+            }
+            else
+            {
+                return chainedResponse;
+            }
         }
 
         public static bool ValidatePasswordMatch(this ObservableViewModel model, params string[] fields)
@@ -232,6 +374,139 @@ namespace Xamarin.Forms.CommonCore
                 }
             }
             return true;
+        }
+
+        public static bool ValidatePasswordMatch(this bool chainedResponse, params string[] fields)
+        {
+            if (chainedResponse)
+            {
+                for (int i = 0; i < fields.Length; i++)
+                {
+                    try
+                    {
+                        var currentPassword = fields[i];
+
+                        // validate passwords match
+                        if (i > 0)
+                        {
+                            var previousPassword = fields[i - 1];
+                            var previousPasswordMatches = currentPassword == previousPassword;
+                            if (!previousPasswordMatches)
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else
+            {
+                return chainedResponse;
+            }
+        }
+
+        public static bool ValidateDefaultFields<T>(this ObservableViewModel model, params T[] fields) where T : struct
+        {
+            var state = true;
+            var type = typeof(T).Name;
+            switch (type)
+            {
+                case "Boolean":
+                    foreach (var obj in fields)
+                    {
+                        if (((bool)(object)obj) == default(bool))
+                            state = false;
+                    }
+                    break;
+                case "Int32":
+                    foreach (var obj in fields)
+                    {
+                        if (((int)(object)obj).Equals(default(int)))
+                            state = false;
+                    }
+                    break;
+                case "Int64":
+                    foreach (var obj in fields)
+                    {
+                        if (((long)(object)obj).Equals(default(long)))
+                            state = false;
+                    }
+                    break;
+                case "Double":
+                    foreach (var obj in fields)
+                    {
+                        if (((double)(object)obj).Equals(default(double)))
+                            state = false;
+                    }
+                    break;
+                case "Single":
+                    foreach (var obj in fields)
+                    {
+                        if (((float)(object)obj).Equals(default(float)))
+                            state = false;
+                    }
+                    break;
+            }
+
+            return state;
+        }
+
+        public static bool ValidateDefaultFields<T>(this bool chainedResponse, params T[] fields) where T : struct
+        {
+            if (chainedResponse)
+            {
+                var state = true;
+                var type = typeof(T).Name;
+                switch (type)
+                {
+                    case "Boolean":
+                        foreach (var obj in fields)
+                        {
+                            if (((bool)(object)obj) == default(bool))
+                                state = false;
+                        }
+                        break;
+                    case "Int32":
+                        foreach (var obj in fields)
+                        {
+                            if (((int)(object)obj).Equals(default(int)))
+                                state = false;
+                        }
+                        break;
+                    case "Int64":
+                        foreach (var obj in fields)
+                        {
+                            if (((long)(object)obj).Equals(default(long)))
+                                state = false;
+                        }
+                        break;
+                    case "Double":
+                        foreach (var obj in fields)
+                        {
+                            if (((double)(object)obj).Equals(default(double)))
+                                state = false;
+                        }
+                        break;
+                    case "Single":
+                        foreach (var obj in fields)
+                        {
+                            if (((float)(object)obj).Equals(default(float)))
+                                state = false;
+                        }
+                        break;
+                }
+
+                return state;
+            }
+            else
+            {
+                return chainedResponse;
+            }
         }
 
         /// <summary>
@@ -370,7 +645,7 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <param name="list">List.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void EncryptedModelProperties<T>(IEnumerable<T> list) where T : ObservableObject
+        public static void EncryptedModelProperties<T>(IEnumerable<T> list) where T : BindableObject
         {
             var props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance)
                      .Where(p => p.GetCustomAttributes(typeof(EncryptedPropertyAttribute)).Count() > 0).ToArray();
@@ -392,7 +667,7 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <param name="list">List.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void UnEncryptedModelProperties<T>(IEnumerable<T> list) where T : ObservableObject
+        public static void UnEncryptedModelProperties<T>(IEnumerable<T> list) where T : BindableObject
         {
 
             var props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance)
@@ -859,15 +1134,41 @@ namespace Xamarin.Forms.CommonCore
             return new Regex("[^0-9]").Replace(phoneNum, "");
         }
 
+        /// <summary>
+        /// Resets the notifier of the ICommand when the oberservable object has been reinstantiated.
+        /// </summary>
+        /// <param name="command">Command.</param>
+        /// <param name="notifier">Notifier.</param>
+        public static void ResetNotifier(this ICommand command, INotifyPropertyChanged notifier)
+        {
+            ((RelayCommand)command).NotifyBinder = notifier;
+        }
 
+        /// <summary>
+        /// PushAysnc method with ConfigureAwait(false)
+        /// </summary>
+        /// <param name="nav">Nav.</param>
+        /// <param name="animated">If set to <c>true</c> animated.</param>
+        /// <typeparam name="T">The 1st type parameter.</typeparam>
         public static void PushNonAwaited<T>(this INavigation nav, bool animated = true) where T : ContentPage, new()
         {
             CoreSettings.AppNav.PushAsync(new T(), animated).ConfigureAwait(false);
         }
+        /// <summary>
+        /// PushAysnc method with ConfigureAwait(false)
+        /// </summary>
+        /// <param name="nav">Nav.</param>
+        /// <param name="page">Page.</param>
+        /// <param name="animated">If set to <c>true</c> animated.</param>
         public static void PushNonAwaited(this INavigation nav, ContentPage page, bool animated = true)
         {
             CoreSettings.AppNav.PushAsync(page, animated).ConfigureAwait(false);
         }
+        /// <summary>
+        /// PopAysnc method with ConfigureAwait(false)
+        /// </summary>
+        /// <param name="nav">Nav.</param>
+        /// <param name="animated">If set to <c>true</c> animated.</param>
         public static void PopNonAwaited(this INavigation nav, bool animated = true)
         {
             CoreSettings.AppNav.PopAsync(animated).ConfigureAwait(false);
@@ -888,54 +1189,19 @@ namespace Xamarin.Forms.CommonCore
                 if (nav.NavigationStack.Last().GetType().FullName == pageName)
                     return null;
 
-                if (Device.RuntimePlatform.ToUpper() == "IOS")
+                for (int x = (nav.NavigationStack.Count - 2); x > -1; x--)
                 {
-                    for (int x = (nav.NavigationStack.Count - 2); x > -1; x--)
+                    var page = nav.NavigationStack[x];
+                    var name = page.GetType().FullName;
+                    if (name == pageName)
                     {
-                        var page = nav.NavigationStack[x];
-                        var name = page.GetType().FullName;
-                        if (name == pageName)
-                        {
-                            return await nav.PopAsync(animated);
-                        }
-                        else
-                        {
-                            nav.RemovePage(page);
-                        }
+                        return await nav.PopAsync(animated);
+                    }
+                    else
+                    {
+                        nav.RemovePage(page);
                     }
                 }
-                else
-                {
-                    /*
-                     * 
-                     * THIS IS A HACK JOB THAT NEEDS TO BE REVISITED
-                     * 
-                     */
-
-                    //This is a workaround for API 25 in Droid but this may have issues as well
-
-                    var totalPages = nav.NavigationStack.Count();
-                    var indexOf = 0;
-                    for (int x = (totalPages - 1); x > -1; x--)
-                    {
-                        var nm = nav.NavigationStack[x].GetType().FullName;
-                        if (nm.Equals(pageName))
-                        {
-                            indexOf = totalPages - x;
-                            break;
-                        }
-                    }
-
-                    for (var x = 0; x < (indexOf - 1); x++)
-                    {
-                        if (CoreSettings.AppNav.NavigationStack.Count() != 0)
-                        {
-                            await CoreSettings.AppNav.PopAsync(false);
-                        }
-
-                    }
-                }
-
 
             }
             return null;

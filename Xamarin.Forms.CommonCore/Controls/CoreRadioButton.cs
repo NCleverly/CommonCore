@@ -130,7 +130,7 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
-        public int Id { get; set; }
+        public int RadioButtonId { get; set; }
     }
 
  
