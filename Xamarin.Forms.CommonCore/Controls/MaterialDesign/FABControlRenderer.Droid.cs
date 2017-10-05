@@ -3,7 +3,6 @@ using System;
 using Android.Widget;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using com.refractored.fab;
 using Android.Views;
 using System.IO;
 using Ctx = Android.Content.Context;
@@ -24,7 +23,7 @@ namespace Xamarin.Forms.CommonCore.MaterialDesign
 		private const int FAB_FRAME_WIDTH_WITH_PADDING = (MARGIN_DIPS * 2) + FAB_HEIGHT_NORMAL;
 		private const int FAB_MINI_FRAME_HEIGHT_WITH_PADDING = (MARGIN_DIPS * 2) + FAB_HEIGHT_MINI;
 		private const int FAB_MINI_FRAME_WIDTH_WITH_PADDING = (MARGIN_DIPS * 2) + FAB_HEIGHT_MINI;
-		private readonly FloatingActionButton fab;
+        private readonly Refractored.Fab.FloatingActionButton fab;
 
 		private readonly Ctx context;
 
@@ -37,7 +36,7 @@ namespace Xamarin.Forms.CommonCore.MaterialDesign
 			float d = context.Resources.DisplayMetrics.Density;
 			var margin = (int)(MARGIN_DIPS * d); // margin in pixels
 
-			fab = new FloatingActionButton(context);
+            fab = new Refractored.Fab.FloatingActionButton(context);
 			var lp = new FrameLayout.LayoutParams(LayoutParams.WrapContent, LayoutParams.WrapContent);
 			lp.Gravity = GravityFlags.CenterVertical | GravityFlags.CenterHorizontal;
 			lp.LeftMargin = margin;
@@ -153,13 +152,13 @@ namespace Xamarin.Forms.CommonCore.MaterialDesign
 		{
 			if (size == FABControlSize.Mini)
 			{
-				fab.Size = FabSize.Mini;
+                fab.Size = Refractored.Fab.FabSize.Mini;
 				Element.WidthRequest = FAB_MINI_FRAME_WIDTH_WITH_PADDING;
 				Element.HeightRequest = FAB_MINI_FRAME_HEIGHT_WITH_PADDING;
 			}
 			else
 			{
-				fab.Size = FabSize.Normal;
+                fab.Size = Refractored.Fab.FabSize.Normal;
 				Element.WidthRequest = FAB_FRAME_WIDTH_WITH_PADDING;
 				Element.HeightRequest = FAB_FRAME_HEIGHT_WITH_PADDING;
 			}

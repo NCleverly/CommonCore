@@ -77,7 +77,8 @@ namespace Xamarin.Forms.CommonCore
 		{
             var context = (Activity)Xamarin.Forms.Forms.Context;
 
-			_searchView = context?.FindViewById<SearchView>(CoreSettings.SearchView);
+            if(CoreSettings.SearchView!=0)
+			    _searchView = context?.FindViewById<SearchView>(CoreSettings.SearchView);
 
 			if (_searchView == null) 
                 return;

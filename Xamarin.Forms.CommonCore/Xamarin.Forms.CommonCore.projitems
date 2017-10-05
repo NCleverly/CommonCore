@@ -363,6 +363,10 @@
     <Folder Include="$(MSBuildThisFileDirectory)Fonts\Util\" />
     <Folder Include="$(MSBuildThisFileDirectory)Fonts\Sources\" />
     <Folder Include="$(MSBuildThisFileDirectory)BusinessLayer\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\BusinessLogic\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)PushNotifications\readme.txt" />
@@ -381,5 +385,9 @@
     <None Include="$(MSBuildThisFileDirectory)_init\Partials\PartialConfigurationModel.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Partials\PartialObservableViewModel.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Styles\AppStyles.xaml.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\BusinessLogic\example.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\ViewModels\example.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Models\example.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Views\example.txt" />
   </ItemGroup>
 </Project>
