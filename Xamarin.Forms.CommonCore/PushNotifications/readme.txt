@@ -4,7 +4,6 @@ the code to build against my projects api level.  Read all documentation at:
 https://github.com/rdelrosario/xamarin-plugins/tree/master/PushNotification
 
 Droid:
-- In the MainActivity set LocalNotify.MainType = typeof(MainActivity);
 - You might have to enable in the project settings Multi-Dex
 - Add permission in the Manifest:
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />

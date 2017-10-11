@@ -14,16 +14,23 @@ namespace Xamarin.Forms.CommonCore
 {
     public class LocalNotify : ILocalNotify
     {
-        public static Type MainType { get; set; }
-
         public Context Ctx
         {
             get { return Xamarin.Forms.Forms.Context; }
         }
+
+        public Type MainType
+        {
+            get
+            {
+                return ((Activity)Ctx).GetType();
+            }
+        }
+
         public void Show(LocalNotification notification)
         {
             // When the user clicks the notification, SecondActivity will start up.
-            Intent resultIntent = new Intent(Ctx, LocalNotify.MainType);
+            Intent resultIntent = new Intent(Ctx, MainType);
 
             if (!string.IsNullOrEmpty(notification.MetaData))
             {
@@ -34,7 +41,8 @@ namespace Xamarin.Forms.CommonCore
 
             // Construct a back stack for cross-task navigation:
             var stackBuilder = App.TaskStackBuilder.Create(Ctx);
-            stackBuilder.AddParentStack(Java.Lang.Class.FromType(LocalNotify.MainType));
+
+            stackBuilder.AddParentStack(Java.Lang.Class.FromType(MainType));
             stackBuilder.AddNextIntent(resultIntent);
 
             // Create the PendingIntent with the back stack:            
