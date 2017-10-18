@@ -19,14 +19,12 @@ namespace Xamarin.Forms.CommonCore
                 "Push notification token has not been set".ConsoleWrite("Missing Token", true);
                 return;
             }
-            
-            var registrationId = CoreSettings.DeviceToken;
 
             if (AzureNotificationHub.HUB == null)
                 AzureNotificationHub.HUB = new SBNotificationHub(CoreSettings.Config.AzureSettings.AzureListenConnection, CoreSettings.Config.AzureSettings.AzureHubName);
 
 
-            AzureNotificationHub.HUB.UnregisterAllAsync(registrationId, (error) =>
+            AzureNotificationHub.HUB.UnregisterAllAsync(CoreSettings.DeviceToken, (error) =>
             {
                 if (error != null)
                 {
@@ -34,7 +32,7 @@ namespace Xamarin.Forms.CommonCore
                     return;
                 }
                 NSSet tags = new NSSet(CoreSettings.NotificationTags.ToArray());
-                AzureNotificationHub.HUB.RegisterNativeAsync(registrationId, tags, (errorCallback) =>
+                AzureNotificationHub.HUB.RegisterNativeAsync(CoreSettings.DeviceToken, tags, (errorCallback) =>
                 {
                     if (errorCallback != null)
                         Console.WriteLine("RegisterNativeAsync error: " + errorCallback.ToString());
