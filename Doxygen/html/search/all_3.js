@@ -1,6 +1,7 @@
 var searchData=
 [
   ['c',['C',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_a_b_c_d_struct.html#a13e205310ab897347f036516aed0680d',1,'Xamarin::Forms::CommonCore::ABCDStruct']]],
+  ['calendaraccount',['CalendarAccount',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_account.html',1,'Xamarin::Forms::CommonCore']]],
   ['calendarevent',['CalendarEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a44fdba518a2bad4c44005679a87c7367',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],
   ['calendarevent_2edroid_2ecs',['CalendarEvent.Droid.cs',['../_calendar_event_8_droid_8cs.html',1,'']]],
   ['calendarevent_2eios_2ecs',['CalendarEvent.IOS.cs',['../_calendar_event_8_i_o_s_8cs.html',1,'']]],
@@ -80,9 +81,8 @@ var searchData=
   ['coremaskedentry',['CoreMaskedEntry',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_masked_entry.html',1,'Xamarin.Forms.CommonCore.CoreMaskedEntry'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_masked_entry.html#ac10f16dcf0bfd49cc86de8fd1c1c3ffe',1,'Xamarin.Forms.CommonCore.CoreMaskedEntry.CoreMaskedEntry()']]],
   ['coremaskedentry_2ecs',['CoreMaskedEntry.cs',['../_core_masked_entry_8cs.html',1,'']]],
   ['corenavigationpagerenderer_2edroid_2ecs',['CoreNavigationPageRenderer.Droid.cs',['../_core_navigation_page_renderer_8_droid_8cs.html',1,'']]],
-  ['corepicker',['CorePicker',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html',1,'Xamarin.Forms.CommonCore.CorePicker'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#a097138bc0f3b798ececaab61ed11a87f',1,'Xamarin.Forms.CommonCore.CorePicker.CorePicker()']]],
+  ['corepicker',['CorePicker',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html',1,'Xamarin::Forms::CommonCore']]],
   ['corepicker_2ecs',['CorePicker.cs',['../_core_picker_8cs.html',1,'']]],
-  ['corepickeritem',['CorePickerItem',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker_item.html',1,'Xamarin::Forms::CommonCore']]],
   ['corepickerrenderer_2edroid_2ecs',['CorePickerRenderer.Droid.cs',['../_core_picker_renderer_8_droid_8cs.html',1,'']]],
   ['corepickerrenderer_2eios_2ecs',['CorePickerRenderer.IOS.cs',['../_core_picker_renderer_8_i_o_s_8cs.html',1,'']]],
   ['corepulseanimation',['CorePulseAnimation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_pulse_animation.html',1,'Xamarin::Forms::CommonCore']]],
@@ -145,7 +145,7 @@ var searchData=
   ['correlationid',['CorrelationID',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_sql_data_model.html#ac82ad90ef0a7a3613b6bd51b074f7879',1,'Xamarin.Forms.CommonCore.ISqlDataModel.CorrelationID()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_sql_data_model.html#ad97c72bb3de94ba92036ec766eff23f5',1,'Xamarin.Forms.CommonCore.SqlDataModel.CorrelationID()']]],
   ['count',['Count',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_ranking.html#a8204c21e3fc905f7ba163c6dfb0ca9fc',1,'Xamarin::Forms::CommonCore::CoreRanking']]],
   ['countproperty',['CountProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_ranking.html#a8b9b9d4a1112300ca13607c58b763709',1,'Xamarin::Forms::CommonCore::CoreRanking']]],
-  ['createcalendarevent',['CreateCalendarEvent',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_calendar_event.html#ab8c73e0d02d687256ae8cfa15cc8a7ae',1,'Xamarin::Forms::CommonCore::ICalendarEvent']]],
+  ['createcalendarevent',['CreateCalendarEvent',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_calendar_event.html#a84d306ba1fb4e6c0463fcc7ea799d831',1,'Xamarin::Forms::CommonCore::ICalendarEvent']]],
   ['createkey',['CreateKey',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#ac20f1484053f1c0f1a16cdf1820a69a5',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
   ['createpushnotification',['CreatePushNotification',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html#a9f1bfba17bd374ae9f3096235f00f3d2',1,'PushNotification::Plugin::CrossPushNotification']]],
   ['crosspushnotification',['CrossPushNotification',['../class_push_notification_1_1_plugin_1_1_cross_push_notification.html',1,'PushNotification::Plugin']]],

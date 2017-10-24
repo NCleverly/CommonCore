@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['calendaraccount',['CalendarAccount',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_account.html',1,'Xamarin::Forms::CommonCore']]],
   ['calendareventmodel',['CalendarEventModel',['../class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html',1,'Xamarin::Forms::CommonCore']]],
   ['configurationmodel',['ConfigurationModel',['../class_xamarin_1_1_forms_1_1_common_core_1_1_configuration_model.html',1,'Xamarin::Forms::CommonCore']]],
   ['contentviewrounded',['ContentViewRounded',['../class_xamarin_1_1_forms_1_1_common_core_1_1_content_view_rounded.html',1,'Xamarin::Forms::CommonCore']]],
@@ -14,7 +15,6 @@ var searchData=
   ['corelistview',['CoreListView',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_list_view.html',1,'Xamarin::Forms::CommonCore']]],
   ['coremaskedentry',['CoreMaskedEntry',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_masked_entry.html',1,'Xamarin::Forms::CommonCore']]],
   ['corepicker',['CorePicker',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html',1,'Xamarin::Forms::CommonCore']]],
-  ['corepickeritem',['CorePickerItem',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker_item.html',1,'Xamarin::Forms::CommonCore']]],
   ['corepulseanimation',['CorePulseAnimation',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_pulse_animation.html',1,'Xamarin::Forms::CommonCore']]],
   ['coreradiobutton',['CoreRadioButton',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_button.html',1,'Xamarin::Forms::CommonCore']]],
   ['coreradiogroup',['CoreRadioGroup',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_group.html',1,'Xamarin::Forms::CommonCore']]],

@@ -8,12 +8,12 @@ using System.Reflection;
 
 namespace Xamarin.Forms.CommonCore
 {
-    public class CorePickerItem
-    {
-        public int ID { get; set; }
-        public string OptionText { get; set; }
-    }
-    public class CorePicker : Picker, IDisposable
+    //public class CorePickerItem
+    //{
+    //    public int ID { get; set; }
+    //    public string OptionText { get; set; }
+    //}
+    public class CorePicker : Picker
     {
 
         public static readonly BindableProperty IsEntryUnderlineProperty =
@@ -65,110 +65,111 @@ namespace Xamarin.Forms.CommonCore
             set { this.SetValue(EntryColorProperty, value); }
         }
 
-        public CorePicker()
-        {
-            if (Xamarin.Forms.Device.RuntimePlatform =="Android")
-            {
-                this.SelectedIndexChanged += SelectedIndexHasChanged;
-            }
-            else {
-                this.Unfocused += OnUnfocused;
-            }
-        }
-        ~CorePicker()
-        {
-            if (Xamarin.Forms.Device.RuntimePlatform == "Android")
-            {
-                this.SelectedIndexChanged -= SelectedIndexHasChanged;
-            }
-            else {
-                this.Unfocused -= OnUnfocused;
-            }
+        //public CorePicker()
+        //{
+            
+        //    if (Xamarin.Forms.Device.RuntimePlatform =="Android")
+        //    {
+        //        this.SelectedIndexChanged += SelectedIndexHasChanged;
+        //    }
+        //    else {
+        //        this.Unfocused += OnUnfocused;
+        //    }
+        //}
+        //~CorePicker()
+        //{
+        //    if (Xamarin.Forms.Device.RuntimePlatform == "Android")
+        //    {
+        //        this.SelectedIndexChanged -= SelectedIndexHasChanged;
+        //    }
+        //    else {
+        //        this.Unfocused -= OnUnfocused;
+        //    }
 
-        }
-        public void Dispose()
-        {
-            if (Xamarin.Forms.Device.RuntimePlatform == "Android")
-            {
-                this.SelectedIndexChanged -= SelectedIndexHasChanged;
-            }
-            else {
-                this.Unfocused -= OnUnfocused;
-            }
-        }
-        private void OnUnfocused(object sender, EventArgs args)
-        {
-            if (this.SelectedIndex == -1)
-                SelectedItem = null;
-            else
-                SelectedItem = ItemsSource[this.SelectedIndex];
-        }
-        private void SelectedIndexHasChanged(object sender, EventArgs args)
-        {
-            if (this.SelectedIndex == -1)
-                SelectedItem = null;
-            else
-                SelectedItem = ItemsSource[this.SelectedIndex];
-        }
+        //}
+        //public void Dispose()
+        //{
+        //    if (Xamarin.Forms.Device.RuntimePlatform == "Android")
+        //    {
+        //        this.SelectedIndexChanged -= SelectedIndexHasChanged;
+        //    }
+        //    else {
+        //        this.Unfocused -= OnUnfocused;
+        //    }
+        //}
+        //private void OnUnfocused(object sender, EventArgs args)
+        //{
+        //    if (this.SelectedIndex == -1)
+        //        SelectedItem = null;
+        //    else
+        //        SelectedItem = ItemsSource[this.SelectedIndex];
+        //}
+        //private void SelectedIndexHasChanged(object sender, EventArgs args)
+        //{
+        //    if (this.SelectedIndex == -1)
+        //        SelectedItem = null;
+        //    else
+        //        SelectedItem = ItemsSource[this.SelectedIndex];
+        //}
 
 
-        private static void OnItemsSourcePropertyChanged(BindableObject bindable, object value, object newValue)
-        {
-            var picker = (CorePicker)bindable;
-            var notifyCollection = newValue as INotifyCollectionChanged;
-            if (notifyCollection != null)
-            {
-                notifyCollection.CollectionChanged += (sender, args) =>
-                {
-                    picker.Items.Clear();
-                    foreach (var item in ItemSourceBindableList(bindable, (IEnumerable)notifyCollection))
-                    {
-                        picker.Items.Add((item ?? "").ToString());
-                    }
-                };
-            }
+        //private static void OnItemsSourcePropertyChanged(BindableObject bindable, object value, object newValue)
+        //{
+        //    var picker = (CorePicker)bindable;
+        //    var notifyCollection = newValue as INotifyCollectionChanged;
+        //    if (notifyCollection != null)
+        //    {
+        //        notifyCollection.CollectionChanged += (sender, args) =>
+        //        {
+        //            picker.Items.Clear();
+        //            foreach (var item in ItemSourceBindableList(bindable, (IEnumerable)notifyCollection))
+        //            {
+        //                picker.Items.Add((item ?? "").ToString());
+        //            }
+        //        };
+        //    }
 
-            if (newValue == null)
-                return;
+        //    if (newValue == null)
+        //        return;
 
-            picker.Items.Clear();
 
-            foreach (var item in ItemSourceBindableList(bindable, (IEnumerable)newValue))
-                picker.Items.Add((item ?? "").ToString());
-        }
 
-        private static List<string> ItemSourceBindableList(BindableObject bindable, IEnumerable collection)
-        {
+        //    foreach (var item in ItemSourceBindableList(bindable, (IEnumerable)newValue))
+        //        picker.Items.Add((item ?? "").ToString());
+        //}
 
-            var list = new List<string>();
-            var picker = (CorePicker)bindable;
-            if (!string.IsNullOrEmpty(picker.BindingPath))
-            {
-                var iList = collection as ICollection;
+        //private static List<string> ItemSourceBindableList(BindableObject bindable, IEnumerable collection)
+        //{
 
-                if (collection != null && iList.Count > 0)
-                {
-                    PropertyInfo prop = null;
-                    foreach (var obj in collection)
-                    {
-                        if (prop == null)
-                            prop = obj.GetType().GetProperty(picker.BindingPath);
+        //    var list = new List<string>();
+        //    var picker = (CorePicker)bindable;
+        //    if (!string.IsNullOrEmpty(picker.BindingPath))
+        //    {
+        //        var iList = collection as ICollection;
 
-                        list.Add(prop.GetValue(obj, null).ToString());
-                    }
-                }
-            }
+        //        if (collection != null && iList.Count > 0)
+        //        {
+        //            PropertyInfo prop = null;
+        //            foreach (var obj in collection)
+        //            {
+        //                if (prop == null)
+        //                    prop = obj.GetType().GetProperty(picker.BindingPath);
 
-            return list;
+        //                list.Add(prop.GetValue(obj, null).ToString());
+        //            }
+        //        }
+        //    }
 
-        }
+        //    return list;
 
-        private static void OnSelectedItemPropertyChanged(BindableObject bindable, object value, object newValue)
-        {
-            var picker = (CorePicker)bindable;
-            if (picker.ItemsSource != null)
-                picker.SelectedIndex = picker.ItemsSource.IndexOf(picker.SelectedItem);
-        }
+        //}
+
+        //private static void OnSelectedItemPropertyChanged(BindableObject bindable, object value, object newValue)
+        //{
+        //    var picker = (CorePicker)bindable;
+        //    if (picker.ItemsSource != null)
+        //        picker.SelectedIndex = picker.ItemsSource.IndexOf(picker.SelectedItem);
+        //}
     }
 }
 

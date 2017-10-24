@@ -49,9 +49,6 @@ namespace Xamarin.Forms.CommonCore
 				controlColor = formControl.EntryColor.ToCGColor();
 
 				var ctrl = (UITextField)Control;
-				ctrl.TextColor = formControl.EntryColor.ToUIColor();
-				ctrl.TintColor = formControl.EntryColor.ToUIColor();
-
 				var fontSize = ctrl.Font.PointSize;
 				var iconHeight = fontSize + 9;  // UIScreen.MainScreen.Bounds.Height * .03; 
 				var passwordIconAdder = 2;

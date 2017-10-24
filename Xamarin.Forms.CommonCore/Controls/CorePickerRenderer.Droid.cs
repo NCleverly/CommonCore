@@ -12,15 +12,19 @@ using Xamarin.Forms.Platform.Android;
 using Graphics = Android.Graphics;
 using Views = Android.Views;
 using Object = Java.Lang.Object;
+using System.Collections.Generic;
+using System.Collections;
+using System.Reflection;
 
 [assembly: ExportRenderer(typeof(CorePicker), typeof(CorePickerRenderer))]
 namespace Xamarin.Forms.CommonCore
 {
     public class CorePickerRenderer : ViewRenderer<CorePicker, EditText>
     {
-        AlertDialog _dialog;
-        bool _disposed;
+        private AlertDialog _dialog;
+        private bool _disposed;
         private CorePicker element;
+        private string[] options;
 
         public CorePickerRenderer()
         {
@@ -87,9 +91,26 @@ namespace Xamarin.Forms.CommonCore
             base.OnElementPropertyChanged(sender, e);
 
             if (e.PropertyName == CorePicker.TitleProperty.PropertyName)
+            {
                 UpdatePicker();
+            }
             if (e.PropertyName == CorePicker.SelectedIndexProperty.PropertyName)
+            {
                 UpdatePicker();
+
+                var item = Element.ItemsSource[Element.SelectedIndex];
+                if(Element.SelectedItem!=item)
+                    Element.SelectedItem = Element.ItemsSource[Element.SelectedIndex];
+            }
+            if (e.PropertyName == CorePicker.SelectedItemProperty.PropertyName)
+            {
+                var index = Element.ItemsSource.IndexOf(Element.SelectedItem);
+                if(Element.SelectedIndex!=index)
+                    Element.SelectedIndex = Element.ItemsSource.IndexOf(Element.SelectedItem);
+                
+                UpdatePicker();
+
+            }
 
         }
 
@@ -134,7 +155,7 @@ namespace Xamarin.Forms.CommonCore
                 using (var builder = new AlertDialog.Builder(Context))
                 {
                     builder.SetTitle(model.Title ?? "");
-                    string[] items = model.Items.ToArray();
+                    string[] items = GetPickerDisplayValues();
                     builder.SetItems(items, (s, e) => ((IElementController)model).SetValueFromRenderer(Picker.SelectedIndexProperty, e.Which));
 
                     builder.SetNegativeButton(global::Android.Resource.String.Cancel, (o, args) => { });
@@ -155,6 +176,29 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
+        private string[] GetPickerDisplayValues()
+        {
+            if (string.IsNullOrEmpty(element.BindingPath))
+            {
+                return Element.Items.ToArray();
+            }
+            else
+            {
+                var lst = new List<string>();
+                var collection = element.ItemsSource as IEnumerable;
+                PropertyInfo prop = null;
+                foreach (var item in collection)
+                {
+                    if (prop == null)
+                    {
+                        prop = item.GetType().GetProperty(element.BindingPath);
+                    }
+                    lst.Add(prop.GetValue(item, null).ToString());
+                }
+                return lst.ToArray();
+            }
+        }
+
         void RowsCollectionChanged(object sender, EventArgs e)
         {
             UpdatePicker();
@@ -167,7 +211,7 @@ namespace Xamarin.Forms.CommonCore
             if (Element.SelectedIndex == -1 || Element.Items == null)
                 Control.Text = null;
             else
-                Control.Text = Element.Items[Element.SelectedIndex];
+                Control.Text = GetPickerDisplayValues()[Element.SelectedIndex];
         }
 
 

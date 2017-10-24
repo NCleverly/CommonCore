@@ -75,35 +75,84 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab8c73e0d02d687256ae8cfa15cc8a7ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_calendar_event.html#ab8c73e0d02d687256ae8cfa15cc8a7ae">CreateCalendarEvent</a> (<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html">CalendarEventModel</a> calEvent, Action&lt; bool &gt; callback)</td></tr>
-<tr class="separator:ab8c73e0d02d687256ae8cfa15cc8a7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84d306ba1fb4e6c0463fcc7ea799d831"><td class="memItemLeft" align="right" valign="top">Task&lt;(bool result, <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html">CalendarEventModel</a> model)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_calendar_event.html#a84d306ba1fb4e6c0463fcc7ea799d831">CreateCalendarEvent</a> (<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html">CalendarEventModel</a> calEvent)</td></tr>
+<tr class="separator:a84d306ba1fb4e6c0463fcc7ea799d831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a7c15f2474b2e74f46d56405bc8ebed"><td class="memItemLeft" align="right" valign="top">Task&lt; List&lt; <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_account.html">CalendarAccount</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_calendar_event.html#a7a7c15f2474b2e74f46d56405bc8ebed">GetCalendars</a> ()</td></tr>
+<tr class="separator:a7a7c15f2474b2e74f46d56405bc8ebed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7348892b1ea24eb7dd1a8fd58b51dfff"><td class="memItemLeft" align="right" valign="top">Task&lt; <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html">CalendarEventModel</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_calendar_event.html#a7348892b1ea24eb7dd1a8fd58b51dfff">GetCalendarEvent</a> (string id)</td></tr>
+<tr class="separator:a7348892b1ea24eb7dd1a8fd58b51dfff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8afdcf09784374427359dad383c65240"><td class="memItemLeft" align="right" valign="top">Task&lt;(bool result, <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html">CalendarEventModel</a> model)&gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_xamarin_1_1_forms_1_1_common_core_1_1_i_calendar_event.html#a8afdcf09784374427359dad383c65240">UpdateCalendarEvent</a> (<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html">CalendarEventModel</a> calEvent)</td></tr>
+<tr class="separator:a8afdcf09784374427359dad383c65240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_i_calendar_event_8cs_source.html#l00015">15</a> of file <a class="el" href="_i_calendar_event_8cs_source.html">ICalendarEvent.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_i_calendar_event_8cs_source.html#l00034">34</a> of file <a class="el" href="_i_calendar_event_8cs_source.html">ICalendarEvent.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab8c73e0d02d687256ae8cfa15cc8a7ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8c73e0d02d687256ae8cfa15cc8a7ae">&#9670;&nbsp;</a></span>CreateCalendarEvent()</h2>
+<a id="a84d306ba1fb4e6c0463fcc7ea799d831"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84d306ba1fb4e6c0463fcc7ea799d831">&#9670;&nbsp;</a></span>CreateCalendarEvent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Xamarin.Forms.CommonCore.ICalendarEvent.CreateCalendarEvent </td>
+          <td class="memname">Task&lt;(bool result, <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html">CalendarEventModel</a> model)&gt; Xamarin.Forms.CommonCore.ICalendarEvent.CreateCalendarEvent </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html">CalendarEventModel</a>&#160;</td>
-          <td class="paramname"><em>calEvent</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>calEvent</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">Action&lt; bool &gt;&#160;</td>
-          <td class="paramname"><em>callback</em>&#160;</td>
         </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7348892b1ea24eb7dd1a8fd58b51dfff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7348892b1ea24eb7dd1a8fd58b51dfff">&#9670;&nbsp;</a></span>GetCalendarEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
         <tr>
+          <td class="memname">Task&lt;<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html">CalendarEventModel</a>&gt; Xamarin.Forms.CommonCore.ICalendarEvent.GetCalendarEvent </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7a7c15f2474b2e74f46d56405bc8ebed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a7c15f2474b2e74f46d56405bc8ebed">&#9670;&nbsp;</a></span>GetCalendars()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;List&lt;<a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_account.html">CalendarAccount</a>&gt; &gt; Xamarin.Forms.CommonCore.ICalendarEvent.GetCalendars </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8afdcf09784374427359dad383c65240"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8afdcf09784374427359dad383c65240">&#9670;&nbsp;</a></span>UpdateCalendarEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Task&lt;(bool result, <a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html">CalendarEventModel</a> model)&gt; Xamarin.Forms.CommonCore.ICalendarEvent.UpdateCalendarEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_calendar_event_model.html">CalendarEventModel</a>&#160;</td>
+          <td class="paramname"><em>calEvent</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">

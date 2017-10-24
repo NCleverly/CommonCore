@@ -19,7 +19,7 @@ Required Nuget Installs
  - ModernHttpClient
  - Newtonsoft.Json
  - PCLCrypto
- - Plugin.Permissions
+ - Plugin.Permissions /* https://blog.xamarin.com/plugin-permission-changes-ios-11/?utm_source=vs_developer_news&utm_medium=referral */
  - Xam.Plugin.Connectivity
  - Xam.Plugins.Settings
  - PropertyChanged.Fody  /* https://github.com/Fody/PropertyChanged  includes documentation in wiki */
@@ -169,8 +169,25 @@ In Order to accomplish this, add the following to the Toolbar.xml file and imple
 In the MainActivity in the OnCreate method set:
      CoreSettings.SearchView = Resource.Id.searchView;
 
+*** Calendar Dependency ***
+IOS requires you add in the info.plist the following for Usages:
+    <key>NSCalendarsUsageDescription</key>
+    <string>Calendars App needs Calendar Access</string>
+    <key>NSRemindersUsageDescription</key>
+    <string>Calendars App needs Reminder Access</string>
 
-*** REMEMBER ***
+Xamarin Github Examples: https://github.com/xamarin/ios-samples/tree/master/Calendars
+
+
+Android requires permission in the AndroidManifest.xml
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+
+Xamarin WebSite: https://developer.xamarin.com/guides/android/user_interface/controls/calendar/#Calendar_API
+Xamarin Github Code Sample: https://github.com/xamarin/monodroid-samples/tree/master/CalendarDemo
+
+
+*** Generial Permissions ***
 Grant Access In Android & IOS to Access Resource Like Calendar, Contacts (Internet)
 
 Additional References: 

@@ -9,7 +9,6 @@ var searchData=
   ['saveviewmodelstate',['SaveViewModelState',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#ad8fc916138c3cb2e77fe4b9d57d0abdf',1,'Xamarin::Forms::CommonCore::CoreExtensions']]],
   ['scrollindexpropertychanged',['ScrollIndexPropertyChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_list_view.html#af02bc34190ff0db03aa58efe7297687d',1,'Xamarin::Forms::CommonCore::CoreListView']]],
   ['scrolltoindex',['ScrollToIndex',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_list_view.html#a34e96e17c5446a06296398111a7ba0fa',1,'Xamarin::Forms::CommonCore::CoreListView']]],
-  ['selectedindexhaschanged',['SelectedIndexHasChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_picker.html#ab3e57e52a8e96078323ecc791faf655f',1,'Xamarin::Forms::CommonCore::CorePicker']]],
   ['sendemail',['SendEmail',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_communication.html#ab61f806305ae192427b9f0982d4bf938',1,'Xamarin::Forms::CommonCore::ICommunication']]],
   ['sendsms',['SendSMS',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_communication.html#a7660c8f472e4028a9813b92032c375d6',1,'Xamarin::Forms::CommonCore::ICommunication']]],
   ['sendviewmessage',['SendViewMessage',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a06a0c8c6fc6664ee8e41b1bc712a684b',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],

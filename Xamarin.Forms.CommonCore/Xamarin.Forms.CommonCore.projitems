@@ -326,6 +326,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\CorePickerRenderer.IOS.cs">
       <DependentUpon>CorePicker.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\blah.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
