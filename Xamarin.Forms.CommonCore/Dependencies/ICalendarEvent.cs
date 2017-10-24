@@ -25,12 +25,7 @@ namespace Xamarin.Forms.CommonCore
         public CalendarAccount DeviceCalendar { get; set; }
     }
 
-    //public class CalendarReminderModel
-    //{
-    //    public string Id { get; set; }
-    //    //public string CalendarEventId { get; set; }
-    //    public int MinutesBefore { get; set; }
-    //}
+
     public interface ICalendarEvent
     {
         Task<(bool result, CalendarEventModel model)> CreateCalendarEvent(CalendarEventModel calEvent);

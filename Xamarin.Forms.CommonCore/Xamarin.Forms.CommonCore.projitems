@@ -327,6 +327,12 @@
       <DependentUpon>CorePicker.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Controls\blah.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\CoreExtensions.Droid.cs">
+      <DependentUpon>CoreExtensions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\CoreExtensions.IOS.cs">
+      <DependentUpon>CoreExtensions.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
