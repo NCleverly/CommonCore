@@ -333,6 +333,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\CoreExtensions.IOS.cs">
       <DependentUpon>CoreExtensions.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Models\ObservableModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

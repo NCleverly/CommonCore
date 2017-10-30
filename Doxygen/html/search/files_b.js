@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['observablemodel_2ecs',['ObservableModel.cs',['../_observable_model_8cs.html',1,'']]],
   ['observableviewmodel_2ecs',['ObservableViewModel.cs',['../_observable_view_model_8cs.html',1,'']]],
   ['optimizedobservablecollection_2ecs',['OptimizedObservableCollection.cs',['../_optimized_observable_collection_8cs.html',1,'']]],
   ['overlaydependency_2edroid_2ecs',['OverlayDependency.Droid.cs',['../_overlay_dependency_8_droid_8cs.html',1,'']]],

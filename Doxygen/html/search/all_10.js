@@ -27,7 +27,7 @@ var searchData=
   ['progressindicator_2edroid_2ecs',['ProgressIndicator.Droid.cs',['../_progress_indicator_8_droid_8cs.html',1,'']]],
   ['progressindicator_2eios_2ecs',['ProgressIndicator.IOS.cs',['../_progress_indicator_8_i_o_s_8cs.html',1,'']]],
   ['prompt',['Prompt',['../class_xamarin_1_1_forms_1_1_common_core_1_1_prompt.html',1,'Xamarin::Forms::CommonCore']]],
-  ['propertychanged',['PropertyChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a448c73e43a6c2b5244c53fd7bb7f1d94',1,'Xamarin::Forms::CommonCore::WebDownloadClient']]],
+  ['propertychanged',['PropertyChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_model.html#a6db301422878a1b9b00d3f00fa530f50',1,'Xamarin.Forms.CommonCore.ObservableModel.PropertyChanged()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_web_download_client.html#a448c73e43a6c2b5244c53fd7bb7f1d94',1,'Xamarin.Forms.CommonCore.WebDownloadClient.PropertyChanged()']]],
   ['propertychangedbehavior',['PropertyChangedBehavior',['../class_xamarin_1_1_forms_1_1_common_core_1_1_property_changed_behavior.html',1,'Xamarin.Forms.CommonCore.PropertyChangedBehavior'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_property_changed_behavior.html#ad315ca4b1213bed04344eba531f79068',1,'Xamarin.Forms.CommonCore.PropertyChangedBehavior.PropertyChangedBehavior()']]],
   ['propertychangedbehavior_2ecs',['PropertyChangedBehavior.cs',['../_property_changed_behavior_8cs.html',1,'']]],
   ['propertychangedevent',['PropertyChangedEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#ad266f84d10b038e0b0752c8d6f513585',1,'Xamarin::Forms::CommonCore::RelayCommand']]],

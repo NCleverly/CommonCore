@@ -59,6 +59,28 @@ namespace Xamarin.Forms.CommonCore
             set { _appSettings.AddOrUpdateValue("InstallationId", value); }
         }
 
+
+        /// <summary>
+        /// Application Data Sync Time for offline sync with sql
+        /// </summary>
+        /// <value>The installation identifier.</value>
+        public static long SyncTimeStamp
+        {
+            get
+            {
+                var id = _appSettings.GetValueOrDefault("SyncTimeStamp", 0L);
+
+                if (id == default(long))
+                {
+                    id = DateTime.UtcNow.Ticks;
+                    _appSettings.AddOrUpdateValue("SyncTimeStamp", id);
+                }
+
+                return id;
+            }
+            set { _appSettings.AddOrUpdateValue("SyncTimeStamp", value); }
+        }
+
         /// <summary>
         /// Gets or sets the current buid.
         /// </summary>

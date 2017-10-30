@@ -78,7 +78,6 @@ var searchData=
   ['isclippedtobounds',['IsClippedToBounds',['../class_xamarin_1_1_forms_1_1_common_core_1_1_popup_view.html#af86a3cce62961d6fab9b6bae5981b5c1',1,'Xamarin::Forms::CommonCore::PopupView']]],
   ['iscompleted',['IsCompleted',['../struct_xamarin_1_1_forms_1_1_common_core_1_1_synchronization_context_remover.html#a71941af8c72d13f12a7ca8a5b36bdb44',1,'Xamarin::Forms::CommonCore::SynchronizationContextRemover']]],
   ['isconnected',['IsConnected',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#ad69f2065d0288459fb23267a2fa11d0d',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
-  ['isdefaultvalue_3c_20t_20_3e',['IsDefaultValue&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#a9731698985d0a5488d275ff27b867129',1,'Xamarin::Forms::CommonCore::SqliteDb']]],
   ['isearchprovider',['ISearchProvider',['../interface_xamarin_1_1_forms_1_1_common_core_1_1_i_search_provider.html',1,'Xamarin::Forms::CommonCore']]],
   ['isearchprovider_2ecs',['ISearchProvider.cs',['../_i_search_provider_8cs.html',1,'']]],
   ['isemtpyornull',['IsEmtpyOrNull',['../class_xamarin_1_1_forms_1_1_common_core_1_1_observable_view_model.html#a913d0c20bc1565ad420803be2efc1e60',1,'Xamarin::Forms::CommonCore::ObservableViewModel']]],

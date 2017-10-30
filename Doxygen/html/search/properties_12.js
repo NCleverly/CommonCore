@@ -34,5 +34,6 @@ var searchData=
   ['startutc',['StartUtc',['../class_xamarin_1_1_forms_1_1_common_core_1_1_tracking_metat_data.html#a1b4c2bfd77a82d6c871821a3e6cc4648',1,'Xamarin::Forms::CommonCore::TrackingMetatData']]],
   ['subject',['Subject',['../class_xamarin_1_1_forms_1_1_common_core_1_1_email_message.html#a9b45973fa2563aa76f33ddf3badebba7',1,'Xamarin::Forms::CommonCore::EmailMessage']]],
   ['subtitle',['SubTitle',['../class_xamarin_1_1_forms_1_1_common_core_1_1_local_notification.html#ad30f546222659ed03a43054bbdc25863',1,'Xamarin::Forms::CommonCore::LocalNotification']]],
-  ['success',['Success',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_complete_status.html#ae2d433f763e4703a702bb7ec4b348574',1,'Xamarin::Forms::CommonCore::TelephonyCompleteStatus']]]
+  ['success',['Success',['../class_xamarin_1_1_forms_1_1_common_core_1_1_telephony_complete_status.html#ae2d433f763e4703a702bb7ec4b348574',1,'Xamarin::Forms::CommonCore::TelephonyCompleteStatus']]],
+  ['synctimestamp',['SyncTimeStamp',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#aa8b44039949e859f37838025c4fcb163',1,'Xamarin::Forms::CommonCore::CoreSettings']]]
 ];

@@ -9,10 +9,10 @@ namespace Xamarin.Forms.CommonCore
     public interface ISqlDataModel
     {
         Guid CorrelationID { get; set; }
-        long UTCTickStamp { get; set; }
+        long UTCTickStamp { get; set; } //can be set by DateTime.UtcNow.Ticks;
         bool MarkedForDelete { get; set; }
     }
-    public class SqlDataModel : BindableObject, ISqlDataModel, ICloneable
+    public class SqlDataModel : ObservableModel, ISqlDataModel
     {
         [PrimaryKey]
         public Guid CorrelationID { get; set; }
@@ -27,20 +27,6 @@ namespace Xamarin.Forms.CommonCore
                 var utcDateTime = new DateTime(UTCTickStamp, DateTimeKind.Utc);
                 return utcDateTime.ToLocalTime();
             }
-        }
-
-        public object Clone()
-        {
-            var obj = Activator.CreateInstance(this.GetType());
-            foreach (var prop in this.GetType().GetProperties())
-                prop.SetValue(obj, prop.GetValue(this));
-            return obj;
-
-        }
-
-        public void SetUtcTimeStampNow()
-        {
-            UTCTickStamp = DateTime.UtcNow.Ticks;
         }
 
     }

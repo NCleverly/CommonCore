@@ -680,7 +680,7 @@ namespace Xamarin.Forms.CommonCore
         /// <param name="dict">Dict.</param>
         /// <param name="obj">Object.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void EncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, T obj) where T : ISqlDataModel
+        public static void EncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, T obj) where T : new()
         {
             var props = dict[typeof(T)];
             if (props.Count() > 0)
@@ -698,7 +698,7 @@ namespace Xamarin.Forms.CommonCore
         /// <param name="dict">Dict.</param>
         /// <param name="list">List.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void EncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, IEnumerable<T> list) where T : ISqlDataModel
+        public static void EncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, IEnumerable<T> list) where T : new()
         {
             var props = dict[typeof(T)];
             if (props.Count() > 0)
@@ -719,7 +719,7 @@ namespace Xamarin.Forms.CommonCore
         /// <param name="dict">Dict.</param>
         /// <param name="obj">Object.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void UnEncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, T obj) where T : ISqlDataModel
+        public static void UnEncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, T obj) where T : new()
         {
             var props = dict[typeof(T)];
             if (props.Count() > 0)
@@ -737,7 +737,7 @@ namespace Xamarin.Forms.CommonCore
         /// <param name="dict">Dict.</param>
         /// <param name="list">List.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void UnEncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, IEnumerable<T> list) where T : ISqlDataModel
+        public static void UnEncryptedDataModelProperties<T>(this Dictionary<Type, PropertyInfo[]> dict, IEnumerable<T> list) where T : new()
         {
             var props = dict[typeof(T)];
             if (props.Count() > 0)

@@ -10,8 +10,8 @@ Android SDK Manager - > Extras
 
  ******** QUICKSTART *********
  nuget packets listed below can be imported using the following:
- https://www.nuget.org/packages/Xamarin.Form.CommonCore.Droid/1.0.5
- https://www.nuget.org/packages/Xamarin.Form.CommonCore.IOS/1.0.5
+ https://www.nuget.org/packages/Xamarin.Form.CommonCore.Droid/1.0.7
+ https://www.nuget.org/packages/Xamarin.Form.CommonCore.IOS/1.0.7
  *****************************
 
 Required Nuget Installs

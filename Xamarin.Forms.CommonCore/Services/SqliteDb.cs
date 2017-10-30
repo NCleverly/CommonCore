@@ -8,6 +8,7 @@ using SQLite;
 
 namespace Xamarin.Forms.CommonCore
 {
+
     public class SqliteDb : ISqliteDb
 	{
 		protected SQLiteAsyncConnection conn;
@@ -37,10 +38,18 @@ namespace Xamarin.Forms.CommonCore
                     return;
                 }
                 else{
-                    await conn.CreateTableAsync<T>();
-                    var t = typeof(T);
-                    encrytedProperties.Add(t, GetEncryptePropertyList(t));
-                    tableRegistry.Add(fullName);
+                    try
+                    {
+                        await conn.CreateTableAsync<T>();
+                        var t = typeof(T);
+                        encrytedProperties.Add(t, GetEncryptePropertyList(t));
+                        tableRegistry.Add(fullName);
+                    }
+                    catch (Exception ex)
+                    {
+                        ex.ConsoleWrite(true);
+                    }
+
                 }
             });
 
@@ -139,58 +148,6 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-		public async Task<(bool Success, Exception Error)> SyncExternalObject<T, P>(T obj, Expression<Func<T, P>> exp) where T : ISqlDataModel, new()
-		{
-			int rowsAffected = 0;
-			obj.UTCTickStamp = DateTime.UtcNow.Ticks;
-			try
-			{
-                using (await Mutex.LockAsync().ConfigureAwait(false))
-                {
-                    await ValidateSetup<T>();
-
-                    encrytedProperties.EncryptedDataModelProperties<T>(obj);
-
-                    var expression = (MemberExpression)exp.Body;
-                    string name = expression.Member.Name;
-                    var prop = obj.GetType().GetProperty(name);
-                    var vObj = (P)prop.GetValue(obj, null);
-
-                    if (default(P).Equals(vObj))
-                    {
-                        throw new ApplicationException($"Instance of model is missing primary key identified for {typeof(T).Name}");
-                    }
-                    else
-                    {
-                        var stmt = $"SELECT count({name}) FROM {obj.GetType().Name} WHERE {name} = ?";
-                        var result = await conn.ExecuteScalarAsync<int>(stmt, vObj);
-                        if (result > 0)
-                        {
-                            var existingGuid = $"SELECT InternalID FROM {obj.GetType().Name} WHERE {name} = ?";
-                            var guidResult = await conn.ExecuteScalarAsync<Guid>(existingGuid, vObj);
-                            obj.CorrelationID = guidResult;
-                            rowsAffected = await conn.UpdateAsync(obj);
-                        }
-                        else
-                        {
-                            if (obj.CorrelationID == default(Guid))
-                            {
-                                obj.CorrelationID = Guid.NewGuid();
-                            }
-                            rowsAffected = await conn.InsertAsync(obj);
-                        }
-                    }
-                    var returnResult = rowsAffected == 1 ? true : false;
-                    return (returnResult, null);
-                }
-
-			}
-			catch (Exception ex)
-			{
-				return (false, ex);
-			}
-
-		}
 		public async Task<(bool Success, Exception Error)> AddOrUpdate<T>(IEnumerable<T> collection) where T : ISqlDataModel, new()
 		{
 			try
@@ -267,87 +224,6 @@ namespace Xamarin.Forms.CommonCore
 				return (false, ex);
 			}
 
-		}
-
-		public async Task<(bool Success, Exception Error)> SyncExternalCollection<T, P>(List<T> collection, Expression<Func<T, P>> exp) where T : ISqlDataModel, new()
-		{
-
-			//var st = DateTime.Now;
-			collection.ForEach((obj) => obj.UTCTickStamp = DateTime.UtcNow.Ticks);
-			try
-			{
-                using (await Mutex.LockAsync().ConfigureAwait(false))
-                {
-                    await ValidateSetup<T>();
-
-                    encrytedProperties.EncryptedDataModelProperties<T>(collection);
-
-                    var expression = (MemberExpression)exp.Body;
-                    string name = expression.Member.Name;
-                    var prop = typeof(T).GetProperty(name);
-
-                    var inserts = new List<T>();
-                    var updates = new List<T>();
-
-                    foreach (var obj in collection)
-                    {
-                        var vObj = (P)prop.GetValue(obj, null);
-                        if (!IsDefaultValue<P>(vObj))
-                        {
-                            var stmt = $"SELECT count({name}) FROM {obj.GetType().Name} WHERE {name} = ?";
-                            var result = await conn.ExecuteScalarAsync<int>(stmt, vObj);
-                            if (result > 0)
-                            {
-                                var existingGuid = $"SELECT InternalID FROM {obj.GetType().Name} WHERE {name} = ?";
-                                var guidResult = await conn.ExecuteScalarAsync<Guid>(existingGuid, vObj);
-                                obj.CorrelationID = guidResult;
-                                updates.Add(obj);
-                            }
-                            else
-                            {
-                                if (obj.CorrelationID == default(Guid))
-                                {
-                                    obj.CorrelationID = Guid.NewGuid();
-                                }
-                                inserts.Add(obj);
-                            }
-                        }
-                    }
-
-                    int totalInserted = 0;
-                    if (inserts.Count > 0)
-                        totalInserted = await conn.InsertAllAsync(inserts);
-
-                    int totalUpdated = 0;
-                    if (updates.Count > 0)
-                        totalUpdated = await conn.UpdateAllAsync(updates);
-
-                    var returnResult = false;
-                    if (totalUpdated == updates.Count && totalInserted == inserts.Count)
-                        returnResult = true;
-
-					return (returnResult, null);
-                }
-			}
-			catch (Exception ex)
-			{
-				return (false, ex);
-			}
-		}
-
-		private bool IsDefaultValue<T>(T obj)
-		{
-			if (obj is string)
-			{
-				if (obj == null)
-					return true;
-				else
-					return false;
-			}
-			else
-			{
-				return default(T).Equals(obj);
-			}
 		}
 
 		public async Task<(bool Success, Exception Error)> DeleteByInternalID<T>(Guid correlationId, bool softDelete = false) where T : class, ISqlDataModel, new()
