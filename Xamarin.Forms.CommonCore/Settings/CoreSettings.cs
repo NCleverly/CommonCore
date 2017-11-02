@@ -99,7 +99,7 @@ namespace Xamarin.Forms.CommonCore
         {
             get
             {
-                return TokenBearer?.expires > DateTimeOffset.Now;
+                return TokenBearer?.Expires > DateTimeOffset.Now;
             }
         }
 

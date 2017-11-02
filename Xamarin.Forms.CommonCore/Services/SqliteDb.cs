@@ -62,7 +62,7 @@ namespace Xamarin.Forms.CommonCore
             return props;
         }
 
-		public async Task<(List<T> Response, Exception Error)> GetAll<T>() where T : ISqlDataModel, new()
+        public async Task<(List<T> Response, bool Success, Exception Error)> GetAll<T>() where T : ISqlDataModel, new()
 		{
 			try
 			{
@@ -72,12 +72,12 @@ namespace Xamarin.Forms.CommonCore
 					var query = conn.Table<T>();
 					var response = await query.ToListAsync();
                     encrytedProperties.UnEncryptedDataModelProperties<T>(response);
-                    return (response, null);
+                    return (response, true, null);
                 }
 			}
 			catch (Exception ex)
 			{
-				return (null, ex);
+				return (null, false, ex);
 			}
 
 		}
@@ -109,7 +109,7 @@ namespace Xamarin.Forms.CommonCore
 			return response;
 		}
 
-		public async Task<(T Response, Exception Error)> GetByInternalId<T>(Guid CorrelationID) where T : class, ISqlDataModel, new()
+        public async Task<(T Response, bool Success, Exception Error)> GetByCorrelationID<T>(Guid CorrelationID) where T : class, ISqlDataModel, new()
 		{
 			try
 			{
@@ -119,16 +119,16 @@ namespace Xamarin.Forms.CommonCore
                     var query = conn.Table<T>().Where(x => x.CorrelationID == CorrelationID);
                     var response = await query.FirstOrDefaultAsync();
                     encrytedProperties.UnEncryptedDataModelProperties<T>(response);
-                    return (response, null);
+                    return (response, true, null);
                 }
 			}
 			catch (Exception ex)
 			{
-                return (null, ex);
+                return (null, false, ex);
 			}
 
 		}
-		public async Task<(List<T> Response, Exception Error)> GetByQuery<T>(Expression<Func<T, bool>> exp) where T : ISqlDataModel, new()
+        public async Task<(List<T> Response, bool Success, Exception Error)> GetByQuery<T>(Expression<Func<T, bool>> exp) where T : ISqlDataModel, new()
 		{
 			try
 			{
@@ -138,12 +138,12 @@ namespace Xamarin.Forms.CommonCore
                     var query = conn.Table<T>().Where(exp);
                     var response = await query.ToListAsync();
                     encrytedProperties.UnEncryptedDataModelProperties<T>(response);
-                    return (response, null);
+                    return (response, true, null);
                 }
 			}
 			catch (Exception ex)
 			{
-				return (null, ex);
+				return (null, false, ex);
 			}
 
 		}
@@ -165,7 +165,11 @@ namespace Xamarin.Forms.CommonCore
                         obj.UTCTickStamp = DateTime.UtcNow.Ticks;
                         if (obj.CorrelationID != default(Guid))
                         {
-                            updates.Add(obj);
+                            var exists = await RecordExists<T>(obj.CorrelationID);
+                            if(exists)
+                                updates.Add(obj);
+                            else
+                                inserts.Add(obj);
                         }
                         else
                         {
@@ -190,6 +194,7 @@ namespace Xamarin.Forms.CommonCore
 				return (false, ex);
 			}
 		}
+
 		public async Task<(bool Success, Exception Error)> AddOrUpdate<T>(T obj) where T : ISqlDataModel, new()
 		{
 			int rowsAffected = 0;
@@ -205,7 +210,12 @@ namespace Xamarin.Forms.CommonCore
 
                     if (obj.CorrelationID != default(Guid))
                     {
-                        rowsAffected = await conn.UpdateAsync(obj);
+                        var exists = await RecordExists<T>(obj.CorrelationID);
+                        if (exists)
+                            rowsAffected = await conn.UpdateAsync(obj);
+                        else
+                            rowsAffected = await conn.InsertAsync(obj);
+                        
                     }
                     else
                     {
@@ -226,7 +236,7 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-		public async Task<(bool Success, Exception Error)> DeleteByInternalID<T>(Guid correlationId, bool softDelete = false) where T : class, ISqlDataModel, new()
+        public async Task<(bool Success, Exception Error)> DeleteByCorrelationID<T>(Guid correlationId, bool softDelete = false) where T : class, ISqlDataModel, new()
 		{
 
 			try
@@ -292,6 +302,13 @@ namespace Xamarin.Forms.CommonCore
 			    return (false, ex);
 			}
 		}
+
+        private async Task<bool> RecordExists<T>(Guid correlationId) where T : ISqlDataModel, new()
+        {
+            var query = $"SELECT CorrelationID FROM {typeof(T).Name} WHERE CorrelationID = '{correlationId.ToString()}'";
+            var lst = await conn.QueryAsync<List<Guid>>(query);
+            return lst.Count() == 0 ? false : true;
+        }
 
 	}
 

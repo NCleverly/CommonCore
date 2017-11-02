@@ -6,8 +6,8 @@ namespace Xamarin.Forms.CommonCore
 	public interface IAccountService
 	{
 		Task<(bool Success,Exception Error)> SaveAccountStore<T>(string username, T obj) where T : class, new();
-		Task<(T Response, Exception Error)> GetAccountStore<T>(string username) where T : class, new();
+        Task<(T Response, bool Success, Exception Error)> GetAccountStore<T>(string username) where T : class, new();
 		Task<(bool Success, Exception Error)> SaveAccountStore<T>(string username, string password, T obj) where T : class, new();
-		Task<(T Response, Exception Error)> GetAccountStore<T>(string username, string password) where T : class, new();
+		Task<(T Response, bool Success, Exception Error)> GetAccountStore<T>(string username, string password) where T : class, new();
 	}
 }

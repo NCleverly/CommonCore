@@ -19,12 +19,12 @@ namespace Xamarin.Forms.CommonCore
             _serializer = new JsonSerializer();
         }
 
-        public async Task<(T Response, Exception Error)> GetAsync<T>(string contentName) where T : class, new()
+        public async Task<(T Response, bool Success, Exception Error)> GetAsync<T>(string contentName) where T : class, new()
         {
             await fileStoreLock.WaitAsync();
             return await Task.Run(() =>
             {
-                (T Response, Exception Error) response = (null, null);
+                (T Response, bool Success, Exception Error) response = (null, false, null);
                 try
                 {
                     using (var isoStorage = IsolatedStorageFile.GetUserStoreForApplication())
@@ -40,6 +40,7 @@ namespace Xamarin.Forms.CommonCore
 										using (var json = new JsonTextReader(reader))
 										{
 											response.Response = _serializer.Deserialize<T>(json);
+                                            response.Success = true;
 										}
 									}
                                 }
@@ -136,10 +137,10 @@ namespace Xamarin.Forms.CommonCore
 
         }
 
-        public async Task<(string Response, Exception Error)> GetStringAsync(string contentName)
+        public async Task<(string Response, bool Success, Exception Error)> GetStringAsync(string contentName)
         {
             await fileStoreLock.WaitAsync();
-            (string Response, Exception Error) response = (null, null);
+            (string Response, bool Success, Exception Error) response = (null, false, null);
             return await Task.Run(() =>
             {
                 try
@@ -157,6 +158,7 @@ namespace Xamarin.Forms.CommonCore
                                         var content = sr.ReadToEnd();
                                         sr.Close();
                                         response.Response = content;
+                                        response.Success = true;
                                     }
                                 }
                             }

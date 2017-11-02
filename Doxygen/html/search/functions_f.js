@@ -5,6 +5,7 @@ var searchData=
   ['r3',['r3',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#a54b2c0d43e3fdef661700f7c31afa102',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
   ['r4',['r4',['../class_xamarin_1_1_forms_1_1_common_core_1_1_encryption_service.html#aae702898003e4944b07c2b0f07a474eb',1,'Xamarin::Forms::CommonCore::EncryptionService']]],
   ['ratingchangedevent',['RatingchangedEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_ranking.html#a6ef9b9d31bc5bef3e588e3ef3082f2e6',1,'Xamarin::Forms::CommonCore::CoreRanking']]],
+  ['recordexists_3c_20t_20_3e',['RecordExists&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#a385d8fb904b5c1837ff67b61533dee7d',1,'Xamarin::Forms::CommonCore::SqliteDb']]],
   ['refreshasync',['RefreshAsync',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#ac2e30b8b56b9523d0353b52367b7d48e',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
   ['refreshingcollection',['RefreshingCollection',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#a730f539414dbd2690f85cda7496bbddd',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
   ['register',['Register',['../interface_push_notification_1_1_plugin_1_1_abstractions_1_1_i_push_notification.html#a4b82f9a90cdcd4efe3735f00c8e60c5d',1,'PushNotification::Plugin::Abstractions::IPushNotification']]],

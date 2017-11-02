@@ -7,13 +7,14 @@ namespace Xamarin.Forms.CommonCore
 {
 	public interface IHttpService
 	{
-		Task<(string Response, Exception Error)> FormPost(string url, HttpContent content);
-		Task<(T Response, Exception Error)> Get<T>(string url) where T : class, new();
-		Task<(T Response, Exception Error)> Post<T>(string url, object obj) where T : class, new();
-		Task<(T Response, Exception Error)> Put<T>(string url, object obj) where T : class, new();
+        Task<(string Response, bool Success, Exception Error)> FormPost(string url, HttpContent content);
+        Task<(T Response, bool Success, Exception Error)> Get<T>(string url) where T : class, new();
+        Task<(T Response, bool Success, Exception Error)> Post<T>(string url, object obj) where T : class, new();
+        Task<(T Response, bool Success, Exception Error)> Put<T>(string url, object obj) where T : class, new();
 		Task<string> GetStringContent<T>(HttpResponseMessage response) where T : class, new();
-        Task<(string Response, Exception Error)> GetRaw(string url);
+        Task<(string Response, bool Success, Exception Error)> GetRaw(string url);
         WebClient GetWebClient();
         WebDownloadClient GetWebDownloadClient();
+        HttpClient Client { get; set; }
 	}
 }

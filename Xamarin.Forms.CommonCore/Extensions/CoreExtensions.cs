@@ -13,6 +13,7 @@ using System.Text.RegularExpressions;
 using System.Globalization;
 using System.Linq.Expressions;
 using System.Windows.Input;
+using System.Net.Http;
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -140,6 +141,19 @@ namespace Xamarin.Forms.CommonCore
                 });
 
             }
+        }
+
+        public static void AddTokenHeader(this HttpClient client, string token)
+        {
+            if(client.DefaultRequestHeaders.Authorization!=null)
+                client.DefaultRequestHeaders.Remove("Authorization");
+
+            client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + token);
+        }
+        public static StringContent ToStringContent(this object obj)
+        {
+            var data = JsonConvert.SerializeObject(obj);
+            return new StringContent(data, Encoding.UTF8, "application/json");
         }
 
         public static T ToEnum<T>(this string str) where T : struct

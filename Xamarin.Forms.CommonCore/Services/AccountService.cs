@@ -20,100 +20,106 @@ namespace Xamarin.Forms.CommonCore
         {
             get
             {
-                return CrossSettings.Current.GetValueOrDefault("AccountEncryptionKey", null);
+                return CrossSettings.Current.GetValueOrDefault("AccountEncryptionKey", Guid.NewGuid().ToString());
 			}
 			set { CrossSettings.Current.AddOrUpdateValue("AccountEncryptionKey", value); }
 		}
 
+        public IEncryptionService Encryption
+        {
+            get { return InjectionManager.GetService<IEncryptionService, EncryptionService>(true); }
+        }
+
 		public async Task<(bool Success, Exception Error)> SaveAccountStore<T>(string username, T obj) where T : class, new()
 		{
-			return await Task.Run(() =>
-			{
-				(bool Success, Exception Error) response = (false, null);
-				try
-				{
-					var account = GetAccount(username);
-					PersistAccount(account, username, null, obj);
-					SaveAccount(account, username);
-					response.Success = true;
-				}
-				catch (Exception ex)
-				{
-					response.Error = ex;
-				}
-				return response;
-			});
+            return await Task.Run(() =>
+            {
+                Exception excep = null;
+                try
+                {
+                    var account = GetAccount(username);
+                    PersistAccount(account, username, null, obj);
+                    SaveAccount(account, username);
+                }
+                catch (Exception ex)
+                {
+                    excep = ex;
+                }
+                return (excep == null ? true : false, excep);
+            });
 
 		}
-		public async Task<(T Response, Exception Error)> GetAccountStore<T>(string username) where T : class, new()
+		public async Task<(T Response, bool Success, Exception Error)> GetAccountStore<T>(string username) where T : class, new()
 		{
-			return await Task.Run(() =>
-			{
-				(T Response, Exception Error) response = (null, null);
-				try
-				{
-					var account = GetAccount(username);
-					response.Response = LoadAccount<T>(account, username);
-				}
-				catch (Exception ex)
-				{
-					response.Error = ex;
-				}
-				return response;
+            return await Task.Run(() =>
+            {
+                T response = null;
+                Exception excep = null;
+                try
+                {
+                    var account = GetAccount(username);
+                    response = LoadAccount<T>(account, username);
+                }
+                catch (Exception ex)
+                {
+                    excep = ex;
+                }
+                return (response, excep == null ? true : false, excep);
 
-			});
+            });
 
 		}
 		public async Task<(bool Success, Exception Error)> SaveAccountStore<T>(string username, string password, T obj) where T : class, new()
 		{
-			return await Task.Run(() =>
-			{
-				(bool Success, Exception Error) response = (false, null);
-				try
-				{
-					var account = GetAccount(username);
-					PersistAccount(account, username, password, obj);
-					SaveAccount(account, username);
-					response.Success = true;
-				}
-				catch (Exception ex)
-				{
-					response.Error = ex;
-				}
-				return response;
-			});
+            return await Task.Run(() =>
+            {
+                Exception excep = null;
+                try
+                {
+                    var account = GetAccount(username);
+                    PersistAccount(account, username, password, obj);
+                    SaveAccount(account, username);
+  
+                }
+                catch (Exception ex)
+                {
+                    excep = ex;
+                }
+                return (excep == null ? true : false, excep);
+            });
 
 		}
-		public async Task<(T Response, Exception Error)> GetAccountStore<T>(string username, string password) where T : class, new()
+		public async Task<(T Response, bool Success, Exception Error)> GetAccountStore<T>(string username, string password) where T : class, new()
 		{
-			return await Task.Run(() =>
-			{
-				(T Response, Exception Error) response = (null, null);
-				try
-				{
-					var account = GetAccount(username);
-					response.Response = LoadAccount<T>(account, password);
-				}
-				catch (Exception ex)
-				{
-					response.Error = ex;
-				}
-				return response;
-
-			});
+            return await Task.Run(() =>
+            {
+                Exception excep = null;
+                T response = null;
+                try
+                {
+                    var account = GetAccount(username);
+                    response = LoadAccount<T>(account, password);
+                }
+                catch (Exception ex)
+                {
+                    excep = ex;
+                }
+                return (response, excep == null ? true : false, excep);
+            });
 
 		}
 
 		private void PersistAccount<T>(Account account, string username, string password, T obj) where T : class, new()
 		{
 			var data = JsonConvert.SerializeObject(obj);
+            var hash = Encryption.GetHashString(password);
 			if (account.Properties.ContainsKey(typeof(T).Name))
 			{
 				if (!string.IsNullOrEmpty(password))
 				{
-
-					account.Properties[pwKey] = GenerateHash(password, pwKey);
-					account.Properties[typeof(T).Name] = Encrypt(data);
+                    
+                    account.Properties[pwKey] = hash;
+                    account.Properties[typeof(T).Name] = Encryption.AesEncrypt(data, hash);
 				}
 				else
 				{
@@ -125,8 +131,8 @@ namespace Xamarin.Forms.CommonCore
 			{
 				if (!string.IsNullOrEmpty(password))
 				{
-					account.Properties.Add(pwKey, GenerateHash(password, pwKey));
-					account.Properties.Add(typeof(T).Name, Encrypt(data));
+                    account.Properties.Add(pwKey, hash);
+                    account.Properties.Add(typeof(T).Name, Encryption.AesEncrypt(data, hash));
 				}
 				else
 				{
@@ -139,10 +145,10 @@ namespace Xamarin.Forms.CommonCore
 		{
 			if (!string.IsNullOrEmpty(password))
 			{
-				var hashedPassword = GenerateHash(password, pwKey);
+                var hashedPassword = Encryption.GetHashString(password);
 				if (account.Properties.ContainsKey(typeof(T).Name) && account.Properties[pwKey] == hashedPassword)
 				{
-					var data = Decrypt(account.Properties[typeof(T).Name]);
+                    var data = Encryption.AesDecrypt(account.Properties[typeof(T).Name], hashedPassword);
 					return JsonConvert.DeserializeObject<T>(data);
 				}
 
@@ -185,49 +191,6 @@ namespace Xamarin.Forms.CommonCore
 				storeAccount = new Account(username);
 			}
 			return storeAccount;
-		}
-
-		private string GenerateHash(string input, string key)
-		{
-			var mac = WinRTCrypto.MacAlgorithmProvider.OpenAlgorithm(MacAlgorithm.HmacSha1);
-			var keyMaterial = WinRTCrypto.CryptographicBuffer.ConvertStringToBinary(key, Encoding.UTF8);
-			var cryptoKey = mac.CreateKey(keyMaterial);
-			var hash = WinRTCrypto.CryptographicEngine.Sign(cryptoKey, WinRTCrypto.CryptographicBuffer.ConvertStringToBinary(input, Encoding.UTF8));
-			return WinRTCrypto.CryptographicBuffer.EncodeToBase64String(hash);
-		}
-
-		private string Encrypt(string plainText)
-		{
-			var key = GetAppCryptoKey();
-			var plain = Encoding.UTF8.GetBytes(plainText);
-			var encrypted = CryptographicEngine.Encrypt(key, plain);
-			return Convert.ToBase64String(encrypted);
-		}
-		private string Decrypt(string encryptedString)
-		{
-			var key = GetAppCryptoKey();
-			var encrypted = Convert.FromBase64String(encryptedString);
-			var decrypted = CryptographicEngine.Decrypt(key, encrypted);
-			return Encoding.UTF8.GetString(decrypted, 0, decrypted.Length);
-		}
-
-		private ICryptographicKey GetAppCryptoKey()
-		{
-			var asym = AsymmetricKeyAlgorithmProvider.OpenAlgorithm(AsymmetricAlgorithm.RsaPkcs1);
-			ICryptographicKey key = null;
-			if (!string.IsNullOrEmpty(AccountEncryptionKey))
-			{
-				var blob = Encoding.UTF8.GetBytes(AccountEncryptionKey);
-				key = asym.ImportKeyPair(blob);
-			}
-			else
-			{
-
-				key = asym.CreateKeyPair(512);
-				var blob = key.Export();
-				AccountEncryptionKey = Encoding.UTF8.GetString(blob, 0, blob.Length);
-			}
-			return key;
 		}
 
     }

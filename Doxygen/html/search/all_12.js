@@ -10,6 +10,7 @@ var searchData=
   ['rating',['Rating',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a5ede99397e2bbe25cb523250eac086b3',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
   ['ratingchangedevent',['RatingchangedEvent',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_ranking.html#a6ef9b9d31bc5bef3e588e3ef3082f2e6',1,'Xamarin::Forms::CommonCore::CoreRanking']]],
   ['ratingproperty',['RatingProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_star_behavior.html#a434ae01426bd92007a99dbec8e05e32e',1,'Xamarin::Forms::CommonCore::StarBehavior']]],
+  ['recordexists_3c_20t_20_3e',['RecordExists&lt; T &gt;',['../class_xamarin_1_1_forms_1_1_common_core_1_1_sqlite_db.html#a385d8fb904b5c1837ff67b61533dee7d',1,'Xamarin::Forms::CommonCore::SqliteDb']]],
   ['refreshasync',['RefreshAsync',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#ac2e30b8b56b9523d0353b52367b7d48e',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
   ['refreshdatafunc',['refreshDataFunc',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#a3cfead3fe75b5a1c78a895310baa86cf',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
   ['refreshfailed',['RefreshFailed',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#a7fdd48678cc11be564ad89119ba95b52',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],

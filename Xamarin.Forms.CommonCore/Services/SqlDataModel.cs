@@ -15,7 +15,7 @@ namespace Xamarin.Forms.CommonCore
     public class SqlDataModel : ObservableModel, ISqlDataModel
     {
         [PrimaryKey]
-        public Guid CorrelationID { get; set; }
+        public Guid CorrelationID { get; set; } = Guid.NewGuid();
         public long UTCTickStamp { get; set; }
         public bool MarkedForDelete { get; set; }
 
