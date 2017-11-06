@@ -16,6 +16,7 @@ var searchData=
   ['refreshfailed',['RefreshFailed',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#a7fdd48678cc11be564ad89119ba95b52',1,'Xamarin::Forms::CommonCore::RefreshingCollection']]],
   ['refreshingcollection',['RefreshingCollection',['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html',1,'Xamarin.Forms.CommonCore.RefreshingCollection&lt; T &gt;'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_refreshing_collection.html#a730f539414dbd2690f85cda7496bbddd',1,'Xamarin.Forms.CommonCore.RefreshingCollection.RefreshingCollection()']]],
   ['refreshingcollection_2ecs',['RefreshingCollection.cs',['../_refreshing_collection_8cs.html',1,'']]],
+  ['refreshtoken',['RefreshToken',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#a92a043d987c715ccc90fc9f804f6e15d',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]],
   ['regex',['regex',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_masked_entry.html#a7ab2a2c6cf02c2e7c30714123cc70948',1,'Xamarin::Forms::CommonCore::CoreMaskedEntry']]],
   ['regexbehavior',['RegExBehavior',['../class_xamarin_1_1_forms_1_1_common_core_1_1_reg_ex_behavior.html',1,'Xamarin::Forms::CommonCore']]],
   ['regexbehavior_2ecs',['RegExBehavior.cs',['../_reg_ex_behavior_8cs.html',1,'']]],

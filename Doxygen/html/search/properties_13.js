@@ -9,7 +9,6 @@ var searchData=
   ['token',['Token',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#acd3f9ed3ba738b0401558f42fb62e008',1,'Xamarin.Forms.CommonCore.AuthenticationToken.Token()'],['../interface_push_notification_1_1_plugin_1_1_abstractions_1_1_i_push_notification.html#a3106092a35beed1ec0e873cd95a5e6d1',1,'PushNotification.Plugin.Abstractions.IPushNotification.Token()']]],
   ['tokenbearer',['TokenBearer',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#aa65d097c775a4af2df6b25a07568451f',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
   ['tokenisvalid',['TokenIsValid',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_settings.html#a655ab252d5485f653439de9b6de271fe',1,'Xamarin::Forms::CommonCore::CoreSettings']]],
-  ['tokentype',['TokenType',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#a0683f8bfd38ddb987f947aa26268da9f',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]],
   ['trackinginfo',['TrackingInfo',['../class_xamarin_1_1_forms_1_1_common_core_1_1_analytic_log.html#ae1eddeaef8cdfbcd6f083dd612d84720',1,'Xamarin::Forms::CommonCore::AnalyticLog']]],
   ['translatex',['TranslateX',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_translate_to_animation.html#a098a38c7d7ec9a30aad26fccc5221f8f',1,'Xamarin::Forms::CommonCore::CoreTranslateToAnimation']]],
   ['translatey',['TranslateY',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_translate_to_animation.html#aed3a7593c9d7e9d45d1f5c7b6f34ca5d',1,'Xamarin::Forms::CommonCore::CoreTranslateToAnimation']]],

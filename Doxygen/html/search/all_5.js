@@ -53,6 +53,5 @@ var searchData=
   ['eventtocommandbehavior',['EventToCommandBehavior',['../class_xamarin_1_1_forms_1_1_common_core_1_1_event_to_command_behavior.html',1,'Xamarin::Forms::CommonCore']]],
   ['eventtocommandbehavior_2ecs',['EventToCommandBehavior.cs',['../_event_to_command_behavior_8cs.html',1,'']]],
   ['execute',['Execute',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_extensions.html#af15775d62919614577424feb99e70ecf',1,'Xamarin.Forms.CommonCore.CoreExtensions.Execute()'],['../class_xamarin_1_1_forms_1_1_common_core_1_1_relay_command.html#a3704ce11d2948098e587c659c4457e7d',1,'Xamarin.Forms.CommonCore.RelayCommand.Execute()']]],
-  ['expires',['Expires',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#ae12c9d7a2e959810c760aaf612742e5c',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]],
   ['expiresin',['ExpiresIn',['../class_xamarin_1_1_forms_1_1_common_core_1_1_authentication_token.html#a696856c62f8f79f3abea769aa0c93b1a',1,'Xamarin::Forms::CommonCore::AuthenticationToken']]]
 ];

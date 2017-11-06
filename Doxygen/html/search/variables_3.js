@@ -4,6 +4,8 @@ var searchData=
   ['checkedchanged',['CheckedChanged',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_button.html#abd7a6fac717e9ba779110f0b98b69af0',1,'Xamarin::Forms::CommonCore::CoreRadioButton']]],
   ['checkedcommandproperty',['CheckedCommandProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_group.html#a874d1f7150eb1d58e97fe9f455c0c3d3',1,'Xamarin::Forms::CommonCore::CoreRadioGroup']]],
   ['checkedproperty',['CheckedProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_radio_button.html#a39d35d950479ced20992d2b5c2319db6',1,'Xamarin::Forms::CommonCore::CoreRadioButton']]],
+  ['clearentryenabledproperty',['ClearEntryEnabledProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_underline_entry.html#a9ef6893f12b43a9d5eb1a5db504fd9cd',1,'Xamarin::Forms::CommonCore::CoreUnderlineEntry']]],
+  ['clearentryiconproperty',['ClearEntryIconProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_core_underline_entry.html#ac6aff863a3cb76ae803e9b7ca3cb8168',1,'Xamarin::Forms::CommonCore::CoreUnderlineEntry']]],
   ['colornormalproperty',['ColorNormalProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#a42343716cf0837b1d6ca4158caf3f279',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['colorpressedproperty',['ColorPressedProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#ac46544d6535deda54d259c7c482d0f78',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],
   ['colorrippleproperty',['ColorRippleProperty',['../class_xamarin_1_1_forms_1_1_common_core_1_1_material_design_1_1_f_a_b_control.html#af02be6cd03d136980d173d52e87385e3',1,'Xamarin::Forms::CommonCore::MaterialDesign::FABControl']]],

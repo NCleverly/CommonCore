@@ -177,7 +177,13 @@ namespace Xamarin.Forms.CommonCore
                 using (var srvResponse = await Client.GetAsync(url).ConfigureAwait(false))
                 {
                     var jsonResult = await srvResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    return (jsonResult, true, null);
+                    if (srvResponse.StatusCode == HttpStatusCode.OK){
+                        return (jsonResult, true, null);
+                    }
+                    else{
+                        return (null, false, new ApplicationException(jsonResult));
+                    }
+
                 }
 
             }
