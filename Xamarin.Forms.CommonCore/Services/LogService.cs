@@ -35,7 +35,7 @@ namespace Xamarin.Forms.CommonCore
         {
             var aLog = new AnalyticLog()
             {
-                UserId = CoreSettings.UserId,
+                UserId = CoreSettings.CurrentUser.UserId,
                 ViewName = pageName,
                 TrackingInfo = trackingData,
                 MetaData = metatData
@@ -74,7 +74,7 @@ namespace Xamarin.Forms.CommonCore
                 InnerType = exception.InnerException?.GetType().Name,
                 StackTrace = exception.StackTrace,
                 UTCTicks = DateTime.UtcNow.Ticks,
-                UserId = CoreSettings.UserId,
+                UserId = CoreSettings.CurrentUser.UserId,
                 MetaData = metatData
             };
 

@@ -19,19 +19,24 @@ namespace Xamarin.Forms.CommonCore
 
         public string json;
 
+        public AuthenticationToken AuthToken
+        {
+            get { return CoreSettings.CurrentUser?.AuthToken; }
+        }
+
         public WebClient GetWebClient()
         {
             var client = new WebClient();
-            if (CoreSettings.TokenBearer != null)
-                client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + CoreSettings.TokenBearer.Token);
+            if (AuthToken!= null)
+                client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + AuthToken.Token);
             return client;
         }
 
         public WebDownloadClient GetWebDownloadClient()
         {
             var client = new WebClient();
-            if (CoreSettings.TokenBearer != null)
-                client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + CoreSettings.TokenBearer.Token);
+            if (AuthToken != null)
+                client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + AuthToken.Token);
             return new WebDownloadClient() { Client = client };
         }
 
@@ -117,8 +122,8 @@ namespace Xamarin.Forms.CommonCore
                         httpClient = new HttpClient(handler, true);
                     }
 
-                    if (CoreSettings.TokenBearer != null)
-                        httpClient.AddTokenHeader(CoreSettings.TokenBearer.Token);
+                    if (AuthToken != null)
+                        httpClient.AddTokenHeader(AuthToken.Token);
                 }
 
                 //httpClient.DefaultRequestHeaders.AcceptEncoding.Add(new StringWithQualityHeaderValue("gzip"));

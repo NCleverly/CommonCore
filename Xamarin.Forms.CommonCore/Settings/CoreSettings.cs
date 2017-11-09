@@ -86,8 +86,7 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <value>The current buid.</value>
         public static string CurrentBuid { get; set; } = "dev";
-        public static string UserId { get; set; }
-        public static AuthenticationToken TokenBearer { get; set; }
+        public static AppUser CurrentUser { get; set; } = new AppUser();
         public static NetworkCredential HttpCredentials { get; set; }
 
         public static bool IsConnected { get; set; } = true;
@@ -95,16 +94,6 @@ namespace Xamarin.Forms.CommonCore
         public static Size ScreenSize { get; set; }
         public static List<string> NotificationTags { get; set; } = new List<string>();
 
-        public static bool TokenIsValid
-        {
-            get
-            {
-                if (TokenBearer == null)
-                    return false;
-                else
-                    return TokenBearer.UTCExpiration > DateTimeOffset.UtcNow.Ticks;
-            }
-        }
 
         #region Message Constants
         public const string MasterDetailIsPresented = "IsPresented";

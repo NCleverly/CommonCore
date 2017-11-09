@@ -334,6 +334,7 @@
       <DependentUpon>CoreExtensions.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\ObservableModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Models\AppUser.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
