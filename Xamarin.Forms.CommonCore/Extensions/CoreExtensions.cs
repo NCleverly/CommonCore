@@ -14,6 +14,7 @@ using System.Globalization;
 using System.Linq.Expressions;
 using System.Windows.Input;
 using System.Net.Http;
+using System.Net;
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -143,6 +144,15 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
+
+        public static DateTime ToLocalTime(this long utcTicks)
+        {
+            var utcDateTime = new DateTime(utcTicks, DateTimeKind.Utc);
+            return utcDateTime.ToLocalTime();
+        }
+
+
+
         public static void AddTokenHeader(this HttpClient client, string token)
         {
             if(client.DefaultRequestHeaders.Authorization!=null)
@@ -150,6 +160,15 @@ namespace Xamarin.Forms.CommonCore
 
             client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + token);
         }
+
+        public static void AddTokenHeader(this WebClient client, string token)
+        {
+            if (client.Headers[HttpRequestHeader.Authorization] != null)
+                client.Headers[HttpRequestHeader.Authorization] = token;
+            else
+                client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + token);
+        }
+
         public static StringContent ToStringContent(this object obj)
         {
             var data = JsonConvert.SerializeObject(obj);

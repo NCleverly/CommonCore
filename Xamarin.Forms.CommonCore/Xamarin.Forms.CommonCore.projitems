@@ -326,7 +326,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\CorePickerRenderer.IOS.cs">
       <DependentUpon>CorePicker.cs</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Controls\blah.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\CoreExtensions.Droid.cs">
       <DependentUpon>CoreExtensions.cs</DependentUpon>
     </Compile>
@@ -334,7 +333,16 @@
       <DependentUpon>CoreExtensions.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\ObservableModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Models\AppUser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CoreDatePicker.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CoreDatePickerRenderer.Droid.cs">
+      <DependentUpon>CoreDatePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CoreDatePickerRenderer.IOS.cs">
+      <DependentUpon>CoreDatePicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CoreNoCaretPickerRenderer.IOS.cs">
+      <DependentUpon>CorePicker.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

@@ -89,7 +89,7 @@ Properties</h2></td></tr>
 <tr class="separator:ad97c72bb3de94ba92036ec766eff23f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c6e4c897ecc820e404e7dadedd161cd"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_sql_data_model.html#a3c6e4c897ecc820e404e7dadedd161cd">UTCTickStamp</a> = Guid.NewGuid()<code> [get, set]</code></td></tr>
 <tr class="separator:a3c6e4c897ecc820e404e7dadedd161cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7bcd427b85176325733b1b9683b86d98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_sql_data_model.html#a7bcd427b85176325733b1b9683b86d98">MarkedForDelete</a><code> [get, set]</code></td></tr>
+<tr class="memitem:a7bcd427b85176325733b1b9683b86d98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_sql_data_model.html#a7bcd427b85176325733b1b9683b86d98">MarkedForDelete</a> = DateTime.UtcNow.Ticks<code> [get, set]</code></td></tr>
 <tr class="separator:a7bcd427b85176325733b1b9683b86d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3ff9d05e78cf043737b84fde7683289"><td class="memItemLeft" align="right" valign="top">DateTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_xamarin_1_1_forms_1_1_common_core_1_1_sql_data_model.html#ad3ff9d05e78cf043737b84fde7683289">LocalTimeStamp</a><code> [get]</code></td></tr>
 <tr class="separator:ad3ff9d05e78cf043737b84fde7683289"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -180,7 +180,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Xamarin.Forms.CommonCore.SqlDataModel.MarkedForDelete</td>
+          <td class="memname">bool Xamarin.Forms.CommonCore.SqlDataModel.MarkedForDelete = DateTime.UtcNow.Ticks</td>
         </tr>
       </table>
   </td>

@@ -20,7 +20,6 @@ namespace Xamarin.Forms.CommonCore
 	{
 		public string ViewName { get; set; }
         public TrackingMetatData TrackingInfo { get; set; }
-		public string UserId { get; set; }
 		public string MetaData { get; set; }
 
         public double OnTaskTime
@@ -51,7 +50,6 @@ namespace Xamarin.Forms.CommonCore
         public string InnerMessage { get; set; }
         public string StackTrace { get; set; }
         public long UTCTicks { get; set; }
-        public string UserId { get; set; }
         public string MetaData { get; set; }
 
         public DateTime TimeStamp { get { return DateTime.FromFileTimeUtc(UTCTicks).ToLocalTime(); } }

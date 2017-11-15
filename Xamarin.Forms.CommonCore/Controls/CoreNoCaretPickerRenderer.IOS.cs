@@ -33,7 +33,7 @@ namespace Xamarin.Forms.CommonCore
         }
     }
 
-    public class PickerRenderer1 : ViewRenderer<Picker, UITextField>
+    public class CoreNoCaretPickerRenderer : ViewRenderer<Picker, UITextField>
     {
         UIPickerView _picker;
         UIColor _defaultTextColor;
@@ -106,8 +106,8 @@ namespace Xamarin.Forms.CommonCore
                 else
                 {
                     if (element.ItemsSource == null)
-                        return new string[]{};
-                    
+                        return new string[] { };
+
                     var lst = new List<string>();
                     var collection = element.ItemsSource as IEnumerable;
                     PropertyInfo prop = null;
@@ -256,10 +256,10 @@ namespace Xamarin.Forms.CommonCore
 
         class PickerSource1 : UIPickerViewModel
         {
-            PickerRenderer1 _renderer;
+            CoreNoCaretPickerRenderer _renderer;
             bool _disposed;
 
-            public PickerSource1(PickerRenderer1 renderer)
+            public PickerSource1(CoreNoCaretPickerRenderer renderer)
             {
                 _renderer = renderer;
             }
@@ -316,5 +316,6 @@ namespace Xamarin.Forms.CommonCore
     }
 }
 #endif
+
 
 

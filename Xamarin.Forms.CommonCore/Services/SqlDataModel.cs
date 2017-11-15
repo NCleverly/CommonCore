@@ -16,7 +16,7 @@ namespace Xamarin.Forms.CommonCore
     {
         [PrimaryKey]
         public Guid CorrelationID { get; set; } = Guid.NewGuid();
-        public long UTCTickStamp { get; set; }
+        public long UTCTickStamp { get; set; } = DateTime.UtcNow.Ticks;
         public bool MarkedForDelete { get; set; }
 
         [Ignore]

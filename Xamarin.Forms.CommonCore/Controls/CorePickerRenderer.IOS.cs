@@ -17,7 +17,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 [assembly: ExportRenderer(typeof(CorePicker), typeof(CorePickerRenderer))]
 namespace Xamarin.Forms.CommonCore
 {
-    public class CorePickerRenderer : PickerRenderer1
+    public class CorePickerRenderer : CoreNoCaretPickerRenderer
     {
         private CALayer bottomBorder;
         private CGColor controlColor;

@@ -86,7 +86,7 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <value>The current buid.</value>
         public static string CurrentBuid { get; set; } = "dev";
-        public static AppUser CurrentUser { get; set; } = new AppUser();
+        //public static AppUser CurrentUser { get; set; } = new AppUser();
         public static NetworkCredential HttpCredentials { get; set; }
 
         public static bool IsConnected { get; set; } = true;

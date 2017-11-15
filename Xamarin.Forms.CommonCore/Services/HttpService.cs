@@ -19,25 +19,15 @@ namespace Xamarin.Forms.CommonCore
 
         public string json;
 
-        public AuthenticationToken AuthToken
-        {
-            get { return CoreSettings.CurrentUser?.AuthToken; }
-        }
 
         public WebClient GetWebClient()
         {
-            var client = new WebClient();
-            if (AuthToken!= null)
-                client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + AuthToken.Token);
-            return client;
+            return new WebClient();
         }
 
         public WebDownloadClient GetWebDownloadClient()
         {
-            var client = new WebClient();
-            if (AuthToken != null)
-                client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + AuthToken.Token);
-            return new WebDownloadClient() { Client = client };
+            return new WebDownloadClient() { Client = new WebClient() };
         }
 
         public HttpClient Client
@@ -122,8 +112,6 @@ namespace Xamarin.Forms.CommonCore
                         httpClient = new HttpClient(handler, true);
                     }
 
-                    if (AuthToken != null)
-                        httpClient.AddTokenHeader(AuthToken.Token);
                 }
 
                 //httpClient.DefaultRequestHeaders.AcceptEncoding.Add(new StringWithQualityHeaderValue("gzip"));
@@ -377,8 +365,8 @@ namespace Xamarin.Forms.CommonCore
 
             if (httpClient != null)
             {
-                httpClient.Dispose();
                 handler.Dispose();
+                httpClient.Dispose();
                 _serializer = null;
             }
 
