@@ -3,7 +3,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace somenamespace
 {
-    public class SomeBusinessLogic : BusinessBase
+    public class SomeBusinessLogic : CoreBusiness
     {
         public SomeBusinessLogic()
         {

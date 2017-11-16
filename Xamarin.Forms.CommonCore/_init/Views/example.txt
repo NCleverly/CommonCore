@@ -4,7 +4,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace somenamespace
 {
-    public class SomePage : BoundPage<SomeViewModel>
+    public class SomePage : CorePage<SomeViewModel>
     {
         public SomePage()
         {

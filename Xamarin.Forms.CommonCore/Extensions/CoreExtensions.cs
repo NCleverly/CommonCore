@@ -57,7 +57,7 @@ namespace Xamarin.Forms.CommonCore
         {
             get
             {
-                return InjectionManager.GetService<IEncryptionService, EncryptionService>(true);
+                return CoreDependencyService.GetService<IEncryptionService, EncryptionService>(true);
             }
         }
 
@@ -65,7 +65,7 @@ namespace Xamarin.Forms.CommonCore
 		{
 			get
 			{
-				return InjectionManager.GetService<ILogService, LogService>(true);
+				return CoreDependencyService.GetService<ILogService, LogService>(true);
 			}
 		}
 
@@ -80,11 +80,11 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <param name="vm">Vm.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void SaveState<T>(this T vm) where T : ObservableViewModel, new()
+        public static void SaveState<T>(this T vm) where T : CoreViewModel, new()
         {
             Task.Run(async () =>
             {
-                await InjectionManager.GetService<IFileStore, FileStore>(true)?.SaveAsync<T>(typeof(T).FullName, vm);
+                await CoreDependencyService.GetService<IFileStore, FileStore>(true)?.SaveAsync<T>(typeof(T).FullName, vm);
             });
         }
         /// <summary>
@@ -92,11 +92,11 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <param name="vm">Vm.</param>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static void LoadState<T>(this T vm) where T : ObservableViewModel, new()
+        public static void LoadState<T>(this T vm) where T : CoreViewModel, new()
         {
             Task.Run(async () =>
             {
-                var result = await InjectionManager.GetService<IFileStore, FileStore>(true)?.GetAsync<T>(typeof(T).FullName);
+                var result = await CoreDependencyService.GetService<IFileStore, FileStore>(true)?.GetAsync<T>(typeof(T).FullName);
                 if (result.Error==null)
                 {
                     foreach (var prop in typeof(T).GetProperties())
@@ -113,12 +113,12 @@ namespace Xamarin.Forms.CommonCore
         public static void SaveViewModelState(this Application app)
         {
             var nameList = new List<string>();
-            foreach (var vm in InjectionManager.GetAllViewModels())
+            foreach (var vm in CoreDependencyService.GetAllViewModels())
             {
                 vm.SaveState();
                 nameList.Add(vm.GetType().FullName);
             }
-            InjectionManager.GetService<IFileStore, FileStore>(true)?.SaveAsync<List<string>>("vmlistCoreExtensions", nameList).ContinueOn();
+            CoreDependencyService.GetService<IFileStore, FileStore>(true)?.SaveAsync<List<string>>("vmlistCoreExtensions", nameList).ContinueOn();
         }
         /// <summary>
         /// Loads the state of the view model if they were torndown by the OS.
@@ -126,17 +126,17 @@ namespace Xamarin.Forms.CommonCore
         /// <param name="app">App.</param>
         public static void LoadViewModelState(this Application app)
         {
-            if (!InjectionManager.HasViewModels)
+            if (!CoreDependencyService.HasViewModels)
             {
                 Task.Run(async () =>
                 {
-                    var result = await InjectionManager.GetService<IFileStore, FileStore>(true)?.GetAsync<List<string>>("vmlistCoreExtensions");
+                    var result = await CoreDependencyService.GetService<IFileStore, FileStore>(true)?.GetAsync<List<string>>("vmlistCoreExtensions");
                     if (result.Error == null)
                     {
                         foreach (var vmName in result.Response)
                         {
-                            InjectionManager.RegisterObjectByName(vmName);
-                            ((ObservableViewModel)InjectionManager.GetObjectByName(vmName)).LoadState();
+                            CoreDependencyService.RegisterObjectByName(vmName);
+                            ((CoreViewModel)CoreDependencyService.GetObjectByName(vmName)).LoadState();
                         }
                     }
                 });
@@ -152,22 +152,6 @@ namespace Xamarin.Forms.CommonCore
         }
 
 
-
-        public static void AddTokenHeader(this HttpClient client, string token)
-        {
-            if(client.DefaultRequestHeaders.Authorization!=null)
-                client.DefaultRequestHeaders.Remove("Authorization");
-
-            client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + token);
-        }
-
-        public static void AddTokenHeader(this WebClient client, string token)
-        {
-            if (client.Headers[HttpRequestHeader.Authorization] != null)
-                client.Headers[HttpRequestHeader.Authorization] = token;
-            else
-                client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + token);
-        }
 
         public static StringContent ToStringContent(this object obj)
         {
@@ -203,7 +187,7 @@ namespace Xamarin.Forms.CommonCore
             return var1 == var2;
         }
 
-        public static bool ValidateTextFields(this ObservableViewModel model, params string[] fields)
+        public static bool ValidateTextFields(this CoreViewModel model, params string[] fields)
         {
             foreach (var obj in fields) if (String.IsNullOrEmpty(obj)) return false;
 
@@ -222,7 +206,7 @@ namespace Xamarin.Forms.CommonCore
                 return chainedResponse;
             }
         }
-        public static bool ValidateNumberFields(this ObservableViewModel model, decimal minValue, decimal maxValue, params decimal[] fields)
+        public static bool ValidateNumberFields(this CoreViewModel model, decimal minValue, decimal maxValue, params decimal[] fields)
         {
             foreach (var obj in fields)
             {
@@ -251,7 +235,7 @@ namespace Xamarin.Forms.CommonCore
                 return chainedResponse;
             }
         }
-        public static bool ValidateDateFields(this ObservableViewModel model, DateTime minValue, DateTime maxValue, params DateTime[] fields)
+        public static bool ValidateDateFields(this CoreViewModel model, DateTime minValue, DateTime maxValue, params DateTime[] fields)
         {
             foreach (var obj in fields)
             {
@@ -281,7 +265,7 @@ namespace Xamarin.Forms.CommonCore
                 return chainedResponse;
             }
         }
-        public static bool ValidateEmailFields(this ObservableViewModel model, params string[] fields)
+        public static bool ValidateEmailFields(this CoreViewModel model, params string[] fields)
         {
             var RegexExp = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
             foreach (var obj in fields)
@@ -320,7 +304,7 @@ namespace Xamarin.Forms.CommonCore
                 return chainedResponse;
             }
         }
-        public static bool ValidatePasswordFields(this ObservableViewModel model, params string[] fields)
+        public static bool ValidatePasswordFields(this CoreViewModel model, params string[] fields)
         {
             var hasNumber = new Regex(@"[0-9]+");
             var hasChar = new Regex(@"[a-zA-Z]+");
@@ -369,7 +353,7 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
-        public static bool ValidatePasswordMatch(this ObservableViewModel model, params string[] fields)
+        public static bool ValidatePasswordMatch(this CoreViewModel model, params string[] fields)
         {
             for (int i = 0; i < fields.Length; i++)
             {
@@ -430,7 +414,7 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
-        public static bool ValidateDefaultFields<T>(this ObservableViewModel model, params T[] fields) where T : struct
+        public static bool ValidateDefaultFields<T>(this CoreViewModel model, params T[] fields) where T : struct
         {
             var state = true;
             var type = typeof(T).Name;
@@ -1161,7 +1145,7 @@ namespace Xamarin.Forms.CommonCore
         /// <param name="notifier">Notifier.</param>
         public static void ResetNotifier(this ICommand command, INotifyPropertyChanged notifier)
         {
-            ((RelayCommand)command).NotifyBinder = notifier;
+            ((CoreCommand)command).NotifyBinder = notifier;
         }
 
         /// <summary>

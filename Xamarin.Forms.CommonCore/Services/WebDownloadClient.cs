@@ -77,5 +77,21 @@ namespace Xamarin.Forms.CommonCore
 		{
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
 		}
+
+        public void AddTokenHeader(string token)
+        {
+            if (Client.Headers[HttpRequestHeader.Authorization] != null)
+                Client.Headers[HttpRequestHeader.Authorization] = token;
+            else
+                Client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + token);
+        }
+
+        public void AddTokenHeader(CoreAuthentication coreAuth)
+        {
+            if (Client.Headers[HttpRequestHeader.Authorization] != null)
+                Client.Headers[HttpRequestHeader.Authorization] = coreAuth.Token;
+            else
+                Client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + coreAuth.Token);
+        }
 	}
 }

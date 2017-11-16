@@ -1,0 +1,14 @@
+﻿using System;
+namespace Xamarin.Forms.CommonCore
+{
+    public partial class CoreViewModel
+    {
+        public SomeBusinessLogic SomeLogic
+        {
+            get
+            {
+                return CoreDependencyService.GetBusinessLayer<SomeBusinessLogic>();
+            }
+        }
+    }
+}

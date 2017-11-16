@@ -21,20 +21,20 @@ namespace Xamarin.Forms.CommonCore
             get
             {
 
-                return (ILogService)InjectionManager.GetService<ILogService, LogService>(true);
+                return (ILogService)CoreDependencyService.GetService<ILogService, LogService>(true);
             }
         }
 
         protected override bool OnBackButtonPressed()
         {
-            var bindingContext = BindingContext as ObservableViewModel;
+            var bindingContext = BindingContext as CoreViewModel;
             var result = bindingContext?.OnBackButtonPressed() ?? base.OnBackButtonPressed();
             return result;
         }
 
         public void OnSoftBackButtonPressed()
         {
-            var bindingContext = BindingContext as ObservableViewModel;
+            var bindingContext = BindingContext as CoreViewModel;
             bindingContext?.OnSoftBackButtonPressed();
         }
 

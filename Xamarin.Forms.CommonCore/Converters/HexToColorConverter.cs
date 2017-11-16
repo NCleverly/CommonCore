@@ -10,17 +10,6 @@ namespace Xamarin.Forms.CommonCore
     [ValueConversion (typeof (string), typeof (Color))]
     public class HexToColorConverter : IValueConverter
     {
-
-        public static HexToColorConverter Instance { get; } = new HexToColorConverter();
-
-        /// <summary>
-        /// Init this instance.
-        /// </summary>
-        public static void Init()
-        {
-            var time = DateTime.UtcNow;
-        }
-
         public Color DefaultColor = Color.FromHex("#3498db");
 
         /// <param name="value">To be added.</param>

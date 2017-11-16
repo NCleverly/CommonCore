@@ -3,7 +3,7 @@ using Xamarin.Forms.CommonCore;
 
 namespace somenamespace
 {
-    public class SomeViewModel : ObservableViewModel
+    public class SomeViewModel : CoreViewModel
     {
         public SomeViewModel()
         {

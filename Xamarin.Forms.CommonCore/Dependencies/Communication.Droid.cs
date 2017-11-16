@@ -90,7 +90,7 @@ namespace Xamarin.Forms.CommonCore
                 phoneListener.CallEndedEvent -= PhoneCallEnded;
             telephonyManager.Listen(phoneListener, PhoneStateListenerFlags.None);
             phoneListener = null;
-            InjectionManager.SendViewModelMessage(callBackKey,true);
+            CoreDependencyService.SendViewModelMessage(callBackKey,true);
         }
     }
 

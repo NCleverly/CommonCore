@@ -37,7 +37,7 @@ namespace Xamarin.Forms.CommonCore
         {
             var n = Application.Current.MainPage.GetType().BaseType.Name;
             var array = n.Split('`');
-            if (array[0].Equals("BoundMasterDetailPage"))
+            if (array[0].Equals("CoreMasterDetailPage"))
                 return true;
             else
                 return false;
@@ -47,7 +47,7 @@ namespace Xamarin.Forms.CommonCore
         {
             if (IsMasterDetail() && CoreSettings.AppNav.NavigationStack.Count <= 1)
             {
-                InjectionManager.SendViewModelMessage(CoreSettings.MasterDetailIsPresented, null);
+                CoreDependencyService.SendViewModelMessage(CoreSettings.MasterDetailIsPresented, null);
                 return;
             }
 

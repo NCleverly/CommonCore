@@ -17,7 +17,7 @@ namespace Xamarin.Forms.CommonCore
         private static readonly AsyncLock Mutex = new AsyncLock();
         private Dictionary<Type, PropertyInfo[]> encrytedProperties;
 
-        private async Task ValidateSetup<T>() where T : ISqlDataModel, new()
+        private async Task ValidateSetup<T>() where T : ICoreSqlModel, new()
         {
             await Task.Run(async() => { 
                
@@ -62,7 +62,7 @@ namespace Xamarin.Forms.CommonCore
             return props;
         }
 
-        public async Task<(List<T> Response, bool Success, Exception Error)> GetAll<T>() where T : ISqlDataModel, new()
+        public async Task<(List<T> Response, bool Success, Exception Error)> GetAll<T>() where T : ICoreSqlModel, new()
 		{
 			try
 			{
@@ -82,7 +82,7 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-		public async Task<(bool Success, Exception Error)> TruncateAsync<T>() where T : ISqlDataModel, new()
+		public async Task<(bool Success, Exception Error)> TruncateAsync<T>() where T : ICoreSqlModel, new()
 		{
             (bool Success, Exception Error) response = (false, null);
 			await conn.RunInTransactionAsync(async (tran) =>
@@ -109,7 +109,7 @@ namespace Xamarin.Forms.CommonCore
 			return response;
 		}
 
-        public async Task<(T Response, bool Success, Exception Error)> GetByCorrelationID<T>(Guid CorrelationID) where T : class, ISqlDataModel, new()
+        public async Task<(T Response, bool Success, Exception Error)> GetByCorrelationID<T>(Guid CorrelationID) where T : class, ICoreSqlModel, new()
 		{
 			try
 			{
@@ -128,7 +128,7 @@ namespace Xamarin.Forms.CommonCore
 			}
 
 		}
-        public async Task<(List<T> Response, bool Success, Exception Error)> GetByQuery<T>(Expression<Func<T, bool>> exp) where T : ISqlDataModel, new()
+        public async Task<(List<T> Response, bool Success, Exception Error)> GetByQuery<T>(Expression<Func<T, bool>> exp) where T : ICoreSqlModel, new()
 		{
 			try
 			{
@@ -148,7 +148,7 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-		public async Task<(bool Success, Exception Error)> AddOrUpdate<T>(IEnumerable<T> collection) where T : ISqlDataModel, new()
+		public async Task<(bool Success, Exception Error)> AddOrUpdate<T>(IEnumerable<T> collection) where T : ICoreSqlModel, new()
 		{
 			try
 			{
@@ -195,7 +195,7 @@ namespace Xamarin.Forms.CommonCore
 			}
 		}
 
-		public async Task<(bool Success, Exception Error)> AddOrUpdate<T>(T obj) where T : ISqlDataModel, new()
+		public async Task<(bool Success, Exception Error)> AddOrUpdate<T>(T obj) where T : ICoreSqlModel, new()
 		{
 			int rowsAffected = 0;
 			obj.UTCTickStamp = DateTime.UtcNow.Ticks;
@@ -236,7 +236,7 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-        public async Task<(bool Success, Exception Error)> DeleteByCorrelationID<T>(Guid correlationId, bool softDelete = false) where T : class, ISqlDataModel, new()
+        public async Task<(bool Success, Exception Error)> DeleteByCorrelationID<T>(Guid correlationId, bool softDelete = false) where T : class, ICoreSqlModel, new()
 		{
 
 			try
@@ -270,7 +270,7 @@ namespace Xamarin.Forms.CommonCore
 				return (false, ex);
 			}
 		}
-		public async Task<(bool Success, Exception Error)> DeleteByQuery<T>(Expression<Func<T, bool>> exp, bool softDelete = false) where T : ISqlDataModel, new()
+		public async Task<(bool Success, Exception Error)> DeleteByQuery<T>(Expression<Func<T, bool>> exp, bool softDelete = false) where T : ICoreSqlModel, new()
 		{
 			try
 			{
@@ -303,7 +303,7 @@ namespace Xamarin.Forms.CommonCore
 			}
 		}
 
-        private async Task<bool> RecordExists<T>(Guid correlationId) where T : ISqlDataModel, new()
+        private async Task<bool> RecordExists<T>(Guid correlationId) where T : ICoreSqlModel, new()
         {
             var query = $"SELECT CorrelationID FROM {typeof(T).Name} WHERE CorrelationID = '{correlationId.ToString()}'";
             var lst = await conn.QueryAsync<List<Guid>>(query);

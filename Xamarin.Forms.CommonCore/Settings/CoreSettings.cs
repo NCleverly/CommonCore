@@ -33,7 +33,7 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
-        public static ConfigurationModel Config
+        public static CoreConfiguration Config
         {
             get { return AppData.Settings; }
         }
@@ -119,18 +119,18 @@ namespace Xamarin.Forms.CommonCore
 
             public static void Reload()
             {
-                InjectionManager.DisposeServices();
-                InjectionManager.ReleaseAllResources();
+                CoreDependencyService.DisposeServices();
+                CoreDependencyService.ReleaseAllResources();
                 Load();
-                InjectionManager.ReloadAllResources();
+                CoreDependencyService.ReloadAllResources();
             }
 
-            public static ConfigurationModel Settings { get; private set; }
+            public static CoreConfiguration Settings { get; private set; }
 
 
             private static void Load()
             {
-                Settings = new ConfigurationModel();
+                Settings = new CoreConfiguration();
                 string fileName = null;
                 fileName = $"config.{CoreSettings.CurrentBuid}.json";
 
@@ -139,7 +139,7 @@ namespace Xamarin.Forms.CommonCore
                 {
                     try
                     {
-                        var root = JsonConvert.DeserializeObject<ConfigurationModel>(response.Response);
+                        var root = JsonConvert.DeserializeObject<CoreConfiguration>(response.Response);
                         if (root != null)
                             Settings = root;
                     }

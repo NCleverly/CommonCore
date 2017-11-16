@@ -19,12 +19,6 @@ namespace Xamarin.Forms.CommonCore
 
         public string json;
 
-
-        public WebClient GetWebClient()
-        {
-            return new WebClient();
-        }
-
         public WebDownloadClient GetWebDownloadClient()
         {
             return new WebDownloadClient() { Client = new WebClient() };
@@ -45,8 +39,7 @@ namespace Xamarin.Forms.CommonCore
                         case "ModernHttpClient":
                             handler = new NativeMessageHandler()
                             {
-                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
-                                Credentials = CoreSettings.HttpCredentials
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
                             };
 
                             break;
@@ -59,15 +52,13 @@ namespace Xamarin.Forms.CommonCore
                         case "NSURLSession":
                             handler = new NSUrlSessionHandler()
                             {
-                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
-                                Credentials = CoreSettings.HttpCredentials
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
                             };
                             break;
                         default:
                             handler = new HttpClientHandler()
                             {
-                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
-                                Credentials = CoreSettings.HttpCredentials
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
                             };
 
                             break;
@@ -80,7 +71,6 @@ namespace Xamarin.Forms.CommonCore
 					handler = new NativeMessageHandler()
 					{
 						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
-						Credentials = CoreSettings.HttpCredentials
 					};
 
 					break;
@@ -94,7 +84,6 @@ namespace Xamarin.Forms.CommonCore
 					handler = new HttpClientHandler()
 					{
 						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
-						Credentials = CoreSettings.HttpCredentials
 					};
 					break;
 			}
@@ -114,11 +103,35 @@ namespace Xamarin.Forms.CommonCore
 
                 }
 
-                //httpClient.DefaultRequestHeaders.AcceptEncoding.Add(new StringWithQualityHeaderValue("gzip"));
-
                 return httpClient;
             }
             set { httpClient = value; }
+        }
+
+        public void AddTokenHeader(string token)
+        {
+            if (Client.DefaultRequestHeaders.Authorization != null)
+                Client.DefaultRequestHeaders.Remove("Authorization");
+
+            Client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + token);
+        }
+
+        public void AddTokenHeader(CoreAuthentication coreAuth)
+        {
+            if (Client.DefaultRequestHeaders.Authorization != null)
+                Client.DefaultRequestHeaders.Remove("Authorization");
+
+            Client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + coreAuth.Token);
+        }
+
+        public void AddNetworkCredentials(NetworkCredential cred)
+        {
+            if(handler!=null)
+            {
+                var prop = handler.GetType().GetProperty("Credentials");
+                if (prop != null)
+                    prop.SetValue(handler, cred, null);
+            }
         }
 
         public async Task<(string Response, bool Success, Exception Error)> FormPost(string url, HttpContent content)

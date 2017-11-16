@@ -27,7 +27,7 @@ namespace Xamarin.Forms.CommonCore
 
         public IEncryptionService Encryption
         {
-            get { return InjectionManager.GetService<IEncryptionService, EncryptionService>(true); }
+            get { return CoreDependencyService.GetService<IEncryptionService, EncryptionService>(true); }
         }
 
 		public async Task<(bool Success, Exception Error)> SaveAccountStore<T>(string username, T obj) where T : class, new()

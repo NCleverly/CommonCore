@@ -10,17 +10,6 @@ namespace Xamarin.Forms.CommonCore
     [ValueConversion (typeof (bool), typeof (bool))]
     public class InvertedBooleanConverter : IValueConverter
     {
-
-        public static InvertedBooleanConverter Instance { get; } = new InvertedBooleanConverter();
-
-        /// <summary>
-        /// Init this instance.
-        /// </summary>
-        public static void Init()
-        {
-            var time = DateTime.UtcNow;
-        }
-
         /// <param name="value">To be added.</param>
         /// <param name="targetType">To be added.</param>
         /// <param name="parameter">To be added.</param>
@@ -46,7 +35,7 @@ namespace Xamarin.Forms.CommonCore
         /// <returns>The back.</returns>
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();
+            return value;
         }
     }
 }
