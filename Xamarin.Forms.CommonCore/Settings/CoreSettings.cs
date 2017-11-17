@@ -16,15 +16,25 @@ using Foundation;
 
 namespace Xamarin.Forms.CommonCore
 {
-    public enum NavType
+
+    public enum DeviceOS
     {
-        MasterDetail,
-        Tabbed,
-        Stacked,
-        Undermined
+        IOS,
+        ANDROID
     }
     public class CoreSettings
     {
+        public static DeviceOS OS
+        {
+            get
+            {
+#if __ANDROID__
+                return DeviceOS.ANDROID;
+#else
+                return DeviceOS.IOS;
+#endif
+            }
+        }
         private static ISettings _appSettings
         {
             get
@@ -95,12 +105,12 @@ namespace Xamarin.Forms.CommonCore
         public static List<string> NotificationTags { get; set; } = new List<string>();
 
 
-        #region Message Constants
+#region Message Constants
         public const string MasterDetailIsPresented = "IsPresented";
-        #endregion
+#endregion
 
 #if __ANDROID__
-        public  static int AppIcon { get; set; }
+        public static int AppIcon { get; set; }
         public static int SearchView { get; set; }
         public static string DeviceToken { get; set; }
 #endif
@@ -135,7 +145,7 @@ namespace Xamarin.Forms.CommonCore
                 fileName = $"config.{CoreSettings.CurrentBuid}.json";
 
                 var response = ResourceLoader.GetEmbeddedResourceString(Assembly.GetAssembly(typeof(ResourceLoader)), fileName);
-                if (response.Error==null)
+                if (response.Error == null)
                 {
                     try
                     {

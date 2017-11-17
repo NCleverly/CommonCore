@@ -385,6 +385,7 @@
     <Folder Include="$(MSBuildThisFileDirectory)_init\BusinessLogic\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Converters\" />
     <Folder Include="$(MSBuildThisFileDirectory)Converters\Attributes\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\_roadmap\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)PushNotifications\readme.txt" />
@@ -407,5 +408,6 @@
     <None Include="$(MSBuildThisFileDirectory)_init\Models\example.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Views\example.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Converters\AppConverters.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\_roadmap\CompressedContainers.cs.txt" />
   </ItemGroup>
 </Project>
