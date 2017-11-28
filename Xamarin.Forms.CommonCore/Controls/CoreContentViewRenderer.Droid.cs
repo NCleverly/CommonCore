@@ -5,6 +5,8 @@ using Android.Util;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+using Plugin.CurrentActivity;
+using Android.Content;
 
 [assembly: ExportRenderer(typeof(CoreContentView), typeof(CoreContentViewRenderer))]
 namespace Xamarin.Forms.CommonCore
@@ -15,6 +17,10 @@ namespace Xamarin.Forms.CommonCore
         private RectF _bounds;
         private Path _path;
 
+        public CoreContentViewRenderer(Context ctx) : base(ctx)
+        {
+
+        }
         protected override void OnElementChanged(ElementChangedEventArgs<ContentView> e)
         {
             base.OnElementChanged(e);

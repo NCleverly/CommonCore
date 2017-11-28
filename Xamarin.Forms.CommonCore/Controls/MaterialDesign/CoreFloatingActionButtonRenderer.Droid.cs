@@ -10,6 +10,7 @@ using Droid = Android;
 using System.Threading.Tasks;
 using Android.App;
 using Xamarin.Forms.CommonCore.MaterialDesign;
+using Plugin.CurrentActivity;
 
 [assembly: ExportRenderer(typeof(CoreFloatingActionButton), typeof(CoreFloatingActionButtonRenderer))]
 namespace Xamarin.Forms.CommonCore.MaterialDesign
@@ -28,23 +29,21 @@ namespace Xamarin.Forms.CommonCore.MaterialDesign
 		private readonly Ctx context;
 
 
-		public CoreFloatingActionButtonRenderer()
-		{
-
-			context = Xamarin.Forms.Forms.Context;
-
-			float d = context.Resources.DisplayMetrics.Density;
-			var margin = (int)(MARGIN_DIPS * d); // margin in pixels
+        public CoreFloatingActionButtonRenderer(Ctx ctx) :base(ctx)
+        {
+            context = ctx;
+            float d = context.Resources.DisplayMetrics.Density;
+            var margin = (int)(MARGIN_DIPS * d); // margin in pixels
 
             fab = new Refractored.Fab.FloatingActionButton(context);
-			var lp = new FrameLayout.LayoutParams(LayoutParams.WrapContent, LayoutParams.WrapContent);
-			lp.Gravity = GravityFlags.CenterVertical | GravityFlags.CenterHorizontal;
-			lp.LeftMargin = margin;
-			lp.TopMargin = margin;
-			lp.BottomMargin = margin;
-			lp.RightMargin = margin;
-			fab.LayoutParameters = lp;
-		}
+            var lp = new FrameLayout.LayoutParams(LayoutParams.WrapContent, LayoutParams.WrapContent);
+            lp.Gravity = GravityFlags.CenterVertical | GravityFlags.CenterHorizontal;
+            lp.LeftMargin = margin;
+            lp.TopMargin = margin;
+            lp.BottomMargin = margin;
+            lp.RightMargin = margin;
+            fab.LayoutParameters = lp;
+        }
 
 		protected override void OnElementChanged(ElementChangedEventArgs<CoreFloatingActionButton> e)
 		{

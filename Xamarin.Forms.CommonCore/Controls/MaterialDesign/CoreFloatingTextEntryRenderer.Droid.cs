@@ -10,14 +10,23 @@ using Android.Widget;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.CommonCore.MaterialDesign;
+using Ctx = Android.Content.Context;
 
 [assembly: ExportRenderer(typeof(CoreFloatingTextEntry), typeof(CoreFloatingTextEntryRenderer))]
 namespace Xamarin.Forms.CommonCore.MaterialDesign
 {
 	public class CoreFloatingTextEntryRenderer : ViewRenderer<CoreFloatingTextEntry, TextInputLayout>, ITextWatcher, TextView.IOnEditorActionListener
 	{
-		#region TextView.IOnEditorActionListener
-		public bool OnEditorAction(TextView v, ImeAction actionId, KeyEvent e)
+
+        private readonly Ctx context;
+
+        public CoreFloatingTextEntryRenderer(Context ctx) : base(ctx)
+        {
+            context = ctx;
+        }
+
+        #region TextView.IOnEditorActionListener
+        public bool OnEditorAction(TextView v, ImeAction actionId, KeyEvent e)
 		{
 			if (actionId == ImeAction.Done || (actionId == ImeAction.ImeNull && e.KeyCode == Keycode.Enter))
 			{
@@ -234,7 +243,7 @@ namespace Xamarin.Forms.CommonCore.MaterialDesign
 		{
 			if (!string.IsNullOrEmpty(base.Element.StyleId) && targetEditor != null)
 			{
-				var font = Typeface.CreateFromAsset(Forms.Context.ApplicationContext.Assets, base.Element.StyleId + ".ttf");
+                var font = Typeface.CreateFromAsset(context.Assets, base.Element.StyleId + ".ttf");
 				targetEditor.Typeface = font;
 			}
 			else

@@ -5,7 +5,6 @@ using Plugin.Settings;
 using Plugin.Settings.Abstractions;
 using Newtonsoft.Json;
 using System.Reflection;
-using Newtonsoft.Json.Converters;
 
 #if __ANDROID__
 using Android.Widget;
@@ -24,6 +23,15 @@ namespace Xamarin.Forms.CommonCore
     }
     public class CoreSettings
     {
+        public const string MasterDetailIsPresented = "IsPresented";
+
+        public static string CurrentBuid { get; set; } = "dev";
+        public static NetworkCredential HttpCredentials { get; set; }
+        public static bool IsConnected { get; set; } = true;
+        public static INavigation AppNav { get; set; }
+        public static Size ScreenSize { get; set; }
+        public static List<string> NotificationTags { get; set; } = new List<string>();
+
         public static DeviceOS OS
         {
             get
@@ -91,23 +99,28 @@ namespace Xamarin.Forms.CommonCore
             set { _appSettings.AddOrUpdateValue("SyncTimeStamp", value); }
         }
 
-        /// <summary>
-        /// Gets or sets the current buid.
-        /// </summary>
-        /// <value>The current buid.</value>
-        public static string CurrentBuid { get; set; } = "dev";
-        //public static AppUser CurrentUser { get; set; } = new AppUser();
-        public static NetworkCredential HttpCredentials { get; set; }
+        public static T OnPlatform<T>(params T[] parameters)
+        {
+            T obj = default(T);
 
-        public static bool IsConnected { get; set; } = true;
-        public static INavigation AppNav { get; set; }
-        public static Size ScreenSize { get; set; }
-        public static List<string> NotificationTags { get; set; } = new List<string>();
+            switch (Device.RuntimePlatform.ToUpper())
+            {
+                case "IOS":
+                    if (parameters.Length > 0)
+                        obj = parameters[0];
+                    break;
+                case "ANDROID":
+                    if (parameters.Length > 1)
+                        obj = parameters[1];
+                    break;
+                default:
+                    if (parameters.Length > 2)
+                        obj = parameters[2];
+                    break;
+            }
 
-
-#region Message Constants
-        public const string MasterDetailIsPresented = "IsPresented";
-#endregion
+            return obj;
+        }
 
 #if __ANDROID__
         public static int AppIcon { get; set; }

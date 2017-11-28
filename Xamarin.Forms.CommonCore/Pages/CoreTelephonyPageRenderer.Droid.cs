@@ -1,4 +1,5 @@
 ﻿#if __ANDROID__
+using Android.Content;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms.Platform.Android;
@@ -9,7 +10,10 @@ namespace Xamarin.Forms.CommonCore
     public class CoreTelephonyPageRenderer : PageRenderer
     {
 
+        public CoreTelephonyPageRenderer(Context ctx):base(ctx)
+        {
 
+        }
     }
 }
 #endif

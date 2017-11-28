@@ -8,6 +8,7 @@ using AToolbar = Android.Support.V7.Widget.Toolbar;
 using System.Reflection;
 using Android.Content.Res;
 using Android.Widget;
+using Android.Content;
 
 [assembly: ExportRenderer(typeof(NavigationPage), typeof(CoreNavigationPageRenderer))]
 namespace Xamarin.Forms.CommonCore
@@ -19,12 +20,12 @@ namespace Xamarin.Forms.CommonCore
     public class CoreNavigationPageRenderer : NavigationPageRenderer, Views.View.IOnClickListener
     {
 
-        private static readonly FieldInfo ToolbarFieldInfo;
+        private FieldInfo ToolbarFieldInfo;
 
         private bool _disposed;
         private AToolbar _toolbar;
 
-        static CoreNavigationPageRenderer()
+        public CoreNavigationPageRenderer(Context ctx):base(ctx)
         {
             // get _toolbar private field info
             ToolbarFieldInfo = typeof(NavigationPageRenderer).GetField("_toolbar",

@@ -11,6 +11,7 @@ using Droid = Android;
 using Xamarin.Forms.CommonCore;
 using Android.Content.PM;
 using Android.Support.V4.App;
+using Plugin.CurrentActivity;
 
 [assembly: UsesPermission(Name = "android.permission.SEND_SMS")]
 [assembly: UsesPermission(Name = "android.permission.CALL_PHONE")]
@@ -26,7 +27,7 @@ namespace Xamarin.Forms.CommonCore
 
         public Context Ctx
         {
-            get { return Xamarin.Forms.Forms.Context; }
+            get => CrossCurrentActivity.Current.Activity;
         }
 
 
@@ -64,7 +65,7 @@ namespace Xamarin.Forms.CommonCore
             }
             catch (Exception ex)
             {
-                var toast = Toast.MakeText(Xamarin.Forms.Forms.Context, "This activity is not supported", ToastLength.Long);
+                var toast = Toast.MakeText(Ctx, "This activity is not supported", ToastLength.Long);
                 toast.Show();
             }
         }
@@ -76,7 +77,7 @@ namespace Xamarin.Forms.CommonCore
 			emailIntent.PutExtra(Intent.ExtraEmail, new string[] { message.EmailAddress });
 			emailIntent.PutExtra(Intent.ExtraSubject, message.Subject);
 			emailIntent.PutExtra(Intent.ExtraText, message.Message);
-            Xamarin.Forms.Forms.Context.StartActivity(Intent.CreateChooser(emailIntent, message.Title));
+            Ctx.StartActivity(Intent.CreateChooser(emailIntent, message.Title));
 		}
 
 		public void SendSMS(string phoneNumber, string message)

@@ -6,6 +6,7 @@ using Id = Android.Resource.Id;
 using Xamarin.Forms.Platform.Android;
 using Android.Widget;
 using Android.Content;
+using Plugin.CurrentActivity;
 
 [assembly: Xamarin.Forms.Dependency(typeof(Xamarin.Forms.CommonCore.SnackBar))]
 namespace Xamarin.Forms.CommonCore
@@ -15,7 +16,7 @@ namespace Xamarin.Forms.CommonCore
         public static Snackbar Bar { get; set; }
         public Context Ctx
         {
-            get { return Xamarin.Forms.Forms.Context; }
+            get => CrossCurrentActivity.Current.Activity;
         }
         public void Show(Snack snack)
         {
@@ -25,7 +26,7 @@ namespace Xamarin.Forms.CommonCore
 
 			}
           
-            var activity = (Activity)Forms.Context; 
+            var activity = (Activity)Ctx; 
             var view = activity.FindViewById(Id.Content);
 
             SnackBar.Bar = Snackbar.Make(view, snack.Text, Snackbar.LengthLong);

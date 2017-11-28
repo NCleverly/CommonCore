@@ -4,6 +4,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using PCLCrypto;
+using Plugin.CurrentActivity;
 using Plugin.Settings;
 using Xamarin.Auth;
 using Xamarin.Forms.CommonCore;
@@ -161,11 +162,11 @@ namespace Xamarin.Forms.CommonCore
 			return null;
 
 		}
-
+       
 		private AccountStore GetStore()
 		{
 #if __ANDROID__
-            return AccountStore.Create(Xamarin.Forms.Forms.Context);
+            return AccountStore.Create(CrossCurrentActivity.Current.Activity);
 #else
 			return AccountStore.Create();
 #endif

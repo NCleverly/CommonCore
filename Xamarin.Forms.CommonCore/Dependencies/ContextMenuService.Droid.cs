@@ -1,7 +1,9 @@
 ﻿#if __ANDROID__
 using System;
 using System.Collections.Generic;
+using Android.Content;
 using Android.Widget;
+using Plugin.CurrentActivity;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using Views = Android.Views;
@@ -14,10 +16,15 @@ namespace Xamarin.Forms.CommonCore
         private PopupMenu menu;
         private Dictionary<string, Action> menuItems;
 
+        public Context Ctx
+        {
+            get => CrossCurrentActivity.Current.Activity;
+        }
+
 		public void ShowContextMenu(Xamarin.Forms.View viewRoot, Dictionary<string, Action> menuItems)
 		{
             this.menuItems = menuItems;
-			menu = new PopupMenu(Xamarin.Forms.Forms.Context, viewRoot.GetNativeView());
+			menu = new PopupMenu(Ctx, viewRoot.GetNativeView());
 			menu.Gravity = Views.GravityFlags.Right;
 			foreach (var item in menuItems)
 			{

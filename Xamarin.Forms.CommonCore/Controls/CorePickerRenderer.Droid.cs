@@ -15,6 +15,8 @@ using Object = Java.Lang.Object;
 using System.Collections.Generic;
 using System.Collections;
 using System.Reflection;
+using Plugin.CurrentActivity;
+using Android.Content;
 
 [assembly: ExportRenderer(typeof(CorePicker), typeof(CorePickerRenderer))]
 namespace Xamarin.Forms.CommonCore
@@ -26,7 +28,7 @@ namespace Xamarin.Forms.CommonCore
         private CorePicker element;
         private string[] options;
 
-        public CorePickerRenderer()
+        public CorePickerRenderer(Context ctx) : base(ctx)
         {
             AutoPackage = false;
         }

@@ -4,12 +4,19 @@ using Android.App;
 using Android.Widget;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
+using Android.Content;
+using Plugin.CurrentActivity;
 
 [assembly: Xamarin.Forms.Dependency(typeof(DialogPrompt))]
 namespace Xamarin.Forms.CommonCore
 {
     public class DialogPrompt : IDialogPrompt
     {
+        public Context Ctx
+        {
+            get => CrossCurrentActivity.Current.Activity;
+        }
+
         public void ShowMessage(Prompt prompt)
         {
             if (prompt.Callback == null)
@@ -41,7 +48,7 @@ namespace Xamarin.Forms.CommonCore
         {
             try
             {
-                var dlg = new AlertDialog.Builder(Forms.Context).Create();
+                var dlg = new AlertDialog.Builder(Ctx).Create();
                 dlg.SetTitle(title);
                 dlg.SetMessage(message);
                 dlg.SetCancelable(false);
@@ -64,7 +71,7 @@ namespace Xamarin.Forms.CommonCore
         {
             try
             {
-                var d = new AlertDialog.Builder(Forms.Context);
+                var d = new AlertDialog.Builder(Ctx);
                 d.SetTitle(title);
                 d.SetMessage(message);
                 d.SetPositiveButton(buttonTitles[0], (e, a) =>
@@ -93,14 +100,7 @@ namespace Xamarin.Forms.CommonCore
         {
             try
             {
-                //var d1 = new AlertDialog.Builder(Forms.Context);
-
-                //d1.SetPositiveButton("One", (sender, e) => { });
-                //d1.SetNeutralButton("Two", (sender, e) => { });
-                //d1.SetNegativeButton("Three", (sender, e) => { });
-                //d1.Create().Show();
-
-                var d = new AlertDialog.Builder(Forms.Context).Create();
+                var d = new AlertDialog.Builder(Ctx).Create();
 
                 d.SetTitle(title);
                 d.SetMessage(message);
@@ -146,7 +146,7 @@ namespace Xamarin.Forms.CommonCore
 
         public void ShowActionSheet(string title, string subTitle, string[] list, Action<int> callBack)
         {
-            var dlg = new AlertDialog.Builder(Forms.Context);
+            var dlg = new AlertDialog.Builder(Ctx);
             dlg.SetTitle(title);
             dlg.SetSingleChoiceItems(list, -1, (s, a) =>
             {
@@ -167,7 +167,7 @@ namespace Xamarin.Forms.CommonCore
 
         public void ShowToast(string message)
         {
-            Toast.MakeText(Xamarin.Forms.Forms.Context, message, ToastLength.Long).Show();
+            Toast.MakeText(Ctx, message, ToastLength.Long).Show();
         }
     }
 }

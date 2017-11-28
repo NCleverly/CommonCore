@@ -11,6 +11,8 @@ using Views = Android.Views;
 using Graphics = Android.Graphics;
 using System.ComponentModel;
 using Android.Views;
+using Plugin.CurrentActivity;
+using Ctx = Android.Content.Context;
 
 [assembly: ExportRenderer(typeof(CoreUnderlineEntry), typeof(CoreUnderlineEntryRenderer))]
 namespace Xamarin.Forms.CommonCore
@@ -18,7 +20,13 @@ namespace Xamarin.Forms.CommonCore
     public class CoreUnderlineEntryRenderer : EntryRenderer
     {
         private CoreUnderlineEntry formControl;
+        private readonly Ctx context;
 
+
+        public CoreUnderlineEntryRenderer(Ctx ctx) : base(ctx)
+        {
+            context = ctx;
+        }
         protected override void OnElementChanged(ElementChangedEventArgs<Xamarin.Forms.Entry> e)
         {
             base.OnElementChanged(e);
@@ -95,7 +103,7 @@ namespace Xamarin.Forms.CommonCore
                     var fileName = e.NewElement.StyleId + ".ttf";
                     if (Resources.Assets.List("").Contains(fileName))
                     {
-                        var font = Graphics.Typeface.CreateFromAsset(Forms.Context.ApplicationContext.Assets, fileName);
+                        var font = Graphics.Typeface.CreateFromAsset(context.ApplicationContext.Assets, fileName);
                         Control.Typeface = font;
                     }
                 }

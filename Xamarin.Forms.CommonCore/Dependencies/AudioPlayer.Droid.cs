@@ -4,6 +4,8 @@ using Android.Media;
 using Xamarin.Forms;
 using Content = Android.Content;
 using Xamarin.Forms.CommonCore;
+using Plugin.CurrentActivity;
+using Android.Content;
 
 [assembly: Dependency(typeof(AudioPlayer))]
 namespace Xamarin.Forms.CommonCore
@@ -14,9 +16,10 @@ namespace Xamarin.Forms.CommonCore
 
 		public Action OnFinishedPlaying { get; set; }
 
-		public AudioPlayer()
-		{
-		}
+        public Context Ctx
+        {
+            get => CrossCurrentActivity.Current.Activity;
+        }
 
 		public void Play(string pathToSoundName)
 		{
@@ -32,7 +35,7 @@ namespace Xamarin.Forms.CommonCore
 
 			try
 			{
-				afd = Forms.Context.Assets.OpenFd(fullPath);
+				afd = Ctx.Assets.OpenFd(fullPath);
 			}
 			catch (Exception ex)
 			{

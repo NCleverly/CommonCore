@@ -13,6 +13,8 @@ using AView = Android.Views.View;
 using Views = Android.Views;
 using Graphics = Android.Graphics;
 using Object = Java.Lang.Object;
+using Plugin.CurrentActivity;
+using Android.Content;
 
 [assembly: ExportRenderer(typeof(CoreDatePicker), typeof(CoreDatePickerRenderer))]
 namespace Xamarin.Forms.CommonCore
@@ -22,6 +24,10 @@ namespace Xamarin.Forms.CommonCore
         DatePickerDialog _dialog;
         bool _disposed;
 
+        public CoreDatePickerRenderer(Context ctx) :base(ctx)
+        {
+
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing && !_disposed)

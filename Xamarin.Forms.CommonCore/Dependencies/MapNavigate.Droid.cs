@@ -6,17 +6,23 @@ using Android.Widget;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
 using Net = Android.Net;
+using Plugin.CurrentActivity;
 
 [assembly: Xamarin.Forms.Dependency(typeof(MapNavigate))]
 namespace Xamarin.Forms.CommonCore
 {
     public class MapNavigate : IMapNavigate
     {
+        public Context Ctx
+        {
+            get => CrossCurrentActivity.Current.Activity;
+        }
+
         public void NavigateWithAddress(string address)
         {
             try
             {
-                var activity = (Activity)Xamarin.Forms.Forms.Context;
+                var activity = (Activity)Ctx;
                 address = System.Net.WebUtility.UrlEncode(address);
                 var gmmIntentUri = Net.Uri.Parse("google.navigation:q=" + address);
                 var mapIntent = new Intent(Intent.ActionView, gmmIntentUri);
@@ -25,7 +31,7 @@ namespace Xamarin.Forms.CommonCore
             }
             catch (Exception ex)
             {
-                Toast toast = Toast.MakeText(Xamarin.Forms.Forms.Context, "This activity is not supported", ToastLength.Long);
+                Toast toast = Toast.MakeText(Ctx, "This activity is not supported", ToastLength.Long);
                 toast.Show();
             }
 

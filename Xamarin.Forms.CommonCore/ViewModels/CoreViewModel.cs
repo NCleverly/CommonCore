@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-using Xamarin.Forms.CommonCore.Styles;
 
 namespace Xamarin.Forms.CommonCore
 {

@@ -11,6 +11,7 @@ using RemindersMethod = Android.Provider.RemindersMethod;
 using System.Linq;
 using DroidUri = Android.Net.Uri;
 using Java.Util;
+using Plugin.CurrentActivity;
 
 [assembly: Xamarin.Forms.Dependency(typeof(CalendarEvent))]
 namespace Xamarin.Forms.CommonCore
@@ -24,9 +25,10 @@ namespace Xamarin.Forms.CommonCore
         {
             get { return Ctx.ContentResolver; }
         }
+   
         public Context Ctx
         {
-            get { return Xamarin.Forms.Forms.Context; }
+            get => CrossCurrentActivity.Current.Activity;
         }
 
         public async Task<(bool result, CalendarEventModel model)> CreateCalendarEvent(CalendarEventModel calEvent)

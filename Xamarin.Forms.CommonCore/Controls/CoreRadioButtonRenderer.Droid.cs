@@ -1,6 +1,8 @@
 #if __ANDROID__
+using Android.Content;
 using Android.Content.Res;
 using Android.Widget;
+using Plugin.CurrentActivity;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms.Platform.Android;
@@ -11,11 +13,16 @@ namespace Xamarin.Forms.CommonCore
 {
     public class CoreRadioButtonRenderer: ViewRenderer<CoreRadioButton, RadioButton>
     {
+        public CoreRadioButtonRenderer(Context ctx) : base(ctx)
+        {
+
+        }
+
         protected override void OnElementChanged(ElementChangedEventArgs<CoreRadioButton> e)
         {
             base.OnElementChanged(e);
 
-            if(e.OldElement != null)
+            if (e.OldElement != null)
             {
                 e.OldElement.PropertyChanged += ElementOnPropertyChanged;  
             }

@@ -9,6 +9,8 @@ using Attribute = Android.Resource.Attribute;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
+using Plugin.CurrentActivity;
+using Android.Content;
 
 [assembly: ExportRenderer(typeof(CoreButton), typeof(CoreButtonRenderer))]
 namespace Xamarin.Forms.CommonCore
@@ -17,7 +19,12 @@ namespace Xamarin.Forms.CommonCore
 	{
 		CoreButton caller;
 
-		protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
+        public CoreButtonRenderer(Context ctx) : base(ctx)
+        {
+
+        }
+
+        protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
 		{
 			base.OnElementChanged(e);
 

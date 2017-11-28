@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Xamarin.Forms.CommonCore;
 using WindowsAzure.Messaging;
 using System.Threading.Tasks;
+using Android.Content;
+using Plugin.CurrentActivity;
 
 [assembly: Xamarin.Forms.Dependency(typeof(AzureNotificationHub))]
 namespace Xamarin.Forms.CommonCore
@@ -11,6 +13,11 @@ namespace Xamarin.Forms.CommonCore
 	public class AzureNotificationHub : IAzureNotificationHub
 	{
 		public static NotificationHub Hub { get; set; }
+
+        public Context Ctx
+        {
+            get => CrossCurrentActivity.Current.Activity;
+        }
 
 		public void RegisterNotificationHub()
 		{
@@ -24,7 +31,7 @@ namespace Xamarin.Forms.CommonCore
 				var registrationId = CoreSettings.DeviceToken;
 
 				if (AzureNotificationHub.Hub == null)
-					AzureNotificationHub.Hub = new NotificationHub(CoreSettings.Config.AzureSettings.AzureHubName, CoreSettings.Config.AzureSettings.AzureListenConnection, Xamarin.Forms.Forms.Context);
+					AzureNotificationHub.Hub = new NotificationHub(CoreSettings.Config.AzureSettings.AzureHubName, CoreSettings.Config.AzureSettings.AzureListenConnection, Ctx);
 
 				try
 				{

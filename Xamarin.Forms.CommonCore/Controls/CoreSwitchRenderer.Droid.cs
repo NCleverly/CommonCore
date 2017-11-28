@@ -1,8 +1,9 @@
 ﻿#if __ANDROID__
 using System;
+using Android.Content;
 using Android.Graphics;
 using Android.Widget;
-using Xamarin.Forms.CommonCore;
+using Plugin.CurrentActivity;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms.Platform.Android;
 using FormColor = Xamarin.Forms.Color;
@@ -15,7 +16,12 @@ namespace Xamarin.Forms.CommonCore
 		private FormColor falseColor;
 		private FormColor trueColor;
         private CoreSwitch ctrl;
-		protected override void OnElementChanged(ElementChangedEventArgs<Switch> e)
+
+        public CoreSwitchRenderer(Context ctx) : base(ctx)
+        {
+
+        }
+        protected override void OnElementChanged(ElementChangedEventArgs<Switch> e)
 		{
 			base.OnElementChanged(e);
 

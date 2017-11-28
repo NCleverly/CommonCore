@@ -128,11 +128,11 @@ Step 6 (Optional) -> In order to use differnet configuration files across dev en
         * android -> MainApplication -> OnCreate
 
         #if DEBUG
-            AppSettings.CurrentBuid = "dev";
+            CoreSettings.CurrentBuid = "dev";
         #elif QA
-            AppSettings.CurrentBuid = "qa";
+            CoreSettings.CurrentBuid = "qa";
         #elif RELEASE
-            AppSettings.CurrentBuid = "prod";
+            CoreSettings.CurrentBuid = "prod";
         #endif
 
 Step 7 (XAML projects only)

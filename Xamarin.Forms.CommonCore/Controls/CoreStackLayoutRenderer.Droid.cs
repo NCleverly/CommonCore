@@ -1,5 +1,7 @@
 ﻿#if __ANDROID__
 using System;
+using Android.Content;
+using Plugin.CurrentActivity;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms.Platform.Android;
@@ -13,6 +15,10 @@ namespace Xamarin.Forms.CommonCore
         private Color StartColor { get; set; }
         private Color EndColor { get; set; }
 
+        public CoreStackLayoutRenderer(Context ctx) : base(ctx)
+        {
+
+        }
         protected override void DispatchDraw(global::Android.Graphics.Canvas canvas)
         {
             var gradient = new Graphics.LinearGradient(0, 0, 0, 

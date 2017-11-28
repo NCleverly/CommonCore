@@ -8,6 +8,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using Util = Android.Util;
 using Graphics = Android.Graphics;
+using Plugin.CurrentActivity;
+using Android.Content;
 
 [assembly: ExportRenderer(typeof(CoreTextArea), typeof(CoreTextAreaRenderer))]
 namespace Xamarin.Forms.CommonCore
@@ -17,6 +19,11 @@ namespace Xamarin.Forms.CommonCore
         private TextView txtView;
         private CoreTextArea parent;
 
+        public CoreTextAreaRenderer(Context ctx) : base(ctx)
+        {
+
+        }
+
         protected override void OnElementChanged(ElementChangedEventArgs<CoreTextArea> e)
         {
             base.OnElementChanged(e);
@@ -25,7 +32,7 @@ namespace Xamarin.Forms.CommonCore
 
             if (txtView == null)
             {
-                txtView = new TextView(Forms.Context);
+                txtView = new TextView(CrossCurrentActivity.Current.Activity);
                 txtView.Text = e.NewElement.Text;
 
                 var textColor = Graphics.Color.Black;

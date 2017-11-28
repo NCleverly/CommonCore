@@ -1,10 +1,12 @@
 ﻿#if __ANDROID__
 using Android.App;
+using Android.Content;
 using Android.Views;
 using Android.Widget;
 using Xamarin.Forms;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms.Platform.Android;
+using Ctx = Android.Content.Context;
 
 [assembly: ExportRenderer(typeof(BasePages), typeof(BasePageRenderer))]
 namespace Xamarin.Forms.CommonCore
@@ -16,8 +18,13 @@ namespace Xamarin.Forms.CommonCore
 	{
 		private ISearchProvider _searchProvider;
 		private SearchView _searchView;
+        private readonly Ctx context;
 
-		protected override void OnElementChanged(ElementChangedEventArgs<Page> e)
+        public BasePageRenderer(Context ctx):base(ctx)
+        {
+            context = ctx;
+        }
+        protected override void OnElementChanged(ElementChangedEventArgs<Page> e)
 		{
 			base.OnElementChanged(e);
 
@@ -75,10 +82,10 @@ namespace Xamarin.Forms.CommonCore
 
 		private void ConnectSearchView()
 		{
-            var context = (Activity)Xamarin.Forms.Forms.Context;
+            var ctx = (Activity)context;
 
             if(CoreSettings.SearchView!=0)
-			    _searchView = context?.FindViewById<SearchView>(CoreSettings.SearchView);
+			    _searchView = ctx?.FindViewById<SearchView>(CoreSettings.SearchView);
 
 			if (_searchView == null) 
                 return;

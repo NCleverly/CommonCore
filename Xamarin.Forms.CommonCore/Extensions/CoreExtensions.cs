@@ -21,38 +21,7 @@ namespace Xamarin.Forms.CommonCore
 
     public static partial class CoreExtensions
     {
-        /// <summary>
-        /// Replace obsolete Device.OnPlatform method
-        /// </summary>
-        /// <returns>The value.</returns>
-        /// <param name="runtimePlatform">Runtime platform.</param>
-        /// <param name="parameters">Parameters.</param>
-        /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static T PlatformValue<T>(this string runtimePlatform, params T[] parameters )
-        {
-            T obj = default(T);
-
-            if (!string.IsNullOrEmpty(runtimePlatform))
-            {
-                switch (Device.RuntimePlatform.ToUpper())
-                {
-                    case "IOS":
-                        if (parameters.Length > 0)
-                            obj = parameters[0];
-                        break;
-                    case "ANDROID":
-                        if (parameters.Length > 1)
-                            obj = parameters[1];
-                        break;
-                    default:
-                        if (parameters.Length > 2)
-                            obj = parameters[2];
-                        break;
-                }
-            }
-            return obj;
-        }
-
+        
         private static IEncryptionService Encryption
         {
             get

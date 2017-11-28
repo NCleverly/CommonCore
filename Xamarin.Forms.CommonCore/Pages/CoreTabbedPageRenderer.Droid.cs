@@ -10,6 +10,7 @@ using Drawable = Android.Support.V4.Graphics.Drawable;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms.Platform.Android.AppCompat;
+using Android.Content;
 
 [assembly: ExportRenderer(typeof(CoreTabbedPage), typeof(CoreTabbedPageRenderer))]
 namespace Xamarin.Forms.CommonCore
@@ -21,7 +22,11 @@ namespace Xamarin.Forms.CommonCore
 		private TabLayout layout;
         private CoreTabbedPage tabbedPage;
 
-		protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
+        public CoreTabbedPageRenderer(Context ctx) : base(ctx)
+        {
+
+        }
+        protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
 		{
 			base.OnElementPropertyChanged(sender, e);
 

@@ -8,6 +8,8 @@ using Util = Android.Util;
 using System;
 using System.ComponentModel;
 using System.Reflection;
+using Android.Content;
+using Plugin.CurrentActivity;
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -60,9 +62,13 @@ namespace Xamarin.Forms.CommonCore
             }
             throw new NotSupportedException($"Not supported on Android: {value}");
         }
+        public static Context Ctx
+        {
+            get => CrossCurrentActivity.Current.Activity;
+        }
         public static float ToDevicePixels(this float number)
         {
-            var displayMetrics = Xamarin.Forms.Forms.Context.Resources.DisplayMetrics;
+            var displayMetrics = Ctx.Resources.DisplayMetrics;
            
             return (float)System.Math.Round(number * (displayMetrics.Xdpi / (float)Util.DisplayMetricsDensity.Default));
         }

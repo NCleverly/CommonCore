@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Xamarin.Forms.CommonCore.Styles
+namespace Xamarin.Forms.CommonCore
 {
     public class CoreStyles
     {

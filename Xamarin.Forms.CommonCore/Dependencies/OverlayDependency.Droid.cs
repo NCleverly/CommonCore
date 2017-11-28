@@ -10,6 +10,7 @@ using Resource = Android.Resource;
 using Widget = Android.Widget;
 using Graphics = Android.Graphics;
 using Views = Android.Views;
+using Plugin.CurrentActivity;
 
 [assembly: Xamarin.Forms.Dependency(typeof(OverlayDependency))]
 namespace Xamarin.Forms.CommonCore
@@ -20,11 +21,9 @@ namespace Xamarin.Forms.CommonCore
 
         public Context Ctx
         {
-            get
-            {
-                return Xamarin.Forms.Forms.Context;
-            }
+            get => CrossCurrentActivity.Current.Activity;
         }
+
         public void HideOverlay()
         {
             dialog?.Hide();

@@ -2,6 +2,7 @@
 using Android.App;
 using Android.Content;
 using Android.OS;
+using Plugin.CurrentActivity;
 
 namespace PushNotification.Plugin
 {
@@ -10,7 +11,7 @@ namespace PushNotification.Plugin
     {
         public Context Ctx
         {
-            get { return Xamarin.Forms.Forms.Context; }
+            get => CrossCurrentActivity.Current.Activity;
         }
         public override void OnCreate()
         {

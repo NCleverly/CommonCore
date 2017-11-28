@@ -9,6 +9,8 @@ using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 using DroidView = Android.Views.View;
+using Plugin.CurrentActivity;
+using Android.Content;
 
 [assembly: ExportRenderer(typeof(CoreSegmentButton), typeof(CoreSegmentButtonRenderer))]
 [assembly: ExportRenderer(typeof(CoreSegment), typeof(CoreSegmentRenderer))]
@@ -16,6 +18,10 @@ namespace Xamarin.Forms.CommonCore
 {
     public class CoreSegmentButtonRenderer : ButtonRenderer
     {
+        public CoreSegmentButtonRenderer(Context ctx) : base(ctx)
+        {
+
+        }
 
         private Button _formControl
         {
@@ -42,7 +48,7 @@ namespace Xamarin.Forms.CommonCore
             get { return Element as CoreSegment; }
         }
 
-        public CoreSegmentRenderer()
+        public CoreSegmentRenderer(): base(CrossCurrentActivity.Current.Activity)
         {
             SetWillNotDraw(false);
         }

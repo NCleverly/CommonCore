@@ -7,6 +7,8 @@ using Android.Renderscripts;
 using Xamarin.Forms.CommonCore;
 using Resource = Android.Resource;
 using Renderscripts = Android.Renderscripts;
+using Android.Content;
+using Plugin.CurrentActivity;
 
 [assembly: Xamarin.Forms.Dependency(typeof(BlurOverlay))]
 namespace Xamarin.Forms.CommonCore
@@ -14,9 +16,15 @@ namespace Xamarin.Forms.CommonCore
     public class BlurOverlay : IBlurOverlay
     {
         public static Dialog dialog;
+
+        public Context Ctx
+        {
+            get => CrossCurrentActivity.Current.Activity;
+        }
+
         public void Show()
         {
-            var obj = (Activity)Xamarin.Forms.Forms.Context;
+            var obj = (Activity)Ctx;
             var root = obj.Window.DecorView.FindViewById(Resource.Id.Content);
             root.DrawingCacheEnabled = true;
             var b = Bitmap.CreateBitmap(root.GetDrawingCache(true));

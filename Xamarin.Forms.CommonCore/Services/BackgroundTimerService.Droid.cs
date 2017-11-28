@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
+using Plugin.CurrentActivity;
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -19,7 +20,10 @@ namespace Xamarin.Forms.CommonCore
         public IIntervalCallback CallBack { get; set; }
 		public Intent timerServiceIntent;
 
-		public Context Ctx { get { return Xamarin.Forms.Forms.Context; } }
+        public Context Ctx
+        {
+            get => CrossCurrentActivity.Current.Activity;
+        }
 
 		public static TimerBackground Instance = new TimerBackground();
 

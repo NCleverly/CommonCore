@@ -5,6 +5,7 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Support.V4.App;
+using Plugin.CurrentActivity;
 using Xamarin.Forms.CommonCore;
 using App = Android.App;
 using Content = Android.Content;
@@ -16,7 +17,7 @@ namespace Xamarin.Forms.CommonCore
     {
         public Context Ctx
         {
-            get { return Xamarin.Forms.Forms.Context; }
+            get => CrossCurrentActivity.Current.Activity;
         }
 
         public Type MainType
