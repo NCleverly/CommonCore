@@ -35,6 +35,7 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
+
         /// <summary>
         /// AuthenticatorService for Google, Facebook and Microsoft.
         /// </summary>

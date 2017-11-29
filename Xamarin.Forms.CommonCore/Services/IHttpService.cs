@@ -16,7 +16,8 @@ namespace Xamarin.Forms.CommonCore
         Task<(T Response, bool Success, Exception Error)> Put<T>(string url, object obj) where T : class, new();
 		Task<string> GetStringContent<T>(HttpResponseMessage response) where T : class, new();
         Task<(string Response, bool Success, Exception Error)> GetRaw(string url);
-        WebDownloadClient GetWebDownloadClient();
+        Task<(bool Success, Exception Error)> UploadFile(string url, byte[] obj, string fileName);
+        Task<byte[]> DownloadFile(string url, Action<double> percentChanged, Action<Exception> error, string token = null);
         HttpClient Client { get; set; }
 	}
 }

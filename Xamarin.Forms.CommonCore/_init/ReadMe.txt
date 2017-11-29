@@ -19,6 +19,7 @@ Required Nuget Installs
  - ModernHttpClient
  - Newtonsoft.Json
  - PCLCrypto
+ - FluentFTP
  - Plugin.Permissions /* https://blog.xamarin.com/plugin-permission-changes-ios-11/?utm_source=vs_developer_news&utm_medium=referral */
  - Xam.Plugin.Connectivity
  - Xam.Plugins.Settings
@@ -44,6 +45,7 @@ Required Nuget Installs
             -> Refractored.FloatingActionButton
             -> Xamarin.Azure.NotificationHubs.Android
             -> Xamarin.GooglePlayServices.Gcm
+            -> Plugin.CurrentActivity
 
 Suggested
 - Iconize /* https://github.com/jsmarcus/Xamarin.Plugins/tree/master/Iconize */

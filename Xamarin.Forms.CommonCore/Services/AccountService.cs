@@ -4,11 +4,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using PCLCrypto;
-using Plugin.CurrentActivity;
 using Plugin.Settings;
 using Xamarin.Auth;
 using Xamarin.Forms.CommonCore;
 using static PCLCrypto.WinRTCrypto;
+
+#if __ANDROID__
+using Plugin.CurrentActivity;
+#endif
 
 namespace Xamarin.Forms.CommonCore
 {

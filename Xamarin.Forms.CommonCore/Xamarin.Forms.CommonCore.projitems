@@ -228,7 +228,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Settings\CoreSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\Navigation\CoreNavigationPageRenderer.Droid.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Pages\CoreMasterDetailPage.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\WebDownloadClient.cs">
+    <Compile Include="$(MSBuildThisFileDirectory)Services\FileDownloadManager.cs">
       <DependentUpon>IHttpService.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Services\CoreSqlModel.cs">

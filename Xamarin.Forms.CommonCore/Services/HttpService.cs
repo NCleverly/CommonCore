@@ -14,15 +14,9 @@ namespace Xamarin.Forms.CommonCore
     public class HttpService : IHttpService, IDisposable
     {
         private HttpClient httpClient;
-		private HttpMessageHandler handler;
+        private HttpMessageHandler handler;
         private JsonSerializer _serializer;
-
         public string json;
-
-        public WebDownloadClient GetWebDownloadClient()
-        {
-            return new WebDownloadClient() { Client = new WebClient() };
-        }
 
         public HttpClient Client
         {
@@ -65,28 +59,28 @@ namespace Xamarin.Forms.CommonCore
                     }
 
 #elif __ANDROID__
-			switch (CoreSettings.Config.HttpSettings.AndroidHttpHandler)
-			{
-				case "ModernHttpClient":
-					handler = new NativeMessageHandler()
-					{
-						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
-					};
+                    switch (CoreSettings.Config.HttpSettings.AndroidHttpHandler)
+                    {
+                        case "ModernHttpClient":
+                            handler = new NativeMessageHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
+                            };
 
-					break;
-				case "AndroidClientHandler":
-					handler = new Xamarin.Android.Net.AndroidClientHandler()
-					{
-						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
-					};
-					break;
-				default:
-					handler = new HttpClientHandler()
-					{
-						AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
-					};
-					break;
-			}
+                            break;
+                        case "AndroidClientHandler":
+                            handler = new Xamarin.Android.Net.AndroidClientHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
+                            };
+                            break;
+                        default:
+                            handler = new HttpClientHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
+                            };
+                            break;
+                    }
 #else
 			handler = new HttpClientHandler();
 #endif
@@ -126,7 +120,7 @@ namespace Xamarin.Forms.CommonCore
 
         public void AddNetworkCredentials(NetworkCredential cred)
         {
-            if(handler!=null)
+            if (handler != null)
             {
                 var prop = handler.GetType().GetProperty("Credentials");
                 if (prop != null)
@@ -136,7 +130,7 @@ namespace Xamarin.Forms.CommonCore
 
         public async Task<(string Response, bool Success, Exception Error)> FormPost(string url, HttpContent content)
         {
-     
+
             if (!CoreSettings.IsConnected)
             {
                 return (null, false, new ApplicationException("Network Connection Error"));
@@ -171,10 +165,10 @@ namespace Xamarin.Forms.CommonCore
 
         public async Task<(string Response, bool Success, Exception Error)> GetRaw(string url)
         {
-			if (!CoreSettings.IsConnected)
-			{
-				return (null, false, new ApplicationException("Network Connection Error"));
-			}
+            if (!CoreSettings.IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
 
             try
             {
@@ -183,10 +177,12 @@ namespace Xamarin.Forms.CommonCore
                 using (var srvResponse = await Client.GetAsync(url).ConfigureAwait(false))
                 {
                     var jsonResult = await srvResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
-                    if (srvResponse.StatusCode == HttpStatusCode.OK){
+                    if (srvResponse.StatusCode == HttpStatusCode.OK)
+                    {
                         return (jsonResult, true, null);
                     }
-                    else{
+                    else
+                    {
                         return (null, false, new ApplicationException(jsonResult));
                     }
 
@@ -195,17 +191,17 @@ namespace Xamarin.Forms.CommonCore
             }
             catch (Exception ex)
             {
-				ex.ConsoleWrite();
-				return (null, false, ex);
+                ex.ConsoleWrite();
+                return (null, false, ex);
             }
 
         }
         public async Task<(T Response, bool Success, Exception Error)> Get<T>(string url) where T : class, new()
         {
-			if (!CoreSettings.IsConnected)
-			{
-				return (null, false, new ApplicationException("Network Connection Error"));
-			}
+            if (!CoreSettings.IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
 
             try
             {
@@ -213,32 +209,94 @@ namespace Xamarin.Forms.CommonCore
 
                 using (var srvResponse = await Client.GetAsync(url).ConfigureAwait(false))
                 {
-                    if(CoreSettings.Config.HttpSettings.DisplayRawJson){
-						json = await GetStringContent<T>(srvResponse).ConfigureAwait(false);
+                    if (CoreSettings.Config.HttpSettings.DisplayRawJson)
+                    {
+                        json = await GetStringContent<T>(srvResponse).ConfigureAwait(false);
                         var response = await DeserializeObject<T>(json).ConfigureAwait(false);
-						json = string.Empty;
+                        json = string.Empty;
                         return (response, true, null);
-					}
-                    else{
-						srvResponse.EnsureSuccessStatusCode();
-						var response = await DeserializeStream<T>(srvResponse);
-						return (response, true, null);
+                    }
+                    else
+                    {
+                        srvResponse.EnsureSuccessStatusCode();
+                        var response = await DeserializeStream<T>(srvResponse);
+                        return (response, true, null);
                     }
                 }
 
             }
             catch (Exception ex)
             {
-				ex.ConsoleWrite();
-				return (null, false, ex);
+                ex.ConsoleWrite();
+                return (null, false, ex);
             }
         }
+
+        public async Task<(bool Success, Exception Error)> UploadFile(string url, byte[] obj, string fileName)
+        {
+            try
+            {
+                var fileContent = new ByteArrayContent(obj);
+                fileContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
+                {
+                    Name = "file",
+                    FileName = fileName
+                };
+                var id = CoreSettings.InstallationId.Replace("-",string.Empty);
+                string boundary = $"---{id}";
+                var multipartContent = new MultipartFormDataContent(boundary);
+                multipartContent.Add(fileContent);
+                var response = await Client.PostAsync(url, multipartContent);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    return (true, null);
+                }
+                else
+                {
+                    return (false, new ApplicationException(response.ReasonPhrase));
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, ex);
+            }
+
+        }
+
+        public async Task<byte[]> DownloadFile(string url, Action<double> percentChanged, Action<Exception> error, string token = null)
+        {
+            try
+            {
+                return await Task.Run(async () =>
+                {
+                    using (var dwn = new FileDownloadManager())
+                    {
+                        var taskCompletionSource = new TaskCompletionSource<byte[]>();
+                        dwn.BearerToken = token;
+                        dwn.DownloadUrl = url;
+                        dwn.DownloadCompleted = (obj) => taskCompletionSource.SetResult(obj);
+                        dwn.ProgressChanged = percentChanged;
+                        await dwn.StartDownload();
+                        return await taskCompletionSource.Task;
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                error?.Invoke(ex);
+                return null;
+            }
+
+        }
+
         public async Task<(T Response, bool Success, Exception Error)> Post<T>(string url, object obj) where T : class, new()
         {
-			if (!CoreSettings.IsConnected)
-			{
-				return (null, false, new ApplicationException("Network Connection Error"));
-			}
+            if (!CoreSettings.IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
 
             try
             {
@@ -251,30 +309,31 @@ namespace Xamarin.Forms.CommonCore
                     {
                         json = await GetStringContent<T>(srvResponse).ConfigureAwait(false);
                         var response = await DeserializeObject<T>(json).ConfigureAwait(false);
-						json = string.Empty;
-						return (response, true, null);
+                        json = string.Empty;
+                        return (response, true, null);
                     }
-                    else{
-						srvResponse.EnsureSuccessStatusCode();
-						var response = await DeserializeStream<T>(srvResponse);
-						return (response, true, null);
+                    else
+                    {
+                        srvResponse.EnsureSuccessStatusCode();
+                        var response = await DeserializeStream<T>(srvResponse);
+                        return (response, true, null);
                     }
                 }
 
             }
             catch (Exception ex)
             {
-				ex.ConsoleWrite();
-				return (null, false, ex);
+                ex.ConsoleWrite();
+                return (null, false, ex);
             }
 
         }
         public async Task<(T Response, bool Success, Exception Error)> Put<T>(string url, object obj) where T : class, new()
         {
-			if (!CoreSettings.IsConnected)
-			{
-				return (null, false, new ApplicationException("Network Connection Error"));
-			}
+            if (!CoreSettings.IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
 
             try
             {
@@ -287,22 +346,22 @@ namespace Xamarin.Forms.CommonCore
                     {
                         json = await GetStringContent<T>(srvResponse);
                         var response = await DeserializeObject<T>(json);
-						json = string.Empty;
-						return (response, true, null);
+                        json = string.Empty;
+                        return (response, true, null);
                     }
                     else
                     {
-						srvResponse.EnsureSuccessStatusCode();
+                        srvResponse.EnsureSuccessStatusCode();
                         var response = await DeserializeStream<T>(srvResponse);
-						return (response, true, null);
+                        return (response, true, null);
                     }
                 }
 
             }
             catch (Exception ex)
             {
-				ex.ConsoleWrite();
-				return (null, false, ex);
+                ex.ConsoleWrite();
+                return (null, false, ex);
             }
 
         }
@@ -352,8 +411,8 @@ namespace Xamarin.Forms.CommonCore
             });
         }
 
-		private Task<T> DeserializeStream<T>(HttpResponseMessage response)
-		{
+        private Task<T> DeserializeStream<T>(HttpResponseMessage response)
+        {
             return Task.Run(async () =>
             {
                 using (var stream = await response.Content.ReadAsStreamAsync())
@@ -367,7 +426,7 @@ namespace Xamarin.Forms.CommonCore
                     }
                 }
             });
-		}
+        }
 
         public void Dispose()
         {
