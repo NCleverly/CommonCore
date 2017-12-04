@@ -1,10 +1,6 @@
 ﻿{
   "AnalyticsEnabled": false,
   "AESEncryptionKey": "123",
-  "AzureSettings": {
-    "AzureHubName": "hubname",
-    "AzureListenConnection": ""
-  },
   "HttpSettings": {
     "DisplayRawJson": false,
     "HttpTimeOut": 0,
@@ -21,9 +17,6 @@
     },
     "FaceBookAppId": "",
     "MicrosoftAppId": ""
-  },
-  "SqliteSettings": {
-    "SQLiteDatabase": "app.db3"
   },
   "MobileCenter_HockeyApp": {
     "IOSAppId": "",

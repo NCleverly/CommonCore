@@ -10,12 +10,11 @@ Android SDK Manager - > Extras
 
  ******** QUICKSTART *********
  nuget packets listed below can be imported using the following:
- https://www.nuget.org/packages/Xamarin.Form.CommonCore.Droid/1.0.7
- https://www.nuget.org/packages/Xamarin.Form.CommonCore.IOS/1.0.7
+ https://www.nuget.org/packages/Xamarin.Form.CommonCore.Droid/1.0.11
+ https://www.nuget.org/packages/Xamarin.Form.CommonCore.IOS/1.0.11
  *****************************
 
 Required Nuget Installs
- - sqlite-net-pcl
  - ModernHttpClient
  - Newtonsoft.Json
  - PCLCrypto
@@ -40,10 +39,8 @@ Required Nuget Installs
  - Platform Specific Installs:
     - iOS   -> BTProgressHud
             -> TTGSnackbar
-         	-> Xamarin.Azure.NotificationHubs.iOS
     - Droid -> AndHud
             -> Refractored.FloatingActionButton
-            -> Xamarin.Azure.NotificationHubs.Android
             -> Xamarin.GooglePlayServices.Gcm
             -> Plugin.CurrentActivity
 
@@ -73,19 +70,41 @@ Step 1:
 
         HttpTimeOut: zero means there is no timeout
 
-   
-Step 2 (enabling push notifications) -> see readme under PushNotifications
+Step 2: Embedded Database:
+    Sqlite:
+        Import Xamarin.Forms.CommonCore.Sqlite and follow instructions in readme.txt.  Example implementation
+        in the reference guide project.
+    Realm:
+        Source: https://realm.io/docs/dotnet/latest/
+        Blog article: https://blog.xamarin.com/cross-platform-development-with-xamarin-forms-and-realm/
+        Sample: https://github.com/azdevelopnet/CommonCore.Samples/tree/master/database_samples/realmDemo
+    LiteDb:
+        Source: http://www.litedb.org/
+        Sample: https://github.com/azdevelopnet/CommonCore.Samples/tree/master/database_samples/realmDemo
+    CouchDb:
+        Source: https://www.couchbase.com/
+        Sample: https://github.com/azdevelopnet/CommonCore.Samples/tree/master/database_samples/couchdbDemo
 
-Step 3 (optional OAuth Setup) -> see readme.authentication.txt nested file under IAuthenticatorService 
+Step 3 (enabling push notifications) -> 
+     Azure Option:
+        Import Xamarin.Forms.CommonCore.AzurePush and follow instructions in readme.txt.  Example implementation
+        in the reference guide project.
+     OneSignal Option:
+        Go to : https://documentation.onesignal.com/docs/xamarin-sdk-setup and follow setup instructions.
+     Microsoft App Center Option:
+        iOS: go to https://docs.microsoft.com/en-us/appcenter/sdk/push/xamarin-ios and follow setup instructions.
+        Android: go to https://docs.microsoft.com/en-us/appcenter/sdk/push/xamarin-android and follow setup instructions.
+
+Step 4 (optional OAuth Setup) -> see readme.authentication.txt nested file under IAuthenticatorService 
 in the Services folder. /* CustomTab for Android has issues with Xamarin.Android.Support version 25 */
 
-Step 4 (Setup Fody) ->  Make sure the FodyWeavers.xml file installed from PropertyChanged.Fody nuget has the following:
+Step 5 (Setup Fody) ->  Make sure the FodyWeavers.xml file installed from PropertyChanged.Fody nuget has the following:
 <?xml version="1.0" encoding="utf-8" ?>
 <Weavers>
     <PropertyChanged/>
 </Weavers>
 
-Step 5 (Optional) -> You may want to setup the Forms Application page to include the following within override lifecyle methods:
+Step 6 (Optional) -> You may want to setup the Forms Application page to include the following within override lifecyle methods:
 
         protected override void OnStart()
         {
@@ -119,7 +138,7 @@ Step 5 (Optional) -> You may want to setup the Forms Application page to include
         }
 
 
-Step 6 (Optional) -> In order to use differnet configuration files across dev environments, you need to modify build settings.
+Step 7 (Optional) -> In order to use differnet configuration files across dev environments, you need to modify build settings.
     * Right click on the solution and selection options
     * In the dialog box under Build select Configuration
     * Out of the box there should be Debug and Release.  You can add QA or any other custom name you want.
@@ -137,7 +156,7 @@ Step 6 (Optional) -> In order to use differnet configuration files across dev en
             CoreSettings.CurrentBuid = "prod";
         #endif
 
-Step 7 (XAML projects only)
+Step 8 (XAML projects only)
     * Projects Options -> Output-> Assembly Name (make the same for both Android and iOS projects)
     * Add the following xmlns to your pages:
         xmlns:core="clr-namespace:Xamarin.Forms.CommonCore;assembly=yourassemblyname" 

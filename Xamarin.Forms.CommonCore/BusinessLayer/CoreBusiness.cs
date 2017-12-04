@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace Xamarin.Forms.CommonCore
 {
-    public abstract class CoreBusiness : IDisposable
+    public partial class CoreBusiness : IDisposable
     {
         #region ReadOnly AppData Settings
         [JsonIgnore]
@@ -49,18 +49,7 @@ namespace Xamarin.Forms.CommonCore
                 return (IBackgroundTimer)CoreDependencyService.GetService<IBackgroundTimer, BackgroundTimer>(true);
             }
         }
-        /// <summary>
-        /// Embedded local database with tables defined by the application configuration file
-        /// </summary>
-        /// <value>The sqlite db.</value>
-        [JsonIgnore]
-        protected ISqliteDb SqliteDb
-        {
-            get
-            {
-                return (ISqliteDb)CoreDependencyService.GetService<ISqliteDb, SqliteDb>(true);
-            }
-        }
+
         /// <summary>
         /// Service that provides network calls over http.
         /// </summary>

@@ -5,12 +5,6 @@ using Newtonsoft.Json.Converters;
 
 namespace Xamarin.Forms.CommonCore
 {
-	public partial class AzureSettings
-	{
-		public string AzureHubName { get; set; }
-		public string AzureListenConnection { get; set; }
-	}
-
 	public partial class HttpSettings
 	{
         public bool DisplayRawJson { get; set; } = false;
@@ -34,11 +28,6 @@ namespace Xamarin.Forms.CommonCore
 		public string OAuthClientID_UWP { get; set; }
 	}
 
-	public class SqliteSettings
-	{
-		public string SQLiteDatabase { get; set; }
-	}
-
 	public class MobileCenterHockeyApp
 	{
 		public string IOSAppId { get; set; }
@@ -51,9 +40,7 @@ namespace Xamarin.Forms.CommonCore
         public bool AnalyticsEnabled { get; set; } = false;
         public string AESEncryptionKey { get; set; }
 		public HttpSettings HttpSettings { get; set; }
-		public AzureSettings AzureSettings { get; set; }
 		public SocialMedia SocialMedia { get; set; }
-		public SqliteSettings SqliteSettings { get; set; }
 		public MobileCenterHockeyApp MobileCenter_HockeyApp { get; set; }
 		public Dictionary<string,string> WebApi { get; set; }
 		public Dictionary<string, string> CustomSettings { get; set; }
