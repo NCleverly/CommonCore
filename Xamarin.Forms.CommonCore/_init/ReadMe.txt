@@ -160,18 +160,27 @@ Step 8 (XAML projects only)
     * Projects Options -> Output-> Assembly Name (make the same for both Android and iOS projects)
     * Add the following xmlns to your pages:
         xmlns:core="clr-namespace:Xamarin.Forms.CommonCore;assembly=yourassemblyname" 
-    * Define your pages with BoundPage and Set ViewModel property to fully qualified ViewModel name (example):
+    * Define your pages with CorePage and Set ViewModel property to fully qualified ViewModel name (example):
 
-    <?xml version="1.0" encoding="UTF-8"?>
-    <core:BoundPage xmlns="http://xamarin.com/schemas/2014/forms" 
-        ViewModel="fullyqualifiedNamespace.AppViewModel" 
-        xmlns:core="clr-namespace:Xamarin.Forms.CommonCore;assembly=yourassemblyname" 
+    <?xml version="1.0" encoding="utf-8"?>
+    <core:CorePage xmlns="http://xamarin.com/schemas/2014/forms" 
+        xmlns:core="clr-namespace:Xamarin.Forms.CommonCore;assembly=CommonCore.XamlReferenceGuide" 
         xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-        x:Class="fullyqualifiedNamespace.BehaviorsPage" 
-        Title="Core Behaviors">
-        <StackLayout>
-        </StackLayout>
-    </core:BoundPage>
+        xmlns:local="clr-namespace:CommonCore.XamlReferenceGuide" 
+        xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+        x:Class="CommonCore.XamlReferenceGuide.CommonCore_XamlReferenceGuidePage" 
+        ViewModel="CommonCore.XamlReferenceGuide.AppViewModel">
+        <ScrollView>
+            <StackLayout Padding="20">
+                <ffimageloading:CachedImage Margin="20,60,60,20" HeightRequest="200" WidthRequest="200" CacheDuration="30" RetryCount="3" RetryDelay="250" Source="angrymonkey300.png">
+                </ffimageloading:CachedImage>
+                <core:CoreButton Margin="20,0,20,5" Text="Core List View" Style="{StaticResource LightOrange}" Command="{Binding ViewListControl}">
+                </core:CoreButton>
+                <core:CoreButton Margin="20,0,20,5" Text="Behaviors" Style="{StaticResource LightOrange}" Command="{Binding ViewBehaviors}">
+                </core:CoreButton>
+            </StackLayout>
+        </ScrollView>
+    </core:CorePage>
 
     * Copy Application.Resources from the _init/Styles/AppStyles.xaml.txt file into your App.xaml as a starter for styles.
 
