@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{7C91473E-7771-4A21-838A-BF246D44537E}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Xamarin.Forms.CommonCore.AzurePush</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Abstractions\DeviceType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Abstractions\IPushNotification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Abstractions\IPushNotificationListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Abstractions\PushNotificationKeys.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Abstractions\PushNotificationNotInitializedException.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\AppUpdateReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\PushNotificationGcmListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\PushNotificationImplementation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\PushNotificationInstanceIDListenerService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\PushNotificationRegistrationIntentService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\PushNotificationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\Android\PushNotificationsReceiver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\CrossPushNotification.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\IOS\IPushNotificationListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PushNotifications\IOS\PushNotificationImplementation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IAzureNotificationHub.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\AzureNotificationHub.Droid.cs">
+      <DependentUpon>IAzureNotificationHub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\AzureNotificationHub.IOS.cs">
+      <DependentUpon>IAzureNotificationHub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Configurations\AzureSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Configurations\AzureCoreConfiguration.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AzurePushCoreViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)PushNotifications\readme.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Dependencies\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Configurations\" />
+    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+  </ItemGroup>
+</Project>
