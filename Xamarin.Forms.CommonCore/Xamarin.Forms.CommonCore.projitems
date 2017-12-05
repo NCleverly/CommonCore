@@ -261,16 +261,6 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\CoreContenView.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\CoreDisclosureViewCell.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Fonts\FontAwesome.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Fonts\EntypoPlus.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Fonts\Ionicons.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Fonts\Material.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Fonts\Meteocons.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Fonts\SimpleLineIcons.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Fonts\Typicons.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Fonts\WeatherIcons.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Fonts\Util\FontUtil.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Fonts\Sources\FontImageSource.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BusinessLayer\CoreBusiness.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\CorePickerRenderer.Droid.cs">
       <DependentUpon>CorePicker.cs</DependentUpon>
@@ -340,9 +330,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)_init\Partials\" />
     <Folder Include="$(MSBuildThisFileDirectory)Animations\" />
     <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Fonts\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Fonts\Util\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Fonts\Sources\" />
     <Folder Include="$(MSBuildThisFileDirectory)BusinessLayer\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\ViewModels\" />

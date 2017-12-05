@@ -22,7 +22,7 @@ namespace Xamarin.Forms.CommonCore
 
     public class FontUtil
     {
-        public FontItem GetFont(string friendlyName, FontType fontType)
+        public static FontItem GetFont(string friendlyName, FontType fontType)
         {
             var f = new FontItem()
             {
