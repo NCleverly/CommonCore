@@ -242,4 +242,29 @@ https://romannurik.github.io/AndroidAssetStudio/index.html
 https://quicktype.io/
 
 
+***************************** STYLES IN XAML ******************************
+
+see -> https://blog.xamarin.com/easy-app-theming-with-xamarin-forms-styles/
+
+<Application
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="namespace.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="backgroundColor">#33302E</Color>
+            <Color x:Key="textColor">White</Color>
+ 
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{DynamicResource textColor}" />
+            </Style>
+            <Style x:Key="backgroundStyle" TargetType="VisualElement">
+                <Setter Property="BackgroundColor" Value="{DynamicResource backgroundColor}" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+
+
+
 

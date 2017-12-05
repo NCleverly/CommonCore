@@ -351,6 +351,17 @@
     <Folder Include="$(MSBuildThisFileDirectory)_init\Converters\" />
     <Folder Include="$(MSBuildThisFileDirectory)Converters\Attributes\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\_roadmap\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\_roadmap\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\BusinessLogic\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Config\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Converters\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Extensions\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Models\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Partials\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Settings\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Styles\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Views\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Services\readme.authentication.txt">
@@ -359,19 +370,17 @@
     <None Include="$(MSBuildThisFileDirectory)Services\ActivityCustomUrlSchemeInterceptor.txt">
       <DependentUpon>IAuthenticatorService.cs</DependentUpon>
     </None>
-    <None Include="$(MSBuildThisFileDirectory)_init\Config\config.dev.json.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\Styles\AppStyles.cs.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\Settings\AppSettings.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\FodyWeavers.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\ReadMe.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\Partials\PartialCoreConfiguration.cs.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\Partials\PartialCoreViewModel.cs.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\Styles\AppStyles.xaml.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\BusinessLogic\example.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\ViewModels\example.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\Models\example.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\Views\example.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\Converters\AppConverters.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\_roadmap\CompressedContainers.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\BusinessLogic\SomeBusinessLogic.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Config\config.dev.json.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Converters\SomeValueConverter.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Models\SomeObject.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialClasses.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Settings\AppSettings.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Styles\AppStyles.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\ViewModels\SomeViewModel.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Views\SomePage.cs.txt" />
   </ItemGroup>
 </Project>

@@ -29,7 +29,7 @@ namespace somenamespace
         public CompressedStackLayout()
         {
             if(CoreSettings.OS== DeviceOS.ANDROID)
-                this.SetValue(.IsHeadlessProperty, true);
+                this.SetValue(CompressedLayout.IsHeadlessProperty, true);
         }
     }
 
@@ -42,7 +42,7 @@ namespace somenamespace
         public CompressedAbsoluteLayout()
         {
             if (CoreSettings.OS == DeviceOS.ANDROID)
-                this.SetValue(.IsHeadlessProperty, true);
+                this.SetValue(CompressedLayout.IsHeadlessProperty, true);
         }
     }
     /// <summary>
@@ -54,7 +54,7 @@ namespace somenamespace
         public CompressedGrid()
         {
             if (CoreSettings.OS == DeviceOS.ANDROID)
-                this.SetValue(.IsHeadlessProperty, true);
+                this.SetValue(CompressedLayout.IsHeadlessProperty, true);
         }
     }
     /// <summary>
@@ -66,7 +66,7 @@ namespace somenamespace
         public CompressedRelativeLayout()
         {
             if (CoreSettings.OS == DeviceOS.ANDROID)
-                this.SetValue(.IsHeadlessProperty, true);
+                this.SetValue(CompressedLayout.IsHeadlessProperty, true);
         }
     }
 
