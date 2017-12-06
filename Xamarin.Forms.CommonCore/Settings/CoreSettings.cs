@@ -90,7 +90,7 @@ namespace Xamarin.Forms.CommonCore
 
                 if (id == default(long))
                 {
-                    id = DateTime.UtcNow.Ticks;
+                    id = DateTime.UtcNow.AddDays(-30).Ticks;
                     _appSettings.AddOrUpdateValue("SyncTimeStamp", id);
                 }
 
