@@ -10,14 +10,16 @@ CommonCore uses Unity to create static instances of the application's view model
 API Documentation:
 http://azdevelop.net/commoncoredocs/html/files.html
 
-# CommonCore.Sqlite
+---
 
-This project provides additional implementation to use Sqlite as the embedded database on a project that uses the CommonCore template. (Example found on reference guide project)
+### CommonCore.Sqlite
 
-# CommonCore.AzurePush
+⋅⋅⋅This project provides additional implementation to use Sqlite as the embedded database on a project that uses the CommonCore template. (Example found on reference guide project)
 
-This project provides additional implementation to use Azure Push Notifications on a project that uses the CommonCore template. (Example found on reference guide project)
+### CommonCore.AzurePush
 
-# CommonCore.Fonts
+⋅⋅⋅This project provides additional implementation to use Azure Push Notifications on a project that uses the CommonCore template. (Example found on reference guide project)
 
-This project provides additional implementation to use Custom Fonts on a project that uses the CommonCore template. (Example found on reference guide project)
+### CommonCore.Fonts
+
+⋅⋅⋅This project provides additional implementation to use Custom Fonts on a project that uses the CommonCore template. (Example found on reference guide project)
