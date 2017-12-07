@@ -73,7 +73,7 @@ namespace Xamarin.Forms.CommonCore
             });
 
 		}
-		public async Task<(bool Success, Exception Error)> SaveAccountStore<T>(string username, string password, T obj) where T : class, new()
+		public async Task<(bool Success, Exception Error)> SaveAccountStore<T>(string username, string password, T obj, bool pwdHashed=false) where T : class, new()
 		{
             return await Task.Run(() =>
             {
@@ -81,7 +81,7 @@ namespace Xamarin.Forms.CommonCore
                 try
                 {
                     var account = GetAccount(username);
-                    PersistAccount(account, username, password, obj);
+                    PersistAccount(account, username, password, obj, pwdHashed);
                     SaveAccount(account, username);
   
                 }
@@ -93,7 +93,7 @@ namespace Xamarin.Forms.CommonCore
             });
 
 		}
-		public async Task<(T Response, bool Success, Exception Error)> GetAccountStore<T>(string username, string password) where T : class, new()
+        public async Task<(T Response, bool Success, Exception Error)> GetAccountStore<T>(string username, string password, bool pwdHashed = false) where T : class, new()
 		{
             return await Task.Run(() =>
             {
@@ -102,7 +102,7 @@ namespace Xamarin.Forms.CommonCore
                 try
                 {
                     var account = GetAccount(username);
-                    response = LoadAccount<T>(account, password);
+                    response = LoadAccount<T>(account, password, pwdHashed);
                 }
                 catch (Exception ex)
                 {
@@ -113,10 +113,10 @@ namespace Xamarin.Forms.CommonCore
 
 		}
 
-		private void PersistAccount<T>(Account account, string username, string password, T obj) where T : class, new()
+        private void PersistAccount<T>(Account account, string username, string password, T obj, bool pwdHashed = false) where T : class, new()
 		{
 			var data = JsonConvert.SerializeObject(obj);
-            var hash = Encryption.GetHashString(password);
+            var hash = pwdHashed ? password : Encryption.GetHashString(password);
 			if (account.Properties.ContainsKey(typeof(T).Name))
 			{
 				if (!string.IsNullOrEmpty(password))
@@ -145,11 +145,11 @@ namespace Xamarin.Forms.CommonCore
 
 			}
 		}
-		private T LoadAccount<T>(Account account, string password) where T : class, new()
+        private T LoadAccount<T>(Account account, string password, bool pwdHashed = false) where T : class, new()
 		{
 			if (!string.IsNullOrEmpty(password))
 			{
-                var hashedPassword = Encryption.GetHashString(password);
+                var hashedPassword = pwdHashed ? password : Encryption.GetHashString(password);
 				if (account.Properties.ContainsKey(typeof(T).Name) && account.Properties[pwKey] == hashedPassword)
 				{
                     var data = Encryption.AesDecrypt(account.Properties[typeof(T).Name], hashedPassword);
