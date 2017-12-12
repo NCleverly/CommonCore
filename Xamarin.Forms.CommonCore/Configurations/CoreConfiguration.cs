@@ -1,7 +1,5 @@
 ﻿﻿﻿using System;
 using System.Collections.Generic;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -37,7 +35,6 @@ namespace Xamarin.Forms.CommonCore
 
 	public partial class CoreConfiguration
 	{
-        public bool AnalyticsEnabled { get; set; } = false;
         public string AESEncryptionKey { get; set; }
 		public HttpSettings HttpSettings { get; set; }
 		public SocialMedia SocialMedia { get; set; }

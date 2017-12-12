@@ -213,10 +213,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\CoreSwitchRenderer.IOS.cs">
       <DependentUpon>CoreSwitch.cs</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Services\ILogService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\LogService.cs">
-      <DependentUpon>ILogService.cs</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Collections\OptimizedObservableCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collections\GroupedObservableCollection.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Collections\RefreshingCollection.cs" />

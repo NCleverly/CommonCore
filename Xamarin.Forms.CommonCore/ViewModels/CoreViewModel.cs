@@ -27,15 +27,6 @@ namespace Xamarin.Forms.CommonCore
 
         #region Injection Services
 
-        public ILogService Log
-        {
-            get
-            {
-                return (ILogService)CoreDependencyService.GetService<ILogService, LogService>(true);
-            }
-        }
-
-
         /// <summary>
         /// AuthenticatorService for Google, Facebook and Microsoft.
         /// </summary>

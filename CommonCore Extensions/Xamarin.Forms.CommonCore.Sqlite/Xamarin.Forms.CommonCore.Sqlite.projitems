@@ -19,16 +19,12 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\CoreSqlModel.cs">
       <DependentUpon>ISqliteDb.cs</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Configurations\SqliteCoreConfiguration.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\SqlitePushCoreViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BusinessLayer\SqliteCoreBusiness.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Partials\SqlitePartials.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Configurations\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
-    <Folder Include="$(MSBuildThisFileDirectory)BusinessLayer\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Partials\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)_init\readme.txt" />

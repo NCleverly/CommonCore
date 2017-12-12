@@ -23,3 +23,11 @@ http://azdevelop.net/commoncoredocs/html/files.html
 ### CommonCore.Fonts
 
 - This project provides additional implementation to use Custom Fonts on a project that uses the CommonCore template. (Example found on reference guide project)
+
+### CommonCore.Logging
+
+- This project provides additional implementation to use embedded analytics and error logging on a project that uses the CommonCore template. (Example found on reference guide project)
+
+### CommonCore.Native
+
+- This project provides additional implementation to use native iOS & Android projects with MVVM patterns on a project that uses the CommonCore template. (Example found on CommonCore.NativeExample project under samples)

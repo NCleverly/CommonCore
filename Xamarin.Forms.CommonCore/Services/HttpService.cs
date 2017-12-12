@@ -4,6 +4,7 @@ using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using ModernHttpClient;
 using Newtonsoft.Json;
@@ -128,7 +129,7 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
-        public async Task<(string Response, bool Success, Exception Error)> FormPost(string url, HttpContent content)
+        public async Task<(string Response, bool Success, Exception Error)> FormPost(string url, HttpContent content, CancellationToken? ct = null)
         {
 
             if (!CoreSettings.IsConnected)
@@ -138,9 +139,11 @@ namespace Xamarin.Forms.CommonCore
 
             try
             {
+                var token = ct ?? CancellationToken.None;
+
                 await new SynchronizationContextRemover();
 
-                var postResponse = await Client.PostAsync(url, content).ConfigureAwait(false);
+                var postResponse = await Client.PostAsync(url, content, token).ConfigureAwait(false);
                 postResponse.Content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
                 postResponse.EnsureSuccessStatusCode();
 
@@ -163,7 +166,7 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
-        public async Task<(string Response, bool Success, Exception Error)> GetRaw(string url)
+        public async Task<(string Response, bool Success, Exception Error)> GetRaw(string url, CancellationToken? ct = null)
         {
             if (!CoreSettings.IsConnected)
             {
@@ -172,9 +175,11 @@ namespace Xamarin.Forms.CommonCore
 
             try
             {
+                var token = ct ?? CancellationToken.None;
+
                 await new SynchronizationContextRemover();
 
-                using (var srvResponse = await Client.GetAsync(url).ConfigureAwait(false))
+                using (var srvResponse = await Client.GetAsync(url, token).ConfigureAwait(false))
                 {
                     var jsonResult = await srvResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
                     if (srvResponse.StatusCode == HttpStatusCode.OK)
@@ -196,8 +201,10 @@ namespace Xamarin.Forms.CommonCore
             }
 
         }
-        public async Task<(T Response, bool Success, Exception Error)> Get<T>(string url) where T : class, new()
+        public async Task<(T Response, bool Success, Exception Error)> Get<T>(string url, CancellationToken? ct = null) where T : class, new()
         {
+           
+
             if (!CoreSettings.IsConnected)
             {
                 return (null, false, new ApplicationException("Network Connection Error"));
@@ -205,9 +212,11 @@ namespace Xamarin.Forms.CommonCore
 
             try
             {
-                await new SynchronizationContextRemover();
+                var token = ct ?? CancellationToken.None;
 
-                using (var srvResponse = await Client.GetAsync(url).ConfigureAwait(false))
+                await new SynchronizationContextRemover();
+         
+                using (var srvResponse = await Client.GetAsync(url, token).ConfigureAwait(false))
                 {
                     if (CoreSettings.Config.HttpSettings.DisplayRawJson)
                     {
@@ -232,10 +241,11 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
-        public async Task<(bool Success, Exception Error)> UploadFile(string url, byte[] obj, string fileName)
+        public async Task<(bool Success, Exception Error)> UploadFile(string url, byte[] obj, string fileName, CancellationToken? ct = null)
         {
             try
             {
+                var token = ct ?? CancellationToken.None;
                 var fileContent = new ByteArrayContent(obj);
                 fileContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
                 {
@@ -246,7 +256,7 @@ namespace Xamarin.Forms.CommonCore
                 string boundary = $"---{id}";
                 var multipartContent = new MultipartFormDataContent(boundary);
                 multipartContent.Add(fileContent);
-                var response = await Client.PostAsync(url, multipartContent);
+                var response = await Client.PostAsync(url, multipartContent, token);
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -265,10 +275,11 @@ namespace Xamarin.Forms.CommonCore
 
         }
 
-        public async Task<byte[]> DownloadFile(string url, Action<double> percentChanged, Action<Exception> error, string token = null)
+        public async Task<byte[]> DownloadFile(string url, Action<double> percentChanged, Action<Exception> error, string token = null, CancellationToken? ct = null)
         {
             try
             {
+                var ctoken = ct ?? CancellationToken.None;
                 return await Task.Run(async () =>
                 {
                     using (var dwn = new FileDownloadManager())
@@ -291,7 +302,7 @@ namespace Xamarin.Forms.CommonCore
 
         }
 
-        public async Task<(T Response, bool Success, Exception Error)> Post<T>(string url, object obj) where T : class, new()
+        public async Task<(T Response, bool Success, Exception Error)> Post<T>(string url, object obj, CancellationToken? ct = null) where T : class, new()
         {
             if (!CoreSettings.IsConnected)
             {
@@ -300,10 +311,12 @@ namespace Xamarin.Forms.CommonCore
 
             try
             {
+                var token = ct ?? CancellationToken.None;
+
                 await new SynchronizationContextRemover();
 
                 var data = JsonConvert.SerializeObject(obj);
-                using (var srvResponse = await Client.PostAsync(url, new StringContent(data, Encoding.UTF8, "application/json")).ConfigureAwait(false))
+                using (var srvResponse = await Client.PostAsync(url, new StringContent(data, Encoding.UTF8, "application/json"), token).ConfigureAwait(false))
                 {
                     if (CoreSettings.Config.HttpSettings.DisplayRawJson)
                     {
@@ -328,7 +341,7 @@ namespace Xamarin.Forms.CommonCore
             }
 
         }
-        public async Task<(T Response, bool Success, Exception Error)> Put<T>(string url, object obj) where T : class, new()
+        public async Task<(T Response, bool Success, Exception Error)> Put<T>(string url, object obj, CancellationToken? ct = null) where T : class, new()
         {
             if (!CoreSettings.IsConnected)
             {
@@ -337,10 +350,12 @@ namespace Xamarin.Forms.CommonCore
 
             try
             {
+                var token = ct ?? CancellationToken.None;
+
                 await new SynchronizationContextRemover();
 
                 var data = JsonConvert.SerializeObject(obj);
-                using (var srvResponse = await Client.PutAsync(url, new StringContent(data, Encoding.UTF8, "application/json")))
+                using (var srvResponse = await Client.PutAsync(url, new StringContent(data, Encoding.UTF8, "application/json"), token))
                 {
                     if (CoreSettings.Config.HttpSettings.DisplayRawJson)
                     {

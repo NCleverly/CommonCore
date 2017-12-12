@@ -30,18 +30,6 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
-		private static ILogService Log
-		{
-			get
-			{
-				return CoreDependencyService.GetService<ILogService, LogService>(true);
-			}
-		}
-
-        public static void LogException(this Exception ex,string metatData = null)
-        {
-            Log.LogException(ex,metatData);
-        }
 
         /// <summary>
         /// Save the state of the view model.  Used for when the application may teardown the memory losing the property

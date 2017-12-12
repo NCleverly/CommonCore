@@ -31,9 +31,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\AzureNotificationHub.IOS.cs">
       <DependentUpon>IAzureNotificationHub.cs</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Configurations\AzureSettings.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Configurations\AzureCoreConfiguration.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\AzurePushCoreViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Partials\AzurePushPartials.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)PushNotifications\readme.txt" />
@@ -43,7 +41,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)PushNotifications\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\" />
     <Folder Include="$(MSBuildThisFileDirectory)Dependencies\" />
-    <Folder Include="$(MSBuildThisFileDirectory)Configurations\" />
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Partials\" />
   </ItemGroup>
 </Project>

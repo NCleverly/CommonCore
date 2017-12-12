@@ -3,27 +3,13 @@ using System.Reflection;
 
 namespace Xamarin.Forms.CommonCore
 {
-    public class BasePages : ContentPage
+    public partial class BasePages : ContentPage
     {
-        private long appearingUTC;
-
-        public bool AnalyticsEnabled
-        {
-            get { return CoreSettings.AppData.Settings.AnalyticsEnabled; }
-        }
         public Size ScreenSize
         {
             get { return CoreSettings.ScreenSize; }
         }
 
-        public ILogService Log
-        {
-            get
-            {
-
-                return (ILogService)CoreDependencyService.GetService<ILogService, LogService>(true);
-            }
-        }
 
         protected override bool OnBackButtonPressed()
         {
@@ -90,25 +76,11 @@ namespace Xamarin.Forms.CommonCore
 
         protected override void OnAppearing()
         {
-            appearingUTC = DateTime.UtcNow.Ticks;
-
             if (Navigation != null)
                 CoreSettings.AppNav = Navigation;
             base.OnAppearing();
         }
 
-        protected override void OnDisappearing()
-        {
-            if (AnalyticsEnabled)
-            {
-                Log.LogAnalytics(this.GetType().FullName, new TrackingMetatData()
-                {
-                    StartUtc = appearingUTC,
-                    EndUtc = DateTime.UtcNow.Ticks
-                });
-            }
-            base.OnDisappearing();
-        }
 
         protected override void OnSizeAllocated(double width, double height)
         {
