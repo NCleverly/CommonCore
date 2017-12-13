@@ -10,6 +10,8 @@ using System.ComponentModel;
 using System.Reflection;
 using Android.Content;
 using Plugin.CurrentActivity;
+using Android.Runtime;
+using Android.App;
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -97,6 +99,32 @@ namespace Xamarin.Forms.CommonCore
                 returnValue = new StreamImagesourceHandler();
             }
             return returnValue;
+        }
+
+        public static void RegisterUnhandledExceptions(this Application app, Action<Exception> action)
+        {
+            AppDomain.CurrentDomain.UnhandledException += (s, e) =>
+            {
+                var ex = e.ExceptionObject as Exception;
+                action.Invoke(ex);
+            };
+
+            AndroidEnvironment.UnhandledExceptionRaiser += (s, e) =>
+            {
+                action.Invoke(e.Exception);
+                e.Handled = true;
+            };
+
+        }
+
+        public static void ExitApplication(this Activity sender)
+        {
+            System.Environment.Exit(0);
+        }
+
+        public static void GoBack(this Activity context)
+        {
+            context.OnBackPressed();
         }
 
         public static void EnableStrictMode(this FormsAppCompatActivity activity)

@@ -17,139 +17,14 @@ namespace Xamarin.Forms.CommonCore.Native
     {
         public static nint Counter { get; set; }
     }
-    public class LinkerPrepare
-    {
-        public static bool AlreadyPrepared { get; set; }
-
-        public static nint TagIndex = 0;
-
-        public static void Init()
-        {
-            if (!AlreadyPrepared)
-            {
-                UIButton button = new UIButton();
-                button.TouchUpInside += PrepHandler;
-                button.TouchUpInside -= PrepHandler;
-                button.Tag = 0;
-                var tag = button.Tag;
-
-                UIBarButtonItem barButton = new UIBarButtonItem(UIBarButtonSystemItem.Stop);
-                barButton.Clicked += PrepHandler;
-                barButton.Clicked -= PrepHandler;
-                barButton.Tag = 0;
-                tag = barButton.Tag;
-
-                UILabel label = new UILabel();
-                label.Tag = 0;
-                label.Text = "";
-                var x = label.Text;
-                tag = label.Tag;
-
-                UITextView utv = new UITextView();
-                utv.Tag = 0;
-                utv.Text = "";
-                x = utv.Text;
-                tag = utv.Tag;
-
-                UITextField uiT = new UITextField();
-                uiT.EditingChanged += PrepHandler;
-                uiT.EditingChanged -= PrepHandler;
-                uiT.Tag = 0;
-                uiT.Text = "";
-                x = uiT.Text;
-                tag = uiT.Tag;
-
-                UISwitch us = new UISwitch();
-                us.ValueChanged += PrepHandler;
-                us.ValueChanged -= PrepHandler;
-                us.Tag = 0;
-
-                AlreadyPrepared = true;
-            }
-
-        }
-
-        private static void PrepHandler(object sender, EventArgs args)
-        {
-
-        }
-    }
-
-    [Preserve(AllMembers = true)]
-    public class PropertyBindingSettings
-    {
-        public nint Tag
-        {
-            get;
-            set;
-        }
-
-        public string BindingObject
-        {
-            get;
-            set;
-        }
-
-        public string BindingProperty
-        {
-            get;
-            set;
-        }
-
-        public string ViewModelProperty
-        {
-            get;
-            set;
-        }
-
-        public string EventName
-        {
-            get;
-            set;
-        }
-
-        public string Format
-        {
-            get;
-            set;
-        }
-
-    }
-
-    [Preserve(AllMembers = true)]
-    public class EventBindingSettings
-    {
-        public nint Tag
-        {
-            get;
-            set;
-        }
-
-        public string BindingObject
-        {
-            get;
-            set;
-        }
-
-        public string EventName
-        {
-            get;
-            set;
-        }
-
-        public string ViewModelCommand
-        {
-            get;
-            set;
-        }
-    }
-
 
     [Preserve(AllMembers = true)]
     public class BindingManager<T, K>
         where T : UIViewController, IHandlers
         where K : INotifyPropertyChanged
     {
+        public static nint TagIndex = 0;
+
         private List<PropertyBindingSettings> pbs;
         private List<EventBindingSettings> ebs;
         private K viewModel;
@@ -173,31 +48,16 @@ namespace Xamarin.Forms.CommonCore.Native
             BindProperty(bindingObject, bindingProperty, eventName, viewModelProperty, null);
         }
 
-        public void BindProperty(Expression<Func<object>> bindingProperty, Expression<Func<object>> viewModelProperty)
+        public void BindProperty(Expression<Func<object>> bindingProperty, string eventName, Expression<Func<object>> viewModelProperty)
         {
-            BindProperty(bindingProperty, viewModelProperty, null);
+            BindProperty(bindingProperty, eventName, viewModelProperty, null);
         }
 
-        public void BindProperty(Expression<Func<object>> bindingProperty, Expression<Func<object>> viewModelProperty, string format)
+        public void BindProperty(Expression<Func<object>> bindingProperty, string eventName, Expression<Func<object>> viewModelProperty, string format)
         {
-            string eventName = null;
+    
             var controlName = GetControlName(bindingProperty);
             var bpFieldName = GetPropertyName(bindingProperty);
-            var bpName = GetPropertyTypeName(bindingProperty);
-            switch (bpName)
-            {
-                case "UITextField":
-                    eventName = "EditingChanged";
-                    break;
-                case "UISwitch":
-                    eventName = "ValueChanged";
-                    break;
-                case "UITableViewSource":
-                    if (bpFieldName == "SelectedItem")
-                        eventName = "RowSelectedEvent";
-                    break;
-            }
-
             var vmFieldName = GetPropertyName(viewModelProperty);
 
             BindProperty(controlName, bpFieldName, eventName, vmFieldName, format);
@@ -211,35 +71,26 @@ namespace Xamarin.Forms.CommonCore.Native
                 BindingObject = bindingObject,
                 EventName = eventName,
                 ViewModelCommand = viewModelCommand,
-                Tag = LinkerPrepare.TagIndex++
+                Tag = TagIndex++
             });
         }
 
-        public void BindCommand(Expression<Func<object>> bindingProperty, Expression<Func<object>> viewModelProperty)
+        public void BindCommand(Expression<Func<object>> bindingProperty, string eventName, Expression<Func<object>> viewModelProperty)
         {
-            string eventName = null;
             var controlName = GetCommandControlName(bindingProperty);
-            var bpName = GetCommandTypeName(bindingProperty);
             var vmFieldName = GetPropertyName(viewModelProperty);
-            switch (bpName)
-            {
-                case "UIButton":
-                    eventName = "TouchUpInside";
-                    break;
-                case "UIBarButtonItem":
-                    eventName = "Clicked";
-                    break;
-            }
             BindCommand(controlName, eventName, vmFieldName);
         }
 
         public void RegisterBindingEvents(T controller, K viewModel, bool registerDefaultControls = true)
         {
-            LinkerPrepare.Init();
+           
             this.controller = controller;
             this.viewModel = viewModel;
             foreach (var obj in pbs)
             {
+                //set initial value of VM property is not null
+                SetControlFromViewModel(obj);
                 ConnectPropertyBindingSetting(obj);
             }
             foreach (var obj in ebs)
@@ -263,6 +114,47 @@ namespace Xamarin.Forms.CommonCore.Native
                 controller.RegisterEvents(this.ebs);
             }
 
+        }
+
+        private void SetControlFromViewModel(PropertyBindingSettings setting)
+        {
+            var ctrlProp = typeof(T).GetProperty(setting.BindingObject, BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
+            var ctrlInstance = ctrlProp.GetValue(controller);
+            var ctrlInstaceProp = ctrlInstance.GetType().GetProperty(setting.BindingProperty, BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
+            var currentValue = ctrlInstaceProp.GetValue(ctrlInstance);
+            var vmProp = viewModel.GetType().GetProperty(setting.ViewModelProperty, BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
+            var vmValue = vmProp.GetValue(viewModel, null);
+
+            if (!currentValue.Equals(vmValue))
+            {
+
+
+                if (ctrlInstance is IBaseSource)
+                {
+                    if (setting.EventName != "RowSelectedEvent")
+                    {
+                        ((IBaseSource)ctrlInstance).UpdateCollection((ICollection)vmValue);
+                    }
+
+                }
+                else if (currentValue.GetType().Name != "String" && (currentValue.GetType().Name == vmValue.GetType().Name))
+                {
+                    ctrlInstaceProp.SetValue(ctrlInstance, vmValue);
+                }
+                else
+                {
+
+                    if (!string.IsNullOrEmpty(setting.Format))
+                    {
+                        var formattedValue = string.Format(setting.Format, vmValue);
+                        ctrlInstaceProp.SetValue(ctrlInstance, formattedValue);
+                    }
+                    else
+                    {
+                        ctrlInstaceProp.SetValue(ctrlInstance, vmValue.ToString());
+                    }
+                }
+            }
         }
 
         public void UnRegisterBindingEvents(T controller, bool unRegisterDefaultControls = true)
@@ -395,43 +287,7 @@ namespace Xamarin.Forms.CommonCore.Native
                 var propName = ((PropertyChangedEventArgs)args).PropertyName;
                 foreach (var obj in pbs.Where(x => x.ViewModelProperty == propName))
                 {
-                    var ctrlProp = typeof(T).GetProperty(obj.BindingObject, BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
-                    var ctrlInstance = ctrlProp.GetValue(controller);
-                    var ctrlInstaceProp = ctrlInstance.GetType().GetProperty(obj.BindingProperty, BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
-                    var currentValue = ctrlInstaceProp.GetValue(ctrlInstance);
-                    var vmProp = sender.GetType().GetProperty(obj.ViewModelProperty, BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public);
-                    var vmValue = vmProp.GetValue(sender, null);
-
-                    if (!currentValue.Equals(vmValue))
-                    {
-
-
-                        if (ctrlInstance is IBaseSource)
-                        {
-                            if (obj.EventName != "RowSelectedEvent")
-                            {
-                                ((IBaseSource)ctrlInstance).UpdateCollection((ICollection)vmValue);
-                            }
-
-                        }
-                        else if (currentValue.GetType().Name != "String" && (currentValue.GetType().Name == vmValue.GetType().Name))
-                        {
-                            ctrlInstaceProp.SetValue(ctrlInstance, vmValue);
-                        }
-                        else
-                        {
-
-                            if (!string.IsNullOrEmpty(obj.Format))
-                            {
-                                var formattedValue = string.Format(obj.Format, vmValue);
-                                ctrlInstaceProp.SetValue(ctrlInstance, formattedValue);
-                            }
-                            else
-                            {
-                                ctrlInstaceProp.SetValue(ctrlInstance, vmValue.ToString());
-                            }
-                        }
-                    }
+                    SetControlFromViewModel(obj);
                 }
             }
         }

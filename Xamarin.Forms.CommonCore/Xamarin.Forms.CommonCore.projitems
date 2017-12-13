@@ -173,13 +173,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\MaterialDesign\CoreFloatingTextEntryRenderer.IOS.cs">
       <DependentUpon>CoreFloatingTextEntry.cs</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IAuthenticatorService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticatorService.Facebook.cs">
-      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticatorService.Google.cs">
-      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
-    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\IViewStack.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ViewStack.IOS.cs">
       <DependentUpon>IViewStack.cs</DependentUpon>
@@ -347,12 +340,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)_init\Views\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="$(MSBuildThisFileDirectory)Services\readme.authentication.txt">
-      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
-    </None>
-    <None Include="$(MSBuildThisFileDirectory)Services\ActivityCustomUrlSchemeInterceptor.txt">
-      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
-    </None>
     <None Include="$(MSBuildThisFileDirectory)_init\FodyWeavers.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\ReadMe.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\_roadmap\CompressedContainers.cs.txt" />

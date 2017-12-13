@@ -1,16 +1,7 @@
 ﻿using System;
 namespace Xamarin.Forms.CommonCore
 {
-    public partial class CoreConfiguration
-    {
-        public ILogService Log
-        {
-            get
-            {
-                return (ILogService)CoreDependencyService.GetService<ILogService, LogService>(true);
-            }
-        }
-    }
+
     public partial class CoreBusiness
     {
         public ILogService Log

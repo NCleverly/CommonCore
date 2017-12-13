@@ -12,11 +12,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)IOS\MVVMExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IOS\VPControllerExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IOS\VPExtensionHelpers.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Android\MVVMExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Android\VPActivityExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Android\VPControlExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Android\MVVMExtensions.Droid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Android\UIExtensions.Droid.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Android\VPExtensionHelpers.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Android\VPFragmentExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NativeUtilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)IOS\" />

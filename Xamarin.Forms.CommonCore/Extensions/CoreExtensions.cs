@@ -1180,6 +1180,8 @@ namespace Xamarin.Forms.CommonCore
         {
             return (IList)enumerable;
         }
+
+
         /// <summary>
         /// Return object at a given index in a collection
         /// </summary>

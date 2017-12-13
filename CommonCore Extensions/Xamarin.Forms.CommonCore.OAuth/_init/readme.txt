@@ -1,4 +1,18 @@
-﻿Configuration steps
+﻿Step 1:
+    Alter the SocialMedia section in the settings json configuration to match:
+      "SocialMedia": {
+        "GoogleSettings": {
+          "GoogleAppId": "",
+          "OAuthClientID_iOS": "",
+          "OAuthClientID_Android": "",
+          "OAuthClientID_UWP": ""
+        },
+        "FaceBookAppId": "",
+        "MicrosoftAppId": ""
+      },
+
+
+Step 2: (Configuration steps)
 
 Developer Google Console OAuth 2 Setup:
 - https://support.google.com/cloud/answer/6158849?hl=en

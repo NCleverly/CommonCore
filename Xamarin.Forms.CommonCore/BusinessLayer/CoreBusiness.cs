@@ -18,18 +18,6 @@ namespace Xamarin.Forms.CommonCore
         #region Injection Services
 
         /// <summary>
-        /// AuthenticatorService for Google, Facebook and Microsoft.
-        /// </summary>
-        /// <value>The authenticator service.</value>
-        [JsonIgnore]
-        protected IAuthenticatorService AuthenticatorService
-        {
-            get
-            {
-                return (IAuthenticatorService)CoreDependencyService.GetService<IAuthenticatorService, AuthenticatorService>(true);
-            }
-        }
-        /// <summary>
         /// Backgrounding event timer that fires an event specified in the future on a repeating basis.
         /// </summary>
         /// <value>The background timer.</value>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{9BACBEEF-FDC6-4267-95BB-BF6DB2572F51}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Xamarin.Forms.CommonCore.OAuth</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IAuthenticatorService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticatorService.Facebook.cs">
+      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AuthenticatorService.Google.cs">
+      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Partials\OAuthPartials.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Partials\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)Services\ActivityCustomUrlSchemeInterceptor.txt">
+      <DependentUpon>IAuthenticatorService.cs</DependentUpon>
+    </None>
+    <None Include="$(MSBuildThisFileDirectory)_init\readme.txt" />
+  </ItemGroup>
+</Project>

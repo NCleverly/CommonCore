@@ -21,9 +21,6 @@ namespace Xamarin.Forms.CommonCore
 	public partial class GoogleSettings
 	{
 		public string GoogleAppId { get; set; }
-		public string OAuthClientID_iOS { get; set; }
-		public string OAuthClientID_Android { get; set; }
-		public string OAuthClientID_UWP { get; set; }
 	}
 
 	public class MobileCenterHockeyApp
