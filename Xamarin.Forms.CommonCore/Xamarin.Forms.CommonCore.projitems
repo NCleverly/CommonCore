@@ -290,6 +290,16 @@
       <DependentUpon>CoreTelephonyPage.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\EncryptedPropertyAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CoreCardView.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CoreCardViewRenderer.Droid.cs">
+      <DependentUpon>CoreCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CoreCardViewRenderer.IOS.cs">
+      <DependentUpon>CoreCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\AppleCardView.IOS.cs">
+      <DependentUpon>CoreCardView.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
