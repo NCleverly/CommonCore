@@ -30,6 +30,14 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
+        private static IHttpService HttpService
+        {
+            get
+            {
+                return (IHttpService)CoreDependencyService.GetService<IHttpService, HttpService>(true);
+            }
+        }
+
 
         /// <summary>
         /// Save the state of the view model.  Used for when the application may teardown the memory losing the property
@@ -63,44 +71,6 @@ namespace Xamarin.Forms.CommonCore
                 }
             });
         }
-        /// <summary>
-        /// Saves the state of the view models in case the OS tearsdown the memory.
-        /// </summary>
-        /// <param name="app">App.</param>
-        public static void SaveViewModelState(this Application app)
-        {
-            var nameList = new List<string>();
-            foreach (var vm in CoreDependencyService.GetAllViewModels())
-            {
-                vm.SaveState();
-                nameList.Add(vm.GetType().FullName);
-            }
-            CoreDependencyService.GetService<IFileStore, FileStore>(true)?.SaveAsync<List<string>>("vmlistCoreExtensions", nameList).ContinueOn();
-        }
-        /// <summary>
-        /// Loads the state of the view model if they were torndown by the OS.
-        /// </summary>
-        /// <param name="app">App.</param>
-        public static void LoadViewModelState(this Application app)
-        {
-            if (!CoreDependencyService.HasViewModels)
-            {
-                Task.Run(async () =>
-                {
-                    var result = await CoreDependencyService.GetService<IFileStore, FileStore>(true)?.GetAsync<List<string>>("vmlistCoreExtensions");
-                    if (result.Error == null)
-                    {
-                        foreach (var vmName in result.Response)
-                        {
-                            CoreDependencyService.RegisterObjectByName(vmName);
-                            ((CoreViewModel)CoreDependencyService.GetObjectByName(vmName)).LoadState();
-                        }
-                    }
-                });
-
-            }
-        }
-
 
         public static DateTime ToLocalTime(this long utcTicks)
         {
@@ -108,7 +78,10 @@ namespace Xamarin.Forms.CommonCore
             return utcDateTime.ToLocalTime();
         }
 
-
+        public static void SetConnectionStatus(this Application app, bool isConnected)
+        {
+            HttpService.IsConnected = isConnected;
+        }
 
         public static StringContent ToStringContent(this object obj)
         {

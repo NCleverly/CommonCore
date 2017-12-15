@@ -25,12 +25,12 @@ namespace somenamespace
             {
                 Margin = 5
             };
-            lbl.SetBinding(Label.TextProperty, new Binding(path: "SomeText", converter: AppSettings.UpperText));
+            lbl.SetBinding(Label.TextProperty, new Binding(path: "SomeText", converter: CoreSettings.UpperText));
 
             var btn = new CoreButton()
             {
                 Text="Some Action",
-                Style = AppStyles.LightOrange,
+                Style = CoreStyles.LightOrange,
                 Margin=5
             };
             btn.SetBinding(Button.CommandProperty,"SomeAction");

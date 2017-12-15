@@ -19,6 +19,7 @@ namespace Xamarin.Forms.CommonCore
         private JsonSerializer _serializer;
         public string json;
 
+        public bool IsConnected { get; set; } = true;
         public HttpClient Client
         {
             get
@@ -132,7 +133,7 @@ namespace Xamarin.Forms.CommonCore
         public async Task<(string Response, bool Success, Exception Error)> FormPost(string url, HttpContent content, CancellationToken? ct = null)
         {
 
-            if (!CoreSettings.IsConnected)
+            if (!IsConnected)
             {
                 return (null, false, new ApplicationException("Network Connection Error"));
             }
@@ -168,7 +169,7 @@ namespace Xamarin.Forms.CommonCore
 
         public async Task<(string Response, bool Success, Exception Error)> GetRaw(string url, CancellationToken? ct = null)
         {
-            if (!CoreSettings.IsConnected)
+            if (!IsConnected)
             {
                 return (null, false, new ApplicationException("Network Connection Error"));
             }
@@ -205,7 +206,7 @@ namespace Xamarin.Forms.CommonCore
         {
            
 
-            if (!CoreSettings.IsConnected)
+            if (!IsConnected)
             {
                 return (null, false, new ApplicationException("Network Connection Error"));
             }
@@ -304,7 +305,7 @@ namespace Xamarin.Forms.CommonCore
 
         public async Task<(T Response, bool Success, Exception Error)> Post<T>(string url, object obj, CancellationToken? ct = null) where T : class, new()
         {
-            if (!CoreSettings.IsConnected)
+            if (!IsConnected)
             {
                 return (null, false, new ApplicationException("Network Connection Error"));
             }
@@ -343,7 +344,7 @@ namespace Xamarin.Forms.CommonCore
         }
         public async Task<(T Response, bool Success, Exception Error)> Put<T>(string url, object obj, CancellationToken? ct = null) where T : class, new()
         {
-            if (!CoreSettings.IsConnected)
+            if (!IsConnected)
             {
                 return (null, false, new ApplicationException("Network Connection Error"));
             }

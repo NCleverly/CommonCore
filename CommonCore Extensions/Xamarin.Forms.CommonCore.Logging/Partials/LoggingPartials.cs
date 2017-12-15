@@ -12,6 +12,16 @@ namespace Xamarin.Forms.CommonCore
             }
         }  
     }
+    public partial class CoreViewModel
+    {
+        public ILogService Log
+        {
+            get
+            {
+                return (ILogService)CoreDependencyService.GetService<ILogService, LogService>(true);
+            }
+        }  
+    }
     public static partial class CoreExtensions
     {
         private static long appearingUTC;

@@ -4,11 +4,10 @@ using Newtonsoft.Json;
 
 namespace Xamarin.Forms.CommonCore
 {
-
     /// <summary>
     /// Observable view model.
     /// </summary>
-    public partial class CoreViewModel : BindableObject
+    public abstract partial class CoreViewModel : BindableObject
     {
         private bool isLoadingHUD;
         private bool isLoadingOverlay;
@@ -328,7 +327,7 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         /// <param name="key">Key.</param>
         /// <param name="obj">Object.</param>
-        public virtual void OnViewMessageReceived(string key, object obj) { }
+        public abstract void OnViewMessageReceived(string key, object obj);
 
         /// <summary>
         /// //false is default value when system call back press
@@ -345,24 +344,7 @@ namespace Xamarin.Forms.CommonCore
         /// </summary>
         public virtual void OnSoftBackButtonPressed() { }
 
-        /// <summary>
-        /// Loads the view model resources. Do not perform blocking calls in this method!  (NO BASE IMPLEMENTATION)
-        /// </summary>
-        public virtual void LoadResources(string parameter = null) { }
-        /// <summary>
-        /// Releads the view model resources.  (NO BASE IMPLEMENTATION)
-        /// </summary>
-        public virtual void ReleaseResources(string parameter = null) { }
 
-        /// <summary>
-        /// Saves the state of the viewmodel. (NO BASE IMPLEMENTATION)
-        /// </summary>
-        public virtual void SaveState() { }
-
-        /// <summary>
-        /// Loads viewmodel from some persisted state. (NO BASE IMPLEMENTATION)
-        /// </summary>
-        public virtual void LoadState() { }
     }
 
 }

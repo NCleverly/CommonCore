@@ -18,7 +18,6 @@ Required Nuget Installs
  - ModernHttpClient
  - Newtonsoft.Json
  - PCLCrypto
- - FluentFTP
  - Plugin.Permissions /* https://blog.xamarin.com/plugin-permission-changes-ios-11/?utm_source=vs_developer_news&utm_medium=referral */
  - Xam.Plugin.Connectivity
  - Xam.Plugins.Settings
@@ -35,6 +34,11 @@ Required Nuget Installs
 (Optional - if you are using Mobile Center)
 - Mobile Center Analytics
 - Mobile Center Crashes
+    -> Is currently moving to the following:
+        - Microsoft.AppCenter
+        - Microsoft.AppCenter.Analytics
+        - Microsoft.AppCenter.Crashes
+        - Microsoft.AppCenter.Distribute         - Microsoft.AppCenter.Push
 
  - Platform Specific Installs:
     - iOS   -> BTProgressHud
@@ -52,10 +56,12 @@ Suggested
 - Plugin.Share
 - NodaTime /* Date and time API */
 - Refractored.XamForms.PullToRefresh
+- FluentFTP /* if you want to use FTP as a transfer protocol
 - AIDatePickerController /* IOS DateTime Picker */
 - Microcharts.Forms /* https://github.com/aloisdeniel/Microcharts */
 - Xamarin.Plugin.ImageEdit /* https://github.com/muak/Xamarin.Plugin.ImageEdit */
 - Android Bottom Tabs /* https://medium.com/naxam-blogs/bottomtabbedpage-bottom-navigation-for-xamarin-forms-on-android-325a1506e216 */
+
 Setup Tasks:
 
 Step 1: 
@@ -117,19 +123,17 @@ Step 6 (Optional) -> You may want to setup the Forms Application page to include
         {
             MainPage.SizeChanged -= AppScreenSizeChanged;
             CrossConnectivity.Current.ConnectivityChanged -= ConnectivityChanged;
-            this.SaveViewModelState();
         }
 
         protected override void OnResume()
         {
             MainPage.SizeChanged += AppScreenSizeChanged;
             CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
-            this.LoadViewModelState();
         }
 
         private void ConnectivityChanged(object sender, ConnectivityChangedEventArgs args)
         {
-            CoreSettings.IsConnected = args.IsConnected;
+            this.SetConnectionStatus(args.IsConnected);
         }
 
         private void AppScreenSizeChanged(object sender, EventArgs args)

@@ -324,8 +324,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)Collections\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Config\" />
-    <Folder Include="$(MSBuildThisFileDirectory)_init\Styles\" />
-    <Folder Include="$(MSBuildThisFileDirectory)_init\Settings\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Partials\" />
     <Folder Include="$(MSBuildThisFileDirectory)Animations\" />
     <Folder Include="$(MSBuildThisFileDirectory)Converters\" />
@@ -341,11 +339,8 @@
     <Folder Include="$(MSBuildThisFileDirectory)_init\BusinessLogic\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Config\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Converters\" />
-    <Folder Include="$(MSBuildThisFileDirectory)_init\Extensions\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Models\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Partials\" />
-    <Folder Include="$(MSBuildThisFileDirectory)_init\Settings\" />
-    <Folder Include="$(MSBuildThisFileDirectory)_init\Styles\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Views\" />
   </ItemGroup>
@@ -357,10 +352,12 @@
     <None Include="$(MSBuildThisFileDirectory)_init\Config\config.dev.json.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Converters\SomeValueConverter.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Models\SomeObject.cs.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialClasses.cs.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\Settings\AppSettings.cs.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\Styles\AppStyles.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\ViewModels\SomeViewModel.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Views\SomePage.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialConfig.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialExtensions.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialSettings.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialStyles.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialViewModel.cs.txt" />
   </ItemGroup>
 </Project>

@@ -21,13 +21,13 @@ namespace Xamarin.Forms.CommonCore
         IOS,
         ANDROID
     }
-    public class CoreSettings
+    public partial class CoreSettings
     {
         public const string MasterDetailIsPresented = "IsPresented";
+        public const string LoadResources = "loadresources";
+        public const string ReleaseResources = "releaseresource";
 
         public static string CurrentBuid { get; set; } = "dev";
-        public static NetworkCredential HttpCredentials { get; set; }
-        public static bool IsConnected { get; set; } = true;
         public static INavigation AppNav { get; set; }
         public static Size ScreenSize { get; set; }
         public static List<string> NotificationTags { get; set; } = new List<string>();
@@ -99,7 +99,7 @@ namespace Xamarin.Forms.CommonCore
             set { _appSettings.AddOrUpdateValue("SyncTimeStamp", value); }
         }
 
-        public static T OnPlatform<T>(params T[] parameters)
+        public static T On<T>(params T[] parameters)
         {
             T obj = default(T);
 

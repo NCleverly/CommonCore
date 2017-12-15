@@ -5,7 +5,7 @@ namespace Xamarin.Forms.CommonCore
 {
     public partial class SqliteSettings
     {
-        public string SQLiteDatabase { get; set; }
+        public string SQLiteDatabase { get; set; } = "app.db3";
     }
 
     public partial class CoreConfiguration

@@ -15,19 +15,13 @@ namespace Xamarin.Forms.CommonCore
         /// InjectionManager has view models
         /// </summary>
         /// <value><c>true</c> if has view models; otherwise, <c>false</c>.</value>
-        public static bool HasViewModels
-        {
-            get { return vmContainer.Count() > 0 ? true : false; }
-        }
+        public static bool HasViewModels => vmContainer.Count() > 0 ? true : false;
         /// <summary>
         /// ViewModel has been registered
         /// </summary>
         /// <returns><c>true</c>, if registered was ised, <c>false</c> otherwise.</returns>
         /// <typeparam name="T">The 1st type parameter.</typeparam>
-        public static bool IsRegistered<T>() where T : CoreViewModel
-        {
-            return vmContainer.Count(x => x == typeof(T).FullName) != 0;
-        }
+        public static bool IsRegistered<T>() where T : CoreViewModel => vmContainer.Count(x => x == typeof(T).FullName) != 0;
 
         /// <summary>
         /// Get all view model instances
@@ -60,7 +54,7 @@ namespace Xamarin.Forms.CommonCore
             }
             var vm = DependencyService.Get<T>(DependencyFetchTarget.GlobalInstance);
             if (loadResources)
-                vm.LoadResources();
+                vm.OnViewMessageReceived(CoreSettings.LoadResources, null);
             return vm;
         }
 
@@ -94,7 +88,7 @@ namespace Xamarin.Forms.CommonCore
                 var vm = (CoreViewModel)GetObjectByName(vmName);
 
                 if (loadResources)
-                    vm.LoadResources();
+                    vm.OnViewMessageReceived(CoreSettings.LoadResources, null);
                 return vm;
             }
             else
@@ -120,7 +114,7 @@ namespace Xamarin.Forms.CommonCore
                 }
                 else
                 {
-                    vm.ReleaseResources();
+                    vm.OnViewMessageReceived(CoreSettings.ReleaseResources, null);
                 }
 
             }
@@ -134,7 +128,7 @@ namespace Xamarin.Forms.CommonCore
             foreach (var name in vmContainer)
             {
                 var vm = ((CoreViewModel)GetObjectByName(name));
-                vm.ReleaseResources();
+                vm.OnViewMessageReceived(CoreSettings.ReleaseResources, null);
             }
         }
 
@@ -146,7 +140,7 @@ namespace Xamarin.Forms.CommonCore
             foreach (var name in vmContainer)
             {
                 var vm = ((CoreViewModel)GetObjectByName(name));
-                vm.LoadResources();
+                vm.OnViewMessageReceived(CoreSettings.LoadResources, null);
             }
         }
 
