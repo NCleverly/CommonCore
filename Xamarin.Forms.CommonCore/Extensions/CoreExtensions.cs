@@ -38,6 +38,29 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
+        public static T On<T>(this object caller, params T[] parameters)
+        {
+            T obj = default(T);
+
+            switch (Device.RuntimePlatform.ToUpper())
+            {
+                case "IOS":
+                    if (parameters.Length > 0)
+                        obj = parameters[0];
+                    break;
+                case "ANDROID":
+                    if (parameters.Length > 1)
+                        obj = parameters[1];
+                    break;
+                default:
+                    if (parameters.Length > 2)
+                        obj = parameters[2];
+                    break;
+            }
+
+            return obj;
+        }
+
 
         /// <summary>
         /// Save the state of the view model.  Used for when the application may teardown the memory losing the property

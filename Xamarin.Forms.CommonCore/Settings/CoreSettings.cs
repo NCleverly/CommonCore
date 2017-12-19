@@ -32,6 +32,29 @@ namespace Xamarin.Forms.CommonCore
         public static Size ScreenSize { get; set; }
         public static List<string> NotificationTags { get; set; } = new List<string>();
 
+        public static T On<T>(params T[] parameters)
+        {
+            T obj = default(T);
+
+            switch (Device.RuntimePlatform.ToUpper())
+            {
+                case "IOS":
+                    if (parameters.Length > 0)
+                        obj = parameters[0];
+                    break;
+                case "ANDROID":
+                    if (parameters.Length > 1)
+                        obj = parameters[1];
+                    break;
+                default:
+                    if (parameters.Length > 2)
+                        obj = parameters[2];
+                    break;
+            }
+
+            return obj;
+        }
+
         public static DeviceOS OS
         {
             get
@@ -99,28 +122,7 @@ namespace Xamarin.Forms.CommonCore
             set { _appSettings.AddOrUpdateValue("SyncTimeStamp", value); }
         }
 
-        public static T On<T>(params T[] parameters)
-        {
-            T obj = default(T);
 
-            switch (Device.RuntimePlatform.ToUpper())
-            {
-                case "IOS":
-                    if (parameters.Length > 0)
-                        obj = parameters[0];
-                    break;
-                case "ANDROID":
-                    if (parameters.Length > 1)
-                        obj = parameters[1];
-                    break;
-                default:
-                    if (parameters.Length > 2)
-                        obj = parameters[2];
-                    break;
-            }
-
-            return obj;
-        }
 
 #if __ANDROID__
         public static int AppIcon { get; set; }

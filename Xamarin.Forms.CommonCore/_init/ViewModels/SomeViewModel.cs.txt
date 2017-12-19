@@ -22,19 +22,24 @@ namespace somenamespace
             });
         }
 
-        public override void LoadResources(string parameter = null)
+        public override void OnViewMessageReceived(string key, object obj)
         {
-            var items = this.SomeLogic.GetSomeData();
-            if (items.error == null)
-            {
-                TotalItems = items.data.Count;
-            }
-            else
-            {
-                this.DialogPrompt.ShowMessage(new Prompt(){
-                    Title="Error",
-                    Message = items.error.Message
-                });
+            switch(key){
+                case CoreSettings.LoadResources:
+                    var items = this.SomeLogic.GetSomeData();
+                    if (items.error == null)
+                    {
+                        TotalItems = items.data.Count;
+                    }
+                    else
+                    {
+                        this.DialogPrompt.ShowMessage(new Prompt()
+                        {
+                            Title = "Error",
+                            Message = items.error.Message
+                        });
+                    }
+                    break;
             }
         }
     }
