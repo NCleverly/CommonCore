@@ -13,6 +13,7 @@ using System.ComponentModel;
 using Android.Views;
 using Plugin.CurrentActivity;
 using Ctx = Android.Content.Context;
+using Android.Support.V4.Content;
 
 [assembly: ExportRenderer(typeof(CoreUnderlineEntry), typeof(CoreUnderlineEntryRenderer))]
 namespace Xamarin.Forms.CommonCore
@@ -150,7 +151,7 @@ namespace Xamarin.Forms.CommonCore
                 return null;
             var img = fileName.Replace(".png", "");
             var id = GetResourceIdByName(img);
-            var drawable = new WeakReference((Drawable)Resources.GetDrawable(id));
+            var drawable = new WeakReference((Drawable)ContextCompat.GetDrawable(context, id));
             ((Drawable)drawable.Target).SetColorFilter(formControl.EntryColor.ToAndroid(), Graphics.PorterDuff.Mode.SrcAtop);
             return drawable;
         }

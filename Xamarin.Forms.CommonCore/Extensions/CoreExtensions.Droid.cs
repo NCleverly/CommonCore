@@ -40,7 +40,7 @@ namespace Xamarin.Forms.CommonCore
         public static Views.View GetNativeView(this BindableObject bindableObject)
         {
             var renderer = bindableObject.GetRenderer();
-            var viewGroup = renderer.ViewGroup;
+            var viewGroup = renderer.View;
             return viewGroup;
         }
         public static ImeAction GetValueFromDescription(this ReturnKeyTypes value)
