@@ -300,6 +300,13 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\AppleCardView.IOS.cs">
       <DependentUpon>CoreCardView.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ILocalize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\Localize.Droid.cs">
+      <DependentUpon>ILocalize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\Localize.IOS.cs">
+      <DependentUpon>ILocalize.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
