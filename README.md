@@ -44,3 +44,7 @@ http://azdevelop.net/commoncoredocs/html/files.html
 
 - This project provides additional implementation to use RealmDb as the embedded database  on a project that uses the CommonCore template. (Example found on realmDemo project under samples/database_samples)
 
+### CommonCore.Localization
+
+- This project provides additional implementation to use localization based on the default  OS settings of the device for projects that use the CommonCore template. (Example found on reference guide project)
+
