@@ -59,6 +59,11 @@ namespace Xamarin.Forms.CommonCore
         }
 
 
+        public static T GetDependency<T>() where T: class
+        {
+            return DependencyService.Get<T>(DependencyFetchTarget.GlobalInstance);
+        }
+
 
         public static T GetBusinessLayer<T>() where T : CoreBusiness
         {

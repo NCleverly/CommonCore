@@ -7,13 +7,8 @@ using Xamarin.Forms.CommonCore;
 [assembly: Xamarin.Forms.Dependency(typeof(Localize))]
 namespace Xamarin.Forms.CommonCore
 {
-    public class Localize
+    public class Localize : ILocalize
     {
-        public void SetLocale(CultureInfo ci)
-        {
-            Thread.CurrentThread.CurrentCulture = ci;
-            Thread.CurrentThread.CurrentUICulture = ci;
-        }
         public CultureInfo GetCurrentCultureInfo()
         {
             var netLanguage = "en";

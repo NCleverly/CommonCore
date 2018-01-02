@@ -300,13 +300,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\AppleCardView.IOS.cs">
       <DependentUpon>CoreCardView.cs</DependentUpon>
     </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ILocalize.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\Localize.Droid.cs">
-      <DependentUpon>ILocalize.cs</DependentUpon>
-    </Compile>
-    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\Localize.IOS.cs">
-      <DependentUpon>ILocalize.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -350,13 +343,13 @@
     <Folder Include="$(MSBuildThisFileDirectory)_init\Partials\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Views\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Config\settings\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)_init\FodyWeavers.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\ReadMe.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\_roadmap\CompressedContainers.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\BusinessLogic\SomeBusinessLogic.cs.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\Config\config.dev.json.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Converters\SomeValueConverter.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Models\SomeObject.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\ViewModels\SomeViewModel.cs.txt" />
@@ -366,5 +359,6 @@
     <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialSettings.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialStyles.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialViewModel.cs.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Config\settings\config.dev.json.txt" />
   </ItemGroup>
 </Project>

@@ -10,11 +10,6 @@ namespace Xamarin.Forms.CommonCore
 {
     public class Localize : ILocalize
     {
-        public void SetLocale(CultureInfo ci)
-        {
-            Thread.CurrentThread.CurrentCulture = ci;
-            Thread.CurrentThread.CurrentUICulture = ci;
-        }
         public CultureInfo GetCurrentCultureInfo()
         {
             var netLanguage = "en";

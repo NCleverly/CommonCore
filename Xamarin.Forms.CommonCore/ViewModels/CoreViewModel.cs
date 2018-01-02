@@ -40,6 +40,8 @@ namespace Xamarin.Forms.CommonCore
             }
         }
 
+
+
         /// <summary>
         /// Service that provides network calls over http.
         /// </summary>
