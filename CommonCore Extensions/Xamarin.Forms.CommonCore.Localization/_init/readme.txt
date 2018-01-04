@@ -1,7 +1,7 @@
 ﻿
 Step 0:
     Define the values in the localization.csv file in an editor like Microsoft Excel.  Make
-    sure to save as comma delimited Unicode.
+    sure to save as comma delimited Unicode (CSV UTF8).
 
     Columns define language and rows define the variable.
 
