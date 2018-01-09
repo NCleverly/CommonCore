@@ -25,8 +25,22 @@ namespace Xamarin.Forms.CommonCore
             });
         }
 
+        public string Get(string key)
+        {
+            if (localString.ContainsKey(key))
+                return localString[key];
+            else
+                return null;
+        }
+
+        public void Reset()
+        {
+            localString = null;
+        }
+
         public static void Init(string version)
         {
+     
             var savedVersion = CrossSettings.Current.GetValueOrDefault("localizationversion", null);
             if(savedVersion==null || !savedVersion.Equals(version))
             {
@@ -42,6 +56,7 @@ namespace Xamarin.Forms.CommonCore
             {
                 CoreDependencyService.GetService<ILocalizationService, LocalizationService>(true);
             }
+
         }
 
         private static void ParseCVS(string data)
@@ -72,17 +87,6 @@ namespace Xamarin.Forms.CommonCore
             }
 
         }
-        public string Get(string key)
-        {
-            if (localString.ContainsKey(key))
-                return localString[key];
-            else
-                return null;
-        }
 
-        public void Reset()
-        {
-            localString = null;
-        }
     }
 }
