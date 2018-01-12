@@ -11,8 +11,8 @@
     "LiteDatabase": "app.db"
   },
   "MobileCenter_HockeyApp": {
-    "IOSAppId": "3bda5207-786f-4daa-beed-c0d23311d170",
-    "AndroidAppId": "51f1e9c9-3d58-468d-bf41-f44db21fee8a",
+    "IOSAppId": "",
+    "AndroidAppId": "",
     "UWPAppId": ""
   },
   "WebApi": {
