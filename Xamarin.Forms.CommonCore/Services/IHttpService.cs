@@ -20,6 +20,5 @@ namespace Xamarin.Forms.CommonCore
         Task<(bool Success, Exception Error)> UploadFile(string url, byte[] obj, string fileName, CancellationToken? ct = null);
         Task<byte[]> DownloadFile(string url, Action<double> percentChanged, Action<Exception> error, string token = null, CancellationToken? ct = null);
         HttpClient Client { get; set; }
-        bool IsConnected { get; set; }
     }
 }

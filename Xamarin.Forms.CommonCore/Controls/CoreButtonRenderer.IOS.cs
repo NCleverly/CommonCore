@@ -16,7 +16,6 @@ namespace Xamarin.Forms.CommonCore
     {
         CoreButton caller;
         CAGradientLayer gradient;
-        CALayer caLayer;
 
         public override void LayoutSubviews()
         {

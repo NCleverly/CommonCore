@@ -360,5 +360,6 @@
     <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialStyles.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialViewModel.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Config\settings\config.dev.json.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Partials\BasePartialBusiness.cs.txt" />
   </ItemGroup>
 </Project>

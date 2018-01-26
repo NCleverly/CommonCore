@@ -17,7 +17,6 @@ namespace Xamarin.Forms.CommonCore
     public class CoreTelephonyPageRenderer : PageRenderer
     {
         private CTCallCenter callCenter;
-        private bool callCenterIsListening;
 
         public void CallEndedEvent(CTCall call)
         {

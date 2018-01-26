@@ -40,7 +40,7 @@ namespace Xamarin.Forms.CommonCore
                 intent.SetData(uri);
                 Ctx.StartActivity(intent);
             }
-            catch (Exception ex)
+            catch
             {
                 var toast = Toast.MakeText(Ctx, "This activity is not supported", ToastLength.Long);
                 toast.Show();
@@ -63,7 +63,7 @@ namespace Xamarin.Forms.CommonCore
                 intent.SetData(uri);
                 Ctx.StartActivity(intent);
             }
-            catch (Exception ex)
+            catch
             {
                 var toast = Toast.MakeText(Ctx, "This activity is not supported", ToastLength.Long);
                 toast.Show();

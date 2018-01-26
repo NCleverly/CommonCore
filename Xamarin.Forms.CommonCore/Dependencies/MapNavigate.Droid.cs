@@ -29,7 +29,7 @@ namespace Xamarin.Forms.CommonCore
                 mapIntent.SetPackage("com.google.android.apps.maps");
                 activity.StartActivity(mapIntent);
             }
-            catch (Exception ex)
+            catch
             {
                 Toast toast = Toast.MakeText(Ctx, "This activity is not supported", ToastLength.Long);
                 toast.Show();

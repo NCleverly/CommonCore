@@ -23,7 +23,8 @@ namespace Xamarin.Forms.CommonCore
             {
                 txtView = new UITextView();
                 txtView.Text = parent.Text;
-                txtView.Font = parent.Font.ToUIFont();
+                if(!string.IsNullOrEmpty(parent.FontFamily))
+                    txtView.Font = UIFont.FromName(parent.FontFamily, (nfloat)parent.FontSize);
 
                 var txtColor = UIColor.Black;
                 if ((int)parent.TextColor.R != -1)

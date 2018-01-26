@@ -116,26 +116,19 @@ Step 6 (Optional) -> You may want to setup the Forms Application page to include
         {
             CoreSettings.ScreenSize = new Size(MainPage.Width, MainPage.Height);
             MainPage.SizeChanged += AppScreenSizeChanged;
-            CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
         }
 
         protected override void OnSleep()
         {
             MainPage.SizeChanged -= AppScreenSizeChanged;
-            CrossConnectivity.Current.ConnectivityChanged -= ConnectivityChanged;
         }
 
         protected override void OnResume()
         {
             MainPage.SizeChanged += AppScreenSizeChanged;
-            CrossConnectivity.Current.ConnectivityChanged += ConnectivityChanged;
         }
 
-        private void ConnectivityChanged(object sender, ConnectivityChangedEventArgs args)
-        {
-            this.SetConnectionStatus(args.IsConnected);
-        }
-
+       
         private void AppScreenSizeChanged(object sender, EventArgs args)
         {
             CoreSettings.ScreenSize = new Size(MainPage.Width, MainPage.Height);

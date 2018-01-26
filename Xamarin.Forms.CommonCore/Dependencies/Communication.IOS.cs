@@ -28,8 +28,7 @@ namespace Xamarin.Forms.CommonCore
             }
             else
             {
-                var alert = new UIAlertView("Phone Not Enabled", "This device does not support phone calls", null, "Ok", null);
-                alert.Show();
+                NotSupportedMessage("Phone Not Enabled", "This device does not support phone calls.");
             }
         }
 
@@ -52,8 +51,8 @@ namespace Xamarin.Forms.CommonCore
             }
             else
             {
-                var alert = new UIAlertView("Phone Not Enabled", "This device does not support phone calls", null, "Ok", null);
-                alert.Show();
+                NotSupportedMessage("Phone Not Enabled", "This device does not support phone calls");
+
             }
         }
 
@@ -80,8 +79,7 @@ namespace Xamarin.Forms.CommonCore
             }
             else
             {
-                var alert = new UIAlertView("Mail not supported", "Can't send mail from this device", null, "OK");
-                alert.Show();
+                NotSupportedMessage("Mail not supported", "Can't send mail from this device");
             }
 
 
@@ -128,10 +126,16 @@ namespace Xamarin.Forms.CommonCore
             }
             else
             {
-                var alert = new UIAlertView("SMS not supported", "Can't send sms from this device", null, "OK");
-                alert.Show();
+                NotSupportedMessage("SMS not supported", "Can't send sms from this device");
             }
 
+        }
+
+        private void NotSupportedMessage(string title, string message)
+        {
+            var alert = UIAlertController.Create(title, message, UIAlertControllerStyle.Alert);
+            alert.AddAction(UIAlertAction.Create("Ok", UIAlertActionStyle.Default, null));
+            GetUIController().PresentViewController(alert, true, null);
         }
 
         private UIViewController GetUIController()

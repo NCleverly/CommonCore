@@ -101,11 +101,6 @@ namespace Xamarin.Forms.CommonCore
             return utcDateTime.ToLocalTime();
         }
 
-        public static void SetConnectionStatus(this Application app, bool isConnected)
-        {
-            HttpService.IsConnected = isConnected;
-        }
-
         public static StringContent ToStringContent(this object obj)
         {
             var data = JsonConvert.SerializeObject(obj);

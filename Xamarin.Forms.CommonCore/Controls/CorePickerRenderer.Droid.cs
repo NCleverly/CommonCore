@@ -26,7 +26,6 @@ namespace Xamarin.Forms.CommonCore
         private AlertDialog _dialog;
         private bool _disposed;
         private CorePicker element;
-        private string[] options;
 
         public CorePickerRenderer(Context ctx) : base(ctx)
         {

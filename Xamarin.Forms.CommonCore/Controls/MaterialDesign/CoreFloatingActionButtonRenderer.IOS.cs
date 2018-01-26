@@ -217,7 +217,7 @@ namespace Xamarin.Forms.CommonCore.MaterialDesign
 
 		UIColor _backgroundColor;
 
-		public UIColor BackgroundColor
+		public new UIColor BackgroundColor
 		{
 			get
 			{

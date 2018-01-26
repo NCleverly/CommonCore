@@ -83,7 +83,7 @@ namespace Xamarin.Forms.CommonCore
         /// Application Installation ID
         /// </summary>
         /// <value>The installation identifier.</value>
-		public static string InstallationId
+        public static string InstallationId
         {
             get
             {

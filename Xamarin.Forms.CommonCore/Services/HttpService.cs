@@ -8,6 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using ModernHttpClient;
 using Newtonsoft.Json;
+using Plugin.Connectivity;
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -19,7 +20,10 @@ namespace Xamarin.Forms.CommonCore
         private JsonSerializer _serializer;
         public string json;
 
-        public bool IsConnected { get; set; } = true;
+        public bool IsConnected 
+        { 
+            get { return CrossConnectivity.Current.IsConnected; }
+        }
         public HttpClient Client
         {
             get
@@ -84,7 +88,7 @@ namespace Xamarin.Forms.CommonCore
                             break;
                     }
 #else
-			handler = new HttpClientHandler();
+            handler = new HttpClientHandler();
 #endif
 
 
@@ -204,7 +208,7 @@ namespace Xamarin.Forms.CommonCore
         }
         public async Task<(T Response, bool Success, Exception Error)> Get<T>(string url, CancellationToken? ct = null) where T : class, new()
         {
-           
+
 
             if (!IsConnected)
             {
@@ -216,7 +220,7 @@ namespace Xamarin.Forms.CommonCore
                 var token = ct ?? CancellationToken.None;
 
                 await new SynchronizationContextRemover();
-         
+
                 using (var srvResponse = await Client.GetAsync(url, token).ConfigureAwait(false))
                 {
                     if (CoreSettings.Config.HttpSettings.DisplayRawJson)
@@ -253,7 +257,7 @@ namespace Xamarin.Forms.CommonCore
                     Name = "file",
                     FileName = fileName
                 };
-                var id = CoreSettings.InstallationId.Replace("-",string.Empty);
+                var id = CoreSettings.InstallationId.Replace("-", string.Empty);
                 string boundary = $"---{id}";
                 var multipartContent = new MultipartFormDataContent(boundary);
                 multipartContent.Add(fileContent);
