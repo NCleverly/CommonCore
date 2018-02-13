@@ -23,7 +23,7 @@ namespace Xamarin.Forms.CommonCore
 		public string GoogleAppId { get; set; }
 	}
 
-	public class MobileCenterHockeyApp
+	public class MobileAppCenter
 	{
 		public string IOSAppId { get; set; }
 		public string AndroidAppId { get; set; }
@@ -35,7 +35,7 @@ namespace Xamarin.Forms.CommonCore
         public string AESEncryptionKey { get; set; }
 		public HttpSettings HttpSettings { get; set; }
 		public SocialMedia SocialMedia { get; set; }
-		public MobileCenterHockeyApp MobileCenter_HockeyApp { get; set; }
+        public MobileAppCenter MobileAppCenter { get; set; }
 		public Dictionary<string,string> WebApi { get; set; }
 		public Dictionary<string, string> CustomSettings { get; set; }
 	}

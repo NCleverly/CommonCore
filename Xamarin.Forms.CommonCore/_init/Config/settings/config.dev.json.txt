@@ -7,10 +7,7 @@
     "IOSHttpHandler": "ModernHttpClient",
     "AndroidHttpHandler": "ModernHttpClient"
   },
-  "LiteliteSettings": {
-    "LiteDatabase": "app.db"
-  },
-  "MobileCenter_HockeyApp": {
+  "MobileAppCenter": {
     "IOSAppId": "",
     "AndroidAppId": "",
     "UWPAppId": ""

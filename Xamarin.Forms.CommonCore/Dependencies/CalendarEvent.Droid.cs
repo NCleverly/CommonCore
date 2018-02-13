@@ -243,7 +243,8 @@ namespace Xamarin.Forms.CommonCore
                 string[] calendarsProjection = {
                     Provider.CalendarContract.Calendars.InterfaceConsts.Id,
                     Provider.CalendarContract.Calendars.InterfaceConsts.CalendarDisplayName,
-                    Provider.CalendarContract.Calendars.InterfaceConsts.AccountName
+                    Provider.CalendarContract.Calendars.InterfaceConsts.AccountName,
+                    Provider.CalendarContract.Calendars.InterfaceConsts.CalendarAccessLevel
                 };
 
                 var loader = new CursorLoader(Ctx, calendarsUri, calendarsProjection, null, null, null);
@@ -261,8 +262,10 @@ namespace Xamarin.Forms.CommonCore
                         var ident = cursor.GetLong(cursor.GetColumnIndex(calendarsProjection[0])).ToString();
                         var dn = cursor.GetString(cursor.GetColumnIndex(calendarsProjection[1]));
                         var an = cursor.GetString(cursor.GetColumnIndex(calendarsProjection[2]));
+                        var cal = cursor.GetString(cursor.GetColumnIndex(calendarsProjection[3]));
 
-                        if (dn.Equals(an))
+
+                        if (dn.Equals(an) && !string.IsNullOrEmpty(cal) && cal=="700")
                         {
                             contactList.Add(new CalendarAccount
                             {

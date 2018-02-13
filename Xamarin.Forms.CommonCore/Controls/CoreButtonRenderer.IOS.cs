@@ -19,8 +19,13 @@ namespace Xamarin.Forms.CommonCore
 
         public override void LayoutSubviews()
         {
-            foreach (var layer in Control?.Layer.Sublayers.Where(layer => layer is CAGradientLayer))
-                layer.Frame = GetBounds();//caller.Bounds.ToRectangleF();
+            if (Control != null)
+            {
+                foreach (var layer in Control.Layer.Sublayers.Where(layer => layer is CAGradientLayer))
+                {
+                    layer.Frame = GetBounds();
+                }
+            }
             base.LayoutSubviews();
         }
 
