@@ -71,21 +71,19 @@ namespace Xamarin.Forms.CommonCore
         {
             try
             {
-                var d = new AlertDialog.Builder(Ctx);
+                var d = new AlertDialog.Builder(Ctx).Create();
                 d.SetTitle(title);
                 d.SetMessage(message);
-                d.SetPositiveButton(buttonTitles[0], (e, a) =>
-                {
+                d.SetButton((int)DialogButtonType.Positive,buttonTitles[0],(sender, e) => {
                     callBack?.Invoke(true);
                 });
                 if (buttonTitles.Length > 1)
                 {
-                    d.SetNegativeButton(buttonTitles[1], (e, a) =>
-                    {
+                    d.SetButton((int)DialogButtonType.Negative, buttonTitles[1], (sender, e) => {
                         callBack?.Invoke(false);
                     });
                 }
-                d.Create().Show();
+                d.Show();
 
             }
             catch (System.Exception ex)
