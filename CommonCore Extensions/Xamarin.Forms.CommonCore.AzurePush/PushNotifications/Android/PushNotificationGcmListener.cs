@@ -176,7 +176,7 @@ namespace PushNotification.Plugin
                         {
                             notifyId = Convert.ToInt32(str);
                         }
-                        catch (System.Exception ex)
+                        catch (System.Exception)
                         {
                             // Keep the default value of zero for the notify_id, but log the conversion problem.
                             System.Diagnostics.Debug.WriteLine("Failed to convert {0} to an integer", str);

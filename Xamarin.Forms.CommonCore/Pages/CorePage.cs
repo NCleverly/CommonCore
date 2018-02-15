@@ -12,6 +12,7 @@ namespace Xamarin.Forms.CommonCore
 
 		public CorePage()
 		{
+            
 			this.BindingContext = VM;
             if (VM != null)
             {

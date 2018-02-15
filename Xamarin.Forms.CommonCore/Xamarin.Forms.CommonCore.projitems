@@ -300,6 +300,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Controls\AppleCardView.IOS.cs">
       <DependentUpon>CoreCardView.cs</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Pages\Navigation\CoreNavigationPageRenderer.IOS.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

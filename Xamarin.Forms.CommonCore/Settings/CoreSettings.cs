@@ -132,6 +132,7 @@ namespace Xamarin.Forms.CommonCore
 
 #if __IOS__
         public static NSData DeviceToken { get; set; }
+        //public static bool PrefersLargeTitles { get; set; }
 #endif
 
         internal class AppData
