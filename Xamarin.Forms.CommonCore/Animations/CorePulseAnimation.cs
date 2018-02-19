@@ -6,6 +6,11 @@ namespace Xamarin.Forms.CommonCore
 {
     public class CorePulseAnimation : AnimationBase
     {
+        public override void CancelAnimation()
+        {
+            AnimationExtensions.AbortAnimation(Target, "Hearth");
+        }
+
         protected override Task BeginAnimation()
         {
             if (Target == null)

@@ -16,6 +16,11 @@ namespace Xamarin.Forms.CommonCore
             set { SetValue(RotationProperty, value); }
         }
 
+        public override void CancelAnimation()
+        {
+            ViewExtensions.CancelAnimations(Target);
+        }
+
         protected override Task BeginAnimation()
         {
             if (Target == null)
@@ -37,6 +42,11 @@ namespace Xamarin.Forms.CommonCore
         {
             get { return (double)GetValue(RotationProperty); }
             set { SetValue(RotationProperty, value); }
+        }
+
+        public override void CancelAnimation()
+        {
+            ViewExtensions.CancelAnimations(Target);
         }
 
         protected override Task BeginAnimation()
@@ -62,6 +72,11 @@ namespace Xamarin.Forms.CommonCore
             set { SetValue(RotationProperty, value); }
         }
 
+        public override void CancelAnimation()
+        {
+            ViewExtensions.CancelAnimations(Target);
+        }
+
         protected override Task BeginAnimation()
         {
             if (Target == null)
@@ -83,6 +98,11 @@ namespace Xamarin.Forms.CommonCore
         {
             get { return (double)GetValue(RotationProperty); }
             set { SetValue(RotationProperty, value); }
+        }
+
+        public override void CancelAnimation()
+        {
+            ViewExtensions.CancelAnimations(Target);
         }
 
         protected override Task BeginAnimation()

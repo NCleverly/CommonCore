@@ -26,6 +26,11 @@ namespace Xamarin.Forms.CommonCore
             set { SetValue(TranslateYProperty, value); }
         }
 
+        public override void CancelAnimation()
+        {
+            ViewExtensions.CancelAnimations(Target);
+        }
+
         protected override Task BeginAnimation()
         {
             if (Target == null)

@@ -8,6 +8,11 @@ namespace Xamarin.Forms.CommonCore
     {
         private const int Movement = -25;
 
+        public override void CancelAnimation()
+        {
+            AnimationExtensions.AbortAnimation(Target, "Jump");
+        }
+
         protected override Task BeginAnimation()
         {
             if (Target == null)

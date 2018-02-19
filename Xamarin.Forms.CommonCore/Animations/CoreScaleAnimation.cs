@@ -16,6 +16,11 @@ namespace Xamarin.Forms.CommonCore
             set { SetValue(ScaleProperty, value); }
         }
 
+        public override void CancelAnimation()
+        {
+            ViewExtensions.CancelAnimations(Target);
+        }
+
         protected override Task BeginAnimation()
         {
             if (Target == null)
@@ -37,6 +42,11 @@ namespace Xamarin.Forms.CommonCore
         {
             get { return (double)GetValue(ScaleProperty); }
             set { SetValue(ScaleProperty, value); }
+        }
+
+        public override void CancelAnimation()
+        {
+            ViewExtensions.CancelAnimations(Target);
         }
 
         protected override Task BeginAnimation()

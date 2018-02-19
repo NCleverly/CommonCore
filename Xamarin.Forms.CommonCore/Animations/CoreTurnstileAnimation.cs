@@ -6,6 +6,11 @@ namespace Xamarin.Forms.CommonCore
 {
     public class CoreTurnstileInAnimation : AnimationBase
     {
+        public override void CancelAnimation()
+        {
+            AnimationExtensions.AbortAnimation(Target, "TurnstileIn");
+        }
+
         protected override Task BeginAnimation()
         {
             if (Target == null)
@@ -35,6 +40,11 @@ namespace Xamarin.Forms.CommonCore
 
     public class CoreTurnstileOutAnimation : AnimationBase
     {
+        public override void CancelAnimation()
+        {
+            AnimationExtensions.AbortAnimation(Target, "TurnstileOut");
+        }
+
         protected override Task BeginAnimation()
         {
             if (Target == null)

@@ -2,10 +2,16 @@
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+
 namespace Xamarin.Forms.CommonCore
 {
     public class CoreBounceInAnimation : AnimationBase
     {
+        public override void CancelAnimation()
+        {
+            AnimationExtensions.AbortAnimation(Target, "BounceIn");
+        }
+
         protected override Task BeginAnimation()
         {
             if (Target == null)
@@ -43,6 +49,11 @@ namespace Xamarin.Forms.CommonCore
 
     public class BounceOutAnimation : AnimationBase
     {
+        public override void CancelAnimation()
+        {
+            AnimationExtensions.AbortAnimation(Target, "BounceOut");
+        }
+
         protected override Task BeginAnimation()
         {
             if (Target == null)

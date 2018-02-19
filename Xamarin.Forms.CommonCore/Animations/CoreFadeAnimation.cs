@@ -6,6 +6,11 @@ namespace Xamarin.Forms.CommonCore
 {
     public class CoreFadeToAnimation : AnimationBase
     {
+        public override void CancelAnimation()
+        {
+            ViewExtensions.CancelAnimations(Target);
+        }
+
         public static readonly BindableProperty OpacityProperty =
             BindableProperty.Create(nameof(Opacity), typeof(double), typeof(CoreFadeToAnimation), default(double),
                 BindingMode.TwoWay, null);
@@ -29,6 +34,11 @@ namespace Xamarin.Forms.CommonCore
 
     public class CoreFadeInAnimation : AnimationBase
     {
+        public override void CancelAnimation()
+        {
+            AnimationExtensions.AbortAnimation(Target, "FadeIn");
+        }
+
         public enum FadeDirection
         {
             Up,
@@ -78,6 +88,11 @@ namespace Xamarin.Forms.CommonCore
 
     public class FadeOutAnimation : AnimationBase
     {
+        public override void CancelAnimation()
+        {
+            AnimationExtensions.AbortAnimation(Target, "FadeOut");
+        }
+
         public enum FadeDirection
         {
             Up,

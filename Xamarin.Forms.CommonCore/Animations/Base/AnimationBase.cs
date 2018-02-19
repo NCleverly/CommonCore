@@ -37,6 +37,8 @@ namespace Xamarin.Forms.CommonCore
 
         protected abstract Task BeginAnimation();
 
+        public abstract void CancelAnimation();
+
         public async Task Begin()
         {
             await BeginAnimation();

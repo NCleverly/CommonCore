@@ -6,6 +6,11 @@ namespace Xamarin.Forms.CommonCore
 {
     public class CoreFlipAnimation : AnimationBase
     {
+        public override void CancelAnimation()
+        {
+            AnimationExtensions.AbortAnimation(Target, "Flip");
+        }
+
         public enum FlipDirection
         {
             Left,

@@ -22,6 +22,14 @@ namespace Xamarin.Forms.CommonCore
             get;
         }
 
+        public override void CancelAnimation()
+        {
+            foreach (var animation in Animations)
+            {
+                animation.CancelAnimation();
+            }
+        }
+
         protected override async Task BeginAnimation()
         {
             foreach (var animation in Animations)
