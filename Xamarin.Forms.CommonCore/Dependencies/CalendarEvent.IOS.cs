@@ -46,7 +46,8 @@ namespace Xamarin.Forms.CommonCore
                 }
 
                 NSError e;
-                CalendarEvent.EventStore.SaveEvent(newEvent, EKSpan.ThisEvent, out e);
+
+                CalendarEvent.EventStore.SaveEvent(newEvent, EKSpan.ThisEvent, true, out e);
 
                 if (e == null)
                 {
@@ -69,12 +70,15 @@ namespace Xamarin.Forms.CommonCore
                 var lst = new List<CalendarAccount>();
                 foreach (var c in cals)
                 {
-                    lst.Add(new CalendarAccount()
+                    if (c.AllowsContentModifications)
                     {
-                        Id = c.CalendarIdentifier,
-                        DisplayName = c.Title,
-                        AccountName = c.Description
-                    });
+                        lst.Add(new CalendarAccount()
+                        {
+                            Id = c.CalendarIdentifier,
+                            DisplayName = c.Title,
+                            AccountName = c.Description
+                        });
+                    }
                 }
                 return lst;
             }
@@ -84,22 +88,22 @@ namespace Xamarin.Forms.CommonCore
         {
             (bool result, CalendarEventModel model) response = (false, calEvent);
 
+            if (calEvent.DeviceCalendar == null)
+                return response;
+
             var result = await RequestAccess(EKEntityType.Event);
             if (result.granted)
             {
                 var evt = CalendarEvent.EventStore.EventFromIdentifier(calEvent.Id);
                 if (evt != null)
                 {
-                    var selectedCalendar = CalendarEvent.EventStore.DefaultCalendarForNewEvents;
-                    if (calEvent.DeviceCalendar != null)
-                        selectedCalendar = CalendarEvent.EventStore.GetCalendar(calEvent.DeviceCalendar.Id);
 
                     evt.StartDate = calEvent.StartTime.ToNSDate();
                     evt.EndDate = calEvent.EndTime.ToNSDate();
-                    evt.Title = calEvent.Title;
+                    evt.Title = calEvent.Title + " - updated";
                     evt.Location = calEvent.Location;
-                    evt.Notes = calEvent.Description;
-                    evt.Calendar = selectedCalendar;
+                    evt.Notes = calEvent.Description  + "- Notes updated";
+                    evt.Calendar = CalendarEvent.EventStore.GetCalendar(calEvent.DeviceCalendar.Id);
 
                     if (calEvent.HasReminder)
                     {
@@ -109,8 +113,10 @@ namespace Xamarin.Forms.CommonCore
                         var offset = calEvent.StartTime.AddMinutes(-calEvent.ReminderMinutes).ToNSDate();
                         evt.AddAlarm(EKAlarm.FromDate(offset));
                     }
-                    NSError e;
-                    CalendarEvent.EventStore.SaveEvent(evt, EKSpan.ThisEvent, out e);
+                    NSError e=null;
+
+                    CalendarEvent.EventStore.SaveEvent(evt, EKSpan.ThisEvent, true, out e);
+           
                     if (e == null)
                     {
                         response.result = true;

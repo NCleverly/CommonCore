@@ -15,6 +15,8 @@ using System.Linq.Expressions;
 using System.Windows.Input;
 using System.Net.Http;
 using System.Net;
+using Plugin.Permissions;
+using Plugin.Permissions.Abstractions;
 
 namespace Xamarin.Forms.CommonCore
 {
@@ -36,6 +38,27 @@ namespace Xamarin.Forms.CommonCore
             {
                 return (IHttpService)CoreDependencyService.GetService<IHttpService, HttpService>(true);
             }
+        }
+
+        public static async Task<PermissionStatus> RequestPermissions(this object caller, Permission permission, string dialogTitle,string dialogMessage)
+        {
+            var status = await CrossPermissions.Current.CheckPermissionStatusAsync(permission);
+            if (status != PermissionStatus.Granted)
+            {
+                if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(permission))
+                {
+                    CoreDependencyService.GetDependency<IDialogPrompt>().ShowMessage(new Prompt()
+                    {
+                        Title = dialogTitle,
+                        Message = dialogMessage
+                    });
+                }
+
+                var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { permission});
+                status = results[permission];
+            }
+
+            return status;
         }
 
         public static T On<T>(this object caller, params T[] parameters)

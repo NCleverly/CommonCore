@@ -24,6 +24,7 @@ namespace Xamarin.Forms.CommonCore
         private TelephonyManager telephonyManager;
         private PhoneCallListener phoneListener;
         private string callBackKey;
+        private const string dialogMessage = "The application need access to the devices's phone";
 
         public Context Ctx
         {
