@@ -58,10 +58,12 @@ namespace Xamarin.Forms.CommonCore
             switch (e.PropertyName)
             {
                 case "Checked":
-                    Control.Checked = Element.Checked;
+                    if(Control!=null && Element!=null)
+                        Control.Checked = Element.Checked;
                     break;
                 case "Text":
-                    Control.Text = Element.Text;
+                    if (Control != null && Element != null)
+                        Control.Text = Element.Text;
                     break;
 
             }

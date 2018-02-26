@@ -124,12 +124,14 @@ namespace Xamarin.Forms.CommonCore
 		}
 		~CoreRanking()
 		{
-			var behavior = (StarBehavior)StarList[Count - 1].Behaviors[0];
+            var cnt = Count > 0 ? Count : 0;
+            var behavior = (StarBehavior)StarList[cnt - 1].Behaviors[0];
 			behavior.PropertyChanged -= RatingchangedEvent;
 		}
 		public void Dispose()
 		{
-			var behavior = (StarBehavior)StarList[Count - 1].Behaviors[0];
+            var cnt = Count > 0 ? Count : 0;
+			var behavior = (StarBehavior)StarList[cnt - 1].Behaviors[0];
 			behavior.PropertyChanged -= RatingchangedEvent;
 		}
 	}
