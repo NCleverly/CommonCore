@@ -100,9 +100,9 @@ namespace Xamarin.Forms.CommonCore
 
                     evt.StartDate = calEvent.StartTime.ToNSDate();
                     evt.EndDate = calEvent.EndTime.ToNSDate();
-                    evt.Title = calEvent.Title + " - updated";
+                    evt.Title = calEvent.Title;
                     evt.Location = calEvent.Location;
-                    evt.Notes = calEvent.Description  + "- Notes updated";
+                    evt.Notes = calEvent.Description;
                     evt.Calendar = CalendarEvent.EventStore.GetCalendar(calEvent.DeviceCalendar.Id);
 
                     if (calEvent.HasReminder)
@@ -115,7 +115,7 @@ namespace Xamarin.Forms.CommonCore
                     }
                     NSError e=null;
 
-                    CalendarEvent.EventStore.SaveEvent(evt, EKSpan.ThisEvent, true, out e);
+                    var x = CalendarEvent.EventStore.SaveEvent(evt, EKSpan.ThisEvent, true, out e);
            
                     if (e == null)
                     {
@@ -134,6 +134,7 @@ namespace Xamarin.Forms.CommonCore
                 var evt = CalendarEvent.EventStore.EventFromIdentifier(id);
                 if (evt != null)
                 {
+
                     var model = new CalendarEventModel()
                     {
                         Id = evt.EventIdentifier,
@@ -141,7 +142,12 @@ namespace Xamarin.Forms.CommonCore
                         HasReminder = evt.HasAlarms,
                         Title = evt.Title,
                         EndTime = evt.EndDate.ToDateTime(),
-                        StartTime = evt.StartDate.ToDateTime()
+                        StartTime = evt.StartDate.ToDateTime(),
+                        DeviceCalendar = new CalendarAccount()
+                        {
+                             Id = evt.Calendar.CalendarIdentifier
+                        }
+                                       
                     };
                     return model;
                 }
