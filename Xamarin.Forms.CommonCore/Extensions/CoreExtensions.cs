@@ -18,6 +18,10 @@ using System.Net;
 using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 
+#if __ANDROID__
+using Android.OS;
+#endif
+
 namespace Xamarin.Forms.CommonCore
 {
 
@@ -43,6 +47,7 @@ namespace Xamarin.Forms.CommonCore
         public static async Task<PermissionStatus> RequestPermissions(this object caller, Permission permission, string dialogTitle,string dialogMessage)
         {
             var status = await CrossPermissions.Current.CheckPermissionStatusAsync(permission);
+
             if (status != PermissionStatus.Granted)
             {
                 if (await CrossPermissions.Current.ShouldShowRequestPermissionRationaleAsync(permission))
@@ -55,6 +60,10 @@ namespace Xamarin.Forms.CommonCore
                 }
 
                 var results = await CrossPermissions.Current.RequestPermissionsAsync(new[] { permission});
+#if __ANDROID__
+                if (Looper.MyLooper() == null)
+                    Looper.Prepare();
+#endif
                 status = results[permission];
             }
 

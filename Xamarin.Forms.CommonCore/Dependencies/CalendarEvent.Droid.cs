@@ -147,7 +147,6 @@ namespace Xamarin.Forms.CommonCore
         {
             return await Task.Run(async () =>
             {
-
                 if (Looper.MyLooper() == null)
                     Looper.Prepare();
 
@@ -269,7 +268,7 @@ namespace Xamarin.Forms.CommonCore
         {
             return await Task.Run(async () =>
             {
-                if (Looper.MyLooper() == null)
+                if(Looper.MyLooper()==null)
                     Looper.Prepare();
 
                 var status = await this.RequestPermissions(Permission.Calendar, "Permissions", dialogMessage);
