@@ -12,81 +12,19 @@ namespace Xamarin.Forms.CommonCore
     {
         public void ShowMessage(Prompt prompt)
         {
-            if (prompt.Callback == null)
-            {
-                ShowMessage(prompt.Title, prompt.Message);
-            }
-            else
-            {
-                if (prompt.ButtonTitles == null)
-                {
-                    ShowMessage(
-                        prompt.Title,
-                        prompt.Message,
-                        new string[] { "OK" },
-                        prompt.Callback);
-                }
-                else
-                {
-                    ShowMessage(
-                         prompt.Title,
-                         prompt.Message,
-                         prompt.ButtonTitles,
-                         prompt.Callback);
-                }
-            }
-        }
+            if (prompt.ButtonTitles == null || prompt.ButtonTitles.Length == 0)
+                return;
 
-        private void ShowMessage(string title, string message, string[] buttonTitle, Action<bool> callBack)
-        {
             var controller = GetUIController();
-            var alert = UIAlertController.Create(title, message, UIAlertControllerStyle.Alert);
-            alert.AddAction(UIAlertAction.Create(buttonTitle[0], UIAlertActionStyle.Default, (action) =>
-           {
-               callBack?.Invoke(true);
-           }));
-            if (buttonTitle.Length > 1)
-            {
-                alert.AddAction(UIAlertAction.Create(buttonTitle[1], UIAlertActionStyle.Default, (action) =>
-                {
-                    callBack?.Invoke(false);
-                }));
-            }
-
-            controller.PresentViewController(alert, true, null);
-        }
-
-        private void ShowMessage(string title, string message, string[] buttonTitles, Action<int> callBack)
-        {
-            var controller = GetUIController();
-            var alert = UIAlertController.Create(title, message, UIAlertControllerStyle.Alert);
-            foreach (var txt in buttonTitles)
+            var alert = UIAlertController.Create(prompt.Title, prompt.Message, UIAlertControllerStyle.Alert);
+            foreach (var txt in prompt.ButtonTitles)
             {
                 alert.AddAction(UIAlertAction.Create(txt, UIAlertActionStyle.Default, action =>
                 {
-                    callBack?.Invoke(buttonTitles.IndexOf(txt));
+                    prompt.Callback?.Invoke(prompt.ButtonTitles.IndexOf(txt));
                 }));
             }
 
-            controller.PresentViewController(alert, true, null);
-        }
-
-        private void ShowMessage(string title, string message)
-        {
-            var controller = GetUIController();
-            var alert = UIAlertController.Create(title, message, UIAlertControllerStyle.Alert);
-            alert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
-            controller.PresentViewController(alert, true, null);
-        }
-
-        private void ShowMessage(string title, string message, Action callback)
-        {
-            var controller = GetUIController();
-            var alert = UIAlertController.Create(title, message, UIAlertControllerStyle.Alert);
-            alert.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, action =>
-            {
-                callback?.Invoke();
-            }));
             controller.PresentViewController(alert, true, null);
         }
 

@@ -19,122 +19,51 @@ namespace Xamarin.Forms.CommonCore
 
         public void ShowMessage(Prompt prompt)
         {
-            if (prompt.Callback == null)
-            {
-                ShowMessage(prompt.Title, prompt.Message);
-            }
-            else
-            {
-                if (prompt.ButtonTitles == null)
-                {
-                    ShowMessage(
-                        prompt.Title,
-                        prompt.Message,
-                        new string[] { "OK" },
-                        prompt.Callback);
-                }
-                else
-                {
-                    ShowMessage(
-                         prompt.Title,
-                         prompt.Message,
-                         prompt.ButtonTitles,
-                         prompt.Callback);
-                }
-            }
-        }
-
-        private void ShowMessage(string title, string message)
-        {
-            try
-            {
-                var dlg = new AlertDialog.Builder(Ctx).Create();
-                dlg.SetTitle(title);
-                dlg.SetMessage(message);
-                dlg.SetCancelable(false);
-                dlg.SetButton("Okay", (cs, ce) =>
-                {
-
-                });
-                dlg.Show();
-
-            }
-            catch (System.Exception ex)
-            {
-#if DEBUG
-                Console.WriteLine(ex.Message);
-#endif
-            }
-        }
-
-        private void ShowMessage(string title, string message, string[] buttonTitles, Action<bool> callBack)
-        {
+            if (prompt.ButtonTitles == null || prompt.ButtonTitles.Length == 0)
+                return;
+            
             try
             {
                 var d = new AlertDialog.Builder(Ctx).Create();
-                d.SetTitle(title);
-                d.SetMessage(message);
-                d.SetButton((int)DialogButtonType.Positive,buttonTitles[0],(sender, e) => {
-                    callBack?.Invoke(true);
-                });
-                if (buttonTitles.Length > 1)
+                d.SetTitle(prompt.Title);
+                d.SetMessage(prompt.Message);
+                if (prompt.ButtonTitles.Length > 2)
                 {
-                    d.SetButton((int)DialogButtonType.Negative, buttonTitles[1], (sender, e) => {
-                        callBack?.Invoke(false);
+                    d.SetButton(prompt.ButtonTitles[0], (e, a) =>
+                    {
+                        prompt.Callback?.Invoke(0);
+                    });
+                    d.SetButton2(prompt.ButtonTitles[1], (e, a) =>
+                    {
+                        prompt.Callback?.Invoke(1);
+                    });
+                    d.SetButton3(prompt.ButtonTitles[2], (e, a) =>
+                    {
+                        prompt.Callback?.Invoke(2);
+                    });
+
+                }
+                else if(prompt.ButtonTitles.Length == 2)
+                {
+                    d.SetButton(prompt.ButtonTitles[0], (e, a) =>
+                    {
+                        prompt.Callback?.Invoke(0);
+                    });
+                    d.SetButton2(prompt.ButtonTitles[1], (e, a) =>
+                    {
+                        prompt.Callback?.Invoke(1);
                     });
                 }
+                else if (prompt.ButtonTitles.Length == 1){
+                    d.SetButton(prompt.ButtonTitles[0], (e, a) =>
+                    {
+                        prompt.Callback?.Invoke(0);
+                    });
+                }
+   
                 d.Show();
-
             }
-            catch (System.Exception ex)
-            {
-#if DEBUG
-                Console.WriteLine(ex.Message);
-#endif
-            }
-        }
-
-        private void ShowMessage(string title, string message, string[] buttonTitles, Action<int> callBack)
-        {
-            try
-            {
-                var d = new AlertDialog.Builder(Ctx).Create();
-
-                d.SetTitle(title);
-                d.SetMessage(message);
-                if (buttonTitles.Length > 2)
-                {
-                    d.SetButton(buttonTitles[0], (e, a) =>
-                    {
-                        callBack?.Invoke(0);
-                    });
-                    d.SetButton2(buttonTitles[1], (e, a) =>
-                    {
-                        callBack?.Invoke(1);
-                    });
-                    d.SetButton3(buttonTitles[2], (e, a) =>
-                    {
-                        callBack?.Invoke(2);
-                    });
-
-
-                }
-                else
-                {
-                    d.SetButton(buttonTitles[0], (e, a) =>
-                    {
-                        callBack?.Invoke(0);
-                    });
-                    d.SetButton2(buttonTitles[1], (e, a) =>
-                    {
-                        callBack?.Invoke(1);
-                    });
-                }
-
-                d.Show();
-
-            }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
 #if DEBUG
                 Console.WriteLine(ex.Message);

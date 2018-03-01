@@ -8,11 +8,9 @@ using Android.OS;
 using Xamarin.Forms.CommonCore;
 using Provider = Android.Provider;
 using RemindersMethod = Android.Provider.RemindersMethod;
-using System.Linq;
 using DroidUri = Android.Net.Uri;
 using Java.Util;
 using Plugin.CurrentActivity;
-using Plugin.Permissions;
 using Plugin.Permissions.Abstractions;
 
 
@@ -78,6 +76,9 @@ namespace Xamarin.Forms.CommonCore
                     }
 
                 }
+                else{
+                    Looper.Loop();
+                }
 
                 return response;
             });
@@ -137,6 +138,9 @@ namespace Xamarin.Forms.CommonCore
                         }
 
                     }
+                }
+                else{
+                    Looper.Loop();
                 }
 
                 return response;
@@ -203,6 +207,7 @@ namespace Xamarin.Forms.CommonCore
                 }
                 else
                 {
+                    Looper.Loop();
                     return null;
                 }
             });
@@ -260,6 +265,7 @@ namespace Xamarin.Forms.CommonCore
                 }
                 else
                 {
+                    Looper.Loop();
                     return null;
                 }
             });
@@ -316,6 +322,7 @@ namespace Xamarin.Forms.CommonCore
                 }
                 else
                 {
+                    Looper.Loop();
                     return new List<CalendarAccount>();
                 }
             });
