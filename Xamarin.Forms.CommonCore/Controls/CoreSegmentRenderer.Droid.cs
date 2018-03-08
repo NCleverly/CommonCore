@@ -30,10 +30,8 @@ namespace Xamarin.Forms.CommonCore
         protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
         {
             base.OnElementChanged(e);
-            var x = _formControl.BorderRadius;
             _formControl.BorderColor = Xamarin.Forms.Color.Black;
             _formControl.BorderWidth = 1;
-            _formControl.BorderRadius = 1;
         }
 
     }

@@ -167,7 +167,8 @@ namespace Xamarin.Forms.CommonCore
                     Provider.CalendarContract.Events.InterfaceConsts.Dtstart,
                     Provider.CalendarContract.Events.InterfaceConsts.Dtend,
                     Provider.CalendarContract.Events.InterfaceConsts.HasAlarm,
-                    Provider.CalendarContract.Events.InterfaceConsts.CalendarId
+                    Provider.CalendarContract.Events.InterfaceConsts.CalendarId,
+                    Provider.CalendarContract.Events.InterfaceConsts.Deleted
                 };
                     var loader = new CursorLoader(Ctx, eventsUri, eventsProjection, null, null, null);
                     var cursor = (ICursor)loader.LoadInBackground();
@@ -183,6 +184,7 @@ namespace Xamarin.Forms.CommonCore
                             var dtend = cursor.GetString(cursor.GetColumnIndex(eventsProjection[4]));
                             var hasAlarm = cursor.GetString(cursor.GetColumnIndex(eventsProjection[5]));
                             var calendarId = cursor.GetString(cursor.GetColumnIndex(eventsProjection[6]));
+                            var deleted = cursor.GetString(cursor.GetColumnIndex(eventsProjection[7]));
 
                             if (modelId.Equals(id))
                             {
@@ -193,7 +195,8 @@ namespace Xamarin.Forms.CommonCore
                                     Description = description,
                                     StartTime = CurrentDateTime(long.Parse(dtstart)),
                                     EndTime = CurrentDateTime(long.Parse(dtend)),
-                                    HasReminder = int.Parse(hasAlarm) == 0 ? false : true
+                                    HasReminder = int.Parse(hasAlarm) == 0 ? false : true,
+                                    Deleted = int.Parse(deleted) == 0 ? false : true
                                 };
 
                                 model.DeviceCalendar = await GetCalendar(calendarId);
@@ -202,6 +205,9 @@ namespace Xamarin.Forms.CommonCore
                             }
                         } while (cursor.MoveToNext());
                     }
+
+                    if (model.Deleted)
+                        return null;
 
                     return model;
                 }
@@ -230,7 +236,7 @@ namespace Xamarin.Forms.CommonCore
                     string[] calendarsProjection = {
                     Provider.CalendarContract.Calendars.InterfaceConsts.Id,
                     Provider.CalendarContract.Calendars.InterfaceConsts.CalendarDisplayName,
-                    Provider.CalendarContract.Calendars.InterfaceConsts.AccountName
+                    Provider.CalendarContract.Calendars.InterfaceConsts.AccountName,
                 };
 
                     var loader = new CursorLoader(Ctx, calendarsUri, calendarsProjection, null, null, null);
@@ -247,7 +253,6 @@ namespace Xamarin.Forms.CommonCore
                             var calId = cursor.GetLong(cursor.GetColumnIndex(calendarsProjection[0])).ToString();
                             var dn = cursor.GetString(cursor.GetColumnIndex(calendarsProjection[1]));
                             var an = cursor.GetString(cursor.GetColumnIndex(calendarsProjection[2]));
-
                             if (calId.Equals(id))
                             {
                                 calAccount = new CalendarAccount

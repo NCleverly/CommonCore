@@ -140,9 +140,7 @@ namespace Xamarin.Forms.CommonCore
                 view.IsVisible = x == 0 ? true : false;
                 var btn = new CoreSegmentButton()
                 {
-                    Text = view.DisplayTitle,
-                    BorderRadius = 0,
-
+                    Text = view.DisplayTitle, 
                 };
                 if (FontSize > 0)
                     btn.FontSize = this.FontSize;

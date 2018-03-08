@@ -23,6 +23,7 @@ namespace Xamarin.Forms.CommonCore
         public bool HasReminder { get; set; }
         public int ReminderMinutes { get; set; } = 60;
         public CalendarAccount DeviceCalendar { get; set; }
+        public bool Deleted { get; set; }
     }
 
 
