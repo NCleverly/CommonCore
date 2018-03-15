@@ -26,7 +26,7 @@ namespace Xamarin.Forms.CommonCore
 
         public void HideOverlay()
         {
-            dialog?.Hide();
+            dialog?.Dismiss();
         }
 
         public void ShowOverlay(string message)
