@@ -206,6 +206,43 @@ namespace Xamarin.Forms.CommonCore
             }
 
         }
+
+        public async Task<(string Response, bool Success, Exception Error)> PosttRaw(string url, CancellationToken? ct = null)
+        {
+            if (!IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
+
+            try
+            {
+                var token = ct ?? CancellationToken.None;
+
+                await new SynchronizationContextRemover();
+
+                using (var srvResponse = await Client.GetAsync(url, token).ConfigureAwait(false))
+                {
+                    var jsonResult = await srvResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    if (srvResponse.StatusCode == HttpStatusCode.OK)
+                    {
+                        return (jsonResult, true, null);
+                    }
+                    else
+                    {
+                        return (null, false, new ApplicationException(jsonResult));
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                return (null, false, ex);
+            }
+
+        }
+
         public async Task<(T Response, bool Success, Exception Error)> Get<T>(string url, CancellationToken? ct = null) where T : class, new()
         {
 
@@ -307,6 +344,41 @@ namespace Xamarin.Forms.CommonCore
 
         }
 
+        public async Task<(string Response, bool Success, Exception Error)> PostRaw(string url, object obj, CancellationToken? ct = null)
+        {
+            if (!IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
+
+            try
+            {
+                var token = ct ?? CancellationToken.None;
+
+                await new SynchronizationContextRemover();
+                var data = JsonConvert.SerializeObject(obj);
+                using (var srvResponse = await Client.PostAsync(url, new StringContent(data, Encoding.UTF8, "application/json"), token).ConfigureAwait(false))
+                {
+                    var jsonResult = await srvResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    if (srvResponse.StatusCode == HttpStatusCode.OK)
+                    {
+                        return (jsonResult, true, null);
+                    }
+                    else
+                    {
+                        return (null, false, new ApplicationException(jsonResult));
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                return (null, false, ex);
+            }
+
+        }
         public async Task<(T Response, bool Success, Exception Error)> Post<T>(string url, object obj, CancellationToken? ct = null) where T : class, new()
         {
             if (!IsConnected)
