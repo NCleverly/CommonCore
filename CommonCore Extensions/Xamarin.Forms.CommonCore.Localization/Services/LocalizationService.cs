@@ -1,15 +1,18 @@
 ﻿using System.Collections.Generic;
 using System.Reflection;
+using System.Threading;
+using System.Threading.Tasks;
 using Plugin.Settings;
 
 namespace Xamarin.Forms.CommonCore
 {
-    public class LocalizationService: ILocalizationService
+    public class LocalizationService : ILocalizationService
     {
         private Dictionary<string, string> localString;
 
         public string this[string key] => Get(key);
 
+        public bool IsLoaded { get; set; }
 
         public LocalizationService()
         {
@@ -19,8 +22,11 @@ namespace Xamarin.Forms.CommonCore
             var storage = (IFileStore)CoreDependencyService.GetService<IFileStore, FileStore>(true);
             storage.GetAsync<Dictionary<string, string>>(fileName).ContinueWith((data) =>
             {
-                if(data.Result.Success){
+                if (data.Result.Success)
+                {
+                    IsLoaded = true;
                     localString = data.Result.Response;
+                    CoreDependencyService.SendViewModelMessage(CoreSettings.LocalizationLoaded, null);
                 }
             });
         }
@@ -30,7 +36,7 @@ namespace Xamarin.Forms.CommonCore
             if (localString.ContainsKey(key))
                 return localString[key];
             else
-                return null;
+                return string.Empty;
         }
 
         public void Reset()
@@ -40,17 +46,17 @@ namespace Xamarin.Forms.CommonCore
 
         public static void Init(string version)
         {
-     
+
             var savedVersion = CrossSettings.Current.GetValueOrDefault("localizationversion", null);
-            if(savedVersion==null || !savedVersion.Equals(version))
+            if (savedVersion == null || !savedVersion.Equals(version))
             {
                 var fileString = ResourceLoader.GetEmbeddedResourceString(Assembly.GetAssembly(typeof(ResourceLoader)), "localization.csv");
-                if(fileString.Error==null)
+                if (fileString.Error == null)
                 {
                     ParseCVS(fileString.Response);
                 }
                 CrossSettings.Current.AddOrUpdateValue("localizationversion", version);
-                CoreDependencyService.GetService<ILocalizationService,LocalizationService>(true);
+                CoreDependencyService.GetService<ILocalizationService, LocalizationService>(true);
             }
             else
             {
@@ -83,7 +89,7 @@ namespace Xamarin.Forms.CommonCore
 
             foreach (var key in fileData.Keys)
             {
-                storage.SaveAsync<Dictionary<string, string>>($"{key}.json",fileData[key]).ContinueOn();
+                storage.SaveAsync<Dictionary<string, string>>($"{key}.json", fileData[key]).ContinueOn();
             }
 
         }

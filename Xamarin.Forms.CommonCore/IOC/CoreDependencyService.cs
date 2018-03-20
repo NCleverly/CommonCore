@@ -10,7 +10,7 @@ namespace Xamarin.Forms.CommonCore
         private static List<string> srvContainer = new List<string>();
         private static List<string> cvtrContainer = new List<string>();
         private static List<string> bllContainer = new List<string>();
-
+        private static List<string> singletonContainer = new List<string>();
         /// <summary>
         /// InjectionManager has view models
         /// </summary>
@@ -71,6 +71,16 @@ namespace Xamarin.Forms.CommonCore
             {
                 DependencyService.Register<T>();
                 bllContainer.Add(typeof(T).FullName);
+            }
+            return DependencyService.Get<T>(DependencyFetchTarget.GlobalInstance);
+        }
+
+        public static T GetSingletonObject<T>() where T : class
+        {
+            if (singletonContainer.Count(x => x == typeof(T).FullName) == 0)
+            {
+                DependencyService.Register<T>();
+                singletonContainer.Add(typeof(T).FullName);
             }
             return DependencyService.Get<T>(DependencyFetchTarget.GlobalInstance);
         }

@@ -3,7 +3,10 @@ using Newtonsoft.Json;
 
 namespace Xamarin.Forms.CommonCore
 {
-    
+    public partial class CoreSettings
+    {
+        public const string LocalizationLoaded = "localizationLoaded";
+    }
     public partial class CoreBusiness
     {
         /// <summary>
@@ -18,6 +21,7 @@ namespace Xamarin.Forms.CommonCore
                 return (ILocalizationService)CoreDependencyService.GetService<ILocalizationService, LocalizationService>(true);
             }
         }
+
     }
 
     public partial class CoreViewModel
@@ -34,5 +38,6 @@ namespace Xamarin.Forms.CommonCore
                 return (ILocalizationService)CoreDependencyService.GetService<ILocalizationService, LocalizationService>(true);
             }
         }
+
     }
 }

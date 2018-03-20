@@ -8,5 +8,6 @@ namespace Xamarin.Forms.CommonCore
         string Get(string key);
         string this[string key] { get; }
         void Reset();
+        bool IsLoaded { get; set; }
     }
 }
