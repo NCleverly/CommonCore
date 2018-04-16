@@ -301,6 +301,7 @@
       <DependentUpon>CoreCardView.cs</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\Navigation\CoreNavigationPageRenderer.IOS.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\util.Droid.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
