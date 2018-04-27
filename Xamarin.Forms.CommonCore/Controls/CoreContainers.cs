@@ -1,7 +1,4 @@
 ﻿using System;
-using Xamarin.Forms;
-using Xamarin.Forms.CommonCore;
-
 /*
 
 Android MainActivity must implement
@@ -18,18 +15,20 @@ Layout Compression - Performance
 LayoutCompression allows multiple layers of Xamarin.Forms layouts to be packed into a single native one.
 https://blog.xamarin.com/3-big-things-explore-xamarin-forms-2-5-0-pre-release/
 */
-namespace somenamespace
+namespace Xamarin.Forms.CommonCore
 {
     /// <summary>
     /// LayoutCompression allows multiple layers of Xamarin.Forms layouts to be packed into a single native one. 
     /// Not for UI rendered panels.
     /// </summary>
-    public class CompressedStackLayout : StackLayout
+    public class StackContainer : StackLayout
     {
-        public CompressedStackLayout()
+        public StackContainer(bool isCompressed = false)
         {
-            if(CoreSettings.OS== DeviceOS.ANDROID)
+            if (isCompressed && CoreSettings.OS == DeviceOS.ANDROID)
+            {
                 this.SetValue(CompressedLayout.IsHeadlessProperty, true);
+            }
         }
     }
 
@@ -37,37 +36,42 @@ namespace somenamespace
     /// LayoutCompression allows multiple layers of Xamarin.Forms layouts to be packed into a single native one. 
     /// Not for UI rendered panels.
     /// </summary>
-    public class CompressedAbsoluteLayout : AbsoluteLayout
+    public class AbsoluteContainer : AbsoluteLayout
     {
-        public CompressedAbsoluteLayout()
+        public AbsoluteContainer(bool isCompressed = false)
         {
-            if (CoreSettings.OS == DeviceOS.ANDROID)
+            if (isCompressed && CoreSettings.OS == DeviceOS.ANDROID)
+            {
                 this.SetValue(CompressedLayout.IsHeadlessProperty, true);
+            }
         }
     }
     /// <summary>
     /// LayoutCompression allows multiple layers of Xamarin.Forms layouts to be packed into a single native one. 
     /// Not for UI rendered panels.
     /// </summary>
-    public class CompressedGrid : Grid
+    public class GridContainer : Grid
     {
-        public CompressedGrid()
+        public GridContainer(bool isCompressed = false)
         {
-            if (CoreSettings.OS == DeviceOS.ANDROID)
+            if (isCompressed && CoreSettings.OS == DeviceOS.ANDROID)
+            {
                 this.SetValue(CompressedLayout.IsHeadlessProperty, true);
+            }
         }
     }
     /// <summary>
     /// LayoutCompression allows multiple layers of Xamarin.Forms layouts to be packed into a single native one. 
     /// Not for UI rendered panels.
     /// </summary>
-    public class CompressedRelativeLayout : RelativeLayout
+    public class RelativeContainer : RelativeLayout
     {
-        public CompressedRelativeLayout()
+        public RelativeContainer(bool isCompressed = false)
         {
-            if (CoreSettings.OS == DeviceOS.ANDROID)
+            if (isCompressed && CoreSettings.OS == DeviceOS.ANDROID)
+            {
                 this.SetValue(CompressedLayout.IsHeadlessProperty, true);
+            }
         }
     }
-
 }

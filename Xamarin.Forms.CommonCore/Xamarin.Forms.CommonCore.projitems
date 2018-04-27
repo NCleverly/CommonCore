@@ -302,6 +302,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Pages\Navigation\CoreNavigationPageRenderer.IOS.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utilities\util.Droid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\CoreContainers.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
@@ -336,8 +337,6 @@
     <Folder Include="$(MSBuildThisFileDirectory)_init\BusinessLogic\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Converters\" />
     <Folder Include="$(MSBuildThisFileDirectory)Converters\Attributes\" />
-    <Folder Include="$(MSBuildThisFileDirectory)_init\_roadmap\" />
-    <Folder Include="$(MSBuildThisFileDirectory)_init\_roadmap\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\BusinessLogic\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Config\" />
     <Folder Include="$(MSBuildThisFileDirectory)_init\Converters\" />
@@ -350,7 +349,6 @@
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)_init\FodyWeavers.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\ReadMe.txt" />
-    <None Include="$(MSBuildThisFileDirectory)_init\_roadmap\CompressedContainers.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\BusinessLogic\SomeBusinessLogic.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Converters\SomeValueConverter.cs.txt" />
     <None Include="$(MSBuildThisFileDirectory)_init\Models\SomeObject.cs.txt" />
