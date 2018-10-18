@@ -4,139 +4,66 @@ using Android.App;
 using Android.Widget;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
+using Android.Content;
+using Plugin.CurrentActivity;
 
 [assembly: Xamarin.Forms.Dependency(typeof(DialogPrompt))]
 namespace Xamarin.Forms.CommonCore
 {
     public class DialogPrompt : IDialogPrompt
     {
+        public Context Ctx
+        {
+            get => CrossCurrentActivity.Current.Activity;
+        }
+
         public void ShowMessage(Prompt prompt)
         {
-            if (prompt.Callback == null)
-            {
-                ShowMessage(prompt.Title, prompt.Message);
-            }
-            else
-            {
-                if (prompt.ButtonTitles == null)
-                {
-                    ShowMessage(
-                        prompt.Title,
-                        prompt.Message,
-                        new string[] { "OK" },
-                        prompt.Callback);
-                }
-                else
-                {
-                    ShowMessage(
-                         prompt.Title,
-                         prompt.Message,
-                         prompt.ButtonTitles,
-                         prompt.Callback);
-                }
-            }
-        }
-
-        private void ShowMessage(string title, string message)
-        {
+            if (prompt.ButtonTitles == null || prompt.ButtonTitles.Length == 0)
+                return;
+            
             try
             {
-                var dlg = new AlertDialog.Builder(Forms.Context).Create();
-                dlg.SetTitle(title);
-                dlg.SetMessage(message);
-                dlg.SetCancelable(false);
-                dlg.SetButton("Okay", (cs, ce) =>
+                var d = new AlertDialog.Builder(Ctx).Create();
+                d.SetTitle(prompt.Title);
+                d.SetMessage(prompt.Message);
+                if (prompt.ButtonTitles.Length > 2)
                 {
-
-                });
-                dlg.Show();
-
-            }
-            catch (System.Exception ex)
-            {
-#if DEBUG
-                Console.WriteLine(ex.Message);
-#endif
-            }
-        }
-
-        private void ShowMessage(string title, string message, string[] buttonTitles, Action<bool> callBack)
-        {
-            try
-            {
-                var d = new AlertDialog.Builder(Forms.Context);
-                d.SetTitle(title);
-                d.SetMessage(message);
-                d.SetPositiveButton(buttonTitles[0], (e, a) =>
-                {
-                    callBack?.Invoke(true);
-                });
-                if (buttonTitles.Length > 1)
-                {
-                    d.SetNegativeButton(buttonTitles[1], (e, a) =>
+                    d.SetButton(prompt.ButtonTitles[0], (e, a) =>
                     {
-                        callBack?.Invoke(false);
+                        prompt.Callback?.Invoke(0);
                     });
-                }
-                d.Create().Show();
-
-            }
-            catch (System.Exception ex)
-            {
-#if DEBUG
-                Console.WriteLine(ex.Message);
-#endif
-            }
-        }
-
-        private void ShowMessage(string title, string message, string[] buttonTitles, Action<int> callBack)
-        {
-            try
-            {
-                //var d1 = new AlertDialog.Builder(Forms.Context);
-
-                //d1.SetPositiveButton("One", (sender, e) => { });
-                //d1.SetNeutralButton("Two", (sender, e) => { });
-                //d1.SetNegativeButton("Three", (sender, e) => { });
-                //d1.Create().Show();
-
-                var d = new AlertDialog.Builder(Forms.Context).Create();
-
-                d.SetTitle(title);
-                d.SetMessage(message);
-                if (buttonTitles.Length > 2)
-                {
-                    d.SetButton(buttonTitles[0], (e, a) =>
+                    d.SetButton2(prompt.ButtonTitles[1], (e, a) =>
                     {
-                        callBack?.Invoke(0);
+                        prompt.Callback?.Invoke(1);
                     });
-                    d.SetButton2(buttonTitles[1], (e, a) =>
+                    d.SetButton3(prompt.ButtonTitles[2], (e, a) =>
                     {
-                        callBack?.Invoke(1);
+                        prompt.Callback?.Invoke(2);
                     });
-                    d.SetButton3(buttonTitles[2], (e, a) =>
-                    {
-                        callBack?.Invoke(2);
-                    });
-
 
                 }
-                else
+                else if(prompt.ButtonTitles.Length == 2)
                 {
-                    d.SetButton(buttonTitles[0], (e, a) =>
+                    d.SetButton(prompt.ButtonTitles[0], (e, a) =>
                     {
-                        callBack?.Invoke(0);
+                        prompt.Callback?.Invoke(0);
                     });
-                    d.SetButton2(buttonTitles[1], (e, a) =>
+                    d.SetButton2(prompt.ButtonTitles[1], (e, a) =>
                     {
-                        callBack?.Invoke(1);
+                        prompt.Callback?.Invoke(1);
                     });
                 }
-
+                else if (prompt.ButtonTitles.Length == 1){
+                    d.SetButton(prompt.ButtonTitles[0], (e, a) =>
+                    {
+                        prompt.Callback?.Invoke(0);
+                    });
+                }
+   
                 d.Show();
-
             }
-            catch (System.Exception ex)
+            catch (Exception ex)
             {
 #if DEBUG
                 Console.WriteLine(ex.Message);
@@ -146,7 +73,7 @@ namespace Xamarin.Forms.CommonCore
 
         public void ShowActionSheet(string title, string subTitle, string[] list, Action<int> callBack)
         {
-            var dlg = new AlertDialog.Builder(Forms.Context);
+            var dlg = new AlertDialog.Builder(Ctx);
             dlg.SetTitle(title);
             dlg.SetSingleChoiceItems(list, -1, (s, a) =>
             {
@@ -167,7 +94,7 @@ namespace Xamarin.Forms.CommonCore
 
         public void ShowToast(string message)
         {
-            Toast.MakeText(Xamarin.Forms.Forms.Context, message, ToastLength.Long).Show();
+            Toast.MakeText(Ctx, message, ToastLength.Long).Show();
         }
     }
 }

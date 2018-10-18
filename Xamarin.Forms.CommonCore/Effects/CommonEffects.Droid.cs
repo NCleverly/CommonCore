@@ -4,13 +4,17 @@ using Android.Graphics.Drawables;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
-using Droid = Android;
+using Graphics = Android.Graphics;
 using Android.Views;
+using OS = Android.OS;
+using Android.Graphics;
+using Android.Support.V7.Widget;
 
 [assembly: ExportEffect(typeof(ViewShadow), "ViewShadow")]
 [assembly: ExportEffect(typeof(HideTableSeparator), "HideTableSeparator")]
 namespace Xamarin.Forms.CommonCore
 {
+
 	public class HideTableSeparator : PlatformEffect
 	{
 		protected override void OnAttached()
@@ -19,7 +23,7 @@ namespace Xamarin.Forms.CommonCore
 			{
 				var listView = Control as global::Android.Widget.ListView;
 				//listView.Divider = null;
-				listView.Divider = new ColorDrawable(Droid.Graphics.Color.Transparent);
+				listView.Divider = new ColorDrawable(Graphics.Color.Transparent);
 				listView.DividerHeight = 0;
 			}
 		}

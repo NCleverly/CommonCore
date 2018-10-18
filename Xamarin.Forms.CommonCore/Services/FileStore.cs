@@ -8,16 +8,23 @@ using Newtonsoft.Json;
 namespace Xamarin.Forms.CommonCore
 {
 
-	public class FileStore : IFileStore
+    public class FileStore : IFileStore
     {
+        private JsonSerializer _serializer;
+
         private static SemaphoreSlim fileStoreLock = new SemaphoreSlim(1);
 
-        public async Task<GenericResponse<T>> GetAsync<T>(string contentName) where T : class, new()
+        public FileStore()
+        {
+            _serializer = new JsonSerializer();
+        }
+
+        public async Task<(T Response, bool Success, Exception Error)> GetAsync<T>(string contentName) where T : class, new()
         {
             await fileStoreLock.WaitAsync();
             return await Task.Run(() =>
             {
-                var response = new GenericResponse<T>() { Success = false };
+                (T Response, bool Success, Exception Error) response = (null, false, null);
                 try
                 {
                     using (var isoStorage = IsolatedStorageFile.GetUserStoreForApplication())
@@ -28,14 +35,14 @@ namespace Xamarin.Forms.CommonCore
                             {
                                 using (var s = isoStorage.OpenFile(contentName, FileMode.OpenOrCreate))
                                 {
-                                    using (var sr = new StreamReader(s))
-                                    {
-                                        var content = sr.ReadToEnd();
-                                        sr.Close();
-                                        response.Response = JsonConvert.DeserializeObject<T>(content);
-                                        response.Success = true;
-
-                                    }
+									using (var reader = new StreamReader(s))
+									{
+										using (var json = new JsonTextReader(reader))
+										{
+											response.Response = _serializer.Deserialize<T>(json);
+                                            response.Success = true;
+										}
+									}
                                 }
                             }
                             catch (Exception ex)
@@ -43,13 +50,17 @@ namespace Xamarin.Forms.CommonCore
                                 response.Error = ex;
                             }
                         }
+                        else
+                        {
+                            response.Error = new ApplicationException("File does not exist");
+                        }
                     }
 
                 }
                 catch (Exception ex)
                 {
-                    response.Error = ex;
                     ex.ConsoleWrite();
+					response.Error = ex;
                 }
                 finally
                 {
@@ -60,10 +71,10 @@ namespace Xamarin.Forms.CommonCore
 
         }
 
-        public async Task<BooleanResponse> DeleteAsync(string contentName)
+        public async Task<(bool Success, Exception Error)> DeleteAsync(string contentName)
         {
             await fileStoreLock.WaitAsync();
-            var response = new BooleanResponse() { Success = false };
+            (bool Success, Exception Error) response = (false, null);
             try
             {
                 await Task.Run(() =>
@@ -90,22 +101,21 @@ namespace Xamarin.Forms.CommonCore
             return response;
         }
 
-        public async Task<BooleanResponse> SaveAsync<T>(string contentName, object obj)
+        public async Task<(bool Success, Exception Error)> SaveAsync<T>(string contentName, object obj)
         {
             await fileStoreLock.WaitAsync();
             return await Task.Run(() =>
             {
-                var response = new BooleanResponse() { Success = false };
+				(bool Success, Exception Error) response = (false, null);
                 try
                 {
                     using (var isoStorage = IsolatedStorageFile.GetUserStoreForApplication())
                     {
-                        var data = JsonConvert.SerializeObject(obj);
                         using (var s = isoStorage.OpenFile(contentName, FileMode.Create))
                         {
                             using (var sw = new StreamWriter(s))
                             {
-                                sw.Write(data);
+                                _serializer.Serialize(new JsonTextWriter(sw), obj);
                                 sw.Flush();
                                 sw.Close();
                                 response.Success = true;
@@ -127,10 +137,10 @@ namespace Xamarin.Forms.CommonCore
 
         }
 
-        public async Task<StringResponse> GetStringAsync(string contentName)
+        public async Task<(string Response, bool Success, Exception Error)> GetStringAsync(string contentName)
         {
             await fileStoreLock.WaitAsync();
-            var response = new StringResponse { Success = false };
+            (string Response, bool Success, Exception Error) response = (null, false, null);
             return await Task.Run(() =>
             {
                 try
@@ -147,8 +157,8 @@ namespace Xamarin.Forms.CommonCore
                                     {
                                         var content = sr.ReadToEnd();
                                         sr.Close();
-                                        response.Success = true;
                                         response.Response = content;
+                                        response.Success = true;
                                     }
                                 }
                             }
@@ -157,6 +167,10 @@ namespace Xamarin.Forms.CommonCore
                                 response.Error = ex;
                             }
                         }
+						else
+						{
+							response.Error = new ApplicationException("File does not exist");
+						}
                     }
                 }
                 catch (Exception ex)
@@ -171,11 +185,11 @@ namespace Xamarin.Forms.CommonCore
             });
         }
 
-        public async Task<BooleanResponse> SaveStringAsync(string contentName, string obj)
+        public async Task<(bool Success, Exception Error)> SaveStringAsync(string contentName, string obj)
         {
             await fileStoreLock.WaitAsync();
 
-            var response = new BooleanResponse() { Success = false };
+            (bool Success, Exception Error) response = (false, null);
             return await Task.Run(() =>
             {
                 try

@@ -1,119 +1,129 @@
 ﻿using System;
+using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using System.Linq;
-using Xamarin.Auth;
 using PCLCrypto;
+using Plugin.Settings;
+using Xamarin.Auth;
+using Xamarin.Forms.CommonCore;
 using static PCLCrypto.WinRTCrypto;
 
-using System.Text;
-using Plugin.Settings;
+#if __ANDROID__
+using Plugin.CurrentActivity;
+#endif
 
 namespace Xamarin.Forms.CommonCore
 {
-	public class AccountService : IAccountService
-	{
-		const string protectedStore = "protectedStoreTokenAccount";
-		const string pwKey = "password";
+    public class AccountService : IAccountService
+    {
+        const string protectedStore = "protectedStoreTokenAccount";
+        const string pwKey = "password";
 
-		public string AccountEncryptionKey
-		{
-			get { return CrossSettings.Current.GetValueOrDefault<string>("AccountEncryptionKey", null); }
-			set { CrossSettings.Current.AddOrUpdateValue<string>("AccountEncryptionKey", value); }
+        public string AccountEncryptionKey
+        {
+            get
+            {
+                return CrossSettings.Current.GetValueOrDefault("AccountEncryptionKey", Guid.NewGuid().ToString());
+			}
+			set { CrossSettings.Current.AddOrUpdateValue("AccountEncryptionKey", value); }
 		}
 
-		public async Task<BooleanResponse> SaveAccountStore<T>(string username, T obj) where T : class, new()
+        public IEncryptionService Encryption
+        {
+            get { return CoreDependencyService.GetService<IEncryptionService, EncryptionService>(true); }
+        }
+
+		public async Task<(bool Success, Exception Error)> SaveAccountStore<T>(string username, T obj) where T : class, new()
 		{
-			return await Task.Run(() =>
-			{
-				var response = new BooleanResponse() { Success = false };
-				try
-				{
-					var account = GetAccount(username);
-					PersistAccount(account, username, null, obj);
-					SaveAccount(account, username);
-					response.Success = true;
-				}
-				catch (Exception ex)
-				{
-					response.Error = ex;
-				}
-				return response;
-			});
+            return await Task.Run(() =>
+            {
+                Exception excep = null;
+                try
+                {
+                    var account = GetAccount(username);
+                    PersistAccount(account, username, null, obj);
+                    SaveAccount(account, username);
+                }
+                catch (Exception ex)
+                {
+                    excep = ex;
+                }
+                return (excep == null ? true : false, excep);
+            });
 
 		}
-		public async Task<GenericResponse<T>> GetAccountStore<T>(string username) where T : class, new()
+		public async Task<(T Response, bool Success, Exception Error)> GetAccountStore<T>(string username) where T : class, new()
 		{
-			return await Task.Run(() =>
-			{
-				var response = new GenericResponse<T>() { Success = false };
-				try
-				{
-					var account = GetAccount(username);
-					response.Response = LoadAccount<T>(account, username);
-					response.Success = true;
-				}
-				catch (Exception ex)
-				{
-					response.Error = ex;
-				}
-				return response;
+            return await Task.Run(() =>
+            {
+                T response = null;
+                Exception excep = null;
+                try
+                {
+                    var account = GetAccount(username);
+                    response = LoadAccount<T>(account, username);
+                }
+                catch (Exception ex)
+                {
+                    excep = ex;
+                }
+                return (response, excep == null ? true : false, excep);
 
-			});
+            });
 
 		}
-		public async Task<BooleanResponse> SaveAccountStore<T>(string username, string password, T obj) where T : class, new()
+		public async Task<(bool Success, Exception Error)> SaveAccountStore<T>(string username, string password, T obj, bool pwdHashed=false) where T : class, new()
 		{
-			return await Task.Run(() =>
-			{
-				var response = new BooleanResponse() { Success = false };
-				try
-				{
-					var account = GetAccount(username);
-					PersistAccount(account, username, password, obj);
-					SaveAccount(account, username);
-					response.Success = true;
-				}
-				catch (Exception ex)
-				{
-					response.Error = ex;
-				}
-				return response;
-			});
+            return await Task.Run(() =>
+            {
+                Exception excep = null;
+                try
+                {
+                    var account = GetAccount(username);
+                    PersistAccount(account, username, password, obj, pwdHashed);
+                    SaveAccount(account, username);
+  
+                }
+                catch (Exception ex)
+                {
+                    excep = ex;
+                }
+                return (excep == null ? true : false, excep);
+            });
 
 		}
-		public async Task<GenericResponse<T>> GetAccountStore<T>(string username, string password) where T : class, new()
+        public async Task<(T Response, bool Success, Exception Error)> GetAccountStore<T>(string username, string password, bool pwdHashed = false) where T : class, new()
 		{
-			return await Task.Run(() =>
-			{
-				var response = new GenericResponse<T>() { Success = false };
-				try
-				{
-					var account = GetAccount(username);
-					response.Response = LoadAccount<T>(account, password);
-					if (response.Response != null)
-						response.Success = true;
-				}
-				catch (Exception ex)
-				{
-					response.Error = ex;
-				}
-				return response;
-
-			});
+            return await Task.Run(() =>
+            {
+                Exception excep = null;
+                T response = null;
+                try
+                {
+                    var account = GetAccount(username);
+                    response = LoadAccount<T>(account, password, pwdHashed);
+                }
+                catch (Exception ex)
+                {
+                    excep = ex;
+                }
+                return (response, excep == null ? true : false, excep);
+            });
 
 		}
 
-		private void PersistAccount<T>(Account account, string username, string password, T obj) where T : class, new()
+        private void PersistAccount<T>(Account account, string username, string password, T obj, bool pwdHashed = false) where T : class, new()
 		{
 			var data = JsonConvert.SerializeObject(obj);
+            var hash = pwdHashed ? password : Encryption.GetHashString(password);
 			if (account.Properties.ContainsKey(typeof(T).Name))
 			{
 				if (!string.IsNullOrEmpty(password))
 				{
-
-					account.Properties[pwKey] = GenerateHash(password, pwKey);
-					account.Properties[typeof(T).Name] = Encrypt(data);
+                    
+                    account.Properties[pwKey] = hash;
+                    account.Properties[typeof(T).Name] = Encryption.AesEncrypt(data, hash);
 				}
 				else
 				{
@@ -125,8 +135,8 @@ namespace Xamarin.Forms.CommonCore
 			{
 				if (!string.IsNullOrEmpty(password))
 				{
-					account.Properties.Add(pwKey, GenerateHash(password, pwKey));
-					account.Properties.Add(typeof(T).Name, Encrypt(data));
+                    account.Properties.Add(pwKey, hash);
+                    account.Properties.Add(typeof(T).Name, Encryption.AesEncrypt(data, hash));
 				}
 				else
 				{
@@ -135,14 +145,14 @@ namespace Xamarin.Forms.CommonCore
 
 			}
 		}
-		private T LoadAccount<T>(Account account, string password) where T : class, new()
+        private T LoadAccount<T>(Account account, string password, bool pwdHashed = false) where T : class, new()
 		{
 			if (!string.IsNullOrEmpty(password))
 			{
-				var hashedPassword = GenerateHash(password, pwKey);
+                var hashedPassword = pwdHashed ? password : Encryption.GetHashString(password);
 				if (account.Properties.ContainsKey(typeof(T).Name) && account.Properties[pwKey] == hashedPassword)
 				{
-					var data = Decrypt(account.Properties[typeof(T).Name]);
+                    var data = Encryption.AesDecrypt(account.Properties[typeof(T).Name], hashedPassword);
 					return JsonConvert.DeserializeObject<T>(data);
 				}
 
@@ -155,11 +165,11 @@ namespace Xamarin.Forms.CommonCore
 			return null;
 
 		}
-
+       
 		private AccountStore GetStore()
 		{
 #if __ANDROID__
-            return AccountStore.Create(Xamarin.Forms.Forms.Context);
+            return AccountStore.Create(CrossCurrentActivity.Current.Activity);
 #else
 			return AccountStore.Create();
 #endif
@@ -187,49 +197,6 @@ namespace Xamarin.Forms.CommonCore
 			return storeAccount;
 		}
 
-		private string GenerateHash(string input, string key)
-		{
-			var mac = WinRTCrypto.MacAlgorithmProvider.OpenAlgorithm(MacAlgorithm.HmacSha1);
-			var keyMaterial = WinRTCrypto.CryptographicBuffer.ConvertStringToBinary(key, Encoding.UTF8);
-			var cryptoKey = mac.CreateKey(keyMaterial);
-			var hash = WinRTCrypto.CryptographicEngine.Sign(cryptoKey, WinRTCrypto.CryptographicBuffer.ConvertStringToBinary(input, Encoding.UTF8));
-			return WinRTCrypto.CryptographicBuffer.EncodeToBase64String(hash);
-		}
-
-		private string Encrypt(string plainText)
-		{
-			var key = GetAppCryptoKey();
-			var plain = Encoding.UTF8.GetBytes(plainText);
-			var encrypted = CryptographicEngine.Encrypt(key, plain);
-			return Convert.ToBase64String(encrypted);
-		}
-		private string Decrypt(string encryptedString)
-		{
-			var key = GetAppCryptoKey();
-			var encrypted = Convert.FromBase64String(encryptedString);
-			var decrypted = CryptographicEngine.Decrypt(key, encrypted);
-			return Encoding.UTF8.GetString(decrypted, 0, decrypted.Length);
-		}
-
-		private ICryptographicKey GetAppCryptoKey()
-		{
-			var asym = AsymmetricKeyAlgorithmProvider.OpenAlgorithm(AsymmetricAlgorithm.RsaPkcs1);
-			ICryptographicKey key = null;
-			if (!string.IsNullOrEmpty(AccountEncryptionKey))
-			{
-				var blob = Encoding.UTF8.GetBytes(AccountEncryptionKey);
-				key = asym.ImportKeyPair(blob);
-			}
-			else
-			{
-
-				key = asym.CreateKeyPair(512);
-				var blob = key.Export();
-				AccountEncryptionKey = Encoding.UTF8.GetString(blob, 0, blob.Length);
-			}
-			return key;
-		}
-
-	}
+    }
 }
 

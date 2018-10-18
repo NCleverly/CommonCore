@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{C7B1E101-4CF8-4338-B9D0-E64CCA814166}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Xamarin.Forms.CommonCore.Localization</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\ILocalize.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\Localize.Droid.cs">
+      <DependentUpon>ILocalize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Dependencies\Localize.IOS.cs">
+      <DependentUpon>ILocalize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Services\ILocalizationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\LocalizationService.cs">
+      <DependentUpon>ILocalizationService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Partials\LocalizationPartials.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)_init\readme.txt" />
+    <None Include="$(MSBuildThisFileDirectory)_init\Config\lang\localization.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)_init\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Dependencies\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Services\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Partials\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Config\" />
+    <Folder Include="$(MSBuildThisFileDirectory)_init\Config\lang\" />
+  </ItemGroup>
+</Project>

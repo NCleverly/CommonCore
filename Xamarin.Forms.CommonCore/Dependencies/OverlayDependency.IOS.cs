@@ -110,6 +110,7 @@ namespace Xamarin.Forms.CommonCore
             while (vc.PresentedViewController != null)
                 vc = vc.PresentedViewController;
             return vc;
+
         }
     }
 

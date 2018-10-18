@@ -6,7 +6,11 @@ using Android.Graphics.Drawables;
 using Android.Widget;
 using Xamarin.Forms.CommonCore;
 using Xamarin.Forms.Platform.Android;
-using Droid = Android;
+using Resource = Android.Resource;
+using Widget = Android.Widget;
+using Graphics = Android.Graphics;
+using Views = Android.Views;
+using Plugin.CurrentActivity;
 
 [assembly: Xamarin.Forms.Dependency(typeof(OverlayDependency))]
 namespace Xamarin.Forms.CommonCore
@@ -17,14 +21,12 @@ namespace Xamarin.Forms.CommonCore
 
         public Context Ctx
         {
-            get
-            {
-                return Xamarin.Forms.Forms.Context;
-            }
+            get => CrossCurrentActivity.Current.Activity;
         }
+
         public void HideOverlay()
         {
-            dialog?.Hide();
+            dialog?.Dismiss();
         }
 
         public void ShowOverlay(string message)
@@ -36,13 +38,13 @@ namespace Xamarin.Forms.CommonCore
         {
             var alpha = (int)(255 * backgroundOpacity);
 
-            dialog = new Dialog(Ctx, Droid.Resource.Style.ThemeNoTitleBar);
+            dialog = new Dialog(Ctx, Resource.Style.ThemeNoTitleBar);
             Drawable d = new ColorDrawable(backgroundColor.ToAndroid());
             d.SetAlpha(alpha);
             dialog.Window.SetBackgroundDrawable(d);
 
             var layout = new LinearLayout(Ctx);
-            layout.Orientation = Droid.Widget.Orientation.Vertical;
+            layout.Orientation = Widget.Orientation.Vertical;
             layout.LayoutParameters = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, LinearLayout.LayoutParams.MatchParent);
 
             var header = new LinearLayout(Ctx);
@@ -50,19 +52,19 @@ namespace Xamarin.Forms.CommonCore
             headerParameter.Weight = 1;
             header.LayoutParameters = headerParameter;
 
-            var prg = new Droid.Widget.ProgressBar(Ctx);
+            var prg = new Widget.ProgressBar(Ctx);
             prg.Indeterminate = true;
 
-            prg.IndeterminateDrawable.SetColorFilter(Droid.Graphics.Color.White, PorterDuff.Mode.Multiply);
+            prg.IndeterminateDrawable.SetColorFilter(Graphics.Color.White, PorterDuff.Mode.Multiply);
             var parameters = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WrapContent, LinearLayout.LayoutParams.WrapContent);
-            parameters.Gravity = Droid.Views.GravityFlags.Center;
+            parameters.Gravity = Views.GravityFlags.Center;
             parameters.SetMargins(0, 10, 0, 10);
             prg.LayoutParameters = parameters;
 
             var txtField = new TextView(Ctx);
             txtField.Text = message;
             txtField.TextSize = 22;
-            txtField.SetTextColor(Droid.Graphics.Color.White);
+            txtField.SetTextColor(Graphics.Color.White);
             txtField.LayoutParameters = parameters;
 
             var footer = new LinearLayout(Ctx);

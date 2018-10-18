@@ -1,443 +1,542 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.IO;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
 using ModernHttpClient;
+using Newtonsoft.Json;
+using Plugin.Connectivity;
 
 namespace Xamarin.Forms.CommonCore
 {
 
-	public class WebDownloadClient : INotifyPropertyChanged
-	{
-		private double progress;
-		public string DownloadUrl { get; set; }
-		public WebClient Client { get; set; }
-		public Action<byte[]> FinishedEvent { get; set; }
-		public Action<double> PercentageChanged { get; set; }
+    public class HttpService : IHttpService, IDisposable
+    {
+        private HttpClient httpClient;
+        private HttpMessageHandler handler;
+        private JsonSerializer _serializer;
+        public string json;
 
-		public double Progress
-		{
-			get
-			{
-				return progress;
-			}
-
-			set
-			{
-				PercentageChanged?.Invoke(value);
-				SetProperty(ref progress, value);
-			}
-		}
-		public async Task StartDownload()
-		{
-			if (Client == null)
-				Client = new WebClient();
-
-			await Task.Run(() =>
-			{
-				Client.DownloadProgressChanged += DownprogressChanged;
-				Client.DownloadDataCompleted += DownloadComplete;
-				Client.DownloadDataAsync(new Uri(DownloadUrl));
-			});
-
-		}
-		public void UnhookEvents()
-		{
-			Client.DownloadProgressChanged -= DownprogressChanged;
-			Client.DownloadDataCompleted -= DownloadComplete;
-		}
-		private void DownloadComplete(object sender, DownloadDataCompletedEventArgs args)
-		{
-			FinishedEvent?.Invoke(args.Result);
-		}
-		private void DownprogressChanged(object sender, DownloadProgressChangedEventArgs args)
-		{
-			Progress = (float)args.BytesReceived / (float)args.TotalBytesToReceive;
-		}
-
-		public event PropertyChangedEventHandler PropertyChanged;
-		protected bool SetProperty<T>(
-			ref T backingStore, T value,
-			[CallerMemberName]string propertyName = "",
-			Action onChanged = null)
-		{
-			if (EqualityComparer<T>.Default.Equals(backingStore, value))
-				return false;
-
-			backingStore = value;
-
-			if (onChanged != null)
-				onChanged();
-
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-
-			return true;
-		}
-		public void Notify(string propName)
-		{
-			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propName));
-		}
-	}
-
-
-	public class HttpService : IHttpService
-	{
-		public string json;
-
-		public WebClient GetWebClient()
-		{
-			var client = new WebClient();
-			if (AppData.TokenBearer != null)
-				client.Headers.Add(HttpRequestHeader.Authorization, "Bearer " + AppData.TokenBearer.access_token);
-			return client;
-		}
-
-		private HttpClient GetClient()
-		{
-			HttpClient client = null;
+        public bool IsConnected 
+        { 
+            get { return CrossConnectivity.Current.IsConnected; }
+        }
+        public HttpClient Client
+        {
+            get
+            {
+                if (httpClient == null)
+                {
+                    _serializer = new JsonSerializer();
 
 #if __IOS__
-			HttpMessageHandler handler;
-			switch (AppData.IOSHttpHandler)
-			{
-				case "ModernHttpClient":
-					handler = new NativeMessageHandler()
-					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect,
-						Credentials = AppData.HttpCredentials
-					};
+                   
+                    switch (CoreSettings.Config.HttpSettings.IOSHttpHandler)
+                    {
+                        case "ModernHttpClient":
+                            handler = new NativeMessageHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
+                            };
 
-					break;
-				case "CFNetwork":
-					handler = new CFNetworkHandler()
-					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect
-					};
-					break;
-				case "NSURLSession":
-					handler = new NSUrlSessionHandler()
-					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect,
-						Credentials = AppData.HttpCredentials
-					};
-					break;
-				default:
-					handler = new HttpClientHandler()
-					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect,
-						Credentials = AppData.HttpCredentials
-					};
+                            break;
+                        case "CFNetwork":
+                            handler = new CFNetworkHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
+                            };
+                            break;
+                        case "NSURLSession":
+                            handler = new NSUrlSessionHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
+                            };
+                            break;
+                        default:
+                            handler = new HttpClientHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
+                            };
 
-					break;
-			}
+                            break;
+                    }
 
 #elif __ANDROID__
-			HttpMessageHandler handler;
-			switch (AppData.AndroidHttpHandler)
-			{
-				case "ModernHttpClient":
-					handler = new NativeMessageHandler()
-					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect,
-						Credentials = AppData.HttpCredentials
-					};
+                    switch (CoreSettings.Config.HttpSettings.AndroidHttpHandler)
+                    {
+                        case "ModernHttpClient":
+                            handler = new NativeMessageHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
+                            };
 
-					break;
-				case "AndroidClientHandler":
-					handler = new Xamarin.Android.Net.AndroidClientHandler()
-					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect
-					};
-					break;
-				default:
-					handler = new HttpClientHandler()
-					{
-						AllowAutoRedirect = AppData.HttpAllowAutoRedirect,
-						Credentials = AppData.HttpCredentials
-					};
-					break;
-			}
+                            break;
+                        case "AndroidClientHandler":
+                            handler = new Xamarin.Android.Net.AndroidClientHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect
+                            };
+                            break;
+                        default:
+                            handler = new HttpClientHandler()
+                            {
+                                AllowAutoRedirect = CoreSettings.Config.HttpSettings.HttpAllowAutoRedirect,
+                            };
+                            break;
+                    }
 #else
-			var handler = new HttpClientHandler();
+            handler = new HttpClientHandler();
 #endif
 
-			//handler.AllowAutoRedirect = AppData.HttpAllowAutoRedirect;
 
-			//if (AppData.HttpCredentials != null)
-			//	handler.Credentials = AppData.HttpCredentials;
+                    if (CoreSettings.Config.HttpSettings.HttpTimeOut > 0)
+                    {
+                        httpClient = new HttpClient(handler, true) { Timeout = new TimeSpan(0, 0, CoreSettings.Config.HttpSettings.HttpTimeOut) };
+                    }
+                    else
+                    {
+                        httpClient = new HttpClient(handler, true);
+                    }
 
-			if (AppData.HttpTimeOut > 0)
-			{
-				client = new HttpClient(handler, true) { Timeout = new TimeSpan(0, 0, AppData.HttpTimeOut) };
-			}
-			else
-			{
-				client = new HttpClient(handler, true);
-			}
+                }
 
-			if (AppData.TokenBearer != null)
-				client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + AppData.TokenBearer.access_token);
+                return httpClient;
+            }
+            set { httpClient = value; }
+        }
 
-			return client;
-		}
-		public async Task<StringResponse> FormPost(string url, HttpContent content)
-		{
-			var response = new StringResponse() { };
+        public void AddTokenHeader(string token)
+        {
+            if (Client.DefaultRequestHeaders.Authorization != null)
+                Client.DefaultRequestHeaders.Remove("Authorization");
 
-			if (!AppData.IsConnected)
-			{
-				response.Success = false;
-				response.Error = new ApplicationException("Network Connection Error");
-				return response;
-			}
+            Client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + token);
+        }
 
+        public void AddTokenHeader(CoreAuthentication coreAuth)
+        {
+            if (Client.DefaultRequestHeaders.Authorization != null)
+                Client.DefaultRequestHeaders.Remove("Authorization");
 
-			try
-			{
-				using (var client = GetClient())
-				{
-					var postResponse = await client.PostAsync(url, content);
-					postResponse.Content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
-					postResponse.EnsureSuccessStatusCode();
+            Client.DefaultRequestHeaders.TryAddWithoutValidation("Authorization", "Bearer " + coreAuth.Token);
+        }
 
-					var raw = await postResponse.Content.ReadAsStringAsync();
-					if (raw != null)
-					{
-						response.Response = raw;
-						response.Success = true;
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ex.ConsoleWrite();
-				response.Error = ex;
-			}
-			return response;
-		}
+        public void AddNetworkCredentials(NetworkCredential cred)
+        {
+            if (handler != null)
+            {
+                var prop = handler.GetType().GetProperty("Credentials");
+                if (prop != null)
+                    prop.SetValue(handler, cred, null);
+            }
+        }
 
-		public async Task<GenericResponse<T>> Get<T>(string url) where T : class, new()
-		{
-			var response = new GenericResponse<T>() { };
+        public async Task<(string Response, bool Success, Exception Error)> FormPost(string url, HttpContent content, CancellationToken? ct = null)
+        {
 
-			if (!AppData.IsConnected)
-			{
-				response.Success = false;
-				response.Error = new ApplicationException("Network Connection Error");
-				return response;
-			}
+            if (!IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
 
-			try
-			{
-				using (var client = GetClient())
-				{
-					using (var srvResponse = client.GetAsync(url).Result)
-					{
-						json = await GetStringContent<T>(srvResponse);
-						response.Response = await DeserializeObject<T>(json);
-						response.Success = true;
-						json = string.Empty;
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ex.ConsoleWrite();
-				response.Error = ex;
-				response.MetaData = json;
-			}
+            try
+            {
+                var token = ct ?? CancellationToken.None;
 
-			return response;
-		}
-		public async Task<GenericResponse<T>> Post<T>(string url, object obj) where T : class, new()
-		{
-			var response = new GenericResponse<T>() { };
+                await new SynchronizationContextRemover();
 
-			if (!AppData.IsConnected)
-			{
-				response.Success = false;
-				response.Error = new ApplicationException("Network Connection Error");
-				return response;
-			}
+                var postResponse = await Client.PostAsync(url, content, token).ConfigureAwait(false);
+                postResponse.Content.Headers.ContentType = new MediaTypeHeaderValue("application/x-www-form-urlencoded");
+                postResponse.EnsureSuccessStatusCode();
 
-			try
-			{
-				using (var client = GetClient())
-				{
-					var data = JsonConvert.SerializeObject(obj);
-					using (var srvResponse = client.PostAsync(url, new StringContent(data, Encoding.UTF8, "application/json")).Result)
-					{
-						json = await GetStringContent<T>(srvResponse);
-						response.Response = await DeserializeObject<T>(json);
-						response.Success = true;
-						json = string.Empty;
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ex.ConsoleWrite();
-				response.Error = ex;
-				response.MetaData = json;
-			}
+                var raw = await postResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+                if (raw != null)
+                {
+                    return (raw, true, null);
+                }
+                else
+                {
+                    return (null, false, new ApplicationException("Return value is empty"));
+                }
 
 
-			return response;
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                return (null, false, ex);
+            }
+        }
 
-		}
-		public async Task<GenericResponse<T>> Put<T>(string url, object obj) where T : class, new()
-		{
-			var response = new GenericResponse<T>() { };
+        public async Task<(string Response, bool Success, Exception Error)> GetRaw(string url, CancellationToken? ct = null)
+        {
+            if (!IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
 
-			if (!AppData.IsConnected)
-			{
-				response.Success = false;
-				response.Error = new ApplicationException("Network Connection Error");
-				return response;
-			}
+            try
+            {
+                var token = ct ?? CancellationToken.None;
 
-			try
-			{
-				using (var client = GetClient())
-				{
-					var data = JsonConvert.SerializeObject(obj);
-					using (var srvResponse = client.PutAsync(url, new StringContent(data, Encoding.UTF8, "application/json")).Result)
-					{
-						json = await GetStringContent<T>(srvResponse);
-						response.Response = await DeserializeObject<T>(json);
-						response.Success = true;
-						json = string.Empty;
-					}
-				}
-			}
-			catch (Exception ex)
-			{
-				ex.ConsoleWrite();
-				response.Error = ex;
-				response.MetaData = json;
-			}
+                await new SynchronizationContextRemover();
 
-			return response;
-		}
+                using (var srvResponse = await Client.GetAsync(url, token).ConfigureAwait(false))
+                {
+                    var jsonResult = await srvResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    if (srvResponse.StatusCode == HttpStatusCode.OK)
+                    {
+                        return (jsonResult, true, null);
+                    }
+                    else
+                    {
+                        return (null, false, new ApplicationException(jsonResult));
+                    }
 
-		public async Task<string> GetStringContent<T>(HttpResponseMessage response) where T : class, new()
-		{
-			var jsonResult = await response.Content.ReadAsStringAsync();
-#if DEBUG
-			Console.WriteLine();
-			Console.WriteLine();
-			var name = typeof(T).Name;
-			if (name == "List`1")
-			{
-				var types = typeof(T).GetGenericArguments();
-				if (types != null && types.Length > 0)
-				{
-					var obj = types[0];
-					name = "Collection of " + obj.Name;
-				}
+                }
 
-			}
-			Console.WriteLine($"*-*-*-*-*-*-*-*-*-*-*-*- {name} - HTTP STRING RESULT *-*-*-*-*-*-*-*-*-*-*-*-*-");
-			var formatted = await FormattedJson(jsonResult);
-			Console.WriteLine(formatted);
-			Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
-			Console.WriteLine();
-			Console.WriteLine();
-#endif
-			return jsonResult;
-		}
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                return (null, false, ex);
+            }
 
-		public async Task<bool> PingDomain(string url)
-		{
-			var host = new Uri(url).Host;
-			var start = url.StartsWith("http", StringComparison.CurrentCultureIgnoreCase) ? "http" : "https";
-			var nUrl = $"{start}://{host}";
+        }
 
-			return await PingUrl(nUrl);
-		}
-		public async Task<bool> PingUrl(string url)
-		{
-			try
-			{
-				var request = (HttpWebRequest)HttpWebRequest.Create(url);
-				request.Timeout = 3000;
-				request.AllowAutoRedirect = false; // find out if this site is up and don't follow a redirector
-				request.Method = "HEAD";
-				var response = await request.GetResponseAsync();
-				return true;
-			}
-			catch (Exception ex)
-			{
-				return false;
-			}
-		}
+        public async Task<(string Response, bool Success, Exception Error)> PosttRaw(string url, CancellationToken? ct = null)
+        {
+            if (!IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
 
-		private Task<string> FormattedJson(string jsonResult)
-		{
-			return Task.Run(() =>
-			{
-				var obj = JsonConvert.DeserializeObject(jsonResult);
-				return JsonConvert.SerializeObject(obj, Formatting.Indented);
-			});
-		}
+            try
+            {
+                var token = ct ?? CancellationToken.None;
 
-		private static Task<T> DeserializeObject<T>(string content) where T : class, new()
-		{
-			return Task.Run(() =>
-			{
-				return JsonConvert.DeserializeObject<T>(content);
-			});
-		}
+                await new SynchronizationContextRemover();
 
-	}
+                using (var srvResponse = await Client.GetAsync(url, token).ConfigureAwait(false))
+                {
+                    var jsonResult = await srvResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    if (srvResponse.StatusCode == HttpStatusCode.OK)
+                    {
+                        return (jsonResult, true, null);
+                    }
+                    else
+                    {
+                        return (null, false, new ApplicationException(jsonResult));
+                    }
 
-	public static class JsonDataExtension
-	{
-		public static T ConvertTo<T>(this StringResponse str) where T : struct
-		{
-			object result = null;
-			var code = Type.GetTypeCode(typeof(T));
-			switch (code)
-			{
-				case TypeCode.Int32:
-					result = JsonConvert.DeserializeObject<int>(str.Response);
-					break;
-				case TypeCode.Int16:
-					result = JsonConvert.DeserializeObject<short>(str.Response);
-					break;
-				case TypeCode.Int64:
-					result = JsonConvert.DeserializeObject<long>(str.Response);
-					break;
-				case TypeCode.String:
-					result = JsonConvert.DeserializeObject<string>(str.Response);
-					break;
-				case TypeCode.Boolean:
-					result = JsonConvert.DeserializeObject<bool>(str.Response);
-					break;
-				case TypeCode.Double:
-					result = JsonConvert.DeserializeObject<double>(str.Response);
-					break;
-				case TypeCode.Decimal:
-					result = JsonConvert.DeserializeObject<decimal>(str.Response);
-					break;
-				case TypeCode.Byte:
-					result = JsonConvert.DeserializeObject<Byte>(str.Response);
-					break;
-				case TypeCode.DateTime:
-					result = JsonConvert.DeserializeObject<DateTime>(str.Response);
-					break;
-				case TypeCode.Single:
-					result = JsonConvert.DeserializeObject<Single>(str.Response);
-					break;
-			}
-			return (T)result;
-		}
-	}
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                return (null, false, ex);
+            }
+
+        }
+
+        public async Task<(T Response, bool Success, Exception Error)> Get<T>(string url, CancellationToken? ct = null) where T : class, new()
+        {
+
+
+            if (!IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
+
+            try
+            {
+                var token = ct ?? CancellationToken.None;
+
+                await new SynchronizationContextRemover();
+
+                using (var srvResponse = await Client.GetAsync(url, token).ConfigureAwait(false))
+                {
+                    if (CoreSettings.Config.HttpSettings.DisplayRawJson)
+                    {
+                        json = await GetStringContent<T>(srvResponse).ConfigureAwait(false);
+                        var response = await DeserializeObject<T>(json).ConfigureAwait(false);
+                        json = string.Empty;
+                        return (response, true, null);
+                    }
+                    else
+                    {
+                        srvResponse.EnsureSuccessStatusCode();
+                        var response = await DeserializeStream<T>(srvResponse);
+                        return (response, true, null);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                return (null, false, ex);
+            }
+        }
+
+        public async Task<(bool Success, Exception Error)> UploadFile(string url, byte[] obj, string fileName, CancellationToken? ct = null)
+        {
+            try
+            {
+                var token = ct ?? CancellationToken.None;
+                var fileContent = new ByteArrayContent(obj);
+                fileContent.Headers.ContentDisposition = new ContentDispositionHeaderValue("form-data")
+                {
+                    Name = "file",
+                    FileName = fileName
+                };
+                var id = CoreSettings.InstallationId.Replace("-", string.Empty);
+                string boundary = $"---{id}";
+                var multipartContent = new MultipartFormDataContent(boundary);
+                multipartContent.Add(fileContent);
+                var response = await Client.PostAsync(url, multipartContent, token);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    string content = await response.Content.ReadAsStringAsync();
+                    return (true, null);
+                }
+                else
+                {
+                    return (false, new ApplicationException(response.ReasonPhrase));
+                }
+            }
+            catch (Exception ex)
+            {
+                return (false, ex);
+            }
+
+        }
+
+        public async Task<byte[]> DownloadFile(string url, Action<double> percentChanged, Action<Exception> error, string token = null, CancellationToken? ct = null)
+        {
+            try
+            {
+                var ctoken = ct ?? CancellationToken.None;
+                return await Task.Run(async () =>
+                {
+                    using (var dwn = new FileDownloadManager())
+                    {
+                        var taskCompletionSource = new TaskCompletionSource<byte[]>();
+                        dwn.BearerToken = token;
+                        dwn.DownloadUrl = url;
+                        dwn.DownloadCompleted = (obj) => taskCompletionSource.SetResult(obj);
+                        dwn.ProgressChanged = percentChanged;
+                        await dwn.StartDownload();
+                        return await taskCompletionSource.Task;
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                error?.Invoke(ex);
+                return null;
+            }
+
+        }
+
+        public async Task<(string Response, bool Success, Exception Error)> PostRaw(string url, object obj, CancellationToken? ct = null)
+        {
+            if (!IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
+
+            try
+            {
+                var token = ct ?? CancellationToken.None;
+
+                await new SynchronizationContextRemover();
+                var data = JsonConvert.SerializeObject(obj);
+                using (var srvResponse = await Client.PostAsync(url, new StringContent(data, Encoding.UTF8, "application/json"), token).ConfigureAwait(false))
+                {
+                    var jsonResult = await srvResponse.Content.ReadAsStringAsync().ConfigureAwait(false);
+                    if (srvResponse.StatusCode == HttpStatusCode.OK)
+                    {
+                        return (jsonResult, true, null);
+                    }
+                    else
+                    {
+                        return (null, false, new ApplicationException(jsonResult));
+                    }
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                return (null, false, ex);
+            }
+
+        }
+        public async Task<(T Response, bool Success, Exception Error)> Post<T>(string url, object obj, CancellationToken? ct = null) where T : class, new()
+        {
+            if (!IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
+
+            try
+            {
+                var token = ct ?? CancellationToken.None;
+
+                await new SynchronizationContextRemover();
+
+                var data = JsonConvert.SerializeObject(obj);
+                using (var srvResponse = await Client.PostAsync(url, new StringContent(data, Encoding.UTF8, "application/json"), token).ConfigureAwait(false))
+                {
+                    if (CoreSettings.Config.HttpSettings.DisplayRawJson)
+                    {
+                        json = await GetStringContent<T>(srvResponse).ConfigureAwait(false);
+                        var response = await DeserializeObject<T>(json).ConfigureAwait(false);
+                        json = string.Empty;
+                        return (response, true, null);
+                    }
+                    else
+                    {
+                        srvResponse.EnsureSuccessStatusCode();
+                        var response = await DeserializeStream<T>(srvResponse);
+                        return (response, true, null);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                return (null, false, ex);
+            }
+
+        }
+        public async Task<(T Response, bool Success, Exception Error)> Put<T>(string url, object obj, CancellationToken? ct = null) where T : class, new()
+        {
+            if (!IsConnected)
+            {
+                return (null, false, new ApplicationException("Network Connection Error"));
+            }
+
+            try
+            {
+                var token = ct ?? CancellationToken.None;
+
+                await new SynchronizationContextRemover();
+
+                var data = JsonConvert.SerializeObject(obj);
+                using (var srvResponse = await Client.PutAsync(url, new StringContent(data, Encoding.UTF8, "application/json"), token))
+                {
+                    if (CoreSettings.Config.HttpSettings.DisplayRawJson)
+                    {
+                        json = await GetStringContent<T>(srvResponse);
+                        var response = await DeserializeObject<T>(json);
+                        json = string.Empty;
+                        return (response, true, null);
+                    }
+                    else
+                    {
+                        srvResponse.EnsureSuccessStatusCode();
+                        var response = await DeserializeStream<T>(srvResponse);
+                        return (response, true, null);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                ex.ConsoleWrite();
+                return (null, false, ex);
+            }
+
+        }
+
+        public async Task<string> GetStringContent<T>(HttpResponseMessage response) where T : class, new()
+        {
+            var jsonResult = await response.Content.ReadAsStringAsync();
+            if (CoreSettings.Config.HttpSettings.DisplayRawJson)
+            {
+                Console.WriteLine();
+                Console.WriteLine();
+                var name = typeof(T).Name;
+                if (name == "List`1")
+                {
+                    var types = typeof(T).GetGenericArguments();
+                    if (types != null && types.Length > 0)
+                    {
+                        var obj = types[0];
+                        name = "Collection of " + obj.Name;
+                    }
+
+                }
+                Console.WriteLine($"*-*-*-*-*-*-*-*-*-*-*-*- {name} - HTTP STRING RESULT *-*-*-*-*-*-*-*-*-*-*-*-*-");
+                var formatted = await FormattedJson(jsonResult);
+                Console.WriteLine(formatted);
+                Console.WriteLine("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+                Console.WriteLine();
+                Console.WriteLine();
+            }
+            return jsonResult;
+        }
+
+        private Task<string> FormattedJson(string jsonResult)
+        {
+            return Task.Run(() =>
+            {
+                var obj = JsonConvert.DeserializeObject(jsonResult);
+                return JsonConvert.SerializeObject(obj, Formatting.Indented);
+            });
+        }
+
+        private Task<T> DeserializeObject<T>(string content) where T : class, new()
+        {
+            return Task.Run(() =>
+            {
+                return JsonConvert.DeserializeObject<T>(content);
+            });
+        }
+
+        private Task<T> DeserializeStream<T>(HttpResponseMessage response)
+        {
+            return Task.Run(async () =>
+            {
+                using (var stream = await response.Content.ReadAsStreamAsync())
+                {
+                    using (var reader = new StreamReader(stream))
+                    {
+                        using (var json = new JsonTextReader(reader))
+                        {
+                            return _serializer.Deserialize<T>(json);
+                        }
+                    }
+                }
+            });
+        }
+
+        public void Dispose()
+        {
+            if (!string.IsNullOrEmpty(json))
+            {
+                json = null;
+            }
+
+            if (httpClient != null)
+            {
+                handler.Dispose();
+                httpClient.Dispose();
+                _serializer = null;
+            }
+
+        }
+
+    }
+
 }
 

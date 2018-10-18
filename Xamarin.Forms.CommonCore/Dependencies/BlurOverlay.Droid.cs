@@ -5,7 +5,10 @@ using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.Renderscripts;
 using Xamarin.Forms.CommonCore;
-using Droid = Android;
+using Resource = Android.Resource;
+using Renderscripts = Android.Renderscripts;
+using Android.Content;
+using Plugin.CurrentActivity;
 
 [assembly: Xamarin.Forms.Dependency(typeof(BlurOverlay))]
 namespace Xamarin.Forms.CommonCore
@@ -13,10 +16,16 @@ namespace Xamarin.Forms.CommonCore
     public class BlurOverlay : IBlurOverlay
     {
         public static Dialog dialog;
+
+        public Context Ctx
+        {
+            get => CrossCurrentActivity.Current.Activity;
+        }
+
         public void Show()
         {
-            var obj = (Activity)Xamarin.Forms.Forms.Context;
-            var root = obj.Window.DecorView.FindViewById(Droid.Resource.Id.Content);
+            var obj = (Activity)Ctx;
+            var root = obj.Window.DecorView.FindViewById(Resource.Id.Content);
             root.DrawingCacheEnabled = true;
             var b = Bitmap.CreateBitmap(root.GetDrawingCache(true));
             root.DrawingCacheEnabled = false;
@@ -35,7 +44,7 @@ namespace Xamarin.Forms.CommonCore
             // Load up an instance of the specific script that we want to use.
 
 
-            ScriptIntrinsicBlur script = ScriptIntrinsicBlur.Create(rs, Droid.Renderscripts.Element.U8_4(rs));
+            ScriptIntrinsicBlur script = ScriptIntrinsicBlur.Create(rs, Renderscripts.Element.U8_4(rs));
             script.SetInput(input);
 
             // Set the blur radius
@@ -47,7 +56,7 @@ namespace Xamarin.Forms.CommonCore
             // Copy the output to the blurred bitmap
             output.CopyTo(blurredBitmap);
 
-            dialog = new Dialog(obj, Droid.Resource.Style.ThemeNoTitleBar);
+            dialog = new Dialog(obj, Resource.Style.ThemeNoTitleBar);
             Drawable d = new BitmapDrawable(blurredBitmap);
             dialog.Window.SetBackgroundDrawable(d);
             dialog.Show();
